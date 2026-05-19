@@ -1,0 +1,837 @@
+/* ===== ECO CLEAN V6 - MOBILE STYLES ===== */
+/* Hamburger menü és teljes reszponzivitás */
+
+/* ===== HAMBURGER BUTTON ===== */
+.nav-mobile-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1002;
+    position: relative;
+}
+
+.nav-mobile-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger X animáció */
+.nav-mobile-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-mobile-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-mobile-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ===== MOBILE MENU OVERLAY ===== */
+.mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+/* ===== MOBILE NAVIGATION ===== */
+.nav-mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 360px;
+    height: 100vh;
+    background: var(--bg-primary);
+    z-index: 999;
+    padding: 5rem 1.5rem 2rem;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    border-left: var(--border-subtle);
+}
+
+.nav-mobile.active {
+    right: 0;
+}
+
+.nav-mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: var(--border-subtle);
+}
+
+.nav-mobile-close {
+    width: 40px;
+    height: 40px;
+    background: var(--bg-tertiary);
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-mobile-close svg {
+    width: 20px;
+    height: 20px;
+    color: var(--text-primary);
+}
+
+/* ===== MOBILE MENU ITEMS ===== */
+.nav-mobile-menu {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.nav-mobile-item {
+    border-bottom: var(--border-subtle);
+}
+
+.nav-mobile-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-mobile-link svg {
+    width: 16px;
+    height: 16px;
+    color: var(--text-muted);
+    transition: transform 0.3s;
+}
+
+.nav-mobile-item.open .nav-mobile-link svg {
+    transform: rotate(180deg);
+}
+
+/* ===== MOBILE SUBMENU ===== */
+.nav-mobile-submenu {
+    display: none;
+    padding: 0.5rem 0 1rem 0.5rem;
+    max-height: 60vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--eco-primary) var(--bg-tertiary);
+}
+
+.nav-mobile-submenu::-webkit-scrollbar {
+    width: 4px;
+}
+
+.nav-mobile-submenu::-webkit-scrollbar-track {
+    background: var(--bg-tertiary);
+    border-radius: 4px;
+}
+
+.nav-mobile-submenu::-webkit-scrollbar-thumb {
+    background: var(--eco-primary);
+    border-radius: 4px;
+}
+
+.nav-mobile-item.open .nav-mobile-submenu {
+    display: block;
+}
+
+/* Régió csoportok a mobil menüben */
+.nav-mobile-submenu .region-group {
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--bg-tertiary);
+}
+
+.nav-mobile-submenu .region-group:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.nav-mobile-submenu .region-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--eco-primary);
+    padding: 0.5rem 0 0.25rem;
+    display: block;
+    opacity: 0.8;
+}
+
+/* Cities grid linkek stílusa */
+.nav-mobile-submenu .cities-grid a {
+    display: block;
+    padding: 0.6rem 0.5rem;
+    color: var(--text-primary);
+    font-size: 0.8rem;
+    text-decoration: none;
+    transition: all 0.2s;
+    border-radius: var(--radius-sm);
+    background: var(--bg-tertiary);
+    text-align: center;
+    font-weight: 500;
+}
+
+.nav-mobile-submenu .cities-grid a:hover,
+.nav-mobile-submenu .cities-grid a:focus {
+    color: var(--bg-primary);
+    background: var(--eco-primary);
+    transform: scale(1.02);
+}
+
+/* SVG ikonok elrejtése a submenu-ben - csak szöveg kell! */
+.nav-mobile-submenu svg {
+    display: none !important;
+}
+
+/* Almenü linkek - tiszta, egyszerű design */
+.nav-mobile-submenu > a {
+    display: none; /* Régi linkek elrejtése */
+}
+
+/* Kompakt grid elrendezés a városoknak */
+.nav-mobile-submenu .cities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.25rem 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.nav-mobile-submenu .cities-grid a {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.82rem;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-sm);
+    text-align: center;
+    color: var(--text-primary);
+    transition: all 0.2s ease;
+}
+
+.nav-mobile-submenu .cities-grid a:hover,
+.nav-mobile-submenu .cities-grid a:focus {
+    background: var(--eco-primary);
+    color: var(--bg-primary);
+    transform: scale(1.02);
+}
+
+/* Scrollbar hint */
+.nav-mobile-submenu::after {
+    content: '';
+    display: block;
+    height: 20px;
+    background: linear-gradient(to top, var(--bg-primary), transparent);
+    position: sticky;
+    bottom: 0;
+    pointer-events: none;
+}
+
+/* ===== MOBILE CTA ===== */
+.nav-mobile-cta {
+    padding-top: 1.5rem;
+    border-top: var(--border-subtle);
+}
+
+.nav-mobile-phone {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: var(--eco-subtle);
+    border-radius: var(--radius-md);
+    color: var(--eco-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+.nav-mobile-phone svg {
+    width: 24px;
+    height: 24px;
+}
+
+.nav-mobile-cta .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Tablet és kisebb desktop */
+@media (max-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .mega-menu-container {
+        width: 90%;
+    }
+
+    .mega-cities {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-us-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-subtitle {
+        margin: 0 auto 2rem;
+    }
+
+    .hero-cta {
+        justify-content: center;
+    }
+
+    .hero-stats {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        max-width: 500px;
+        margin: 2rem auto 0;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .mega-menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mega-menu-left {
+        padding-right: 0;
+        border-right: none;
+        border-bottom: var(--border-subtle);
+        padding-bottom: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobil - fő breakpoint */
+@media (max-width: 768px) {
+
+    /* Step cards - mobilon alapból látható (no-JS fallback) */
+    .step-card {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+        clip-path: none !important;
+    }
+
+    .step-card .step-card-content {
+        clip-path: none !important;
+    }
+
+    /* Nav */
+    .nav {
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-main {
+        display: none;
+    }
+
+    .nav-mobile-toggle {
+        display: flex;
+    }
+
+    .nav-mobile {
+        display: block;
+    }
+
+    .nav-phone {
+        display: none;
+    }
+
+    .nav-cta .btn {
+        display: none;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 5rem 1rem 3rem;
+        min-height: auto;
+    }
+
+    .hero-stats {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    /* Services */
+    .services {
+        padding: 3rem 1rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .service-card {
+        padding: 1.25rem;
+    }
+
+    /* Coverage */
+    .coverage {
+        padding: 3rem 1rem;
+    }
+
+    .coverage-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .city-card {
+        padding: 1rem;
+    }
+
+    /* How it works */
+    .how-it-works {
+        padding: 3rem 1rem;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Pricing (aloldalak) */
+    .pricing {
+        padding: 3rem 1rem;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .pricing-card {
+        padding: 1.5rem;
+    }
+
+    /* Why us (aloldalak) */
+    .why-us {
+        padding: 3rem 1rem;
+    }
+
+    .why-us-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .atkairtas-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .atkairtas-image {
+        order: -1;
+        max-height: 300px;
+    }
+
+    /* Info section (aloldalak) */
+    .info-section {
+        padding: 3rem 1rem;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    /* Kiszállási területek + térkép */
+    section.why-us-detailed .content-blocks {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Subpage hero */
+    .subpage-hero {
+        padding: 5rem 1rem 2.5rem;
+        min-height: auto;
+    }
+
+    .subpage-hero-title {
+        font-size: 1.75rem;
+    }
+
+    .subpage-hero-desc {
+        font-size: 0.95rem;
+    }
+
+    .subpage-hero-cta {
+        flex-direction: column;
+    }
+
+    .subpage-hero-cta .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Other cities */
+    .other-cities {
+        padding: 2rem 1rem;
+    }
+
+    .cities-links {
+        gap: 0.5rem;
+    }
+
+    .cities-links a {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 3rem 1rem 1.5rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .footer-brand p {
+        margin: 1rem auto;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    /* Theme toggle */
+    .theme-toggle {
+        bottom: 1rem;
+        right: 1rem;
+        width: 48px;
+        height: 48px;
+    }
+
+    /* Toggle buttons */
+    .toggle-btn {
+        padding: 0.6rem 1.25rem;
+        font-size: 0.8rem;
+    }
+
+    /* Mega menu - hide on mobile */
+    .mega-menu-container {
+        display: none;
+    }
+
+    /* Section headers */
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-container {
+        padding: 0;
+    }
+
+    /* CTA */
+    .cta {
+        padding: 3rem 1rem;
+    }
+
+    .cta h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+    }
+
+    /* Partners */
+    .partners {
+        padding: 2rem 1rem;
+    }
+
+    .partners-logos {
+        gap: 1rem;
+    }
+}
+
+/* Kis mobil */
+@media (max-width: 480px) {
+    .nav-logo-text {
+        font-size: 1.2rem;
+    }
+
+    .nav-logo-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 0.75rem;
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .floating-card {
+        display: none;
+    }
+
+    .toggle-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+
+    .toggle-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .subpage-breadcrumb {
+        font-size: 0.7rem;
+        flex-wrap: wrap;
+    }
+
+    .subpage-hero-badge {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .subpage-hero-title {
+        font-size: 1.5rem;
+    }
+
+    .coverage-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-price span {
+        font-size: 1.5rem;
+    }
+
+    .section-label {
+        font-size: 0.7rem;
+    }
+}
+
+/* iPhone SE és hasonló kicsi kijelzők */
+@media (max-width: 375px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .subpage-hero-title {
+        font-size: 1.35rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .nav-logo-text span {
+        display: none;
+    }
+}
+
+/* ===== BOOKING CONFIGURATOR MOBILE ===== */
+@media (max-width: 768px) {
+
+    /* Booking section */
+    .booking-section {
+        padding: 2rem 1rem;
+    }
+
+    /* Config steps */
+    .config-step {
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .config-step-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .config-step-number {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+
+    /* Config buttons */
+    .config-options {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .config-btn {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+
+    /* Item selection */
+    .config-item {
+        padding: 1rem;
+    }
+
+    .item-name {
+        font-size: 0.9rem;
+    }
+
+    .item-price {
+        font-size: 0.85rem;
+    }
+
+    .counter-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1.25rem;
+    }
+
+    /* Travel zones */
+    .zone-options {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .zone-option {
+        padding: 1rem;
+    }
+
+    /* Summary */
+    .booking-summary {
+        position: static;
+        margin-top: 2rem;
+        padding: 1.25rem;
+    }
+
+    .summary-price {
+        font-size: 1.75rem;
+    }
+
+    /* Form inputs */
+    .booking-form input,
+    .booking-form textarea,
+    .booking-form select {
+        font-size: 16px;
+        /* Prevents zoom on iOS */
+        padding: 0.875rem;
+    }
+
+    /* Calendar wrapper */
+    #calendarWrapper {
+        padding: 1rem;
+    }
+
+    /* Upsell cards */
+    .global-upsell-card {
+        padding: 0.875rem;
+    }
+
+    .global-upsell-name {
+        font-size: 0.9rem;
+    }
+
+    .global-upsell-desc {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Extra small mobile adjustments */
+    .config-step {
+        padding: 1rem;
+    }
+
+    .config-step-header h3 {
+        font-size: 1rem;
+    }
+
+    .config-btn {
+        padding: 0.875rem;
+        font-size: 0.875rem;
+    }
+
+    .item-counter {
+        gap: 0.5rem;
+    }
+
+    .counter-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .summary-price {
+        font-size: 1.5rem;
+    }
+}

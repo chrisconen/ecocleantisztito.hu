@@ -1,0 +1,526 @@
+/* ===== ECO CLEAN V6 - SUBPAGE STYLES ===== */
+
+/* ===== SUBPAGE HERO ===== */
+.subpage-hero {
+    padding: 8rem 2rem 4rem;
+    position: relative;
+    overflow: hidden;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+.subpage-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.subpage-hero-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 20%, var(--eco-glow) 0%, transparent 50%);
+}
+
+.subpage-hero-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(var(--grid-color) 1px, transparent 1px),
+                      linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%);
+}
+
+.subpage-hero-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.subpage-breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+}
+
+.subpage-breadcrumb a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.subpage-breadcrumb a:hover {
+    color: var(--eco-primary);
+}
+
+.subpage-breadcrumb svg {
+    width: 14px;
+    height: 14px;
+    color: var(--text-muted);
+}
+
+.subpage-breadcrumb span {
+    color: var(--eco-primary);
+}
+
+.subpage-hero-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.badge-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    padding: 0.35rem 0.75rem;
+    background: var(--bg-tertiary);
+    border-radius: 20px;
+}
+
+.badge-location svg {
+    width: 14px;
+    height: 14px;
+    color: var(--eco-primary);
+}
+
+.subpage-hero-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+}
+
+.eco-gradient {
+    background: var(--gradient-eco);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subpage-hero-desc {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+}
+
+.subpage-hero-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+}
+
+/* ===== PRICING SECTION ===== */
+.pricing {
+    padding: 5rem 2rem;
+    background: var(--bg-secondary);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.pricing-card {
+    background: var(--bg-card);
+    border: var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--eco-primary);
+    box-shadow: var(--shadow-glow);
+}
+
+.pricing-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.25rem;
+    background: var(--eco-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.pricing-card:hover .pricing-icon {
+    background: var(--eco-primary);
+}
+
+.pricing-icon svg {
+    width: 28px;
+    height: 28px;
+    color: var(--eco-primary);
+    transition: color 0.3s;
+}
+
+.pricing-card:hover .pricing-icon svg {
+    color: var(--bg-primary);
+}
+
+.pricing-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.pricing-price {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.pricing-price span {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--eco-primary);
+}
+
+.pricing-note {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+}
+
+.pricing-note-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: var(--bg-card);
+    border: 1px solid var(--business-border);
+    border-radius: var(--radius-md);
+}
+
+.pricing-note-box svg {
+    width: 24px;
+    height: 24px;
+    color: var(--business-color);
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+}
+
+.pricing-note-box p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.pricing-note-box strong {
+    color: var(--business-color);
+}
+
+/* ===== WHY US SECTION ===== */
+.why-us {
+    padding: 5rem 2rem;
+}
+
+.why-us-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.why-us-card {
+    background: var(--bg-card);
+    border: var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.why-us-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--eco-primary);
+}
+
+.why-us-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 1rem;
+    background: var(--eco-subtle);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.why-us-icon svg {
+    width: 26px;
+    height: 26px;
+    color: var(--eco-primary);
+}
+
+.why-us-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.why-us-card p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ===== ATKAÍRTÁS 2-COL LAYOUT ===== */
+.atkairtas-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.atkairtas-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.atkairtas-card {
+    background: var(--bg-card);
+    border: var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem 1.75rem;
+    transition: all 0.3s;
+}
+
+.atkairtas-card:hover {
+    transform: translateX(5px);
+    border-color: var(--eco-primary);
+}
+
+.atkairtas-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.atkairtas-card p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.atkairtas-image {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.atkairtas-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    display: block;
+}
+
+/* ===== INFO SECTION ===== */
+.info-section {
+    padding: 5rem 2rem;
+    background: var(--bg-secondary);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.info-card {
+    background: var(--bg-card);
+    border: var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    transition: all 0.3s;
+}
+
+.info-card:hover {
+    border-color: var(--eco-primary);
+    transform: translateY(-3px);
+}
+
+.info-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--eco-subtle);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.info-icon svg {
+    width: 20px;
+    height: 20px;
+    color: var(--eco-primary);
+}
+
+.info-card h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.info-card p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ===== OTHER CITIES SECTION ===== */
+.other-cities {
+    padding: 3rem 2rem;
+    background: var(--bg-tertiary);
+    border-top: var(--border-subtle);
+}
+
+.other-cities h3 {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+}
+
+.cities-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.cities-links a {
+    padding: 0.5rem 1rem;
+    background: var(--bg-card);
+    border: var(--border-subtle);
+    border-radius: var(--radius-sm);
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.cities-links a:hover {
+    background: var(--eco-primary);
+    color: var(--bg-primary);
+    border-color: var(--eco-primary);
+}
+
+/* ===== CENTAUR BADGE ===== */
+.centaur {
+    color: var(--eco-primary);
+    font-weight: 600;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .why-us-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .atkairtas-layout {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    .subpage-hero {
+        padding: 7rem 1.5rem 3rem;
+    }
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .subpage-hero {
+        padding: 6rem 1rem 2.5rem;
+        min-height: auto;
+    }
+    .subpage-hero-title {
+        font-size: 2rem;
+    }
+    .subpage-hero-desc {
+        font-size: 1rem;
+    }
+    .subpage-hero-cta {
+        flex-direction: column;
+    }
+    .subpage-hero-cta .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    .why-us-grid {
+        grid-template-columns: 1fr;
+    }
+    .atkairtas-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .atkairtas-image {
+        order: -1;
+        max-height: 300px;
+    }
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    .pricing, .why-us, .info-section {
+        padding: 3rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .subpage-breadcrumb {
+        font-size: 0.75rem;
+    }
+    .subpage-hero-badge {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .cities-links {
+        gap: 0.5rem;
+    }
+    .cities-links a {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.75rem;
+    }
+}
