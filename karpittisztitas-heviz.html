@@ -28,124 +28,54 @@
     <meta name="twitter:description"
         content="Vegyszermentes mélytisztítás a Hévíz. Borászatok, szállások, éttermek.">
 
-    <!-- Bővített Schema.org struktúrált adatok -->
+    <!-- Vállalkozás + Szolgáltatás Schema -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "ProfessionalService",
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "@id": "https://ecocleantisztito.hu/#business",
         "name": "ECO Clean - Kárpittisztítás Hévíz",
         "description": "Vegyszermentes prémium kárpittisztítás Hévízen és a Hévíz környékén. Kanapék, fotelek, étkező székek, szállodai bútorok professzionális mélytisztítása ipari extrakciós technológiával. Atkaírtás tanúsítvánnyal! Borászatok, turistaházak, szállások, éttermek kiszolgálása.",
         "url": "https://ecocleantisztito.hu/karpittisztitas-heviz.html",
         "telephone": "+36702408141",
         "email": "info@ecocleantisztito.hu",
+        "image": "https://ecocleantisztito.hu/images/karpittisztitas.png",
+        "priceRange": "$$",
+        "currenciesAccepted": "HUF",
+        "paymentAccepted": "Cash, Credit Card, Bank Transfer",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Hévíz",
-            "addressRegion": "Zala megye",
             "postalCode": "8380",
             "addressCountry": "HU"
         },
         "geo": {
             "@type": "GeoCoordinates",
-            "latitude": "46.7936",
-            "longitude": "17.1900"
+            "latitude": 46.7936,
+            "longitude": 17.1900
         },
+        "hasMap": "https://maps.google.com/?q=Hévíz+kárpittisztítás",
+        "openingHours": ["Mo-Fr 08:00-18:00", "Sa 08:00-14:00"],
         "areaServed": [
-            {
-                "@type": "City",
-                "name": "Hévíz"
-            },
-            {
-                "@type": "City",
-                "name": "Hévíztomaj"
-            },
-            {
-                "@type": "City",
-                "name": "Hévíztördemic"
-            },
-            {
-                "@type": "City",
-                "name": "Hévízörs"
-            },
-            {
-                "@type": "City",
-                "name": "Ábrahámhegy"
-            },
-            {
-                "@type": "City",
-                "name": "Tapolca"
-            }
+            {"@type": "City", "name": "Hévíz"},
+            {"@type": "City", "name": "Badacsonytomaj"},
+            {"@type": "City", "name": "Badacsonytördemic"},
+            {"@type": "City", "name": "Badacsonyörs"},
+            {"@type": "City", "name": "Ábrahámhegy"},
+            {"@type": "City", "name": "Tapolca"}
         ],
-        "priceRange": "$$",
-        "paymentAccepted": ["Készpénz", "Bankkártya", "Átutalás"],
-        "openingHoursSpecification": [
-            {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                "opens": "08:00",
-                "closes": "18:00"
-            },
-            {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": "Saturday",
-                "opens": "09:00",
-                "closes": "14:00"
-            }
-        ],
+        "serviceType": ["Kárpittisztítás", "Matractisztítás", "Kanapétisztítás", "Szőnyegtisztítás", "Allergénmentesítés", "Atkamentesítés"],
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "5",
-            "reviewCount": "191",
             "bestRating": "5",
-            "worstRating": "1"
+            "worstRating": "1",
+            "reviewCount": "191"
         },
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Kárpittisztítási szolgáltatások",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Kanapé tisztítás",
-                        "description": "Szófa, heverő mélytisztítás és fertőtlenítés"
-                    },
-                    "priceSpecification": {
-                        "@type": "PriceSpecification",
-                        "price": "10500",
-                        "priceCurrency": "HUF",
-                        "minPrice": "10500"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "L-kanapé tisztítás",
-                        "description": "Sarokkanapé mélytisztítás és fertőtlenítés"
-                    },
-                    "priceSpecification": {
-                        "@type": "PriceSpecification",
-                        "price": "15000",
-                        "priceCurrency": "HUF",
-                        "minPrice": "15000"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Atkaírtás tanúsítvánnyal",
-                        "description": "Professzionális atkaírtás igazolással"
-                    },
-                    "priceSpecification": {
-                        "@type": "PriceSpecification",
-                        "price": "3500",
-                        "priceCurrency": "HUF"
-                    }
-                }
-            ]
-        }
+        "sameAs": [
+            "https://www.facebook.com/ecocleankarpittisztitas",
+            "https://www.google.com/maps/place/ECO+Clean"
+        ]
     }
     </script>
 
@@ -207,34 +137,6 @@
     }
     </script>
 
-    <!-- LocalBusiness Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "ECO Clean Hévíz",
-        "image": "https://ecocleantisztito.hu/images/eco-clean-logo.png",
-        "@id": "https://ecocleantisztito.hu/karpittisztitas-heviz.html",
-        "url": "https://ecocleantisztito.hu/karpittisztitas-heviz.html",
-        "telephone": "+36702408141",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "",
-            "addressLocality": "Hévíz",
-            "postalCode": "8380",
-            "addressCountry": "HU"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 46.7936,
-            "longitude": 17.1900
-        },
-        "sameAs": [
-            "https://www.facebook.com/ecocleantisztito",
-            "https://www.instagram.com/ecocleantisztito"
-        ]
-    }
-    </script>
 
     <!-- BreadcrumbList Schema -->
     <script type="application/ld+json">
@@ -245,22 +147,35 @@
             {
                 "@type": "ListItem",
                 "position": 1,
-                "name": "Főoldal",
+                "name": "ECO Clean",
                 "item": "https://ecocleantisztito.hu/"
             },
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Kárpittisztítás",
-                "item": "https://ecocleantisztito.hu/karpittisztitas"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Hévíz",
+                "name": "Kárpittisztítás Hévíz",
                 "item": "https://ecocleantisztito.hu/karpittisztitas-heviz.html"
             }
         ]
+    }
+    </script>
+
+    <!-- VideoObject Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "Hogyan dolgozunk? VIZES kárpittisztítás",
+        "description": "Bemutatjuk a vizes extrakciós kárpittisztítás technológiáját Hévízen - vegyszermentes mélytisztítás, atkaírtás.",
+        "thumbnailUrl": "https://ecocleantisztito.hu/images/karpittisztitas.png",
+        "uploadDate": "2024-01-15",
+        "duration": "PT2M30S",
+        "contentUrl": "https://www.youtube.com/embed/AD9DddD7lMQ",
+        "embedUrl": "https://www.youtube.com/embed/AD9DddD7lMQ",
+        "publisher": {
+            "@type": "Organization",
+            "name": "ECO Clean"
+        }
     }
     </script>
 
@@ -1475,7 +1390,7 @@
                 <div class="content-block">
                     <h3>⚙️ High-Tech ipari technológia a hegy lábánál</h3>
                     <p>Nagynyomású <strong>extrakciós gépeink</strong> és <strong>bio-aktív tisztítószereink</strong> a
-                        jövő technológiáját hozzák el Hévízra. Ez nem a hagyományos "szőnyegtisztítás" – ez
+                        jövő technológiáját hozzák el Hévízre. Ez nem a hagyományos "szőnyegtisztítás" – ez
                         precíziós mélytisztítás, amely:</p>
                     <ul style="margin-top: 12px; padding-left: 20px;">
                         <li>Nem áztatja el a kárpitot (minimális nedvességbevitel)</li>
@@ -1689,7 +1604,7 @@
                         <div class="testimonial-avatar">KA</div>
                         <div class="testimonial-info">
                             <h4>Kovács Anna</h4>
-                            <span>Panoráma Apartman, Hévízörs</span>
+                            <span>Panoráma Apartman, Badacsonyörs</span>
                         </div>
                     </div>
                 </div>
@@ -1745,7 +1660,7 @@
                         <div class="testimonial-avatar">VG</div>
                         <div class="testimonial-info">
                             <h4>Varga Gábor</h4>
-                            <span>Vulkán Panzió, Hévíztomaj</span>
+                            <span>Vulkán Panzió, Badacsonytomaj</span>
                         </div>
                     </div>
                 </div>
@@ -1771,15 +1686,15 @@
                     <span>Központi telephely</span>
                 </div>
                 <div class="coverage-item">
-                    <h4>Hévíztomaj</h4>
+                    <h4>Badacsonytomaj</h4>
                     <span>5 km</span>
                 </div>
                 <div class="coverage-item">
-                    <h4>Hévíztördemic</h4>
+                    <h4>Badacsonytördemic</h4>
                     <span>3 km</span>
                 </div>
                 <div class="coverage-item">
-                    <h4>Hévízörs</h4>
+                    <h4>Badacsonyörs</h4>
                     <span>4 km</span>
                 </div>
                 <div class="coverage-item">
@@ -1960,9 +1875,9 @@
                         anyagot. Valódi bőr bútorokhoz külön bőrápoló szolgáltatást ajánlunk.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>❓ Mennyibe kerül a kiszállás Hévízra?</h3>
-                    <p>Hévíz központi területén és a közeli településeken (Hévíztomaj, Hévíztördemic,
-                        Hévízörs, Ábrahámhegy) a kiszállás <strong>ingyenes</strong>. Távolabbi településekre (10 km
+                    <h3>❓ Mennyibe kerül a kiszállás Hévízre?</h3>
+                    <p>Hévíz központi területén és a közeli településeken (Badacsonytomaj, Badacsonytördemic,
+                        Badacsonyörs, Ábrahámhegy) a kiszállás <strong>ingyenes</strong>. Távolabbi településekre (10 km
                         felett) kiszállási díj: 100 Ft/km.</p>
                 </div>
                 <div class="faq-item">
@@ -2011,6 +1926,26 @@
                     <div class="nav-logo-text">Clean <span> kárpittisztítás</span></div>
                 </a>
                 <p>Professzionális vegyszermentes tisztítás a Balaton környékén és Nyugat-Magyarországon. 2004 óta, 200+ 5*-os értékelés, 100% elégedettségi garancia.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/EcoCleanGyor" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg></a>
+                    <a href="https://www.linkedin.com/in/karpittisztitas-gyor/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg></a>
+                    <a href="https://x.com/karpit_gyor" target="_blank" rel="noopener noreferrer" aria-label="X"><svg width="18" height="18" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg></a>
+                    <a href="https://blog.ecocleantisztito.hu/" target="_blank" rel="noopener noreferrer" aria-label="Blog"><svg width="18" height="18" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+                        </svg></a>
+                </div>
             </div>
             <div class="footer-column">
                 <h4>Szolgáltatások</h4>

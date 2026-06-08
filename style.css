@@ -2410,6 +2410,93 @@ p {
     line-height: 1.6;
 }
 
+/* ===== HOW WE WORK LAYOUT (video + content) ===== */
+.how-we-work-container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.how-we-work-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 3rem;
+    align-items: start;
+    margin-top: 3rem;
+}
+
+.how-we-work-video {
+    position: sticky;
+    top: 100px;
+}
+
+.video-embed {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    background: #000;
+}
+
+.video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.how-we-work-text .section-description {
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.75;
+    margin-bottom: 2rem;
+}
+
+.how-we-work-text .why-us-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .how-we-work-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .how-we-work-video {
+        position: static;
+    }
+
+    .how-we-work-text .section-description {
+        text-align: center;
+    }
+
+    .how-we-work-text .why-us-grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .how-we-work-container {
+        padding: 0 1.25rem;
+    }
+
+    .how-we-work-text .why-us-grid-3 {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .how-we-work-layout {
+        gap: 1.5rem;
+    }
+}
+
 /* ===== ATKAÍRTÁS 2-COL LAYOUT ===== */
 .atkairtas-layout {
     display: grid;

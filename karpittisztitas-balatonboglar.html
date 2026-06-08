@@ -28,126 +28,66 @@
     <meta name="twitter:description"
         content="Vegyszermentes mélytisztítás a Balatonboglár. Borászatok, szállások, éttermek.">
 
-    <!-- Bővített Schema.org struktúrált adatok -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "ECO Clean - Kárpittisztítás Balatonboglár",
-        "description": "Vegyszermentes prémium kárpittisztítás Balatonbogláron és a Balatonboglár környékén. Kanapék, fotelek, étkező székek, szállodai bútorok professzionális mélytisztítása ipari extrakciós technológiával. Atkaírtás tanúsítvánnyal! Borászatok, turistaházak, szállások, éttermek kiszolgálása.",
-        "url": "https://ecocleantisztito.hu/karpittisztitas-balatonboglar.html",
-        "telephone": "+36702408141",
-        "email": "info@ecocleantisztito.hu",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Balatonboglár",
-            "addressRegion": "Somogy megye",
-            "postalCode": "8630",
-            "addressCountry": "HU"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "46.7856",
-            "longitude": "17.6538"
-        },
-        "areaServed": [
-            {
-                "@type": "City",
-                "name": "Balatonboglár"
-            },
-            {
-                "@type": "City",
-                "name": "Balatonboglártomaj"
-            },
-            {
-                "@type": "City",
-                "name": "Balatonboglártördemic"
-            },
-            {
-                "@type": "City",
-                "name": "Balatonboglárörs"
-            },
-            {
-                "@type": "City",
-                "name": "Ábrahámhegy"
-            },
-            {
-                "@type": "City",
-                "name": "Tapolca"
-            }
-        ],
-        "priceRange": "$$",
-        "paymentAccepted": ["Készpénz", "Bankkártya", "Átutalás"],
-        "openingHoursSpecification": [
-            {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                "opens": "08:00",
-                "closes": "18:00"
-            },
-            {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": "Saturday",
-                "opens": "09:00",
-                "closes": "14:00"
-            }
-        ],
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "191",
-            "bestRating": "5",
-            "worstRating": "1"
-        },
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Kárpittisztítási szolgáltatások",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Kanapé tisztítás",
-                        "description": "Szófa, heverő mélytisztítás és fertőtlenítés"
-                    },
-                    "priceSpecification": {
-                        "@type": "PriceSpecification",
-                        "price": "10500",
-                        "priceCurrency": "HUF",
-                        "minPrice": "10500"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "L-kanapé tisztítás",
-                        "description": "Sarokkanapé mélytisztítás és fertőtlenítés"
-                    },
-                    "priceSpecification": {
-                        "@type": "PriceSpecification",
-                        "price": "15000",
-                        "priceCurrency": "HUF",
-                        "minPrice": "15000"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Atkaírtás tanúsítvánnyal",
-                        "description": "Professzionális atkaírtás igazolással"
-                    },
-                    "priceSpecification": {
-                        "@type": "PriceSpecification",
-                        "price": "3500",
-                        "priceCurrency": "HUF"
-                    }
-                }
-            ]
-        }
-    }
-    </script>
+<!-- Schema 1: LocalBusiness (ProfessionalService kibővítve) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "ProfessionalService"],
+  "@id": "https://ecocleantisztito.hu/#business",
+  "name": "ECO Clean - Kárpittisztítás Balatonboglár",
+  "description": "Vegyszermentes prémium kárpittisztítás Balatonbogláron és a Balatonboglár környékén. Kanapék, fotelek, étkező székek, szállodai bútorok professzionális mélytisztítása ipari extrakciós technológiával. Atkaírtás tanúsítvánnyal! Borászatok, turistaházak, szállások, éttermek kiszolgálása.",
+  "url": "https://ecocleantisztito.hu/karpittisztitas-balatonboglar.html",
+  "telephone": "+36702408141",
+  "email": "info@ecocleantisztito.hu",
+  "image": "https://ecocleantisztito.hu/images/karpittisztitas.png",
+  "priceRange": "$$",
+  "currenciesAccepted": "HUF",
+  "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Balatonboglár",
+    "postalCode": "8630",
+    "addressCountry": "HU"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 46.7856,
+    "longitude": 17.6538
+  },
+  "hasMap": "https://maps.google.com/?q=Balatonboglár+kárpittisztítás",
+  "openingHours": [
+    "Mo-Fr 08:00-18:00",
+    "Sa 08:00-14:00"
+  ],
+  "areaServed": [
+    {"@type": "City", "name": "Balatonboglár"},
+    {"@type": "City", "name": "Badacsonytomaj"},
+    {"@type": "City", "name": "Badacsonytördemic"},
+    {"@type": "City", "name": "Badacsonyörs"},
+    {"@type": "City", "name": "Ábrahámhegy"},
+    {"@type": "City", "name": "Tapolca"}
+  ],
+  "serviceType": [
+    "Kárpittisztítás",
+    "Matractisztítás",
+    "Kanapétisztítás",
+    "Szőnyegtisztítás",
+    "Allergénmentesítés",
+    "Atkamentesítés"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "bestRating": "5",
+    "worstRating": "1",
+    "reviewCount": "191"
+  },
+  "sameAs": [
+    "https://www.facebook.com/ecocleankarpittisztitas",
+    "https://www.google.com/maps/place/ECO+Clean"
+  ]
+}
+</script>
 
     <!-- FAQ Schema -->
     <script type="application/ld+json">
@@ -207,62 +147,48 @@
     }
     </script>
 
-    <!-- LocalBusiness Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "ECO Clean Balatonboglár",
-        "image": "https://ecocleantisztito.hu/images/eco-clean-logo.png",
-        "@id": "https://ecocleantisztito.hu/karpittisztitas-balatonboglar.html",
-        "url": "https://ecocleantisztito.hu/karpittisztitas-balatonboglar.html",
-        "telephone": "+36702408141",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "",
-            "addressLocality": "Balatonboglár",
-            "postalCode": "8630",
-            "addressCountry": "HU"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 46.7856,
-            "longitude": 17.6538
-        },
-        "sameAs": [
-            "https://www.facebook.com/ecocleantisztito",
-            "https://www.instagram.com/ecocleantisztito"
-        ]
-    }
-    </script>
 
-    <!-- BreadcrumbList Schema -->
-    <script type="application/ld+json">
+<!-- Schema 3: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Főoldal",
-                "item": "https://ecocleantisztito.hu/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Kárpittisztítás",
-                "item": "https://ecocleantisztito.hu/karpittisztitas"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Balatonboglár",
-                "item": "https://ecocleantisztito.hu/karpittisztitas-balatonboglar.html"
-            }
-        ]
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ECO Clean",
+      "item": "https://ecocleantisztito.hu"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Kárpittisztítás Balatonboglár",
+      "item": "https://ecocleantisztito.hu/karpittisztitas-balatonboglar.html"
     }
-    </script>
+  ]
+}
+</script>
+
+<!-- Schema 4: VideoObject -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "ECO Clean kárpittisztítás - Hogyan dolgozunk?",
+  "description": "Az ECO Clean vegyszermentes kárpittisztítási eljárásának bemutatása. Ipari extrakciós technológia, allergénmentesítés, gyors száradás.",
+  "thumbnailUrl": "https://img.youtube.com/vi/AD9DddD7lMQ/maxresdefault.jpg",
+  "uploadDate": "2024-01-01",
+  "duration": "PT2M33S",
+  "embedUrl": "https://www.youtube.com/embed/AD9DddD7lMQ",
+  "url": "https://www.youtube.com/watch?v=AD9DddD7lMQ",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ECO Clean kárpittisztítás",
+    "url": "https://ecocleantisztito.hu"
+  }
+}
+</script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1384,7 +1310,7 @@
         <div class="section-container">
             <div class="section-header">
                 <div class="section-label">Miért minket?</div>
-                <h2 class="section-title">Miért válassza az ECO Clean technológiát Balatonbogláren?</h2>
+                <h2 class="section-title">Miért válassza az ECO Clean technológiát Balatonbogláron?</h2>
             </div>
             <div class="why-us-grid">
                 <div class="why-us-card">
@@ -1689,7 +1615,7 @@
                         <div class="testimonial-avatar">KA</div>
                         <div class="testimonial-info">
                             <h4>Kovács Anna</h4>
-                            <span>Panoráma Apartman, Balatonboglárörs</span>
+                            <span>Panoráma Apartman, Badacsonyörs</span>
                         </div>
                     </div>
                 </div>
@@ -1745,7 +1671,7 @@
                         <div class="testimonial-avatar">VG</div>
                         <div class="testimonial-info">
                             <h4>Varga Gábor</h4>
-                            <span>Vulkán Panzió, Balatonboglártomaj</span>
+                            <span>Vulkán Panzió, Badacsonytomaj</span>
                         </div>
                     </div>
                 </div>
@@ -1771,15 +1697,15 @@
                     <span>Központi telephely</span>
                 </div>
                 <div class="coverage-item">
-                    <h4>Balatonboglártomaj</h4>
+                    <h4>Badacsonytomaj</h4>
                     <span>5 km</span>
                 </div>
                 <div class="coverage-item">
-                    <h4>Balatonboglártördemic</h4>
+                    <h4>Badacsonytördemic</h4>
                     <span>3 km</span>
                 </div>
                 <div class="coverage-item">
-                    <h4>Balatonboglárörs</h4>
+                    <h4>Badacsonyörs</h4>
                     <span>4 km</span>
                 </div>
                 <div class="coverage-item">
@@ -1961,8 +1887,8 @@
                 </div>
                 <div class="faq-item">
                     <h3>❓ Mennyibe kerül a kiszállás Balatonboglárra?</h3>
-                    <p>Balatonboglár központi területén és a közeli településeken (Balatonboglártomaj, Balatonboglártördemic,
-                        Balatonboglárörs, Ábrahámhegy) a kiszállás <strong>ingyenes</strong>. Távolabbi településekre (10 km
+                    <p>Balatonboglár központi területén és a közeli településeken (Badacsonytomaj, Badacsonytördemic,
+                        Badacsonyörs, Ábrahámhegy) a kiszállás <strong>ingyenes</strong>. Távolabbi településekre (10 km
                         felett) kiszállási díj: 100 Ft/km.</p>
                 </div>
                 <div class="faq-item">
@@ -2011,6 +1937,26 @@
                     <div class="nav-logo-text">Clean <span> kárpittisztítás</span></div>
                 </a>
                 <p>Professzionális vegyszermentes tisztítás a Balaton környékén és Nyugat-Magyarországon. 2004 óta, 200+ 5*-os értékelés, 100% elégedettségi garancia.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/EcoCleanGyor" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg></a>
+                    <a href="https://www.linkedin.com/in/karpittisztitas-gyor/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg></a>
+                    <a href="https://x.com/karpit_gyor" target="_blank" rel="noopener noreferrer" aria-label="X"><svg width="18" height="18" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg></a>
+                    <a href="https://blog.ecocleantisztito.hu/" target="_blank" rel="noopener noreferrer" aria-label="Blog"><svg width="18" height="18" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+                        </svg></a>
+                </div>
             </div>
             <div class="footer-column">
                 <h4>Szolgáltatások</h4>

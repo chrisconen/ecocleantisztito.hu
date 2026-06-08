@@ -1,0 +1,370 @@
+- generic [active] [ref=e1]:
+  - link "Ugrás a tartalomhoz" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - button "Téma váltás" [ref=e3] [cursor=pointer]:
+    - img [ref=e4]
+  - navigation "Fő navigáció" [ref=e6]:
+    - generic [ref=e7]:
+      - link "ECO Clean kárpittisztítás" [ref=e8] [cursor=pointer]:
+        - /url: index.html
+        - generic [ref=e9]: ECO
+        - generic [ref=e10]: Clean kárpittisztítás
+      - list [ref=e11]:
+        - listitem [ref=e12]:
+          - generic [ref=e13] [cursor=pointer]: Kárpittisztítás
+        - listitem [ref=e14]:
+          - generic [ref=e15] [cursor=pointer]: Matractisztítás
+        - listitem [ref=e16]:
+          - generic [ref=e17] [cursor=pointer]: Szőnyegtisztítás
+        - listitem [ref=e18]:
+          - generic [ref=e19] [cursor=pointer]: Takarítás
+        - listitem [ref=e20]:
+          - generic [ref=e21] [cursor=pointer]: Ablak/kirakat
+        - listitem [ref=e22]:
+          - generic [ref=e23] [cursor=pointer]:
+            - text: Városok
+            - img
+      - generic [ref=e25]:
+        - generic [ref=e26]: 06 70 240 8141
+        - link "🗓️ Online foglalás" [ref=e27] [cursor=pointer]:
+          - /url: index.html#booking
+  - generic [ref=e31]:
+    - generic [ref=e32]:
+      - generic [ref=e33]:
+        - link "Főoldal" [ref=e34] [cursor=pointer]:
+          - /url: index.html
+        - img [ref=e35]
+        - link "Kárpittisztítás" [ref=e37] [cursor=pointer]:
+          - /url: karpittisztitas-gyor.html
+        - img [ref=e38]
+        - generic [ref=e40]: Győr
+      - generic [ref=e41]:
+        - generic [ref=e42]: Privát + céges
+        - generic [ref=e43]: Győr és környéke
+      - heading "Prémium Kárpittisztítás Győr" [level=1] [ref=e44]
+      - paragraph [ref=e45]:
+        - text: Ne csak tisztítsa, újítsa meg bútorait! A legmodernebb
+        - strong [ref=e46]: ipari extrakciós technológia
+        - text: és
+        - strong [ref=e47]: 100% vegyszermentes bio-tisztítás
+        - text: találkozása. Győr és vonzáskörzetének vezető atkamentesítő szolgáltatása – azonnali száradási idővel.
+      - generic [ref=e48]:
+        - link "🗓️ Online foglalás" [ref=e49] [cursor=pointer]:
+          - /url: index.html#booking
+        - link "Áraink" [ref=e50] [cursor=pointer]:
+          - /url: "#arak"
+    - complementary "Garanciák és minőség" [ref=e51]:
+      - article [ref=e52]:
+        - generic [ref=e53]: GARANCIA
+        - img "Elégedettségi garancia jelvény" [ref=e55]
+        - heading "100% elégedettségi garancia" [level=3] [ref=e56]
+        - paragraph [ref=e57]: Vagy pénzvisszafizetés – ígérjük
+      - article [ref=e58]:
+        - generic [ref=e59]: BIO
+        - img "Vegyszermentes kárpittisztítás jelvény" [ref=e61]
+        - heading "100% vegyszermentes & ökológiai" [level=3] [ref=e62]
+        - paragraph [ref=e63]: Gyermek- és allergiabarát
+      - article [ref=e64]:
+        - generic [ref=e65]: HIVATALOS
+        - img "ECO Clean kárpittisztítás hivatalos jelvény" [ref=e67]
+        - heading "Szabadalmaztatott, tanúsított technológia" [level=3] [ref=e68]
+        - paragraph [ref=e69]: Hivatalosan engedélyezett eljárás
+      - article [ref=e70]:
+        - generic [ref=e71]: BEVIZSGÁLT
+        - img "Vegyszermentes tisztító, bevizsgált minőség jelvény" [ref=e73]
+        - heading "99,9% atkaeltávolítás" [level=3] [ref=e74]
+        - paragraph [ref=e75]: Klinikailag tesztelt és igazolt
+  - generic [ref=e78]:
+    - generic [ref=e79]:
+      - generic [ref=e80]: Áraink Győrben
+      - heading "Kárpittisztítás árak" [level=2] [ref=e81]
+      - paragraph [ref=e82]: A minőségnek ára van, az egészségnek értéke. Pontos árajánlatért keressen minket!
+    - generic [ref=e83]:
+      - generic [ref=e84]:
+        - generic [ref=e85]: Szófa, heverő
+        - generic [ref=e86]: 10 500 Ft-tól
+        - paragraph [ref=e87]: mélytisztítás + fertőtlenítés
+        - paragraph [ref=e88]: választható + ATKAIRTÁS 3500 Ft
+      - generic [ref=e89]:
+        - generic [ref=e90]: L kanapé
+        - generic [ref=e91]: 15 000 Ft-tól
+        - paragraph [ref=e92]: mélytisztítás + fertőtlenítés
+        - paragraph [ref=e93]: választható + ATKAIRTÁS 3500 Ft
+      - generic [ref=e94]:
+        - generic [ref=e95]: U kanapé
+        - generic [ref=e96]: 18 000 Ft-tól
+        - paragraph [ref=e97]: mélytisztítás + fertőtlenítés
+        - paragraph [ref=e98]: választható + ATKAIRTÁS 5000 Ft
+      - generic [ref=e99]:
+        - generic [ref=e100]: Fotel
+        - generic [ref=e101]: 5 000 Ft-tól
+        - paragraph [ref=e102]: mélytisztítás + fertőtlenítés
+      - generic [ref=e103]:
+        - generic [ref=e104]: Ebédlő szék
+        - generic [ref=e105]: 1 500 Ft-tól
+        - paragraph [ref=e106]: szövet függvénye
+      - generic [ref=e107]:
+        - generic [ref=e108]: Irodai szék
+        - generic [ref=e109]: 3 000 Ft-tól
+        - paragraph [ref=e110]: darabszám kedvezmény!
+    - paragraph [ref=e112]:
+      - strong [ref=e113]: Fontos információ ANDANTE bútorok tisztításával kapcsolatban
+      - text: Az ANDANTE bútorok egy részénél speciális, impregnált vagy vízre érzékeny szövet kerül felhasználásra, amely extrakciós kárpittisztító technológiával nem tisztítható biztonságosan.
+      - text: Kérjük, hogy megrendelés előtt minden esetben ellenőrizze a bútor szövetének típusát és tisztíthatóságát. Amennyiben a helyszínen derül ki, hogy a bútor anyaga az alkalmazott technológiával nem tisztítható, a lefoglalt időpont és kiszállás kiesése miatt a szolgáltatás díjának 50%-a kapacitás-foglalási díjként felszámításra kerülhet.
+      - text: Köszönjük megértését!
+  - generic [ref=e116]:
+    - generic [ref=e117]:
+      - generic [ref=e118]: Előtte / Utána
+      - heading "Válassza a győri kárpittisztítást! Mutatjuk miért!" [level=2] [ref=e119]
+      - paragraph [ref=e120]: Sokan gondolják, hogy a gépbérlés az olcsóbb megoldás - de aki banánnal fizet, az majmot kap. Egy profi kárpittisztítás nem csak felszínesen sikál, hanem a szövetek mélyéig hatol, és valódi eredményt ad.
+    - generic [ref=e121]:
+      - generic [ref=e122]:
+        - heading "Amikor a gyerekek összefirkálják a kanapét..." [level=3] [ref=e123]
+        - generic [ref=e124]:
+          - paragraph [ref=e125]:
+            - text: Ismeri azt az érzést, amikor hazaér, és a
+            - strong [ref=e126]: világos kanapén filctoll nyomok
+            - text: és kiöntött szörp foltjai virítanak? A gyerekek kreativitása határtalan - sajnos a bútorok kárpitja kevésbé ellenálló.
+          - paragraph [ref=e127]:
+            - text: "Egy győri édesanya mesélte: \"Három gyerek mellett hetente van valami baleset."
+            - strong [ref=e128]: Szörp, zsírkréta, nutella
+            - text: "- amit el tud képzelni, az mind landolt már a kanapénkon.\""
+          - paragraph [ref=e129]:
+            - text: A professzionális ECO Clean technológia nemcsak a felszíni foltokat távolítja el, hanem a
+            - strong [ref=e130]: szövetek mélyére ivódott szennyeződéseket
+            - text: is kioldja - vegyszermentesen, gyerekbarát módon.
+          - paragraph [ref=e131]:
+            - text: Az eredmény? Egy olyan kanapé, amin
+            - strong [ref=e132]: bátran hempereghetnek a gyerekek
+            - text: ", mert tudja, hogy pár hívással újra makulátlan lehet."
+        - paragraph [ref=e134]: "Győrben az ECO Clean az intelligens választás: vegyszermentes, gyerekbiztos, és az eredmény magáért beszél. Ne kockáztasson bérelt géppel - bízza profikra!"
+        - 'link "Hívjon most: 06 70 240 8141" [ref=e135] [cursor=pointer]':
+          - /url: tel:+36702408141
+          - img [ref=e136]
+          - text: "Hívjon most: 06 70 240 8141"
+      - generic [ref=e138]:
+        - img "Kárpittisztítás után"
+        - img "Kárpittisztítás előtt"
+        - generic:
+          - img
+        - generic: Előtte
+        - generic: Utána
+  - generic [ref=e140]:
+    - generic [ref=e141]:
+      - generic [ref=e142]: Miért minket?
+      - generic [ref=e143]: Miért válassza az ECO Clean technológiát Győrben?
+    - generic [ref=e144]:
+      - generic [ref=e145]:
+        - img [ref=e147]
+        - generic [ref=e150]: Digitális Pontosság & Kényelem
+        - paragraph [ref=e151]: Nem kell egész nap várnia a "szemlét". Precíz érkezés, hamarosan elérhető online foglalási rendszerrel a nap 24 órájában.
+      - generic [ref=e152]:
+        - img [ref=e154]
+        - generic [ref=e156]: 100% Bio-Biztonság
+        - paragraph [ref=e157]: Kizárólag természetes alapú tisztítószerek. Biztonságos babáknak, kismamáknak és házi kedvenceknek is.
+      - generic [ref=e158]:
+        - img [ref=e160]
+        - heading "Prémium Minőség Garancia" [level=3] [ref=e162]
+        - paragraph [ref=e163]: Nem ismerünk kompromisszumot. Ha nem elégedett az eredménnyel, ingyen visszajövünk és újra megcsináljuk.
+      - generic [ref=e164]:
+        - img [ref=e166]
+        - heading "15+ év szakértelem" [level=3] [ref=e169]
+        - paragraph [ref=e170]: Több mint 15 év tapasztalat és folyamatos technológiai fejlesztés áll mögöttünk.
+  - generic [ref=e173]:
+    - generic [ref=e174]:
+      - generic [ref=e175]: Miért több ez, mint egyszerű kárpittisztítás?
+      - paragraph [ref=e176]: Győr dinamikus ipari városában, ahol a por és az allergének terhelése magasabb, a hagyományos porszívózás már nem elég.
+    - generic [ref=e177]:
+      - generic [ref=e178]:
+        - 'heading "🌿 Több mint tisztítás: Ez Bútorfelújítás" [level=4] [ref=e179]'
+        - paragraph [ref=e180]:
+          - text: Győr ipari és városi környezete miatt a bútorok gyorsabban szívják magukba a port és az allergéneket. Az ECO Clean nem csupán a foltokat távolítja el. Technológiánk a szövet legmélyebb rétegeiből is kiszívja az éveken át felgyülemlett port, atkákat és baktériumokat. Az eredmény? Nemcsak tiszta, de
+          - strong [ref=e181]: higiénikus és friss illatú
+          - text: otthon.
+      - generic [ref=e182]:
+        - heading "🦠 \"Láthatatlan Ellenség\" elleni védelem" [level=4] [ref=e183]
+        - paragraph [ref=e184]: Sok győri kárpittisztítóval ellentétben, mi a láthatatlanra fókuszálunk. A poratkák ürüléke az egyik leggyakoribb allergén Győrben. Speciális gépeinkkel eltávolítjuk a szennyeződések 99,9%-át a kanapé szivacsaiból. A tisztítás után kérésre tanúsítványt adunk az atkaírtás eredményéről!
+      - generic [ref=e185]:
+        - heading "⚙️ High-Tech Ipari Technológia" [level=4] [ref=e186]
+        - paragraph [ref=e187]: Győr a technológia városa. Miért elégedne meg elavult módszerekkel? Nagynyomású extrakciós gépeink és bio-aktív tisztítószereink a jövő technológiáját hozzák el a nappalijába. Nincs áztatás, nincs vegyszerszag, csak tiszta szövet.
+  - generic [ref=e190]:
+    - generic [ref=e191]:
+      - generic [ref=e192]:
+        - img [ref=e193]
+        - text: Hogyan dolgozunk?
+      - 'heading "VIZES kárpittisztítás: hatékony és kíméletes!" [level=2] [ref=e196]'
+    - generic [ref=e197]:
+      - iframe [ref=e200]
+      - generic [ref=e201]:
+        - paragraph [ref=e202]: Az extrakciós kárpittisztítás egy nedves tisztítási eljárás, amelyet különösen a szövetkárpitok mélyen ülő szennyeződéseinek és foltjainak eltávolítására fejlesztettek ki. Nagynyomású gépet használunk, amely meleg víz és speciális, vegyszermentes tisztítószer keverékét juttatja mélyen a szövetbe, majd az oldatot a benne lévő szennyeződésekkel együtt kiszívja.
+        - generic [ref=e203]:
+          - generic [ref=e204]:
+            - img [ref=e206]
+            - heading "Mélyreható tisztítás" [level=3] [ref=e209]
+            - paragraph [ref=e210]: Hatékonyan távolítja el a makacs foltokat, szennyeződéseket és allergéneket a szövet legmélyebb rétegeiből is.
+          - generic [ref=e211]:
+            - img [ref=e213]
+            - heading "Frissesség visszaállítva" [level=3] [ref=e215]
+            - paragraph [ref=e216]: Eltávolítja a kellemetlen szagokat és visszaállítja a kárpit eredeti illatát, megjelenését és formáját.
+          - generic [ref=e217]:
+            - img [ref=e219]
+            - heading "Hosszabb élettartam" [level=3] [ref=e221]
+            - paragraph [ref=e222]: Rendszeres professzionális kárpittisztítás szignifikánsan meghosszabbítja a bútorok és kárpitok élettartamát.
+  - generic [ref=e225]:
+    - generic [ref=e226]:
+      - generic [ref=e227]: Egészség és biztonság
+      - generic [ref=e228]: Miért elengedhetetlen a kárpittisztítás és atkaírtás Győrben?
+      - paragraph [ref=e229]: Győr páradús, folyóparti klímája kedvez a poratkák szaporodásának. Professzionális kárpittisztításunkkal és atkaírtásunkkal védjük családja egészségét.
+    - generic [ref=e230]:
+      - generic [ref=e231]:
+        - generic [ref=e232]:
+          - heading "Allergiás tünetek enyhítése otthon" [level=3] [ref=e233]
+          - paragraph [ref=e234]: Győrben a Duna és a Rába közelsége emeli a páratartalmat, ami ideális környezet a poratkáknak. Ha reggeli tüsszögéssel, orrdugulással vagy szemviszketéssel küzd, a kanapéja és foteljei lehetnek a fő allergénforrások. Kárpittisztításunk 99,9%-ban eltávolítja az atkákat és ürülékeiket.
+        - generic [ref=e235]:
+          - heading "Babaszoba és gyerekszoba védelme" [level=3] [ref=e236]
+          - paragraph [ref=e237]: A győri kisgyermekes családok számára létfontosságú a tiszta bútor. A csúszó-mászó babák közvetlenül érintkeznek a kárpittal — vegyszermentes mélytisztításunk biztonságos, mégis hatékony megoldás a poratkák és baktériumok ellen.
+        - generic [ref=e238]:
+          - heading "Irodai székek és közösségi terek karbantartása" [level=3] [ref=e239]
+          - paragraph [ref=e240]: Győr ipari és üzleti központ jellegéből adódóan rengeteg irodaépület működik a városban. A napi 8 órát használt forgószékek és tárgyalótermi bútorok valóságos atkatelepek — rendszeres kárpittisztítással egészségesebb munkakörnyezetet biztosíthat.
+        - generic [ref=e241]:
+          - heading "Háziállatos háztartások mélytisztítása" [level=3] [ref=e242]
+          - paragraph [ref=e243]: A győri kutyás-macskás családoknál a szőr, hám és nyál tovább fokozza az allergénterhelést. Kárpittisztításunk nemcsak a poratkákat, hanem az állatszőr okozta szennyeződéseket is alaposan eltávolítja a bútorokból.
+        - generic [ref=e244]:
+          - heading "Szezonális nagytakarítás atkamentesítéssel" [level=3] [ref=e245]
+          - paragraph [ref=e246]: "Az őszi-téli fűtési szezon Győrben különösen veszélyes az allergiásoknak: a zárt ablakok és a meleg, száraz levegő felkavarja az atkaporát. Évszakváltáskor végzett kárpittisztítással megelőzheti a tünetek súlyosbodását."
+      - generic:
+        - img "Professzionális kárpittisztítás és atkaírtás Győrben – kanapé mélytisztítás"
+  - generic [ref=e249]:
+    - generic [ref=e250]:
+      - generic [ref=e251]: Területek és értékelések
+      - generic [ref=e252]: Kiszállási területek, díjak és ügyfeleink véleménye
+    - generic [ref=e253]:
+      - generic [ref=e254]:
+        - heading "🚚 Kiszállási területek és díjak" [level=3] [ref=e255]
+        - paragraph [ref=e256]:
+          - strong [ref=e257]: "Győr városon belül:"
+          - text: "2 500 Ft | Győr külső kerületei: 3 000 Ft | Győr 10 km-es vonzáskörzetében: 3 500 Ft | Győrtől 20 km-nél távolabb: megbeszélés alapján."
+        - paragraph [ref=e258]:
+          - strong [ref=e259]: "Mosonmagyaróvár városon belül:"
+          - text: "2 500 Ft | Külső városrészek (Malomdűlő, Duna lakópark...): 3 000 Ft | 10 km-es körzeten belül: 3 500 Ft | 20 km-nél távolabban: megbeszélés alapján."
+        - paragraph [ref=e260]: Győr, Mosonmagyaróvár, Komárom, Esztergom, Tata, Tatabánya, Veszprém, Pápa, Sopron, Szombathely és környékén azonos számítás alapján kerül felszámolásra a kiszállási díj.
+        - paragraph [ref=e261]:
+          - strong [ref=e262]: "Időpontfoglalás:"
+          - link "06 70 240 8141" [ref=e263] [cursor=pointer]:
+            - /url: tel:+36702408141
+      - generic [ref=e264]:
+        - heading "⭐ Ügyfeleink véleménye" [level=3] [ref=e265]
+        - iframe [ref=e266]
+  - generic [ref=e269]:
+    - generic [ref=e270]:
+      - generic [ref=e271]: Tudnivalók
+      - heading "Kárpittisztítás – fontos tudnivalók és feltételek" [level=2] [ref=e272]
+      - paragraph [ref=e273]: Kérjük, foglalás előtt olvassa el az alábbi általános szerződési feltételeket!
+    - generic [ref=e274]:
+      - button "📋 A kárpittisztítás megrendelésének feltételei (ÁSZF) Kárpittisztítással kapcsolatban árajánlatot és információt kizárólag telefonos megkeresés alapján tudunk adni. A kárpittisztítás árak meghatározása során kollégánk célirányos kérdések alapján kalkulál hozzávetőleges árat — végleges árat a helyszínen tudunk kalkulálni! Amennyiben a megrendelést követően a kárpittisztítás 48 órával előbb nem kerül lemondásra, vagy bármilyen okból kifolyólag a tisztítás nem kivitelezhető, úgy a kiszállás teljes egészében, valamint a megbeszélt kárpittisztítás árának az 50%-a kerül kiszámlázásra. A kárpittisztítás megrendelését telefonos megbeszélés után, kizárólag SMS formájában adhatja le! Az SMS-nek tartalmaznia kell a telefonon megbeszélt tisztítás időpontját, a megrendelő nevét és pontos címét." [ref=e275] [cursor=pointer]:
+        - generic [ref=e276]: 📋 A kárpittisztítás megrendelésének feltételei (ÁSZF)
+        - paragraph: Kárpittisztítással kapcsolatban árajánlatot és információt kizárólag telefonos megkeresés alapján tudunk adni. A kárpittisztítás árak meghatározása során kollégánk célirányos kérdések alapján kalkulál hozzávetőleges árat — végleges árat a helyszínen tudunk kalkulálni! Amennyiben a megrendelést követően a kárpittisztítás 48 órával előbb nem kerül lemondásra, vagy bármilyen okból kifolyólag a tisztítás nem kivitelezhető, úgy a kiszállás teljes egészében, valamint a megbeszélt kárpittisztítás árának az 50%-a kerül kiszámlázásra. A kárpittisztítás megrendelését telefonos megbeszélés után, kizárólag SMS formájában adhatja le! Az SMS-nek tartalmaznia kell a telefonon megbeszélt tisztítás időpontját, a megrendelő nevét és pontos címét.
+      - button "🚗 A kiszállással kapcsolatos feltételek (ÁSZF) A kárpittisztítással egybekötött kiszállás során a megrendelőnek biztosítania kell a kárpittisztító kolléga számára a megadott cím 20 méteres körzetében az ingyenes, valamint az akadálymentes parkolást. Amennyiben kollégánk nem tudja a tisztításhoz szükséges gépeket akadálymentesen és extra erőfeszítés nélkül a helyszínre szállítani, pótdíjak kerülnek felszámolásra (1 000–3 000 Ft között). A parkolási díjak minden esetben a megrendelőt terhelik." [ref=e277] [cursor=pointer]:
+        - generic [ref=e278]: 🚗 A kiszállással kapcsolatos feltételek (ÁSZF)
+        - paragraph: A kárpittisztítással egybekötött kiszállás során a megrendelőnek biztosítania kell a kárpittisztító kolléga számára a megadott cím 20 méteres körzetében az ingyenes, valamint az akadálymentes parkolást. Amennyiben kollégánk nem tudja a tisztításhoz szükséges gépeket akadálymentesen és extra erőfeszítés nélkül a helyszínre szállítani, pótdíjak kerülnek felszámolásra (1 000–3 000 Ft között). A parkolási díjak minden esetben a megrendelőt terhelik.
+      - 'button "🛋️ A kárpittisztítás feltételei (ÁSZF) Az extrakciós kárpittisztítást kizárólag szövetkárpit esetén alkalmazhatjuk. A Kanizsai bútorgyár ANDANTE tipusú bútorait és a hasonló „mosható\", víztaszító anyagokat nem áll módunkban extrakciós Kärcher gépekkel hatékonyan tisztítani. Kérjük gondoskodjon az akadálymentes tisztításról: vízpermetre érzékeny bútorokat távolítsa el a közelből; ha a padló vízre érzékeny (pl. laminált padló, parketta), takarja le megfelelő anyaggal. A feltételek elmulasztása során keletkezett károkért felelősséget nem vállalunk!" [ref=e279] [cursor=pointer]':
+        - generic [ref=e280]: 🛋️ A kárpittisztítás feltételei (ÁSZF)
+        - paragraph: "Az extrakciós kárpittisztítást kizárólag szövetkárpit esetén alkalmazhatjuk. A Kanizsai bútorgyár ANDANTE tipusú bútorait és a hasonló „mosható\", víztaszító anyagokat nem áll módunkban extrakciós Kärcher gépekkel hatékonyan tisztítani. Kérjük gondoskodjon az akadálymentes tisztításról: vízpermetre érzékeny bútorokat távolítsa el a közelből; ha a padló vízre érzékeny (pl. laminált padló, parketta), takarja le megfelelő anyaggal. A feltételek elmulasztása során keletkezett károkért felelősséget nem vállalunk!"
+      - button "⏰ Mikor ajánlott a kanapé, fotel, szék kárpittisztítás? A kárpittisztítás ugyanúgy, mint ruháink mosása — RENDSZERESEN ajánlott. Évente egyszer nem árt egy alapos kárpittisztítás alkalmazása. Ilyenkor a kanapé, fotel, puff és a székek szivaccsal ellátott felületeiből el kell távolítani az atkákat, az atkák tojásait és az ürüléküket, majd portalanítani kell a gépi kárpittisztítás előtt. Hoteloknak, iskoláknak, irodákban és egyéb sűrűn látogatott létesítményekben félévente ajánlott a székek és kárpitozott felületek tisztítása atkaírtással és fertőtlenítéssel." [ref=e281] [cursor=pointer]:
+        - generic [ref=e282]: ⏰ Mikor ajánlott a kanapé, fotel, szék kárpittisztítás?
+        - paragraph: A kárpittisztítás ugyanúgy, mint ruháink mosása — RENDSZERESEN ajánlott. Évente egyszer nem árt egy alapos kárpittisztítás alkalmazása. Ilyenkor a kanapé, fotel, puff és a székek szivaccsal ellátott felületeiből el kell távolítani az atkákat, az atkák tojásait és az ürüléküket, majd portalanítani kell a gépi kárpittisztítás előtt. Hoteloknak, iskoláknak, irodákban és egyéb sűrűn látogatott létesítményekben félévente ajánlott a székek és kárpitozott felületek tisztítása atkaírtással és fertőtlenítéssel.
+      - 'button "🏠 Házilag kárpittisztítás — mire vigyázzon? Vannak házi praktikák kárpittisztításra is — tucatnyi csodaszerről olvashatunk a neten. DE vigyázat! Sokszor fordulnak hozzánk önálló kárpittisztítás után segítségért: a kitisztított kanapé foltos marad, perem képződik, megjobban beszürkül a kárpit. Sajnos nem mindig áll módunkban segíteni és helyrehozni a nem megfelelően alkalmazott csodaszerek által okozott problémákat." [ref=e283] [cursor=pointer]':
+        - generic [ref=e284]: 🏠 Házilag kárpittisztítás — mire vigyázzon?
+        - paragraph: "Vannak házi praktikák kárpittisztításra is — tucatnyi csodaszerről olvashatunk a neten. DE vigyázat! Sokszor fordulnak hozzánk önálló kárpittisztítás után segítségért: a kitisztított kanapé foltos marad, perem képződik, megjobban beszürkül a kárpit. Sajnos nem mindig áll módunkban segíteni és helyrehozni a nem megfelelően alkalmazott csodaszerek által okozott problémákat."
+      - 'button "🔧 Kárpittisztító gép bérlése — megéri? Ha kárpittisztításon töri a fejét, előbb-utóbb belebotlik egy vállalkozóba, aki készségesen kölcsönbe ad kárpittisztító gépet. Gép bérbeadása során legtöbbször nem kérdezik meg, hogy milyen szövetből készült az a bútor, amit tisztítani készül. A tapasztalt kárpittisztítő szakemberek saját készítésű tisztítószereket kevernek az állapottól függően, az atkaírtásról és portalanításról sem esik szó — erre alkalmas gépet nem adnak bérbe, pedig nélkülözhetetlen a folyamat során. Röviden: olcsó húsnak híg a leve..." [ref=e285] [cursor=pointer]':
+        - heading "🔧 Kárpittisztító gép bérlése — megéri?" [level=3] [ref=e286]
+        - paragraph: "Ha kárpittisztításon töri a fejét, előbb-utóbb belebotlik egy vállalkozóba, aki készségesen kölcsönbe ad kárpittisztító gépet. Gép bérbeadása során legtöbbször nem kérdezik meg, hogy milyen szövetből készült az a bútor, amit tisztítani készül. A tapasztalt kárpittisztítő szakemberek saját készítésű tisztítószereket kevernek az állapottól függően, az atkaírtásról és portalanításról sem esik szó — erre alkalmas gépet nem adnak bérbe, pedig nélkülözhetetlen a folyamat során. Röviden: olcsó húsnak híg a leve..."
+  - generic [ref=e289]:
+    - generic [ref=e290]:
+      - heading "Gyakran ismételt kérdések" [level=2] [ref=e291]
+      - paragraph [ref=e292]: Győri ügyfeleink leggyakoribb kérdései
+    - generic [ref=e293]:
+      - button "❓ Hogyan tudok a leggyorsabban időpontot foglalni? Jelenleg telefonon a 06 70 240 8141-es számon tudunk egyeztetni, de hamarosan elérhető lesz AI-vezérelt Online Foglalási Rendszerünk, ahol a mesterséges intelligencia segít másodpercek alatt megtalálni az Önnek legmegfelelőbb időpontot, várakozás nélkül." [ref=e294] [cursor=pointer]:
+        - generic [ref=e295]: ❓ Hogyan tudok a leggyorsabban időpontot foglalni?
+        - paragraph:
+          - text: Jelenleg telefonon a
+          - strong [ref=e296]: 06 70 240 8141
+          - text: "-es számon tudunk egyeztetni, de hamarosan elérhető lesz"
+          - strong [ref=e297]: AI-vezérelt Online Foglalási Rendszerünk
+          - text: ", ahol a mesterséges intelligencia segít másodpercek alatt megtalálni az Önnek legmegfelelőbb időpontot, várakozás nélkül."
+      - button "❓ Mikor ajánlott a kárpittisztítás Győrben? Győr ipari környezete miatt évente legalább egyszer professzionális mélytisztítás javasolt. Allergiásoknak, kisgyermekeseknek és forgalmas utak mellett lakóknak félévente érdemes frissíteni a kárpitokat." [ref=e298] [cursor=pointer]:
+        - generic [ref=e299]: ❓ Mikor ajánlott a kárpittisztítás Győrben?
+        - paragraph: Győr ipari környezete miatt évente legalább egyszer professzionális mélytisztítás javasolt. Allergiásoknak, kisgyermekeseknek és forgalmas utak mellett lakóknak félévente érdemes frissíteni a kárpitokat.
+      - button "❓ Biztonságos-e a vegyszermentes tisztítás? Abszolút! Ez a technológiánk alapköve. Nem használunk agresszív vegyszereket, így a tisztítás után azonnal, biztonsággal használhatja a bútorokat. Nincs bőrirritáció, nincs vegyszergőz." [ref=e300] [cursor=pointer]:
+        - generic [ref=e301]: ❓ Biztonságos-e a vegyszermentes tisztítás?
+        - paragraph: Abszolút! Ez a technológiánk alapköve. Nem használunk agresszív vegyszereket, így a tisztítás után azonnal, biztonsággal használhatja a bútorokat. Nincs bőrirritáció, nincs vegyszergőz.
+      - button "❓ Mennyi idő alatt szárad meg a kárpit? Az ipari elszívó technológiánknak köszönhetően a száradási idő minimális. Normál körülmények között 4-6 óra, de fűtött lakásban ez az idő 3-4 órára is csökkenhet." [ref=e302] [cursor=pointer]:
+        - generic [ref=e303]: ❓ Mennyi idő alatt szárad meg a kárpit?
+        - paragraph: Az ipari elszívó technológiánknak köszönhetően a száradási idő minimális. Normál körülmények között 4-6 óra, de fűtött lakásban ez az idő 3-4 órára is csökkenhet.
+  - contentinfo [ref=e305]:
+    - generic [ref=e306]:
+      - generic [ref=e307]:
+        - link "ECO Clean kárpittisztítás" [ref=e308] [cursor=pointer]:
+          - /url: index.html
+          - generic [ref=e309]: ECO
+          - generic [ref=e310]: Clean kárpittisztítás
+        - paragraph [ref=e311]: Professzionális vegyszermentes tisztítás Győr és környékén. Kanapé, fotel, irodai és ebédlő székek kárpittisztítása vegyszerek nélkül - ECO Clean kárpittisztítás - az INTELLIGENS megoldás.
+        - generic [ref=e312]:
+          - link "Facebook" [ref=e313] [cursor=pointer]:
+            - /url: https://www.facebook.com/EcoCleanGyor
+            - img [ref=e314]
+          - link "LinkedIn" [ref=e316] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/karpittisztitas-gyor/
+            - img [ref=e317]
+          - link "X" [ref=e321] [cursor=pointer]:
+            - /url: https://x.com/karpit_gyor
+            - img [ref=e322]
+          - link "Blog" [ref=e324] [cursor=pointer]:
+            - /url: https://blog.ecocleantisztito.hu/
+            - img [ref=e325]
+      - generic [ref=e327]:
+        - heading "Privát + céges" [level=4] [ref=e328]
+        - list [ref=e329]:
+          - listitem [ref=e330]:
+            - link "Kárpittisztítás" [ref=e331] [cursor=pointer]:
+              - /url: karpittisztitas-gyor.html
+          - listitem [ref=e332]:
+            - link "Matractisztítás" [ref=e333] [cursor=pointer]:
+              - /url: matractisztítás-gyor.html
+      - generic [ref=e334]:
+        - heading "Csak cégeknek" [level=4] [ref=e335]
+        - list [ref=e336]:
+          - listitem [ref=e337]:
+            - link "Ipari szőnyegtisztítás" [ref=e338] [cursor=pointer]:
+              - /url: szonyegtisztítás-gyor.html
+          - listitem [ref=e339]:
+            - link "Ipari takarítás" [ref=e340] [cursor=pointer]:
+              - /url: takaritas-gyor.html
+          - listitem [ref=e341]:
+            - link "Ablak és kirakat" [ref=e342] [cursor=pointer]:
+              - /url: ablaktisztítás-gyor.html
+      - generic [ref=e343]:
+        - heading "Kapcsolat" [level=4] [ref=e344]
+        - list [ref=e345]:
+          - listitem [ref=e346]:
+            - link "06 70 240 8141" [ref=e347] [cursor=pointer]:
+              - /url: tel:+36702408141
+          - listitem [ref=e348]:
+            - link "info@ecocleantisztito.hu" [ref=e349] [cursor=pointer]:
+              - /url: mailto:info@ecocleantisztito.hu
+    - generic [ref=e350]:
+      - paragraph [ref=e351]:
+        - text: © 2025 ECO Clean. Minden jog fenntartva. |
+        - link "Adatvédelem" [ref=e352] [cursor=pointer]:
+          - /url: adatvedelem.html
+        - text: "|"
+        - link "ÁSZF" [ref=e353] [cursor=pointer]:
+          - /url: aszf.html
+      - paragraph [ref=e354]:
+        - text: "Készítette:"
+        - link "Conen Digital" [ref=e355] [cursor=pointer]:
+          - /url: https://conendigital.hu
+        - text: x
+        - link "PIXELLA" [ref=e356] [cursor=pointer]:
+          - /url: https://pixella.at
+        - text: CENTAUR
