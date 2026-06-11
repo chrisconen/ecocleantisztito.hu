@@ -45,7 +45,7 @@ const PRICING = {
 const UPSELLS = {
     // Kárpit upsells
     karpit: {
-        "atkaitas": {
+        "atkairtas": {
             name: "Atkairtás",
             description: "Száraz atkamentesítés - ajánlott allergiásoknak",
             priceType: "perItem", // ár tételenként különböző
@@ -123,7 +123,7 @@ const LARGE_ORDER = {
 const State = {
     customerType: 'Magánszemély',
     serviceType: null,
-    selectedItems: {},      // { itemId: { count: 1, upsells: ['atkaitas'] } }
+    selectedItems: {},      // { itemId: { count: 1, upsells: ['atkairtas'] } }
     globalUpsells: {},      // { upsellId: true }
     conditions: [],
     city: null,
@@ -293,7 +293,7 @@ function createItemHTML(category, id, item) {
             ${hasAtka ? `
             <div class="item-upsell" id="upsell-${fullId}" style="display:none;">
                 <label class="upsell-checkbox">
-                    <input type="checkbox" onchange="toggleItemUpsell('${fullId}', 'atkaitas', ${item.atkaPrice})">
+                    <input type="checkbox" onchange="toggleItemUpsell('${fullId}', 'atkairtas', ${item.atkaPrice})">
                     <span class="upsell-label">
                         <span class="upsell-icon">🦠</span>
                         <span class="upsell-text">+Atkairtás</span>
@@ -316,7 +316,7 @@ function populateUpsells() {
     if (showKarpit) {
         container.innerHTML += '<div class="upsell-group-title">🛋️ Kárpit extrák</div>';
         Object.entries(UPSELLS.karpit).forEach(([id, upsell]) => {
-            if (id !== 'atkaitas') { // Atkairtás item-level
+            if (id !== 'atkairtas') { // Atkairtás item-level
                 container.innerHTML += createGlobalUpsellHTML('karpit', id, upsell);
             }
         });
@@ -526,7 +526,7 @@ function updateSummary() {
 
         // Item-level upsells (atkairtás)
         item.upsells.forEach(upsellId => {
-            if (upsellId === 'atkaitas' && pricing.atkaPrice) {
+            if (upsellId === 'atkairtas' && pricing.atkaPrice) {
                 const atkaTotal = pricing.atkaPrice * item.count;
                 subtotal += atkaTotal;
                 totalDuration += 15 * item.count;
