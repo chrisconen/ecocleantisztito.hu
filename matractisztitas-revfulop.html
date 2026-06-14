@@ -1485,7 +1485,20 @@
                 <div class="section-label">Miért minket?</div>
                 <h2 class="section-title">Miért válassza az ECO Clean szolgáltatást Révfülöpön?</h2>
             </div>
-            <div class="why-us-grid">
+            <div class="matrac-choose">
+                <div class="matrac-choose__media">
+                    <div class="mc-ba" aria-label="Matractisztítás előtte-utána összehasonlítás">
+                        <img class="mc-ba__after" src="img/matractisztitas-utan.webp"
+                            alt="Matractisztítás után – tiszta, higiénikus, felfrissült matrac" loading="lazy" decoding="async">
+                        <img class="mc-ba__before" src="img/matractisztitas-elott.webp"
+                            alt="Matractisztítás előtt – elhasználódott, foltos matrac" loading="lazy" decoding="async">
+                        <div class="mc-ba__handle"></div>
+                        <div class="mc-ba__knob"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6" /><polyline points="9 18 15 12 9 6" transform="translate(6,0)" /></svg></div>
+                        <span class="mc-ba__label mc-ba__label--before">Előtte</span>
+                        <span class="mc-ba__label mc-ba__label--after">Utána</span>
+                    </div>
+                </div>
+                <div class="why-us-grid matrac-choose__cards">
                 <div class="why-us-card">
                     <div class="why-us-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1529,8 +1542,59 @@
                     <p>Több mint 15 év szakmai tapasztalattal és folyamatos technológiai fejlesztéssel.</p>
                 </div>
             </div>
+            </div>
+            <div class="matrac-choose__cta">
+                <a href="karpittisztitas-elotte-utana.html" class="mc-gallery-btn">Tekintse meg a teljes előtte-utána galériát</a>
+            </div>
         </div>
     </section>
+    <style>
+        .matrac-choose { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: center; margin-top: 1.75rem; }
+        .matrac-choose .matrac-choose__cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-content: start; }
+        .matrac-choose__media { margin: 0; }
+        .matrac-choose__cta { text-align: center; margin-top: 2rem; }
+        .mc-gallery-btn { display: inline-block; padding: .9rem 2rem; border-radius: 12px; font-weight: 700; font-size: 1rem; text-decoration: none; color: #04241a; background: linear-gradient(135deg, #00a855, #00cc6a); box-shadow: 0 6px 20px rgba(0, 168, 85, .3); transition: transform .25s ease, box-shadow .25s ease; }
+        [data-theme="dark"] .mc-gallery-btn { background: linear-gradient(135deg, #00ff88, #00cc6a); }
+        .mc-gallery-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0, 168, 85, .4); }
+        .mc-ba { position: relative; border-radius: 18px; overflow: hidden; aspect-ratio: 4 / 3; cursor: col-resize; user-select: none; -webkit-user-select: none; box-shadow: 0 12px 40px rgba(0, 0, 0, .25); }
+        .mc-ba img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+        .mc-ba__after { z-index: 1; }
+        .mc-ba__before { z-index: 2; clip-path: inset(0 50% 0 0); }
+        .mc-ba__handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 4px; background: #fff; z-index: 10; transform: translateX(-50%); box-shadow: 0 0 12px rgba(0, 0, 0, .3); pointer-events: none; }
+        .mc-ba__knob { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #00a855, #00cc6a); border: 3px solid #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(0, 0, 0, .3); pointer-events: none; z-index: 11; }
+        [data-theme="dark"] .mc-ba__knob { background: linear-gradient(135deg, #00ff88, #00cc6a); }
+        .mc-ba__knob svg { width: 22px; height: 22px; fill: none; stroke: #04241a; stroke-width: 2.5; }
+        .mc-ba__label { position: absolute; bottom: 14px; z-index: 5; padding: 6px 14px; border-radius: 8px; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; pointer-events: none; color: #fff; backdrop-filter: blur(4px); }
+        .mc-ba__label--before { left: 14px; background: rgba(239, 68, 68, .85); }
+        .mc-ba__label--after { right: 14px; background: rgba(34, 197, 94, .9); }
+        .matrac-choose-section { padding: clamp(2.5rem, 6vw, 4.5rem) 1.5rem; }
+        .matrac-choose-section .mc-inner { max-width: 1200px; margin: 0 auto; }
+        .matrac-choose-section .mc-header { text-align: center; margin-bottom: clamp(1.5rem, 4vw, 2.5rem); }
+        .matrac-choose-section .mc-label { display: inline-block; font-size: .8rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--primary, #00a855); margin-bottom: .5rem; }
+        .matrac-choose-section .mc-header h2 { font-size: clamp(1.6rem, 3.4vw, 2.4rem); font-weight: 800; line-height: 1.2; margin: 0; }
+        .mc-card { background: var(--bg-secondary, #f5f8f6); border: 1px solid rgba(128, 128, 128, .2); border-radius: 16px; padding: 1.3rem 1.4rem; }
+        .mc-card h3 { font-size: 1.05rem; font-weight: 700; margin: 0 0 .4rem; }
+        .mc-card p { font-size: .93rem; line-height: 1.6; margin: 0; opacity: .85; }
+        @media (max-width: 900px) {
+            .matrac-choose { grid-template-columns: 1fr; }
+            .matrac-choose .matrac-choose__cards { grid-template-columns: 1fr; }
+            .matrac-choose__media { order: -1; }
+        }
+    </style>
+    <script>
+        (function () {
+            document.querySelectorAll('.mc-ba').forEach(function (w) {
+                var before = w.querySelector('.mc-ba__before'), handle = w.querySelector('.mc-ba__handle'), knob = w.querySelector('.mc-ba__knob'), drag = false;
+                function set(x) { var r = w.getBoundingClientRect(); var p = Math.max(.02, Math.min(.98, (x - r.left) / r.width)) * 100; before.style.clipPath = 'inset(0 ' + (100 - p) + '% 0 0)'; handle.style.left = p + '%'; knob.style.left = p + '%'; }
+                w.addEventListener('mousedown', function (e) { drag = true; set(e.clientX); e.preventDefault(); });
+                document.addEventListener('mousemove', function (e) { if (drag) set(e.clientX); });
+                document.addEventListener('mouseup', function () { drag = false; });
+                w.addEventListener('touchstart', function (e) { drag = true; set(e.touches[0].clientX); }, { passive: true });
+                w.addEventListener('touchmove', function (e) { if (!drag) return; set(e.touches[0].clientX); e.preventDefault(); }, { passive: false });
+                w.addEventListener('touchend', function () { drag = false; });
+            });
+        })();
+    </script>
 
     <!-- HELYI JELLEGZETESSÉGEK SZEKCIÓ - BŐVÍTETT -->
     <section class="why-us-detailed">
