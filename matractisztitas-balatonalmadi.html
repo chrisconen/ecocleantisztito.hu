@@ -701,6 +701,22 @@
             line-height: 1.6;
         }
     </style>
+    <style id="layout-fix-cards">
+        /* Egeszsegugyi hatasok: 6 kartya desktopon 3x2 */
+        .health-grid { grid-template-columns: repeat(3, 1fr); }
+        @media (max-width: 992px) { .health-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .health-grid { grid-template-columns: 1fr; } }
+        /* "Miert tobb ez...": 5 kartya, 3 felul + 2 alul (50%) */
+        .why-us-detailed .content-blocks { grid-template-columns: repeat(6, 1fr); align-items: stretch; }
+        .why-us-detailed .content-blocks .content-block { grid-column: span 2; }
+        .why-us-detailed .content-blocks .content-block:nth-child(4) { grid-column: 1 / span 3; }
+        .why-us-detailed .content-blocks .content-block:nth-child(5) { grid-column: 4 / span 3; }
+        @media (max-width: 768px) {
+            .why-us-detailed .content-blocks .content-block,
+            .why-us-detailed .content-blocks .content-block:nth-child(4),
+            .why-us-detailed .content-blocks .content-block:nth-child(5) { grid-column: auto; }
+        }
+    </style>
 </head>
 
 <body>
