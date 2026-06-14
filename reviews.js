@@ -26,7 +26,12 @@
         fetch(endpoint)
             .then(function (r) { return r.json(); })
             .then(function (data) {
-                var reviews = (data.reviews || []).filter(function (r) { return r && r.text; });
+                var reviews = (data.reviews || [])
+                    .filter(function (r) { return r && r.text && (r.rating || 0) >= 4; })
+                    .sort(function (a, b) {
+                        if ((b.rating || 0) !== (a.rating || 0)) return (b.rating || 0) - (a.rating || 0);
+                        return String(b.time || "").localeCompare(String(a.time || ""));
+                    });
                 if (!reviews.length) { root.style.display = "none"; return; }
                 render(root, mount, data, reviews);
             })
