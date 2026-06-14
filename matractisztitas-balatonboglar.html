@@ -717,6 +717,7 @@
             .why-us-detailed .content-blocks .content-block:nth-child(5) { grid-column: auto; }
         }
     </style>
+    <link rel="stylesheet" href="reviews.css">
 </head>
 
 <body>
@@ -1788,56 +1789,13 @@
     </section>
 
         <!-- ÚJ: ÜGYFÉLVÉLEMÉNYEK SZEKCIÓ -->
-    <section class="testimonials-section">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-label">Ügyféleink mondták</div>
-                <h2 class="section-title">191+ elégedett ügyfél Balatonbogláron és környékén</h2>
-                <p class="section-description">Szállásadók, családok és allergiások véleménye a szolgáltatásunkról.</p>
+    <section class="gr-reviews" id="velemenyek" data-reviews-endpoint="https://reviews.chris-conen.workers.dev/">
+        <div class="gr-inner">
+            <div class="gr-header">
+                <div class="gr-label">Ügyféleink mondták</div>
+                <h2 class="gr-title">191+ elégedett ügyfél Balatonbogláron és környékén</h2>
             </div>
-            <div class="testimonials-grid"><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A borászatunk vendégházában a szűret után mindig ECO Cleannel tisztit tatjuk a matrackokat. Prémium vendégek – prémium tisztaság!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">KL</div>
-                        <div class="testimonial-info"><h4>Kiss Levi</h4><span>Boglari Borászat Vendégház</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Asztmás idős szüle imnek a vegyszermentes tisztítás az egyetlen meg oldás. Az ECO Clean csodagép!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">BA</div>
-                        <div class="testimonial-info"><h4>Bíra Andrea</h4><span>Magánszémly, Balatonboglár</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Airbnb szállásadóként az ECO Clean tanusitvanya segít megkülönböztetni magam a versenytars aktól!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">FK</div>
-                        <div class="testimonial-info"><h4>Farkas Kálmán</h4><span>Boglár Strand Apartman</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Panziónk vendégei számot adóan kevesebb allergiás panaszt tett ék a mat tractisztítás óta!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">SS</div>
-                        <div class="testimonial-info"><h4>Somogyéi Sándor</h4><span>Nyári Panzió, Balatonboglár</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Idős édesanyánk matrácát teljesen megújította az ECO Clean. Köszönet!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">HE</div>
-                        <div class="testimonial-info"><h4>Havasi Erzsébet</h4><span>Magánszémly, Balatonlelle</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Vörösboroscipős folt tőnt el a matrácról – amit lemondtunk, az ECO Clean megold otta!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">NB</div>
-                        <div class="testimonial-info"><h4>Nemes Bene dek</h4><span>Magánszémly, Balatonboglár</span></div>
-                    </div>
-                </div></div>
+            <div class="gr-mount"><div class="gr-loading">Vélemények betöltése…</div></div>
         </div>
     </section>
     <!-- ÚJ: SZOLGÁLTATOTT TERÜLETEK -->
@@ -1997,6 +1955,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="reviews.js" defer></script>
 </body>
 
 </html>

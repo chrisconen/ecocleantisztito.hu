@@ -717,6 +717,7 @@
             .why-us-detailed .content-blocks .content-block:nth-child(5) { grid-column: auto; }
         }
     </style>
+    <link rel="stylesheet" href="reviews.css">
 </head>
 
 <body>
@@ -1788,56 +1789,13 @@
     </section>
 
         <!-- ÚJ: ÜGYFÉLVÉLEMÉNYEK SZEKCIÓ -->
-    <section class="testimonials-section">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-label">Ügyféleink mondták</div>
-                <h2 class="section-title">191+ elégedett ügyfél Siófokon és környékén</h2>
-                <p class="section-description">Szállásadók, családok és allergiások véleménye a szolgáltatásunkról.</p>
+    <section class="gr-reviews" id="velemenyek" data-reviews-endpoint="https://reviews.chris-conen.workers.dev/">
+        <div class="gr-inner">
+            <div class="gr-header">
+                <div class="gr-label">Ügyféleink mondták</div>
+                <h2 class="gr-title">191+ elégedett ügyfél Siófokon és környékén</h2>
             </div>
-            <div class="testimonials-grid"><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A szállodánkban 40 matrac tisztítását bizzuk az ECO Clean-re évente. Rendíthetetlen megbíhataóság, kiváló eredmény!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">HV</div>
-                        <div class="testimonial-info"><h4>Horváth Vilmos</h4><span>Hotel Azur, Siófok</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A panziómban allergiás vendegek is szállnak meg. Az atkairtási tanusitvany a Booking-profilomon is látható."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">KZ</div>
-                        <div class="testimonial-info"><h4>Kiss Zsófia</h4><span>Panzió tulaj, Siófok</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Siófokon az Airbnb piac nagyon verseny-képes. A tisztá matrác és a tanusitvany segít, hogy kitűnjek a többiek közül."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">MJ</div>
-                        <div class="testimonial-info"><h4>Mészáros József</h4><span>Airbnb tulajdonos, Siófok</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Magánlákásunk bebútózásakor volt erkédve az ágy. Az ECO Clean ugyanúgy kezelte a többi matracot is – mindégy tiszvék lett!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">DP</div>
-                        <div class="testimonial-info"><h4>Dékány Péter</h4><span>Magánszémly, Siófok</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A gyerekszobában polip allergén volt a kérdés. Vegyszermentes tisztítás után a tüneték eltűntek!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">SB</div>
-                        <div class="testimonial-info"><h4>Szabó Beatrix</h4><span>Magánszémly, Siófok</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A vizeletfolt a matrácon már régi baj volt. Az ECO Clean után sem folt, sem szag – és éves garanciát adtak!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">BL</div>
-                        <div class="testimonial-info"><h4>Biró László</h4><span>Magánszémly, Siófok</span></div>
-                    </div>
-                </div></div>
+            <div class="gr-mount"><div class="gr-loading">Vélemények betöltése…</div></div>
         </div>
     </section>
     <!-- ÚJ: SZOLGÁLTATOTT TERÜLETEK -->
@@ -1997,6 +1955,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="reviews.js" defer></script>
 </body>
 
 </html>

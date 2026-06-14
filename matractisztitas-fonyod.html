@@ -717,6 +717,7 @@
             .why-us-detailed .content-blocks .content-block:nth-child(5) { grid-column: auto; }
         }
     </style>
+    <link rel="stylesheet" href="reviews.css">
 </head>
 
 <body>
@@ -1788,56 +1789,13 @@
     </section>
 
         <!-- ÚJ: ÜGYFÉLVÉLEMÉNYEK SZEKCIÓ -->
-    <section class="testimonials-section">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-label">Ügyféleink mondták</div>
-                <h2 class="section-title">191+ elégedett ügyfél Fonyódon és környékén</h2>
-                <p class="section-description">Szállásadók, családok és allergiások véleménye a szolgáltatásunkról.</p>
+    <section class="gr-reviews" id="velemenyek" data-reviews-endpoint="https://reviews.chris-conen.workers.dev/">
+        <div class="gr-inner">
+            <div class="gr-header">
+                <div class="gr-label">Ügyféleink mondták</div>
+                <h2 class="gr-title">191+ elégedett ügyfél Fonyódon és környékén</h2>
             </div>
-            <div class="testimonials-grid"><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A panziónk a komp melletti, és rengeteg tranzit vendeg száll meg. Az ECO Clean gyors és alapos munkajá értékes!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">KG</div>
-                        <div class="testimonial-info"><h4>Kis Gábor</h4><span>Komp Panzió, Fonyód</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Allergiás gyerekemre tekintettel a vegyszermentes tisztítás volt az egyetlen opció. Kiváló eredmény!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">TH</div>
-                        <div class="testimonial-info"><h4>Tóth Hédi</h4><span>Magánszémly, Fonyód</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Airbnb szállásadóként az atkairtási tanusitvany segít a versenyben. Minden vendégértékelés 5 csillag!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">VN</div>
-                        <div class="testimonial-info"><h4>Váradi Norbert</h4><span>Fonyód Airbnb</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A turistaházunkban 12 matrácot tisztítatunk. Eves szerződéssel olcsóbb, és az eredmény mindig kiváló!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">BF</div>
-                        <div class="testimonial-info"><h4>Bolla Ferenc</h4><span>Bal aton Turistaház, Fonyód</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Idős szülőm nyáralójában levő régi matrác új lett a tisztítás után. Csodálatos eredmény!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">RS</div>
-                        <div class="testimonial-info"><h4>Racz Sándor</h4><span>Magánszémly, Balatonszárszó</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A bevêzelt matrác szagat nem bi rtam eltávolítani. Az ECO Clean bio enzimes módszerrel teljesen eltávolította!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">ZA</div>
-                        <div class="testimonial-info"><h4>Zsífó Andrea</h4><span>Magánszémly, Fonyód</span></div>
-                    </div>
-                </div></div>
+            <div class="gr-mount"><div class="gr-loading">Vélemények betöltése…</div></div>
         </div>
     </section>
     <!-- ÚJ: SZOLGÁLTATOTT TERÜLETEK -->
@@ -1997,6 +1955,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="reviews.js" defer></script>
 </body>
 
 </html>

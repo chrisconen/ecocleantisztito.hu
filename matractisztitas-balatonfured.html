@@ -717,6 +717,7 @@
             .why-us-detailed .content-blocks .content-block:nth-child(5) { grid-column: auto; }
         }
     </style>
+    <link rel="stylesheet" href="reviews.css">
 </head>
 
 <body>
@@ -1788,56 +1789,13 @@
     </section>
 
         <!-- ÚJ: ÜGYFÉLVÉLEMÉNYEK SZEKCIÓ -->
-    <section class="testimonials-section">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-label">Ügyféleink mondták</div>
-                <h2 class="section-title">191+ elégedett ügyfél Balatonfüreden és környékén</h2>
-                <p class="section-description">Szállásadók, családok és allergiások véleménye a szolgáltatásunkról.</p>
+    <section class="gr-reviews" id="velemenyek" data-reviews-endpoint="https://reviews.chris-conen.workers.dev/">
+        <div class="gr-inner">
+            <div class="gr-header">
+                <div class="gr-label">Ügyféleink mondták</div>
+                <h2 class="gr-title">191+ elégedett ügyfél Balatonfüreden és környékén</h2>
             </div>
-            <div class="testimonials-grid"><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A szanatóriumunk 20 matrácát évente kétszer tisztíttatjuk. Azóta szinte megszűntek az allergiás panaszok."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">KP</div>
-                        <div class="testimonial-info"><h4>Kovács Péter</h4><span>Tópart Szanatórium, Balatonfüred</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"7 éves lányom asztőmás, és éjszakánként sokat köhögött. A matractiszтítás után szinte teljesen megszűntek a tünetei."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">SA</div>
-                        <div class="testimonial-info"><h4>Szabó Andrea</h4><span>Magánszémly, Balatonfüred</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Airbnb szállásadóként a vendégváltások közötti gyors tisztítás kritikus. Az ECO Clean reggel 8-ra jön, délutánra száraz minden."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">TM</div>
-                        <div class="testimonial-info"><h4>Tóth Margit</h4><span>Balatonfüred Nyáraló Apartman</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A szállodánkban évente kétszer végezzük a nagytisztítást. Az ECO Clean mindig pontos, gyors és alapos."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">BL</div>
-                        <div class="testimonial-info"><h4>Balogh László</h4><span>Hotel Annabella, Balatonfüred</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"90 éves édesapám matrácát tisztíttaták meg – a dohos szag teljesen eltűnt. A vegyszermentes megoldás fontos volt az idős kor miatt."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">VJ</div>
-                        <div class="testimonial-info"><h4>Varga Judit</h4><span>Magánszémly, Csopak</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A kisfiam bevizelte a matrácot, és már lemondtam róla. Az ECO Clean nemcsak a foltot, de a szagot is teljesen eltávolította."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">NK</div>
-                        <div class="testimonial-info"><h4>Nagy Katalin</h4><span>Magánszémly, Balatonfüred</span></div>
-                    </div>
-                </div></div>
+            <div class="gr-mount"><div class="gr-loading">Vélemények betöltése…</div></div>
         </div>
     </section>
     <!-- ÚJ: SZOLGÁLTATOTT TERÜLETEK -->
@@ -1997,6 +1955,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="reviews.js" defer></script>
 </body>
 
 </html>

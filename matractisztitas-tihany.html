@@ -717,6 +717,7 @@
             .why-us-detailed .content-blocks .content-block:nth-child(5) { grid-column: auto; }
         }
     </style>
+    <link rel="stylesheet" href="reviews.css">
 </head>
 
 <body>
@@ -1788,56 +1789,13 @@
     </section>
 
         <!-- ÚJ: ÜGYFÉLVÉLEMÉNYEK SZEKCIÓ -->
-    <section class="testimonials-section">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-label">Ügyféleink mondták</div>
-                <h2 class="section-title">191+ elégedett ügyfél Tihanyban és környékén</h2>
-                <p class="section-description">Szállásadók, családok és allergiások véleménye a szolgáltatásunkról.</p>
+    <section class="gr-reviews" id="velemenyek" data-reviews-endpoint="https://reviews.chris-conen.workers.dev/">
+        <div class="gr-inner">
+            <div class="gr-header">
+                <div class="gr-label">Ügyféleink mondták</div>
+                <h2 class="gr-title">191+ elégedett ügyfél Tihanyban és környékén</h2>
             </div>
-            <div class="testimonials-grid"><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A panziónk matracaít már harmadik éve tisztítatjuk az ECO Clean-nel. A vendégeink mindenévében dicsérik a tiszták ágyat!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">BN</div>
-                        <div class="testimonial-info"><h4>Bencze Nóra</h4><span>Apátság Panzió, Tihany</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Asztmás kisfiam számára a vegyszermentes tisztítás eléngedhetetlen. Két tisztitás után számottevően javúlt az állapota."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">VK</div>
-                        <div class="testimonial-info"><h4>Váradi Klara</h4><span>Magánszémly, Tihany</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Airbnb apartmanomat elő ször szkeptikus voltam, de az eredmény meggyőzött. Vendégeim értékelik a tisztáságoa."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">TJ</div>
-                        <div class="testimonial-info"><h4>Tóth József</h4><span>Tihanyi Nyuéraló, Tihany</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Hotelünkben 15 matracot tisztíttatunk évente. Az ECO Clean csapata hétvégén is vállalta a munkát, ami számunkra létfontosságú."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">KA</div>
-                        <div class="testimonial-info"><h4>Kiss Attila</h4><span>Tihany Resort Hotel</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Idős szülőm matrácát kellett megtisztítani – a vegyszermentes megoldás volt az egyetlen opció. Tökéletes eredmény!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">MJ</div>
-                        <div class="testimonial-info"><h4>Molnár Judit</h4><span>Magánszémly, Örvényes</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A matrácon levő folt eltűnt, mintha soha nem lett volna ott. Igazan hihetet len eredmény!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">SZ</div>
-                        <div class="testimonial-info"><h4>Szabó Zoltán</h4><span>Magánszémly, Tihany</span></div>
-                    </div>
-                </div></div>
+            <div class="gr-mount"><div class="gr-loading">Vélemények betöltése…</div></div>
         </div>
     </section>
     <!-- ÚJ: SZOLGÁLTATOTT TERÜLETEK -->
@@ -1997,6 +1955,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="reviews.js" defer></script>
 </body>
 
 </html>

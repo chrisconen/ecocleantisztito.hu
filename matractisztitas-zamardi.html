@@ -717,6 +717,7 @@
             .why-us-detailed .content-blocks .content-block:nth-child(5) { grid-column: auto; }
         }
     </style>
+    <link rel="stylesheet" href="reviews.css">
 </head>
 
 <body>
@@ -1788,56 +1789,13 @@
     </section>
 
         <!-- ÚJ: ÜGYFÉLVÉLEMÉNYEK SZEKCIÓ -->
-    <section class="testimonials-section">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-label">Ügyféleink mondták</div>
-                <h2 class="section-title">191+ elégedett ügyfél Zamárdiban és környékén</h2>
-                <p class="section-description">Szállásadók, családok és allergiások véleménye a szolgáltatásunkról.</p>
+    <section class="gr-reviews" id="velemenyek" data-reviews-endpoint="https://reviews.chris-conen.workers.dev/">
+        <div class="gr-inner">
+            <div class="gr-header">
+                <div class="gr-label">Ügyféleink mondták</div>
+                <h2 class="gr-title">191+ elégedett ügyfél Zamárdiban és környékén</h2>
             </div>
-            <div class="testimonials-grid"><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A Balaton Sound előtt és után is szükségünk van gyors tisztításra. Az ECO Clean mindig időben elkészülr és profin dolgozik!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">AK</div>
-                        <div class="testimonial-info"><h4>Andor Károly</h4><span>Festival Apartman, Zamárdi</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Kisgyermekem allergiás. A matractisztítás után 3 héten belül lényegesen csökkent az allergiás köhögése."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">TP</div>
-                        <div class="testimonial-info"><h4>Tóth Péter</h4><span>Magánszémly, Zamárdi</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Airbnb apartmanomat június től szeptemberig folyamatosan bérlik. Az ECO Clean hét előre egyez tetett és pon tosan megjelent."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">FK</div>
-                        <div class="testimonial-info"><h4>Farkas Katalin</h4><span>Zamárdi Strand Apartman</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Panziónk szállodás értékelések an sokat javultak mióta az ECO Clean tisztítja a matracokat."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">NJ</div>
-                        <div class="testimonial-info"><h4>Nemes József</h4><span>Zamárdi Panzió</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"8 éves lányom asztmás. Az ECO Clean után az éjszakai köhögés maj d teljesen megszűnt!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">KB</div>
-                        <div class="testimonial-info"><h4>Kovács Borbala</h4><span>Magánszémly, Szantód</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A fesztivál után a matrácok állapota nagyon leromlott. Az ECO Clean úgy hozta helyre őket, mintha újak lennének!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">BR</div>
-                        <div class="testimonial-info"><h4>Békési Róbert</h4><span>Airbnb tulaj, Zamárdi</span></div>
-                    </div>
-                </div></div>
+            <div class="gr-mount"><div class="gr-loading">Vélemények betöltése…</div></div>
         </div>
     </section>
     <!-- ÚJ: SZOLGÁLTATOTT TERÜLETEK -->
@@ -1997,6 +1955,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="reviews.js" defer></script>
 </body>
 
 </html>

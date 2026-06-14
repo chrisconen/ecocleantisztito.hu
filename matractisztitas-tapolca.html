@@ -717,6 +717,7 @@
             .why-us-detailed .content-blocks .content-block:nth-child(5) { grid-column: auto; }
         }
     </style>
+    <link rel="stylesheet" href="reviews.css">
 </head>
 
 <body>
@@ -1788,56 +1789,13 @@
     </section>
 
         <!-- ÚJ: ÜGYFÉLVÉLEMÉNYEK SZEKCIÓ -->
-    <section class="testimonials-section">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-label">Ügyféleink mondták</div>
-                <h2 class="section-title">191+ elégedett ügyfél Tapolcán és környékén</h2>
-                <p class="section-description">Szállásadók, családok és allergiások véleménye a szolgáltatásunkról.</p>
+    <section class="gr-reviews" id="velemenyek" data-reviews-endpoint="https://reviews.chris-conen.workers.dev/">
+        <div class="gr-inner">
+            <div class="gr-header">
+                <div class="gr-label">Ügyféleink mondták</div>
+                <h2 class="gr-title">191+ elégedett ügyfél Tapolcán és környékén</h2>
             </div>
-            <div class="testimonials-grid"><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A barlang fürdő mellett levő panziónkban a vendégek allergiás panaszokat tették. Az ECO Clean után megszűntek!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">KI</div>
-                        <div class="testimonial-info"><h4>Kiss István</h4><span>Barlangéttér Panzió, Tapolca</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Asztmás nővérem a matracon élő atkak miatt szenvedett. Az ECO Clean megaóldotta!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">BG</div>
-                        <div class="testimonial-info"><h4>Berényi Gizi</h4><span>Magánszémly, Tapolca</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Bortura Airbnb szállásadóként a tisztáság kulonos en fontos. Az ECO Clean tanusitvanya segít a marke tingben!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">FG</div>
-                        <div class="testimonial-info"><h4>Forró Gergő</h4><span>Tapolca Borváró Apartman</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A vendégházunkra eves szerződést kötöttünk. Megbíhataó, egyesz kiváló!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">NL</div>
-                        <div class="testimonial-info"><h4>Németh Levente</h4><span>Tapolca Vendégház</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Az új gy erckmatracunkon régi folt volt a boltiból. Az ECO Clean eltávolította – köszönet!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">TK</div>
-                        <div class="testimonial-info"><h4>Takacs Katalin</h4><span>Magánszémly, Déskák</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Dohos nyáralómatrác régi szálláshélyemben. Az ECO Clean után mint ha új lenne!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">BN</div>
-                        <div class="testimonial-info"><h4>Bíra Néra</h4><span>Magánszémly, Sümeg</span></div>
-                    </div>
-                </div></div>
+            <div class="gr-mount"><div class="gr-loading">Vélemények betöltése…</div></div>
         </div>
     </section>
     <!-- ÚJ: SZOLGÁLTATOTT TERÜLETEK -->
@@ -1997,6 +1955,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="reviews.js" defer></script>
 </body>
 
 </html>

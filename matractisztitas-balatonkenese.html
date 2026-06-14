@@ -717,6 +717,7 @@
             .why-us-detailed .content-blocks .content-block:nth-child(5) { grid-column: auto; }
         }
     </style>
+    <link rel="stylesheet" href="reviews.css">
 </head>
 
 <body>
@@ -1788,56 +1789,13 @@
     </section>
 
         <!-- ÚJ: ÜGYFÉLVÉLEMÉNYEK SZEKCIÓ -->
-    <section class="testimonials-section">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-label">Ügyféleink mondták</div>
-                <h2 class="section-title">191+ elégedett ügyfél Balatonkenesén és környékén</h2>
-                <p class="section-description">Szállásadók, családok és allergiások véleménye a szolgáltatásunkról.</p>
+    <section class="gr-reviews" id="velemenyek" data-reviews-endpoint="https://reviews.chris-conen.workers.dev/">
+        <div class="gr-inner">
+            <div class="gr-header">
+                <div class="gr-label">Ügyféleink mondták</div>
+                <h2 class="gr-title">191+ elégedett ügyfél Balatonkenesén és környékén</h2>
             </div>
-            <div class="testimonials-grid"><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A lovas panziónkban a matrckokat évente tisztítási szerződéssel kezeljük. Az ECO Clean csapata profin dolgozik!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">KJ</div>
-                        <div class="testimonial-info"><h4>Kiss János</h4><span>Lovas Panzió, Balatonkenese</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Gyermekünk allergiás, és a matrac atkairtás után számot tevően javultak a tünetek!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">TE</div>
-                        <div class="testimonial-info"><h4>Tóth Edit</h4><span>Magánszémly, Balatonkenese</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Airbnb szállásadóként fontos a pozitív értékelés. Az ECO Clean tanusitvanya ezt segít!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">NP</div>
-                        <div class="testimonial-info"><h4>Nagy Pál</h4><span>Kenese Strand Apartman</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Üdulőszövetkezetünkben 30 matrácot tisztítási szerződéssel kezeljük. Eves kedvezmény, kiváló eredmény!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">GB</div>
-                        <div class="testimonial-info"><h4>Gulasi Bettina</h4><span>Üdulőszövetkezet, Balatonkenese</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Bevízeltt gyerekmatrác volt gond. Az ECO Clean foltot, szagot egyaránt eltávolította!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">BR</div>
-                        <div class="testimonial-info"><h4>Bajáki Rózsika</h4><span>Magánszémly, Kápóta</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Idős szülőm nyáralójában régi, dohos matrác volt. Az ECO Clean megoldotta!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">FI</div>
-                        <div class="testimonial-info"><h4>Fekete Ilona</h4><span>Magánszémly, Balatonkenese</span></div>
-                    </div>
-                </div></div>
+            <div class="gr-mount"><div class="gr-loading">Vélemények betöltése…</div></div>
         </div>
     </section>
     <!-- ÚJ: SZOLGÁLTATOTT TERÜLETEK -->
@@ -1997,6 +1955,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="reviews.js" defer></script>
 </body>
 
 </html>

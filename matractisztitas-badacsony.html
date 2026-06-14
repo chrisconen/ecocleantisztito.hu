@@ -717,6 +717,7 @@
             .why-us-detailed .content-blocks .content-block:nth-child(5) { grid-column: auto; }
         }
     </style>
+    <link rel="stylesheet" href="reviews.css">
 </head>
 
 <body>
@@ -1792,87 +1793,13 @@
     </section>
 
     <!-- ÚJ: ÜGYFÉLVÉLEMÉNYEK SZEKCIÓ -->
-    <section class="testimonials-section">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-label">Ügyfeleink mondták</div>
-                <h2 class="section-title">191+ elégedett ügyfél Badacsonyon és környékén</h2>
-                <p class="section-description">Szállásadók, családok és allergiások véleménye a szolgáltatásunkról.</p>
+    <section class="gr-reviews" id="velemenyek" data-reviews-endpoint="https://reviews.chris-conen.workers.dev/">
+        <div class="gr-inner">
+            <div class="gr-header">
+                <div class="gr-label">Ügyfeleink mondták</div>
+                <h2 class="gr-title">191+ elégedett ügyfél Badacsonyon és környékén</h2>
             </div>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A panziónk 12 matracát tavasszal és ősszel is megtisztíttatjuk. Azóta szinte megszűntek az allergiás panaszokra vonatkozó visszajelzések. A tanúsítvány a Booking-oldalunkon is megjelenik – a vendégek értékelik!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">KP</div>
-                        <div class="testimonial-info">
-                            <h4>Kiss Péter</h4>
-                            <span>Panoráma Panzió, Badacsonytomaj</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"5 éves fiam asztmás, és éjszakánként gyakran köhögött. A matractisztítás után szinte teljesen megszűntek a tünetei. Most félévente hívjuk az ECO Clean-t – megéri minden forintot!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">SZA</div>
-                        <div class="testimonial-info">
-                            <h4>Szabó Anita</h4>
-                            <span>Magánszemély, Badacsony</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Airbnb szállásadóként a vendégváltások közötti gyors tisztítás kritikus. Az ECO Clean reggel 8-ra jön, délutánra száraz minden, és a vendégek mindig dicsérik a friss, tiszta ágyneműt."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">TM</div>
-                        <div class="testimonial-info">
-                            <h4>Tóth Mariann</h4>
-                            <span>Badacsonyi Nyaraló Apartman</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A borászatunk vendégházában évek óta nem cseréltük a matracokat – de a tisztítás után olyanok, mint az újak! A vörösboroscipős folt is eltűnt, amit már elveszettnek hittünk."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">NL</div>
-                        <div class="testimonial-info">
-                            <h4>Nagy László</h4>
-                            <span>Szent György-hegy Pincészet</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"80 éves édesanyám matracát tisztíttatták meg – a dohos szag teljesen eltűnt, és ő is sokkal jobban alszik. A vegyszermentes megoldás számunkra nagyon fontos volt az idős kor miatt."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">VJ</div>
-                        <div class="testimonial-info">
-                            <h4>Varga József</h4>
-                            <span>Magánszemély, Ábrahámhegy</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A kisfiam bevizelte a matracot, és már lemondtam róla. Az ECO Clean csapata nemcsak a foltot, de a szagot is teljesen eltávolította. Hihetetlen, de a matrac újra 100%-os!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">BK</div>
-                        <div class="testimonial-info">
-                            <h4>Balogh Katalin</h4>
-                            <span>Magánszemély, Badacsonytördemic</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="gr-mount"><div class="gr-loading">Vélemények betöltése…</div></div>
         </div>
     </section>
 
@@ -2087,6 +2014,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="reviews.js" defer></script>
 </body>
 
 </html>

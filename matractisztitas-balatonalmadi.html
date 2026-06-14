@@ -717,6 +717,7 @@
             .why-us-detailed .content-blocks .content-block:nth-child(5) { grid-column: auto; }
         }
     </style>
+    <link rel="stylesheet" href="reviews.css">
 </head>
 
 <body>
@@ -1788,56 +1789,13 @@
     </section>
 
         <!-- ÚJ: ÜGYFÉLVÉLEMÉNYEK SZEKCIÓ -->
-    <section class="testimonials-section">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-label">Ügyféleink mondták</div>
-                <h2 class="section-title">191+ elégedett ügyfél Balatonalmádiban és környékén</h2>
-                <p class="section-description">Szállásadók, családok és allergiások véleménye a szolgáltatásunkról.</p>
+    <section class="gr-reviews" id="velemenyek" data-reviews-endpoint="https://reviews.chris-conen.workers.dev/">
+        <div class="gr-inner">
+            <div class="gr-header">
+                <div class="gr-label">Ügyféleink mondták</div>
+                <h2 class="gr-title">191+ elégedett ügyfél Balatonalmádiban és környékén</h2>
             </div>
-            <div class="testimonials-grid"><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Az üdülőnk 25 szobájában minden év végén tisztíttatjuk a matrackokat. Az ECO Clean arány és minőség szempontból verhetetlen!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">DF</div>
-                        <div class="testimonial-info"><h4>Dékány Ferenc</h4><span>Üdulőszövetkezet Igazgató, Balatonalmádi</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Allergiás lányám számára a matracon élő atkák okoztak problémát. Az ECO Clean után telősen szűntek a tünetek."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">KV</div>
-                        <div class="testimonial-info"><h4>Kiss Véronika</h4><span>Magánszémly, Balatonalmádi</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Airbnb-m vendégei azóta mindig 5 csillagot adnak. A tisztáság a legfontosabb része a jó értékelésnek!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">HB</div>
-                        <div class="testimonial-info"><h4>Héder Béla</h4><span>Airbnb tulaj, Balatonalmádi</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A panziónk véleménye: az ECO Clean megbízható, pontis és alapos. Eves szerződést kötöttünk velük."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">MR</div>
-                        <div class="testimonial-info"><h4>Mészáros Róbert</h4><span>Panoráma Panzió, Balatonalmádi</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Idős édesanyám matrácán dohos szag volt. Az ECO Clean a szagot is teljesen eltávolította – csoda!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">KM</div>
-                        <div class="testimonial-info"><h4>Kovács Mária</h4><span>Magánszémly, Kápóta</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Franciaágyas matracon volt egy csúf, régi folt. 90%-ban sikerült eltávolítani – többet vártam!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">BG</div>
-                        <div class="testimonial-info"><h4>Bereényi Gábor</h4><span>Magánszémly, Balatonalmádi</span></div>
-                    </div>
-                </div></div>
+            <div class="gr-mount"><div class="gr-loading">Vélemények betöltése…</div></div>
         </div>
     </section>
     <!-- ÚJ: SZOLGÁLTATOTT TERÜLETEK -->
@@ -1997,6 +1955,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="reviews.js" defer></script>
 </body>
 
 </html>

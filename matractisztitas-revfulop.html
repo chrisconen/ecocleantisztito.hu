@@ -717,6 +717,7 @@
             .why-us-detailed .content-blocks .content-block:nth-child(5) { grid-column: auto; }
         }
     </style>
+    <link rel="stylesheet" href="reviews.css">
 </head>
 
 <body>
@@ -1788,56 +1789,13 @@
     </section>
 
         <!-- ÚJ: ÜGYFÉLVÉLEMÉNYEK SZEKCIÓ -->
-    <section class="testimonials-section">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-label">Ügyféleink mondták</div>
-                <h2 class="section-title">191+ elégedett ügyfél Révfülöpön és környékén</h2>
-                <p class="section-description">Szállásadók, családok és allergiások véleménye a szolgáltatásunkról.</p>
+    <section class="gr-reviews" id="velemenyek" data-reviews-endpoint="https://reviews.chris-conen.workers.dev/">
+        <div class="gr-inner">
+            <div class="gr-header">
+                <div class="gr-label">Ügyféleink mondták</div>
+                <h2 class="gr-title">191+ elégedett ügyfél Révfülöpön és környékén</h2>
             </div>
-            <div class="testimonials-grid"><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A panziónk közel van a kikötőhöz, tele vitorlás turistakkal. Az ECO Clean magas szabványú tisztítása hozzájárul a jó értékelésekhez!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">PR</div>
-                        <div class="testimonial-info"><h4>Pálfi Róbert</h4><span>Kikötő Panzió, Révfülöp</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A Balaton-part magas páratartalmá miatt a matrackokban rengeteg atka szaporodik. Az ECO Clean megoldása teljesen megbízhataó!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">NK</div>
-                        <div class="testimonial-info"><h4>Németh Klára</h4><span>Magánszémly, Révfülöp</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Airbnb-m szállásadoként nagy segítség az atkairtási tanusitvany, mert bizonyitja a vendégeknek a és tisztáságot."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">TG</div>
-                        <div class="testimonial-info"><h4>Toth Gábor</h4><span>Vitorlás Apartman, Révfülöp</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"8 éves fiam allergiás, és a matracon élő atkak miatt éjjel köhögött. Az ECO Clean után ez megszűnt!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">SF</div>
-                        <div class="testimonial-info"><h4>Simon Fedora</h4><span>Magánszémly, Balatonszep ezd</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Eves szerződést kötöttünk az ECO Clean-nel az üdülőnkhöz. Megbízhataó, gyors és a result rényszer különböző."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">ZK</div>
-                        <div class="testimonial-info"><h4>Zoltan Kiss</h4><span>Üdulő tulajdonos, Révfülöp</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A régi, dohos matrácunkat maré dobni akartuk. Az ECO Clean után mintha új lett volna!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">BM</div>
-                        <div class="testimonial-info"><h4>Barta Mónika</h4><span>Magánszémly, Ábráhamhegy</span></div>
-                    </div>
-                </div></div>
+            <div class="gr-mount"><div class="gr-loading">Vélemények betöltése…</div></div>
         </div>
     </section>
     <!-- ÚJ: SZOLGÁLTATOTT TERÜLETEK -->
@@ -1997,6 +1955,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="reviews.js" defer></script>
 </body>
 
 </html>

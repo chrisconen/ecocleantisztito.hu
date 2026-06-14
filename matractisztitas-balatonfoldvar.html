@@ -717,6 +717,7 @@
             .why-us-detailed .content-blocks .content-block:nth-child(5) { grid-column: auto; }
         }
     </style>
+    <link rel="stylesheet" href="reviews.css">
 </head>
 
 <body>
@@ -1788,56 +1789,13 @@
     </section>
 
         <!-- ÚJ: ÜGYFÉLVÉLEMÉNYEK SZEKCIÓ -->
-    <section class="testimonials-section">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-label">Ügyféleink mondták</div>
-                <h2 class="section-title">191+ elégedett ügyfél Balatonföldváron és környékén</h2>
-                <p class="section-description">Szállásadók, családok és allergiások véleménye a szolgáltatásunkról.</p>
+    <section class="gr-reviews" id="velemenyek" data-reviews-endpoint="https://reviews.chris-conen.workers.dev/">
+        <div class="gr-inner">
+            <div class="gr-header">
+                <div class="gr-label">Ügyféleink mondták</div>
+                <h2 class="gr-title">191+ elégedett ügyfél Balatonföldváron és környékén</h2>
             </div>
-            <div class="testimonials-grid"><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Az üdülőnkben 20 matrácot tisztítatunk meg évente. Az ECO Clean csapata professzionális és megbíhataó – eves szerződésünk van."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">FK</div>
-                        <div class="testimonial-info"><h4>Földi Károly</h4><span>Üdulő Ig., Balatonföldvár</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Asztmás leányomnak a matrac atkák okoztak baj ot. Az ECO Clean után az éjjeli köhögés megszűnt!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">SN</div>
-                        <div class="testimonial-info"><h4>Szabó Nóra</h4><span>Magánszémly, Balatonföldvár</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Airbnb szállásadoként az atkairtási tanusitvany a vendégek számára egyértelmű üzenet: nálunk tisztá az ágy!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">TI</div>
-                        <div class="testimonial-info"><h4>Tóth István</h4><span>Airbnb tulaj, Balatonföldvár</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Panziónk vendégei allergiyás panaszt tették le. Az ECO Clean után ez teljesen megszűnt, a fövetés értékelés javult!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">BC</div>
-                        <div class="testimonial-info"><h4>Boda Csaba</h4><span>Büszke Panzió, Balatonföldvár</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Idős édesapám számára vegyszermentes tisztítás volt kell. Az ECO Clean tökéletesen megold otta!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">PM</div>
-                        <div class="testimonial-info"><h4>Pálfi Márta</h4><span>Magánszémly, Szarvas</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A gyereklak két éve bevízeltt matrácán és a folt is, a szag is eltűnt. Hihetetlenül jó eredmény!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">VB</div>
-                        <div class="testimonial-info"><h4>Vári Balázs</h4><span>Magánszémly, Balatonföldvár</span></div>
-                    </div>
-                </div></div>
+            <div class="gr-mount"><div class="gr-loading">Vélemények betöltése…</div></div>
         </div>
     </section>
     <!-- ÚJ: SZOLGÁLTATOTT TERÜLETEK -->
@@ -1997,6 +1955,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="reviews.js" defer></script>
 </body>
 
 </html>

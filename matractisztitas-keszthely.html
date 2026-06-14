@@ -717,6 +717,7 @@
             .why-us-detailed .content-blocks .content-block:nth-child(5) { grid-column: auto; }
         }
     </style>
+    <link rel="stylesheet" href="reviews.css">
 </head>
 
 <body>
@@ -1788,56 +1789,13 @@
     </section>
 
         <!-- ÚJ: ÜGYFÉLVÉLEMÉNYEK SZEKCIÓ -->
-    <section class="testimonials-section">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-label">Ügyféleink mondták</div>
-                <h2 class="section-title">191+ elégedett ügyfél Keszthelyen és környékén</h2>
-                <p class="section-description">Szállásadók, családok és allergiások véleménye a szolgáltatásunkról.</p>
+    <section class="gr-reviews" id="velemenyek" data-reviews-endpoint="https://reviews.chris-conen.workers.dev/">
+        <div class="gr-inner">
+            <div class="gr-header">
+                <div class="gr-label">Ügyféleink mondták</div>
+                <h2 class="gr-title">191+ elégedett ügyfél Keszthelyen és környékén</h2>
             </div>
-            <div class="testimonials-grid"><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A szállodánk prémium minőségéhez prémium higiénia is kell. Az ECO Clean ennek tökéletesen megfelel!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">HN</div>
-                        <div class="testimonial-info"><h4>Horváth Norbert</h4><span>Balaton Hotel Keszthely</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Allergiás fiam számára a vegyszermentes tisztítás nem opció, hanem követelmény. Az ECO Clean érti ezt!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">KA</div>
-                        <div class="testimonial-info"><h4>Kiss Andrea</h4><span>Magánszémly, Keszthely</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Airbnb szállásadóként az atkairtási tanusitvany valóban növeli a foglalouks zámát!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">FD</div>
-                        <div class="testimonial-info"><h4>Fékéte Dániel</h4><span>Keszthely Apartman</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Prémium vendégeink magas elvárásaira az ECO Clean tökéletesen megfelel. Eves szerződés kosztes!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">SA</div>
-                        <div class="testimonial-info"><h4>Simó András</h4><span>Balaton Apartmanhaus</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Idős anyukám matrácán régi folt volt. Az ECO Clean 95%-ban eltávolította – amit várhattuk a legjobbat!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">VG</div>
-                        <div class="testimonial-info"><h4>Váradi Gabriella</h4><span>Magánszémly, Keszthely</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Tünetek javultak az atkairtás után – és a matrác tiszta, friss szagú lett!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">BM</div>
-                        <div class="testimonial-info"><h4>Borék Mátyás</h4><span>Magánszémly, Gyénésdís</span></div>
-                    </div>
-                </div></div>
+            <div class="gr-mount"><div class="gr-loading">Vélemények betöltése…</div></div>
         </div>
     </section>
     <!-- ÚJ: SZOLGÁLTATOTT TERÜLETEK -->
@@ -1997,6 +1955,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="reviews.js" defer></script>
 </body>
 
 </html>

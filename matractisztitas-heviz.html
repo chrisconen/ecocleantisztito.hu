@@ -717,6 +717,7 @@
             .why-us-detailed .content-blocks .content-block:nth-child(5) { grid-column: auto; }
         }
     </style>
+    <link rel="stylesheet" href="reviews.css">
 </head>
 
 <body>
@@ -1788,56 +1789,13 @@
     </section>
 
         <!-- ÚJ: ÜGYFÉLVÉLEMÉNYEK SZEKCIÓ -->
-    <section class="testimonials-section">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-label">Ügyféleink mondták</div>
-                <h2 class="section-title">191+ elégedett ügyfél Hévízen és környékén</h2>
-                <p class="section-description">Szállásadók, családok és allergiások véleménye a szolgáltatásunkról.</p>
+    <section class="gr-reviews" id="velemenyek" data-reviews-endpoint="https://reviews.chris-conen.workers.dev/">
+        <div class="gr-inner">
+            <div class="gr-header">
+                <div class="gr-label">Ügyféleink mondták</div>
+                <h2 class="gr-title">191+ elégedett ügyfél Hévízen és környékén</h2>
             </div>
-            <div class="testimonials-grid"><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A gyógyszállodánkban a matrachigiénia orvosi követelmény. Az ECO Clean ennek tökéletesen megfelel és tanusitvany t is ad!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">SA</div>
-                        <div class="testimonial-info"><h4>Saly Árpád</h4><span>Hévíz Hotel & Spa</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Asztmás fiam számára Hévízen nyáraltúnk. A nyáraló matrácát az ECO Clean tisztit otta meg – szinte gyult az allergiája!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">KT</div>
-                        <div class="testimonial-info"><h4>Kiss Teréz</h4><span>Magánszémly, Gyénésdís</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Wellness szállásadóként a vendégeim egészségüket ápolják. Az ECO Clean segít, hogy mindent tiszta környézetben teh essék."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">NR</div>
-                        <div class="testimonial-info"><h4>Nagy Rita</h4><span>Hévíz Wellness Apar tman</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A spa szállodánkban eves szerződésünk van az ECO Clea n-nel. Havi tisztitás, mindig kiváló eredmény!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">HI</div>
-                        <div class="testimonial-info"><h4>Horváth István</h4><span>Hévíz Spa Hotel</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Idős anyukám a gyógyszálló régi matrácát le akarta cserélni. Az ECO Clean után megújiult, és spóroltunk egy új matrác árát!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">VJ</div>
-                        <div class="testimonial-info"><h4>Váradi Jolan ta</h4><span>Magánszémly, Hévíz</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A termálüdülés minőségének része a tiszt a ágy. Az ECO Clean erős tényezője a vendégelégedéttségnek!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">BI</div>
-                        <div class="testimonial-info"><h4>Biró Ilona</h4><span>Magánszémly, Hévíz</span></div>
-                    </div>
-                </div></div>
+            <div class="gr-mount"><div class="gr-loading">Vélemények betöltése…</div></div>
         </div>
     </section>
     <!-- ÚJ: SZOLGÁLTATOTT TERÜLETEK -->
@@ -1997,6 +1955,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="reviews.js" defer></script>
 </body>
 
 </html>

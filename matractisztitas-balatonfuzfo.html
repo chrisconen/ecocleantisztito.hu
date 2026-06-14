@@ -717,6 +717,7 @@
             .why-us-detailed .content-blocks .content-block:nth-child(5) { grid-column: auto; }
         }
     </style>
+    <link rel="stylesheet" href="reviews.css">
 </head>
 
 <body>
@@ -1788,56 +1789,13 @@
     </section>
 
         <!-- ÚJ: ÜGYFÉLVÉLEMÉNYEK SZEKCIÓ -->
-    <section class="testimonials-section">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-label">Ügyféleink mondták</div>
-                <h2 class="section-title">191+ elégedett ügyfél Balatonfűzfőn és környékén</h2>
-                <p class="section-description">Szállásadók, családok és allergiások véleménye a szolgáltatásunkról.</p>
+    <section class="gr-reviews" id="velemenyek" data-reviews-endpoint="https://reviews.chris-conen.workers.dev/">
+        <div class="gr-inner">
+            <div class="gr-header">
+                <div class="gr-label">Ügyféleink mondták</div>
+                <h2 class="gr-title">191+ elégedett ügyfél Balatonfűzfőn és környékén</h2>
             </div>
-            <div class="testimonials-grid"><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Az egykori gyári üdülő matrackait az ECO Clean minden évben tisztit otta. A minőség nem változik – később is kiváló!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">HK</div>
-                        <div class="testimonial-info"><h4>Herczeg Károly</h4><span>Üdulő igazgató, Balatonfűzfő</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Asztmás gyerekemnél a matrac atkairtás után számottevően jav ult az állapot!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">BK</div>
-                        <div class="testimonial-info"><h4>Balogh Klára</h4><span>Magánszémly, Balatonfűzfő</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Airbnb várostól távol levő kisméretű nyáraló. Az ECO Clean a körbényékre is kiszall!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">FS</div>
-                        <div class="testimonial-info"><h4>Fékéte Sándor</h4><span>Airbnb, Balatonfűzfő</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A nyáralónkban levő régi matrácokat megfiatalitotta az ECO Clean – újjá varázsolta!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">VB</div>
-                        <div class="testimonial-info"><h4>Vég Bettina</h4><span>Magánszémly, Balatonfü zfő</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Bevízeltt gyerekmatrác problémáját teljesen megold otta az ECO Clean!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">NR</div>
-                        <div class="testimonial-info"><h4>Nagy Róbert</h4><span>Magánszémly, Kápóta</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Régi, dohos nyáralómatrácunk tisztítás után szinte új. Hatalmas megta karítás!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">FJ</div>
-                        <div class="testimonial-info"><h4>Fekete József</h4><span>Magánszémly, Balatonalmádi</span></div>
-                    </div>
-                </div></div>
+            <div class="gr-mount"><div class="gr-loading">Vélemények betöltése…</div></div>
         </div>
     </section>
     <!-- ÚJ: SZOLGÁLTATOTT TERÜLETEK -->
@@ -1997,6 +1955,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="reviews.js" defer></script>
 </body>
 
 </html>

@@ -717,6 +717,7 @@
             .why-us-detailed .content-blocks .content-block:nth-child(5) { grid-column: auto; }
         }
     </style>
+    <link rel="stylesheet" href="reviews.css">
 </head>
 
 <body>
@@ -1788,56 +1789,13 @@
     </section>
 
         <!-- ÚJ: ÜGYFÉLVÉLEMÉNYEK SZEKCIÓ -->
-    <section class="testimonials-section">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-label">Ügyféleink mondták</div>
-                <h2 class="section-title">191+ elégedett ügyfél Balatonlellén és környékén</h2>
-                <p class="section-description">Szállásadók, családok és allergiások véleménye a szolgáltatásunkról.</p>
+    <section class="gr-reviews" id="velemenyek" data-reviews-endpoint="https://reviews.chris-conen.workers.dev/">
+        <div class="gr-inner">
+            <div class="gr-header">
+                <div class="gr-label">Ügyféleink mondták</div>
+                <h2 class="gr-title">191+ elégedett ügyfél Balatonlellén és környékén</h2>
             </div>
-            <div class="testimonials-grid"><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A vendégházunkat már 3 éve ECO Cleannel tartatjuk rendben. A vendégeink mindig dicsérik a tiszvá k ágyat!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">SK</div>
-                        <div class="testimonial-info"><h4>Sándor Klara</h4><span>Balatonlelle Vendégház</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Asztmás fiam számára eléngedhete tlen a vegyszermentes tisztítás. Kettő tisztítás után lenyomulás a tünetek."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">VE</div>
-                        <div class="testimonial-info"><h4>Vörös Eszter</h4><span>Magánszémly, Balatonlelle</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Airbnb szállásadóként krit ikus a tisztáság. Az atkairtási tanusitvany a foglalouks zámát növelte!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">HK</div>
-                        <div class="testimonial-info"><h4>Hegedűs Katalin</h4><span>Balatonlelle Apartman</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Kis panziónkért eves szerződést kötöttünk. Árak kedvezőek, a minőség kiváló!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">TP</div>
-                        <div class="testimonial-info"><h4>Tálas Péter</h4><span>Lelle Napfény Panzió</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Bevízeltt matrác a gyerekszobában, és a szagot nem sikerült elvenni. Az ECO Clean megoldása csodás volt!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">GP</div>
-                        <div class="testimonial-info"><h4>Gellai Pál</h4><span>Magánszémly, Balatonlelle</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Régi, dohos ágyunk a tisztítás után mint ha új lenne! Fantasztikus munka!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">MH</div>
-                        <div class="testimonial-info"><h4>Molnár Hajnalka</h4><span>Magánszémly, Balatonbog lár</span></div>
-                    </div>
-                </div></div>
+            <div class="gr-mount"><div class="gr-loading">Vélemények betöltése…</div></div>
         </div>
     </section>
     <!-- ÚJ: SZOLGÁLTATOTT TERÜLETEK -->
@@ -1997,6 +1955,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="reviews.js" defer></script>
 </body>
 
 </html>

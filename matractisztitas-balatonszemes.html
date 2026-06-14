@@ -717,6 +717,7 @@
             .why-us-detailed .content-blocks .content-block:nth-child(5) { grid-column: auto; }
         }
     </style>
+    <link rel="stylesheet" href="reviews.css">
 </head>
 
 <body>
@@ -1788,56 +1789,13 @@
     </section>
 
         <!-- ÚJ: ÜGYFÉLVÉLEMÉNYEK SZEKCIÓ -->
-    <section class="testimonials-section">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-label">Ügyféleink mondták</div>
-                <h2 class="section-title">191+ elégedett ügyfél Balatonszemésen és környékén</h2>
-                <p class="section-description">Szállásadók, családok és allergiások véleménye a szolgáltatásunkról.</p>
+    <section class="gr-reviews" id="velemenyek" data-reviews-endpoint="https://reviews.chris-conen.workers.dev/">
+        <div class="gr-inner">
+            <div class="gr-header">
+                <div class="gr-label">Ügyféleink mondták</div>
+                <h2 class="gr-title">191+ elégedett ügyfél Balatonszemésen és környékén</h2>
             </div>
-            <div class="testimonials-grid"><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"A csendes nyáralónkban a matrakcoka t az ECO Clean tisztítja. A szemészeti kényelem most még jobb!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">HP</div>
-                        <div class="testimonial-info"><h4>Herczeg Péter</h4><span>Balatonszemes Nyáraló</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Allergiás családtagunk számára eléngedhetetlen a rendszeres tisztítás. Az ECO Clean tökéletes!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">VK</div>
-                        <div class="testimonial-info"><h4>Váczi Katalin</h4><span>Magánszémly, Balatonszemes</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Airbnb apartmanom csendes környékterem van. Az ECO Clean atkairtási tanusitvanya egészségtudatos vendégeket vonz!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">GT</div>
-                        <div class="testimonial-info"><h4>Gál Tamás</h4><span>Balatonszemes Apartman</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Kis vendégházunkra eves szerződést kötöttünk. Az ECO Clean árai és minősége ver het etlen!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">KF</div>
-                        <div class="testimonial-info"><h4>Kiss Ferenze</h4><span>Szemes Vendégház, Balatonszemes</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Dohos, régi matrác az új nyáralóban. Az ECO Clean után friss, tiszta – mintha új lenne!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">BS</div>
-                        <div class="testimonial-info"><h4>Békési Szábina</h4><span>Magánszémly, Balatonboglár</span></div>
-                    </div>
-                </div><div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Bevízeltt gyerekmatrác volt a probléma. Az ECO Clean bio-enzimes módszerrel teljesen megold otta!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">MG</div>
-                        <div class="testimonial-info"><h4>Molnár Gergely</h4><span>Magánszémly, Balatonszemes</span></div>
-                    </div>
-                </div></div>
+            <div class="gr-mount"><div class="gr-loading">Vélemények betöltése…</div></div>
         </div>
     </section>
     <!-- ÚJ: SZOLGÁLTATOTT TERÜLETEK -->
@@ -1997,6 +1955,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="reviews.js" defer></script>
 </body>
 
 </html>
