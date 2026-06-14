@@ -1,0 +1,129 @@
+/* ECO Clean – Google vélemények slider (önálló, téma-tudatos) */
+.gr-reviews {
+    --gr-bg: #ffffff;
+    --gr-surface: #f6f8f7;
+    --gr-text: #15181a;
+    --gr-text2: #5a6166;
+    --gr-accent: #00a855;
+    --gr-star: #fbbf24;
+    --gr-border: rgba(0, 0, 0, .10);
+    --gr-shadow: rgba(0, 0, 0, .12);
+    background: var(--gr-bg);
+    color: var(--gr-text);
+    font-family: inherit;
+    padding: clamp(2.5rem, 6vw, 4.5rem) 1.5rem;
+}
+
+[data-theme="dark"] .gr-reviews {
+    --gr-bg: #0a0a0b;
+    --gr-surface: #141416;
+    --gr-text: #ffffff;
+    --gr-text2: #a0a0a5;
+    --gr-accent: #00ff88;
+    --gr-border: rgba(255, 255, 255, .10);
+    --gr-shadow: rgba(0, 0, 0, .5);
+}
+
+.gr-reviews .gr-inner { max-width: 820px; margin: 0 auto; }
+
+.gr-reviews .gr-header { text-align: center; margin-bottom: 1.5rem; }
+
+.gr-reviews .gr-label {
+    display: inline-block;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gr-accent);
+    margin-bottom: .5rem;
+}
+
+.gr-reviews .gr-title {
+    font-size: clamp(1.6rem, 3.4vw, 2.4rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0;
+    color: var(--gr-text);
+}
+
+.gr-reviews .gr-summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .55rem;
+    margin: 0 0 1.5rem;
+    color: var(--gr-text2);
+    flex-wrap: wrap;
+}
+
+.gr-reviews .gr-summary strong { color: var(--gr-text); font-size: 1.3rem; }
+.gr-reviews .gr-stars { color: var(--gr-star); letter-spacing: 2px; font-size: 1.1rem; }
+
+.gr-reviews .gr-stage { position: relative; }
+.gr-reviews .gr-viewport { overflow: hidden; border-radius: 18px; }
+.gr-reviews .gr-track { display: flex; transition: transform .5s cubic-bezier(.4, 0, .2, 1); }
+.gr-reviews .gr-slide { flex: 0 0 100%; box-sizing: border-box; padding: .4rem; }
+
+.gr-reviews .gr-card {
+    background: var(--gr-surface);
+    border: 1px solid var(--gr-border);
+    border-radius: 18px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px var(--gr-shadow);
+    min-height: 248px;
+    display: flex;
+    flex-direction: column;
+}
+
+.gr-reviews .gr-card__head { display: flex; align-items: center; gap: .85rem; margin-bottom: 1rem; }
+.gr-reviews .gr-card__photo { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; background: var(--gr-border); flex: 0 0 auto; }
+.gr-reviews .gr-card__who { display: flex; flex-direction: column; min-width: 0; }
+.gr-reviews .gr-card__name { font-weight: 700; color: var(--gr-text); }
+.gr-reviews .gr-card__meta { font-size: .82rem; color: var(--gr-text2); }
+.gr-reviews .gr-card__stars { color: var(--gr-star); letter-spacing: 1px; margin-bottom: .6rem; }
+.gr-reviews .gr-card__text {
+    color: var(--gr-text2);
+    line-height: 1.7;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.gr-reviews .gr-card__g { margin-top: auto; padding-top: 1rem; font-size: .8rem; color: var(--gr-text2); display: inline-flex; align-items: center; gap: .4rem; }
+.gr-reviews .gr-card__g svg { width: 16px; height: 16px; }
+
+.gr-reviews .gr-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--gr-border);
+    background: var(--gr-bg);
+    color: var(--gr-text);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    box-shadow: 0 4px 14px var(--gr-shadow);
+    transition: background .2s ease, transform .2s ease;
+}
+.gr-reviews .gr-arrow:hover { color: var(--gr-accent); transform: translateY(-50%) scale(1.06); }
+.gr-reviews .gr-arrow svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2.5; }
+.gr-reviews .gr-arrow--prev { left: -8px; }
+.gr-reviews .gr-arrow--next { right: -8px; }
+
+.gr-reviews .gr-dots { display: flex; gap: .45rem; justify-content: center; margin-top: 1.3rem; }
+.gr-reviews .gr-dot { width: 8px; height: 8px; border-radius: 50%; border: 0; background: var(--gr-border); cursor: pointer; padding: 0; transition: all .25s ease; }
+.gr-reviews .gr-dot.active { background: var(--gr-accent); width: 22px; border-radius: 4px; }
+
+.gr-reviews .gr-loading { text-align: center; color: var(--gr-text2); padding: 2rem; }
+
+@media (max-width: 600px) {
+    .gr-reviews .gr-card { padding: 1.4rem; min-height: 280px; }
+    .gr-reviews .gr-arrow--prev { left: 0; }
+    .gr-reviews .gr-arrow--next { right: 0; }
+}

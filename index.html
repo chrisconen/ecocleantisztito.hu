@@ -72,6 +72,7 @@
     <link rel="stylesheet" href="booking-calendar.css">
     <link rel="stylesheet" href="large-order-panel.css">
     <link rel="stylesheet" href="before-after-slider.css">
+    <link rel="stylesheet" href="reviews.css">
 
     <script type="application/ld+json">
 {
@@ -1366,15 +1367,14 @@
         <div class="section-divider"></div>
 
         <!-- PARTNERS SECTION -->
-        <section class="partners">
-            <div class="partners-container">
-                <p class="partners-label">Partnereink</p>
-                <div class="partners-logos">
-                    <span class="partner-item">Bevándorlási Hivatal</span>
-                    <span class="partner-item">Győri Egyházmegye</span>
-                    <span class="partner-item">Győri Likőrgyár</span>
-                    <span class="partner-item">Kálvária Hotel</span>
-                    <span class="partner-item">Hotel Lajta Park</span>
+        <section class="gr-reviews" id="velemenyek" data-reviews-endpoint="https://reviews.chris-conen.workers.dev/">
+            <div class="gr-inner">
+                <div class="gr-header">
+                    <div class="gr-label">Vélemények</div>
+                    <h2 class="gr-title">Amit ügyfeleink mondanak rólunk</h2>
+                </div>
+                <div class="gr-mount">
+                    <div class="gr-loading">Vélemények betöltése…</div>
                 </div>
             </div>
         </section>
@@ -1798,6 +1798,7 @@
     <script src="booking-config.js"></script>
     <script src="modern-animations.js" defer></script>
     <script src="before-after-slider.js"></script>
+    <script src="reviews.js" defer></script>
 </body>
 
 </html>
