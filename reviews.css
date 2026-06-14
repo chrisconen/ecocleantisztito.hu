@@ -122,6 +122,14 @@
 
 .gr-reviews .gr-loading { text-align: center; color: var(--gr-text2); padding: 2rem; }
 
+/* Inline változat: oszlopba ágyazva (pl. térkép helyén), szekció-keret nélkül */
+.gr-reviews.gr-inline { padding: 0; background: transparent; }
+.gr-reviews.gr-inline .gr-inner { max-width: none; }
+.gr-reviews.gr-inline .gr-summary { justify-content: flex-start; margin: 0 0 1rem; }
+.gr-reviews.gr-inline .gr-card { min-height: 260px; }
+.gr-reviews.gr-inline .gr-arrow--prev { left: 0; }
+.gr-reviews.gr-inline .gr-arrow--next { right: 0; }
+
 @media (max-width: 600px) {
     .gr-reviews .gr-card { padding: 1.4rem; min-height: 280px; }
     .gr-reviews .gr-arrow--prev { left: 0; }
