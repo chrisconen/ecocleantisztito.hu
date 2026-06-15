@@ -1,0 +1,4 @@
+# Local redesign backups – do not deploy
+*.backup.html
+*.predesign-backup.html
+*.precopy-backup.html
