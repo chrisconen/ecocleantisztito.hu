@@ -5,3 +5,7 @@ User-agent: *
 Allow: /
 
 Sitemap: https://ecocleantisztito.hu/sitemap.xml
+
+# AI / Agent Experience (AX) erőforrások
+# LLM-összefoglaló: https://ecocleantisztito.hu/llms.txt
+# AI-ügynök útmutató: https://ecocleantisztito.hu/agents.txt
