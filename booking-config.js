@@ -9,9 +9,9 @@
 const PRICING = {
     // KÁRPITTISZTÍTÁS (mélytisztítás)
     karpit: {
-        "szofa": { name: "Szófa, heverő", price: 10500, duration: 40, atkaPrice: 3500 },
-        "l_kanape": { name: "L-kanapé", price: 15000, duration: 50, atkaPrice: 3500 },
-        "u_kanape": { name: "U-kanapé", price: 18000, duration: 60, atkaPrice: 5000 },
+        "szofa": { name: "Szófa, heverő", price: 10500, duration: 40, atkaPrice: 3500, agyazhatoPrice: 3500 },
+        "l_kanape": { name: "L-kanapé", price: 15000, duration: 50, atkaPrice: 3500, agyazhatoPrice: 3500 },
+        "u_kanape": { name: "U-kanapé", price: 18000, duration: 60, atkaPrice: 5000, agyazhatoPrice: 3500 },
         "fotel": { name: "Fotel", price: 5000, duration: 20, atkaPrice: 0 },
         "ebedlo_szek": { name: "Ebédlő szék", price: 1500, duration: 10, atkaPrice: 0 },
         "irodai_szek": { name: "Irodai szék", price: 3000, duration: 15, atkaPrice: 0 }
@@ -276,6 +276,8 @@ function populateItems() {
 function createItemHTML(category, id, item) {
     const fullId = `${category}_${id}`;
     const hasAtka = category === 'karpit' && item.atkaPrice > 0;
+    const hasAgyazhato = category === 'karpit' && item.agyazhatoPrice > 0;
+    const hasItemUpsell = hasAtka || hasAgyazhato;
 
     return `
         <div class="config-item" data-item-id="${fullId}">
@@ -290,8 +292,9 @@ function createItemHTML(category, id, item) {
                     <button class="counter-btn" onclick="incrementItem('${fullId}', '${category}')">+</button>
                 </div>
             </div>
-            ${hasAtka ? `
+            ${hasItemUpsell ? `
             <div class="item-upsell" id="upsell-${fullId}" style="display:none;">
+                ${hasAtka ? `
                 <label class="upsell-checkbox">
                     <input type="checkbox" onchange="toggleItemUpsell('${fullId}', 'atkairtas', ${item.atkaPrice})">
                     <span class="upsell-label">
@@ -300,6 +303,17 @@ function createItemHTML(category, id, item) {
                         <span class="upsell-price">+${item.atkaPrice.toLocaleString('hu-HU')} Ft</span>
                     </span>
                 </label>
+                ` : ''}
+                ${hasAgyazhato ? `
+                <label class="upsell-checkbox">
+                    <input type="checkbox" onchange="toggleItemUpsell('${fullId}', 'agyazhato', ${item.agyazhatoPrice})">
+                    <span class="upsell-label">
+                        <span class="upsell-icon">🛏️</span>
+                        <span class="upsell-text">+Ágyazható felület tisztítása (kihúzható / lenyitható)</span>
+                        <span class="upsell-price">+${item.agyazhatoPrice.toLocaleString('hu-HU')} Ft</span>
+                    </span>
+                </label>
+                ` : ''}
             </div>
             ` : ''}
         </div>
@@ -394,7 +408,7 @@ function decrementItem(fullId) {
         const upsellEl = document.getElementById(`upsell-${fullId}`);
         if (upsellEl) {
             upsellEl.style.display = 'none';
-            upsellEl.querySelector('input').checked = false;
+            upsellEl.querySelectorAll('input').forEach(i => i.checked = false);
         }
     }
 
@@ -524,7 +538,7 @@ function updateSummary() {
             price: itemTotal
         });
 
-        // Item-level upsells (atkairtás)
+        // Item-level upsells (atkairtás, ágyazható felület)
         item.upsells.forEach(upsellId => {
             if (upsellId === 'atkairtas' && pricing.atkaPrice) {
                 const atkaTotal = pricing.atkaPrice * item.count;
@@ -533,6 +547,16 @@ function updateSummary() {
                 details.push({
                     text: `  +Atkairtás (${item.count}x)`,
                     price: atkaTotal,
+                    isUpsell: true
+                });
+            }
+            if (upsellId === 'agyazhato' && pricing.agyazhatoPrice) {
+                const agyTotal = pricing.agyazhatoPrice * item.count;
+                subtotal += agyTotal;
+                totalDuration += 20 * item.count;
+                details.push({
+                    text: `  +Ágyazható felület tisztítása (${item.count}x)`,
+                    price: agyTotal,
                     isUpsell: true
                 });
             }
