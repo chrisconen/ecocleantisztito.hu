@@ -31,10 +31,10 @@ const PRICING = {
 
     // KISZÁLLÁSI DÍJAK (egységes minden városra)
     travelZones: {
-        "belvaros": { fee: 2500, label: "Belváros" },
-        "kulso": { fee: 3000, label: "Külső városrész" },
-        "20km": { fee: 3500, label: "20 km-en belül" },
-        "40km": { fee: 6000, label: "40 km-en belül" }
+        "belvaros": { fee: 3500, label: "Belváros" },
+        "kulso": { fee: 4000, label: "Külváros" },
+        "20km": { fee: 4500, label: "10 km-ig" },
+        "40km": { fee: 5500, label: "20 km-ig" }
     }
 };
 

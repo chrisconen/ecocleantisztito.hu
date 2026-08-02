@@ -144,14 +144,15 @@ const EXTRAS = {
 };
 
 // ═══════════════════════════════════════════════════════════
-// KISZÁLLÁSI DÍJAK (Zóna alapú - távolság szerint)
+// KISZÁLLÁSI DÍJAK (egységes – megegyezik booking-config.js-sel)
+// belváros 3500 | külváros 4000 | 10 km-ig 4500 | 20 km-ig 5500
 // ═══════════════════════════════════════════════════════════
 const KISZALLASI_DIJAK = {
-    zona_a: { name: "Helyi (0-15 km)", price: 2500, description: "Győr belváros és közvetlen környéke" },
-    zona_b: { name: "Közeli (15-30 km)", price: 3000, description: "Győr külvárosok, közeli települések" },
-    zona_c: { name: "Közepes (30-50 km)", price: 3500, description: "Közepes távolságú városok" },
-    zona_d: { name: "Távoli (50-70 km)", price: 4500, description: "Távolabbi nagyvárosok" },
-    zona_e: { name: "Nagyon távoli (70+ km)", price: 5500, description: "Legmesszebb eső területek" },
+    zona_a: { name: "Belváros", price: 3500, description: "Városon belül / belváros" },
+    zona_b: { name: "Külváros", price: 4000, description: "Külváros / külső városrészek" },
+    zona_c: { name: "10 km-ig", price: 4500, description: "10 km-es körzet" },
+    zona_d: { name: "20 km-ig", price: 5500, description: "20 km-ig" },
+    zona_e: { name: "20 km-ig", price: 5500, description: "20 km-ig / távolabbi területek" },
     egyedi: { name: "Egyéb település", price: 0, description: "Egyedi ár - felvesszük a kapcsolatot" }
 };
 
@@ -161,7 +162,7 @@ const KISZALLASI_DIJAK = {
 // ═══════════════════════════════════════════════════════════
 const LOCATIONS = {
     // ═══════════════════════════════════════════════════════
-    // ZÓNA A - HELYI (0-15 km) - 2.500 Ft
+    // ZÓNA A - BELVÁROS - 3.500 Ft
     // ═══════════════════════════════════════════════════════
     "gyor_belvaros": { 
         name: "Győr - Belváros", 
@@ -193,7 +194,7 @@ const LOCATIONS = {
     },
 
     // ═══════════════════════════════════════════════════════
-    // ZÓNA B - KÖZELI (15-30 km) - 3.000 Ft
+    // ZÓNA B - KÜLVÁROS - 4.000 Ft
     // ═══════════════════════════════════════════════════════
     "gyor_menfocsanak": { 
         name: "Győr - Ménfőcsanak", 
@@ -302,7 +303,7 @@ const LOCATIONS = {
     },
 
     // ═══════════════════════════════════════════════════════
-    // ZÓNA C - KÖZEPES (30-50 km) - 3.500 Ft
+    // ZÓNA C - 10 KM-IG - 4.500 Ft
     // ═══════════════════════════════════════════════════════
     "mosonmagyarovar": { 
         name: "Mosonmagyaróvár", 
@@ -362,7 +363,7 @@ const LOCATIONS = {
     },
 
     // ═══════════════════════════════════════════════════════
-    // ZÓNA D - TÁVOLI (50-70 km) - 4.500 Ft
+    // ZÓNA D - 20 KM-IG - 5.500 Ft
     // ═══════════════════════════════════════════════════════
     "sopron": { 
         name: "Sopron", 
@@ -429,7 +430,7 @@ const LOCATIONS = {
     },
 
     // ═══════════════════════════════════════════════════════
-    // ZÓNA E - NAGYON TÁVOLI (70+ km) - 5.500 Ft
+    // ZÓNA E - 20 KM-IG - 5.500 Ft
     // ═══════════════════════════════════════════════════════
     "szombathely": { 
         name: "Szombathely", 
@@ -915,11 +916,10 @@ function renderLocationStep(container) {
         <div class="location-zones-info">
             <p class="zones-title">💡 Kiszállási díjaink:</p>
             <div class="zones-grid">
-                <span class="zone-item zona-a">0-15 km: ${formatPrice(2500)}</span>
-                <span class="zone-item zona-b">15-30 km: ${formatPrice(3000)}</span>
-                <span class="zone-item zona-c">30-50 km: ${formatPrice(3500)}</span>
-                <span class="zone-item zona-d">50-70 km: ${formatPrice(4500)}</span>
-                <span class="zone-item zona-e">70+ km: ${formatPrice(5500)}</span>
+                <span class="zone-item zona-a">Belváros: ${formatPrice(KISZALLASI_DIJAK.zona_a.price)}</span>
+                <span class="zone-item zona-b">Külváros: ${formatPrice(KISZALLASI_DIJAK.zona_b.price)}</span>
+                <span class="zone-item zona-c">10 km-ig: ${formatPrice(KISZALLASI_DIJAK.zona_c.price)}</span>
+                <span class="zone-item zona-d">20 km-ig: ${formatPrice(KISZALLASI_DIJAK.zona_d.price)}</span>
             </div>
         </div>
     `;
