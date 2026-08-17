@@ -1,14 +1,5 @@
 /* ===== ECO CLEAN V6 - JAVASCRIPT ===== */
 
-(function loadVacationNotice() {
-    if (document.querySelector('script[data-eco-vacation-notice]')) return;
-
-    const noticeScript = document.createElement('script');
-    noticeScript.src = 'vacation-notice.js';
-    noticeScript.dataset.ecoVacationNotice = 'true';
-    document.head.appendChild(noticeScript);
-})();
-
 // Theme Toggle
 const themeToggle = document.getElementById('themeToggle');
 const html = document.documentElement;
