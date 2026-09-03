@@ -257,6 +257,9 @@
 
 /* ===== MOBILE CTA ===== */
 .nav-mobile-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     padding-top: 1.5rem;
     border-top: var(--border-subtle);
 }
