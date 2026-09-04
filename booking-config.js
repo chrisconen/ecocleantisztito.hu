@@ -9,12 +9,12 @@
 const PRICING = {
     // KÁRPITTISZTÍTÁS (mélytisztítás)
     karpit: {
-        "szofa": { name: "Szófa, heverő", price: 10500, duration: 40, atkaPrice: 3500, agyazhatoPrice: 3500 },
-        "l_kanape": { name: "L-kanapé", price: 15000, duration: 50, atkaPrice: 3500, agyazhatoPrice: 3500 },
-        "u_kanape": { name: "U-kanapé", price: 18000, duration: 60, atkaPrice: 5000, agyazhatoPrice: 3500 },
-        "fotel": { name: "Fotel", price: 5000, duration: 20, atkaPrice: 0 },
-        "ebedlo_szek": { name: "Ebédlő szék", price: 1500, duration: 10, atkaPrice: 0 },
-        "irodai_szek": { name: "Irodai szék", price: 3000, duration: 15, atkaPrice: 0 }
+        "szofa": { name: "Szófa, heverő", price: 15500, duration: 40, atkaPrice: 5000, agyazhatoPrice: 5000 },
+        "l_kanape": { name: "L-kanapé", price: 17500, duration: 50, atkaPrice: 5000, agyazhatoPrice: 5000 },
+        "u_kanape": { name: "U-kanapé", price: 22500, duration: 60, atkaPrice: 5000, agyazhatoPrice: 5000 },
+        "fotel": { name: "Fotel", price: 6500, duration: 20, atkaPrice: 0 },
+        "ebedlo_szek": { name: "Ebédlő szék", price: 3500, duration: 10, atkaPrice: 0 },
+        "irodai_szek": { name: "Irodai szék", price: 4000, duration: 15, atkaPrice: 0 }
     },
 
     // MATRACTISZTÍTÁS (atkairtás)
