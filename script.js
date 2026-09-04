@@ -79,15 +79,6 @@ const menuData = {
         badge: 'business',
         desc: 'Üzletkirakatok, irodaház homlokzatok, bevásárlóközpontok, autószalonok alkalmi és rendszeres  ablaktisztítása ipari berendezésekkel.',
         cities: ['Győr', 'Sopron', 'Szombathely', 'Veszprém', 'Tatabánya', 'Komárom', 'Pápa', 'Mosonmagyaróvár', 'Tata', 'Balatonfüred', 'Siófok', 'Keszthely', 'Hévíz', 'Tihany', 'Balatonalmádi', 'Tapolca', 'Révfülöp', 'Badacsony', 'Balatonföldvár', 'Balatonlelle', 'Fonyód', 'Zamárdi']
-    },
-    varosok: {
-        icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>',
-        title: 'Városaink',
-        subtitle: 'Vegyszermentes tisztítás minden nagyvárosban',
-        badge: 'both',
-        desc: 'Minden nagyvárosban elérhető teljes szolgáltatáspalettánk: kárpittisztítás, matractisztítás, szőnyegtisztítás, ipari takarítás és ablaktisztítás.',
-        directLink: true,
-        cities: ['Győr', 'Sopron', 'Szombathely', 'Veszprém', 'Tatabánya', 'Komárom', 'Pápa', 'Mosonmagyaróvár', 'Tata']
     }
 };
 
