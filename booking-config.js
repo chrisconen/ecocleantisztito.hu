@@ -1060,6 +1060,20 @@ async function submitBooking(event) {
     const selectedSlot = typeof BookingCalendar !== 'undefined' && BookingCalendar.getSelectedSlot ? BookingCalendar.getSelectedSlot() : null;
     const selectedDate = typeof BookingCalendar !== 'undefined' && BookingCalendar.getSelectedDate ? BookingCalendar.getSelectedDate() : null;
 
+    // Validation: Calendar slot (REQUIRED - a backend elutasitja idopont nelkul)
+    if (typeof BookingCalendar === 'undefined' || !BookingCalendar.isValid()) {
+        const calMsg = (typeof BookingCalendar !== 'undefined' && BookingCalendar.getValidationMessage)
+            ? BookingCalendar.getValidationMessage()
+            : 'Kérjük válasszon időpontot';
+        alert(`❌ ${calMsg}\n\nA foglaláshoz válasszon egy napot és egy időpontot a naptárból!`);
+        const calendarWrapper = document.getElementById('calendarWrapper');
+        if (calendarWrapper) {
+            calendarWrapper.style.display = 'block';
+            calendarWrapper.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        return false;
+    }
+
     // Determine if kárpit service is involved
     const isKarpitBooking = State.serviceType === 'Kárpit' || State.serviceType === 'Mindkettő';
 
