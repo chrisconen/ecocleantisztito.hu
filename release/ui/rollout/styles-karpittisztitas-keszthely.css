@@ -1,0 +1,475 @@
+@import url('../../style.css') layer(legacy);
+@import url('../../before-after-slider.css') layer(legacy);
+@import url('../../mobile.css') layer(legacy);
+@import url('../../seo-content.css') layer(legacy);
+@layer legacy {
+
+        /* Testimonials szekció */
+        .testimonials-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.03) 0%, transparent 50%);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .testimonial-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 16px;
+            left: 24px;
+            font-size: 72px;
+            color: var(--accent);
+            opacity: 0.2;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial-stars {
+            color: #ffc107;
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-text {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), #00cc6a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #000;
+        }
+
+        .testimonial-info h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .testimonial-info span {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* Process szekció */
+        .process-section {
+            padding: 80px 0;
+        }
+
+        .process-timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .process-number {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), #00cc6a);
+            color: #000;
+            font-size: 24px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .process-step h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .process-step p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Industry szekció */
+        .industry-section {
+            padding: 80px 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(0, 255, 136, 0.02) 100%);
+        }
+
+        .industry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .industry-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.3s ease;
+        }
+
+        .industry-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 40px rgba(0, 255, 136, 0.1);
+        }
+
+        .industry-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .industry-card h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .industry-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .industry-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .industry-features li {
+            padding: 8px 0;
+            border-top: 1px solid var(--border-color);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .industry-features li::before {
+            content: '✓';
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* Before/After szekció */
+        .transformation-section {
+            padding: 80px 0;
+        }
+
+        .transformation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .transformation-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .transformation-header {
+            background: linear-gradient(135deg, var(--accent), #00cc6a);
+            color: #000;
+            padding: 16px 24px;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .transformation-content {
+            padding: 24px;
+        }
+
+        .transformation-content h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .transformation-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .transformation-content li {
+            padding: 8px 0;
+            font-size: 14px;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .transformation-content li span.icon {
+            color: var(--accent);
+        }
+
+        /* Szolgáltatott területek */
+        .coverage-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.03) 0%, transparent 50%);
+        }
+
+        .coverage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 48px;
+        }
+
+        .coverage-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .coverage-item:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .coverage-item h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .coverage-item span {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* Trust badges */
+        .trust-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .trust-badge {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px 32px;
+            text-align: center;
+        }
+
+        .trust-badge .number {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--accent);
+            display: block;
+        }
+
+        .trust-badge .label {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* CTA banner */
+        .cta-banner {
+            background: linear-gradient(135deg, var(--accent), #00cc6a);
+            padding: 60px 40px;
+            border-radius: 24px;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .cta-banner h2 {
+            color: #373737 ;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .cta-banner p {
+            color: #373737 ;
+            font-size: 18px;
+            margin-bottom: 24px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-banner .btn {
+            background: #000 ;
+            color: #fff ;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            font-size: 22px;
+        }
+
+        .cta-banner .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Szezonalitás szekció */
+        .seasonal-section {
+            padding: 80px 0;
+        }
+
+        .seasonal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .seasonal-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+        }
+
+        .seasonal-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .seasonal-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .seasonal-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .seasonal-tip {
+            margin-top: 16px;
+            padding: 12px;
+            background: rgba(0, 255, 136, 0.1);
+            border-radius: 8px;
+            font-size: 13px;
+            color: var(--accent);
+        }
+
+        /* Garanciák szekció */
+        .guarantees-section {
+            padding: 80px 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(0, 255, 136, 0.02) 100%);
+        }
+
+        .guarantees-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .guarantee-card {
+            background: var(--card-bg);
+            border: 2px solid var(--accent);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+        }
+
+        .guarantee-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), #00cc6a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .guarantee-icon svg {
+            width: 36px;
+            height: 36px;
+            stroke: #000;
+        }
+
+        .guarantee-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .guarantee-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+    
+[data-legacy-style="1"]{background: #ffc107; color: #000;}
+[data-legacy-style="2"]{margin-top: 40px;}
+[data-legacy-style="3"]{margin-top: 60px;}
+[data-legacy-style="4"]{font-size: 28px;}
+[data-legacy-style="5"]{border: 2px solid var(--accent);}
+[data-legacy-style="6"]{color: var(--accent);}
+[data-legacy-style="7"]{border: 2px solid var(--accent);}
+[data-legacy-style="8"]{color: var(--accent);}
+[data-legacy-style="9"]{border: 2px solid var(--accent);}
+[data-legacy-style="10"]{color: var(--accent);}
+[data-legacy-style="11"]{font-size: 16px;}
+[data-legacy-style="12"]{margin-top: 12px; padding-left: 20px;}
+[data-legacy-style="13"]{background: var(--bg-secondary);}
+[data-legacy-style="14"]{text-align: center; margin-top: 32px; color: var(--text-secondary);}
+[data-legacy-style="15"]{background: linear-gradient(135deg, #000 0%, #1a1a1a 100%); border: 2px solid var(--accent);}
+[data-legacy-style="16"]{color: var(--accent);}
+[data-legacy-style="17"]{color: #fff;}
+[data-legacy-style="18"]{display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;}
+[data-legacy-style="19"]{background: var(--accent); color: #000;}
+[data-legacy-style="20"]{background: transparent; color: var(--accent); border: 2px solid var(--accent);}
+[data-legacy-style="21"]{margin-top: 16px;}
+[data-legacy-style="22"]{font-size: 14px; color: var(--text-secondary);}
+[data-legacy-style="23"]{font-size: 14px;}
+[data-legacy-style="24"]{font-size: 14px;}
+
+}

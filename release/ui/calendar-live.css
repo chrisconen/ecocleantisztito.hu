@@ -1,0 +1,16 @@
+/* Companion to the approved design.css calendar and native-dialog styles. */
+.calendar-feedback,.calendar-flexibility {font-size:13px;line-height:1.65;padding:18px;border:1px solid #dfe4d4;border-radius:6px;background:#fbfcf7;}
+.calendar-feedback p,.calendar-flexibility p {margin-bottom:12px;}
+.calendar-duration {font-size:12px;margin-bottom:15px;}
+.live-slots {flex-wrap:wrap;}
+.live-slots button {display:flex;flex-direction:column;gap:3px;min-width:110px;flex:1 1 110px;}
+.live-slots button small {font-size:10px;white-space:normal;}
+.live-slots button:disabled {opacity:.5;cursor:default;}
+.calendar-flexibility {margin:16px 0;}
+.calendar-flexibility input {width:auto;accent-color:#536d3f;margin-right:5px;}
+.calendar-confirm {margin-top:16px;width:100%;}
+.calendar-confirm:disabled {opacity:.45;cursor:default;}
+.calendar-confirmed {margin-top:16px;}
+.calendar-change-button {width:auto;min-height:40px;padding:10px 16px;border:1px solid #c7d2b9;border-radius:4px;background:#fbfcf7;color:#526346;font:inherit;font-size:12px;line-height:1.4;white-space:normal;}
+.calendar-change-button:hover {background:#edf2e5;}
+.booking-result {max-height:calc(100dvh - 36px);overflow:auto;}

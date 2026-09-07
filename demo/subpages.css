@@ -1,0 +1,222 @@
+/* Shared editorial skin for all classic service, city, rental and reference pages. */
+.eco-subpage {--accent:#6d845e;--card-bg:#fffdf8;--border-color:#d8ddd3;}
+.eco-subpage .subpage-hero {padding:94px 0 0;background:var(--paper);overflow:hidden;min-height:0;}
+.subpage-hero-bg,.subpage-hero-pattern {display:none;}
+.subpage-hero-container {max-width:1600px;width:100%;padding:0;margin:auto;display:grid;grid-template-columns:minmax(0,1.03fr) minmax(0,1fr);gap:0;text-align:left;align-items:stretch;}
+.subpage-hero-content {padding:58px 54px 54px clamp(32px,4vw,80px);min-width:0;max-width:none;}
+.breadcrumb,.breadcrumbs {font-size:11px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px;}
+.breadcrumb a,.breadcrumbs a {color:var(--muted);}
+.subpage-hero-badge {background:none;border:0;padding:0;border-radius:0;box-shadow:none;font-size:11px;letter-spacing:1.3px;text-transform:uppercase;color:#667d5d;margin-bottom:24px;}
+.subpage-hero-badge svg {width:15px;height:15px;}
+.subpage-hero-title {font-family:var(--font-display);font-size:clamp(48px,5vw,78px);font-weight:500;line-height:1.08;letter-spacing:-.03em;margin:0 0 24px;color:var(--ink);overflow-wrap:normal;word-break:normal;}
+.eco-gradient,.subpage-hero-title span {background:none;-webkit-text-fill-color:currentColor;color:#718365;font-style:italic;}
+.subpage-hero-desc {font-size:16px;line-height:1.8;color:var(--muted);max-width:600px;margin:0 0 26px;}
+.subpage-hero-cta {display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-start;}
+.subpage-hero-cta .btn {font-size:12px;padding-inline:20px;}
+.eco-subpage .subpage-hero .trust-badges:has(> :nth-child(4):last-child) {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;width:100%;margin-top:28px;}
+.eco-subpage .subpage-hero .trust-badge {min-width:0;padding:18px 8px;border:1px solid var(--line);border-radius:7px;background:#edf1e7;}
+.eco-subpage .subpage-hero .trust-badge .number {font-family:var(--font-display);font-size:clamp(27px,2.6vw,38px);line-height:1.1;font-weight:500;color:var(--ink);white-space:nowrap;}
+.eco-subpage .subpage-hero .trust-badge .label {display:block;font-size:11px;line-height:1.6;margin-top:8px;color:var(--muted);overflow-wrap:anywhere;}
+.subpage-editorial {position:relative;margin:0;overflow:hidden;min-height:530px;background:var(--sage);}
+.editorial-hero-photo {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform 1.2s;}
+.subpage-editorial:hover .editorial-hero-photo {transform:scale(1.025);}
+.subpage-editorial figcaption {position:absolute;right:20px;bottom:18px;left:20px;color:white;font-size:9px;letter-spacing:1.8px;text-transform:uppercase;text-shadow:0 1px 8px #26372b;z-index:1;}
+.subpage-editorial:after {content:'';position:absolute;inset:78% 0 0;background:linear-gradient(transparent,#27392b66);pointer-events:none;}
+.subpage-hero-trust {grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);gap:0;max-width:none;background:#eaf0e4;border-block:1px solid var(--line);padding:0 48px;}
+.trust-badge-card {padding:25px 22px;border:0;border-right:1px solid #cfd9c6;border-radius:0;background:none;box-shadow:none;display:grid;grid-template-columns:60px minmax(0,1fr);gap:7px 16px;align-content:center;align-items:start;text-align:left;min-width:0;}
+.trust-badge-card:last-child {border-right:0;}
+.trust-badge-card__tag {position:static;grid-column:2;grid-row:1;font-size:10px;line-height:1.4;letter-spacing:1px;color:#627257;background:none;border:0;padding:0;}
+.trust-badge-card__visual {grid-column:1;grid-row:1/span 3;width:60px;height:72px;display:flex;align-items:center;justify-content:center;align-self:center;background:none;margin:0;}
+.trust-badge-card__visual img {width:100%;height:100%;object-fit:contain;}
+.trust-badge-card__title {grid-column:2;grid-row:2;font-family:var(--font-display);font-size:23px;line-height:1.16;font-weight:500;margin:0;min-width:0;}
+.trust-badge-card__desc {grid-column:2;grid-row:3;font-size:12px;line-height:1.65;color:var(--muted);margin:0;min-width:0;}
+.eco-subpage .pricing,.eco-subpage .why-us-detailed,.eco-subpage .seo-content,.eco-subpage .other-cities {padding:88px 0;background:var(--paper);}
+.eco-subpage .section-header {text-align:left;max-width:none;margin:0 0 38px;}
+.eco-subpage .section-label {color:#667d5d;}
+.eco-subpage .section-title {max-width:940px;}
+.eco-subpage .pricing-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch;}
+.eco-subpage .pricing-card {position:relative;min-width:0;padding:27px;display:flex;flex-direction:column;align-items:flex-start;text-align:left;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fffdf8;box-shadow:none;transition:transform .25s,box-shadow .25s;}
+.eco-subpage .pricing-card:hover {transform:translateY(-4px);box-shadow:0 15px 35px #283e340b;}
+.eco-subpage .pricing-card:before,.eco-subpage .pricing-card:after {display:none;}
+.pricing-editorial-photo {width:calc(100% + 54px);max-width:none;height:auto;aspect-ratio:1.65;object-fit:cover;margin:-27px -27px 25px;transition:transform .7s;}
+.pricing-editorial-photo[src*="armchair"] {object-position:center 83%;}
+.eco-subpage .pricing-item-name {font-family:var(--font-display);font-size:30px;font-weight:500;line-height:1.1;margin:0 0 12px;color:var(--ink);}
+.eco-subpage .pricing-price {font-size:13px;color:var(--muted);margin:4px 0 12px;line-height:1.4;}
+.eco-subpage .pricing-price span {font-family:var(--font-display);font-size:38px;font-weight:500;letter-spacing:-.025em;color:#4d6843;}
+.eco-subpage .pricing-note {font-size:12px;line-height:1.85;color:var(--muted);margin:2px 0;}
+.eco-subpage .pricing-note-box {padding:24px 28px;margin-top:25px;background:var(--sage);border:1px solid #cbd7c3;border-radius:6px;color:#4b5f43;font-size:13px;line-height:1.9;}
+.eco-subpage .why-us-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;}
+.eco-subpage :is(.why-us-grid,.pricing-grid,.services-grid,.benefits-grid,.industry-grid,.guarantees-grid,.seasonal-grid,.health-grid,.stats-grid):has(> :nth-child(4):last-child):not(.matrac-choose__cards) {grid-template-columns:repeat(4,minmax(0,1fr));}
+.eco-subpage .why-us-card,.eco-subpage .benefit-card,.eco-subpage .audience-card,.eco-subpage .zone-card {padding:28px;border:1px solid var(--line);border-radius:7px;background:#fefdf8;box-shadow:none;color:var(--ink);}
+.eco-subpage .why-us-card h3,.eco-subpage .benefit-card h3,.eco-subpage .audience-card h3,.eco-subpage .zone-card h3 {font-family:var(--font-display);font-weight:500;font-size:29px;line-height:1.1;color:var(--ink);margin:0 0 14px;}
+.eco-subpage .why-us-card>.why-us-icon+div {font-family:var(--font-display);font-weight:500;font-size:29px;line-height:1.1;color:var(--ink);margin:0 0 14px;}
+.eco-subpage .why-us-card p,.eco-subpage .benefit-card p,.eco-subpage .audience-card p,.eco-subpage .zone-card p {font-size:13px;line-height:1.9;color:var(--muted);}
+.eco-subpage .content-block {padding:38px;margin:0 0 24px;border:1px solid var(--line);border-radius:7px;background:#fdfcf6;box-shadow:none;opacity:1;transform:none;}
+.eco-subpage .content-block:nth-child(even) {background:#edf1e6;}
+.eco-subpage .content-block h2,.eco-subpage .content-block h3 {font-family:var(--font-display);font-size:36px;font-weight:500;line-height:1.15;margin:0 0 20px;color:var(--ink);}
+.eco-subpage .content-block p,.eco-subpage .content-block li {font-size:14px;line-height:1.9;color:var(--muted);}
+.eco-subpage .content-block p+p {margin-top:15px;}
+.eco-subpage .content-block h4 {font-size:16px;color:var(--ink);}
+.eco-subpage .why-us-detailed .content-blocks:has(> :nth-child(4):last-child) {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;}
+.eco-subpage .why-us-detailed .content-blocks:has(> :nth-child(4):last-child)>.content-block {min-width:0;margin:0;}
+.eco-subpage :is(.industry-section,.process-section,.guarantees-section,.coverage-section,.seasonal-section,.testimonials-section,.transformation-section,.stats-section,.health-section,.comparison-section,.faq-section) {padding:70px 0;background:var(--paper);border-top:1px solid var(--line);}
+.eco-subpage :is(.industry-section,.guarantees-section,.health-section) {background:#edf1e8;}
+.eco-subpage :is(.industry-card,.process-card,.guarantee-card,.testimonial-card,.health-card,.stat-card,.transformation-card,.seasonal-card,.coverage-card) {border:1px solid var(--line);box-shadow:none;background:#fefdf8;border-radius:7px;color:var(--ink);}
+.eco-subpage :is(.industry-card,.process-card,.guarantee-card,.testimonial-card,.health-card,.stat-card,.transformation-card,.seasonal-card) {padding:27px;}
+.eco-subpage :is(.industry-card,.process-card,.guarantee-card,.health-card,.transformation-card,.seasonal-card) h3 {font-family:var(--font-display);font-size:29px;font-weight:500;color:var(--ink);}
+.eco-subpage :is(.industry-grid,.process-grid,.guarantees-grid,.health-grid,.transformation-grid,.testimonials-grid,.seasonal-grid) {gap:18px;}
+.eco-subpage :is(.industry-card,.process-card,.guarantee-card,.health-card,.transformation-card,.seasonal-card) p {font-size:13px;line-height:1.9;color:var(--muted);}
+.eco-subpage .stats-grid {gap:1px;background:var(--line);border:1px solid var(--line);}
+.eco-subpage .stat-card {border:0;border-radius:0;}
+.eco-subpage .stat-number {font-family:var(--font-display);font-size:54px;font-weight:500;color:#738565;}
+.eco-subpage .process-timeline {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--line);}
+.eco-subpage .process-step {padding:30px 24px;text-align:left;border-right:1px solid var(--line);}
+.eco-subpage .process-step:last-child {border-right:0;}
+.eco-subpage .process-number {font-family:var(--font-display);font-size:57px;line-height:1;font-weight:400;font-style:italic;color:#8c9e7d;background:none;width:auto;height:auto;display:block;margin:0 0 22px;border:0;border-radius:0;}
+.eco-subpage .process-step h3 {font-family:var(--font-display);font-size:28px;line-height:1.1;font-weight:500;color:var(--ink);}
+.eco-subpage .process-step p {font-size:13px;line-height:1.9;color:var(--muted);}
+.eco-subpage .process-timeline:has(> :nth-child(5):last-child) {grid-template-columns:repeat(6,minmax(0,1fr));gap:18px;border:0;}
+.eco-subpage .process-timeline:has(> :nth-child(5):last-child)>.process-step {grid-column:span 2;min-width:0;padding:28px;border:1px solid var(--line);border-radius:7px;background:#fffdf8;}
+.eco-subpage .process-timeline:has(> :nth-child(5):last-child)>.process-step:where(:nth-child(n+4)) {grid-column:span 3;}
+.eco-subpage .process-timeline:has(> :nth-child(5):last-child) h3 {font-size:clamp(24px,2.2vw,28px);}
+.eco-subpage .testimonial-avatar,.eco-subpage .guarantee-icon {background:var(--sage);color:#4d6941;border:1px solid #c8d5bd;box-shadow:none;}
+.eco-subpage .guarantee-icon svg {stroke:#4d6941;}
+.eco-subpage .testimonial-stars {font-size:14px;color:#7a875f;letter-spacing:2px;}
+.eco-subpage .testimonial-text {font-size:14px;line-height:1.95;color:var(--muted);}
+.eco-subpage .transformation-item {background:#fffdf8;border:1px solid var(--line);border-radius:8px;}
+.eco-subpage .transformation-header {background:#dce5d9;color:#4c6243;font-family:var(--font-display);font-size:28px;font-weight:500;}
+.eco-subpage .seasonal-tip {background:#eaf0e4;color:#617953;border-radius:4px;}
+.eco-subpage .industry-card:hover {box-shadow:0 15px 30px #283e340a;border-color:#bdcdb1;}
+.eco-subpage .industry-icon,.eco-subpage .seasonal-icon {font-size:32px;}
+.eco-subpage .faq-container {max-width:1000px;margin-inline:auto;}
+.eco-subpage .faq-item {background:none;border:0;border-bottom:1px solid var(--line);border-radius:0;margin:0;padding:0;box-shadow:none;}
+.eco-subpage .faq-question {display:flex;align-items:center;justify-content:space-between;gap:20px;width:100%;padding:25px 0;font-family:var(--font-main);font-size:16px;font-weight:600;background:transparent;border:0;color:var(--ink);text-align:left;cursor:pointer;}
+.eco-subpage .faq-question h3 {font-family:inherit;font-size:inherit;font-weight:inherit;margin:0;}
+.eco-subpage .faq-answer {display:none;padding:0 0 25px;max-height:none;height:auto;color:var(--muted);font-size:14px;line-height:1.9;opacity:1;overflow:visible;}
+.eco-subpage .faq-item:is(.active,.faq-active) .faq-answer {display:block;max-height:none;}
+.eco-subpage .faq-answer p {margin:0 0 12px;}
+.eco-subpage .faq-heading {margin:0;font-size:inherit;}
+.eco-subpage .faq-item:after {display:none;}
+.eco-subpage .faq-heading>.faq-question:after {content:'+';font-size:23px;font-weight:400;color:#6d825f;flex-shrink:0;}
+.eco-subpage .faq-heading>.faq-question[aria-expanded="true"]:after {content:'−';}
+.eco-subpage .faq-answer :is(p,ul) {max-height:none;opacity:1;overflow:visible;transform:none;}
+.eco-subpage .gr-reviews.gr-inline {padding:0;background:transparent;}
+.eco-subpage .gr-reviews.gr-inline .gr-inner {width:100%;max-width:none;}
+.eco-subpage .cities-grid {display:flex;flex-wrap:wrap;gap:9px;}
+.eco-subpage .city-link {padding:10px 16px;background:#eff2e9;border:1px solid var(--line);border-radius:4px;color:var(--ink);font-size:12px;}
+.eco-subpage .city-link:hover {background:var(--sage);}
+.eco-subpage .cta-banner {background:#dce5d9;border:1px solid #c7d4bc;border-radius:8px;padding:55px;text-align:center;box-shadow:none;}
+.eco-subpage .cta-banner h2 {font-family:var(--font-display);font-size:clamp(38px,4vw,57px);font-weight:500;line-height:1.1;color:var(--ink);}
+.eco-subpage .cta-banner p {font-size:14px;line-height:1.9;color:#5c6f50;}
+.eco-subpage .cta-banner .btn {background:#415b46;color:white;border:0;border-radius:5px;box-shadow:none;}
+.eco-subpage .matrac-why {padding:85px 0;background:#eaf0e4;color:var(--ink);}
+.eco-subpage .matrac-why__inner {max-width:1320px;width:calc(100% - 112px);margin:auto;padding:0;}
+.eco-subpage .matrac-why__header h2 {font-family:var(--font-display);font-size:clamp(38px,4vw,59px);line-height:1.1;font-weight:500;letter-spacing:-.025em;color:var(--ink);}
+.eco-subpage .matrac-why__label {font-size:10px;letter-spacing:1.6px;background:none;color:#637956;border:0;padding:0;}
+.eco-subpage .matrac-why__card {padding:24px;background:#f9faf4;border:1px solid #d6dfce;border-radius:7px;box-shadow:none;color:var(--ink);}
+.eco-subpage .matrac-why__card h3 {font-family:var(--font-display);font-size:27px;font-weight:500;color:var(--ink);}
+.eco-subpage .matrac-why__card p {color:var(--muted);font-size:13px;line-height:1.85;}
+.eco-subpage .matrac-why__num {color:#869979;font-family:var(--font-display);background:none;border:0;box-shadow:none;}
+.eco-subpage .matrac-why__imgbtn {border-radius:8px;border:1px solid #cbd5c1;box-shadow:none;}
+.eco-subpage .matrac-why__imgcap {color:var(--muted);font-size:11px;}
+/* The benefits beside a mattress comparison form one vertical list. */
+.eco-subpage .matrac-choose .matrac-choose__cards {display:grid;grid-template-columns:minmax(0,1fr);gap:18px;}
+.eco-subpage .mc-ba {border-radius:8px;border:1px solid var(--line);box-shadow:none;}
+.eco-subpage .mc-ba__knob {background:#f8f7f2;color:#53694a;border-color:white;box-shadow:0 2px 12px #26372b33;}
+.eco-subpage .mc-ba__label {border-radius:3px;background:#f8f7f2e8;color:var(--ink);font-size:11px;}
+.eco-subpage :is(.ba-slider-wrapper,.ba-promo-banner) {border-radius:8px;box-shadow:none;}
+.eco-subpage .ba-slider-knob {background:#f8f7f2;color:#53694a;}
+.eco-subpage .ba-btn {background:#415b46;color:white;border:0;border-radius:5px;}
+.eco-subpage .ba-btn:hover {background:#2e4733;}
+.eco-subpage[data-family="gallery"] .subpage-hero-container {display:block;max-width:1320px;width:calc(100% - 112px);padding:65px 0;}
+.eco-subpage[data-family="gallery"] .subpage-hero-content {padding:0;}
+.eco-subpage[data-family="gallery"] .subpage-hero-title {max-width:920px;}
+.eco-subpage[data-family="gallery"] .subpage-hero-desc {max-width:790px;}
+.gal-filter {display:flex;flex-wrap:wrap;gap:9px;margin:30px 0;}
+.gal-filter button {padding:10px 17px;background:#fdfcf6;color:var(--ink);border:1px solid var(--line);border-radius:4px;font-size:12px;box-shadow:none;min-height:44px;}
+.gal-filter button:is(.active,[aria-pressed="true"]) {background:#415b46;color:white;border-color:#415b46;}
+.gal-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;}
+.gal-tile {margin:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fdfcf7;box-shadow:none;cursor:zoom-in;transition:transform .25s;}
+.gal-tile:hover {transform:translateY(-4px);}
+.gal-tile img {display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;}
+.gal-tile figcaption {padding:15px 18px;color:var(--muted);font-size:12px;background:#fdfcf7;}
+.gal-tile__badge {border-radius:3px;font-size:10px;letter-spacing:.06em;}
+.gal-tile__badge--after {background:#415b46;color:white;}
+.gal-tile__badge--before {background:#ede0d8;color:#594d45;}
+#galLoadMore {margin-top:35px;text-align:center;}
+#galLoadMoreBtn {background:#415b46;color:white;border-radius:5px;border:0;padding:14px 25px;}
+.skip-anchor {display:block;position:absolute;scroll-margin-top:110px;}
+[hidden] {display:none!important;}
+#lightbox {background:#203128ed;backdrop-filter:blur(10px);}
+#lbImg {border-radius:6px;}
+#lbCaption {color:#f8f7f2;}
+#lbClose,#lbPrev,#lbNext {width:46px;height:46px;background:#f8f7f2;color:#283e34;border:0;border-radius:50%;}
+.eco-subpage table {width:100%;border-collapse:collapse;font-size:13px;}
+.eco-subpage th,.eco-subpage td {padding:16px;border-bottom:1px solid var(--line);text-align:left;}
+.eco-subpage th {background:var(--sage);font-weight:600;}
+.eco-subpage .table-wrapper {overflow:auto;}
+.eco-subpage :is(.reveal,.animate-on-scroll,.fade-in,.slide-in-left,.slide-in-right,[data-animate]) {opacity:1;transform:none;visibility:visible;}
+.eco-subpage[data-family="city-hub"] .hero-content {padding-top:65px;padding-bottom:55px;}
+.eco-subpage[data-family="city-hub"] .hero-title {font-size:clamp(49px,5vw,75px);}
+.eco-subpage[data-family="city-hub"] .hero-description {font-size:14px;color:var(--muted);line-height:1.9;}
+@media (max-width:1100px) {
+  .subpage-hero-content {padding:45px 32px;}
+  .subpage-hero-title {font-size:56px;}
+  .subpage-hero-trust {padding-inline:20px;}
+  .trust-badge-card {padding:22px 14px;grid-template-columns:44px minmax(0,1fr);gap:6px 12px;}
+  .trust-badge-card__visual {width:44px;height:58px;}
+  .trust-badge-card__title {font-size:21px;}
+  .eco-subpage :is(.why-us-grid,.pricing-grid,.services-grid,.benefits-grid,.industry-grid,.guarantees-grid,.seasonal-grid,.health-grid,.stats-grid):has(> :nth-child(4):last-child):not(.matrac-choose__cards) {grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media (max-width:900px) {
+  .eco-subpage .process-timeline:has(> :nth-child(5):last-child)>.process-step {padding:22px;}
+  .eco-subpage .subpage-hero {padding-top:80px;}
+  .subpage-hero-container {grid-template-columns:minmax(0,1fr);}
+  .subpage-hero-title {font-size:48px;}
+  .subpage-hero-content {padding:38px 25px;}
+  .subpage-editorial {min-height:0;height:430px;}
+  .subpage-hero-trust {grid-template-columns:1fr 1fr;}
+  .trust-badge-card:nth-child(2) {border-right:0;}
+  .trust-badge-card:nth-child(-n+2) {border-bottom:1px solid var(--line);}
+  .eco-subpage .pricing-grid,.eco-subpage .why-us-grid,.gal-grid {grid-template-columns:repeat(2,minmax(0,1fr));}
+  .eco-subpage .process-timeline {grid-template-columns:repeat(2,minmax(0,1fr));}
+  .eco-subpage .matrac-why__inner,.eco-subpage[data-family="gallery"] .subpage-hero-container {width:calc(100% - 64px);}
+}
+@media (max-width:760px) {
+  .eco-subpage .process-timeline:has(> :nth-child(5):last-child) {grid-template-columns:minmax(0,1fr);}
+  .eco-subpage .process-timeline:has(> :nth-child(5):last-child)>.process-step {grid-column:auto;padding:24px;}
+}
+@media (max-width:600px) {
+  .eco-subpage .subpage-hero .trust-badges:has(> :nth-child(4):last-child) {grid-template-columns:repeat(2,minmax(0,1fr));}
+  .eco-subpage .subpage-hero {padding-top:72px;}
+  .subpage-hero-container {display:flex;flex-direction:column;}
+  .subpage-hero-content {padding:32px 22px;}
+  .subpage-hero-title {font-size:clamp(34px,9.8vw,49px);}
+  .subpage-hero-desc {font-size:16px;}
+  .subpage-hero-badge {font-size:9px;letter-spacing:.8px;}
+  .subpage-editorial {min-height:0;height:340px;width:100%;}
+  .subpage-hero-trust {padding:0 8px;grid-template-columns:minmax(0,1fr);}
+  .trust-badge-card {padding:22px 14px;grid-template-columns:50px minmax(0,1fr);gap:7px 16px;border-right:0;border-bottom:1px solid var(--line);}
+  .trust-badge-card:last-child {border-bottom:0;}
+  .trust-badge-card__visual {grid-column:1;grid-row:1/span 3;width:50px;height:60px;}
+  .trust-badge-card__tag {grid-column:2;grid-row:1;}
+  .trust-badge-card__title {grid-column:2;grid-row:2;font-size:22px;}
+  .trust-badge-card__desc {grid-column:2;grid-row:3;font-size:12px;}
+  .eco-subpage .pricing,.eco-subpage .why-us-detailed,.eco-subpage .seo-content,.eco-subpage .other-cities {padding:55px 0;}
+  .eco-subpage .pricing-grid,.eco-subpage .why-us-grid,.gal-grid {grid-template-columns:1fr;}
+  .eco-subpage :is(.why-us-grid,.pricing-grid,.services-grid,.benefits-grid,.industry-grid,.guarantees-grid,.seasonal-grid,.health-grid,.stats-grid):has(> :nth-child(4):last-child):not(.matrac-choose__cards) {grid-template-columns:minmax(0,1fr);}
+  .eco-subpage :is(.industry-grid,.process-grid,.guarantees-grid,.health-grid,.transformation-grid,.testimonials-grid,.seasonal-grid,.stats-grid,.process-timeline) {grid-template-columns:minmax(0,1fr);}
+  .eco-subpage .process-step {padding:25px 0;border-right:0;border-bottom:1px solid var(--line);}
+  .eco-subpage .pricing-card {padding:24px;}
+  .pricing-editorial-photo {width:calc(100% + 48px);margin:-24px -24px 22px;}
+  .eco-subpage .content-block {padding:24px;}
+  .eco-subpage .cta-banner {padding:32px 23px;}
+  .eco-subpage .content-block h2,.eco-subpage .content-block h3 {font-size:30px;}
+  .eco-subpage .matrac-why__inner,.eco-subpage[data-family="gallery"] .subpage-hero-container {width:calc(100% - 44px);}
+  .eco-subpage .matrac-why {padding:55px 0;}
+  .eco-subpage .faq-question {font-size:14px;padding-block:22px;}
+  .eco-subpage :is(.industry-section,.process-section,.guarantees-section,.coverage-section,.seasonal-section,.testimonials-section,.transformation-section,.stats-section,.health-section,.comparison-section,.faq-section) {padding:50px 0;}
+  .eco-subpage[data-family="city-hub"] .hero-container {display:flex;flex-direction:column;}
+  .eco-subpage[data-family="city-hub"] .hero-content {padding:35px 22px;}
+}
+@media (prefers-reduced-motion:reduce) {html{scroll-behavior:auto;}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;}.editorial-hero-photo{transform:none!important;}}

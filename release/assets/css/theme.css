@@ -1,0 +1,171 @@
+/* ═══════════════════════════════════════════════════════════════
+   ECO CLEAN - THEME.CSS
+   Dark/Light Mode Color System
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ═══════════════════════════════════════════════════════════════
+   LIGHT THEME (Default)
+   ═══════════════════════════════════════════════════════════════ */
+
+:root,
+[data-theme="light"] {
+    /* Primary Colors */
+    --primary: darkolivegreen;
+    --primary-dark: darkolivegreen;
+    --primary-light: darkolivegreen;
+
+    /* Background Colors */
+    --bg: #FFFFFF;
+    --bg-secondary: #F5F5F5;
+    --bg-tertiary: #EEEEEE;
+
+    /* Text Colors */
+    --text: #1A1A1A;
+    --text-secondary: #666666;
+    --text-muted: #999999;
+
+    /* Glassmorphism */
+    --glass: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(0, 0, 0, 0.1);
+
+    /* Shadows */
+    --shadow: rgba(0, 0, 0, 0.1);
+    --shadow-lg: rgba(0, 0, 0, 0.15);
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #00C853 0%, #00A043 100%);
+    --gradient-bg: linear-gradient(135deg, #FFFFFF 0%, #F5F5F5 100%);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   DARK THEME
+   ═══════════════════════════════════════════════════════════════ */
+
+[data-theme="dark"] {
+    /* Primary Colors */
+    --primary: darkolivegreen;
+    --primary-dark: darkolivegreen;
+    --primary-light: darkolivegreen;
+
+    /* Background Colors */
+    --bg: #0A0A0A;
+    --bg-secondary: #1A1A1A;
+    --bg-tertiary: #2A2A2A;
+
+    /* Text Colors */
+    --text: #FFFFFF;
+    --text-secondary: #AAAAAA;
+    --text-muted: #666666;
+
+    /* Glassmorphism */
+    --glass: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+
+    /* Shadows */
+    --shadow: rgba(0, 255, 107, 0.2);
+    --shadow-lg: rgba(0, 255, 107, 0.3);
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #00FF6B 0%, #00C853 100%);
+    --gradient-bg: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   THEME TRANSITIONS
+   ═══════════════════════════════════════════════════════════════ */
+
+body,
+.nav,
+.glass-card,
+.btn,
+.service-card,
+.why-card,
+.review-card,
+.timeline-item,
+.faq-item,
+.footer {
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   DARK THEME SPECIFIC ADJUSTMENTS
+   ═══════════════════════════════════════════════════════════════ */
+
+[data-theme="dark"] .hero {
+    background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%);
+}
+
+[data-theme="dark"] .trust-bar {
+    background: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .nav {
+    background: rgba(10, 10, 10, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .btn-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--primary);
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+    background: var(--primary);
+    color: #000;
+}
+
+[data-theme="dark"] .wave-separator path {
+    fill: var(--bg-secondary);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   LIGHT THEME SPECIFIC ADJUSTMENTS
+   ═══════════════════════════════════════════════════════════════ */
+
+[data-theme="light"] .hero {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F5F5F5 100%);
+}
+
+[data-theme="light"] .trust-bar {
+    background: rgba(0, 0, 0, 0.02);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .nav {
+    background: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .btn-secondary {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--primary);
+}
+
+[data-theme="light"] .btn-secondary:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+[data-theme="light"] .wave-separator path {
+    fill: var(--bg-secondary);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PREFERS COLOR SCHEME (System Preference)
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --primary: #00FF6B;
+        --primary-dark: #00C853;
+        --bg: #0A0A0A;
+        --bg-secondary: #1A1A1A;
+        --text: #FFFFFF;
+        --text-secondary: #AAAAAA;
+        --glass: rgba(255, 255, 255, 0.05);
+        --shadow: rgba(0, 255, 107, 0.2);
+    }
+}

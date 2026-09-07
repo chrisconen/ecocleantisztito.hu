@@ -2,3 +2,9 @@
 *.backup.html
 *.predesign-backup.html
 *.precopy-backup.html
+
+# Local release rollback and verification artifacts
+/backups/
+/release-support/qa/*
+!/release-support/qa/*.py
+/ecocleantisztito.hu.txt

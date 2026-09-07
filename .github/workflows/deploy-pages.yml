@@ -1,0 +1,45 @@
+name: Publish ECO Clean
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'release/**'
+      - 'release-support/release-manifest.json'
+      - 'release-support/release-verification.json'
+      - 'release-support/verify-package.py'
+      - '.github/workflows/deploy-pages.yml'
+      - '.gitattributes'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ecoclean-pages
+  cancel-in-progress: false
+
+jobs:
+  verify-and-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Verify the exact release package
+        run: python3 release-support/verify-package.py
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: release
+  deploy:
+    needs: verify-and-package
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment

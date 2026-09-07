@@ -1,0 +1,365 @@
+/* Regional service pages: the approved ECO Clean ivory / sage identity.
+   Load after modern.css, only with body.eco-regional-redesign. */
+body.eco-regional-redesign {
+  --paper:#f8f7f2;--ink:#283e34;--muted:#69736a;--sage:#dce5d9;
+  --line:#d8ddd3;--card:#fffdf8;--surface:#fffdf8;--primary:#415b46;
+  --primary-dark:#2d4633;--accent:#748768;--accent-green:#415b46;
+  --ba-accent:#637b56;--ba-accent-hover:#415b46;
+  --font-main:'Manrope',sans-serif;--font-display:'Cormorant Garamond',Georgia,serif;
+  background:var(--paper);color:var(--ink);font-family:var(--font-main);
+}
+.eco-regional-redesign :is(.section-container,.matrac-why__inner,.mc-inner) {
+  width:calc(100% - 112px);max-width:1320px;margin-inline:auto;padding-inline:0;
+}
+.eco-regional-redesign :is(.services,.benefits,.process,.pricing-map,.ba-promo-section,.matrac-why,.matrac-choose-section,.google-reviews-section) {
+  padding-block:88px;padding-inline:0;
+}
+.eco-regional-redesign :is(.section-header,.ba-section-header,.matrac-why__header,.mc-header) {
+  max-width:none;text-align:left;margin:0 0 38px;padding:0;
+}
+.eco-regional-redesign :is(.section-title,.ba-section-header h2,.matrac-why__header h2,.mc-header h2) {
+  max-width:1020px;margin:13px 0 20px;font-family:var(--font-display);
+  font-size:clamp(40px,4.25vw,62px);font-weight:500;line-height:1.08;
+  letter-spacing:-.028em;color:var(--ink);text-wrap:pretty;
+}
+.eco-regional-redesign :is(.section-badge,.section-label,.matrac-why__label,.mc-label) {
+  display:block;padding:0;border:0;border-radius:0;background:none;
+  font-family:var(--font-main);font-size:10px;font-weight:600;
+  letter-spacing:1.8px;line-height:1.6;text-transform:uppercase;color:#65795b;
+}
+.eco-regional-redesign :is(.section-header .section-subtitle,.ba-intro) {
+  max-width:850px;margin:0;color:var(--muted);font-size:14px;
+  font-weight:400;line-height:1.9;text-transform:none;letter-spacing:0;
+}
+.eco-regional-redesign .section-divider {display:none;}
+
+/* Existing navigation keeps its links and menu handlers. */
+.eco-regional-redesign .bixol-header {background:var(--paper);}
+.eco-regional-redesign .bixol-header .info-bar {
+  padding:7px 0;background:#eaf0e4;color:#5b6c52;font-size:10px;line-height:1.65;
+}
+.eco-regional-redesign .bixol-header .info-left {gap:26px;}
+.eco-regional-redesign .bixol-header .info-left strong {font-weight:500;margin-right:5px;}
+.eco-regional-redesign .bixol-header .header-social {gap:9px;}
+.eco-regional-redesign .bixol-header .header-social a {width:22px;height:22px;border-color:#cdd8c5;}
+.eco-regional-redesign .bixol-header .header-bottom>.container {
+  width:calc(100% - 112px);max-width:1320px;
+}
+.eco-regional-redesign .bixol-header .header-bottom .row {min-height:90px;gap:0;}
+.eco-regional-redesign .logo-main {display:flex;font-size:29px;font-weight:400;letter-spacing:-1.4px;gap:6px;}
+.eco-regional-redesign .logo-subtitle {font-size:9px;letter-spacing:1.8px;margin-top:5px;}
+.eco-regional-redesign .desktop-menu>nav>ul {gap:34px;}
+.eco-regional-redesign .desktop-menu>nav>ul>li>a {padding-block:31px;font-size:12px;}
+.eco-regional-redesign .desktop-menu .has-submenu>ul {
+  display:block;left:auto;right:0;min-width:290px;border-radius:7px;background:var(--card);
+}
+
+/* Spacious hero: a calm editorial image and an uninterrupted text column. */
+.eco-regional-redesign .eco-hero {
+  background:var(--paper);padding:48px 0 56px;border-bottom:1px solid var(--line);overflow:visible;
+}
+.eco-regional-redesign .eco-hero__wrap {
+  display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:52px;
+  width:calc(100% - 112px);max-width:1320px;margin:auto;padding:0;align-items:stretch;
+}
+.eco-regional-redesign .eco-hero__copy {max-width:none;min-width:0;padding:3px 0 9px;}
+.eco-regional-redesign .eco-crumb {
+  display:flex;flex-wrap:wrap;gap:8px;margin:0 0 31px;font-size:10px;line-height:1.8;
+}
+.eco-regional-redesign .eco-eyebrow {
+  display:flex;align-items:center;gap:10px;max-width:100%;margin:0 0 20px;
+  font-size:10px;letter-spacing:1.1px;line-height:1.8;white-space:normal;
+}
+.eco-regional-redesign .eco-eyebrow .dot {flex:0 0 5px;width:5px;height:5px;}
+.eco-regional-redesign .eco-title {
+  margin:0 0 23px;max-width:100%;font-family:var(--font-display);
+  font-size:clamp(51px,5.25vw,78px);line-height:1.015;font-weight:500;
+  letter-spacing:-.035em;overflow-wrap:normal;word-break:normal;text-wrap:normal;
+}
+.eco-regional-redesign .eco-title .accent {display:block;white-space:normal;font-weight:400;color:#748768;}
+.eco-regional-redesign .eco-lead {max-width:610px;margin:0 0 25px;font-size:15px;line-height:1.9;color:#647066;}
+.eco-regional-redesign .eco-lead strong {font-weight:600;color:#3b5142;}
+.eco-regional-redesign .eco-trust {
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;align-items:stretch;
+  width:100%;padding:0;margin:0 0 25px;border:0;background:none;border-radius:0;
+}
+.eco-regional-redesign .eco-trust__sep {display:none;}
+.eco-regional-redesign .eco-trust .t {
+  display:flex;flex-direction:column;align-items:flex-start;gap:4px;
+  min-width:0;padding:15px 14px 13px;border:1px solid #d6dfce;
+  border-radius:7px;background:#edf1e7;text-align:left;
+}
+.eco-regional-redesign .eco-trust .t b {font-family:var(--font-display);font-size:32px;font-weight:500;line-height:1.05;white-space:nowrap;}
+.eco-regional-redesign .eco-trust .t>span {font-size:10px;line-height:1.6;color:#677361;overflow-wrap:anywhere;}
+.eco-regional-redesign .eco-trust .t>span a {font-size:inherit;line-height:inherit;color:inherit;}
+.eco-regional-redesign .eco-trust .t .eco-stars {font-size:15px;color:#7b8c64;margin-left:4px;}
+.eco-regional-redesign .eco-cta {display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px;}
+.eco-regional-redesign :is(.eco-btn,.btn) {min-height:49px;border-radius:5px;padding:13px 19px;font-size:12px;box-shadow:none;}
+.eco-regional-redesign .eco-btn--call {background:#415b46;border-color:#415b46;color:#fffdf8;}
+.eco-regional-redesign .eco-btn--ghost {background:transparent;border-color:#bac6b3;color:#344c3c;}
+.eco-regional-redesign .eco-feat {display:flex;flex-wrap:wrap;gap:7px 16px;line-height:1.8;}
+.eco-regional-redesign .eco-feat li {font-size:9px;color:#65725f;}
+.eco-regional-redesign .eco-figure {
+  position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  align-content:end;align-items:stretch;gap:10px;padding:18px;margin:0;
+  min-height:605px;max-width:none;height:auto;isolation:isolate;
+  border:1px solid #d7dace;border-radius:9px;overflow:hidden;background:#e2e6d9;
+}
+.eco-regional-redesign .eco-figure img {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:54% center;z-index:-2;}
+.eco-regional-redesign .eco-figure .eco-badge {
+  position:relative;inset:auto;display:flex;flex-direction:column;justify-content:center;
+  align-items:flex-start;gap:3px;width:auto;max-width:none;min-width:0;padding:13px 15px;
+  transform:none;border:1px solid #ffffffb3;border-radius:5px;background:#f8f7f2ed;
+  color:var(--ink);text-align:left;box-shadow:none;font-size:11px;line-height:1.6;
+}
+.eco-regional-redesign .eco-figure .eco-badge b {font-family:var(--font-display);font-size:23px;font-weight:500;line-height:1.1;color:#3a513e;}
+.eco-regional-redesign .eco-badge__stars {color:#7b8c64;font-size:12px;letter-spacing:2px;}
+.eco-regional-redesign .eco-badge__k {font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:#62705c;}
+.eco-regional-redesign .eco-figure .eco-badge--eco {
+  position:absolute;inset:18px 18px auto auto;display:flex;flex-direction:row;
+  align-items:center;gap:7px;padding:9px 12px;font-size:9px;letter-spacing:.5px;
+}
+
+/* Photo cards retain the full service descriptions and prices. */
+.eco-regional-redesign .services-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:stretch;}
+.eco-regional-redesign .service-card {
+  display:flex;flex-direction:column;align-items:flex-start;min-width:0;padding:26px;
+  text-align:left;border:1px solid var(--line);border-radius:8px;background:#fffdf8;box-shadow:none;
+}
+.eco-regional-redesign .service-card .editorial-card-media {
+  width:calc(100% + 52px);height:auto;aspect-ratio:1.65;margin:-26px -26px 25px;
+  border:0;border-radius:0;overflow:hidden;background:#e5e9dd;
+}
+.eco-regional-redesign .editorial-card-photo {display:block;width:100%;height:100%;object-fit:cover;}
+.eco-regional-redesign .service-card .service-number {
+  position:absolute;inset:14px 14px auto auto;z-index:1;display:grid;place-items:center;
+  width:31px;height:31px;border:1px solid #fffdf880;border-radius:50%;
+  background:#fffdf8e8;color:#5d7250;font-size:10px;letter-spacing:.5px;opacity:1;
+}
+.eco-regional-redesign .service-title {margin:0 0 13px;font-family:var(--font-display);font-size:30px;font-weight:500;line-height:1.14;}
+.eco-regional-redesign .service-price {margin:0 0 17px;font-size:12px;line-height:1.85;color:#657061;}
+.eco-regional-redesign .price-highlight {font-size:35px;line-height:1.1;white-space:nowrap;color:#536f47;}
+.eco-regional-redesign .service-details {width:100%;padding-top:16px;border-top:1px solid var(--line);}
+.eco-regional-redesign .service-details p {margin:0;font-size:12px;line-height:1.95;color:#6a756b;}
+.eco-regional-redesign .service-card:hover {transform:translateY(-3px);box-shadow:0 14px 32px #283e3408;border-color:#bccbb1;}
+.eco-regional-redesign .trust-bar {padding-block:28px;background:#eaf0e4;border-block:1px solid var(--line);}
+.eco-regional-redesign .trust-bar .section-container {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;}
+.eco-regional-redesign .trust-bar .trust-item {padding:7px 18px;border-right:1px solid #cfd9c6;}
+.eco-regional-redesign .trust-bar .trust-item:last-child {border:0;}
+.eco-regional-redesign .trust-number {font-family:var(--font-display);font-size:39px;font-weight:500;line-height:1.1;color:#657b55;}
+.eco-regional-redesign .trust-label {display:block;font-size:10px;font-weight:400;line-height:1.8;letter-spacing:0;margin-top:7px;color:#627258;}
+
+.eco-regional-redesign .benefits {background:#edf1e7;}
+.eco-regional-redesign .benefits-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;}
+.eco-regional-redesign .benefit-card {
+  min-width:0;padding:28px;background:#fffdf8;border:1px solid #d4decc;
+  border-radius:7px;text-align:left;box-shadow:none;
+}
+.eco-regional-redesign .benefit-icon {
+  display:grid;place-items:center;width:42px;height:42px;margin:0 0 21px;
+  border:1px solid #d6dfce;border-radius:50%;background:#edf1e7;font-size:22px;
+  filter:grayscale(.8);box-shadow:none;
+}
+.eco-regional-redesign .benefit-card h3 {font-family:var(--font-display);font-size:29px;font-weight:500;line-height:1.12;margin:0 0 13px;}
+.eco-regional-redesign .benefit-card p {font-size:13px;line-height:1.9;margin:0;color:#687367;}
+.eco-regional-redesign :is(.benefit-card,.timeline-item):hover {transform:none;box-shadow:none;border-color:#bccbb1;}
+.eco-regional-redesign .timeline {
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:0;padding:0;
+}
+.eco-regional-redesign .timeline:before {display:none;}
+.eco-regional-redesign .timeline-item {
+  position:relative;min-width:0;padding:29px;border:1px solid var(--line);
+  border-radius:7px;background:#fffdf8;text-align:left;box-shadow:none;
+}
+.eco-regional-redesign .timeline-number {
+  position:static;display:block;width:auto;height:auto;margin:0 0 24px;padding:0;
+  transform:none;border:0;border-radius:0;background:none;font-family:var(--font-display);
+  font-size:61px;font-weight:400;font-style:italic;line-height:1;color:#8c9f7c;box-shadow:none;
+}
+.eco-regional-redesign .timeline-icon {
+  position:absolute;right:26px;top:31px;display:grid;place-items:center;
+  width:35px;height:35px;margin:0;border:1px solid var(--line);border-radius:50%;
+  background:#edf1e7;font-size:17px;filter:grayscale(.9);
+}
+.eco-regional-redesign .timeline-item h3 {margin:0 0 17px;font-family:var(--font-display);font-size:30px;font-weight:500;line-height:1.13;}
+.eco-regional-redesign .timeline-item p {margin:0;font-size:13px;line-height:1.95;color:#697468;}
+.eco-regional-redesign .cta-center {margin-top:32px;text-align:left;}
+
+/* Support both known regional card structures without changing their order. */
+.eco-regional-redesign :is(.timeline,.process-timeline):has(> :nth-child(5):last-child) {display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:22px;}
+.eco-regional-redesign :is(.timeline,.process-timeline):has(> :nth-child(5):last-child)>* {grid-column:span 2;min-width:0;}
+.eco-regional-redesign :is(.timeline,.process-timeline):has(> :nth-child(5):last-child)>:nth-child(n+4) {grid-column:span 3;}
+.eco-regional-redesign :is(.content-blocks,.why-us-grid):has(> :nth-child(4):last-child):not(.matrac-choose__cards) {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;}
+
+.eco-regional-redesign .pricing-map {background:#efe7df;}
+.eco-regional-redesign .pricing-map-grid {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:stretch;}
+.eco-regional-redesign .map-wrapper {padding:0;min-width:0;min-height:420px;border:1px solid #d8d4c8;border-radius:8px;overflow:hidden;background:#e4e8dd;}
+.eco-regional-redesign .map-wrapper iframe {display:block;width:100%;height:100%;min-height:420px;border:0;border-radius:0;}
+.eco-regional-redesign .pricing-wrapper {min-width:0;}
+.eco-regional-redesign .pricing-wrapper>.glass-card {height:100%;padding:35px;border-color:#dbd5ca;background:#fffdf8;border-radius:8px;}
+.eco-regional-redesign .pricing-wrapper h3 {font-family:var(--font-display);font-size:40px;font-weight:500;line-height:1.13;margin:16px 0 24px;}
+.eco-regional-redesign .pricing-wrapper h3 span {display:block;color:#7a8a6d;font-style:italic;}
+.eco-regional-redesign .pricing-list {display:grid;gap:0;margin-bottom:25px;}
+.eco-regional-redesign .pricing-item {display:flex;gap:12px;align-items:center;padding:14px 0;border:0;border-bottom:1px solid var(--line);border-radius:0;background:none;}
+.eco-regional-redesign .pricing-item p {font-size:12px;line-height:1.9;color:#687266;margin:0;}
+.eco-regional-redesign .pricing-item .price-highlight {font-size:28px;}
+.eco-regional-redesign .pricing-icon {color:#748768;}
+
+/* Comparisons: neutral labels, sage controls, and four vertical mattress cards. */
+.eco-regional-redesign .ba-promo-grid {gap:42px;align-items:stretch;}
+.eco-regional-redesign .ba-usecase-title {font-family:var(--font-display);font-size:33px;font-weight:500;line-height:1.15;color:var(--ink);border:0;padding:0;}
+.eco-regional-redesign .ba-usecase-title:before {display:none;}
+.eco-regional-redesign :is(.ba-usecase-body p,.ba-highlight-box p) {font-size:13px;line-height:1.95;color:#697468;}
+.eco-regional-redesign .ba-highlight-box {padding:22px;background:#edf1e7;border:1px solid #d0dcc6;border-radius:7px;box-shadow:none;}
+.eco-regional-redesign .ba-highlight-box:before {display:none;}
+.eco-regional-redesign :is(.ba-cta-inline,.mc-gallery-btn) {
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:14px 21px;min-height:49px;border:1px solid #415b46;border-radius:5px;
+  background:#415b46;color:#fffdf8;font-family:var(--font-main);font-size:12px;
+  font-weight:600;line-height:1.7;box-shadow:none;text-shadow:none;text-align:center;
+}
+.eco-regional-redesign :is(.ba-cta-inline,.mc-gallery-btn):is(:hover,:focus-visible) {background:#2d4633;color:#fffdf8;box-shadow:none;transform:translateY(-2px);}
+.eco-regional-redesign .ba-cta-inline svg {width:17px;height:17px;}
+.eco-regional-redesign :is(.ba-gallery-cta,.matrac-choose__cta) {margin-top:30px;text-align:left;}
+.eco-regional-redesign :is(.ba-slider-wrapper,.mc-ba) {border:1px solid #cfd8c7;border-radius:8px;background:#e4e9dc;box-shadow:none;}
+.eco-regional-redesign :is(.ba-slider-knob,.mc-ba__knob) {background:#f8f7f2;color:#52694a;border:1px solid #ffffff;box-shadow:0 2px 12px #283e3422;}
+.eco-regional-redesign :is(.ba-slider-knob,.mc-ba__knob) svg {stroke:currentColor;}
+.eco-regional-redesign :is(.ba-label,.mc-ba__label) {background:#f8f7f2ed;color:#41583d;border:1px solid #ffffff9c;border-radius:4px;font-size:10px;font-weight:500;padding:7px 11px;box-shadow:none;}
+.eco-regional-redesign .matrac-why {background:#eaf0e4;}
+.eco-regional-redesign .matrac-why__grid {grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:36px;align-items:start;}
+.eco-regional-redesign .matrac-why__cards {display:grid;gap:17px;}
+.eco-regional-redesign .matrac-why__card {padding:25px 27px;border:1px solid #d2ddc9;border-radius:7px;background:#fffdf8;box-shadow:none;}
+.eco-regional-redesign .matrac-why__card h3 {font-family:var(--font-display);font-size:29px;font-weight:500;line-height:1.12;margin:0 0 13px;}
+.eco-regional-redesign .matrac-why__card p {font-size:13px;line-height:1.9;margin:0;color:#687365;}
+.eco-regional-redesign .matrac-why__num {font-family:var(--font-display);font-size:25px;font-style:italic;color:#859973;}
+.eco-regional-redesign .matrac-why__imgbtn {display:block;max-width:100%;border:1px solid #cbd5c1;border-radius:8px;overflow:hidden;box-shadow:none;background:#e1e7d9;}
+.eco-regional-redesign .matrac-why__imgbtn img {display:block;width:100%;height:auto;}
+.eco-regional-redesign .matrac-why__imgcap {font-size:10px;line-height:1.8;color:#6b7962;}
+.eco-regional-redesign .matrac-choose-section {background:#edf1e7;}
+.eco-regional-redesign .matrac-choose {display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:32px;align-items:stretch;}
+.eco-regional-redesign .matrac-choose .matrac-choose__cards {display:grid;grid-template-columns:minmax(0,1fr);gap:14px;min-width:0;}
+.eco-regional-redesign .matrac-choose__media {min-width:0;}
+.eco-regional-redesign .matrac-choose__media .mc-ba {width:100%;max-width:none;height:100%;min-height:520px;aspect-ratio:auto;}
+.eco-regional-redesign .mc-card {min-width:0;padding:24px 26px;border:1px solid #d3deca;border-radius:7px;background:#fffdf8;box-shadow:none;}
+.eco-regional-redesign .mc-card h3 {margin:0 0 10px;font-family:var(--font-display);font-size:29px;line-height:1.1;font-weight:500;color:var(--ink);}
+.eco-regional-redesign .mc-card p {margin:0;font-size:13px;line-height:1.85;opacity:1;color:#697466;}
+
+.eco-regional-redesign .google-reviews-header {margin-bottom:32px;text-align:left;}
+.eco-regional-redesign .google-logo-rating {justify-content:flex-start;}
+.eco-regional-redesign .google-reviews-title {font-family:var(--font-display);font-size:40px;font-weight:500;color:var(--ink);}
+.eco-regional-redesign .overall-rating {justify-content:flex-start;}
+.eco-regional-redesign .google-reviews-slider>* {padding:27px;border:1px solid var(--line);border-radius:7px;background:#fffdf8;box-shadow:none;}
+.eco-regional-redesign .footer {padding-top:65px;background:#e8ede2;}
+.eco-regional-redesign .footer-grid {display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px;}
+.eco-regional-redesign .footer :is(h3,h4) {font-size:10px;font-weight:600;letter-spacing:1.2px;}
+.eco-regional-redesign .footer :is(p,li,a) {font-size:11px;line-height:1.95;}
+
+@media (min-width:1700px) {
+  .eco-regional-redesign .eco-hero {padding-block:62px;}
+  .eco-regional-redesign .eco-hero__wrap {gap:64px;}
+}
+@media (max-width:1100px) {
+  .eco-regional-redesign :is(.section-container,.matrac-why__inner,.mc-inner,.eco-hero__wrap) {width:calc(100% - 64px);}
+  .eco-regional-redesign .bixol-header .header-bottom>.container {width:calc(100% - 64px);}
+  .eco-regional-redesign .eco-hero__wrap {gap:30px;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);}
+  .eco-regional-redesign .eco-title {font-size:clamp(45px,5.05vw,56px);}
+  .eco-regional-redesign .eco-lead {font-size:14px;}
+  .eco-regional-redesign .eco-trust .t {padding:13px 10px;}
+  .eco-regional-redesign .eco-trust .t>span {font-size:10px;}
+  .eco-regional-redesign .eco-figure {min-height:605px;padding:13px;gap:8px;}
+  .eco-regional-redesign .eco-figure .eco-badge {padding:11px;font-size:10px;}
+  .eco-regional-redesign .eco-figure .eco-badge b {font-size:21px;}
+  .eco-regional-redesign .service-card {padding:23px;}
+  .eco-regional-redesign .service-card .editorial-card-media {width:calc(100% + 46px);margin:-23px -23px 22px;}
+  .eco-regional-redesign .service-title {font-size:27px;}
+  .eco-regional-redesign .timeline-item {padding:25px;}
+  .eco-regional-redesign .timeline-item h3 {font-size:27px;}
+  .eco-regional-redesign .pricing-map-grid {gap:23px;}
+  .eco-regional-redesign .pricing-wrapper>.glass-card {padding:26px;}
+  .eco-regional-redesign .footer-grid {gap:28px;}
+}
+@media (max-width:900px) {
+  .eco-regional-redesign .eco-hero__wrap {display:grid;grid-template-columns:minmax(0,1fr);gap:30px;}
+  .eco-regional-redesign .eco-hero__copy {padding:0;}
+  .eco-regional-redesign .eco-title {font-size:clamp(52px,8vw,72px);}
+  .eco-regional-redesign .eco-lead {font-size:15px;max-width:720px;}
+  .eco-regional-redesign .eco-trust {max-width:600px;}
+  .eco-regional-redesign .eco-trust .t {padding:15px;}
+  .eco-regional-redesign .eco-trust .t>span {font-size:10px;}
+  .eco-regional-redesign .eco-figure {height:470px;min-height:0;padding:20px;gap:12px;}
+  .eco-regional-redesign .eco-figure .eco-badge {padding:14px 17px;font-size:11px;}
+  .eco-regional-redesign .eco-figure .eco-badge b {font-size:26px;}
+  .eco-regional-redesign .services-grid {grid-template-columns:repeat(2,minmax(0,1fr));}
+  .eco-regional-redesign .benefits-grid {grid-template-columns:repeat(2,minmax(0,1fr));}
+  .eco-regional-redesign .timeline-item h3 {font-size:23px;}
+  .eco-regional-redesign .matrac-why__grid {grid-template-columns:minmax(0,1fr);}
+  .eco-regional-redesign .matrac-why__visual {max-width:600px;}
+  .eco-regional-redesign .matrac-choose {grid-template-columns:minmax(0,1fr);}
+  .eco-regional-redesign .matrac-choose__media .mc-ba {height:auto;min-height:0;aspect-ratio:4/3;}
+}
+@media (max-width:760px) {
+  .eco-regional-redesign :is(.section-container,.matrac-why__inner,.mc-inner,.eco-hero__wrap) {width:calc(100% - 44px);}
+  .eco-regional-redesign .bixol-header .header-bottom>.container {width:calc(100% - 44px);}
+  .eco-regional-redesign .bixol-header .header-bottom .row {min-height:78px;}
+  .eco-regional-redesign .bixol-header .info-left {gap:3px 18px;}
+  .eco-regional-redesign .bixol-header .info-bar {font-size:9px;}
+  .eco-regional-redesign :is(.services,.benefits,.process,.pricing-map,.ba-promo-section,.matrac-why,.matrac-choose-section,.google-reviews-section) {padding-block:57px;}
+  .eco-regional-redesign :is(.section-title,.ba-section-header h2,.matrac-why__header h2,.mc-header h2) {font-size:41px;line-height:1.08;}
+  .eco-regional-redesign :is(.section-header,.ba-section-header,.matrac-why__header,.mc-header) {margin-bottom:29px;}
+  .eco-regional-redesign :is(.section-header .section-subtitle,.ba-intro) {font-size:13px;}
+  .eco-regional-redesign .eco-hero {padding:30px 0 36px;}
+  .eco-regional-redesign .eco-crumb {margin-bottom:25px;font-size:9px;}
+  .eco-regional-redesign .eco-title {font-size:clamp(43px,9.4vw,64px);letter-spacing:-.04em;}
+  .eco-regional-redesign .eco-eyebrow {font-size:9px;letter-spacing:.8px;}
+  .eco-regional-redesign .eco-lead {font-size:14px;line-height:1.9;margin-bottom:22px;}
+  .eco-regional-redesign .eco-trust {gap:8px;margin-bottom:22px;}
+  .eco-regional-redesign .eco-trust .t {padding:13px 10px;}
+  .eco-regional-redesign .eco-trust .t b {font-size:29px;}
+  .eco-regional-redesign .eco-trust .t>span {font-size:9px;}
+  .eco-regional-redesign .eco-figure {height:400px;}
+  .eco-regional-redesign .timeline {grid-template-columns:minmax(0,1fr);gap:16px;}
+  .eco-regional-redesign :is(.timeline,.process-timeline):has(> :nth-child(5):last-child) {grid-template-columns:minmax(0,1fr);gap:16px;}
+  .eco-regional-redesign :is(.timeline,.process-timeline):has(> :nth-child(5):last-child)>* {grid-column:auto;}
+  .eco-regional-redesign :is(.content-blocks,.why-us-grid):has(> :nth-child(4):last-child):not(.matrac-choose__cards) {grid-template-columns:minmax(0,1fr);}
+  .eco-regional-redesign .timeline-item {padding:26px;}
+  .eco-regional-redesign .timeline-number {font-size:55px;margin-bottom:21px;}
+  .eco-regional-redesign .timeline-item h3 {font-size:31px;}
+  .eco-regional-redesign .pricing-map-grid {grid-template-columns:minmax(0,1fr);}
+  .eco-regional-redesign .map-wrapper,.eco-regional-redesign .map-wrapper iframe {min-height:300px;}
+  .eco-regional-redesign .map-wrapper iframe {height:320px;}
+  .eco-regional-redesign .pricing-wrapper h3 {font-size:36px;}
+  .eco-regional-redesign .ba-promo-grid {gap:28px;}
+  .eco-regional-redesign .ba-usecase-title {font-size:31px;}
+  .eco-regional-redesign .matrac-why__card {padding:23px;}
+  .eco-regional-redesign .matrac-why__card h3 {font-size:27px;}
+  .eco-regional-redesign .mc-card {padding:23px;}
+  .eco-regional-redesign .mc-card h3 {font-size:28px;}
+  .eco-regional-redesign .footer-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:35px 24px;}
+}
+@media (max-width:560px) {
+  .eco-regional-redesign .services-grid,.eco-regional-redesign .benefits-grid {grid-template-columns:minmax(0,1fr);gap:18px;}
+  .eco-regional-redesign .service-title {font-size:31px;}
+  .eco-regional-redesign .service-card {padding:26px;}
+  .eco-regional-redesign .service-card .editorial-card-media {width:calc(100% + 52px);margin:-26px -26px 25px;}
+  .eco-regional-redesign .eco-cta {display:grid;grid-template-columns:minmax(0,1fr);}
+  .eco-regional-redesign .eco-cta .eco-btn {width:100%;min-width:0;}
+  .eco-regional-redesign .eco-figure {height:360px;padding:13px;gap:9px;}
+  .eco-regional-redesign .eco-figure .eco-badge {padding:12px;font-size:10px;}
+  .eco-regional-redesign .eco-figure .eco-badge b {font-size:23px;}
+  .eco-regional-redesign .eco-figure .eco-badge--eco {inset:13px 13px auto auto;}
+  .eco-regional-redesign .trust-bar .section-container {grid-template-columns:repeat(2,minmax(0,1fr));row-gap:20px;}
+  .eco-regional-redesign .trust-bar .trust-item:nth-child(even) {border-right:0;}
+  .eco-regional-redesign .google-reviews-title {font-size:33px;}
+}
+@media (max-width:360px) {
+  .eco-regional-redesign :is(.section-container,.matrac-why__inner,.mc-inner,.eco-hero__wrap) {width:calc(100% - 36px);}
+  .eco-regional-redesign .eco-title {font-size:40px;}
+  .eco-regional-redesign .eco-trust {gap:6px;}
+  .eco-regional-redesign .eco-trust .t {padding:12px 8px;}
+  .eco-regional-redesign .eco-trust .t b {font-size:27px;}
+  .eco-regional-redesign .eco-trust .t>span {font-size:9px;}
+  .eco-regional-redesign .eco-figure {height:330px;}
+  .eco-regional-redesign .eco-figure .eco-badge {padding:10px;}
+  .eco-regional-redesign .eco-figure .eco-badge b {font-size:20px;}
+  .eco-regional-redesign .footer-grid {grid-template-columns:minmax(0,1fr);}
+}

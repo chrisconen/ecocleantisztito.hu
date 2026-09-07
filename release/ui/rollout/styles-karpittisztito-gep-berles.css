@@ -1,0 +1,136 @@
+@import url('../../style.css') layer(legacy);
+@import url('../../before-after-slider.css') layer(legacy);
+@import url('../../mobile.css') layer(legacy);
+@import url('../../seo-content.css') layer(legacy);
+@import url('../../reviews.css') layer(legacy);
+@layer legacy {
+
+        /* ===== Lokális stílusok: Gép bérlés oldal ===== */
+
+        /* 4-lépéses folyamat */
+        .process-section {
+            background: var(--bg-primary);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .process-step {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .process-step:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent, #06b6d4);
+        }
+
+        .process-number {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--accent, #06b6d4), #a855f7);
+            color: #fff;
+            font-size: 1.4rem;
+            font-weight: 800;
+            border-radius: 50%;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .process-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0 0 0.75rem;
+        }
+
+        .process-desc {
+            font-size: 0.92rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        /* Bérlési feltételek */
+        .conditions-section {
+            background: var(--bg-primary);
+        }
+
+        .conditions-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .condition-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+            border-radius: 16px;
+            padding: 1.75rem;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .condition-item:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent, #06b6d4);
+        }
+
+        .condition-icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+            display: inline-block;
+        }
+
+        .condition-item h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0 0 0.6rem;
+        }
+
+        .condition-item p {
+            font-size: 0.92rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        /* Reszponzivitás */
+        @media (max-width: 1024px) {
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .conditions-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .conditions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    
+[data-legacy-style="1"]{color: var(--accent, #06b6d4);}
+[data-legacy-style="2"]{font-size: 16px;}
+[data-legacy-style="3"]{background: var(--bg-secondary);}
+
+}

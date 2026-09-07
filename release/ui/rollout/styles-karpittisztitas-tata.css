@@ -1,0 +1,15 @@
+@import url('../../style.css') layer(legacy);
+@import url('../../before-after-slider.css') layer(legacy);
+@import url('../../mobile.css') layer(legacy);
+@import url('../../seo-content.css') layer(legacy);
+@import url('../../reviews.css') layer(legacy);
+@layer legacy {
+[data-legacy-style="1"]{font-size: 16px;}
+[data-legacy-style="2"]{background: var(--bg-secondary);}
+[data-legacy-style="3"]{background: var(--bg-secondary);}
+[data-legacy-style="4"]{display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;}
+[data-legacy-style="5"]{margin-top:1rem;}
+[data-legacy-style="6"]{color: var(--accent);}
+[data-legacy-style="7"]{background: var(--bg-secondary);}
+
+}

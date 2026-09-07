@@ -1,0 +1,4 @@
+# The Pages artifact is verified by SHA-256; checkout must preserve exact bytes.
+/release/** -text
+/release-support/release-manifest.json -text
+/release-support/release-verification.json -text
