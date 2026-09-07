@@ -1,0 +1,64 @@
+{
+  "checkedAt": "2026-09-07T13:49:18.943834+00:00",
+  "manifestSha256": "2b29d4583118b44cd6e7f4f39562e373740094ceeac55243c3d2222426b71b54",
+  "files": 362,
+  "matching": 362,
+  "verification": {
+    "exact": 219,
+    "cloudflare-email-protection": 141,
+    "cloudflare-managed-robots": 1,
+    "non-public-build-marker": 1
+  },
+  "issues": [],
+  "excludedPaths": [
+    {
+      "path": "demo/index.html",
+      "status": 404
+    },
+    {
+      "path": "release/index.html",
+      "status": 404
+    },
+    {
+      "path": "release-support/release-manifest.json",
+      "status": 404
+    },
+    {
+      "path": "backups/ecoclean-before-redesign-173e4d1.zip",
+      "status": 404
+    },
+    {
+      "path": "ecocleantisztito.hu.txt",
+      "status": 404
+    },
+    {
+      "path": "adatvedelem.html",
+      "status": 404
+    },
+    {
+      "path": "aszf.html",
+      "status": 404
+    },
+    {
+      "path": "impresszum.html",
+      "status": 404
+    }
+  ],
+  "releaseCommit": "72ba0c43bd4bf0818630a5e2a96fcbaf3a1aeca9",
+  "workflowRun": 34127955341,
+  "site": "https://ecocleantisztito.hu/",
+  "browser": {
+    "cases": 4,
+    "interceptedBookingWrites": 4,
+    "realBookingWrites": 0,
+    "issues": 0,
+    "widths": [
+      1440,
+      390
+    ],
+    "scenarios": [
+      "normal",
+      "large"
+    ]
+  }
+}

@@ -6,13 +6,16 @@ import json,sys
 from playwright.sync_api import sync_playwright
 
 OUT=Path(__file__).resolve().parent
-BASE='http://127.0.0.1:8089/release/'
+LIVE='--live' in sys.argv
+BASE='https://ecocleantisztito.hu/' if LIVE else 'http://127.0.0.1:8089/release/'
+PREFIX='live-' if LIVE else ''
+CASES=[argument for argument in sys.argv[1:] if not argument.startswith('--')]
 day=(date.today()+timedelta(days=1)).isoformat()
 reports=[]
 with sync_playwright() as p:
     browser=p.chromium.launch(headless=True)
     for width,scenario in [(1440,'normal'),(390,'normal'),(1440,'large'),(390,'large'),(1440,'conflict'),(390,'network')]:
-        if len(sys.argv)>1 and scenario not in sys.argv[1:]:continue
+        if CASES and scenario not in CASES:continue
         context=browser.new_context(viewport={'width':width,'height':1000},reduced_motion='reduce')
         page=context.new_page()
         errors=[];writes=[];alerts=[];missing=[]
@@ -21,7 +24,7 @@ with sync_playwright() as p:
         page.on('response',lambda response: missing.append(response.url) if response.status>=400 and response.url.startswith(BASE) else None)
         def route(request):
             url=request.request.url
-            if urlsplit(url).netloc=='127.0.0.1:8089':
+            if urlsplit(url).netloc in ('127.0.0.1:8089','ecocleantisztito.hu','www.ecocleantisztito.hu') and request.request.method in ('GET','HEAD'):
                 request.continue_();return
             if url.endswith('/check-availability'):
                 request.fulfill(json={'success':True,'days':[{'date':day,'status':'limited','slots':[
@@ -46,7 +49,7 @@ with sync_playwright() as p:
             page.locator('#largeOrderPanel').wait_for(state='visible')
             for id,value in {'largeOrderName':'Offline Test Company','largeOrderEmail':'offline@example.invalid','largeOrderPhone':'+36301234567','largeOrderAddress':'Offline teszt cím','largeOrderMessage':'Intercepted browser test'}.items():page.locator('#'+id).fill(value)
             assert page.locator('#largeOrderPrice').evaluate('(e)=>getComputedStyle(e).color')=='rgb(65, 91, 70)'
-            page.locator('#largeOrderPanel').screenshot(path=str(OUT/f'booking-large-{width}.png'),style='#nav{visibility:hidden!important}')
+            page.locator('#largeOrderPanel').screenshot(path=str(OUT/f'{PREFIX}booking-large-{width}.png'),style='#nav{visibility:hidden!important}')
             page.locator('.large-order-submit').click()
         else:
             page.locator(f'[data-date="{day}"]').click()
@@ -60,7 +63,7 @@ with sync_playwright() as p:
             page.locator('.andante-modal-confirm').click()
             assert page.locator('#andanteCheckbox').evaluate('(e)=>e.getBoundingClientRect().width<=24')
             assert page.locator('.andante-checkbox-text').evaluate('(e)=>{const b=e.getBoundingClientRect();const r=document.createRange();r.selectNodeContents(e);return [...r.getClientRects()].every(v=>v.left>=b.left-2&&v.right<=b.right+2)}')
-            page.locator('#bookingFormWrapper').screenshot(path=str(OUT/f'booking-form-{width}-{scenario}.png'),style='#nav{visibility:hidden!important}')
+            page.locator('#bookingFormWrapper').screenshot(path=str(OUT/f'{PREFIX}booking-form-{width}-{scenario}.png'),style='#nav{visibility:hidden!important}')
             page.locator('.btn-submit').click()
         try:
             page.locator('#bookingResult[open]').wait_for(timeout=10000)
@@ -74,9 +77,9 @@ with sync_playwright() as p:
         message=page.locator('#bookingResult').inner_text()
         assert ('elküldve' in message) if scenario in ('normal','large') else ('betelt' in message if scenario=='conflict' else 'Nem tudtuk ellenőrizni' in message)
         assert page.evaluate('document.documentElement.scrollWidth<=innerWidth+1')
-        page.locator('#bookingResult').screenshot(path=str(OUT/f'booking-result-{width}-{scenario}.png'))
+        page.locator('#bookingResult').screenshot(path=str(OUT/f'{PREFIX}booking-result-{width}-{scenario}.png'))
         reports.append({'width':width,'scenario':scenario,'writesIntercepted':len(writes),'endpoint':writes[0]['endpoint'],'payloadKeys':sorted(writes[0]['payload']),'consoleErrors':errors,'missingAssets':missing,'alerts':alerts})
         context.close()
     browser.close()
-(OUT/('booking-ui-'+sys.argv[1]+'.json' if len(sys.argv)>1 else 'booking-ui.json')).write_text(json.dumps(reports,ensure_ascii=False,indent=2),encoding='utf-8')
+(OUT/(PREFIX+'booking-ui'+('-'+CASES[0] if CASES else '')+'.json')).write_text(json.dumps(reports,ensure_ascii=False,indent=2),encoding='utf-8')
 print(json.dumps({'cases':len(reports),'interceptedWrites':sum(r['writesIntercepted'] for r in reports),'realBookingWrites':0,'issues':0}))

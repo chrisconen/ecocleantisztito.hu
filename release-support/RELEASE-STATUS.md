@@ -1,6 +1,6 @@
 # ECO Clean kiadás — 2026. szeptember 7.
 
-**Állapot: a tulajdonos engedélyezte a publikálást a hiányzó dokumentumok nélkül.** A korábban 404-es adatvédelmi/ÁSZF-linkek kimaradnak a nyilvános láblécekből; üres jogi oldal és impresszum nem készül. A dokumentumhiány többé nem kiadási feltétel. A döntést a `publication-policy.json` rögzíti.
+**Állapot: éles, sikeresen publikálva 2026. szeptember 7-én, 15:32-kor (Europe/Budapest).** Nyilvános cím: https://ecocleantisztito.hu/. A tulajdonos engedélyezte a publikálást a hiányzó dokumentumok nélkül. A korábban 404-es adatvédelmi/ÁSZF-linkek kimaradtak a nyilvános láblécekből; üres jogi oldal és impresszum nem készült. A döntést a `publication-policy.json` rögzíti.
 
 Előnézet: `http://127.0.0.1:8089/release/`. A csomag tényleges backendhez kapcsolódó kódot tartalmaz; kézi próbáláskor a beküldés valódi kérelmet küldhet. Az automatizált próbák minden rendeléskérést elfognak.
 
@@ -32,9 +32,18 @@ Az éles előző forrásrevizió: `173e4d1ad866528b9eda116da3b920e30ad3d394`.
 
 Helyi mentés: `backups/ecoclean-before-redesign-173e4d1.zip`; SHA-256: `1447d6951fd1c4f38275f4cee238af8a0505d754814ef85959d72ede3cb625ee`. A mentés és a helyi konfigurációs fájl Git-kizárást kapott.
 
-A GitHub Pages jelenleg továbbra is a régi `main:/` forrást szolgálja ki. Nem történt push, publikálás, Pages-konfigurációváltás vagy régi forrás törlése.
+A kiadás commitja: `72ba0c43bd4bf0818630a5e2a96fcbaf3a1aeca9`. A főágra küldött csomag a GitHub Pages Actions-alapú publikálásával váltotta fel a régi nyilvános webverziót. A csomagellenőrzés és a deploy egyaránt sikeres: https://github.com/chrisconen/ecocleantisztito.hu/actions/runs/34127955341. A deploy befejezése: `2026-09-07T13:32:57Z`.
 
-A kiadás sorrendje: csomag újraépítése és teljes ellenőrzése; csak az ellenőrzött fájlok Git-be vétele; Pages átállítása Actions-alapú kiadásra; workflow futtatása; élő URL-ek, HTTPS, fájlok és naptár olvasó ellenőrzése. A régi webverziót az új artifact váltja fel. Az eredeti buildbemeneteket és a mentést helyben meg kell őrizni a reprodukálhatósághoz és visszaállításhoz.
+Az eredeti buildbemenetek és a helyi mentés megmaradtak a reprodukálhatósághoz és visszaállításhoz. A workflow kizárólag a `release/` csomagot teszi közzé; a források, demó és mentés URL-jei nem részei a nyilvános weboldalnak.
+
+## Éles ellenőrzés és üzemeltetési határok
+
+- A 362 csomagtétel éles ellenőrzése hibamentes: 219 válasz bájtra egyezik; 141 HTML a Cloudflare e-mail-védelmének pontos visszaalakítása után egyezik; a `robots.txt` az azonosított, hash-sel rögzített Cloudflare-kiegészítés eltávolítása után egyezik. A `.nojekyll` nem nyilvános buildjelölő, 404-es válasza elvárt. Más eltérést az ellenőrző nem fogad el.
+- Mind a nyolc vizsgált kizárt útvonal 404-et ad: demó, csomagkönyvtár, belső manifest, mentés, helyi konfiguráció és a három hiányzó dokumentum. Részletes helyi bizonyíték: `qa/live-assets.json`; verziózott összesítés: `live-verification.json`.
+- Az éles normál foglaló és nagymegrendelő 1440 és 390 pixeles nézetben is végigpróbálva: négy sikeres böngészős eset, négy elfogott rendeléskérés, nulla valódi rendelés, nulla JavaScript-hiba. A sikeres válaszok tesztválaszok; a szerveroldali rendeléslétrehozás és értesítéskézbesítés továbbra sem kipróbált.
+- A publikus HTTPS a meglévő Cloudflare-proxyn keresztül érvényes tanúsítvánnyal működik. DNS- vagy Cloudflare SSL-beállítás nem változott.
+- A közvetlen GitHub Pages eredeti szerver tanúsítványa 2026. szeptember 6-án lejárt (`bad_authz`); ezt a külön üzemeltetési hibát a jelenleg működő nyilvános Cloudflare-tanúsítvány nem javítja meg. A proxy kikapcsolása vagy a szigorúbb eredeti szerverellenőrzés bekapcsolása előtt rendezni kell az eredeti szerver tanúsítványát.
+- A HTTP-címre érkező böngészőt a HTML-ben lévő JavaScript HTTPS-re irányítja, az útvonal és paraméterek megőrzésével. Ez nem szerveroldali HTTP 301; a Cloudflare-szabályokhoz nincs rendelkezésre álló hozzáférés ebben a munkamenetben.
 
 ```powershell
 python release-support/booking-build.py
@@ -44,6 +53,8 @@ node release-support/verify-release.mjs
 node --test release-support/tests/booking-contract.test.mjs
 python release-support/qa/booking_ui.py
 python release-support/verify-package.py
+python release-support/verify-live.py
+python release-support/qa/booking_ui.py --live normal large
 ```
 
 A kiadási ellenőrzés továbbra is minden csomagfájlt, hivatkozást és SHA-256 hash-t vizsgál. A dokumentumok kihagyásának engedélyezése nem lazítja a többi ellenőrzést.
