@@ -1,3 +1,11 @@
+# ECO Clean aktuális kiadás — 2026. szeptember 8.
+
+**Állapot: a mediterrán frissítés éles, sikeresen publikálva.** A 15 megújult kárpit-/matracoldal e-mailes ajánlatkérést használ az `info@ecocleantisztito.hu` címre; ezen városoknál nincs online foglalás vagy főoldali naptárkapcsolat. A főoldal saját foglalója változatlan.
+
+352 kiadási fájl ellenőrizve az éles domainen, 120 regionális böngészőnézet és 15 interakciós próba: nulla hiba. A 22 régi CSS-fájl eltávolítva. Kiadási commit: `b26fded784227770abfb7e16510bd760dd775c1a`. Részletek, mentés és bizonyítékok: [MEDITERRANEAN-RELEASE.md](MEDITERRANEAN-RELEASE.md).
+
+Az alábbi szeptember 7-i leírás a korábbi kiadás történeti feljegyzése; az aktuális csomagadatait a fenti dokumentum és a `live-verification.json` rögzíti.
+
 # ECO Clean kiadás — 2026. szeptember 7.
 
 **Állapot: éles, sikeresen publikálva 2026. szeptember 7-én, 15:32-kor (Europe/Budapest).** Nyilvános cím: https://ecocleantisztito.hu/. A tulajdonos engedélyezte a publikálást a hiányzó dokumentumok nélkül. A korábban 404-es adatvédelmi/ÁSZF-linkek kimaradtak a nyilvános láblécekből; üres jogi oldal és impresszum nem készült. A döntést a `publication-policy.json` rögzíti.

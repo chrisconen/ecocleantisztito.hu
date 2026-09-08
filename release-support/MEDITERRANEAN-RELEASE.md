@@ -28,3 +28,11 @@ Bizonyítékok: `release-manifest.json`, `release-verification.json`, `../demo/m
 ## E-mailes ajánlatkérés javítása
 
 A tulajdonos pontosítása után mind a 15 élesítésre előkészített oldal ismét átment a 120 böngészőnézeten és a 15 kibővített interakciós próbán. A címzett, a városváltás, a tételek, a teljes összeg, az üres állapot tiltása, a törlés, a vágólap és a kézi másolás tartalékmegoldása ellenőrizve. Az automatikus vizsgálat az online foglalási linkek és naptárszkriptek visszakerülését is hibának tekinti. Független utóellenőrzés: GO, publikálást akadályozó hiba nélkül. A próbák nem küldtek levelet vagy rendelést.
+
+## Sikeres élesítés
+
+Publikálva: 2026. szeptember 8., 08:33:46 (Europe/Budapest). Commit: `b26fded784227770abfb7e16510bd760dd775c1a`. A csomagellenőrzés és az élesítés is sikeres: https://github.com/chrisconen/ecocleantisztito.hu/actions/runs/34195171852. Élő példa: https://ecocleantisztito.hu/karpittisztitas-kalocsa.html.
+
+Az éles domainről mind a 352 csomagfájl ellenőrizve: 209 pontos bájtegyezés, 141 teljes HTML-hash-egyezés a korábban dokumentált Cloudflare e-mailvédelem visszaalakítása után, 1 ismert Cloudflare robots-kiegészítés és 1 nem publikus buildmarker. Nulla eltérés. Mind a 22 eltávolított CSS-fájl és 12 kizárt belső/korábbi útvonal 404-et ad. Az eredeti kiadás mentése megmaradt, nem nyilvános.
+
+Az éles 15 oldal 120 böngészőnézete és 15 interakciós próbája hibamentes; az e-mailes ajánlatkérés, a másolás és a főoldali naptárkapcsolat hiánya is ellenőrizve. Valódi e-mailt vagy foglalást nem küldtünk. Részletes összesítés: `live-verification.json`; teljes helyi bizonyíték: `qa/live-assets.json` és `../demo/mediterranean/qa/live/verification.json`.

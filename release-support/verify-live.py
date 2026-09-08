@@ -66,7 +66,9 @@ with ThreadPoolExecutor(max_workers=6) as pool:
     results=list(pool.map(fetch,manifest['files'].items()))
 issues=[r for r in results if not r['matches'] or r.get('hasDemo') or r.get('hasThemeControl')]
 exclusions=[]
-for name in ['demo/index.html','release/index.html','release-support/release-manifest.json','backups/ecoclean-before-redesign-173e4d1.zip','ecocleantisztito.hu.txt','adatvedelem.html','aszf.html','impresszum.html']:
+private_paths=['demo/index.html','release/index.html','release-support/release-manifest.json','backups/ecoclean-before-redesign-173e4d1.zip','ecocleantisztito.hu.txt','adatvedelem.html','aszf.html','impresszum.html','demo/mediterranean/baseline/karpittisztitas-kalocsa.html','mediterranean/baseline/karpittisztitas-kalocsa.html','mediterranean/ASSETS.md','backups/ecoclean-before-mediterranean-820bf46.zip']
+obsolete_css=['assets/css/'+name+'.css' for name in ['animations','city-pages','components','main','theme']]+['ui/regional-redesign.css','ui/rollout/eco-redesign-legacy.css','ui/rollout/styles-karpittisztitas-matractisztitas.css']+['ui/rollout/styles-'+service+'-'+city+'.css' for city in ['kalocsa','baja','kiskoros','szekszard','paks','solt','dunafoldvar'] for service in ['karpittisztitas','matractisztitas']]
+for name in private_paths+obsolete_css:
     try:
         with urlopen(Request(BASE+name,headers={'User-Agent':'Mozilla/5.0'}),timeout=20) as response:
             exclusions.append({'path':name,'status':response.status})

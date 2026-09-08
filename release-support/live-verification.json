@@ -1,10 +1,10 @@
 {
-  "checkedAt": "2026-09-07T13:49:18.943834+00:00",
-  "manifestSha256": "2b29d4583118b44cd6e7f4f39562e373740094ceeac55243c3d2222426b71b54",
-  "files": 362,
-  "matching": 362,
+  "checkedAt": "2026-09-08T06:34:29.772949+00:00",
+  "manifestSha256": "7db4561d7a731885f73e96197c00f8f71e41db4db73b43991b44199189ae36ea",
+  "files": 352,
+  "matching": 352,
   "verification": {
-    "exact": 219,
+    "exact": 209,
     "cloudflare-email-protection": 141,
     "cloudflare-managed-robots": 1,
     "non-public-build-marker": 1
@@ -42,23 +42,139 @@
     {
       "path": "impresszum.html",
       "status": 404
+    },
+    {
+      "path": "demo/mediterranean/baseline/karpittisztitas-kalocsa.html",
+      "status": 404
+    },
+    {
+      "path": "mediterranean/baseline/karpittisztitas-kalocsa.html",
+      "status": 404
+    },
+    {
+      "path": "mediterranean/ASSETS.md",
+      "status": 404
+    },
+    {
+      "path": "backups/ecoclean-before-mediterranean-820bf46.zip",
+      "status": 404
+    },
+    {
+      "path": "assets/css/animations.css",
+      "status": 404
+    },
+    {
+      "path": "assets/css/city-pages.css",
+      "status": 404
+    },
+    {
+      "path": "assets/css/components.css",
+      "status": 404
+    },
+    {
+      "path": "assets/css/main.css",
+      "status": 404
+    },
+    {
+      "path": "assets/css/theme.css",
+      "status": 404
+    },
+    {
+      "path": "ui/regional-redesign.css",
+      "status": 404
+    },
+    {
+      "path": "ui/rollout/eco-redesign-legacy.css",
+      "status": 404
+    },
+    {
+      "path": "ui/rollout/styles-karpittisztitas-matractisztitas.css",
+      "status": 404
+    },
+    {
+      "path": "ui/rollout/styles-karpittisztitas-kalocsa.css",
+      "status": 404
+    },
+    {
+      "path": "ui/rollout/styles-matractisztitas-kalocsa.css",
+      "status": 404
+    },
+    {
+      "path": "ui/rollout/styles-karpittisztitas-baja.css",
+      "status": 404
+    },
+    {
+      "path": "ui/rollout/styles-matractisztitas-baja.css",
+      "status": 404
+    },
+    {
+      "path": "ui/rollout/styles-karpittisztitas-kiskoros.css",
+      "status": 404
+    },
+    {
+      "path": "ui/rollout/styles-matractisztitas-kiskoros.css",
+      "status": 404
+    },
+    {
+      "path": "ui/rollout/styles-karpittisztitas-szekszard.css",
+      "status": 404
+    },
+    {
+      "path": "ui/rollout/styles-matractisztitas-szekszard.css",
+      "status": 404
+    },
+    {
+      "path": "ui/rollout/styles-karpittisztitas-paks.css",
+      "status": 404
+    },
+    {
+      "path": "ui/rollout/styles-matractisztitas-paks.css",
+      "status": 404
+    },
+    {
+      "path": "ui/rollout/styles-karpittisztitas-solt.css",
+      "status": 404
+    },
+    {
+      "path": "ui/rollout/styles-matractisztitas-solt.css",
+      "status": 404
+    },
+    {
+      "path": "ui/rollout/styles-karpittisztitas-dunafoldvar.css",
+      "status": 404
+    },
+    {
+      "path": "ui/rollout/styles-matractisztitas-dunafoldvar.css",
+      "status": 404
     }
   ],
-  "releaseCommit": "72ba0c43bd4bf0818630a5e2a96fcbaf3a1aeca9",
-  "workflowRun": 34127955341,
+  "releaseCommit": "b26fded784227770abfb7e16510bd760dd775c1a",
+  "workflowRun": 34195171852,
   "site": "https://ecocleantisztito.hu/",
   "browser": {
-    "cases": 4,
-    "interceptedBookingWrites": 4,
-    "realBookingWrites": 0,
+    "pages": 15,
+    "viewports": 120,
+    "interactionCases": 15,
     "issues": 0,
+    "blockedWrites": [],
+    "emailDeliveryTested": false,
     "widths": [
+      320,
+      390,
+      680,
+      768,
+      1024,
+      1200,
       1440,
-      390
+      1920
     ],
     "scenarios": [
-      "normal",
-      "large"
+      "pricing and reset",
+      "email recipient and complete estimate",
+      "city change and required city",
+      "clipboard and manual copy fallback",
+      "no online booking linkage",
+      "comparison sliders, tabs, zoom, hotspots and navigation"
     ]
   }
 }
