@@ -15,6 +15,9 @@ const omittedDocuments=new Set(publicationPolicy.omitUnavailableDocuments);
 const supplementalDir=path.join(support,'supplemental');
 const supplemental=fs.existsSync(supplementalDir)?fs.readdirSync(supplementalDir).filter(name=>name.endsWith('.html')).map(file=>({file,family:'supplemental',source:'release-support/supplemental/'+file})):[];
 const pageInventory=[...inventory.map(rec=>({...rec,source:'demo/'+rec.file})),...supplemental];
+const approvedMediterranean=JSON.parse(fs.readFileSync(path.join(demo,'mediterranean/manifest.json'),'utf8'));
+const mediterraneanPages=new Map(approvedMediterranean.pages.map(page=>[page.file,page]));
+const previousManifest=JSON.parse(fs.readFileSync(path.join(support,'release-manifest.json'),'utf8'));
 const homeDOM=new JSDOM(fs.readFileSync(path.join(demo,'index.html'),'utf8'));
 const socialLinks=new Map([['fa-facebook-f','Facebook'],['fa-twitter','X'],['fa-linkedin','LinkedIn']].map(([icon,label])=>[icon,homeDOM.window.document.querySelector(`.footer-social a[aria-label="${label}"]`).outerHTML]));
 socialLinks.set('fa-instagram','<a href="https://www.instagram.com/ecocleantisztito" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg></a>');
@@ -22,7 +25,7 @@ homeDOM.window.close();
 const sha=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
 const local=value=>value&&!/^(?:[a-z][a-z\d+.-]*:|\/\/|#)/i.test(value);
 const split=value=>{const [,name,suffix='']=value.match(/^([^?#]*)(.*)$/);return [decodeURIComponent(name),suffix];};
-const files=new Map(),queue=[],unresolved=[];
+const files=new Map(),queue=[],unresolved=[],referencedUIStyles=new Set();
 const cssURLs=text=>{
   const urls=[];
   csstree.walk(csstree.parse(text),{enter(node){
@@ -71,7 +74,9 @@ function mapURL(value,resource=false){
   return name.replace(/^\.\//,'')+suffix;
 }
 for(const rec of inventory){
-  const dom=new JSDOM(fs.readFileSync(path.join(demo,rec.file),'utf8')),d=dom.window.document;
+  const approvedBytes=fs.readFileSync(path.join(demo,rec.file));
+  if(mediterraneanPages.has(rec.file)&&sha(approvedBytes)!==mediterraneanPages.get(rec.file).outputSha256)throw Error('Mediterranean source differs from reviewed manifest: '+rec.file);
+  const dom=new JSDOM(approvedBytes.toString()),d=dom.window.document;
   d.title=d.title.replace(/^DEMÓ · /,'');
   d.querySelectorAll('meta[name="robots"],meta[name="googlebot"],.demo-notice,.demo-calendar-note,#demoResult').forEach(e=>e.remove());
   d.documentElement.dataset.theme='light';
@@ -107,8 +112,17 @@ for(const rec of inventory){
   for(const el of d.querySelectorAll('[srcset]'))el.setAttribute('srcset',el.getAttribute('srcset').split(',').map(part=>{
     const [url,...size]=part.trim().split(/\s+/);return [mapURL(url,true),...size].join(' ');
   }).join(', '));
-  const hero=d.querySelector('#interiorImage,.editorial-hero-photo,.eco-figure img,.hero-image-wrapper img');
+  const hero=d.querySelector('#interiorImage,.editorial-hero-photo,.eco-figure img,.hero-image-wrapper img,.med-hero-visual > img');
   const heroURL='https://ecocleantisztito.hu/'+(hero?.getAttribute('src')||'assets/living-room.webp');
+  if(mediterraneanPages.has(rec.file)){
+    const description=d.querySelector('meta[name="description"]').content;
+    for(const [property,content] of Object.entries({'og:type':'website','og:title':d.title,'og:description':description,'og:url':canonical,'og:image':heroURL,'og:image:alt':hero.alt,'og:locale':'hu_HU'})){
+      let meta=d.querySelector(`meta[property="${property}"]`);if(!meta){meta=d.createElement('meta');meta.setAttribute('property',property);d.head.append(meta);}meta.content=content;
+    }
+    for(const [name,content] of Object.entries({'twitter:card':'summary_large_image','twitter:title':d.title,'twitter:description':description,'twitter:image':heroURL})){
+      const meta=d.createElement('meta');meta.name=name;meta.content=content;d.head.append(meta);
+    }
+  }
   for(const el of d.querySelectorAll('meta[property="og:image"],meta[name="twitter:image"]'))el.content=heroURL;
   d.querySelectorAll('meta[property="og:image:width"],meta[property="og:image:height"]').forEach(el=>el.remove());
   // Repair local image URLs in structured data without changing service claims.
@@ -128,18 +142,18 @@ for(const rec of inventory){
     if(el.tagName==='LINK'&&!['stylesheet','icon','shortcut icon','apple-touch-icon','preload','manifest'].includes(el.rel))continue;
     for(const attr of ['src','href','poster','data-full','data-src']){
       const url=el.getAttribute(attr);if(!local(url))continue;
-      const [name]=split(url);if(name.startsWith('ui/'))continue;
-      const source=name.startsWith('assets/')&&fs.existsSync(path.join(demo,name))?path.join(demo,name):safe(root,name);
+      const [name]=split(url);if(name.startsWith('ui/')){if(name.endsWith('.css'))referencedUIStyles.add(name);continue;}
+      const source=/^(assets|mediterranean)\//.test(name)&&fs.existsSync(safe(demo,name))?safe(demo,name):safe(root,name);
       copy(source,name);
     }
   }
   dom.window.close();
 }
-for(const name of ['design.css','subpages.css','modern.css','regional-redesign.css'])if(fs.existsSync(path.join(demo,name)))copy(path.join(demo,name),'ui/'+name);
+for(const name of ['design.css','subpages.css','modern.css','regional-redesign.css'])if(referencedUIStyles.has('ui/'+name))copy(path.join(demo,name),'ui/'+name);
 copy(path.join(support,'calendar-live.css'),'ui/calendar-live.css');
 for(const rec of supplemental)copy(path.join(supplementalDir,rec.file),rec.file);
 if(supplemental.length)copy(path.join(support,'supplemental.css'),'ui/supplemental.css');
-for(const name of fs.readdirSync(path.join(demo,'rollout')).filter(n=>n.endsWith('.css')))copy(path.join(demo,'rollout',name),'ui/rollout/'+name);
+for(const name of fs.readdirSync(path.join(demo,'rollout')).filter(n=>n.endsWith('.css')&&referencedUIStyles.has('ui/rollout/'+n)))copy(path.join(demo,'rollout',name),'ui/rollout/'+name);
 for(const [name,dest] of scripts){
   if(name==='design.js')continue;
   const source=/^(booking|calendar)-demo/.test(name)?path.join(support,path.basename(dest)):path.join(demo,name);
@@ -184,7 +198,17 @@ for(const [name,record] of [...files])if(name.endsWith('.html')){
   const finalHTML=html.replace(/<head>/i,'<head>'+upgrade);
   files.delete(name);write(name,finalHTML,record.source);
 }
-const manifest={pages:pageInventory.length,pageInventory,aliases,omittedDocuments:[...omittedDocuments],files:Object.fromEntries([...files].sort(([a],[b])=>a.localeCompare(b))),unresolved};
+// Remove only unchanged files owned by the previous artifact and absent from this build.
+// Unknown or locally edited files remain a verification failure, never an implicit deletion.
+const removed=[];
+if(!unresolved.length)for(const [name,record] of Object.entries(previousManifest.files))if(!files.has(name)){
+  const target=safe(out,name);
+  if(fs.existsSync(target)){
+    if(sha(fs.readFileSync(target))!==record.sha256)throw Error('Refusing to prune modified old artifact: '+name);
+    fs.unlinkSync(target);removed.push(name);
+  }
+}
+const manifest={pages:pageInventory.length,pageInventory,aliases,omittedDocuments:[...omittedDocuments],approvedMediterranean:{manifestSha256:sha(fs.readFileSync(path.join(demo,'mediterranean/manifest.json'))),pages:[...mediterraneanPages.keys()]},files:Object.fromEntries([...files].sort(([a],[b])=>a.localeCompare(b))),unresolved};
 fs.writeFileSync(path.join(support,'release-manifest.json'),JSON.stringify(manifest,null,2)+'\n');
-console.log(JSON.stringify({pages:pageInventory.length,aliases:Object.keys(aliases).length,files:files.size,bytes:[...files.values()].reduce((a,f)=>a+f.bytes,0),unresolved}));
+console.log(JSON.stringify({pages:pageInventory.length,aliases:Object.keys(aliases).length,files:files.size,bytes:[...files.values()].reduce((a,f)=>a+f.bytes,0),removed,unresolved}));
 if(unresolved.length)process.exitCode=1;

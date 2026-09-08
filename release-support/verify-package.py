@@ -22,7 +22,7 @@ class Page(HTMLParser):
         if tag == 'meta' and a.get('name') in ('robots', 'googlebot'):
             self.preview |= bool(re.search(r'noindex|nofollow', a.get('content', ''), re.I))
         self.preview |= a.get('id') == 'demoResult' or 'missing-source' in a.get('class', '').split()
-        self.urls.extend(a[k] for k in ('href', 'src', 'poster', 'data-src', 'data-full') if a.get(k))
+        self.urls.extend(a[k] for k in ('href', 'src', 'poster', 'data-src', 'data-full', 'data-zoom', 'data-booking-url') if a.get(k))
 
 errors = []
 manifest_bytes = MANIFEST.read_bytes()
@@ -34,6 +34,17 @@ if report.get('manifestSha256') != digest(manifest_bytes):
     errors.append('Verification does not cover this exact release manifest')
 if manifest.get('unresolved'):
     errors.append('Build has unresolved dependencies')
+if manifest.get('approvedMediterranean'):
+    approved_path=ROOT/'demo/mediterranean/manifest.json'
+    approved_bytes=approved_path.read_bytes()
+    if digest(approved_bytes)!=manifest['approvedMediterranean']['manifestSha256']:
+        errors.append('Mediterranean approval manifest mismatch')
+    approved=json.loads(approved_bytes)
+    if len(approved['pages'])!=15 or sorted(p['file'] for p in approved['pages'])!=sorted(manifest['approvedMediterranean']['pages']):
+        errors.append('Mediterranean approval scope mismatch')
+    for page in approved['pages']:
+        if digest((ROOT/'demo'/page['file']).read_bytes())!=page['outputSha256']:
+            errors.append('Reviewed Mediterranean source differs: '+page['file'])
 for required in ('index.html', 'CNAME', 'sitemap.xml', 'robots.txt', 'ui/booking-live.js', 'ui/calendar-live.js'):
     if required not in manifest['files']:
         errors.append('Required production document missing: ' + required)

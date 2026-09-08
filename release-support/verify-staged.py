@@ -23,7 +23,10 @@ for row in git('ls-files','--stage','-z').split(b'\0'):
 expected={'release/'+name for name in manifest['files']}
 actual={name for name in entries if name.startswith('release/')}
 if expected!=actual:errors.append('Staged artifact file set differs from manifest')
-requested=sorted(set(changed)|expected)
+deleted=set(changed)-set(entries)
+# Deleted paths have no staged blob. The complete artifact set comparison above
+# still checks that release deletions agree with the staged release manifest.
+requested=sorted((set(changed)&set(entries))|expected)
 raw=subprocess.check_output(['git','cat-file','--batch'],cwd=ROOT,input=b''.join(entries[name][1]+b'\n' for name in requested))
 position=0
 for name in requested:
@@ -38,5 +41,5 @@ for name in requested:
             errors.append('Unexpected private or bulky source artifact: '+name)
         if re.search(rb'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|\bgh[pousr]_[A-Za-z0-9]{30,}\b|\bgithub_pat_[A-Za-z0-9_]{40,}\b|\bAKIA[A-Z0-9]{16}\b',data):
             errors.append('Credential signature in staged file: '+name)
-print(json.dumps({'stagedFiles':len(changed),'releaseFiles':len(expected),'errors':errors}))
+print(json.dumps({'stagedFiles':len(changed),'stagedDeletions':len(deleted),'releaseFiles':len(expected),'errors':errors}))
 sys.exit(bool(errors))

@@ -2,3 +2,7 @@
 /release/** -text
 /release-support/release-manifest.json -text
 /release-support/release-verification.json -text
+# Approved generated demos and their immutable baselines also have manifest hashes.
+/demo/*.html -text
+/demo/mediterranean/*.json -text
+/demo/mediterranean/baseline/*.html -text

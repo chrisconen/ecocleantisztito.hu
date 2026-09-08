@@ -1,0 +1,92 @@
+[
+  {
+    "name": "living",
+    "file": "assets/living.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 236138,
+    "sha256": "60a14815da603e2f91fc3d80f9bae9c7280d1403a09d0619bb6d26992629f36d"
+  },
+  {
+    "name": "sofa",
+    "file": "assets/sofa.webp",
+    "size": [
+      1448,
+      1086
+    ],
+    "bytes": 213484,
+    "sha256": "947494ead52e57f821b25685d3e5ad1e178f9176aa3a358f20e4bb529065c313"
+  },
+  {
+    "name": "armchair",
+    "file": "assets/armchair.webp",
+    "size": [
+      1448,
+      1086
+    ],
+    "bytes": 208338,
+    "sha256": "0fcbae328ef0996de330f18b0303b8cf9d7ab92feee1ba798cae23b31f257cd7"
+  },
+  {
+    "name": "dining",
+    "file": "assets/dining.webp",
+    "size": [
+      1448,
+      1086
+    ],
+    "bytes": 255998,
+    "sha256": "696560752efe9505e751465db2c927758250dae9e419fd5d7cdad564896f5b15"
+  },
+  {
+    "name": "office",
+    "file": "assets/office.webp",
+    "size": [
+      1448,
+      1086
+    ],
+    "bytes": 279494,
+    "sha256": "c87bc477b7c3cc051a713a1f88e083b1dff30821227c973ae0b683b1f8c73e1e"
+  },
+  {
+    "name": "bedroom",
+    "file": "assets/bedroom.webp",
+    "size": [
+      1448,
+      1086
+    ],
+    "bytes": 226316,
+    "sha256": "edcd127ffb4a05be3529a81a5281033fe2cf75cee9c83fa2541f8cf85d93640a"
+  },
+  {
+    "name": "heritage",
+    "file": "assets/heritage.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 259870,
+    "sha256": "0dcd61deb924d81ff5de8406e299f79893a8a19c3ad937499d78643e21775b29"
+  },
+  {
+    "name": "mites-sofa",
+    "file": "assets/mites-sofa.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 234302,
+    "sha256": "ef398d291ed4f71f98dec45ca25f64fc02cf368d729ca2dedff36c01561878da"
+  },
+  {
+    "name": "mites-mattress",
+    "file": "assets/mites-mattress.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 180116,
+    "sha256": "feee1127243da086ba201910a15004186a6350582339b340d38ea982f7e7521b"
+  }
+]

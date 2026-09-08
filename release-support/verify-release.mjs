@@ -10,10 +10,15 @@ const csstree=require('css-tree');
 const log=new VirtualConsole(),issues=[],counts={pages:0,links:0,assets:0,css:0};
 const inventory=JSON.parse(fs.readFileSync(path.join(root,'demo/rollout/inventory.json'),'utf8'));
 const manifest=JSON.parse(fs.readFileSync(path.join(support,'release-manifest.json'),'utf8'));
+const medManifestBytes=fs.readFileSync(path.join(root,'demo/mediterranean/manifest.json'));
+const medManifest=JSON.parse(medManifestBytes);
+const medPages=new Map(medManifest.pages.map(page=>[page.file,page]));
 const check=(condition,file,message)=>{if(!condition)issues.push({file,message});};
 const local=url=>url&&!/^(?:[a-z][a-z\d+.-]*:|\/\/|#)/i.test(url);
 const sha=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
 const part=url=>decodeURIComponent(url.split(/[?#]/)[0]);
+check(sha(medManifestBytes)===manifest.approvedMediterranean?.manifestSha256,'release-manifest.json','Mediterranean approval manifest differs');
+check(medPages.size===15&&JSON.stringify([...medPages.keys()].sort())===JSON.stringify(manifest.approvedMediterranean?.pages.slice().sort()),'release-manifest.json','Mediterranean approved scope differs');
 function reference(url,file,kind){
   if(!local(url))return;
   const target=path.resolve(path.dirname(path.join(out,file)),part(url));
@@ -50,10 +55,25 @@ for(const rec of manifest.pageInventory||inventory){
     check(parsed.hostname!=='ecocleantisztito.hu'||!manifest.omittedDocuments?.includes(path.posix.basename(parsed.pathname)),file,'Unavailable document link remains: '+url);
     if(url?.startsWith('#')&&url!=='#')check(Boolean(d.getElementById(decodeURIComponent(url.slice(1)))),file,'Missing anchor: '+url);
   }
-  for(const el of d.querySelectorAll('img[src],script[src],source[src],link[rel="stylesheet"],link[rel="icon"],link[rel="preload"],video[poster],[data-full],[data-src]')){
-    for(const attr of ['src','href','poster','data-full','data-src'])if(el.hasAttribute(attr)){
+  for(const el of d.querySelectorAll('img[src],script[src],source[src],link[rel="stylesheet"],link[rel="icon"],link[rel="preload"],video[poster],[data-full],[data-src],[data-zoom],[data-booking-url]')){
+    for(const attr of ['src','href','poster','data-full','data-src','data-zoom','data-booking-url'])if(el.hasAttribute(attr)){
       counts.assets++;reference(el.getAttribute(attr),file,'asset');
     }
+  }
+  if(medPages.has(file)){
+    const approvedPage=medPages.get(file);
+    check(sha(fs.readFileSync(path.join(root,rec.source)))===approvedPage.outputSha256,file,'Reviewed Mediterranean source hash differs');
+    check(d.body.classList.contains('eco-mediterranean'),file,'Approved Mediterranean design absent');
+    const config=d.querySelector('[data-med-configurator]');
+    check(config?.dataset.inquiryEmail==='info@ecocleantisztito.hu'&&!config.hasAttribute('data-booking-url'),file,'Regional inquiry must use email only');
+    check(![...d.querySelectorAll('a[href]')].some(a=>/#(?:booking|foglalas)|megrendeles\.html/i.test(a.getAttribute('href'))),file,'Regional page links to online booking');
+    check(config?.dataset.assets==='mediterranean/assets',file,'Incorrect dynamic image base');
+    for(const name of ['living','sofa','armchair','dining','office','bedroom'])reference(`${config?.dataset.assets}/${name}.webp`,file,'configurator image');
+    for(const name of ['design.css','configurator.js','interactions.js'])reference('mediterranean/'+name,file,'Mediterranean runtime');
+    const originals=[...d.querySelectorAll('.med-result-figure img')].map(img=>img.getAttribute('src'));
+    check(originals.length===approvedPage.retainedPairs.flat().length,file,'Original reference photo count differs');
+    for(const src of approvedPage.retainedPairs.flat())check(originals.includes(src.replace(/^\.\.\//,'')),file,'Original reference photo lost: '+src);
+    check(d.querySelector('meta[property="og:image"]')?.content.includes('/mediterranean/assets/'),file,'New sharing image absent');
   }
   for(const el of d.querySelectorAll('[srcset]'))for(const entry of el.getAttribute('srcset').split(','))reference(entry.trim().split(/\s+/)[0],file,'srcset asset');
   if(rec.family==='homepage'){

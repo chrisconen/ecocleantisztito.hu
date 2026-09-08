@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "language": "hu",
+  "reviewedAt": "2026-09-08",
+  "placeholders": {"city": "A város neve", "cityLocative": "A város helyhatározós alakja, például Kalocsán"},
+  "cities": [
+    {"slug": "kalocsa", "name": "Kalocsa", "locative": "Kalocsán"},
+    {"slug": "baja", "name": "Baja", "locative": "Baján"},
+    {"slug": "kiskoros", "name": "Kiskőrös", "locative": "Kiskőrösön"},
+    {"slug": "szekszard", "name": "Szekszárd", "locative": "Szekszárdon"},
+    {"slug": "paks", "name": "Paks", "locative": "Pakson"},
+    {"slug": "solt", "name": "Solt", "locative": "Solton"},
+    {"slug": "dunafoldvar", "name": "Dunaföldvár", "locative": "Dunaföldváron"}
+  ],
+  "hero": {
+    "eyebrow": "ECO Clean · Kárpit- és matractisztítás",
+    "title": "Otthon, amibe jó megérkezni.",
+    "lead": "A gondosan kiválasztott kanapé, a kedvenc fotel és a pihentető hálószoba a mindennapok része. A tisztításuk is legyen természetes része az otthonról való gondoskodásnak.",
+    "body": "Kárpit- és matractisztítás {cityLocative}: figyelemmel a bútor anyagára, a használat nyomaira és arra a térre, amelyet otthonná tettél. Nézd meg a tisztítható bútorokat, állítsd össze az igényeidet, és tervezz átláthatóan.",
+    "primaryCta": "Összeállítom a tisztítást",
+    "secondaryCta": "Megnézem az eredményeket"
+  },
+  "interiors": {
+    "eyebrow": "Változó otthonok · állandó gondoskodás",
+    "title": "Más lett a berendezés. Az értéke ugyanúgy megmarad.",
+    "paragraphs": [
+      {"text": "Emlékszel a fényes szekrénysorra, a mintás fotelre, a kihúzható heverőre és a csipkefüggönyön átszűrődő délutáni fényre? A szocialista korszak sok magyar otthonát idéző tárgyakhoz családi történetek kapcsolódnak. Egy megőrzött régi bútor ma is lehet kényelmes, szerethető és karakteres része a lakásnak."},
+      {"text": "A mai enteriőrökben helyet kapnak a lágy ívek, a természetes hatású szövetek, a világos felületek és az összehangolt részletek. Lakberendezővel tervezett terekben és saját ötletekből kialakított otthonokban is számít, hogyan találkozik a kanapé, a szék, a fény és a szín. Egy jó berendezés a mindennapi életedhez igazodik."},
+      {"text": "Akár egy örökölt fotelt szeretsz, akár egy új moduláris kanapét választottál, a rendszeres ápolás figyelem a már meglévő érték felé. A tisztítást érdemes az anyaghoz és az állapothoz igazítani, hogy a bútor a használat mellett is gondozott maradhasson."}
+    ],
+    "pastLabel": "Egy ismerős nappali a múltból",
+    "presentLabel": "Egy mai, mediterrán ihletésű otthon",
+    "imageNote": "Hangulati látványtervek: két berendezési világ, nem tisztítás előtti és utáni állapot."
+  },
+  "furniture": {
+    "eyebrow": "A nappalitól a hálószobáig",
+    "title": "Minden kedvenc darabnak jár a figyelem.",
+    "intro": "A bútor formája csak az első támpont. Az anyaga, a kialakítása, a használata és a korábbi foltkezelések együtt határozzák meg, milyen tisztítás lehet megfelelő. Válaszd ki, melyik darabodról szeretnél gondoskodni.",
+    "items": [
+      {"id": "corner-sofa", "title": "Kanapé és ülőgarnitúra", "text": "A családi esték központja, ahol naponta sokféle használat nyoma találkozik. Az ülőfelület mellett a karfák, a háttámlák és az elemek közötti rések állapotára is érdemes figyelni."},
+      {"id": "sofa", "title": "Szófa és heverő", "text": "Egy elegáns kétszemélyes szófa vagy vendégágyként is használt heverő más-más igényt jelenthet. A fekvőfelületet és a kinyitható részeket is mutasd meg az egyeztetéskor."},
+      {"id": "armchair", "title": "Fotel és olvasósarok", "text": "A kedvenc pihenőhelyen gyakran ugyanazt a fejtámlát és könyöklőt használjuk. A jól körülhatárolható, terheltebb részek külön figyelmet kérnek, különösen világos vagy finom tapintású kárpitnál."},
+      {"id": "dining-chair", "title": "Kárpitozott étkezőszék", "text": "Reggelik, vendégségek, hosszú beszélgetések: az étkezőszéken morzsák, ital- és ételfoltok is megjelenhetnek. A háttámla és az ülőlap tisztítási igénye eltérhet, ezért mindkettőt érdemes számba venni."},
+      {"id": "office-chair", "title": "Irodai szék", "text": "A munkanapok alatt órákon át érintkezünk az ülőlappal és a háttámlával. Az otthoni dolgozósarok szövetborítású széke ugyanúgy rendszeres gondoskodást igényel, mint a nappali bútorai."},
+      {"id": "mattress", "title": "Matrac és kárpitozott ágy", "text": "A huzat alatt és körül is érdemes figyelni a tisztaságra. A matrac típusa, mérete, oldalszáma és kezelési előírása mellett az ágyvég vagy kárpitozott keret állapotát is vedd számításba."}
+    ]
+  },
+  "value": {
+    "eyebrow": "Szép tér. Gondozott bútor.",
+    "title": "A tisztaság az otthonod részleteiben él.",
+    "paragraphs": [
+      {"text": "A gondosan megválasztott színek és formák akkor mutatnak igazán szépen, ha a textilek ápoltak. Az anyagnak megfelelő, rendszeres tisztítás az értékmegőrzés része: a lerakódó por és szennyeződés a szövet kopását is fokozhatja. A gyártó kezelési útmutatója ezért minden tisztítás kiindulópontja.", "sourceIds": ["kvadrat-care"]},
+      {"text": "A gondoskodás azonban nem csak látvány. Jó érzés úgy leülni, vendéget fogadni vagy lefeküdni, hogy tudod: figyelmet kapott a sokat használt felület. A cél egy ápolt, kellemesen használható bútor, reális elvárásokkal az anyag korától és állapotától függően."}
+    ]
+  },
+  "soil": {
+    "eyebrow": "A mindennapok látható nyomai",
+    "title": "Miért sötétedik el a fejtámla és a karfa?",
+    "paragraphs": [
+      {"text": "A bőr természetes zsírossága, a hajjal érintkező felületekre kerülő faggyú, a kozmetikumok maradványai és a háztartási por együtt is hozzájárulhatnak a lerakódásokhoz. A fejtámlán, a könyöklőn vagy az ülőlap elülső, combbal érintkező részén idővel szürkés, sötétszürke, akár feketés elszíneződés jelenhet meg."},
+      {"text": "Ettől a bútor elhasználtnak tűnhet, és az érintése is kellemetlenebbé válhat. A sötét folt ugyanakkor nem önmagában higiéniai vizsgálat: színeződés, anyagkopás vagy ruhafesték átadása is állhat mögötte. Tisztítás előtt ezért fontos tisztázni az előzményeket, és megkülönböztetni az eltávolítható szennyeződést a maradandó változástól."}
+    ],
+    "hotspots": ["Fejtámla: hajjal és bőrrel érintkező felület", "Karfa: a kéz és a könyök rendszeres helye", "Ülőlap széle: mindennapos érintkezés és terhelés"]
+  },
+  "mites": {
+    "eyebrow": "A szövet szálai között",
+    "title": "Ami szabad szemmel nem látszik.",
+    "paragraphs": [
+      {"text": "A háziporatkák mikroszkopikus élőlények, amelyek matracokban, ágyneműben és kárpitozott bútorokban is előfordulhatnak. Elhalt, levált emberi és állati hámsejtekkel táplálkoznak. Jelenlétük egy gondosan takarított otthonban sem kizárt.", "sourceIds": ["niehs-mites"]},
+      {"text": "Az atkák ürülékében és testmaradványaiban található allergének az arra érzékenyeknél allergiás panaszokat, illetve asztmás tüneteket válthatnak ki vagy ronthatnak. A háziporatkák petékkel szaporodnak; fejlődésüknek kedvezhet a meleg, párás környezet.", "sourceIds": ["kentucky-mites"]},
+      {"text": "A rendszeres tisztítás a por és a szennyeződések eltávolítását szolgálja; a teljes atka-, pete- és allergénmentesség nem ígérhető. Az otthoni allergénterhelés kezelésében a páratartalom, az ágynemű ápolása és a megfelelő védőhuzat együtt is szerepet kaphat. Tartós tünetekkel allergológushoz érdemes fordulni.", "sourceIds": ["niehs-mites"]}
+    ],
+    "imageCaption": "Nagyított, szemléltető látványkép. A poratkák valós mérete szabad szemmel nem érzékelhető így.",
+    "imageLabels": ["Szövetszálak", "Háziporatka", "Peték", "Leváló hámsejtek"],
+    "sourceLabel": "A háttérben: ellenőrzött szakmai források"
+  },
+  "care": {
+    "eyebrow": "Két tisztítás között",
+    "title": "Néhány szokás, ami sokat számít.",
+    "items": [
+      {"title": "Kíméletes, rendszeres portalanítás", "text": "A szövethez illő fejjel és a gyártó által engedett beállítással porszívózz. A varrások és rések is kapjanak figyelmet; friss folyadékfoltot óvatos felitatással kezelj, erős dörzsölés helyett.", "sourceIds": ["kvadrat-care"]},
+      {"title": "Ágynemű és páratartalom", "text": "Az ágyneműt hetente, a kezelési címkén engedett programmal mosd. A körülbelül 40–50%-os relatív páratartalom segíthet kevésbé kedvező környezetet teremteni az atkáknak; ezt páramérővel követheted.", "sourceIds": ["aaaai-parameter", "aaaai-humidity"]},
+      {"title": "Elég idő a teljes száradásra", "text": "Tisztítás után várd meg, amíg a bútor teljesen megszárad, és biztosíts megfelelő légmozgást. Nedves textilre ne kerüljön takaró vagy ágynemű; a szükséges időt az anyag és a környezet is befolyásolja.", "sourceIds": ["muuto-care"]}
+    ]
+  },
+  "process": {
+    "title": "Figyelmesen, az első egyeztetéstől.",
+    "items": [
+      {"title": "Kiválasztod a bútorokat", "text": "A képes összeállítóban megadhatod, milyen darabok tisztítását szeretnéd."},
+      {"title": "Elmondod a fontos részleteket", "text": "Méret, anyag, foltok, korábbi kezelések: egy fotó is segítheti az egyeztetést."},
+      {"title": "Egyeztetjük a lehetőségeket", "text": "A tisztítás módja és várható eredménye a bútor tényleges állapotától függ."},
+      {"title": "Megtervezed a használatot", "text": "A tisztítás mellé a teljes száradáshoz szükséges idővel is számolj."}
+    ]
+  },
+  "configurator": {
+    "eyebrow": "A te bútoraid. Átlátható tervezés.",
+    "title": "Állítsd össze a tisztítást.",
+    "intro": "Válaszd ki a bútorokat, add meg a mennyiséget és a kért részleteket. A képek a bútortípus felismerését segítik; az összesítő a kiválasztott szolgáltatásokat és az aktuális árlista szerinti összeget mutatja.",
+    "note": "Eltérő kialakítás, különleges anyag vagy egyedi tisztítási igény esetén egyeztetés szükséges. A kiválasztás önmagában még nem jelent foglalást.",
+    "empty": "Kezdd egy bútor kiválasztásával.",
+    "cta": "Tovább az egyeztetéshez"
+  },
+  "comparison": {
+    "eyebrow": "Valódi bútorok · valódi munkák",
+    "title": "Nézd meg a különbséget.",
+    "intro": "A meglévő előtte–utána fotókon tényleges tisztítások eredményeit láthatod. Mozgasd a választóvonalat, és figyeld meg a kárpit részleteit. Minden szövet, folt és használati előzmény más, így az eredmény is bútoronként eltérhet.",
+    "before": "Előtte",
+    "after": "Utána",
+    "cta": "Hívj minket"
+  },
+  "faq": [
+    {"question": "Milyen gyakran érdemes kárpitot vagy matracot tisztíttatni?", "answer": "Nincs minden otthonra érvényes időköz. A használat intenzitása, a gyerekek és háziállatok jelenléte, a látható szennyeződés és a gyártói előírás együtt ad támpontot. Érdemes rendszeresen átnézni a sokat használt felületeket."},
+    {"question": "Egy világos vagy különleges szövetű kanapé is tisztítható?", "answer": "Ezt az anyag és a kezelési előírás alapján lehet megítélni. Küldj képet a bútorról és a címkéről. A megfelelő módszer kiválasztása és a rejtett helyen végzett próba különösen fontos.", "sourceIds": ["kvadrat-care"]},
+    {"question": "Minden folt és elszíneződés eltűnik?", "answer": "Teljes folteltávolítást nem lehet minden esetben ígérni. A régi folt, a házi vegyszeres kezelés, a színvesztés vagy a kopás korlátozhatja az eredményt. Mondd el, mi történt a felülettel, és mivel próbáltad kezelni."},
+    {"question": "A sötét karfa biztosan szennyeződés?", "answer": "Lehet lerakódás, de kopás, szálirányváltozás vagy színátadás is befolyásolhatja a látványt. A különbség azért fontos, mert a tisztítás nem állítja helyre automatikusan a károsodott vagy kifakult szövetet."},
+    {"question": "A matractisztítás megszünteti az allergiát?", "answer": "Ezt nem ígérjük. Az allergia kezelése orvosi feladat; az otthoni allergénterhelés csökkentése több összehangolt lépést igényelhet. A poratkák teljes eltávolítása még tiszta otthonban sem biztosítható.", "sourceIds": ["niehs-mites"]},
+    {"question": "A poratkák petéire is figyelni kell?", "answer": "Igen: a peték az atkák életciklusának részei. Ezért érdemes tartós ápolási szokásokban gondolkodni. Egy tisztításról azonban nem állítható automatikusan, hogy minden atkát és petét eltávolít.", "sourceIds": ["kentucky-mites"]},
+    {"question": "Mikor használhatom újra a bútort?", "answer": "Teljes száradás után. Az időt a szövet, a töltet, a hőmérséklet és a légmozgás is befolyásolja. Az ülőfelületet vagy matracot addig ne takard le, és kövesd a kapott szárítási útmutatást.", "sourceIds": ["muuto-care"]},
+    {"question": "Mit készítsek elő az egyeztetéshez?", "answer": "A bútortípust, mennyiséget, hozzávetőleges méretet, a tisztítandó oldalakat és a címet. Különleges folt vagy anyag esetén egy közeli fotó, illetve a gyártói címke képe is hasznos."},
+    {"question": "Hogyan kérhetek ajánlatot és időpontot?", "answer": "Kalocsa, Baja, Kiskőrös, Szekszárd, Paks, Solt és Dunaföldvár térségében nincs online időpontfoglalás. Az árösszesítőből előkészített e-mailt nyithatsz az info@ecocleantisztito.hu címre. A levél tartalmazza a kiválasztott tételeket és a tájékoztató összeget; add hozzá az elérhetőségedet, majd küldd el a saját leveleződből. A levélszöveget ki is másolhatod. Ezután felvesszük veled a kapcsolatot az ár és az időpont egyeztetéséhez. Az ajánlatkérés nem jelent lefoglalt időpontot."}
+  ],
+  "closing": {
+    "title": "A következő jó otthoni pillanat itt kezdődik.",
+    "text": "Egy nyugodt este a kanapén, reggeli az étkezőben, pihenés a kedvenc fotelben. Gondoskodjunk azokról a felületekről, amelyek naponta körülvesznek.",
+    "cta": "Megtervezem a tisztítást"
+  },
+  "sources": [
+    {"id": "niehs-mites", "label": "NIEHS: háziporatkák és beltéri allergének", "url": "https://www.niehs.nih.gov/health/topics/agents/allergens/dustmites"},
+    {"id": "kentucky-mites", "label": "University of Kentucky: a háziporatkák életciklusa és allergénjei", "url": "https://entomology.ca.uky.edu/sites/entomology.ca.uky.edu/files/ef646_0.pdf"},
+    {"id": "aaaai-parameter", "label": "AAAAI: poratka-kitettség csökkentésének szakmai irányelve", "url": "https://www.aaaai.org/Aaaai/media/Media-Library-PDFs/Allergist%20Resources/Statements%20and%20Practice%20Parameters/Dustmite-2013.pdf"},
+    {"id": "aaaai-humidity", "label": "AAAAI: páratartalom és beltéri allergia", "url": "https://www.aaaai.org/tools-for-the-public/conditions-library/allergies/humidifiers-and-indoor-allergies"},
+    {"id": "kvadrat-care", "label": "Kvadrat: kárpitszövetek tisztítása és ápolása", "url": "https://www.kvadrat.dk/en/upholstery-textiles/how-to-clean-upholstery"},
+    {"id": "muuto-care", "label": "Muuto: anyagok és bútorápolás", "url": "https://professionals.muuto.com/faq/product-information/materials-and-care/"}
+  ]
+}
