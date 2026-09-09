@@ -39,7 +39,7 @@ def main():
             panel=page.locator('[data-material-result] [data-novalife-status=likely_other]');panel.wait_for(timeout=90000)
             assert len(calls)==1 and calls[0]['http']==200
             result=calls[0]['result'];assert result['_meta']['reference_count']==3 and not result['_meta']['archive_saved']
-            assert 'nem NovaLife' in panel.inner_text()
+            assert 'nem ANDANTE NovaLife' in panel.inner_text()
             assert 'nem zárja ki' not in panel.inner_text()
             assert 'helyszín' not in page.locator('[data-material-result]').inner_text().lower()
             expect(panel.locator('.eco-material-novalife-actions a[href="#studio-kalkulator"]')).to_have_count(1)

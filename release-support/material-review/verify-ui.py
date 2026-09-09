@@ -1,5 +1,5 @@
 """Release UI checks with isolated API responses. No emails, archives or model calls."""
-import base64,io,json,sys
+import base64,io,json,sys,re
 from pathlib import Path
 from PIL import Image
 from playwright.sync_api import sync_playwright,expect
@@ -34,6 +34,8 @@ with sync_playwright() as p:
    page.locator('[data-material-file]').set_input_files(photo);expect(form.locator('[data-review-consent]')).not_to_be_checked();expect(submit).to_be_enabled()
    page.locator('[data-material-analyze]').click();expect(page.locator('[data-novalife-status=likely_other]')).to_be_visible();assert 'helyszín' not in page.locator('[data-material-result]').inner_text().lower()
    panel=page.locator('[data-novalife-status=likely_other]');expect(panel.locator('.eco-material-novalife-next')).to_have_count(0)
+   assert not re.search(r'(?<!ANDANTE )\bNovaLife\b',page.locator('#anyagfelismero').inner_text())
+   assert 'ANDANTE ANDANTE' not in page.locator('#anyagfelismero').inner_text()
    expect(panel.locator('.eco-material-novalife-reason')).to_have_text(fixture['indoklas'])
    expect(page.locator('[data-material-result] a').filter(has_text='Tovább az árkalkulátorhoz')).to_have_count(1)
    expect(panel.locator('[data-material-followup=label]')).not_to_be_visible()
@@ -50,6 +52,7 @@ with sync_playwright() as p:
      fixture['novalife']['status']=state;fixture['kep_tipus']='cimke' if state=='label_novalife' else 'anyag'
      page.locator('[data-material-file]').set_input_files(photo);page.locator('[data-material-analyze]').click()
      active=page.locator('[data-novalife-status='+state+']');expect(active).to_be_visible();expect(active.locator('[data-material-followup=label]')).to_be_visible();expect(page.locator('.eco-material-result-details')).to_have_count(0)
+     assert not re.search(r'(?<!ANDANTE )\bNovaLife\b',active.inner_text())
     fixture['novalife']['status']='likely_other';fixture['kep_tipus']='anyag'
    reports.append({'file':file,'width':width,'reviewWithoutAnalysis':True,'noDuplicateAnalysis':True,'validationAndRetry':True,'passed':True});context.close()
  browser.close()

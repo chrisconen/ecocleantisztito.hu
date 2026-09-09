@@ -30,9 +30,11 @@ underlying `complete` command requires `--outcome`, `--evidence`, `--reply-sent`
 It does not send mail. No review image is activated as a reference.
 The private operator endpoint permits deletion of a specific request when needed.
 
-Deployment uses a bounded `reviewOverlay` version 2: the two widget assets and their
+Deployment uses a bounded `reviewOverlay` version 3: the two widget assets and their
 versioned references on 35 existing pages change, plus append-only home CSS and its
-one index reference (38 files). The parent Studio/copy/widget
+one index reference (38 files). Exact reversible display-text/accessible-attribute
+edits add the ANDANTE brand to NovaLife mentions on those 35 pages. The branding
+pass never rewrites script contents, identifiers or URLs. The parent Studio/copy/widget
 proof is restored and rerun; the existing baselines are not overwritten. The
 new sources are in `demo/material-review`, based on the current informal release
 copy. Do not rerun the earlier widget/Studio builders over this later layer.

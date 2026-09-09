@@ -10,7 +10,7 @@ from PIL import Image
 from archive import Archive,ArchiveError,DEFAULT_ROOT,_id,_json
 from sync import SyncClient,SyncError,load_config
 
-OUTCOMES={'woven':'Szövött textil, nem NovaLife-jellegű', 'novalife':'NovaLife / hasonló felület', 'more_photo':'További fotót kértünk'}
+OUTCOMES={'woven':'Szövött textil, nem ANDANTE NovaLife-jellegű', 'novalife':'ANDANTE NovaLife / hasonló felület', 'more_photo':'További fotót kértünk'}
 def utc():return datetime.now(timezone.utc).isoformat(timespec='seconds').replace('+00:00','Z')
 
 def complete(archive,identifier,outcome,evidence,reply_sent):
@@ -51,7 +51,7 @@ def gallery(archive):
             drafts=[]
             for title,answer in [
                 ('Ellenőriztem: szövött textil','A beküldött fotót ellenőriztük: szövött textilt mutat, nem az ANDANTE NovaLife bőrhatású anyagát. A tisztítás és az időpont egyeztetésével kapcsolatban szívesen segítünk.'),
-                ('Ellenőriztem: NovaLife-gyanú','A beküldött fotó alapján NovaLife vagy hasonló bőrhatású anyag merül fel. Kérjük, küldd el a bútor kezelési címkéjét vagy eredeti anyagmegjelölését, hogy még foglalás előtt tisztázhassuk a lehetőségeket.'),
+                ('Ellenőriztem: ANDANTE NovaLife-gyanú','A beküldött fotó alapján ANDANTE NovaLife vagy hasonló bőrhatású anyag merül fel. Kérjük, küldd el a bútor kezelési címkéjét vagy eredeti anyagmegjelölését, hogy még foglalás előtt tisztázhassuk a lehetőségeket.'),
                 ('További fotót kérek','A beküldött képen nem látszik elég részlet. Kérjük, küldj egy éles, közeli fotót természetes oldalfényben, és ha megvan, a kezelési címke képét is.')]:
                 body='Szia!\n\n'+answer+'\n\nÜdv,\nECO Clean\ninfo@ecocleantisztito.hu\n\nKérésazonosító: '+r['id']
                 href='mailto:'+quote(r['email'],safe='@')+'?subject='+quote('ECO Clean – szövetellenőrzés')+'&body='+quote(body)

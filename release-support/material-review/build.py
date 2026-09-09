@@ -1,6 +1,7 @@
 """Narrow follow-up: replace the two material-widget assets and their revisions."""
 from pathlib import Path
 import hashlib,json,re,sys
+from brand_copy import brand_html,restore_html
 ROOT=Path(__file__).resolve().parents[2];HERE=Path(__file__).parent;OUT=ROOT/'release'
 sha=lambda b:hashlib.sha256(b).hexdigest()
 manifest_path=ROOT/'release-support/release-manifest.json';current=json.loads(manifest_path.read_bytes())
@@ -26,14 +27,17 @@ files.append({'file':'ui/design.css','beforeSha256':sha(home_old),'afterSha256':
 for file in pages:
     old=(OUT/file).read_bytes()
     if previous:
-        for edit in next(r for r in previous['files'] if r['file']==file)['edits']:
+        record=next(r for r in previous['files'] if r['file']==file)
+        if record.get('copyEdits'):old=restore_html(old.decode('utf-8'),record['copyEdits']).encode('utf-8')
+        for edit in record['edits']:
             assert old.count(edit['after'].encode())==1;old=old.replace(edit['after'].encode(),edit['before'].encode())
     assert sha(old)==parent['files'][file]['sha256'];data=old;edits=[]
     for asset,(before,after) in assets.items():
         if asset=='ui/design.css' and file!='index.html':continue
         a=asset+'?v='+sha(before)[:12];b=asset+'?v='+sha(after)[:12];assert data.count(a.encode())==1;data=data.replace(a.encode(),b.encode());edits.append({'before':a,'after':b})
-    files.append({'file':file,'beforeSha256':sha(old),'afterSha256':sha(data),'edits':edits});outputs[file]=data
-overlay={'version':2,'baseline':{'manifest':'release-support/material-review/baseline-manifest.json','manifestSha256':sha(parent_bytes),'verification':'release-support/material-review/baseline-verification.json','verificationSha256':sha(report_bytes)},'files':files,'sources':sources}
+    branded,copy_edits=brand_html(data.decode('utf-8'));data=branded.encode('utf-8')
+    files.append({'file':file,'beforeSha256':sha(old),'afterSha256':sha(data),'edits':edits,'copyEdits':copy_edits});outputs[file]=data
+overlay={'version':3,'baseline':{'manifest':'release-support/material-review/baseline-manifest.json','manifestSha256':sha(parent_bytes),'verification':'release-support/material-review/baseline-verification.json','verificationSha256':sha(report_bytes)},'files':files,'sources':sources}
 overlay_bytes=(json.dumps(overlay,ensure_ascii=False,indent=2)+'\n').encode();manifest=json.loads(parent_bytes);manifest['reviewOverlay']={'path':'release-support/material-review/overlay.json','sha256':sha(overlay_bytes)}
 for file,data in outputs.items(): manifest['files'][file]={**parent['files'][file],'sha256':sha(data),'bytes':len(data)}
 if '--write' in sys.argv:

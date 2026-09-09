@@ -15,7 +15,7 @@
  reviewBox.innerHTML=`<span class="eco-material-eyebrow">Visszaigazolás a csapatunktól</span><h3>Ellenőrizzük, és e-mailben válaszolunk.</h3><p>Elküldheted a fotót közvetlenül szakmai ellenőrzésre, vagy kérhetsz visszaigazolást a fenti eredményhez. Ehhez nem indítunk újabb automatikus elemzést.</p><label for="material-review-email">E-mail-címed<input id="material-review-email" data-review-email type="email" autocomplete="email" inputmode="email" maxlength="254" placeholder="nev@pelda.hu" required></label><label class="eco-material-review-consent"><input type="checkbox" data-review-consent required><span>Kérem az e-mailes ellenőrzést, és hozzájárulok, hogy az ECO Clean a fotómat, megjegyzésemet és e-mail-címemet a válaszadáshoz privát módon megőrizze.<small>Ez nem hírlevél-feliratkozás, és nem engedélyezi a kép referenciaanyagként való felhasználását.</small></span></label><button type="submit" class="eco-material-button" data-review-submit disabled>Fotó elküldése ellenőrzésre <span aria-hidden="true">→</span></button><p class="eco-material-review-status" role="status" aria-live="polite" data-review-status>Válassz fotót, majd add meg az e-mail-címedet.</p>`;
  result.after(reviewBox);
  const reviewEmail=reviewBox.querySelector('[data-review-email]'),reviewConsent=reviewBox.querySelector('[data-review-consent]'),reviewSubmit=reviewBox.querySelector('[data-review-submit]'),reviewStatus=reviewBox.querySelector('[data-review-status]');
- const caption=section.querySelector('.eco-material-caption');if(caption)caption.textContent='A jól látható szövetszerkezetet összevetjük a NovaLife-mintákkal. E-mailes szakmai ellenőrzést is kérhetsz; a kérdéseket még időpontfoglalás előtt tisztázzuk.';
+ const caption=section.querySelector('.eco-material-caption');if(caption)caption.textContent='A jól látható szövetszerkezetet összevetjük az ANDANTE NovaLife-mintákkal. E-mailes szakmai ellenőrzést is kérhetsz; a kérdéseket még időpontfoglalás előtt tisztázzuk.';
 
  function loadSecurity(){
   if(window.turnstile?.render)return Promise.resolve(window.turnstile);
@@ -79,27 +79,29 @@
    }finally{bitmap.close();}
   }catch(e){if(request===version)message(e.message,true);}finally{if(request===version)buttons();}
  }
+ function brandName(text){return text.replace(/\b(?:ANDANTE[ \t]+)?NovaLife\b/gi,'ANDANTE NovaLife').replace(/\b([Aa]) (?=ANDANTE NovaLife\b)/g,'$1z ');}
  function validate(data){
   if(!data||typeof data!=='object'||!['anyag','cimke','hasznalhatatlan'].includes(data.kep_tipus))throw Error('Az elemzés válasza nem értékelhető. Próbáld újra egy másik fotóval.');
   const clean={kep_tipus:data.kep_tipus};for(const key of ['anyag','anyag_alt','indoklas','modszer','ellenorzes','kerdes_ugyfelnek'])clean[key]=typeof data[key]==='string'?data[key].slice(0,3000):'';
   for(const key of ['kerulendo','kockazatok'])clean[key]=Array.isArray(data[key])?data[key].filter(x=>typeof x==='string').slice(0,12).map(x=>x.slice(0,800)):[];
+  for(const key of ['anyag','anyag_alt','indoklas','modszer','ellenorzes','kerdes_ugyfelnek'])clean[key]=brandName(clean[key]);for(const key of ['kerulendo','kockazatok'])clean[key]=clean[key].map(brandName);
   const states=['likely_other','possible_novalife','label_novalife','uncertain'];
   let novaStatus=states.includes(data.novalife?.status)?data.novalife.status:'uncertain';
   if(data.kep_tipus==='hasznalhatatlan')novaStatus='uncertain';
   if(novaStatus==='label_novalife'&&data.kep_tipus!=='cimke')novaStatus='possible_novalife';
-  clean.novalife={status:novaStatus,reason:typeof data.novalife?.reason==='string'?data.novalife.reason.slice(0,2000):''};
+  clean.novalife={status:novaStatus,reason:typeof data.novalife?.reason==='string'?brandName(data.novalife.reason.slice(0,2000)):''};
   clean.tisztitasi_kod=data.kep_tipus==='cimke'&&['W','S','WS','X'].includes(data.tisztitasi_kod)?data.tisztitasi_kod:'ismeretlen';
   if(!clean.indoklas||data.kep_tipus!=='hasznalhatatlan'&&!clean.anyag)throw Error('Az elemzésből fontos részlet hiányzik. Kérjük, próbáld újra.');for(const key of ['modszer','ellenorzes'])if(/helyszín|anyagprób|rejtett hely/iu.test(clean[key]))clean[key]='A szükséges részleteket online, a fotóid és az elérhető kezelési útmutató alapján tisztázzuk, még időpontfoglalás előtt.';return clean;
  }
  const novaCopy={
-  likely_other:{title:'A fotón nem NovaLife-jellegű felület látható.',next:'Továbbléphetsz az árkalkulátorhoz. E-mailes szakmai visszaigazolást is kérhetsz az alábbi mezőben.',quality:'Más szövetre utaló jelek'},
-  possible_novalife:{title:'NovaLife vagy hasonló bevonat gyanúja',next:'Tisztítás előtt szakmai egyeztetés szükséges. Mutasd meg a kezelési címkét, vagy beszéljünk telefonon a következő lépésről.',quality:'További ellenőrzést igénylő jelek'},
-  label_novalife:{title:'NovaLife-jelölés látható',next:'A jelölés miatt a tisztítás lehetőségéről előzetesen, a kezelési előírás ismeretében kell egyeztetnünk. Kérjük, keress bennünket telefonon.',quality:'A címkén látható jelölés'},
-  uncertain:{title:'A NovaLife nem zárható ki a fotóból',next:'Egy élesebb részletfotó vagy a kezelési címke segíthet. A bizonytalanság tisztázásáig a fotó alapján nem dönthető el a megfelelő tisztítás.',quality:'További részlet szükséges'}
+  likely_other:{title:'A fotón nem ANDANTE NovaLife-jellegű felület látható.',next:'Továbbléphetsz az árkalkulátorhoz. E-mailes szakmai visszaigazolást is kérhetsz az alábbi mezőben.',quality:'Más szövetre utaló jelek'},
+  possible_novalife:{title:'ANDANTE NovaLife vagy hasonló bevonat gyanúja',next:'Tisztítás előtt szakmai egyeztetés szükséges. Mutasd meg a kezelési címkét, vagy beszéljünk telefonon a következő lépésről.',quality:'További ellenőrzést igénylő jelek'},
+  label_novalife:{title:'ANDANTE NovaLife-jelölés látható',next:'A jelölés miatt a tisztítás lehetőségéről előzetesen, a kezelési előírás ismeretében kell egyeztetnünk. Kérjük, keress bennünket telefonon.',quality:'A címkén látható jelölés'},
+  uncertain:{title:'Az ANDANTE NovaLife nem zárható ki a fotóból',next:'Egy élesebb részletfotó vagy a kezelési címke segíthet. A bizonytalanság tisztázásáig a fotó alapján nem dönthető el a megfelelő tisztítás.',quality:'További részlet szükséges'}
  };
  function novaPanel(d){
   const state=d.novalife.status,copy=novaCopy[state],panel=el('div',undefined,'eco-material-novalife');panel.dataset.novalifeStatus=state;
-  panel.append(el('span','NovaLife · előzetes kockázatszűrés','eco-material-eyebrow'),el('h3',copy.title));
+  panel.append(el('span','ANDANTE NovaLife · előzetes kockázatszűrés','eco-material-eyebrow'),el('h3',copy.title));
   panel.append(el('p',state==='likely_other'?d.indoklas:d.novalife.reason,'eco-material-novalife-reason'));
   if(state!=='likely_other')panel.append(el('p',copy.next,'eco-material-novalife-next'));
   const actions=el('div',undefined,'eco-material-novalife-actions');

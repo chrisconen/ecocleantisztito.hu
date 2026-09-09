@@ -7,8 +7,9 @@ def verify(manifest):
     try:
         spec=importlib.util.spec_from_file_location('review_parent',ROOT/'release-support/verify-studio-overlay.py');gate=importlib.util.module_from_spec(spec);spec.loader.exec_module(gate);gate.ROOT=ROOT
         sha=gate.sha;need=gate.require
+        branding_spec=importlib.util.spec_from_file_location('review_branding',ROOT/'release-support/material-review/brand_copy.py');branding=importlib.util.module_from_spec(branding_spec);branding_spec.loader.exec_module(branding)
         overlay=gate.bound(manifest['reviewOverlay'],'release-support/material-review/overlay.json')
-        need(set(overlay)=={'version','baseline','files','sources'} and overlay['version']==2,'Review overlay schema')
+        need(set(overlay)=={'version','baseline','files','sources'} and overlay['version']==3,'Review overlay schema')
         b=overlay['baseline'];need(set(b)=={'manifest','manifestSha256','verification','verificationSha256'},'Review baseline schema')
         parent=gate.bound({'path':b['manifest'],'sha256':b['manifestSha256']},'release-support/material-review/baseline-manifest.json')
         report=gate.bound({'path':b['verification'],'sha256':b['verificationSha256']},'release-support/material-review/baseline-verification.json')
@@ -32,8 +33,10 @@ def verify(manifest):
                 need(set(r)=={'file','beforeSha256','afterSha256','baseline'} and r['baseline']=='release-support/material-review/baseline/'+('ui-design.css' if file=='ui/design.css' else Path(file).name),'Review asset baseline')
                 original=gate.read_path(ROOT,r['baseline'])
             else:
-                need(set(r)=={'file','beforeSha256','afterSha256','edits'} and len(r['edits'])==(3 if file=='index.html' else 2),'Review HTML edits')
-                original=data;seen=set()
+                need(set(r)=={'file','beforeSha256','afterSha256','edits','copyEdits'} and len(r['edits'])==(3 if file=='index.html' else 2),'Review HTML edits')
+                text=branding.restore_html(data.decode('utf-8'),r['copyEdits']);branded,expected_edits=branding.brand_html(text)
+                need(branded.encode('utf-8')==data and expected_edits==r['copyEdits'],'Only deterministic display branding is allowed')
+                original=text.encode('utf-8');seen=set()
                 for edit in r['edits']:
                     need(set(edit)=={'before','after'},'Review edit schema');asset=edit['before'].split('?')[0]
                     need(asset in (assets if file=='index.html' else assets-{'ui/design.css'}) and asset not in seen,'Review revision asset');seen.add(asset)
@@ -44,7 +47,7 @@ def verify(manifest):
             if file not in records:need(manifest['files'][file]==record and sha(gate.artifact(file))==record['sha256'],'Review unlisted change '+file)
         reader=lambda file:restored[file] if file in restored else gate.artifact(file)
         errors.extend(gate.verify(parent,read_current=reader))
-    except (OSError,ValueError,KeyError,TypeError,AttributeError,UnicodeError) as e:errors.append('Review proof: '+str(e))
+    except (OSError,ValueError,KeyError,TypeError,AttributeError,UnicodeError,AssertionError,IndexError) as e:errors.append('Review proof: '+str(e))
     return errors
 if __name__=='__main__':
     errors=verify(json.loads((ROOT/'release-support/release-manifest.json').read_bytes()));print(json.dumps({'issues':errors}));sys.exit(bool(errors))

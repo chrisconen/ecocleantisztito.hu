@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "baseline": {
     "manifest": "release-support/material-review/baseline-manifest.json",
     "manifestSha256": "23f45f6d7a1c3b47e4a3e4e7e5dfd45b52527d5f01dfcbc427b2b794f5355fbc",
@@ -10,7 +10,7 @@
     {
       "file": "material-recognition/app.js",
       "beforeSha256": "6a51333ef5d70798d8970a476f7adf3b132a3e29b41da31f9955ce26385e4211",
-      "afterSha256": "e99215a0cf3dff32c22cd3bad544cf6bb108d5aacb1697c0b03b1742d797f8bc",
+      "afterSha256": "6e2c691a7eb471b36b44c82568d0b3bfd164a0f46ab91247b2753d0beddd1f66",
       "baseline": "release-support/material-review/baseline/app.js"
     },
     {
@@ -28,11 +28,11 @@
     {
       "file": "index.html",
       "beforeSha256": "3892caf0b463453003004a238c903b6338bf18bfeba61e6a4de29fb472dda3bd",
-      "afterSha256": "29d2a3263a59654d8869579e7b673aca1e474b09f138e46ef37d010ac3c6c9aa",
+      "afterSha256": "ef10afdd9220ecbc4844270063c06b147bd8146a5e4aee53fa26eb9ecb43fc5a",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
@@ -42,515 +42,1985 @@
           "before": "ui/design.css?v=c2fee50158f2",
           "after": "ui/design.css?v=8a9be96ad368"
         }
+      ],
+      "copyEdits": [
+        {
+          "offset": 80115,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 80221,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 80264,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 80934,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 81297,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
+        },
+        {
+          "offset": 88311,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 89162,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 89206,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
+        }
       ]
     },
     {
       "file": "karpittisztitas-badacsony.html",
       "beforeSha256": "785632a04fdca91bcc760a09213f1ed45d7453a8339568b122e9f539cd0c98ba",
-      "afterSha256": "62cca8d827ab62c221d5445af87d291d518824de1b95f18dc03700752a975c32",
+      "afterSha256": "1f2d1019440bf94d37891a66dcaed18ceca8fd15dfc174432463ef1d6eb9eda5",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 55473,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 55579,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 55622,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 56292,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 56665,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
+        },
+        {
+          "offset": 61135,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 62020,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 62064,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
         }
       ]
     },
     {
       "file": "karpittisztitas-balatonalmadi.html",
       "beforeSha256": "3f50877b7ad53ee79ed396dc9aad9605d02824557d733cc190e63f1bbfc52bce",
-      "afterSha256": "adf12cfaf277731e117597e8e9481ca2cd815115b0ee74e330fad8863f55a606",
+      "afterSha256": "a58088a4240dbecb35278301d3ff1170669310d425896e0e0943901ff8fe3108",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 55621,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 55727,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 55770,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 56440,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 56813,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
+        },
+        {
+          "offset": 61287,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 62172,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 62216,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
         }
       ]
     },
     {
       "file": "karpittisztitas-balatonboglar.html",
       "beforeSha256": "d93ad00e49c2e718d59fe0a2f130f341ed59b1dae47d67a6788d8dbbb19a685e",
-      "afterSha256": "fc7370d2e10854aee7b5bb6132b10337e0b6ad14e4bfbc732c35128de87af8b3",
+      "afterSha256": "0df42ed4c130d5249e962a09a9d933fcf2751b8d90706ba30cf26b7282222dd1",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 55618,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 55724,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 55767,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 56437,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 56810,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
+        },
+        {
+          "offset": 61284,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 62169,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 62213,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
         }
       ]
     },
     {
       "file": "karpittisztitas-balatonfoldvar.html",
       "beforeSha256": "f43e7308e60122fe739251fc54c0475e68098bfbcda61638b39e1eb241488748",
-      "afterSha256": "ca6ba95017eee0b1296d72e8041e7250cdbf417e58d5864cd1ebbc8f0c44f4e7",
+      "afterSha256": "a34e7813ca61fe14f7ef38b17e4085f3573e24795e5adaffbc2660d48d72373b",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 55657,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 55763,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 55806,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 56476,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 56849,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
+        },
+        {
+          "offset": 61324,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 62209,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 62253,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
         }
       ]
     },
     {
       "file": "karpittisztitas-balatonfured.html",
       "beforeSha256": "e48cd5abbf4f9a14295069c8cab4365b10b471ef4beaa16f86518b6bc55f5ec2",
-      "afterSha256": "eb7db107a107587ef314c15312904f676898b8123605ba795f4ff67ff576f91b",
+      "afterSha256": "8ea07c656af6ec3eed61738bf7d8217d8d61a55f1d099c911be0f185d9888ff9",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 55576,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 55682,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 55725,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 56395,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 56768,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
+        },
+        {
+          "offset": 61241,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 62126,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 62170,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
         }
       ]
     },
     {
       "file": "karpittisztitas-balatonfuzfo.html",
       "beforeSha256": "1df49ef1480e7f73415a8efd7b4a726e84787fdf5e67a91d540d43c99b9f4c5c",
-      "afterSha256": "3a3763fdfb461f89ccf79e39ee94edc55cb4f9ad3241a926b6c5f37ff39146ce",
+      "afterSha256": "ce3d915ee1ce16d461d7d038d8cf6149110a737545ad61c9988ec44211abf389",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 55564,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 55670,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 55713,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 56383,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 56756,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
+        },
+        {
+          "offset": 61229,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 62114,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 62158,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
         }
       ]
     },
     {
       "file": "karpittisztitas-balatonkenese.html",
       "beforeSha256": "eb2d62b71a0907d5b427df273e870042cc58d7c709d1da07fc817205838ba0f5",
-      "afterSha256": "0d3f68673033d947ec8fc9a3531cfae7822d54b71ea6907ef1b53446314da168",
+      "afterSha256": "d02b1b3d7ee45a5a1336c24d79d96e823d5219cefe2d18ab51982c7af64303ea",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 55604,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 55710,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 55753,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 56423,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 56796,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
+        },
+        {
+          "offset": 61270,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 62155,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 62199,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
         }
       ]
     },
     {
       "file": "karpittisztitas-balatonlelle.html",
       "beforeSha256": "c01e552ef72e66a3afe40a8bd304a02567647a9e3eeadfdf892d668af1117ad9",
-      "afterSha256": "625c5234a4a35abc4b62004b4fe012fa52bf305bbb2c3c398837355975a47cbf",
+      "afterSha256": "97f5b59b84a1c63351cf10c6948372a90068d1774cb452d5270ab8d3e464e2f9",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 55564,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 55670,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 55713,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 56383,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 56756,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
+        },
+        {
+          "offset": 61229,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 62114,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 62158,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
         }
       ]
     },
     {
       "file": "karpittisztitas-balatonszemes.html",
       "beforeSha256": "5b990b9646adb015cbfd600060621f8e96fa3c91366e9aa4eecd9735e45c66d6",
-      "afterSha256": "ccdc0ffc13d33bca60bb2b85961d28b095d40395f2c1a92e5001e68295533879",
+      "afterSha256": "50cd258bf1b34250cb08427276a483ceb26bdfe20cce363def361d043a516dae",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 55608,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 55714,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 55757,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 56427,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 56800,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
+        },
+        {
+          "offset": 61274,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 62159,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 62203,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
         }
       ]
     },
     {
       "file": "karpittisztitas-fonyod.html",
       "beforeSha256": "301f07a07bc831aa4f97bfe3a683878505b50486c8a9ee9e0290e5e56195bace",
-      "afterSha256": "db1f5b7050fb43cd604977eca42c2f71cd5284f6c1e51ddadeb96177851814ac",
+      "afterSha256": "ed399b6beeb6c0718b5d2c6cfc2856b62f3e3cfe92819bd419a2d95636a23f0f",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 55298,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 55404,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 55447,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 56117,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 56490,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
+        },
+        {
+          "offset": 60957,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 61842,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 61886,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
         }
       ]
     },
     {
       "file": "karpittisztitas-gyor.html",
       "beforeSha256": "e1bbad9cfdf8f7a11f9c16db7651cf6fb767414391de47588428e385fd398128",
-      "afterSha256": "e6636cdec00112ca37acb6d9b8da523a7367211004f8dc970d2eacf2289628e3",
+      "afterSha256": "f5e586762c3bfb354f438b4d0d5e3746d7b43f91b6b2f31e45502c13692c6c9a",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 47393,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 47499,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 47542,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 48212,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 48585,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
+        },
+        {
+          "offset": 53050,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 53935,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 53979,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
         }
       ]
     },
     {
       "file": "karpittisztitas-heviz.html",
       "beforeSha256": "101c0550eac40a8c4d5907df374eb9cf47ae417c7c6e6d200866c964d296f3cc",
-      "afterSha256": "5e3c6476b90b10dc2af97d8e87e5c6a51ddef2069acd63a95b2633503becbd9b",
+      "afterSha256": "844024c1136dc935d910c5de609d16e2f95386a995a6cd58955fee9abaad2047",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 55178,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 55284,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 55327,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 55997,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 56370,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
+        },
+        {
+          "offset": 60836,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 61721,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 61765,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
         }
       ]
     },
     {
       "file": "karpittisztitas-keszthely.html",
       "beforeSha256": "9036df04af31b3ad7fbc27ea12b217fe87a5ceecd0195cdbe55b63c0439d5898",
-      "afterSha256": "771bbdf3662b1c9c356f42557dad7ec7efb37d1a8d713879059e9ee31f94b5af",
+      "afterSha256": "11ae4d7358d58227adf06da30ca5ec9f83920b620902bbf987fa4b22128fdcde",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 55344,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 55450,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 55493,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 56163,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 56536,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
+        },
+        {
+          "offset": 61006,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 61891,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 61935,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
         }
       ]
     },
     {
       "file": "karpittisztitas-komarom.html",
       "beforeSha256": "0c388bc34eb57e54fb7d06d03b419dcbb2600d1e13f2d3b27618340de90988c5",
-      "afterSha256": "486dc5c90c90da246065f7c32896b5f2a29cabf5a8817ab3bb200acb74be8733",
+      "afterSha256": "3634b5ea373d7baeaab71a808cc75fd586d89d2ac06606ee123dcd6061615ae1",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 45337,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 45443,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 45486,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 46156,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 46529,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
+        },
+        {
+          "offset": 50997,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 51882,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 51926,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
         }
       ]
     },
     {
       "file": "karpittisztitas-mosonmagyarovar.html",
       "beforeSha256": "49a43a17e86eb90c1cae3875da87ac922cb9bdb98cc00383e8afdc384cbf135f",
-      "afterSha256": "2253b13c85db11cf2d41cea844030290a21cc9c8db4cce979f2c5dca910eab68",
+      "afterSha256": "b46d4a1a4ca1711ed279bfdd24dc388e04c2c20bf79d9ae1dc9136a27c2fc27b",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 45583,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 45689,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 45732,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 46402,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 46775,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
+        },
+        {
+          "offset": 51251,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 52136,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 52180,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
         }
       ]
     },
     {
       "file": "karpittisztitas-papa.html",
       "beforeSha256": "b5a81d0ee06aae62e9df2dcfa2925c969c7db02927dba81cd4ff4d7ffd9fae11",
-      "afterSha256": "82566e33f2b8c017a9bfffb7b8471cf70b49bd02f0029f8840a28abe26f82e42",
+      "afterSha256": "141bbf2b87d1d2ecbc078a92148cc760a6d519407fec7247afcb420eca94d693",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 45248,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 45354,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 45397,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 46067,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 46440,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
+        },
+        {
+          "offset": 50905,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 51790,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 51834,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
         }
       ]
     },
     {
       "file": "karpittisztitas-revfulop.html",
       "beforeSha256": "d9abd525df42a575a20cd2dae2d31e2393190a344cc8bafb5b368843dfb48fcf",
-      "afterSha256": "1825654a12840957af2c97f08c6daeb8c8a77bcbf3680717921356fd6455ff96",
+      "afterSha256": "5efaa0a5b0dffbbb57811342169481ce0500b463389eeef6ed858aa2db5c89b0",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 55344,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 55450,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 55493,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 56163,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 56536,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
+        },
+        {
+          "offset": 61005,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 61890,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 61934,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
         }
       ]
     },
     {
       "file": "karpittisztitas-siofok.html",
       "beforeSha256": "3aa8e19e63e1c06ccf28f312728498d854b60db20880c3f55b635c69f045d3a7",
-      "afterSha256": "411c624ddf7b68ba37e36d1782e76d16ed090414b4b4b77541094314be61d273",
+      "afterSha256": "d2bcb1b05f5f0a2ce79dfdb89225f979bbb72c61d80cb72d91f6f4c236573673",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 55262,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 55368,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 55411,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 56081,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 56454,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
+        },
+        {
+          "offset": 60921,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 61806,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 61850,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
         }
       ]
     },
     {
       "file": "karpittisztitas-sopron.html",
       "beforeSha256": "ccf0834136463a5d9b39da7d8c91a00b6249eaf8ac436bd67ea22b9d30e1f3f4",
-      "afterSha256": "aa6c38c443c13c4ecae98ce0ba12642b754e55ef3cc6999d00b0372b30560788",
+      "afterSha256": "376fe714878e8e8bfe6f41e449df389169b9c1ccd49bac1f6c981738d9050cb3",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 45353,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 45459,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 45502,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 46172,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 46545,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
+        },
+        {
+          "offset": 51012,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 51897,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 51941,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
         }
       ]
     },
     {
       "file": "karpittisztitas-szombathely.html",
       "beforeSha256": "a8adad8cd6b9359652fcddba0410333b76fb05605644cd4bf668ed89ff20ea3f",
-      "afterSha256": "be66711c1ca0e638994c74c8e5ba7714b9fa6fec9cae0b77646fbf41209bc88f",
+      "afterSha256": "c445af3fe1b9a616630fbe885b374857b851fc8fff41dc710eb393ca05d126f6",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 45485,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 45591,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 45634,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 46304,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 46677,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
+        },
+        {
+          "offset": 51149,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 52034,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 52078,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
         }
       ]
     },
     {
       "file": "karpittisztitas-tapolca.html",
       "beforeSha256": "f97648c388c39e1158ab4d8bc094d6b14c04ba36118f462f8760262482fd3fbb",
-      "afterSha256": "3d08b0914168b96200f879ceb05dff00078c50bad3fba7a9025bbfcdd9b089b3",
+      "afterSha256": "2ad36399cea0d3b819b4c0c2cb8b599ced4fa7a1902298fd438d952c1c525be6",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 55298,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 55404,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 55447,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 56117,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 56490,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
+        },
+        {
+          "offset": 60958,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 61843,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 61887,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
         }
       ]
     },
     {
       "file": "karpittisztitas-tata.html",
       "beforeSha256": "58a71bff6be12b910027378a09b027ef92d580359bb8ebf3b8c76ae7b4aba427",
-      "afterSha256": "0d5328da998a402ee4eb8e8cb9c794a986c70b4ad50da7b63995e8ca2d6a27b4",
+      "afterSha256": "3831ee7b12e00da0875b7f8ba077d403c6f9667e1b36df2e38abadf537487965",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 45146,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 45252,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 45295,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 45965,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 46338,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
+        },
+        {
+          "offset": 50803,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 51688,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 51732,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
         }
       ]
     },
     {
       "file": "karpittisztitas-tatabanya.html",
       "beforeSha256": "97f783c43e9b8da0477ff0af7fabea33289cf6736e0be26cf9816b9f4d55c0e0",
-      "afterSha256": "6d00f174856a9b6ae6081a0210b7b7094b6f150a123fcb9b7263a73395a706ea",
+      "afterSha256": "cfe277879f856802f920e4e4ec941fa9607881dab845bd15ffe72c4e621618ca",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 45292,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 45398,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 45441,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 46111,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 46484,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
+        },
+        {
+          "offset": 50954,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 51839,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 51883,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
         }
       ]
     },
     {
       "file": "karpittisztitas-tihany.html",
       "beforeSha256": "d45909126dc55c20d2c317e5ece1dff3d0a983e1c47b040388f4d7d8d5e0998a",
-      "afterSha256": "58d8ddbb7f5bd34da938953d3f7fced8107bdcd03ad931e7b8a692db6b260a4f",
+      "afterSha256": "15b398a8c543b563ba35554287a3c086c1c6e68e4c7b3c2a46ab4221c631799c",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 55190,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 55296,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 55339,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 56009,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 56382,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
+        },
+        {
+          "offset": 60849,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 61734,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 61778,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
         }
       ]
     },
     {
       "file": "karpittisztitas-veszprem.html",
       "beforeSha256": "67731f39153039fc528fb049fdc26933f0568ef39056f6c7666bf65a94bdfa69",
-      "afterSha256": "de8fdfb4a1ae740d0cfd3accf1468a5d2a35cd1e7cad1e113406cc9712d72fec",
+      "afterSha256": "c334556d632892bf50f8e0193a842590a7113ccce9d7592f37ff4207d4f4a0fa",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 45279,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 45385,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 45428,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 46098,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 46471,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
+        },
+        {
+          "offset": 50940,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 51825,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 51869,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
         }
       ]
     },
     {
       "file": "karpittisztitas-zamardi.html",
       "beforeSha256": "3ca46dc86776d9d493ce1284f5d66565cdf42cf819aa9559a2c0dc4fa11cbecf",
-      "afterSha256": "bb288b5c12442b2de548d280f3e8b1655757bea3cb529d584f2127085d8ac4ba",
+      "afterSha256": "6cc9a3d8999e46afee4740807c3194a4954ce26a7ff888913e93788ba501cc3e",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 55235,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 55341,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 55384,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 56054,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 56427,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
+        },
+        {
+          "offset": 60895,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 61780,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 61824,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
         }
       ]
     },
     {
       "file": "karpittisztitas-kalocsa.html",
       "beforeSha256": "42996ac783345394b26fe1189cfa82b7d59518c4b1f4bf10304d5f424104fa04",
-      "afterSha256": "c42dd29b59219f6b708b3a04eb388c679d8fc2c2e47de03c4328682cbd807420",
+      "afterSha256": "0315ce4a5d552881f0326bc978e7167739dad43f5a646e1d2f57b9495bcfa2a0",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 34595,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 35446,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 35490,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
+        },
+        {
+          "offset": 36660,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 36766,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 36809,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 37479,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 37839,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
         }
       ]
     },
     {
       "file": "karpittisztitas-baja.html",
       "beforeSha256": "c8e8fb1ebbff53789c0a4323174e8721ea2654ea92f57a23310a454f5888de84",
-      "afterSha256": "e14d2f27a241135454c4624d4143cc5adf2b0b31cd9de24d3f896216e70bd079",
+      "afterSha256": "deecb18d5361450c1c2f42d624581db05475bfc9af5e410e93b83257d4160db4",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 34544,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 35395,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 35439,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
+        },
+        {
+          "offset": 36606,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 36712,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 36755,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 37425,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 37785,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
         }
       ]
     },
     {
       "file": "karpittisztitas-kiskoros.html",
       "beforeSha256": "76e71a2e846a876b02958856bd32f4fc645662f1bde5b97d386ae4a432b2dea8",
-      "afterSha256": "7e6f5fc82e504c6440ad942aa8973f3cc3e72d44e9c26761dd4c50df318fa98a",
+      "afterSha256": "24900b9984572efaa10f5c516396aa1c5dc0f8abb076fdfb81662f01d6174abf",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 34617,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 35468,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 35512,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
+        },
+        {
+          "offset": 36683,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 36789,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 36832,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 37502,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 37862,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
         }
       ]
     },
     {
       "file": "karpittisztitas-szekszard.html",
       "beforeSha256": "9f4186d7f6a9619c8f73d46ec99128dc4ae23564fae11767d07b42ce87c0ff5c",
-      "afterSha256": "112bfecf845b5169987080499e7766840872961c51c62c5c02a8dd5c74a42580",
+      "afterSha256": "8c671c0e4518bd561419d9b2949f1db3968b2ea5962079be504d6d7d4ebf66f9",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 34634,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 35485,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 35529,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
+        },
+        {
+          "offset": 36701,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 36807,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 36850,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 37520,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 37880,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
         }
       ]
     },
     {
       "file": "karpittisztitas-paks.html",
       "beforeSha256": "b7cf5667a3e227a8efa84011363d1d19533e7f7ff503d65e514cfbdf2389afb9",
-      "afterSha256": "29abebf484d510f60154d6b06b412aff77e88a9638027cfcaf3f0eac21b8766c",
+      "afterSha256": "81f39107078d43da6a2731ad7f486f0c7410cc94c3bd8a536c504e5f7ee6b6c6",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 34549,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 35400,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 35444,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
+        },
+        {
+          "offset": 36611,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 36717,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 36760,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 37430,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 37790,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
         }
       ]
     },
     {
       "file": "karpittisztitas-solt.html",
       "beforeSha256": "adca499386c80849a021e648ea450e884110bdcd85e2a61540489fb8401e7c53",
-      "afterSha256": "1736898dcd1712513a86ae4ef47ccbaade8c90574bf348351303e929ced2e748",
+      "afterSha256": "cb1204105f14ddf66017ccf56a171bf8809161ecee90c278400baafb1541b1cd",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 34549,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 35400,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 35444,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
+        },
+        {
+          "offset": 36611,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 36717,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 36760,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 37430,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 37790,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
         }
       ]
     },
     {
       "file": "karpittisztitas-dunafoldvar.html",
       "beforeSha256": "f65f9995ce76d66fe70450af5da8e2e83f178e0d3101d2b871e6d2970233afee",
-      "afterSha256": "b24df9d790c2cdec02d4a3dccb542b01511dcbd24bee17d1827fac668ad1cffc",
+      "afterSha256": "f8a7564a73d283acbb849f157526581170aa7d0cf7df7c0b953aa0fb41212995",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 34668,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 35519,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 35563,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
+        },
+        {
+          "offset": 36737,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 36843,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 36886,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 37556,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 37916,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
         }
       ]
     },
     {
       "file": "karpittisztitas-matractisztitas.html",
       "beforeSha256": "1ffced1a505f8acc492d69211f54d7a89c3ecce924f40dcad4371940727fb508",
-      "afterSha256": "51ff2da26eda9864cb8e24fb7d9190735131b94d4bb0585ef8ea7ce3987993d2",
+      "afterSha256": "bb467185491ed3fa486ced2850bef158f2ce88e7e43950211d64a448b15eb2b0",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
-          "after": "material-recognition/app.js?v=e99215a0cf3d"
+          "after": "material-recognition/app.js?v=6e2c691a7eb4"
         },
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        }
+      ],
+      "copyEdits": [
+        {
+          "offset": 35075,
+          "before": "NovaLife kárpitkalauz",
+          "after": "ANDANTE NovaLife kárpitkalauz"
+        },
+        {
+          "offset": 35926,
+          "before": "Bizonytalan, hogy NovaLife a kárpit?",
+          "after": "Bizonytalan, hogy ANDANTE NovaLife a kárpit?"
+        },
+        {
+          "offset": 35970,
+          "before": "Egy közeli fotó segíthet felismerni a NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.",
+          "after": "Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk."
+        },
+        {
+          "offset": 37133,
+          "before": "NovaLife vagy más kárpit? Nézzük meg közelebbről.",
+          "after": "ANDANTE NovaLife vagy más kárpit? Nézzük meg közelebbről."
+        },
+        {
+          "offset": 37239,
+          "before": "hogy NovaLife",
+          "after": "hogy ANDANTE NovaLife"
+        },
+        {
+          "offset": 37282,
+          "before": "Mutass egy közeli fotót, és megpróbáljuk felismerni a NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet.",
+          "after": "Mutass egy közeli fotót, és megpróbáljuk felismerni az ANDANTE NovaLife-ra vagy hasonló bevonatra utaló jeleket, miközben az anyag jellegéről is támpontot adunk. Ha a képből nem dönthető el, a kezelési címke vagy egy újabb részletfotó segíthet."
+        },
+        {
+          "offset": 37952,
+          "before": "A fotó előzetes kockázatszűréshez ad támpontot. A NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja.",
+          "after": "A fotó előzetes kockázatszűréshez ad támpontot. Az ANDANTE NovaLife hiányát, a szálösszetételt és a tisztíthatóságot önmagában nem igazolja."
+        },
+        {
+          "offset": 38312,
+          "before": "NovaLife-kockázatszűrés",
+          "after": "ANDANTE NovaLife-kockázatszűrés"
         }
       ]
     }
@@ -558,7 +2028,7 @@
   "sources": [
     {
       "path": "demo/material-review/app.js",
-      "sha256": "e99215a0cf3dff32c22cd3bad544cf6bb108d5aacb1697c0b03b1742d797f8bc"
+      "sha256": "6e2c691a7eb471b36b44c82568d0b3bfd164a0f46ab91247b2753d0beddd1f66"
     },
     {
       "path": "demo/material-review/design.css",

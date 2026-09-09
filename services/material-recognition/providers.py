@@ -36,9 +36,9 @@ MATERIALS = ['valódi bőr', 'műbőr/eco-bőr (PU/PVC)', 'bársony (velvet)', '
              'len vagy lenhatású', 'gyapjú / gyapjúkeverék', 'jacquard / gobelin mintás', 'háló (mesh)', 'nem eldönthető']
 
 NOVALIFE_REASONS = {
-    'likely_other': 'A fotón jól felismerhető textilszerkezet látható, nem a keresett NovaLife bőrhatású felülete. Továbbléphetsz az árkalkulátorhoz; e-mailes szakmai visszaigazolást is kérhetsz.',
-    'possible_novalife': 'A felület NovaLife-hoz hasonló bőrhatású vagy velúros jellegű. Tisztítás előtt egyeztessünk, és ha megvan, mutasd meg a gyártói címkét.',
-    'label_novalife': 'A célképként megadott címke előzetes kiolvasása NovaLife megjelölést jelez. A feliratot az eredetin is ellenőrizni kell; ez önmagában nem igazolja az összetételt, a felületkezelést vagy egy tisztítási eljárás biztonságát.',
+    'likely_other': 'A fotón jól felismerhető textilszerkezet látható, nem a keresett ANDANTE NovaLife bőrhatású felülete. Továbbléphetsz az árkalkulátorhoz; e-mailes szakmai visszaigazolást is kérhetsz.',
+    'possible_novalife': 'A felület ANDANTE NovaLife-hoz hasonló bőrhatású vagy velúros jellegű. Tisztítás előtt egyeztessünk, és ha megvan, mutasd meg a gyártói címkét.',
+    'label_novalife': 'A célképként megadott címke előzetes kiolvasása ANDANTE NovaLife megjelölést jelez. A feliratot az eredetin is ellenőrizni kell; ez önmagában nem igazolja az összetételt, a felületkezelést vagy egy tisztítási eljárás biztonságát.',
     'uncertain': 'A fotón nem látszik elég részlet a szövetszerkezet megkülönböztetéséhez, vagy a látható jelek ellentmondásosak. Készíts éles közeli képet természetes oldalfényben; a címke külön fotója is segíthet.',
 }
 NOVALIFE_DISTINCT = frozenset({'bouclé', 'kordbársony', 'jacquard / gobelin mintás', 'háló (mesh)'})

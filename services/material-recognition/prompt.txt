@@ -48,3 +48,5 @@ KIZÁRÓLAG egy JSON objektumot adj vissza, minden alábbi mezővel, magyarul:
   "novalife_reason": "rövid képi indoklás, márkakizárás és tisztítási engedély nélkül",
   "novalife_label_text": "kizárólag a CÉLKÉP olvasható gyártói címkéjének szövege, egyébként üres"
 }
+
+Az ügyfélnek megjelenő terméknév mindig „ANDANTE NovaLife” legyen, ne csak „NovaLife”. A célcímke szó szerinti átiratát (cimke_szoveg, novalife_label_text) ne egészítsd ki: azt pontosan másold, ahogy valóban olvasható.
