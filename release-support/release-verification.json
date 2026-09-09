@@ -1,10 +1,10 @@
 {
-  "manifestSha256": "7db4561d7a731885f73e96197c00f8f71e41db4db73b43991b44199189ae36ea",
+  "manifestSha256": "7813c89b7584c99470a21f19f62498984d7b862630055af4a15cf302aa71648d",
   "counts": {
     "pages": 142,
-    "links": 19493,
-    "assets": 1902,
-    "css": 134
+    "links": 19528,
+    "assets": 2007,
+    "css": 135
   },
   "issues": []
 }

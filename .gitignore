@@ -8,3 +8,14 @@
 /release-support/qa/*
 !/release-support/qa/*.py
 /ecocleantisztito.hu.txt
+
+# Private material photos, reviewed references and local credentials; never publish
+/.private/
+.env
+.env.*
+!.env.example
+/services/material-recognition/key.md
+**/.dev.vars
+**/.dev.vars.*
+**/.wrangler/
+**/node_modules/

@@ -3,6 +3,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import {createRequire} from 'node:module';
 import {fileURLToPath} from 'node:url';
+import {spawnSync} from 'node:child_process';
 const support=path.dirname(fileURLToPath(import.meta.url)),root=path.dirname(support),out=path.join(root,'release');
 const require=createRequire(path.join(process.env.TEMP,'ecoclean-demo-qa','package.json'));
 const {JSDOM,VirtualConsole}=require('jsdom');
@@ -10,7 +11,9 @@ const csstree=require('css-tree');
 const log=new VirtualConsole(),issues=[],counts={pages:0,links:0,assets:0,css:0};
 const inventory=JSON.parse(fs.readFileSync(path.join(root,'demo/rollout/inventory.json'),'utf8'));
 const manifest=JSON.parse(fs.readFileSync(path.join(support,'release-manifest.json'),'utf8'));
-const medManifestBytes=fs.readFileSync(path.join(root,'demo/mediterranean/manifest.json'));
+const overlay=manifest.widgetOverlay?JSON.parse(fs.readFileSync(path.join(root,manifest.widgetOverlay.path),'utf8')):null;
+if(overlay){const proof=spawnSync('python',[path.join(support,'verify-widget-overlay.py')],{cwd:root,encoding:'utf8'});if(proof.error||proof.status!==0)issues.push({file:'material-widget-overlay.json',message:'Widget provenance failed: '+(proof.error?.message||proof.stdout||proof.stderr)});}
+const medManifestBytes=fs.readFileSync(path.join(root,overlay?overlay.baseline.mediterranean:'demo/mediterranean/manifest.json'));
 const medManifest=JSON.parse(medManifestBytes);
 const medPages=new Map(medManifest.pages.map(page=>[page.file,page]));
 const check=(condition,file,message)=>{if(!condition)issues.push({file,message});};
@@ -27,6 +30,7 @@ function reference(url,file,kind){
 }
 const bodyText=d=>{
   const body=d.body.cloneNode(true);
+  if(overlay)body.querySelector('#anyagfelismero')?.remove();
   body.querySelectorAll('script,style,.demo-notice,.demo-calendar-note,#demoResult,#configStatus').forEach(e=>e.remove());
   for(const anchor of body.querySelectorAll('a[href]')){
     const url=new URL(anchor.getAttribute('href'),'https://ecocleantisztito.hu/');
@@ -42,7 +46,8 @@ for(const rec of manifest.pageInventory||inventory){
   const file=rec.file,target=path.join(out,file);
   if(!fs.existsSync(target)){issues.push({file,message:'Missing production page'});continue;}
   const raw=fs.readFileSync(target,'utf8'),dom=new JSDOM(raw,{virtualConsole:log}),d=dom.window.document;
-  const approved=new JSDOM(fs.readFileSync(path.join(root,rec.source||'demo/'+file),'utf8'),{virtualConsole:log});
+  const approvedSource=overlay?raw.replace(/<!-- ECO-MATERIAL:(style|section|script):START -->[\s\S]*?<!-- ECO-MATERIAL:\1:END -->/g,''):fs.readFileSync(path.join(root,rec.source||'demo/'+file),'utf8');
+  const approved=new JSDOM(approvedSource,{virtualConsole:log});
   counts.pages++;
   check(bodyText(d)===bodyText(approved.window.document),file,'Approved visible text differs');
   check(d.documentElement.dataset.theme==='light'&&!d.querySelector('#themeToggle,.theme-toggle'),file,'Theme control reintroduced');
@@ -62,7 +67,7 @@ for(const rec of manifest.pageInventory||inventory){
   }
   if(medPages.has(file)){
     const approvedPage=medPages.get(file);
-    check(sha(fs.readFileSync(path.join(root,rec.source)))===approvedPage.outputSha256,file,'Reviewed Mediterranean source hash differs');
+    if(!overlay)check(sha(fs.readFileSync(path.join(root,rec.source)))===approvedPage.outputSha256,file,'Reviewed Mediterranean source hash differs');
     check(d.body.classList.contains('eco-mediterranean'),file,'Approved Mediterranean design absent');
     const config=d.querySelector('[data-med-configurator]');
     check(config?.dataset.inquiryEmail==='info@ecocleantisztito.hu'&&!config.hasAttribute('data-booking-url'),file,'Regional inquiry must use email only');

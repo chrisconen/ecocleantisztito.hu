@@ -6,3 +6,6 @@
 /demo/*.html -text
 /demo/mediterranean/*.json -text
 /demo/mediterranean/baseline/*.html -text
+# Immutable widget overlay provenance is also verified byte-for-byte in CI.
+/release-support/material-widget-overlay.json -text
+/release-support/material-widget-baseline/*.json -text

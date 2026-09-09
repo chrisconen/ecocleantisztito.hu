@@ -1,0 +1,299 @@
+{
+  "createdAt": "2026-09-08T06:13:59.879Z",
+  "scope": "demo",
+  "pages": [
+    {
+      "file": "karpittisztitas-kalocsa.html",
+      "city": "Kalocsa",
+      "service": "karpittisztitas",
+      "sourceSha256": "f8daf8d04012fdb0fea286eef3ce82b77a8c49a30705313bf8ec7825a336e12c",
+      "outputSha256": "8092dabeb4ea7bcdcabe3b566ddacc22db6cf47a7550f0df4eee66c349aa94ef",
+      "originalPairs": [
+        [
+          "img/kárpittisztítás előtt.webp",
+          "img/kárpittisztítás után.webp"
+        ]
+      ],
+      "retainedPairs": [
+        [
+          "../img/kárpittisztítás előtt.webp",
+          "../img/kárpittisztítás után.webp"
+        ]
+      ]
+    },
+    {
+      "file": "matractisztitas-kalocsa.html",
+      "city": "Kalocsa",
+      "service": "matractisztitas",
+      "sourceSha256": "46e992bc3b69def268e89b8053e1ecb67c74824279172a3d63ccde136dbe1a26",
+      "outputSha256": "f476d8112d71d9d1b33b20b9eb37320eb7f614b2c74abf2b68c7b24263d67d42",
+      "originalPairs": [
+        [
+          "img/matractisztitas-elott.webp",
+          "img/matractisztitas-utan.webp"
+        ]
+      ],
+      "retainedPairs": [
+        [
+          "../img/matractisztitas-elott.webp",
+          "../img/matractisztitas-utan.webp"
+        ]
+      ]
+    },
+    {
+      "file": "karpittisztitas-baja.html",
+      "city": "Baja",
+      "service": "karpittisztitas",
+      "sourceSha256": "e1c5c00f7c1ee28b9bd3e689948a777e284cf685cc32f6a42c4c32ec131a8002",
+      "outputSha256": "c856444590d96777d017c33464401cbf379ffe7f761b1a3d78c908c264548aae",
+      "originalPairs": [
+        [
+          "img/kárpittisztítás előtt.webp",
+          "img/kárpittisztítás után.webp"
+        ]
+      ],
+      "retainedPairs": [
+        [
+          "../img/kárpittisztítás előtt.webp",
+          "../img/kárpittisztítás után.webp"
+        ]
+      ]
+    },
+    {
+      "file": "matractisztitas-baja.html",
+      "city": "Baja",
+      "service": "matractisztitas",
+      "sourceSha256": "b6e3835fc3e6226e63369fde9bc98fdbcbf8fd571e8b4967454e2c5f393a74cb",
+      "outputSha256": "c87f8eaa2b167e137f678ba3c151f0295ac6c7161c2327451e8eb583b5500f2d",
+      "originalPairs": [
+        [
+          "img/matractisztitas-elott.webp",
+          "img/matractisztitas-utan.webp"
+        ]
+      ],
+      "retainedPairs": [
+        [
+          "../img/matractisztitas-elott.webp",
+          "../img/matractisztitas-utan.webp"
+        ]
+      ]
+    },
+    {
+      "file": "karpittisztitas-kiskoros.html",
+      "city": "Kiskőrös",
+      "service": "karpittisztitas",
+      "sourceSha256": "efd1b15625c7fab60e632f3512dc8d1d07390a7d17015207dc5ce1d00229e472",
+      "outputSha256": "dd11d3f1fe2e07760946d74630c630981bf7bb516f05f621d8f3020ef8edb27e",
+      "originalPairs": [
+        [
+          "img/kárpittisztítás előtt.webp",
+          "img/kárpittisztítás után.webp"
+        ]
+      ],
+      "retainedPairs": [
+        [
+          "../img/kárpittisztítás előtt.webp",
+          "../img/kárpittisztítás után.webp"
+        ]
+      ]
+    },
+    {
+      "file": "matractisztitas-kiskoros.html",
+      "city": "Kiskőrös",
+      "service": "matractisztitas",
+      "sourceSha256": "d373cd1797d3d74dd3491f8644bb081079a7af876d4e452cc9dec8061de87b92",
+      "outputSha256": "8a6ba3e43082a24c6222f2d20371868725466747532d8d6c9cd183a39a95c936",
+      "originalPairs": [
+        [
+          "img/matractisztitas-elott.webp",
+          "img/matractisztitas-utan.webp"
+        ]
+      ],
+      "retainedPairs": [
+        [
+          "../img/matractisztitas-elott.webp",
+          "../img/matractisztitas-utan.webp"
+        ]
+      ]
+    },
+    {
+      "file": "karpittisztitas-szekszard.html",
+      "city": "Szekszárd",
+      "service": "karpittisztitas",
+      "sourceSha256": "795c4d50d948d5f2856c6fa24fad57cdf5ea09499dfbe78de9090549a5e82091",
+      "outputSha256": "f5ce5a4594c666b8704307f794d4fb0f0d0a73c5ea7d7e5b6c1af01f013a73a9",
+      "originalPairs": [
+        [
+          "img/kárpittisztítás előtt.webp",
+          "img/kárpittisztítás után.webp"
+        ]
+      ],
+      "retainedPairs": [
+        [
+          "../img/kárpittisztítás előtt.webp",
+          "../img/kárpittisztítás után.webp"
+        ]
+      ]
+    },
+    {
+      "file": "matractisztitas-szekszard.html",
+      "city": "Szekszárd",
+      "service": "matractisztitas",
+      "sourceSha256": "535250ad9be6e401a193eed2d7bcbab262866ea9c1896d93fa3366acc0c9f6f3",
+      "outputSha256": "89790a7768042169a997c04d136f9905a5652b48f4e82b928b3ea324ecd01304",
+      "originalPairs": [
+        [
+          "img/matractisztitas-elott.webp",
+          "img/matractisztitas-utan.webp"
+        ]
+      ],
+      "retainedPairs": [
+        [
+          "../img/matractisztitas-elott.webp",
+          "../img/matractisztitas-utan.webp"
+        ]
+      ]
+    },
+    {
+      "file": "karpittisztitas-paks.html",
+      "city": "Paks",
+      "service": "karpittisztitas",
+      "sourceSha256": "9b851a662c9940de2f93ce2e1c5442c54bf07c74307aacebd01e89b629e9b72f",
+      "outputSha256": "a635655ea72388e7bb575f4d181ddb7365f9bb5732152a1a029fab828564d11f",
+      "originalPairs": [
+        [
+          "img/kárpittisztítás előtt.webp",
+          "img/kárpittisztítás után.webp"
+        ]
+      ],
+      "retainedPairs": [
+        [
+          "../img/kárpittisztítás előtt.webp",
+          "../img/kárpittisztítás után.webp"
+        ]
+      ]
+    },
+    {
+      "file": "matractisztitas-paks.html",
+      "city": "Paks",
+      "service": "matractisztitas",
+      "sourceSha256": "4494217068050a444f02452f00e415c7efe2877ad45e0e01b502a0005621bbf2",
+      "outputSha256": "2498b490e4aed8cc7712b9736138a0406154eade2d69beb62fe02ff6caeb2331",
+      "originalPairs": [
+        [
+          "img/matractisztitas-elott.webp",
+          "img/matractisztitas-utan.webp"
+        ]
+      ],
+      "retainedPairs": [
+        [
+          "../img/matractisztitas-elott.webp",
+          "../img/matractisztitas-utan.webp"
+        ]
+      ]
+    },
+    {
+      "file": "karpittisztitas-solt.html",
+      "city": "Solt",
+      "service": "karpittisztitas",
+      "sourceSha256": "7585adb8b03e16915c1dfac733881bc355321c9f8261da8a09a02659c5010bc6",
+      "outputSha256": "c15ca6f50043a717de239f54a0fb0eff5b87d216829f2519528794f5142b1152",
+      "originalPairs": [
+        [
+          "img/kárpittisztítás előtt.webp",
+          "img/kárpittisztítás után.webp"
+        ]
+      ],
+      "retainedPairs": [
+        [
+          "../img/kárpittisztítás előtt.webp",
+          "../img/kárpittisztítás után.webp"
+        ]
+      ]
+    },
+    {
+      "file": "matractisztitas-solt.html",
+      "city": "Solt",
+      "service": "matractisztitas",
+      "sourceSha256": "4d4bb9d2a52087640e4a189f73bfe80199cfd7de9cc63474ae30df8ad8933828",
+      "outputSha256": "a6d4e2158a8f5d658b7dfd1cc56ea2ca9f0949c1c80907caef7f090e93d5f327",
+      "originalPairs": [
+        [
+          "img/matractisztitas-elott.webp",
+          "img/matractisztitas-utan.webp"
+        ]
+      ],
+      "retainedPairs": [
+        [
+          "../img/matractisztitas-elott.webp",
+          "../img/matractisztitas-utan.webp"
+        ]
+      ]
+    },
+    {
+      "file": "karpittisztitas-dunafoldvar.html",
+      "city": "Dunaföldvár",
+      "service": "karpittisztitas",
+      "sourceSha256": "a274145e28eb191dfcd4f20dbf2efae0ab365be0eb12d977a04ee3bc6018589c",
+      "outputSha256": "7ecf2de4e5e2af35127c18e1e28051ab823d502b81d356f8febfa01376017cf7",
+      "originalPairs": [
+        [
+          "img/kárpittisztítás előtt.webp",
+          "img/kárpittisztítás után.webp"
+        ]
+      ],
+      "retainedPairs": [
+        [
+          "../img/kárpittisztítás előtt.webp",
+          "../img/kárpittisztítás után.webp"
+        ]
+      ]
+    },
+    {
+      "file": "matractisztitas-dunafoldvar.html",
+      "city": "Dunaföldvár",
+      "service": "matractisztitas",
+      "sourceSha256": "4dcfad0f3999c7059bf80e96b303ad604a2422060d49978d2d71cf2e5bb5cd29",
+      "outputSha256": "548dda555bbb5d501c63eb64ecb748e0af3a74a03510c3cd59c02464dd717967",
+      "originalPairs": [
+        [
+          "img/matractisztitas-elott.webp",
+          "img/matractisztitas-utan.webp"
+        ]
+      ],
+      "retainedPairs": [
+        [
+          "../img/matractisztitas-elott.webp",
+          "../img/matractisztitas-utan.webp"
+        ]
+      ]
+    },
+    {
+      "file": "karpittisztitas-matractisztitas.html",
+      "city": "region",
+      "service": "combined",
+      "sourceSha256": "2dda810db29ff84c962e67b01ef95d75cfa8d4eaf1f82bc3cce25f557ffd87e1",
+      "outputSha256": "980cec9d938fe5f3cad3e92ba462bb9df499c9ba6e26fce0d894516267dd683e",
+      "originalPairs": [
+        [
+          "img/karpittisztitas-elott.webp",
+          "img/karpittisztitas-utan.webp"
+        ],
+        [
+          "img/karpittisztitas-elott-2.webp",
+          "img/karpittisztitas-utan-2.webp"
+        ]
+      ],
+      "retainedPairs": [
+        [
+          "../img/karpittisztitas-elott.webp",
+          "../img/karpittisztitas-utan.webp"
+        ],
+        [
+          "../img/karpittisztitas-elott-2.webp",
+          "../img/karpittisztitas-utan-2.webp"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,310 @@
+{
+  "scope": "widget-only release overlay; original HTML byte-preserved outside owned markers",
+  "pages": [
+    {
+      "file": "index.html",
+      "next": "#booking",
+      "bookingMode": "existing-online-route",
+      "originalSha256": "e426f5e12310119f2f84dc19a9f7c1156e0da0897d25c7688b566461dee9801c",
+      "outputSha256": "405ad7101d35e4e2b72416c9ac1181f3b7ea251a6dd322f1ce253d87ab58cff1",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-badacsony.html",
+      "next": "#arak",
+      "bookingMode": "existing-online-route",
+      "originalSha256": "3ad6f99418f4a008d11f9b2357f6f13fcc6cda311cfc3ec9aaaaf8f4f7e08308",
+      "outputSha256": "9470d8242aff58a91846125e9a05acf64381d7603c250da3ba6b805dbcc1155d",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-balatonalmadi.html",
+      "next": "#arak",
+      "bookingMode": "existing-online-route",
+      "originalSha256": "efd54e03874095f18be0aa97e09db490d354af775b9ecb56faefae55abb00c70",
+      "outputSha256": "ff00aca1b52591ccd1ad5c5700fd628c9536e052fc829c60149af39a91cd1e4f",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-balatonboglar.html",
+      "next": "#arak",
+      "bookingMode": "existing-online-route",
+      "originalSha256": "e9eb614b2fbcc76c340c8b472967c899882dbc4ad598d2d63567e20f810f33a5",
+      "outputSha256": "3d227f7bd2737933ae55c535e867f9bf0e066f38a0206f697c3ec6795bf002ee",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-balatonfoldvar.html",
+      "next": "#arak",
+      "bookingMode": "existing-online-route",
+      "originalSha256": "862e9a7812beccde15a0d3174e743e63836f951eb8463ecb84b155badbb65f03",
+      "outputSha256": "ad3b29ac6d1ff72beed145b0cdac709dbb718fde1335fbfd4364a7b67a70d897",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-balatonfured.html",
+      "next": "#arak",
+      "bookingMode": "existing-online-route",
+      "originalSha256": "2d5077faebd6db4e6ea5d2c9e1f7b8e854fc3d0cf25738caab7b676e365e2cc9",
+      "outputSha256": "b620d12626d1e46b0ed32fa360e40432c56bb9bc62d1b34316752ce347e50b46",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-balatonfuzfo.html",
+      "next": "#arak",
+      "bookingMode": "existing-online-route",
+      "originalSha256": "5b721414e9ff12726fe1c43080b4c0804800a32c2a494f2ebc8a4cc34df052c3",
+      "outputSha256": "c89b97054b3723ee5f6eed0a696139cb32c4bbcf26de53159786279b654b9b12",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-balatonkenese.html",
+      "next": "#arak",
+      "bookingMode": "existing-online-route",
+      "originalSha256": "9bc3464c4c815ce3b3ed897200f5b4aecd82baa5a71f2ca585442e54856066df",
+      "outputSha256": "9f2780b13d1288ff3206ca8e876303a38b2b73aa9f09254d66b6f86c9130a6a1",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-balatonlelle.html",
+      "next": "#arak",
+      "bookingMode": "existing-online-route",
+      "originalSha256": "d7033d77a4dd02b1c1139de3a7b244010741823c9de26ae707b53d96b5eddfb4",
+      "outputSha256": "598b753038804880f195339f0fa90fe17ab511159a289ceb620327865a67add4",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-balatonszemes.html",
+      "next": "#arak",
+      "bookingMode": "existing-online-route",
+      "originalSha256": "2be993be66c43a8f3de846f3ec3fe98dcbfe896e3e569b7d5592578ae73a712f",
+      "outputSha256": "3692d96fb620cf0b707672dac7f1a9c674a783e01be66bac16195168dbc2b884",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-fonyod.html",
+      "next": "#arak",
+      "bookingMode": "existing-online-route",
+      "originalSha256": "07c7ea726d37c6b54d9eedf228b536c80411e058238c9f840bdf0c74b62e2b02",
+      "outputSha256": "76fdc60a546344d03125dde0a8ca52e7aedd6a25a2b6009a99af1a6c3e62acab",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-gyor.html",
+      "next": "#arak",
+      "bookingMode": "existing-online-route",
+      "originalSha256": "0ad408ae64d7fb19c6104aa583e99679da7f0a4b6da81b27322f7aada610679d",
+      "outputSha256": "6342deae9f202fb80d05b1f5ff02d597d57f26a404561153869e954cd6f35756",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-heviz.html",
+      "next": "#arak",
+      "bookingMode": "existing-online-route",
+      "originalSha256": "222708fefdb433074a1e1a1a59ca91ab82fd80de4a4379885bd9f89bb93b4bb3",
+      "outputSha256": "fcd647930491511e1cbada7e100e714dddde437b54eb54b2febbb4e6585ebff5",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-keszthely.html",
+      "next": "#arak",
+      "bookingMode": "existing-online-route",
+      "originalSha256": "bac74c636b9cb92080f3a4fd8cc387b1460293a3396e7f7921b49c1221bd9c6c",
+      "outputSha256": "18237f189677e14a71977d7a999864942bfb433e7632fe48ae834cac916b576b",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-komarom.html",
+      "next": "#arak",
+      "bookingMode": "existing-online-route",
+      "originalSha256": "1a519a6344903193edff45d779d4283f0ad83a60d0d4dd41f3b7b0cf6623c7e1",
+      "outputSha256": "2a349733ec8b900d4819279919c6db0f2c64b70416b57f8194cdfa994d9690ba",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-mosonmagyarovar.html",
+      "next": "#arak",
+      "bookingMode": "existing-online-route",
+      "originalSha256": "5d6444b89f786b02ced379ac49242142bb068e241b628d6d9705e1ebc6925f93",
+      "outputSha256": "5485690be4f76f8e40f4d113948b73daf1c531636519f95d504cbc9d298d534d",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-papa.html",
+      "next": "#arak",
+      "bookingMode": "existing-online-route",
+      "originalSha256": "dfb027fe403bfff47ca261cda1a89d022ec1d13a97c04e2bdce358c456795aca",
+      "outputSha256": "96cc98e9c44eccef3a5d939b646f144b9b94ec3d23d69defb3489af89f792152",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-revfulop.html",
+      "next": "#arak",
+      "bookingMode": "existing-online-route",
+      "originalSha256": "8f5864bd8c927bee6117b2d18983b2ceb6fc2519862e5d50ec5c9edd42977ab6",
+      "outputSha256": "cc06ab2e548beeed2dedf5f5078180c1be58147fa944cc6aa90b44deb3e0cf1f",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-siofok.html",
+      "next": "#arak",
+      "bookingMode": "existing-online-route",
+      "originalSha256": "f7e0aa4f6ae4b9c26608bf3df2186f19dae210186d78a8f45274e76989cc4b52",
+      "outputSha256": "a1e8bccf899666afe32ed9c94b03d1cb7322ae18f54abf941f401401f6b15426",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-sopron.html",
+      "next": "#arak",
+      "bookingMode": "existing-online-route",
+      "originalSha256": "53a05324d42727e74d07b49bdf918b158937c3dc1c1977549b60f8fea3e81885",
+      "outputSha256": "6e57c6a78d7b0348446cb59fcbafb8a99c7eee638fdfda6cbbc0566ece9db068",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-szombathely.html",
+      "next": "#arak",
+      "bookingMode": "existing-online-route",
+      "originalSha256": "52421b8b86c6d2e7188af026b47eeee836704d1369fe41271da8105562d49385",
+      "outputSha256": "0b65d8836fd1babb86a2206cba294a0bbeba5076185fbc6d6134ea4a0ac80a17",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-tapolca.html",
+      "next": "#arak",
+      "bookingMode": "existing-online-route",
+      "originalSha256": "f75d254d7e90dd498d12677c556ded82ec7acc64b4b4e74aafc573303f8b62aa",
+      "outputSha256": "4e5ec8d6049266a52bd09d2a34ca782856fb7088d38ca11ee44bf86ea8168e05",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-tata.html",
+      "next": "#arak",
+      "bookingMode": "existing-online-route",
+      "originalSha256": "198c1e8dea229be17bb7a70efa3d4ef8365e49154b3bf1b572efae62ae5aa66a",
+      "outputSha256": "07441adc3a3da0fbadd113255947c9d18cc2a93d28fdd1cb723359a58353be2a",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-tatabanya.html",
+      "next": "#arak",
+      "bookingMode": "existing-online-route",
+      "originalSha256": "a40960e043475a4e31696838c4da3ca96855bf216cb64cd1339a5d813655b2eb",
+      "outputSha256": "45595800a2ca5d501a59b0f6234403b88e0272143b1faa1a9eac0a78f9a1a70d",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-tihany.html",
+      "next": "#arak",
+      "bookingMode": "existing-online-route",
+      "originalSha256": "8c9a332a9ddf2fa8ea0f18ec1ad4d852a7936846776cf586b1439686b4fa454c",
+      "outputSha256": "51e01a7736af439d794b81bd9cb9c8e4d79afa335bbbcac3a08e6560943715b4",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-veszprem.html",
+      "next": "#arak",
+      "bookingMode": "existing-online-route",
+      "originalSha256": "c23100e716f3151a6d9e7d365e6f7f3a4079d3a54aa23c9e9db72a5c8472c855",
+      "outputSha256": "b3ac62620123720360a75b8c7a1c7a42f9404705e9474e672c783bb98b61fdde",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-zamardi.html",
+      "next": "#arak",
+      "bookingMode": "existing-online-route",
+      "originalSha256": "55adcbeeadc1676267f8063129f11b76db67d8bc35141a1dce1fc565bd559d1a",
+      "outputSha256": "6cd646bae0bd253b2d10ccc72c72d7735d26bb0b72c4a1a2221a6675d84bd685",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-kalocsa.html",
+      "next": "#arak",
+      "bookingMode": "existing-email-route",
+      "originalSha256": "509413541e1fe44cccb1f0e9497a29228a5243428a084b865b35ff2826d43b91",
+      "outputSha256": "5808b13995d929c1ff5a8799ee6bcb95f3f835040771a8ffda733413f47a0af5",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-baja.html",
+      "next": "#arak",
+      "bookingMode": "existing-email-route",
+      "originalSha256": "b5752473ec21e84efb19425597d3348e5083f5c126262c4aba32e7d27634a9cc",
+      "outputSha256": "d8f093080799aa8c70caf23024d7428474a581684e8365120deac45765c35393",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-kiskoros.html",
+      "next": "#arak",
+      "bookingMode": "existing-email-route",
+      "originalSha256": "46da1eda9cfb5cf9d5d54369f4eaf0da4826f75eb6b0ab374f20bf0bc1efdbc5",
+      "outputSha256": "356dc43dc138a23f77bd2c2e4b953361b646e725db515e11a3bbcd10549a5f5f",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-szekszard.html",
+      "next": "#arak",
+      "bookingMode": "existing-email-route",
+      "originalSha256": "27aa66ab7e11fda2ac3a03b427a3f87638ac8efccc9323c3918af4d64636c38e",
+      "outputSha256": "4d246485101ac3a796d2bf347bcbb58d8901147e2bbb13fe1fbc6d214171fa1e",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-paks.html",
+      "next": "#arak",
+      "bookingMode": "existing-email-route",
+      "originalSha256": "e6bce25b7399f28cbfd4c995f5ae8f1f5287c865f7afa03946f13672707be062",
+      "outputSha256": "50e7863636be4d8bf17615c4be12e1c8c11f0e0ec94b473c5e45ce89b6e5f63d",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-solt.html",
+      "next": "#arak",
+      "bookingMode": "existing-email-route",
+      "originalSha256": "64052195949c3a707887ce7b8b6eb880c8e454855bd225ed5b4232e0b4335705",
+      "outputSha256": "3bd5b04ae8e7573fd43034331100762c6e6043ab065c37ad8c2a867f8bebdeae",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-dunafoldvar.html",
+      "next": "#arak",
+      "bookingMode": "existing-email-route",
+      "originalSha256": "5cd30eec24eae5249792d6a8703359cf30dc314d85ae7a2d79b43aad262be26e",
+      "outputSha256": "9d417c75b45eed75cee414cb928f7f9573c886405b1aedff418b16b8e7492ada",
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "karpittisztitas-matractisztitas.html",
+      "next": "#arak",
+      "bookingMode": "existing-email-route",
+      "originalSha256": "b0af9a7937a7c9cc3a57dfe55c8cb8505b745991fed5596305c802cff4112ca8",
+      "outputSha256": "375f3df029b827eeb1ec8ab44589e44d8436c7b16cba3acb4e8e1b374ba50387",
+      "originalBytesPreserved": true
+    }
+  ],
+  "dependencies": [
+    {
+      "source": "demo/material-recognition/app.js",
+      "file": "material-recognition/app.js",
+      "sha256": "6baf0c4e0406a3aa911dbafacd857d2dede2d50098c528dafebcb9427fed797f"
+    },
+    {
+      "source": "demo/material-recognition/design.css",
+      "file": "material-recognition/design.css",
+      "sha256": "4469d233c6ce848250a90a8fba67728aead48457021135bdd64604204b8c907d"
+    },
+    {
+      "source": "demo/material-recognition/assets/fotel-bukle-olvasosarok.webp",
+      "file": "material-recognition/assets/fotel-bukle-olvasosarok.webp",
+      "sha256": "62a191c1baef26c2b61b4c9dcb53902f42ea88c2c84e98dee081173bcc575a44"
+    }
+  ],
+  "baseline": {
+    "manifest": "release-support/material-widget-baseline/release-manifest.json",
+    "manifestSha256": "7db4561d7a731885f73e96197c00f8f71e41db4db73b43991b44199189ae36ea",
+    "verification": "release-support/material-widget-baseline/release-verification.json",
+    "verificationSha256": "6bf34d0a154293abe476dfc82340cb2e6aec3f4b136a05597f3f5aed86163acc",
+    "mediterranean": "release-support/material-widget-baseline/mediterranean-manifest.json",
+    "mediterraneanSha256": "12c6bb5068a844ee396b504c90f70d07880489bb096fe7e9ccd840a5e66c88f8"
+  }
+}

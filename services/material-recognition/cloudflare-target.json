@@ -1,0 +1,13 @@
+{
+  "account_id": "a8e651d499cf817da0adb827299ff60c",
+  "bucket_name": "ecoclean-materials",
+  "public_access": false,
+  "verified_on": "2026-09-09",
+  "worker_binding_name": "MATERIAL_PHOTOS",
+  "local_archive": "E:/ECOCLEAN/anyag-referenciak",
+  "status": "private bucket bound to deployed Worker; desktop sync installed and first end-to-end import verified",
+  "worker": "ecoclean-material-recognition",
+  "endpoint": "https://ecocleantisztito.hu/api/material-health",
+  "turnstile": "managed, hostname/action verified",
+  "desktop_task": "ECOClean-Material-Photo-Sync"
+}

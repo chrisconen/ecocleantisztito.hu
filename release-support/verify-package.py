@@ -3,6 +3,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit, unquote
 import hashlib, json, re, sys
+import importlib.util
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / 'release'
@@ -34,7 +35,11 @@ if report.get('manifestSha256') != digest(manifest_bytes):
     errors.append('Verification does not cover this exact release manifest')
 if manifest.get('unresolved'):
     errors.append('Build has unresolved dependencies')
-if manifest.get('approvedMediterranean'):
+if manifest.get('widgetOverlay'):
+    spec=importlib.util.spec_from_file_location('widget_overlay',ROOT/'release-support/verify-widget-overlay.py')
+    overlay_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(overlay_module)
+    errors.extend(overlay_module.verify(manifest))
+elif manifest.get('approvedMediterranean'):
     approved_path=ROOT/'demo/mediterranean/manifest.json'
     approved_bytes=approved_path.read_bytes()
     if digest(approved_bytes)!=manifest['approvedMediterranean']['manifestSha256']:
