@@ -35,7 +35,11 @@ if report.get('manifestSha256') != digest(manifest_bytes):
     errors.append('Verification does not cover this exact release manifest')
 if manifest.get('unresolved'):
     errors.append('Build has unresolved dependencies')
-if manifest.get('copyOverlay'):
+if manifest.get('studioOverlay'):
+    spec=importlib.util.spec_from_file_location('studio_overlay',ROOT/'release-support/verify-studio-overlay.py')
+    overlay_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(overlay_module)
+    errors.extend(overlay_module.verify(manifest))
+elif manifest.get('copyOverlay'):
     spec=importlib.util.spec_from_file_location('copy_overlay',ROOT/'release-support/verify-copy-overlay.py')
     overlay_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(overlay_module)
     errors.extend(overlay_module.verify(manifest))

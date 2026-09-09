@@ -1,0 +1,1327 @@
+{
+  "base": "http://127.0.0.1:8089/release/",
+  "pages": 26,
+  "viewports": 105,
+  "issues": [],
+  "blockedWrites": [],
+  "liveProcessingCalls": 0,
+  "mockedApiGets": 26,
+  "interactions": [
+    {
+      "file": "karpittisztitas-badacsony.html",
+      "passed": true
+    },
+    {
+      "file": "karpittisztitas-balatonalmadi.html",
+      "passed": true
+    },
+    {
+      "file": "karpittisztitas-balatonboglar.html",
+      "passed": true
+    },
+    {
+      "file": "karpittisztitas-balatonfoldvar.html",
+      "passed": true
+    },
+    {
+      "file": "karpittisztitas-balatonfured.html",
+      "passed": true
+    },
+    {
+      "file": "karpittisztitas-balatonfuzfo.html",
+      "passed": true
+    },
+    {
+      "file": "karpittisztitas-balatonkenese.html",
+      "passed": true
+    },
+    {
+      "file": "karpittisztitas-balatonlelle.html",
+      "passed": true
+    },
+    {
+      "file": "karpittisztitas-balatonszemes.html",
+      "passed": true
+    },
+    {
+      "file": "karpittisztitas-fonyod.html",
+      "passed": true
+    },
+    {
+      "file": "karpittisztitas-gyor.html",
+      "passed": true
+    },
+    {
+      "file": "karpittisztitas-heviz.html",
+      "passed": true
+    },
+    {
+      "file": "karpittisztitas-keszthely.html",
+      "passed": true
+    },
+    {
+      "file": "karpittisztitas-komarom.html",
+      "passed": true
+    },
+    {
+      "file": "karpittisztitas-mosonmagyarovar.html",
+      "passed": true
+    },
+    {
+      "file": "karpittisztitas-papa.html",
+      "passed": true
+    },
+    {
+      "file": "karpittisztitas-revfulop.html",
+      "passed": true
+    },
+    {
+      "file": "karpittisztitas-siofok.html",
+      "passed": true
+    },
+    {
+      "file": "karpittisztitas-sopron.html",
+      "passed": true
+    },
+    {
+      "file": "karpittisztitas-szombathely.html",
+      "passed": true
+    },
+    {
+      "file": "karpittisztitas-tapolca.html",
+      "passed": true
+    },
+    {
+      "file": "karpittisztitas-tata.html",
+      "passed": true
+    },
+    {
+      "file": "karpittisztitas-tatabanya.html",
+      "passed": true
+    },
+    {
+      "file": "karpittisztitas-tihany.html",
+      "passed": true
+    },
+    {
+      "file": "karpittisztitas-veszprem.html",
+      "passed": true
+    },
+    {
+      "file": "karpittisztitas-zamardi.html",
+      "passed": true
+    }
+  ],
+  "originalPhotos": [
+    {
+      "file": "karpittisztitas-badacsony.html",
+      "originalImageCount": 7,
+      "missing": []
+    },
+    {
+      "file": "karpittisztitas-balatonalmadi.html",
+      "originalImageCount": 7,
+      "missing": []
+    },
+    {
+      "file": "karpittisztitas-balatonboglar.html",
+      "originalImageCount": 7,
+      "missing": []
+    },
+    {
+      "file": "karpittisztitas-balatonfoldvar.html",
+      "originalImageCount": 7,
+      "missing": []
+    },
+    {
+      "file": "karpittisztitas-balatonfured.html",
+      "originalImageCount": 7,
+      "missing": []
+    },
+    {
+      "file": "karpittisztitas-balatonfuzfo.html",
+      "originalImageCount": 7,
+      "missing": []
+    },
+    {
+      "file": "karpittisztitas-balatonkenese.html",
+      "originalImageCount": 7,
+      "missing": []
+    },
+    {
+      "file": "karpittisztitas-balatonlelle.html",
+      "originalImageCount": 7,
+      "missing": []
+    },
+    {
+      "file": "karpittisztitas-balatonszemes.html",
+      "originalImageCount": 7,
+      "missing": []
+    },
+    {
+      "file": "karpittisztitas-fonyod.html",
+      "originalImageCount": 7,
+      "missing": []
+    },
+    {
+      "file": "karpittisztitas-gyor.html",
+      "originalImageCount": 7,
+      "missing": []
+    },
+    {
+      "file": "karpittisztitas-heviz.html",
+      "originalImageCount": 7,
+      "missing": []
+    },
+    {
+      "file": "karpittisztitas-keszthely.html",
+      "originalImageCount": 7,
+      "missing": []
+    },
+    {
+      "file": "karpittisztitas-komarom.html",
+      "originalImageCount": 7,
+      "missing": []
+    },
+    {
+      "file": "karpittisztitas-mosonmagyarovar.html",
+      "originalImageCount": 7,
+      "missing": []
+    },
+    {
+      "file": "karpittisztitas-papa.html",
+      "originalImageCount": 7,
+      "missing": []
+    },
+    {
+      "file": "karpittisztitas-revfulop.html",
+      "originalImageCount": 7,
+      "missing": []
+    },
+    {
+      "file": "karpittisztitas-siofok.html",
+      "originalImageCount": 7,
+      "missing": []
+    },
+    {
+      "file": "karpittisztitas-sopron.html",
+      "originalImageCount": 7,
+      "missing": []
+    },
+    {
+      "file": "karpittisztitas-szombathely.html",
+      "originalImageCount": 7,
+      "missing": []
+    },
+    {
+      "file": "karpittisztitas-tapolca.html",
+      "originalImageCount": 7,
+      "missing": []
+    },
+    {
+      "file": "karpittisztitas-tata.html",
+      "originalImageCount": 7,
+      "missing": []
+    },
+    {
+      "file": "karpittisztitas-tatabanya.html",
+      "originalImageCount": 7,
+      "missing": []
+    },
+    {
+      "file": "karpittisztitas-tihany.html",
+      "originalImageCount": 7,
+      "missing": []
+    },
+    {
+      "file": "karpittisztitas-veszprem.html",
+      "originalImageCount": 7,
+      "missing": []
+    },
+    {
+      "file": "karpittisztitas-zamardi.html",
+      "originalImageCount": 7,
+      "missing": []
+    }
+  ],
+  "results": [
+    {
+      "issues": [],
+      "height": 57953,
+      "h1": "Prémium Kárpittisztítás Badacsony",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-badacsony.html",
+      "width": 320
+    },
+    {
+      "issues": [],
+      "height": 54508,
+      "h1": "Prémium Kárpittisztítás Badacsony",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-badacsony.html",
+      "width": 390
+    },
+    {
+      "issues": [],
+      "height": 38521,
+      "h1": "Prémium Kárpittisztítás Badacsony",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-badacsony.html",
+      "width": 768
+    },
+    {
+      "issues": [],
+      "height": 31142,
+      "h1": "Prémium Kárpittisztítás Badacsony",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-badacsony.html",
+      "width": 1440
+    },
+    {
+      "issues": [],
+      "height": 58163,
+      "h1": "Prémium Kárpittisztítás Balatonalmádi",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonalmadi.html",
+      "width": 320
+    },
+    {
+      "issues": [],
+      "height": 54752,
+      "h1": "Prémium Kárpittisztítás Balatonalmádi",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonalmadi.html",
+      "width": 390
+    },
+    {
+      "issues": [],
+      "height": 38627,
+      "h1": "Prémium Kárpittisztítás Balatonalmádi",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonalmadi.html",
+      "width": 768
+    },
+    {
+      "issues": [],
+      "height": 31235,
+      "h1": "Prémium Kárpittisztítás Balatonalmádi",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonalmadi.html",
+      "width": 1440
+    },
+    {
+      "issues": [],
+      "height": 58138,
+      "h1": "Prémium Kárpittisztítás Balatonboglár",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonboglar.html",
+      "width": 320
+    },
+    {
+      "issues": [],
+      "height": 54758,
+      "h1": "Prémium Kárpittisztítás Balatonboglár",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonboglar.html",
+      "width": 390
+    },
+    {
+      "issues": [],
+      "height": 38627,
+      "h1": "Prémium Kárpittisztítás Balatonboglár",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonboglar.html",
+      "width": 768
+    },
+    {
+      "issues": [],
+      "height": 31259,
+      "h1": "Prémium Kárpittisztítás Balatonboglár",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonboglar.html",
+      "width": 1440
+    },
+    {
+      "issues": [],
+      "height": 58015,
+      "h1": "Prémium Kárpittisztítás Balatonföldvár",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonfoldvar.html",
+      "width": 320
+    },
+    {
+      "issues": [],
+      "height": 54654,
+      "h1": "Prémium Kárpittisztítás Balatonföldvár",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonfoldvar.html",
+      "width": 390
+    },
+    {
+      "issues": [],
+      "height": 38567,
+      "h1": "Prémium Kárpittisztítás Balatonföldvár",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonfoldvar.html",
+      "width": 768
+    },
+    {
+      "issues": [],
+      "height": 31198,
+      "h1": "Prémium Kárpittisztítás Balatonföldvár",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonfoldvar.html",
+      "width": 1440
+    },
+    {
+      "issues": [],
+      "height": 58129,
+      "h1": "Prémium Kárpittisztítás Balatonfüred",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonfured.html",
+      "width": 320
+    },
+    {
+      "issues": [],
+      "height": 54673,
+      "h1": "Prémium Kárpittisztítás Balatonfüred",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonfured.html",
+      "width": 390
+    },
+    {
+      "issues": [],
+      "height": 38558,
+      "h1": "Prémium Kárpittisztítás Balatonfüred",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonfured.html",
+      "width": 768
+    },
+    {
+      "issues": [],
+      "height": 31269,
+      "h1": "Prémium Kárpittisztítás Balatonfüred",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonfured.html",
+      "width": 1440
+    },
+    {
+      "issues": [],
+      "height": 57802,
+      "h1": "Prémium Kárpittisztítás Balatonfűzfő",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonfuzfo.html",
+      "width": 320
+    },
+    {
+      "issues": [],
+      "height": 54459,
+      "h1": "Prémium Kárpittisztítás Balatonfűzfő",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonfuzfo.html",
+      "width": 390
+    },
+    {
+      "issues": [],
+      "height": 38404,
+      "h1": "Prémium Kárpittisztítás Balatonfűzfő",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonfuzfo.html",
+      "width": 768
+    },
+    {
+      "issues": [],
+      "height": 31092,
+      "h1": "Prémium Kárpittisztítás Balatonfűzfő",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonfuzfo.html",
+      "width": 1440
+    },
+    {
+      "issues": [],
+      "height": 58041,
+      "h1": "Prémium Kárpittisztítás Balatonkenese",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonkenese.html",
+      "width": 320
+    },
+    {
+      "issues": [],
+      "height": 54586,
+      "h1": "Prémium Kárpittisztítás Balatonkenese",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonkenese.html",
+      "width": 390
+    },
+    {
+      "issues": [],
+      "height": 38488,
+      "h1": "Prémium Kárpittisztítás Balatonkenese",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonkenese.html",
+      "width": 768
+    },
+    {
+      "issues": [],
+      "height": 31198,
+      "h1": "Prémium Kárpittisztítás Balatonkenese",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonkenese.html",
+      "width": 1440
+    },
+    {
+      "issues": [],
+      "height": 57941,
+      "h1": "Prémium Kárpittisztítás Balatonlelle",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonlelle.html",
+      "width": 320
+    },
+    {
+      "issues": [],
+      "height": 54616,
+      "h1": "Prémium Kárpittisztítás Balatonlelle",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonlelle.html",
+      "width": 390
+    },
+    {
+      "issues": [],
+      "height": 38564,
+      "h1": "Prémium Kárpittisztítás Balatonlelle",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonlelle.html",
+      "width": 768
+    },
+    {
+      "issues": [],
+      "height": 31173,
+      "h1": "Prémium Kárpittisztítás Balatonlelle",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonlelle.html",
+      "width": 1440
+    },
+    {
+      "issues": [],
+      "height": 58055,
+      "h1": "Prémium Kárpittisztítás Balatonszemes",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonszemes.html",
+      "width": 320
+    },
+    {
+      "issues": [],
+      "height": 54616,
+      "h1": "Prémium Kárpittisztítás Balatonszemes",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonszemes.html",
+      "width": 390
+    },
+    {
+      "issues": [],
+      "height": 38506,
+      "h1": "Prémium Kárpittisztítás Balatonszemes",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonszemes.html",
+      "width": 768
+    },
+    {
+      "issues": [],
+      "height": 31185,
+      "h1": "Prémium Kárpittisztítás Balatonszemes",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-balatonszemes.html",
+      "width": 1440
+    },
+    {
+      "issues": [],
+      "height": 57977,
+      "h1": "Prémium Kárpittisztítás Fonyód",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-fonyod.html",
+      "width": 320
+    },
+    {
+      "issues": [],
+      "height": 54313,
+      "h1": "Prémium Kárpittisztítás Fonyód",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-fonyod.html",
+      "width": 390
+    },
+    {
+      "issues": [],
+      "height": 38489,
+      "h1": "Prémium Kárpittisztítás Fonyód",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-fonyod.html",
+      "width": 768
+    },
+    {
+      "issues": [],
+      "height": 31109,
+      "h1": "Prémium Kárpittisztítás Fonyód",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-fonyod.html",
+      "width": 1440
+    },
+    {
+      "issues": [],
+      "height": 40798,
+      "h1": "Prémium Kárpittisztítás Győr",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-gyor.html",
+      "width": 320
+    },
+    {
+      "issues": [],
+      "height": 39345,
+      "h1": "Prémium Kárpittisztítás Győr",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-gyor.html",
+      "width": 390
+    },
+    {
+      "issues": [],
+      "height": 29545,
+      "h1": "Prémium Kárpittisztítás Győr",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-gyor.html",
+      "width": 768
+    },
+    {
+      "issues": [],
+      "height": 24797,
+      "h1": "Prémium Kárpittisztítás Győr",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-gyor.html",
+      "width": 1440
+    },
+    {
+      "issues": [],
+      "height": 25109,
+      "h1": "Prémium Kárpittisztítás Győr",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-gyor.html",
+      "width": 1920
+    },
+    {
+      "issues": [],
+      "height": 57740,
+      "h1": "Prémium Kárpittisztítás Hévíz",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-heviz.html",
+      "width": 320
+    },
+    {
+      "issues": [],
+      "height": 54283,
+      "h1": "Prémium Kárpittisztítás Hévíz",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-heviz.html",
+      "width": 390
+    },
+    {
+      "issues": [],
+      "height": 38381,
+      "h1": "Prémium Kárpittisztítás Hévíz",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-heviz.html",
+      "width": 768
+    },
+    {
+      "issues": [],
+      "height": 30955,
+      "h1": "Prémium Kárpittisztítás Hévíz",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-heviz.html",
+      "width": 1440
+    },
+    {
+      "issues": [],
+      "height": 57838,
+      "h1": "Prémium Kárpittisztítás Keszthely",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-keszthely.html",
+      "width": 320
+    },
+    {
+      "issues": [],
+      "height": 54515,
+      "h1": "Prémium Kárpittisztítás Keszthely",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-keszthely.html",
+      "width": 390
+    },
+    {
+      "issues": [],
+      "height": 38518,
+      "h1": "Prémium Kárpittisztítás Keszthely",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-keszthely.html",
+      "width": 768
+    },
+    {
+      "issues": [],
+      "height": 31109,
+      "h1": "Prémium Kárpittisztítás Keszthely",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-keszthely.html",
+      "width": 1440
+    },
+    {
+      "issues": [],
+      "height": 40662,
+      "h1": "Prémium Kárpittisztítás Komárom",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-komarom.html",
+      "width": 320
+    },
+    {
+      "issues": [],
+      "height": 39191,
+      "h1": "Prémium Kárpittisztítás Komárom",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-komarom.html",
+      "width": 390
+    },
+    {
+      "issues": [],
+      "height": 29533,
+      "h1": "Prémium Kárpittisztítás Komárom",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-komarom.html",
+      "width": 768
+    },
+    {
+      "issues": [],
+      "height": 24574,
+      "h1": "Prémium Kárpittisztítás Komárom",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-komarom.html",
+      "width": 1440
+    },
+    {
+      "issues": [],
+      "height": 40923,
+      "h1": "Prémium Kárpittisztítás Mosonmagyaróvár",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-mosonmagyarovar.html",
+      "width": 320
+    },
+    {
+      "issues": [],
+      "height": 39312,
+      "h1": "Prémium Kárpittisztítás Mosonmagyaróvár",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-mosonmagyarovar.html",
+      "width": 390
+    },
+    {
+      "issues": [],
+      "height": 29477,
+      "h1": "Prémium Kárpittisztítás Mosonmagyaróvár",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-mosonmagyarovar.html",
+      "width": 768
+    },
+    {
+      "issues": [],
+      "height": 24667,
+      "h1": "Prémium Kárpittisztítás Mosonmagyaróvár",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-mosonmagyarovar.html",
+      "width": 1440
+    },
+    {
+      "issues": [],
+      "height": 40515,
+      "h1": "Prémium Kárpittisztítás Pápa",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-papa.html",
+      "width": 320
+    },
+    {
+      "issues": [],
+      "height": 39016,
+      "h1": "Prémium Kárpittisztítás Pápa",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-papa.html",
+      "width": 390
+    },
+    {
+      "issues": [],
+      "height": 29256,
+      "h1": "Prémium Kárpittisztítás Pápa",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-papa.html",
+      "width": 768
+    },
+    {
+      "issues": [],
+      "height": 24667,
+      "h1": "Prémium Kárpittisztítás Pápa",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-papa.html",
+      "width": 1440
+    },
+    {
+      "issues": [],
+      "height": 57911,
+      "h1": "Prémium Kárpittisztítás Révfülöp",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-revfulop.html",
+      "width": 320
+    },
+    {
+      "issues": [],
+      "height": 54348,
+      "h1": "Prémium Kárpittisztítás Révfülöp",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-revfulop.html",
+      "width": 390
+    },
+    {
+      "issues": [],
+      "height": 38527,
+      "h1": "Prémium Kárpittisztítás Révfülöp",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-revfulop.html",
+      "width": 768
+    },
+    {
+      "issues": [],
+      "height": 31079,
+      "h1": "Prémium Kárpittisztítás Révfülöp",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-revfulop.html",
+      "width": 1440
+    },
+    {
+      "issues": [],
+      "height": 57754,
+      "h1": "Prémium Kárpittisztítás Siófok",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-siofok.html",
+      "width": 320
+    },
+    {
+      "issues": [],
+      "height": 54367,
+      "h1": "Prémium Kárpittisztítás Siófok",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-siofok.html",
+      "width": 390
+    },
+    {
+      "issues": [],
+      "height": 38483,
+      "h1": "Prémium Kárpittisztítás Siófok",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-siofok.html",
+      "width": 768
+    },
+    {
+      "issues": [],
+      "height": 31016,
+      "h1": "Prémium Kárpittisztítás Siófok",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-siofok.html",
+      "width": 1440
+    },
+    {
+      "issues": [],
+      "height": 40669,
+      "h1": "Prémium Kárpittisztítás Sopron",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-sopron.html",
+      "width": 320
+    },
+    {
+      "issues": [],
+      "height": 39215,
+      "h1": "Prémium Kárpittisztítás Sopron",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-sopron.html",
+      "width": 390
+    },
+    {
+      "issues": [],
+      "height": 29496,
+      "h1": "Prémium Kárpittisztítás Sopron",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-sopron.html",
+      "width": 768
+    },
+    {
+      "issues": [],
+      "height": 24604,
+      "h1": "Prémium Kárpittisztítás Sopron",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-sopron.html",
+      "width": 1440
+    },
+    {
+      "issues": [],
+      "height": 40673,
+      "h1": "Prémium Kárpittisztítás Szombathely",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-szombathely.html",
+      "width": 320
+    },
+    {
+      "issues": [],
+      "height": 39194,
+      "h1": "Prémium Kárpittisztítás Szombathely",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-szombathely.html",
+      "width": 390
+    },
+    {
+      "issues": [],
+      "height": 29499,
+      "h1": "Prémium Kárpittisztítás Szombathely",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-szombathely.html",
+      "width": 768
+    },
+    {
+      "issues": [],
+      "height": 24610,
+      "h1": "Prémium Kárpittisztítás Szombathely",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-szombathely.html",
+      "width": 1440
+    },
+    {
+      "issues": [],
+      "height": 57813,
+      "h1": "Prémium Kárpittisztítás Tapolca",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-tapolca.html",
+      "width": 320
+    },
+    {
+      "issues": [],
+      "height": 54369,
+      "h1": "Prémium Kárpittisztítás Tapolca",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-tapolca.html",
+      "width": 390
+    },
+    {
+      "issues": [],
+      "height": 38487,
+      "h1": "Prémium Kárpittisztítás Tapolca",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-tapolca.html",
+      "width": 768
+    },
+    {
+      "issues": [],
+      "height": 31109,
+      "h1": "Prémium Kárpittisztítás Tapolca",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-tapolca.html",
+      "width": 1440
+    },
+    {
+      "issues": [],
+      "height": 40494,
+      "h1": "Prémium Kárpittisztítás Tata",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-tata.html",
+      "width": 320
+    },
+    {
+      "issues": [],
+      "height": 39153,
+      "h1": "Prémium Kárpittisztítás Tata",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-tata.html",
+      "width": 390
+    },
+    {
+      "issues": [],
+      "height": 29307,
+      "h1": "Prémium Kárpittisztítás Tata",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-tata.html",
+      "width": 768
+    },
+    {
+      "issues": [],
+      "height": 24630,
+      "h1": "Prémium Kárpittisztítás Tata",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-tata.html",
+      "width": 1440
+    },
+    {
+      "issues": [],
+      "height": 40546,
+      "h1": "Prémium Kárpittisztítás Tatabánya",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-tatabanya.html",
+      "width": 320
+    },
+    {
+      "issues": [],
+      "height": 39181,
+      "h1": "Prémium Kárpittisztítás Tatabánya",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-tatabanya.html",
+      "width": 390
+    },
+    {
+      "issues": [],
+      "height": 29409,
+      "h1": "Prémium Kárpittisztítás Tatabánya",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-tatabanya.html",
+      "width": 768
+    },
+    {
+      "issues": [],
+      "height": 24691,
+      "h1": "Prémium Kárpittisztítás Tatabánya",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-tatabanya.html",
+      "width": 1440
+    },
+    {
+      "issues": [],
+      "height": 57800,
+      "h1": "Prémium Kárpittisztítás Tihany",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-tihany.html",
+      "width": 320
+    },
+    {
+      "issues": [],
+      "height": 54238,
+      "h1": "Prémium Kárpittisztítás Tihany",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-tihany.html",
+      "width": 390
+    },
+    {
+      "issues": [],
+      "height": 38442,
+      "h1": "Prémium Kárpittisztítás Tihany",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-tihany.html",
+      "width": 768
+    },
+    {
+      "issues": [],
+      "height": 31046,
+      "h1": "Prémium Kárpittisztítás Tihany",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-tihany.html",
+      "width": 1440
+    },
+    {
+      "issues": [],
+      "height": 40690,
+      "h1": "Prémium Kárpittisztítás Veszprém",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-veszprem.html",
+      "width": 320
+    },
+    {
+      "issues": [],
+      "height": 39246,
+      "h1": "Prémium Kárpittisztítás Veszprém",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-veszprem.html",
+      "width": 390
+    },
+    {
+      "issues": [],
+      "height": 29498,
+      "h1": "Prémium Kárpittisztítás Veszprém",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-veszprem.html",
+      "width": 768
+    },
+    {
+      "issues": [],
+      "height": 24667,
+      "h1": "Prémium Kárpittisztítás Veszprém",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-veszprem.html",
+      "width": 1440
+    },
+    {
+      "issues": [],
+      "height": 57832,
+      "h1": "Prémium Kárpittisztítás Zamárdi",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-zamardi.html",
+      "width": 320
+    },
+    {
+      "issues": [],
+      "height": 54343,
+      "h1": "Prémium Kárpittisztítás Zamárdi",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-zamardi.html",
+      "width": 390
+    },
+    {
+      "issues": [],
+      "height": 38525,
+      "h1": "Prémium Kárpittisztítás Zamárdi",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-zamardi.html",
+      "width": 768
+    },
+    {
+      "issues": [],
+      "height": 31109,
+      "h1": "Prémium Kárpittisztítás Zamárdi",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 79,
+      "file": "karpittisztitas-zamardi.html",
+      "width": 1440
+    }
+  ],
+  "baselineHashes": {
+    "karpittisztitas-badacsony.html": "74fd977788aea190ce3571f2625b4088fda4185c9971df74de9f7a7fa001f611",
+    "karpittisztitas-balatonalmadi.html": "59eb7ae4e85b48ee38c688d7d377a3001ad2c097eba4784c53214ca7f9f5934f",
+    "karpittisztitas-balatonboglar.html": "8cd0bbd87ea1afd5200ab890ceef3b1d47ce8ebe297ee4e89c14b3ac7102618d",
+    "karpittisztitas-balatonfoldvar.html": "d500826aab54ca9b4ebc615499158f5e938db7705f85453577335195dc95cdc9",
+    "karpittisztitas-balatonfured.html": "9daaaca7fe3ae215f59b27d7477c7f1dca8c4725cfd71b012c98d8b51a1c2f79",
+    "karpittisztitas-balatonfuzfo.html": "945cc25e76b75fdfc5ae891ef7c3f7b61522792c02478239aa3839961e6dbe2c",
+    "karpittisztitas-balatonkenese.html": "9149ceac1d602799a2aa7b585f201059c871b1f6eb297ab1a7568e884b089b1c",
+    "karpittisztitas-balatonlelle.html": "5bc275bac3c8d9349eb6bb745e470745a61ed61bd3e71a0b881c6cad23162d38",
+    "karpittisztitas-balatonszemes.html": "58ef79299319029ac102140cfc44c6d6f4bedb2eb29f4382e4ec255900887e83",
+    "karpittisztitas-fonyod.html": "64b977ff0379dfdee9a13b96af8bcfefb357b5ffe0b02c7f1ba8fed82c59a144",
+    "karpittisztitas-gyor.html": "cae7c0aeb29b7388ab9b3c45b6b521e7b97712e0917f2fd64b8cd03d446fc7ac",
+    "karpittisztitas-heviz.html": "5b196b9c65f88910e09e07f4b2e300ba35e773e905db8dac1cb67015506e12a9",
+    "karpittisztitas-keszthely.html": "4253abbbd10c17388a3c7451c6348a236e457ea60a4a8cff3a6a480d2c0609be",
+    "karpittisztitas-komarom.html": "bfbbe8aa8abdf9cc9d93a8ca37251d1204302f64e7e9d5bbe26c152b8b55abe8",
+    "karpittisztitas-mosonmagyarovar.html": "ce07e62f3cbda23b45f12b7684e93d323c41f7f85a93c520fe9a2411cdd1ba8a",
+    "karpittisztitas-papa.html": "0a82541b159a4ba9dde399bd8fe9df3331cda9a6c126b0badb9230273f488178",
+    "karpittisztitas-revfulop.html": "42e13da133b3039eabbc1d47a7df59611a11278944a142d3ac303172eb14001c",
+    "karpittisztitas-siofok.html": "793836c60dde6836aa81e1a51ab678b2c00ecd5560166ff59306fe047eeffa3b",
+    "karpittisztitas-sopron.html": "c1ab4d5ebdd18c8645a9e688a6ec2ac5bf2b5483c6fc97ba3d9142801e0d7720",
+    "karpittisztitas-szombathely.html": "38d4082b00b633254dae78f2b4d9b1726b2b81cbf00ccb18c86387a0bac697a7",
+    "karpittisztitas-tapolca.html": "58a21f51fbdbd0fe6c4b8633ae848f18452e091a4149f5ef32df56acf88b6472",
+    "karpittisztitas-tata.html": "6f58756cea898548d319a5b348ae790f2069d61e3e751b8218e3f28707ab8064",
+    "karpittisztitas-tatabanya.html": "23193c6ca1f6371e2629826f43a2d756f75b948bc2fc1b42bce2894747af827e",
+    "karpittisztitas-tihany.html": "4bb4d91d8986d658ea02930bd62f8c9a6a58920c8b7a245bbfebb165b9d9fd6d",
+    "karpittisztitas-veszprem.html": "8818f7b555a078c9cce7bc537b59d09966d632cf4fa93bd806dcb7661eeff5a5",
+    "karpittisztitas-zamardi.html": "62899b119774b5aad9e30081e5dca890f815c2002574949ccbc12b262409f896"
+  }
+}

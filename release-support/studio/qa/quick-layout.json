@@ -1,0 +1,89 @@
+{
+  "base": "http://127.0.0.1:8089/release/",
+  "pages": 1,
+  "viewports": 5,
+  "issues": [],
+  "blockedWrites": [],
+  "liveProcessingCalls": 0,
+  "mockedApiGets": 1,
+  "interactions": [
+    {
+      "file": "karpittisztitas-gyor.html",
+      "passed": true,
+      "mattressGuide": [
+        {
+          "withMattress": false,
+          "totalUnchanged": "0 Ft",
+          "focusedTarget": "#studio-config-1-matrac_nedves_tisztitas"
+        },
+        {
+          "withMattress": true,
+          "totalUnchanged": "8000 Ft",
+          "focusedTarget": "#studio-config-1-matrac_nedves_tisztitas"
+        }
+      ]
+    }
+  ],
+  "originalPhotos": [
+    {
+      "file": "karpittisztitas-gyor.html",
+      "originalImageCount": 7,
+      "missing": []
+    }
+  ],
+  "results": [
+    {
+      "issues": [],
+      "height": 40912,
+      "h1": "Prémium Kárpittisztítás Győr",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-gyor.html",
+      "width": 320
+    },
+    {
+      "issues": [],
+      "height": 39438,
+      "h1": "Prémium Kárpittisztítás Győr",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-gyor.html",
+      "width": 390
+    },
+    {
+      "issues": [],
+      "height": 29677,
+      "h1": "Prémium Kárpittisztítás Győr",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-gyor.html",
+      "width": 768
+    },
+    {
+      "issues": [],
+      "height": 24909,
+      "h1": "Prémium Kárpittisztítás Győr",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-gyor.html",
+      "width": 1440
+    },
+    {
+      "issues": [],
+      "height": 25221,
+      "h1": "Prémium Kárpittisztítás Győr",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-gyor.html",
+      "width": 1920
+    }
+  ],
+  "baselineHashes": {
+    "karpittisztitas-gyor.html": "cae7c0aeb29b7388ab9b3c45b6b521e7b97712e0917f2fd64b8cd03d446fc7ac"
+  }
+}

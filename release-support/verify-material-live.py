@@ -81,6 +81,10 @@ def build_targets():
         if any(not name.endswith(('.html', '.js')) for name in changed_copy):
             raise ValueError('Unexpected copy overlay file type')
         names.update(changed_copy)
+    if manifest.get('studioOverlay'):
+        studio = bound(manifest['studioOverlay'])
+        names.update(record['file'] for record in studio['pages'])
+        names.update(record['file'] for record in studio['dependencies'])
     if not names:
         raise ValueError('No widget/copy release overlay to verify')
     references = {}

@@ -1,0 +1,456 @@
+{
+  "base": "http://127.0.0.1:8089/release/",
+  "live": false,
+  "checkedUtc": "2026-09-09T11:37:13.744676+00:00",
+  "cases": [
+    {
+      "width": 390,
+      "page": "karpittisztitas-gyor.html",
+      "mattressWetExtraGuide": true,
+      "atkairtasLabel": true,
+      "servedPricing": {
+        "pricing": {
+          "karpit": {
+            "szofa": {
+              "name": "Szófa, heverő",
+              "price": 15500,
+              "duration": 40,
+              "atkaPrice": 5000,
+              "agyazhatoPrice": 5000
+            },
+            "l_kanape": {
+              "name": "L-kanapé",
+              "price": 17500,
+              "duration": 50,
+              "atkaPrice": 5000,
+              "agyazhatoPrice": 5000
+            },
+            "u_kanape": {
+              "name": "U-kanapé",
+              "price": 22500,
+              "duration": 60,
+              "atkaPrice": 5000,
+              "agyazhatoPrice": 5000
+            },
+            "fotel": {
+              "name": "Fotel",
+              "price": 6500,
+              "duration": 20,
+              "atkaPrice": 0
+            },
+            "ebedlo_szek": {
+              "name": "Ebédlő szék",
+              "price": 3500,
+              "duration": 10,
+              "atkaPrice": 0
+            },
+            "irodai_szek": {
+              "name": "Irodai szék",
+              "price": 4000,
+              "duration": 15,
+              "atkaPrice": 0
+            }
+          },
+          "matrac": {
+            "egyagyas_a": {
+              "name": "Egyágyas matrac (A oldal)",
+              "price": 8000,
+              "duration": 25,
+              "sides": 1
+            },
+            "egyagyas_ab": {
+              "name": "Egyágyas matrac (A+B oldal)",
+              "price": 12000,
+              "duration": 40,
+              "sides": 2
+            },
+            "francia_a": {
+              "name": "Franciaágy matrac (A oldal)",
+              "price": 12000,
+              "duration": 35,
+              "sides": 1
+            },
+            "francia_ab": {
+              "name": "Franciaágy matrac (A+B oldal)",
+              "price": 17000,
+              "duration": 55,
+              "sides": 2
+            },
+            "gyerek_a": {
+              "name": "Gyerekmatrac (A oldal)",
+              "price": 5000,
+              "duration": 15,
+              "sides": 1
+            },
+            "gyerek_ab": {
+              "name": "Gyerekmatrac (A+B oldal)",
+              "price": 7000,
+              "duration": 25,
+              "sides": 2
+            },
+            "kisagy_a": {
+              "name": "Kiságy matrac (A oldal)",
+              "price": 4000,
+              "duration": 10,
+              "sides": 1
+            },
+            "kisagy_ab": {
+              "name": "Kiságy matrac (A+B oldal)",
+              "price": 6000,
+              "duration": 20,
+              "sides": 2
+            }
+          },
+          "travelZones": {
+            "belvaros": {
+              "fee": 3500,
+              "label": "Belváros"
+            },
+            "kulso": {
+              "fee": 4000,
+              "label": "Külváros"
+            },
+            "20km": {
+              "fee": 4500,
+              "label": "10 km-ig"
+            },
+            "40km": {
+              "fee": 5500,
+              "label": "20 km-ig"
+            }
+          }
+        },
+        "extras": {
+          "karpit": {
+            "atkairtas": {
+              "name": "Atkairtás",
+              "description": "Száraz atkamentesítés - ajánlott allergiásoknak",
+              "priceType": "perItem",
+              "icon": "🦠"
+            },
+            "folteltavolitas": {
+              "name": "Extra folteltávolítás",
+              "description": "Erős szennyeződések, foltok kezelése",
+              "price": 2000,
+              "priceType": "perSeat",
+              "duration": 10,
+              "icon": "✨"
+            },
+            "impregnalas": {
+              "name": "Impregnálás",
+              "description": "Védőréteg a könnyebb tisztításért",
+              "price": 3000,
+              "priceType": "perItem",
+              "duration": 15,
+              "icon": "🛡️"
+            },
+            "szagtalanitas": {
+              "name": "Szagtalanítás",
+              "description": "Háziállat/dohányszag eltávolítása",
+              "price": 2500,
+              "priceType": "perItem",
+              "duration": 10,
+              "icon": "🌸"
+            }
+          },
+          "matrac": {
+            "nedves_tisztitas": {
+              "name": "Nedves tisztítás + folteltávolítás",
+              "description": "Foltos matracokhoz - fertőtlenítő mosás",
+              "price": 5000,
+              "priceType": "perSide",
+              "duration": 20,
+              "icon": "💧",
+              "note": "Száradási idő: kb. 24 óra!"
+            },
+            "agykeret": {
+              "name": "Ágykeret, fejtámla tisztítás",
+              "description": "Ágykeret, fejtámla kárpittisztítás",
+              "price": 3000,
+              "priceType": "perItem",
+              "duration": 15,
+              "icon": "🛏️"
+            }
+          }
+        },
+        "discounts": {
+          "combo": {
+            "percent": 10,
+            "label": "Kombi kedvezmény (kárpit+matrac)"
+          },
+          "quantity3": {
+            "percent": 5,
+            "label": "3+ bútor kedvezmény"
+          }
+        },
+        "largeThreshold": 480
+      },
+      "total": 68400,
+      "duration": 235,
+      "items": 3,
+      "explicitImport": true,
+      "contactPreserved": true,
+      "invalidPayloadsRejected": 12,
+      "largeOrder": {
+        "total": 217075,
+        "duration": 600,
+        "quoteVisible": true,
+        "calendarHidden": true
+      },
+      "driftRejectedBeforeMutation": [
+        "itemPrice",
+        "itemDuration",
+        "itemExtra",
+        "globalExtra",
+        "travelCost",
+        "discount"
+      ],
+      "ok": true
+    },
+    {
+      "width": 1440,
+      "page": "karpittisztitas-gyor.html",
+      "mattressWetExtraGuide": true,
+      "atkairtasLabel": true,
+      "servedPricing": {
+        "pricing": {
+          "karpit": {
+            "szofa": {
+              "name": "Szófa, heverő",
+              "price": 15500,
+              "duration": 40,
+              "atkaPrice": 5000,
+              "agyazhatoPrice": 5000
+            },
+            "l_kanape": {
+              "name": "L-kanapé",
+              "price": 17500,
+              "duration": 50,
+              "atkaPrice": 5000,
+              "agyazhatoPrice": 5000
+            },
+            "u_kanape": {
+              "name": "U-kanapé",
+              "price": 22500,
+              "duration": 60,
+              "atkaPrice": 5000,
+              "agyazhatoPrice": 5000
+            },
+            "fotel": {
+              "name": "Fotel",
+              "price": 6500,
+              "duration": 20,
+              "atkaPrice": 0
+            },
+            "ebedlo_szek": {
+              "name": "Ebédlő szék",
+              "price": 3500,
+              "duration": 10,
+              "atkaPrice": 0
+            },
+            "irodai_szek": {
+              "name": "Irodai szék",
+              "price": 4000,
+              "duration": 15,
+              "atkaPrice": 0
+            }
+          },
+          "matrac": {
+            "egyagyas_a": {
+              "name": "Egyágyas matrac (A oldal)",
+              "price": 8000,
+              "duration": 25,
+              "sides": 1
+            },
+            "egyagyas_ab": {
+              "name": "Egyágyas matrac (A+B oldal)",
+              "price": 12000,
+              "duration": 40,
+              "sides": 2
+            },
+            "francia_a": {
+              "name": "Franciaágy matrac (A oldal)",
+              "price": 12000,
+              "duration": 35,
+              "sides": 1
+            },
+            "francia_ab": {
+              "name": "Franciaágy matrac (A+B oldal)",
+              "price": 17000,
+              "duration": 55,
+              "sides": 2
+            },
+            "gyerek_a": {
+              "name": "Gyerekmatrac (A oldal)",
+              "price": 5000,
+              "duration": 15,
+              "sides": 1
+            },
+            "gyerek_ab": {
+              "name": "Gyerekmatrac (A+B oldal)",
+              "price": 7000,
+              "duration": 25,
+              "sides": 2
+            },
+            "kisagy_a": {
+              "name": "Kiságy matrac (A oldal)",
+              "price": 4000,
+              "duration": 10,
+              "sides": 1
+            },
+            "kisagy_ab": {
+              "name": "Kiságy matrac (A+B oldal)",
+              "price": 6000,
+              "duration": 20,
+              "sides": 2
+            }
+          },
+          "travelZones": {
+            "belvaros": {
+              "fee": 3500,
+              "label": "Belváros"
+            },
+            "kulso": {
+              "fee": 4000,
+              "label": "Külváros"
+            },
+            "20km": {
+              "fee": 4500,
+              "label": "10 km-ig"
+            },
+            "40km": {
+              "fee": 5500,
+              "label": "20 km-ig"
+            }
+          }
+        },
+        "extras": {
+          "karpit": {
+            "atkairtas": {
+              "name": "Atkairtás",
+              "description": "Száraz atkamentesítés - ajánlott allergiásoknak",
+              "priceType": "perItem",
+              "icon": "🦠"
+            },
+            "folteltavolitas": {
+              "name": "Extra folteltávolítás",
+              "description": "Erős szennyeződések, foltok kezelése",
+              "price": 2000,
+              "priceType": "perSeat",
+              "duration": 10,
+              "icon": "✨"
+            },
+            "impregnalas": {
+              "name": "Impregnálás",
+              "description": "Védőréteg a könnyebb tisztításért",
+              "price": 3000,
+              "priceType": "perItem",
+              "duration": 15,
+              "icon": "🛡️"
+            },
+            "szagtalanitas": {
+              "name": "Szagtalanítás",
+              "description": "Háziállat/dohányszag eltávolítása",
+              "price": 2500,
+              "priceType": "perItem",
+              "duration": 10,
+              "icon": "🌸"
+            }
+          },
+          "matrac": {
+            "nedves_tisztitas": {
+              "name": "Nedves tisztítás + folteltávolítás",
+              "description": "Foltos matracokhoz - fertőtlenítő mosás",
+              "price": 5000,
+              "priceType": "perSide",
+              "duration": 20,
+              "icon": "💧",
+              "note": "Száradási idő: kb. 24 óra!"
+            },
+            "agykeret": {
+              "name": "Ágykeret, fejtámla tisztítás",
+              "description": "Ágykeret, fejtámla kárpittisztítás",
+              "price": 3000,
+              "priceType": "perItem",
+              "duration": 15,
+              "icon": "🛏️"
+            }
+          }
+        },
+        "discounts": {
+          "combo": {
+            "percent": 10,
+            "label": "Kombi kedvezmény (kárpit+matrac)"
+          },
+          "quantity3": {
+            "percent": 5,
+            "label": "3+ bútor kedvezmény"
+          }
+        },
+        "largeThreshold": 480
+      },
+      "total": 68400,
+      "duration": 235,
+      "items": 3,
+      "explicitImport": true,
+      "contactPreserved": true,
+      "invalidPayloadsRejected": 12,
+      "largeOrder": {
+        "total": 217075,
+        "duration": 600,
+        "quoteVisible": true,
+        "calendarHidden": true
+      },
+      "driftRejectedBeforeMutation": [
+        "itemPrice",
+        "itemDuration",
+        "itemExtra",
+        "globalExtra",
+        "travelCost",
+        "discount"
+      ],
+      "ok": true
+    }
+  ],
+  "issues": [],
+  "blockedWrites": [],
+  "mockedAvailabilityRequests": 4,
+  "mockedAvailabilityPreflights": 0,
+  "realWrites": 0,
+  "servedAssetUrls": [
+    "http://127.0.0.1:8089/release/before-after-slider.css",
+    "http://127.0.0.1:8089/release/before-after-slider.js?v=3e8c48e91451",
+    "http://127.0.0.1:8089/release/large-order-panel.css",
+    "http://127.0.0.1:8089/release/material-recognition/app.js?v=6a51333ef5d7",
+    "http://127.0.0.1:8089/release/material-recognition/design.css?v=22b93360d348",
+    "http://127.0.0.1:8089/release/mobile-menu.js?v=5d683e7cd1f0",
+    "http://127.0.0.1:8089/release/mobile.css",
+    "http://127.0.0.1:8089/release/reviews.css",
+    "http://127.0.0.1:8089/release/seo-content.css",
+    "http://127.0.0.1:8089/release/studio/booking-handoff.js?v=e1640e2de2eb",
+    "http://127.0.0.1:8089/release/studio/configurator.js?v=0c1d67712ecb",
+    "http://127.0.0.1:8089/release/studio/design.css?v=962dc9aa0cd2",
+    "http://127.0.0.1:8089/release/studio/handoff.css?v=9ace450ab952",
+    "http://127.0.0.1:8089/release/studio/interactions.js?v=0e294ed3ad94",
+    "http://127.0.0.1:8089/release/style.css",
+    "http://127.0.0.1:8089/release/ui/booking-live.js?v=577839f2012a",
+    "http://127.0.0.1:8089/release/ui/calendar-live.css?v=8c750daa15cb",
+    "http://127.0.0.1:8089/release/ui/calendar-live.js?v=d72fed110e1a",
+    "http://127.0.0.1:8089/release/ui/design.css?v=c2fee50158f2",
+    "http://127.0.0.1:8089/release/ui/navigation.js?v=66cfab31fd7b",
+    "http://127.0.0.1:8089/release/ui/reviews.js?v=32089c8a2041",
+    "http://127.0.0.1:8089/release/ui/rollout.js?v=354c7ee1b7c1",
+    "http://127.0.0.1:8089/release/ui/rollout/styles-karpittisztitas-gyor.css?v=179958cd86e3",
+    "http://127.0.0.1:8089/release/ui/site.js?v=6589e0c628dc",
+    "http://127.0.0.1:8089/release/ui/subpages.css?v=d0979726b4a6"
+  ],
+  "reviewedLocalSha256": {
+    "index.html": "1182d9cb22d7bbac9a85a2746d507062b7fbbbd202cb831a46879c4d843d148e",
+    "karpittisztitas-gyor.html": "2244a73cd39b8feeb9f8ae071a41c5e58fa84239dc03638b6aa68f1f7c42c465",
+    "ui/booking-live.js": "577839f2012a15104cb8ca18f828c57bd5b684d59d4a7f3beb986c8b135401f1",
+    "ui/calendar-live.js": "d72fed110e1a4d5e282cfaaf5e9de347a160411b73f16f7b74b18ae26f7ceadc",
+    "studio/configurator.js": "0c1d67712ecb1b12b52845d598b7d12200ee6df784d0a406fb3a51b3bdd7e014",
+    "studio/booking-handoff.js": "e1640e2de2eb117af9b0c9027ec909fb075593851e0875007dfb95a4ecd3a47f"
+  },
+  "localFilesChangedDuringQA": []
+}

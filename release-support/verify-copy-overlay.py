@@ -1,6 +1,7 @@
 """Verify exact reversible copy edits, then verify the recovered parent release.
 
-prepare(manifest) -> (errors, parent_manifest, reader), reader(file) -> bytes.
+prepare(manifest, read_current=None) -> (errors, parent_manifest, reader).
+reader(file) -> bytes; read_current lets a later layer supply its exact parent.
 The returned parent/reader are usable only when errors is empty. No files are
 written. Full JavaScript AST/wording review belongs to the bound full release
 verification; this dependency-free gate additionally checks lexical contexts.
@@ -421,10 +422,12 @@ def recover(current, record):
     return previous
 
 
-def prepare(manifest):
+def prepare(manifest, read_current=None):
+    if read_current is None:
+        read_current = artifact
     errors, parent, restored = [], None, {}
     def reader(file):
-        return restored[file] if file in restored else artifact(file)
+        return restored[file] if file in restored else read_current(file)
     try:
         require(isinstance(manifest, dict), 'Invalid release manifest')
         overlay = bound(manifest['copyOverlay'], 'release-support/copy-tone/overlay.json')
@@ -455,7 +458,7 @@ def prepare(manifest):
                     digest(record['afterSha256']) == manifest['files'][file]['sha256'], 'Copy file hash does not bind manifests')
             by_file[file] = record
         for file, old_record in parent['files'].items():
-            current = artifact(file)
+            current = read_current(file)
             current_record = manifest['files'][file]
             require(sha(current) == current_record['sha256'], 'Current artifact hash mismatch: ' + file)
             if file in by_file:
@@ -463,7 +466,7 @@ def prepare(manifest):
                 require(current_record == expected, 'Copy changed unrelated file metadata: ' + file)
                 restored[file] = recover(current, by_file[file])
                 require(sha(restored[file]) == old_record['sha256'], 'Recovered baseline hash mismatch: ' + file)
-                validate_context(file, restored[file], current, by_file[file]['edits'], artifact)
+                validate_context(file, restored[file], current, by_file[file]['edits'], read_current)
             else:
                 require(current_record == old_record and sha(current) == old_record['sha256'], 'Unlisted artifact changed: ' + file)
         if parent.get('widgetOverlay'):
@@ -477,8 +480,8 @@ def prepare(manifest):
     return errors, parent, reader
 
 
-def verify(manifest):
-    return prepare(manifest)[0]
+def verify(manifest, read_current=None):
+    return prepare(manifest, read_current=read_current)[0]
 
 
 if __name__ == '__main__':

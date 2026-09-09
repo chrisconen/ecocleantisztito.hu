@@ -1,0 +1,314 @@
+[
+  {
+    "file": "karpittisztitas-badacsony.html",
+    "city": "badacsony",
+    "service": "karpittisztitas",
+    "sourceSha256": "e9311725417690a074db0a07b28384fd52f722565c95274e54d6447098c9aae9"
+  },
+  {
+    "file": "karpittisztitas-balatonalmadi.html",
+    "city": "balatonalmadi",
+    "service": "karpittisztitas",
+    "sourceSha256": "44201602abf65f0ea92ebb3ee4118a96cec0c6643922f10df212cada04bcd19a"
+  },
+  {
+    "file": "karpittisztitas-balatonboglar.html",
+    "city": "balatonboglar",
+    "service": "karpittisztitas",
+    "sourceSha256": "92e726faf500c60ef7fdd1e67fb452df8e6b7426d8ada794cce61ee0d2be0937"
+  },
+  {
+    "file": "karpittisztitas-balatonfoldvar.html",
+    "city": "balatonfoldvar",
+    "service": "karpittisztitas",
+    "sourceSha256": "dd585a85167d842d4599603372107e4e40bfba766ba2ee8de960afbdf2380cb6"
+  },
+  {
+    "file": "karpittisztitas-balatonfured.html",
+    "city": "balatonfured",
+    "service": "karpittisztitas",
+    "sourceSha256": "f73aed524e676d83b0868755792b9b0e6596660167cc9830b3b843445ba896fe"
+  },
+  {
+    "file": "karpittisztitas-balatonfuzfo.html",
+    "city": "balatonfuzfo",
+    "service": "karpittisztitas",
+    "sourceSha256": "feb740d3536722b3c2f1e8eb7a21f002f903f8d0564a1799334641e5dce6c32a"
+  },
+  {
+    "file": "karpittisztitas-balatonkenese.html",
+    "city": "balatonkenese",
+    "service": "karpittisztitas",
+    "sourceSha256": "d6d57b2afe9a90d4cf7b99d441871d9b9e11a329d33f7f90452414fa0bd2ae54"
+  },
+  {
+    "file": "karpittisztitas-balatonlelle.html",
+    "city": "balatonlelle",
+    "service": "karpittisztitas",
+    "sourceSha256": "66926e536c9eddc73d2dc3dcd3192edbcd7f044f7619884f3307bc76b0c78c9b"
+  },
+  {
+    "file": "karpittisztitas-balatonszemes.html",
+    "city": "balatonszemes",
+    "service": "karpittisztitas",
+    "sourceSha256": "04621367b3922e88c3e79ed7a78f4b0d67ab4b6a5c8d78bb475bf6890eea6b51"
+  },
+  {
+    "file": "karpittisztitas-fonyod.html",
+    "city": "fonyod",
+    "service": "karpittisztitas",
+    "sourceSha256": "5e1976b15bf88f0af719cfc3664400b72e1e1dfd7de72a282f9b29328a10bdf5"
+  },
+  {
+    "file": "karpittisztitas-gyor.html",
+    "city": "gyor",
+    "service": "karpittisztitas",
+    "sourceSha256": "068110eeebc58065abc1919034dd427b91755aace0e625614845017308497d79"
+  },
+  {
+    "file": "karpittisztitas-heviz.html",
+    "city": "heviz",
+    "service": "karpittisztitas",
+    "sourceSha256": "eedc09c33571cfae0a381da7f7bc4497d4e4c5ce22575d6d7b3fd0d477fc4077"
+  },
+  {
+    "file": "karpittisztitas-keszthely.html",
+    "city": "keszthely",
+    "service": "karpittisztitas",
+    "sourceSha256": "9c83c44fdbf875ed6236ce6dae17fe77f0bd6768d965ff857579ad4d0c580bd2"
+  },
+  {
+    "file": "karpittisztitas-komarom.html",
+    "city": "komarom",
+    "service": "karpittisztitas",
+    "sourceSha256": "ca5cb8f25593210244422ee287ecdd21b5c9663e9ca937067e0e51d6e8d48b0e"
+  },
+  {
+    "file": "karpittisztitas-mosonmagyarovar.html",
+    "city": "mosonmagyarovar",
+    "service": "karpittisztitas",
+    "sourceSha256": "500143e82341691405753a859308f20d2fac69774af1092f4d87d57dd43f679f"
+  },
+  {
+    "file": "karpittisztitas-papa.html",
+    "city": "papa",
+    "service": "karpittisztitas",
+    "sourceSha256": "137a1bf5cfd86f73657dc1994afd9636617b9f05134fb821d1c74b463b5db6b8"
+  },
+  {
+    "file": "karpittisztitas-revfulop.html",
+    "city": "revfulop",
+    "service": "karpittisztitas",
+    "sourceSha256": "48ff9963bc234e87791aaf50ea35810d0f36a55b1e86f508068d5f7098b2c08f"
+  },
+  {
+    "file": "karpittisztitas-siofok.html",
+    "city": "siofok",
+    "service": "karpittisztitas",
+    "sourceSha256": "447261a624fc5bed4996a27a766862111e94b18652c17417c0e963a53fc69618"
+  },
+  {
+    "file": "karpittisztitas-sopron.html",
+    "city": "sopron",
+    "service": "karpittisztitas",
+    "sourceSha256": "9f035ae695864c8437b655baa98b6b6a972540a98499611a90765295caafaba5"
+  },
+  {
+    "file": "karpittisztitas-szombathely.html",
+    "city": "szombathely",
+    "service": "karpittisztitas",
+    "sourceSha256": "5b5132926ef1df0dd0db67bcc6bc31154306405c1894e0dadf90cc38763db170"
+  },
+  {
+    "file": "karpittisztitas-tapolca.html",
+    "city": "tapolca",
+    "service": "karpittisztitas",
+    "sourceSha256": "4f7afb03c61439a89c3389b1f5ed58579de03d48e3c82da4879f08f19b109abe"
+  },
+  {
+    "file": "karpittisztitas-tata.html",
+    "city": "tata",
+    "service": "karpittisztitas",
+    "sourceSha256": "bf61bad21816b450accb33831f1ea0c3d08d9c2463b9ef82db3bedf42029a90a"
+  },
+  {
+    "file": "karpittisztitas-tatabanya.html",
+    "city": "tatabanya",
+    "service": "karpittisztitas",
+    "sourceSha256": "671d1fde0ba1eb8278699e9065c6485b60f61549b2dc6abba20e0f47a7f6175d"
+  },
+  {
+    "file": "karpittisztitas-tihany.html",
+    "city": "tihany",
+    "service": "karpittisztitas",
+    "sourceSha256": "7d66c5044826d7c8338328ac393fb88865700e36726cad30f4cdd73dc855c68f"
+  },
+  {
+    "file": "karpittisztitas-veszprem.html",
+    "city": "veszprem",
+    "service": "karpittisztitas",
+    "sourceSha256": "0bae1358f40a2ceb583b1e731e7c73382c7918c2aad4fba1b128fd7d4bcc3073"
+  },
+  {
+    "file": "karpittisztitas-zamardi.html",
+    "city": "zamardi",
+    "service": "karpittisztitas",
+    "sourceSha256": "8adb8099ffc29b6f15304de907611fb9956d459b71d8b134be50189f8fe4754f"
+  },
+  {
+    "file": "matractisztitas-badacsony.html",
+    "city": "badacsony",
+    "service": "matractisztitas",
+    "sourceSha256": "e7b05967e800c6b130fe4e545f3ee16463528051933a8d1f5bd0b6487dcbcffb"
+  },
+  {
+    "file": "matractisztitas-balatonalmadi.html",
+    "city": "balatonalmadi",
+    "service": "matractisztitas",
+    "sourceSha256": "cd49168fe011db0b4f16220146e71da02a795d55e916e71c1ed8d12786502e66"
+  },
+  {
+    "file": "matractisztitas-balatonboglar.html",
+    "city": "balatonboglar",
+    "service": "matractisztitas",
+    "sourceSha256": "b2ddd80d53993d643605b867546693e33115c4ea32421330c1d7a54f86e4a4e6"
+  },
+  {
+    "file": "matractisztitas-balatonfoldvar.html",
+    "city": "balatonfoldvar",
+    "service": "matractisztitas",
+    "sourceSha256": "5d07f5cb49d210b1927739f7eb8e61bb55e2ec2eda54910a2f1fa20a0ec6760a"
+  },
+  {
+    "file": "matractisztitas-balatonfured.html",
+    "city": "balatonfured",
+    "service": "matractisztitas",
+    "sourceSha256": "5526da5734bfbea56dd3f83ed1c7fc9859212302dbf075acdfa8cb6aba832009"
+  },
+  {
+    "file": "matractisztitas-balatonfuzfo.html",
+    "city": "balatonfuzfo",
+    "service": "matractisztitas",
+    "sourceSha256": "df099b5909e0dc45a68d69a5e8ae438abb567c41a309d452597102d508b1813c"
+  },
+  {
+    "file": "matractisztitas-balatonkenese.html",
+    "city": "balatonkenese",
+    "service": "matractisztitas",
+    "sourceSha256": "761ddf26c9b5cf4b9215c5fe18d4a8acfb3220b3247d1303a6545357230a4bc8"
+  },
+  {
+    "file": "matractisztitas-balatonlelle.html",
+    "city": "balatonlelle",
+    "service": "matractisztitas",
+    "sourceSha256": "a475343808342650d416476dc09e6e7f09f03f36e9e5d4d4c8ba62dd845eb342"
+  },
+  {
+    "file": "matractisztitas-balatonszemes.html",
+    "city": "balatonszemes",
+    "service": "matractisztitas",
+    "sourceSha256": "fb5030f70dc5ddfb1de9b810d8838dbfbd9071933afe13c2330ace1341b5867d"
+  },
+  {
+    "file": "matractisztitas-fonyod.html",
+    "city": "fonyod",
+    "service": "matractisztitas",
+    "sourceSha256": "d0d27edd3797734a9b01c9411d517fe2f056fcbf9deb85caea6c17768cb62b19"
+  },
+  {
+    "file": "matractisztitas-gyor.html",
+    "city": "gyor",
+    "service": "matractisztitas",
+    "sourceSha256": "7c9c15de588cdf29e4b37b140293616d047a4cc388f494f08338b03a86989aa6"
+  },
+  {
+    "file": "matractisztitas-heviz.html",
+    "city": "heviz",
+    "service": "matractisztitas",
+    "sourceSha256": "b4256c2a67a8687581ebf90b47bbce1ef67531e06a83f9e7483c773d9f8f648b"
+  },
+  {
+    "file": "matractisztitas-keszthely.html",
+    "city": "keszthely",
+    "service": "matractisztitas",
+    "sourceSha256": "23af46483a9b97ce4a6afc51cd46eeb87de1d6bfbb7e04da61337971241b1dab"
+  },
+  {
+    "file": "matractisztitas-komarom.html",
+    "city": "komarom",
+    "service": "matractisztitas",
+    "sourceSha256": "8329f1a91ef06c493b35e88934f872cf0d6dde8d7b88b31b9dedebcd870873c5"
+  },
+  {
+    "file": "matractisztitas-mosonmagyarovar.html",
+    "city": "mosonmagyarovar",
+    "service": "matractisztitas",
+    "sourceSha256": "af885b5fcbec970234669c91915afbabf6eceab9a0694e29836689fb8187e41b"
+  },
+  {
+    "file": "matractisztitas-papa.html",
+    "city": "papa",
+    "service": "matractisztitas",
+    "sourceSha256": "51ebc7ae76fda4a0f5e561ac806ef75417296fc00a55295db4274527b4377a54"
+  },
+  {
+    "file": "matractisztitas-revfulop.html",
+    "city": "revfulop",
+    "service": "matractisztitas",
+    "sourceSha256": "b8e57ba2b14d9ed0996ad07f92acb0df229cdbbcafd0e9fe3f13f54914551879"
+  },
+  {
+    "file": "matractisztitas-siofok.html",
+    "city": "siofok",
+    "service": "matractisztitas",
+    "sourceSha256": "55616cee810847c7b96f24be4acdf5ea111995fbddaef0a8ab8c327a48d3c6fc"
+  },
+  {
+    "file": "matractisztitas-sopron.html",
+    "city": "sopron",
+    "service": "matractisztitas",
+    "sourceSha256": "b3dc6b9d8b26578f78d70d50a16054b03b7f0e282f19aae83e94183374f0c8e5"
+  },
+  {
+    "file": "matractisztitas-szombathely.html",
+    "city": "szombathely",
+    "service": "matractisztitas",
+    "sourceSha256": "ea9063093e3143b234987f0d02688ec91d9937ea4eddd549d440ffb4ff4b3325"
+  },
+  {
+    "file": "matractisztitas-tapolca.html",
+    "city": "tapolca",
+    "service": "matractisztitas",
+    "sourceSha256": "bd784f0b3abf8fc07cda8feae135a9af57f663e823b03058bc093aae3afbe55e"
+  },
+  {
+    "file": "matractisztitas-tata.html",
+    "city": "tata",
+    "service": "matractisztitas",
+    "sourceSha256": "eb1b29a358680aa60312a43157b492d5420fa8478ab5e936c0f3e56c0b47cf81"
+  },
+  {
+    "file": "matractisztitas-tatabanya.html",
+    "city": "tatabanya",
+    "service": "matractisztitas",
+    "sourceSha256": "b1db079bc488b14bc4638082d08bcb29feea383768d54654e92a75bf5d783129"
+  },
+  {
+    "file": "matractisztitas-tihany.html",
+    "city": "tihany",
+    "service": "matractisztitas",
+    "sourceSha256": "dd336ac92caf31620a9fab3b55af7f275c35dd7eb47e6a04c25590b38cf707e7"
+  },
+  {
+    "file": "matractisztitas-veszprem.html",
+    "city": "veszprem",
+    "service": "matractisztitas",
+    "sourceSha256": "b9e99971b00941c4fb9f944b1433c3dc806c45581da62908d8099e30f5762595"
+  },
+  {
+    "file": "matractisztitas-zamardi.html",
+    "city": "zamardi",
+    "service": "matractisztitas",
+    "sourceSha256": "57fc693f2ad42f9822c86f1f880d2fa1fbcf9a1e20da14808d6162e47cda6f01"
+  }
+]

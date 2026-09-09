@@ -10,3 +10,8 @@
 /release-support/material-widget-overlay.json -text
 /release-support/material-widget-baseline/*.json -text
 /release-support/copy-tone/*.json -text
+/release-support/studio/*.json -text
+/release-support/studio/baseline/*.html -text
+/demo/studio/*.json -text
+/demo/studio/** -text
+/release-support/studio/*.mjs -text

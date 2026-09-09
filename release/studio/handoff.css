@@ -1,0 +1,11 @@
+#booking .studio-handoff{max-width:1100px;margin:0 auto 40px;padding:clamp(24px,4vw,45px);border:1px solid #c8d4c8;border-radius:12px;background:#f4f6ed;color:#344740;scroll-margin-top:110px}
+#booking .studio-handoff h2{font-family:var(--font-display,Georgia,serif);font-size:clamp(28px,4vw,45px);font-weight:500;line-height:1.15;margin:0 0 18px;overflow-wrap:anywhere}
+#booking .studio-handoff p,#booking .studio-handoff li{font-size:14px;line-height:1.8;color:#465e54}
+#booking .studio-handoff ul{padding-left:22px;margin:18px 0}
+#booking .studio-handoff .med-config-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+#booking .studio-handoff button{font:600 13px/1.6 var(--font-main,sans-serif);padding:14px 20px;min-height:48px;border:1px solid #455e55;border-radius:6px;background:#455e55;color:#fff;cursor:pointer;max-width:100%;white-space:normal}
+#booking .studio-handoff button:disabled{opacity:.6;cursor:default}
+#booking .studio-handoff .med-config-button-secondary{background:transparent;color:#455e55}
+#booking .studio-handoff :focus-visible{outline:2px solid #8c705c;outline-offset:4px}
+#booking .studio-handoff .med-config-note{font-size:12px;padding:14px 0;border-block:1px solid #d8dfd2}
+@media(max-width:680px){#booking .studio-handoff{margin-inline:12px;padding:24px 18px}#booking .studio-handoff button{width:100%;font-size:12px}}

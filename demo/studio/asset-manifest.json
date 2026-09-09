@@ -1,0 +1,90 @@
+[
+  {
+    "id": "hero",
+    "file": "l-alaku-kanape-vilagos-nappali.webp",
+    "width": 1672,
+    "height": 941,
+    "bytes": 302440,
+    "sha256": "718a3b4b507c02b68a4fb688a2cebbf776a5790244696699356fb2cdadce1531"
+  },
+  {
+    "id": "sofa",
+    "file": "szofa-lenkarpit-varosi-nappali.webp",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 303850,
+    "sha256": "05ae401e1a2e25619290b7de6144306acfc1539d8330908b9245bca7e01ec324"
+  },
+  {
+    "id": "armchair",
+    "file": "fotel-bukle-olvasosarok.webp",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 358888,
+    "sha256": "62a191c1baef26c2b61b4c9dcb53902f42ea88c2c84e98dee081173bcc575a44"
+  },
+  {
+    "id": "dining",
+    "file": "karpitozott-ebedloszek-tolgy-etkezo.webp",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 295002,
+    "sha256": "3d1c0818aba06f33cf691bcb75eaddd6e49f0fa3ecfe8d992488955218a61b65"
+  },
+  {
+    "id": "office",
+    "file": "karpitozott-irodai-szek-dolgozoszoba.webp",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 235498,
+    "sha256": "b33a4942e5eb2721f2afede6a6bfac97e0a69ad73017558062eeb343aac919ff"
+  },
+  {
+    "id": "mattress",
+    "file": "matrac-karpitozott-agy-vilagos-haloszoba.webp",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 268342,
+    "sha256": "7923127358cd1a758a1f964b4c1a100bea7afe8d6e8772ede7a8a3862442c5b2"
+  },
+  {
+    "id": "heritage",
+    "file": "magyar-nappali-1980-as-evek-berendezes.webp",
+    "width": 1672,
+    "height": 941,
+    "bytes": 301068,
+    "sha256": "5efe27f32847b7563fc1e44c031ecbd2c4f7592c4761da088c555a41c2364330"
+  },
+  {
+    "id": "soil",
+    "file": "kanape-fejtamla-karfa-uleselo-szennyezodes.webp",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 329398,
+    "sha256": "93aa9e3f7919337452dd225a19065b82a3141d6dd0a8efbb53785cc5d1e1bc7c"
+  },
+  {
+    "id": "mites-sofa",
+    "file": "poratka-petek-hamsejtek-kanape-szovet.webp",
+    "width": 1672,
+    "height": 941,
+    "bytes": 294594,
+    "sha256": "3e92dc72f93769d7301677eb6d7305b4e017709e5301580888241c833ec67c26"
+  },
+  {
+    "id": "mites-mattress",
+    "file": "poratka-petek-matrac-szalak-mikrovilag.webp",
+    "width": 1672,
+    "height": 941,
+    "bytes": 269456,
+    "sha256": "53341c8bd36766bb0571bcad8c1bc378e404013aebdd0e7030e323864cf6d7e9"
+  },
+  {
+    "id": "icons",
+    "file": "eco-clean-sajat-apolasi-ikonok.webp",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 46384,
+    "sha256": "175707d7caebb7da47b527ca9266839c183ab9cb70e94e2a1ff53f67a0cfc605"
+  }
+]

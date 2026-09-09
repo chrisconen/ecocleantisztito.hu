@@ -1,0 +1,37 @@
+{
+  "base": "http://127.0.0.1:8089/release/",
+  "pages": 1,
+  "viewports": 1,
+  "issues": [],
+  "blockedWrites": [],
+  "liveProcessingCalls": 0,
+  "mockedApiGets": 1,
+  "interactions": [
+    {
+      "file": "karpittisztitas-gyor.html",
+      "passed": true,
+      "navContrast": {
+        "filter": "grayscale(1) contrast(1.4)",
+        "blend": "multiply",
+        "background": "url(\"http://127.0.0.1:8089/release/studio/assets/eco-clean-sajat-apolasi-ikonok.webp\")",
+        "width": 24
+      }
+    }
+  ],
+  "originalPhotos": [],
+  "results": [
+    {
+      "issues": [],
+      "height": 24797,
+      "h1": "Prémium Kárpittisztítás Győr",
+      "hero": "studio/assets/l-alaku-kanape-vilagos-nappali.webp",
+      "products": 6,
+      "icons": 45,
+      "file": "karpittisztitas-gyor.html",
+      "width": 1440
+    }
+  ],
+  "baselineHashes": {
+    "karpittisztitas-gyor.html": "cae7c0aeb29b7388ab9b3c45b6b521e7b97712e0917f2fd64b8cd03d446fc7ac"
+  }
+}
