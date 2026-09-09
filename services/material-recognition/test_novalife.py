@@ -10,9 +10,21 @@ from test_server import result
 
 
 class NovaLifeTests(unittest.TestCase):
+    def test_clear_interlaced_textile_is_not_forced_back_to_uncertain(self):
+        raw = result(anyag='lapos szövésű bútorszövet (poli/pamut keverék)',
+                     novalife_status='likely_other', novalife_structure='interlaced_yarns')
+        self.assertEqual(server.sanitize_result(raw)['novalife']['status'], 'likely_other')
+        for structure in ('unclear', 'leather_suede_like', None, [], 'user_says_safe'):
+            self.assertEqual(server.sanitize_result(dict(raw, novalife_structure=structure))['novalife']['status'], 'uncertain')
+        for material in ('valódi bőr', 'műbőr/eco-bőr (PU/PVC)', 'mikroszálas/velúr (alcantara-jellegű)', 'nem eldönthető'):
+            self.assertEqual(server.sanitize_result(dict(raw, anyag=material))['novalife']['status'], 'uncertain')
+
     def test_worker_and_python_novalife_status_and_copy_match(self):
         cases = [result(anyag=material, novalife_status=status, novalife_label_text='')
                  for material in providers.MATERIALS for status in providers.NOVALIFE_REASONS]
+        cases.extend(result(anyag=material, novalife_status=status, novalife_structure=structure)
+                     for material in providers.MATERIALS for status in providers.NOVALIFE_REASONS
+                     for structure in providers.NOVALIFE_STRUCTURES)
         cases.extend(result(kep_tipus=kind, novalife_status='label_novalife', novalife_label_text=label)
                      for kind in ('anyag', 'cimke', 'hasznalhatatlan') for label in ('NovaLife', 'NovaLifestyle', ''))
         module = (Path(__file__).parent / 'cloudflare/src/analysis.mjs').resolve().as_uri()

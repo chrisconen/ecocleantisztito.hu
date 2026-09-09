@@ -111,6 +111,12 @@ test('NovaLife ambiguous leather/velour materials cannot receive a reassuring li
     assert.doesNotMatch(actual.novalife.reason, /Biztosan kizárható/);
   }
 });
+test('clearly interlaced woven fabric can differ from NovaLife without a target label', () => {
+  const raw = fixture({ anyag: 'lapos szövésű bútorszövet (poli/pamut keverék)', novalife_status: 'likely_other', novalife_structure: 'interlaced_yarns' });
+  assert.equal(sanitizeResult(raw).novalife.status, 'likely_other');
+  for (const structure of ['unclear', 'leather_suede_like', null, [], 'user_says_safe']) assert.equal(sanitizeResult({ ...raw, novalife_structure: structure }).novalife.status, 'uncertain');
+  for (const anyag of ['valódi bőr', 'műbőr/eco-bőr (PU/PVC)', 'mikroszálas/velúr (alcantara-jellegű)', 'nem eldönthető']) assert.equal(sanitizeResult({ ...raw, anyag }).novalife.status, 'uncertain');
+});
 test('NovaLife target-label transcription requires exact token; reference/note claims cannot grant label state', () => {
   for (const [kind, label, expected] of [['cimke', 'ANDANTE NovaLife', 'label_novalife'], ['cimke', 'novalife', 'label_novalife'], ['cimke', 'NovaLifestyle', 'uncertain'], ['cimke', 'nemNovaLife', 'uncertain'], ['cimke', 'Nova Life', 'uncertain'], ['cimke', 'ANDANTE', 'uncertain'], ['cimke', '', 'uncertain'], ['anyag', 'NovaLife', 'possible_novalife'], ['hasznalhatatlan', 'NovaLife', 'uncertain']]) {
     const actual = sanitizeResult(fixture({ kep_tipus: kind, novalife_status: 'label_novalife', novalife_label_text: label, note: 'NovaLife', references: [{ label: 'NovaLife' }] }));
@@ -125,7 +131,7 @@ test('NovaLife public reasons are fixed/bounded and free-form clearance cannot c
     assert.doesNotMatch(JSON.stringify(actual), /Gemini|OpenAI|Biztosan nem|biztonságosan tisztítható|Nincs impregnálás/);
     assert.equal(actual.tisztitasi_kod, 'ismeretlen');
   }
-  assert.match(NOVALIFE_REASONS.likely_other, /nem zárja ki/); assert.match(NOVALIFE_REASONS.label_novalife, /eredetin is ellenőrizni/);
+  assert.match(NOVALIFE_REASONS.likely_other, /eltér/); assert.doesNotMatch(NOVALIFE_REASONS.likely_other, /nem zárja ki/); assert.match(NOVALIFE_REASONS.label_novalife, /eredetin is ellenőrizni/);
 });
 test('both selected provider schemas require the NovaLife fields; target/refs prompt preserves trust boundary', async t => {
   let provider = 'gemini'; const payloads = [];

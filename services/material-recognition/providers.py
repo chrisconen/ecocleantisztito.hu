@@ -36,12 +36,14 @@ MATERIALS = ['valódi bőr', 'műbőr/eco-bőr (PU/PVC)', 'bársony (velvet)', '
              'len vagy lenhatású', 'gyapjú / gyapjúkeverék', 'jacquard / gobelin mintás', 'háló (mesh)', 'nem eldönthető']
 
 NOVALIFE_REASONS = {
-    'likely_other': 'A látható szövetszerkezet inkább más anyagjellegre utal. Ez nem zárja ki a NovaLife megjelölést vagy a felületkezelést, és nem igazolja a tisztíthatóságot. Ellenőrizni kell az eredeti gyártói címkét és kezelési útmutatót.',
-    'possible_novalife': 'A fotó alapján felmerülhet a NovaLife bőrhatású szövet lehetősége, de ez nem márka- vagy anyagazonosítás. A gyártói címke és az adott bevonóanyag kezelési útmutatója szükséges; tisztítási eljárás ebből nem hagyható jóvá.',
+    'likely_other': 'Jellegzetes textilszerkezet látható, amely eltér a NovaLife bőrhatású felületétől. A fotó alapján valószínűleg nem a keresett NovaLife anyag. A tisztítás módját helyszíni anyagpróbával pontosítjuk.',
+    'possible_novalife': 'A felület NovaLife-hoz hasonló bőrhatású vagy velúros jellegű. Tisztítás előtt egyeztessünk, és ha megvan, mutasd meg a gyártói címkét.',
     'label_novalife': 'A célképként megadott címke előzetes kiolvasása NovaLife megjelölést jelez. A feliratot az eredetin is ellenőrizni kell; ez önmagában nem igazolja az összetételt, a felületkezelést vagy egy tisztítási eljárás biztonságát.',
-    'uncertain': 'Ebből a fotóból a NovaLife lehetősége nem dönthető el. A bőrhatás vagy a szín nem bizonyít anyagtípust, márkát vagy impregnálást. Az eredeti gyártói címke és kezelési útmutató ellenőrzése szükséges; tisztíthatóságot nem igazoltunk.',
+    'uncertain': 'A fotón nem látszik elég részlet a szövetszerkezet megkülönböztetéséhez, vagy a látható jelek ellentmondásosak. Készíts éles közeli képet természetes oldalfényben; a címke külön fotója is segíthet.',
 }
 NOVALIFE_DISTINCT = frozenset({'bouclé', 'kordbársony', 'jacquard / gobelin mintás', 'háló (mesh)'})
+NOVALIFE_WOVEN = frozenset({'lapos szövésű bútorszövet (poli/pamut keverék)', 'len vagy lenhatású', 'zsenília (chenille)', 'gyapjú / gyapjúkeverék'})
+NOVALIFE_STRUCTURES = ['interlaced_yarns', 'looped', 'ribbed', 'mesh', 'leather_suede_like', 'unclear']
 NOVALIFE_TOKEN = re.compile(r'(?<![\w])NovaLife(?![\w])', re.IGNORECASE)
 
 
@@ -60,7 +62,7 @@ def sanitize_novalife(value, kind, material):
         status = 'label_novalife'
     elif status == 'label_novalife':
         status = 'possible_novalife' if kind == 'anyag' else 'uncertain'
-    elif status == 'likely_other' and (kind != 'anyag' or material not in NOVALIFE_DISTINCT):
+    elif status == 'likely_other' and (kind != 'anyag' or not (material in NOVALIFE_DISTINCT or (material in NOVALIFE_WOVEN and value.get('novalife_structure') == 'interlaced_yarns')) or value.get('novalife_structure') in ('unclear', 'leather_suede_like')):
         status = 'uncertain'
     return {'status': status, 'reason': NOVALIFE_REASONS[status]}
 
@@ -89,6 +91,7 @@ SCHEMA = {
         'kerdes_ugyfelnek': {'type': 'string'},
         'novalife_status': {'type': 'string', 'enum': list(NOVALIFE_REASONS)},
         'novalife_reason': {'type': 'string'},
+        'novalife_structure': {'type': 'string', 'enum': NOVALIFE_STRUCTURES},
         'novalife_label_text': {'type': 'string'},
     },
     'additionalProperties': False,
@@ -107,8 +110,10 @@ saját bizonytalansági becslés, nem tesztelt pontosság. Csak a kért magyar J
 objektumot add vissza. A referencia-könyvtár nem teljes: ne kényszeríts találatot.
 A NovaLife státuszt sem igazolhatja a megjegyzés, az ANDANTE márkanév vagy egy
 referencia felirata. novalife_label_text kizárólag a CÉLKÉP címkéjének szó szerinti
-kiolvasása lehet. Bőrhatású, bézs, velúros vagy bizonytalan felületnél ne adj
-likely_other felmentést. A likely_other sem márkakizárás, sem tisztítási engedély.
+kiolvasása lehet. A szín helyett a felület szerkezetét hasonlítsd össze.
+A világosan kereszteződő fonalak pozitív megkülönböztető jelek; a címke hiánya
+önmagában nem teszi bizonytalanná ezt a vizuális különbséget. Bőrhatású, velúros
+vagy nem kivehető szerkezetnél ne válaszd a likely_other státuszt. Ez nem tisztítási engedély.
 '''.strip()
 
 

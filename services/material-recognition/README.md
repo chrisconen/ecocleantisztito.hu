@@ -79,8 +79,38 @@ anyagvizsgálat állítva. A jóváhagyás a forrás privát referenciahasznála
 Az éles próbán mind a négy elemzés `reference_count: 3` értéket adott. A három
 vizsgált gyártói minta NovaLife-gyanút jelzett; ebből a Hellgrau 11 nem része az
 aktív készletnek. Nuss és Ecru egyben referenciák is, ezért az ezekkel végzett próba
-csak az integráció ellenőrzése. A tulajdonos lakókocsifotóját szövött textilként
-írta le, de NovaLife-kizárása továbbra is bizonytalan. Ez nem pontosságmérés.
+csak az integráció ellenőrzése. Ez nem pontosságmérés.
+
+### A szövött textilek döntési hibájának javítása
+
+A lakókocsifotó éles reprodukciója három referenciával is `uncertain` eredményt
+adott: a korábbi kategóriaengedélyezés minden lapos szövésű textilt erre írt át.
+Ugyanez a fotó `jacquard / gobelin mintás` besorolással már `likely_other` lehetett,
+de a rögzített ügyfélszöveg ekkor is „nem zárja ki” megfogalmazást használt.
+
+A döntés most külön `novalife_structure` megfigyelést kér. A világosan látható
+kereszteződő fonalak (`interlaced_yarns`) lehetővé teszik a `likely_other` választ
+a lapos szövésű textilnél is. A címke hiánya önmagában nem rontja le ezt a vizuális
+megkülönböztetést. Bőrhatású/velúros, homályos, ismeretlen és ellentmondó jelek
+továbbra sem kapnak megnyugtató eredményt. A besorolás nem bizonyít gyártót vagy
+tisztítási eljárást; a címkeolvasás és helyszíni anyagpróba szabálya megmaradt.
+
+Az első javított valódi próba a tulajdonos fotóját `interlaced_yarns` /
+`likely_other` eredménnyel értékelte. A Nuss referencia és a referenciakészleten
+kívüli Hellgrau kontroll `possible_novalife` maradt. A célfotó és mindhárom
+referencia tényleges képként szerepelt a kiküldött kérésben. A kis kontrollkészlet
+regresszióellenőrzés, nem általános pontosságmérés. `diagnose_novalife.py` az
+aktuális Worker adapterét futtatja: csak szöveges diagnózist ment az ignorált
+`qa/` mappába, fotót és hitelesítő adatot nem. Nincs új referencia aktiválva.
+
+Élesítve: Worker `5d1d149a-1031-4054-8120-5c610a2f774f`. Az éles kontrollban
+Nuss, Hellgrau és Ecru `possible_novalife`; a tulajdonosi fotó `likely_other`.
+A nyilvános felület tényleges képelőkészítésével, 390 és 1440 px-en is
+`likely_other` jelent meg, működő helyi árkalkulátor-hivatkozással. A böngészős
+teszt csak a kihívást cseréli az engedélyezett operátori elemzővégpontra; a
+feldolgozás valódi, mindhárom referenciával, archiválás nélkül.
+Offline: 40 Worker-teszt sikeres; a 107 Python-tesztből egy helyi HTTP-kapcsolatot
+a Windows megszakított, ez önálló, sandboxon kívüli ismétléskor sikeres lett.
 
 Ha a háttérletöltőt kódfrissítés után újraindítod, a `Stop-ScheduledTask` után várd
 meg a régi folyamat tényleges kilépését, majd indítsd újra. Azonnali indításkor a
