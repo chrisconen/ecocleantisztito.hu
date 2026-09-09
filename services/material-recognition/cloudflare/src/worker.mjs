@@ -115,15 +115,69 @@ async function references(request, env) {
   await env.MATERIAL_PHOTOS.put('references/active.json', JSON.stringify({ references: refs, published_utc: new Date().toISOString() }), { httpMetadata: { contentType: 'application/json' } });
   return json({ ok: true, count: refs.length });
 }
+// Email review is a separate customer request. It never invokes a vision provider
+// or grants permission to reuse the photo as a reference.
+async function review(request, env, owner = false) {
+  if (!env.MATERIAL_PHOTOS || !env.MATERIAL_QUOTA || !env.MATERIAL_SYNC_TOKEN || !env.TURNSTILE_SECRET_KEY) return error(503);
+  const raw = await body(request);
+  if (!owner && !(await turnstile(request, env, raw?.turnstile_token))) return error(403, 'Ismételd meg a biztonsági ellenőrzést.');
+  const allowed = ['image', 'media_type', 'note', 'email', 'review_consent', 'turnstile_token', 'analysis_summary'];
+  if (!raw || Object.keys(raw).some(k => !allowed.includes(k)) || raw.review_consent !== true) throw new InputError('Az e-mailes ellenőrzéshez fogadd el a fotó és az e-mail-cím megőrzését.');
+  const email = typeof raw.email === 'string' ? raw.email.trim() : '';
+  if (email.length > 254 || !/^[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9](?:[A-Za-z0-9.-]*[A-Za-z0-9])?\.[A-Za-z]{2,63}$/.test(email)) throw new InputError('Adj meg egy érvényes e-mail-címet.');
+  const input = parseInput({ image: raw.image, media_type: raw.media_type, note: raw.note || '', archive_consent: false });
+  let summary = null;
+  if (raw.analysis_summary != null) {
+    const s = raw.analysis_summary;
+    if (!s || typeof s !== 'object' || Array.isArray(s) || Object.keys(s).sort().join(',') !== 'material,status' || typeof s.material !== 'string' || s.material.length > 150 || !['likely_other', 'possible_novalife', 'label_novalife', 'uncertain'].includes(s.status)) throw new InputError('Az előzetes eredmény formátuma hibás.');
+    summary = { material: s.material, status: s.status, source: 'unverified_client_summary', human_verified: false };
+  }
+  const ip = request.headers.get('CF-Connecting-IP'); if (!owner && !ip) return error(403);
+  const reservation = await quota(env, 'reserve', { ip: await hash(env.MATERIAL_SYNC_TOKEN + ':' + Math.floor(Date.now() / DAY) + ':' + (owner ? 'operator' : ip)) });
+  if (reservation.status !== 200) return error(429, 'Most sok kérés érkezett. Próbáld újra később.');
+  const { lease } = await reservation.json(), id = crypto.randomUUID(); let finalized = false;
+  try {
+    const record = { schema_version: 1, id, received_utc: new Date().toISOString(), email, note: input.note, sha256: await hash(input.image),
+      consent: { purpose: 'email_material_review', granted: true, schema_version: 1 }, status: 'pending', analysis_summary: summary };
+    await env.MATERIAL_PHOTOS.put('reviews/photos/' + id + '.jpg', input.image, { httpMetadata: { contentType: 'image/jpeg' } });
+    await env.MATERIAL_PHOTOS.put('reviews/records/' + id + '.json', JSON.stringify(record), { httpMetadata: { contentType: 'application/json' }, customMetadata: { id, received_utc: record.received_utc, sha256: record.sha256 } });
+    finalized = true;
+    return json({ review_saved: true, review_id: id, message: 'Megkaptuk a fotódat és az e-mail-címedet. A csapatunk ellenőrzi a képet, majd e-mailben válaszol.' });
+  } catch { return error(503, 'Az ellenőrzési kérést most nem sikerült menteni. Próbáld újra; még nem igazoltuk vissza az átvételt.'); }
+  finally {
+    if (!finalized) { try { await env.MATERIAL_PHOTOS.delete('reviews/photos/' + id + '.jpg'); } catch {} }
+    try { await quota(env, 'release', { lease }); } catch {}
+  }
+}
 export default {
   async fetch(request, env) {
     try {
       const url = new URL(request.url), path = url.pathname;
       if (url.protocol !== 'https:' || !HOSTS.has(url.hostname)) return error(403);
-      if (path === '/api/material-health' && request.method === 'GET') return json({ enabled: true, ready: ready(env), collection_enabled: !!env.MATERIAL_PHOTOS, turnstile_site_key: env.TURNSTILE_SITE_KEY || '' });
+      if (path === '/api/material-health' && request.method === 'GET') return json({ enabled: true, ready: ready(env), review_enabled: !!(env.MATERIAL_PHOTOS && env.MATERIAL_QUOTA && env.MATERIAL_SYNC_TOKEN && env.TURNSTILE_SECRET_KEY), collection_enabled: !!env.MATERIAL_PHOTOS, turnstile_site_key: env.TURNSTILE_SITE_KEY || '' });
       if (path.startsWith('/api/material-admin/')) {
         if (!(await admin(request, env))) return error(401);
         if (path === '/api/material-admin/analyze' && request.method === 'POST') return await material(request, env, true);
+        if (path === '/api/material-admin/review' && request.method === 'POST') return await review(request, env, true);
+        if (path === '/api/material-admin/reviews' && request.method === 'GET') {
+          const cursor = url.searchParams.get('cursor'); if (cursor && cursor.length > 2048) throw new InputError();
+          const page = await env.MATERIAL_PHOTOS.list({ prefix: 'reviews/records/', limit: 100, include: ['customMetadata'], ...(cursor ? { cursor } : {}) });
+          return json({ items: page.objects.map(o => o.customMetadata), cursor: page.truncated ? page.cursor : null });
+        }
+        const reviewMatch = /^\/api\/material-admin\/reviews\/([^/]+)$/.exec(path);
+        if (reviewMatch && UUID.test(reviewMatch[1])) {
+          const id = reviewMatch[1];
+          if (request.method === 'GET') {
+            const item = await env.MATERIAL_PHOTOS.get('reviews/records/' + id + '.json'); if (!item) return error(404);
+            const photo = await env.MATERIAL_PHOTOS.get('reviews/photos/' + id + '.jpg'); if (!photo) return error(503);
+            return json({ record: strictJSON(await item.text()), image: encodeBase64(new Uint8Array(await photo.arrayBuffer())) });
+          }
+          if (request.method === 'DELETE') {
+            await env.MATERIAL_PHOTOS.delete('reviews/records/' + id + '.json');
+            await env.MATERIAL_PHOTOS.delete('reviews/photos/' + id + '.jpg');
+            return json({ deleted: true });
+          }
+        }
         if (path === '/api/material-admin/references' && request.method === 'POST') return await references(request, env);
         if (path === '/api/material-admin/manifest' && request.method === 'GET') {
           const cursor = url.searchParams.get('cursor'); if (cursor && cursor.length > 2048) throw new InputError();
@@ -139,9 +193,9 @@ export default {
         }
         return error(404);
       }
-      if (path === '/api/material-analyze' && request.method === 'POST') {
+      if (['/api/material-analyze', '/api/material-review'].includes(path) && request.method === 'POST') {
         if (request.headers.get('Origin') !== url.origin || request.headers.get('Sec-Fetch-Site') === 'cross-site') return error(403);
-        return await material(request, env);
+        return path === '/api/material-review' ? await review(request, env) : await material(request, env);
       }
       return error(404);
     } catch (e) { return error(e instanceof InputError ? e.status : 503, e instanceof InputError ? e.message : GENERIC); }

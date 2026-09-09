@@ -40,10 +40,10 @@ MEDIA = {'image/jpeg': 'JPEG', 'image/png': 'PNG', 'image/webp': 'WEBP', 'image/
 FIELDS = ('kep_tipus', 'anyag', 'anyag_alt', 'biztonsag', 'indoklas', 'tisztitasi_kod', 'modszer', 'kerulendo', 'kockazatok', 'ellenorzes', 'kerdes_ugyfelnek')
 MATERIALS = ('valódi bőr', 'műbőr/eco-bőr (PU/PVC)', 'bársony (velvet)', 'mikroszálas/velúr (alcantara-jellegű)', 'zsenília (chenille)', 'bouclé', 'kordbársony', 'lapos szövésű bútorszövet (poli/pamut keverék)', 'len vagy lenhatású', 'gyapjú / gyapjúkeverék', 'jacquard / gobelin mintás', 'háló (mesh)', 'nem eldönthető')
 UNVERIFIED = 'Előzetes fotóalapú becslés; nem anyagvizsgálati igazolás vagy tisztítási engedély.'
-NO_CODE = 'Fotó alapján nem hagyható jóvá tisztítási eljárás. Előbb a gyártói címkét, az anyagot és a színtartósságot kell szakembernek ellenőriznie.'
-METHODS = {'W': 'A kiolvasott W címkekód vízbázisú tisztítást jelezhet. Az eredeti címke és gyártói útmutató ellenőrzése, valamint rejtett helyen végzett próba szükséges; ne kezdj áztatásba a fotós becslés alapján.',
+NO_CODE = 'A szükséges részleteket online, a fotóid és az elérhető kezelési útmutató alapján tisztázzuk, még időpontfoglalás előtt.'
+METHODS = {'W': 'A kiolvasott W címkekód vízbázisú tisztítást jelezhet. Az eredeti címke és gyártói útmutató ellenőrzése, online egyeztetése szükséges; ne kezdj áztatásba a fotós becslés alapján.',
            'S': 'A kiolvasott S címkekód oldószeres eljárást jelezhet. Az eredeti címkét szakember ellenőrizze; háztartási oldószeres próbát ne végezz.',
-           'WS': 'A kiolvasott WS címkekód több eljárást is megengedhet, de a gyártói korlátozások és helyszíni anyagpróba döntik el a megfelelőt.',
+           'WS': 'A kiolvasott WS címkekód több eljárást is megengedhet, de az adott gyártói útmutatót még a foglalás előtt egyeztetjük.',
            'X': 'A kiolvasott X címkekód jellemzően kíméletes porszívózásra, száraz kefélésre korlátoz. Vizes vagy oldószeres tisztítást ne kezdj; az eredeti címkét ellenőriztesd.'}
 
 
@@ -126,8 +126,8 @@ def clean_text(value, maximum=1000):
 TECHNICAL_BRANDING = re.compile(r'\b(?:AI|OpenAI|Google|Gemini|GPT(?:[-\s]?\d[\w.-]*)?|Anthropic|Claude|DeepSeek|Luna|modell\w*)\b|mesterséges\s+intelligencia', re.IGNORECASE)
 PUBLIC_FALLBACKS = {
     'anyag_alt': 'A pontos szálösszetételt a kezelési címke alapján lehet ellenőrizni.',
-    'indoklas': 'A fénykép alapján előzetes anyagbecslés készült. A pontosításhoz a kezelési címke és helyszíni vizsgálat szükséges.',
-    'ellenorzes': 'Gyártói címke, színtartósság és helyszíni anyagpróba.',
+    'indoklas': 'A kép további online ellenőrzést igényel. Éles részletfotó vagy a kezelési címke fotója segíthet.',
+    'ellenorzes': 'A szükséges részleteket online, a fotóid és az elérhető kezelési útmutató alapján tisztázzuk, még időpontfoglalás előtt.',
     'kerdes_ugyfelnek': 'Meg tudod mutatni a bútor kezelési címkéjét vagy egy élesebb közeli fotót?',
     'kerulendo': 'Ismeretlen tisztítószer használata előzetes anyagpróba nélkül.',
     'kockazatok': 'Az anyaghoz nem illő tisztítás károsíthatja a felületet.',
@@ -136,6 +136,8 @@ PUBLIC_FALLBACKS = {
 
 def public_text(value, key, maximum=1000):
     text = clean_text(value, maximum)
+    if re.search(r'helyszín|anyagprób|rejtett hely', text, re.IGNORECASE):
+        return 'A szükséges részleteket online, a fotóid és az elérhető kezelési útmutató alapján tisztázzuk, még időpontfoglalás előtt.'
     # Customer copy must not depend on the provider obeying branding instructions.
     # Replace the complete affected field, never splice misleading sentence fragments.
     # NovaLife assertions belong exclusively to the conservative dedicated result.
@@ -169,7 +171,7 @@ def sanitize_result(value):
         items = value.get(key)
         result[key] = [public_text(s, key, 240) for s in items[:8] if isinstance(s, str) and clean_text(s, 240)] if isinstance(items, list) else []
     if not result['ellenorzes']:
-        result['ellenorzes'] = 'A gyártói címke, az anyag és a színtartósság szakember általi ellenőrzése szükséges.'
+        result['ellenorzes'] = 'A szükséges részleteket online, a fotóid és az elérhető kezelési útmutató alapján tisztázzuk, még időpontfoglalás előtt.'
     result['novalife'] = providers.sanitize_novalife(value, kind, material)
     return result
 

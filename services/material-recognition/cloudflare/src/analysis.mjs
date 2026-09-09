@@ -190,26 +190,26 @@ export function parseInput(body) {
 export const MATERIALS = ['valódi bőr', 'műbőr/eco-bőr (PU/PVC)', 'bársony (velvet)', 'mikroszálas/velúr (alcantara-jellegű)', 'zsenília (chenille)', 'bouclé', 'kordbársony', 'lapos szövésű bútorszövet (poli/pamut keverék)', 'len vagy lenhatású', 'gyapjú / gyapjúkeverék', 'jacquard / gobelin mintás', 'háló (mesh)', 'nem eldönthető'];
 export const FIELDS = ['kep_tipus', 'anyag', 'anyag_alt', 'biztonsag', 'indoklas', 'tisztitasi_kod', 'modszer', 'kerulendo', 'kockazatok', 'ellenorzes', 'kerdes_ugyfelnek'];
 const UNVERIFIED = 'Előzetes fotóalapú becslés; nem anyagvizsgálati igazolás vagy tisztítási engedély.';
-const NO_CODE = 'Fotó alapján nem hagyható jóvá tisztítási eljárás. Előbb a gyártói címkét, az anyagot és a színtartósságot kell szakembernek ellenőriznie.';
+const NO_CODE = 'A szükséges részleteket online, a fotóid és az elérhető kezelési útmutató alapján tisztázzuk, még időpontfoglalás előtt.';
 const METHODS = {
-  W: 'A kiolvasott W címkekód vízbázisú tisztítást jelezhet. Az eredeti címke és gyártói útmutató ellenőrzése, valamint rejtett helyen végzett próba szükséges; ne kezdj áztatásba a fotós becslés alapján.',
+  W: 'A kiolvasott W címkekód vízbázisú tisztítást jelezhet. Az eredeti címke és gyártói útmutató ellenőrzése, online egyeztetése szükséges; ne kezdj áztatásba a fotós becslés alapján.',
   S: 'A kiolvasott S címkekód oldószeres eljárást jelezhet. Az eredeti címkét szakember ellenőrizze; háztartási oldószeres próbát ne végezz.',
-  WS: 'A kiolvasott WS címkekód több eljárást is megengedhet, de a gyártói korlátozások és helyszíni anyagpróba döntik el a megfelelőt.',
+  WS: 'A kiolvasott WS címkekód több eljárást is megengedhet, de az adott gyártói útmutatót még a foglalás előtt egyeztetjük.',
   X: 'A kiolvasott X címkekód jellemzően kíméletes porszívózásra, száraz kefélésre korlátoz. Vizes vagy oldószeres tisztítást ne kezdj; az eredeti címkét ellenőriztesd.'
 };
 const BRANDING = /(?<![\p{L}\p{N}])(?:AI|OpenAI|Google|Gemini|GPT(?:[-\s]?\d[\w.-]*)?|Anthropic|Claude|DeepSeek|Luna|modell[\p{L}\p{N}_]*)(?![\p{L}\p{N}])|mesterséges\s+intelligencia/iu;
 const FALSE_REVIEW = /(?:szakember|ember|kollég[áa][\p{L}]*)[^.!?]{0,50}(?:ellenőrizte|átvizsgálta|átnézte|értékelte|jóváhagyta)|emberi\s+(?:ellenőrzésen|felülvizsgálaton)\s+(?:átesett|esett\s+át)/iu;
 const FALLBACKS = {
   anyag_alt: 'A pontos szálösszetételt a kezelési címke alapján lehet ellenőrizni.',
-  indoklas: 'A fénykép alapján előzetes anyagbecslés készült. A pontosításhoz a kezelési címke és helyszíni vizsgálat szükséges.',
-  ellenorzes: 'Gyártói címke, színtartósság és helyszíni anyagpróba.',
+  indoklas: 'A kép további online ellenőrzést igényel. Éles részletfotó vagy a kezelési címke fotója segíthet.',
+  ellenorzes: 'A szükséges részleteket online, a fotóid és az elérhető kezelési útmutató alapján tisztázzuk, még időpontfoglalás előtt.',
   kerdes_ugyfelnek: 'Meg tudod mutatni a bútor kezelési címkéjét vagy egy élesebb közeli fotót?',
   kerulendo: 'Ismeretlen tisztítószer használata előzetes anyagpróba nélkül.',
   kockazatok: 'Az anyaghoz nem illő tisztítás károsíthatja a felületet.'
 };
-function publicText(value, key, max = 1000) { const text = clean(value, max); return BRANDING.test(text) || FALSE_REVIEW.test(text) || /Nova[\s-]*Life|impregn|biztonságosan\s+tisztítható|garantáltan\s+tisztítható/iu.test(text) ? (FALLBACKS[key] || NO_CODE) : text; }
+function publicText(value, key, max = 1000) { const text = clean(value, max); if (/helyszín|anyagprób|rejtett hely/iu.test(text)) return NO_CODE; return BRANDING.test(text) || FALSE_REVIEW.test(text) || /Nova[\s-]*Life|impregn|biztonságosan\s+tisztítható|garantáltan\s+tisztítható/iu.test(text) ? (FALLBACKS[key] || NO_CODE) : text; }
 export const NOVALIFE_REASONS = {
-  likely_other: 'Jellegzetes textilszerkezet látható, amely eltér a NovaLife bőrhatású felületétől. A fotó alapján valószínűleg nem a keresett NovaLife anyag. A tisztítás módját helyszíni anyagpróbával pontosítjuk.',
+  likely_other: 'A fotón jól felismerhető textilszerkezet látható, nem a keresett NovaLife bőrhatású felülete. Továbbléphetsz az árkalkulátorhoz; e-mailes szakmai visszaigazolást is kérhetsz.',
   possible_novalife: 'A felület NovaLife-hoz hasonló bőrhatású vagy velúros jellegű. Tisztítás előtt egyeztessünk, és ha megvan, mutasd meg a gyártói címkét.',
   label_novalife: 'A célképként megadott címke előzetes kiolvasása NovaLife megjelölést jelez. A feliratot az eredetin is ellenőrizni kell; ez önmagában nem igazolja az összetételt, a felületkezelést vagy egy tisztítási eljárás biztonságát.',
   uncertain: 'A fotón nem látszik elég részlet a szövetszerkezet megkülönböztetéséhez, vagy a látható jelek ellentmondásosak. Készíts éles közeli képet természetes oldalfényben; a címke külön fotója is segíthet.'
@@ -240,7 +240,7 @@ export function sanitizeResult(value) {
   for (const key of FIELDS) if (!['biztonsag', 'kerulendo', 'kockazatok'].includes(key)) result[key] = publicText(value[key], key);
   Object.assign(result, { kep_tipus: kind, anyag: material, biztonsag: confidence, tisztitasi_kod: code, modszer: METHODS[code] || NO_CODE, indoklas: (publicText(value.indoklas, 'indoklas', 800) + ' ' + UNVERIFIED).trim() });
   for (const key of ['kerulendo', 'kockazatok']) result[key] = Array.isArray(value[key]) ? value[key].slice(0, 8).filter(s => typeof s === 'string' && clean(s, 240)).map(s => publicText(s, key, 240)) : [];
-  if (!result.ellenorzes) result.ellenorzes = 'A gyártói címke, az anyag és a színtartósság szakember általi ellenőrzése szükséges.';
+  if (!result.ellenorzes) result.ellenorzes = 'A szükséges részleteket online, a fotóid és az elérhető kezelési útmutató alapján tisztázzuk, még időpontfoglalás előtt.';
   result.novalife = sanitizeNovalife(value, kind, material);
   return result;
 }

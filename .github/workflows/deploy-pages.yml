@@ -16,6 +16,8 @@ on:
       - 'release-support/copy-tone/**'
       - 'release-support/studio/**'
       - 'release-support/verify-studio-overlay.py'
+      - 'release-support/verify-review-overlay.py'
+      - 'release-support/material-review/**'
       - '.github/workflows/deploy-pages.yml'
       - '.gitattributes'
 

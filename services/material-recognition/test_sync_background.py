@@ -31,6 +31,9 @@ class BackgroundTests(unittest.TestCase):
         self.load = patch.object(background, 'load_config', return_value={
             'endpoint': 'https://ecocleantisztito.hu', 'token': FIXTURE_SECRET})
         self.factory = patch.object(background, 'SyncClient', return_value=self.client)
+        self.reviews = patch.object(background, 'pull_reviews', return_value=0)
+        self.review_mock = self.reviews.start()
+        self.addCleanup(self.reviews.stop)
         self.load.start()
         self.factory.start()
         self.addCleanup(self.load.stop)
@@ -48,6 +51,7 @@ class BackgroundTests(unittest.TestCase):
         self.assertTrue(status['last_success_utc'].endswith('Z'))
         self.assertIsNone(status['error_code'])
         self.client.publish_references.assert_not_called()
+        self.review_mock.assert_called_once_with(self.client)
         for path in [self.root / 'sync-status.json', self.root / 'sync-events.log']:
             self.assertNotIn(FIXTURE_SECRET, path.read_text(encoding='utf-8'))
 

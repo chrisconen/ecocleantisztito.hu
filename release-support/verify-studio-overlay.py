@@ -133,10 +133,12 @@ def check_studio_page(file, data):
             mount.get('data-assets') == 'studio/assets', 'Studio calculator route mismatch: ' + file)
 
 
-def prepare(manifest):
+def prepare(manifest, read_current=None):
+    if read_current is None:
+        read_current = artifact
     errors, parent, restored = [], None, {}
     def reader(file):
-        return restored[file] if file in restored else artifact(file)
+        return restored[file] if file in restored else read_current(file)
     try:
         require(isinstance(manifest, dict), 'Invalid release manifest')
         overlay = bound(manifest['studioOverlay'], BASE + 'overlay.json')
@@ -178,7 +180,7 @@ def prepare(manifest):
             relative(file)
             require(file.startswith('studio/') and PurePosixPath(file).suffix in {'.css', '.js', '.webp'} and
                     file not in parent['files'] and file not in deps, 'Duplicate/colliding/out-of-scope Studio dependency')
-            data = artifact(file)
+            data = read_current(file)
             require(type(dep['bytes']) is int and dep['bytes'] == len(data) and sha(data) == digest(dep['sha256']), 'Studio dependency hash/size mismatch: ' + file)
             require(manifest['files'][file] == {'sha256': dep['sha256'], 'bytes': dep['bytes'], 'source': 'demo/' + file},
                     'Studio dependency manifest record mismatch: ' + file)
@@ -198,7 +200,7 @@ def prepare(manifest):
         for file, dep in deps.items():
             require(sources.get('demo/' + file) == dep['sha256'], 'Studio asset differs from its bound source: ' + file)
         for file, old in parent['files'].items():
-            data = artifact(file)
+            data = read_current(file)
             current = manifest['files'][file]
             require(sha(data) == current['sha256'], 'Current artifact hash mismatch: ' + file)
             if file in pages:
@@ -224,8 +226,8 @@ def prepare(manifest):
     return errors, parent, reader
 
 
-def verify(manifest):
-    return prepare(manifest)[0]
+def verify(manifest, read_current=None):
+    return prepare(manifest, read_current=read_current)[0]
 
 
 if __name__ == '__main__':

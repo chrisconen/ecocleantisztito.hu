@@ -131,7 +131,7 @@ test('NovaLife public reasons are fixed/bounded and free-form clearance cannot c
     assert.doesNotMatch(JSON.stringify(actual), /Gemini|OpenAI|Biztosan nem|biztonságosan tisztítható|Nincs impregnálás/);
     assert.equal(actual.tisztitasi_kod, 'ismeretlen');
   }
-  assert.match(NOVALIFE_REASONS.likely_other, /eltér/); assert.doesNotMatch(NOVALIFE_REASONS.likely_other, /nem zárja ki/); assert.match(NOVALIFE_REASONS.label_novalife, /eredetin is ellenőrizni/);
+  assert.match(NOVALIFE_REASONS.likely_other, /nem a keresett/); assert.doesNotMatch(NOVALIFE_REASONS.likely_other, /nem zárja ki|helyszín|anyagprób/); assert.match(NOVALIFE_REASONS.label_novalife, /eredetin is ellenőrizni/);
 });
 test('both selected provider schemas require the NovaLife fields; target/refs prompt preserves trust boundary', async t => {
   let provider = 'gemini'; const payloads = [];

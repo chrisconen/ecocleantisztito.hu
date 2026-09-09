@@ -70,6 +70,36 @@ function request(path = '/api/material-analyze', data = upload(), extraHeaders =
 const ownerRequest = (path, data, method = 'GET', token = TOKEN) => request('/api/material-admin/' + path, data, { Authorization: 'Bearer ' + token }, method);
 const qrequest = (operation, data) => new Request('https://quota/' + operation, { method: 'POST', body: JSON.stringify(data) });
 const hashIP = n => n.toString(16).padStart(64, '0');
+const reviewUpload = extra => ({ image: 'data:image/jpeg;base64,' + JPEG, media_type: 'image/jpeg', note: 'Offline fixture', email: 'review@example.invalid', review_consent: true, turnstile_token: 'fixture-turnstile', ...extra });
+test('email review saves a separate private request without any paid model call or reference consent', async t => {
+  const {env,bucket}=bindings(),net=network(t);
+  const response=await worker.fetch(request('/api/material-review',reviewUpload()),env);assert.equal(response.status,200);
+  const ack=await response.json();assert.equal(ack.review_saved,true);assert.ok(ack.review_id);assert.equal(net.provider().length,0);
+  const record=JSON.parse(await (await bucket.get('reviews/records/'+ack.review_id+'.json')).text());
+  assert.equal(record.email,'review@example.invalid');assert.deepEqual(record.consent,{purpose:'email_material_review',granted:true,schema_version:1});assert.equal(record.analysis_summary,null);
+  assert.ok(![...bucket.objects.keys()].some(k=>k.startsWith('records/')||k.startsWith('references/')));
+  assert.equal((await worker.fetch(request('/api/material-admin/reviews',null,{},'GET'),env)).status,401);
+  const manifest=await (await worker.fetch(ownerRequest('reviews'),env)).json();assert.equal(manifest.items.length,1);assert.equal(manifest.items[0].email,undefined);
+  const item=await (await worker.fetch(ownerRequest('reviews/'+ack.review_id),env)).json();assert.equal(item.record.email,record.email);assert.ok(item.image);
+  assert.equal((await worker.fetch(ownerRequest('reviews/'+ack.review_id,null,'DELETE'),env)).status,200);assert.equal(bucket.objects.size,0);
+});
+test('email review rejects missing consent, invalid email, unknown fields and foreign origin before saving', async t => {
+  const {env,bucket}=bindings(),net=network(t);
+  for(const patch of [{review_consent:false},{review_consent:'true'},{email:'bad'},{email:'a@b.hu\r\nBcc:x@y.hu'},{email:'x'.repeat(260)+'@example.hu'},{archive_consent:true},{analysis_summary:{status:'likely_other',material:'x',human_verified:true}}])assert.equal((await worker.fetch(request('/api/material-review',reviewUpload(patch)),env)).status,400);
+  assert.equal((await worker.fetch(request('/api/material-review',reviewUpload(),{Origin:'https://example.invalid'}),env)).status,403);
+  assert.equal((await worker.fetch(request('/api/material-review',reviewUpload({turnstile_token:''})),env)).status,403);
+  assert.equal(bucket.objects.size,0);assert.equal(net.provider().length,0);
+});
+test('failed review persistence never confirms receipt and releases its quota lease', async t => {
+  const {env,bucket,storage}=bindings(),net=network(t);bucket.fail.add('put');
+  const response=await worker.fetch(request('/api/material-review',reviewUpload()),env);assert.equal(response.status,503);assert.notEqual((await response.json()).review_saved,true);
+  assert.equal(bucket.objects.size,0);assert.equal(net.provider().length,0);assert.deepEqual((await storage.get('quota')).leases,{});
+});
+test('review retains prior browser result only as an unverified summary', async t => {
+  const {env,bucket}=bindings(),net=network(t);
+  const ack=await (await worker.fetch(request('/api/material-review',reviewUpload({analysis_summary:{status:'likely_other',material:'szövött textil'}})),env)).json();
+  const record=await (await bucket.get('reviews/records/'+ack.review_id+'.json')).json();assert.equal(record.analysis_summary.human_verified,false);assert.equal(record.analysis_summary.source,'unverified_client_summary');assert.equal(net.provider().length,0);
+});
 async function reserve(durable, ip = hashIP(1)) { const response = await durable.fetch(qrequest('reserve', { ip })); return { status: response.status, ...await response.json() }; }
 async function release(durable, lease) { return durable.fetch(qrequest('release', { lease })); }
 

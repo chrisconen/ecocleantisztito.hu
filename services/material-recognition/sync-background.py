@@ -19,6 +19,7 @@ import threading
 
 from archive import Archive, ArchiveError, DEFAULT_ROOT, _json
 from sync import SyncClient, SyncError, load_config
+from review_inbox import pull_reviews
 
 MAX_LOG_BYTES = 128 * 1024
 EVENTS = frozenset({'started', 'sync_ok', 'sync_error', 'stopped'})
@@ -163,6 +164,7 @@ def run(archive, config_path, interval=300, *, stop=None, max_cycles=None):
                 client = SyncClient(archive, **config)
                 stage = 'network_or_protocol'
                 result = client.pull_once()
+                pull_reviews(client)
                 status.update('ok', counts=result)
                 status.event('sync_ok', result)
             except SyncError:
