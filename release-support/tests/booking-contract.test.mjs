@@ -4,7 +4,7 @@ import vm from 'node:vm';
 import fs from 'node:fs';
 
 const original = fs.readFileSync(new URL('../../booking-config.js', import.meta.url), 'utf8').replace(/^\uFEFF/, '');
-const live = fs.readFileSync(new URL('../booking-live.js', import.meta.url), 'utf8');
+const live = fs.readFileSync(new URL('../../release/ui/booking-live.js', import.meta.url), 'utf8');
 const calendar = fs.readFileSync(new URL('../calendar-live.js', import.meta.url), 'utf8');
 const clone = value => JSON.parse(JSON.stringify(value));
 const tomorrow = new Date(); tomorrow.setDate(tomorrow.getDate() + 1);

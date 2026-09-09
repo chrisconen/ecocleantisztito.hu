@@ -19,14 +19,14 @@ const PRICING = {
 
     // MATRACTISZTÍTÁS (atkairtás)
     matrac: {
-        "egyagyas_a": { name: "Egyágyas matrac (A oldal)", price: 8000, duration: 25, sides: 1 },
-        "egyagyas_ab": { name: "Egyágyas matrac (A+B oldal)", price: 12000, duration: 40, sides: 2 },
-        "francia_a": { name: "Franciaágy matrac (A oldal)", price: 12000, duration: 35, sides: 1 },
-        "francia_ab": { name: "Franciaágy matrac (A+B oldal)", price: 17000, duration: 55, sides: 2 },
-        "gyerek_a": { name: "Gyerekmatrac (A oldal)", price: 5000, duration: 15, sides: 1 },
-        "gyerek_ab": { name: "Gyerekmatrac (A+B oldal)", price: 7000, duration: 25, sides: 2 },
-        "kisagy_a": { name: "Kiságy matrac (A oldal)", price: 4000, duration: 10, sides: 1 },
-        "kisagy_ab": { name: "Kiságy matrac (A+B oldal)", price: 6000, duration: 20, sides: 2 }
+        "egyagyas_a": { name: "Egyágyas matrac 90×200 cm (A oldal)", price: 8000, duration: 25, sides: 1, wetPrice: 5000, framePrice: 5000 },
+        "egyagyas_ab": { name: "Egyágyas matrac 90×200 cm (A+B oldal)", price: 12000, duration: 40, sides: 2, wetPrice: 5000, framePrice: 5000 },
+        "francia_a": { name: "Franciaágy matrac 140/160/180×200 cm (A oldal)", price: 12000, duration: 35, sides: 1, wetPrice: 7500, framePrice: 8000 },
+        "francia_ab": { name: "Franciaágy matrac 140/160/180×200 cm (A+B oldal)", price: 17000, duration: 55, sides: 2, wetPrice: 7500, framePrice: 8000 },
+        "gyerek_a": { name: "Gyerekmatrac 70×140 cm (A oldal)", price: 5000, duration: 15, sides: 1, wetPrice: 3000, framePrice: 4000 },
+        "gyerek_ab": { name: "Gyerekmatrac 70×140 cm (A+B oldal)", price: 7000, duration: 25, sides: 2, wetPrice: 3000, framePrice: 4000 },
+        "kisagy_a": { name: "Kiságy matrac (A oldal)", price: 4000, duration: 10, sides: 1, wetPrice: 3000, framePrice: 4000 },
+        "kisagy_ab": { name: "Kiságy matrac (A+B oldal)", price: 6000, duration: 20, sides: 2, wetPrice: 3000, framePrice: 4000 }
     },
 
     // KISZÁLLÁSI DÍJAK (egységes minden városra)
@@ -80,9 +80,9 @@ const UPSELLS = {
     // Matrac upsells
     matrac: {
         "nedves_tisztitas": {
-            name: "Nedves tisztítás + folteltávolítás",
-            description: "Foltos matracokhoz - fertőtlenítő mosás",
-            price: 5000,
+            name: "Nedves folteltávolítás, fertőtlenítő mosás",
+            description: "A kiválasztott matracoldalak mosása",
+            priceKey: "wetPrice",
             priceType: "perSide", // felületenként
             duration: 20,
             icon: "💧",
@@ -91,12 +91,20 @@ const UPSELLS = {
         "agykeret": {
             name: "Ágykeret, fejtámla tisztítás",
             description: "Ágykeret, fejtámla kárpittisztítás",
-            price: 3000,
+            priceKey: "framePrice",
             priceType: "perItem",
             duration: 15,
             icon: "🛏️"
         }
     }
+};
+
+const PILLOW_CLEANING = {
+    name: 'Párnák tisztítása',
+    description: 'Mosógépben nem mosható méretű párnák tisztítása',
+    price: 1000,
+    duration: 5, // Becsült többletidő párnánként.
+    itemIds: ['szofa', 'l_kanape', 'u_kanape']
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -170,7 +178,7 @@ function handleServiceType(button) {
     populateItems();
 
     // Show remaining steps
-    document.getElementById('step4').style.display = 'block';
+    document.getElementById('step4').style.display = State.serviceType === 'Matrac' ? 'none' : 'block';
     document.getElementById('step5').style.display = 'block';
     document.getElementById('step6').style.display = 'block';
 
@@ -277,7 +285,9 @@ function createItemHTML(category, id, item) {
     const fullId = `${category}_${id}`;
     const hasAtka = category === 'karpit' && item.atkaPrice > 0;
     const hasAgyazhato = category === 'karpit' && item.agyazhatoPrice > 0;
-    const hasItemUpsell = hasAtka || hasAgyazhato;
+    const hasPillows = category === 'karpit' && PILLOW_CLEANING.itemIds.includes(id);
+    const hasMatrac = category === 'matrac';
+    const hasItemUpsell = hasAtka || hasAgyazhato || hasPillows || hasMatrac;
 
     return `
         <div class="config-item" data-item-id="${fullId}">
@@ -314,6 +324,26 @@ function createItemHTML(category, id, item) {
                     </span>
                 </label>
                 ` : ''}
+                ${hasMatrac ? Object.entries(UPSELLS.matrac).map(([upsellId, upsell]) => `
+                <label class="upsell-checkbox mattress-extra">
+                    <input type="checkbox" onchange="toggleItemUpsell('${fullId}', '${upsellId}')">
+                    <span class="upsell-label">
+                        <span class="upsell-icon">${upsell.icon}</span>
+                        <span class="upsell-text">${upsell.name}
+                            <small>${upsell.priceType === 'perSide' ? `${item.sides} oldal / matrac · ${upsell.note}` : 'Ágyanként, fejtámlával együtt'}</small>
+                        </span>
+                        <span class="upsell-price">+${item[upsell.priceKey].toLocaleString('hu-HU')} Ft/${upsell.priceType === 'perSide' ? 'oldal' : 'ágy'}</span>
+                    </span>
+                </label>`).join('') : ''}
+                ${hasPillows ? `
+                <div class="pillow-extra">
+                    <label class="upsell-text" for="pillows-${fullId}">${PILLOW_CLEANING.name}
+                        <small>${PILLOW_CLEANING.description}</small>
+                        <small>Összes darabszám az itt kiválasztott bútorokhoz · 1000 Ft/db</small>
+                    </label>
+                    <input class="pillow-count" id="pillows-${fullId}" type="number" min="0" step="1" value="0" inputmode="numeric"
+                        onchange="setPillowCount('${fullId}', this.value)">
+                </div>` : ''}
             </div>
             ` : ''}
         </div>
@@ -325,8 +355,6 @@ function populateUpsells() {
     container.innerHTML = '';
 
     const showKarpit = State.serviceType === 'Kárpit' || State.serviceType === 'Mindkettő';
-    const showMatrac = State.serviceType === 'Matrac' || State.serviceType === 'Mindkettő';
-
     if (showKarpit) {
         container.innerHTML += '<div class="upsell-group-title">🛋️ Kárpit extrák</div>';
         Object.entries(UPSELLS.karpit).forEach(([id, upsell]) => {
@@ -336,12 +364,6 @@ function populateUpsells() {
         });
     }
 
-    if (showMatrac) {
-        container.innerHTML += '<div class="upsell-group-title" style="margin-top: 1rem;">🛏️ Matrac extrák</div>';
-        Object.entries(UPSELLS.matrac).forEach(([id, upsell]) => {
-            container.innerHTML += createGlobalUpsellHTML('matrac', id, upsell);
-        });
-    }
 }
 
 function createGlobalUpsellHTML(category, id, upsell) {
@@ -408,7 +430,7 @@ function decrementItem(fullId) {
         const upsellEl = document.getElementById(`upsell-${fullId}`);
         if (upsellEl) {
             upsellEl.style.display = 'none';
-            upsellEl.querySelectorAll('input').forEach(i => i.checked = false);
+            resetItemExtras(upsellEl);
         }
     }
 
@@ -416,6 +438,51 @@ function decrementItem(fullId) {
 
     updateBadges();
     updateSummary();
+}
+
+function resetItemExtras(element) {
+    element.querySelectorAll('input').forEach(input => {
+        if (input.type === 'checkbox') input.checked = false;
+        else if (input.type === 'number') input.value = '0';
+    });
+}
+
+function setPillowCount(fullId, value) {
+    const item = State.selectedItems[fullId];
+    if (!item || item.category !== 'karpit' || !PILLOW_CLEANING.itemIds.includes(fullId.slice(7))) return;
+    const number = Number(value);
+    item.pillowCount = Number.isSafeInteger(number) && number > 0 ? number : 0;
+    document.getElementById(`pillows-${fullId}`).value = item.pillowCount;
+    updateSummary();
+}
+
+function getItemCleaningExtras(fullId, item) {
+    const extras = [];
+    const pricing = PRICING.matrac[fullId.slice(7)];
+    if (fullId.startsWith('matrac_') && pricing) {
+        item.upsells.forEach(id => {
+            const extra = UPSELLS.matrac[id];
+            if (!extra) return;
+            const quantity = item.count * (extra.priceType === 'perSide' ? pricing.sides : 1);
+            extras.push({ name: extra.name, quantity, unit: extra.priceType === 'perSide' ? 'oldal' : 'ágy',
+                unitPrice: pricing[extra.priceKey], total: pricing[extra.priceKey] * quantity, duration: extra.duration * quantity });
+        });
+    }
+    if (fullId.startsWith('karpit_') && PILLOW_CLEANING.itemIds.includes(fullId.slice(7)) && item.pillowCount > 0) {
+        extras.push({ name: PILLOW_CLEANING.description, quantity: item.pillowCount, unit: 'db',
+            unitPrice: PILLOW_CLEANING.price, total: PILLOW_CLEANING.price * item.pillowCount, duration: PILLOW_CLEANING.duration * item.pillowCount });
+    }
+    return extras;
+}
+
+// Include readable details in the existing message field for booking recipients.
+function bookingMessageWithExtras(message) {
+    const lines = Object.entries(State.selectedItems).flatMap(([fullId, item]) => {
+        const pricing = PRICING[item.category]?.[fullId.slice(fullId.indexOf('_') + 1)];
+        return getItemCleaningExtras(fullId, item).map(extra =>
+            `${pricing.name}: ${extra.name} – ${extra.quantity} ${extra.unit} × ${extra.unitPrice} Ft = ${extra.total} Ft`);
+    });
+    return [message, lines.length ? `Kiválasztott kiegészítő tisztítások (kedvezmény előtt):\n${lines.join('\n')}` : ''].filter(Boolean).join('\n\n') || null;
 }
 
 function toggleItemUpsell(fullId, upsellId, price) {
@@ -481,7 +548,7 @@ function removeItem(fullId) {
     const upsellEl = document.getElementById(`upsell-${fullId}`);
     if (upsellEl) {
         upsellEl.style.display = 'none';
-        upsellEl.querySelector('input').checked = false;
+        resetItemExtras(upsellEl);
     }
 
     updateBadges();
@@ -561,10 +628,16 @@ function updateSummary() {
                 });
             }
         });
+        getItemCleaningExtras(fullId, item).forEach(extra => {
+            subtotal += extra.total;
+            totalDuration += extra.duration;
+            details.push({ text: `  +${extra.name} (${extra.quantity} ${extra.unit})`, price: extra.total, isUpsell: true });
+        });
     });
 
     // Calculate global upsells
     Object.entries(State.globalUpsells).forEach(([fullId, info]) => {
+        if (info.category === 'matrac') return; // Matrac extrák kizárólag a kiválasztott kártyához tartoznak.
         const upsell = UPSELLS[info.category][info.upsellId];
         if (!upsell) return;
 
@@ -840,7 +913,8 @@ async function submitLargeOrder() {
                 count: item.count,
                 unitPrice: pricing.price,
                 total: pricing.price * item.count,
-                upsells: item.upsells
+                upsells: item.upsells,
+                cleaningExtras: getItemCleaningExtras(fullId, item)
             });
         }
     });
@@ -876,7 +950,7 @@ async function submitLargeOrder() {
             currency: 'HUF'
         },
 
-        message: message || null
+        message: bookingMessageWithExtras(message)
     };
 
     console.log('🏢 Large Order Request:', payload);
@@ -1069,7 +1143,7 @@ async function submitBooking(event) {
         name: name,
         email: email,
         phone: cleanPhone,
-        message: message || null,
+        message: bookingMessageWithExtras(message),
         location: fullAddress,
         items: State.selectedItems,
         upsells: State.globalUpsells,

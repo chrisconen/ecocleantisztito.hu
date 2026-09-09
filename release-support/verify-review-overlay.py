@@ -2,11 +2,12 @@
 from pathlib import Path
 import hashlib,importlib.util,json,re,sys
 ROOT=Path(__file__).resolve().parent.parent
-def verify(manifest):
+def verify(manifest, read_current=None):
     errors=[]
     try:
         spec=importlib.util.spec_from_file_location('review_parent',ROOT/'release-support/verify-studio-overlay.py');gate=importlib.util.module_from_spec(spec);spec.loader.exec_module(gate);gate.ROOT=ROOT
         sha=gate.sha;need=gate.require
+        if read_current is not None: gate.artifact=read_current
         branding_spec=importlib.util.spec_from_file_location('review_branding',ROOT/'release-support/material-review/brand_copy.py');branding=importlib.util.module_from_spec(branding_spec);branding_spec.loader.exec_module(branding)
         overlay=gate.bound(manifest['reviewOverlay'],'release-support/material-review/overlay.json')
         need(set(overlay)=={'version','baseline','files','sources'} and overlay['version']==4,'Review overlay schema')

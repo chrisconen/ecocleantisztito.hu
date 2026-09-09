@@ -15804,8 +15804,8 @@
       "source": "img/vegyszermentes-karpittisztito.webp"
     },
     "index.html": {
-      "sha256": "5d92f2f2469052c80653455023d4e2eeff8c11b9c7935ee8c507c0cd83a30064",
-      "bytes": 115691,
+      "sha256": "ef10afdd9220ecbc4844270063c06b147bd8146a5e4aee53fa26eb9ecb43fc5a",
+      "bytes": 115624,
       "source": "demo/index.html"
     },
     "karpittisztitas-badacsony.html": {
@@ -16529,8 +16529,8 @@
       "source": "demo/assets/dining-card.webp"
     },
     "ui/booking-live.js": {
-      "sha256": "a5a275c53c2ce98a4a77e4a51ba9c924d8354f55b69af37d8cbf548f35d4becd",
-      "bytes": 57496,
+      "sha256": "577839f2012a15104cb8ca18f828c57bd5b684d59d4a7f3beb986c8b135401f1",
+      "bytes": 53959,
       "source": "release-support/booking-live.js"
     },
     "ui/calendar-live.css": {
@@ -17282,11 +17282,6 @@
       "source": "demo/studio/assets/eco-clean-sajat-apolasi-ikonok.webp",
       "sha256": "175707d7caebb7da47b527ca9266839c183ab9cb70e94e2a1ff53f67a0cfc605",
       "bytes": 46384
-    },
-    "ui/booking-extras.css": {
-      "source": "style.css",
-      "sha256": "bdd124c7e8a175cbb2de3edf221b1849b1e0b2da35980ac8ab8d6c33c60c19e6",
-      "bytes": 1052
     }
   },
   "unresolved": [],
@@ -17305,9 +17300,5 @@
   "reviewOverlay": {
     "path": "release-support/material-review/overlay.json",
     "sha256": "41bd74c1e0572f2f54956d529840e2f3c23b810edd490624236ba06d5f9edb6d"
-  },
-  "bookingExtrasOverlay": {
-    "path": "release-support/booking-extras/overlay.json",
-    "sha256": "2537ab68ab11840db3f53e688f7a03fbc3c9815497d4362ae760cb63ffda5935"
   }
 }
