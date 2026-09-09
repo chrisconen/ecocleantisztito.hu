@@ -7,6 +7,11 @@ the public release and must stay excluded from Git and ALL static HTTP servers.
 This is an owner-controlled directory, not an encrypted vault: use a private OS
 account/ACL and do not allow untrusted local users to modify it.
 
+Manufacturer catalogue photos use import_manufacturer_reference() instead of
+collect()/promote(). Their separate provenance records the source URL/hash and
+owner-approved private reference use, without asserting customer consent or a
+physical material inspection. They remain inactive until explicit activation.
+
 Owner workflow (run from the project directory; --root overrides the location):
   python services/material-recognition/archive.py gallery
   # Open the printed index.html locally. Verify the actual material/brand using
@@ -52,6 +57,7 @@ import stat
 import threading
 import uuid
 import warnings
+from urllib.parse import urlsplit
 
 from PIL import Image, ImageOps, UnidentifiedImageError
 
@@ -68,6 +74,7 @@ MAX_ENTRIES = 100_000
 MAX_GALLERY_RECORDS = 500
 SCHEMA_VERSION = 1
 CONSENT_VERSION = 1
+CATALOG_LABEL_PREFIX = 'Gyártói katalógusfotó, tulajdonosi jóváhagyással; nem helyszíni ellenőrzés: '
 MEDIA = {'image/jpeg': 'JPEG', 'image/png': 'PNG', 'image/webp': 'WEBP', 'image/gif': 'GIF'}
 TEXT_FIELDS = ('kep_tipus', 'anyag', 'anyag_alt', 'indoklas', 'tisztitasi_kod',
                'modszer', 'ellenorzes', 'kerdes_ugyfelnek', 'cimke_szoveg')
@@ -118,6 +125,41 @@ def _identifier(value):
     if not isinstance(value, str) or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}', value):
         raise ArchiveError('Invalid provider or model identifier.')
     return value
+
+
+def _catalog_url(value):
+    """Only the explicitly selected manufacturer's public image host; no fetching."""
+    if not isinstance(value, str) or len(value) > 1000:
+        raise ArchiveError('Invalid manufacturer source URL.')
+    parsed = urlsplit(value)
+    if (parsed.scheme != 'https' or parsed.netloc != 'andante.hu' or parsed.query or parsed.fragment or
+            not re.fullmatch(r'/wp-content/uploads/[0-9]{4}/[0-9]{2}/[A-Za-z0-9_-]+\.jpg', parsed.path)):
+        raise ArchiveError('Invalid manufacturer source URL.')
+    return value
+
+
+def _catalog_record(record, reference):
+    """Manufacturer declaration/source review is distinct from physical verification."""
+    provenance, approval = record.get('provenance'), record.get('source_use_approval')
+    if ('consent' in record or 'provider' in record or 'model' in record or
+            not isinstance(provenance, dict) or set(provenance) != {'source_url', 'source_sha256', 'imported_utc', 'basis'} or
+            provenance.get('basis') != 'manufacturer_catalog_declaration' or
+            not isinstance(provenance.get('source_sha256'), str) or not re.fullmatch('[0-9a-f]{64}', provenance['source_sha256']) or
+            not _text(provenance.get('imported_utc'), 40, True) or
+            not isinstance(approval, dict) or set(approval) != {'owner_approved_private_reference_use', 'customer_upload_consent', 'acknowledged_utc'} or
+            approval.get('owner_approved_private_reference_use') is not True or approval.get('customer_upload_consent') is not False or
+            not _text(approval.get('acknowledged_utc'), 40, True)):
+        raise ArchiveError('Invalid manufacturer provenance or owner authorization.')
+    _catalog_url(provenance['source_url'])
+    if reference:
+        verification = record.get('verification')
+        if (record.get('status') != 'catalog_reference' or record.get('brand') != 'Andante' or
+                not isinstance(record.get('label'), str) or not record['label'].startswith(CATALOG_LABEL_PREFIX) or not isinstance(verification, dict) or
+                set(verification) != {'method', 'human_verified', 'material_physically_verified', 'evidence', 'reviewed_utc'} or
+                verification.get('method') != 'manufacturer_catalog_source_review' or
+                verification.get('human_verified') is not False or verification.get('material_physically_verified') is not False or
+                not _text(verification.get('evidence'), 2000, True) or not _text(verification.get('reviewed_utc'), 40, True)):
+            raise ArchiveError('Invalid manufacturer reference review basis.')
 
 
 def _json(value):
@@ -356,17 +398,21 @@ class Archive:
         if (not isinstance(record, dict) or record.get('id') != record_id or
                 record.get('schema_version') != SCHEMA_VERSION or record.get('media') != 'image/jpeg' or
                 not isinstance(record.get('sha256'), str) or
-                not re.fullmatch('[0-9a-f]{64}', record['sha256']) or
-                record.get('consent') != self._consent()):
+                not re.fullmatch('[0-9a-f]{64}', record['sha256'])):
             raise ArchiveError('Invalid archive record.')
+        catalog = record.get('source_kind') == 'manufacturer_catalog'
+        if catalog:
+            _catalog_record(record, reference)
+        elif 'source_kind' in record or record.get('consent') != self._consent():
+            raise ArchiveError('Invalid customer consent or archive source kind.')
         if reference:
             brand = _text(record.get('brand'), 160, True)
             expected_group = 'andante' if brand == 'Andante' else 'other'
-            if (record.get('status') != 'verified_reference' or brand != record['brand'] or
+            if (record.get('status') != ('catalog_reference' if catalog else 'verified_reference') or brand != record['brand'] or
                     '/' in brand or '\\' in brand or directory.parent.name != expected_group):
                 raise ArchiveError('Reference is not human verified.')
             verification = record.get('verification')
-            if (not isinstance(verification, dict) or verification.get('human_verified') is not True or
+            if not catalog and (not isinstance(verification, dict) or verification.get('human_verified') is not True or
                     not _text(verification.get('evidence'), 2000) or not verification.get('verified_utc')):
                 raise ArchiveError('Reference has no human verification evidence.')
             for key in ('material', 'label'):
@@ -450,6 +496,83 @@ class Archive:
         with self._locked():
             self._new_record(self._directory(record_id), record, photo)
         return record_id
+
+    def import_manufacturer_reference(self, b64: str, *, record_id: str, source_url: str, source_sha256: str,
+                                      material: str, label: str, owner_approved=False) -> bool:
+        """Import an owner-approved ANDANTE catalogue source, INACTIVE by default.
+
+        No customer consent or physical inspection is asserted. Raw-source SHA256
+        establishes input identity; sanitized copies have independent image hashes.
+        Exact matching imports are idempotent; rejected/changed records fail closed.
+        """
+        if owner_approved is not True:
+            raise ArchiveError('Explicit owner approval of private reference use is required.')
+        record_id, source_url = _id(record_id), _catalog_url(source_url)
+        material, label = _text(material, 160, True), _text(label, 160 - len(CATALOG_LABEL_PREFIX), True)
+        label = CATALOG_LABEL_PREFIX + label
+        if not isinstance(source_sha256, str) or not re.fullmatch('[0-9a-f]{64}', source_sha256):
+            raise ArchiveError('Invalid manufacturer source hash.')
+        if not isinstance(b64, str) or len(b64) > 4 * ((MAX_IMAGE_BYTES + 2) // 3):
+            raise ArchiveError('Invalid or oversized manufacturer source image.')
+        try:
+            raw = base64.b64decode(b64, validate=True)
+        except (ValueError, TypeError, binascii.Error):
+            raise ArchiveError('Invalid manufacturer source image.') from None
+        if len(raw) > MAX_IMAGE_BYTES or hashlib.sha256(raw).hexdigest() != source_sha256:
+            raise ArchiveError('Manufacturer image does not match the approved source hash.')
+        photo = _clean_photo(b64, 'image/jpeg')
+        outbound = _reference_photo(photo)
+        with self._locked():
+            directory, reference_directory = self._directory(record_id), self._directory(record_id, True, 'Andante')
+            self._check(directory, missing=True)
+            if directory.exists():
+                source, ref = self._record(record_id), self._record(record_id, True)
+                self._photo(record_id, source)
+                self._photo(record_id, ref, True)
+                if (source.get('source_kind') != 'manufacturer_catalog' or source['status'] != 'approved' or
+                        source['provenance']['source_url'] != source_url or source['provenance']['source_sha256'] != source_sha256 or
+                        ref.get('material') != material or ref.get('label') != label or ref.get('brand') != 'Andante'):
+                    raise ArchiveError('Manufacturer import conflicts with an existing record.')
+                return False
+            if reference_directory.exists():
+                raise ArchiveError('A reference already exists at the manufacturer record ID.')
+            now = _utc()
+            record = {'schema_version': SCHEMA_VERSION, 'id': record_id, 'received_utc': now,
+                      'sha256': hashlib.sha256(photo).hexdigest(), 'media': 'image/jpeg', 'status': 'approved',
+                      'source_kind': 'manufacturer_catalog',
+                      'provenance': {'source_url': source_url, 'source_sha256': source_sha256,
+                                     'imported_utc': now, 'basis': 'manufacturer_catalog_declaration'},
+                      'source_use_approval': {'owner_approved_private_reference_use': True,
+                                              'customer_upload_consent': False, 'acknowledged_utc': now}}
+            reference = dict(record, status='catalog_reference', material=material, brand='Andante', label=label,
+                             source_sha256=record['sha256'], sha256=hashlib.sha256(outbound).hexdigest(),
+                             verification={'method': 'manufacturer_catalog_source_review', 'human_verified': False,
+                                           'material_physically_verified': False, 'reviewed_utc': now,
+                                           'evidence': 'Gyártói katalógusforrás és tulajdonosi referenciahasználati jóváhagyás; nem helyszíni anyagvizsgálat.'})
+            self._reserve(len(photo) + len(outbound) + len(_json(record)) + len(_json(reference)))
+            self._new_record(directory, record, photo)
+            try:
+                self._new_record(reference_directory, reference, outbound)
+            except Exception:
+                # This invocation created the source; never remove preexisting data.
+                self._remove_directory(directory)
+                raise
+            return True
+
+    def activate_many(self, record_ids: list[str]) -> None:
+        """Append an explicitly chosen batch atomically, preserving existing selection."""
+        if not isinstance(record_ids, list) or len(record_ids) > MAX_REFERENCES:
+            raise ArchiveError('Invalid reference activation batch.')
+        ids = [_id(value) for value in record_ids]
+        if len(ids) != len(set(ids)):
+            raise ArchiveError('Duplicate activation IDs.')
+        with self._locked():
+            selected = self._selected()
+            combined = selected + [value for value in ids if value not in selected]
+            if len(combined) > MAX_REFERENCES:
+                raise ArchiveError('At most four references may be active; existing selections were preserved.')
+            self._references(combined)
+            self._select(combined)
 
     @staticmethod
     def _annotation(record_id: str, result: dict) -> dict:
@@ -561,6 +684,8 @@ class Archive:
         evidence = _text(evidence, 2000, True)
         with self._locked():
             source = self._record(record_id)
+            if source.get('source_kind') == 'manufacturer_catalog':
+                raise ArchiveError('Manufacturer catalogue samples use source review, not customer-photo approval.')
             if source['status'] != 'pending':
                 raise ArchiveError('Only a pending inbox record can be approved.')
             selected = self._selected()
@@ -601,7 +726,7 @@ class Archive:
                 self._select([item for item in selected if item != record_id])
 
     def references(self) -> list[dict]:
-        """Fail closed if any selected reference is missing, unverified or changed."""
+        """Fail closed for missing/changed references or invalid source-review evidence."""
         with self._locked():
             return self._references(self._selected())
 
@@ -688,9 +813,13 @@ class Archive:
                     'rejected': 'ELUTASÍTVA'}[record['status']]
                 details = f'<p><strong>{escape(state)}</strong> — {escape(record["received_utc"])}</p>'
                 if reference:
-                    details += ('<p>Személyesen ellenőrizve: ' + escape(reference['material']) + ' · ' + escape(reference['brand']) + ' · ' +
+                    catalog = record.get('source_kind') == 'manufacturer_catalog'
+                    details += ('<p>' + ('Gyártói katalógusminta (nem helyszíni anyagvizsgálat): ' if catalog else 'Személyesen ellenőrizve: ') + escape(reference['material']) + ' · ' + escape(reference['brand']) + ' · ' +
                                 escape(reference['label']) + '</p><p>Az ellenőrzés alapja: ' +
                                 escape(reference['verification']['evidence']) + '</p>')
+                if record.get('source_kind') == 'manufacturer_catalog':
+                    details += ('<p>Forrás: ' + escape(record['provenance']['source_url']) +
+                                '</p><p>Tulajdonos által jóváhagyott privát referenciahasználat; nem ügyfélfeltöltés és nem ügyfél-hozzájárulás.</p>')
                 if annotation:
                     details += '<details><summary>NEM ELLENŐRZÖTT AI-becslés — nem igazolja az anyagot</summary><pre>' + escape(json.dumps(annotation.get('result', {}), ensure_ascii=False, indent=2)) + '</pre></details>'
                 category = reference['material'] if reference else 'Még nem jóváhagyott képek'
@@ -706,7 +835,7 @@ class Archive:
                         '<meta http-equiv="Content-Security-Policy" content="default-src \'none\'; img-src \'self\' file:; style-src \'unsafe-inline\'; base-uri \'none\'; form-action \'none\'">'
                         '<title>Privát anyag- és referenciatár</title><style>body{font:16px system-ui;max-width:1050px;margin:40px auto;padding:0 20px;background:#f6f4ef;color:#222}article{background:white;padding:20px;margin:24px 0;border:1px solid #ccc}img{max-width:100%;max-height:360px}h2{font-size:16px;overflow-wrap:anywhere}pre{white-space:pre-wrap;overflow-wrap:anywhere}p{line-height:1.5}</style>'
                         '<h1>Privát anyag- és referenciatár</h1><p>CSAK HELYBEN — ezt a mappát ne tedd közzé, ne töltsd fel, és ne szolgáld ki webszerverrel. '
-                        'A képek tárolási hozzájárulását a szerver rögzíti. Az AI-becslés nem ellenőrzött. A jóváhagyáshoz külön emberi ellenőrzés kell; '
+                        'Az ügyfélképek tárolási hozzájárulását a szerver rögzíti. A külön jelölt gyártói katalógusminták tulajdonosi jóváhagyáson és forrásellenőrzésen alapulnak, nem helyszíni anyagvizsgálaton. Az AI-becslés nem ellenőrzött. '
                         'csak a kifejezetten aktivált mintákat kapja meg a beállított modellszolgáltató referenciaként.</p>'
                         f'<p>Frissítve: {escape(_utc())}. Aktív referenciák: {len(selected)}/4.</p>'
                         f'<p>A legutóbb módosított {MAX_GALLERY_RECORDS} beérkezett kép és az aktív referenciák láthatók, ellenőrzött anyag szerint rendezve. '

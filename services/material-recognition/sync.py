@@ -208,7 +208,7 @@ class SyncClient:
             if directory.exists():
                 record = self.archive._record(item['id'])
                 photo = self.archive._photo(item['id'], record)
-                if any(record[key] != item[key] for key in ITEM_FIELDS - {'bytes'}) or len(photo) != item['bytes']:
+                if any(record.get(key) != item[key] for key in ITEM_FIELDS - {'bytes'}) or len(photo) != item['bytes']:
                     raise SyncError('A távoli azonosító egy eltérő helyi képre mutat.')
                 return True
             # A receipt intentionally survives the owner's later photo deletion.

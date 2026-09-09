@@ -61,6 +61,32 @@ A katalógus sikeres mentés után automatikusan is frissül. A referenciaállom
 
 Az Andante márka, nem anyagkategória. Vizuális hasonlóság alapján a program nem igazol Andante-eredetet, szálösszetételt vagy tisztíthatóságot. W/S/WS/X csak a célképen olvasható kezelési címkéből származhat; referenciáról nem vehető át.
 
+### Aktív gyártói NovaLife-minták
+
+2026-09-09-től három, a tulajdonos által jóváhagyott gyártói katalógusfotó aktív:
+NovaLife Premium Nuss, Ecru 41 és Dunkelgrau 45. A helyi `references/andante`
+gyűjteményben és a privát Worker referencia-készletében vannak. A képfájlok nem
+részei a nyilvános weboldalnak vagy Gitnek. Mindkét választható szolgáltató ugyanazt
+az aktív készletet kapja, külön megjelölt összehasonlító képként; ez nem modelltréning.
+
+Az `import_novalife_references.py` forrás-URL-t és rögzített SHA-256 hash-t ellenőriz.
+Alapból csak tervet készít. Az importhoz `--apply --owner-approved-source-use`, a
+felhős készlet frissítéséhez ezen felül `--publish` szükséges. Ismételt futtatása
+nem duplikál, és nem kapcsolja ki a meglévő referenciákat. A katalógusrekordok
+`manufacturer_catalog` eredetűek: nincs ügyfél-hozzájárulás vagy helyszíni
+anyagvizsgálat állítva. A jóváhagyás a forrás privát referenciahasználatára vonatkozik.
+
+Az éles próbán mind a négy elemzés `reference_count: 3` értéket adott. A három
+vizsgált gyártói minta NovaLife-gyanút jelzett; ebből a Hellgrau 11 nem része az
+aktív készletnek. Nuss és Ecru egyben referenciák is, ezért az ezekkel végzett próba
+csak az integráció ellenőrzése. A tulajdonos lakókocsifotóját szövött textilként
+írta le, de NovaLife-kizárása továbbra is bizonytalan. Ez nem pontosságmérés.
+
+Ha a háttérletöltőt kódfrissítés után újraindítod, a `Stop-ScheduledTask` után várd
+meg a régi folyamat tényleges kilépését, majd indítsd újra. Azonnali indításkor a
+régi folyamat zárolása miatt az új példány szabályosan kiléphet; az új PID és friss
+`sync-status.json` igazolja a sikeres újraindulást.
+
 ## Működés és korlátok
 
 `GET /api/material-health` → `enabled`, `ready`, `collection_enabled`; nem fedi fel a szolgáltatót, modellnevet vagy kulcsot. A `ready` konfigurációs állapot: a kulcs jelenléte nem bizonyít egyenleget, modellhozzáférést vagy sikeres API-hívást. Hiányzó kulcsnál az üzemeltető által kiválasztott elemzés nem indítható. Alapértelmezés Gemini; nincs automatikus átváltás másik szolgáltatóra.
