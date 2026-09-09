@@ -8,3 +8,37 @@
   body:has(#interiorImage) .price-configurator .config-header h3 { min-width: 0; }
   body:has(#interiorImage) .price-configurator .config-status { flex: 0 0 auto; margin-left: 0; }
 }
+
+/* Editorial process numerals: remove the inherited neon circle and grid stretch. */
+body:has(#interiorImage) .how-it-works .step-number {
+  position: static;
+  display: block;
+  align-self: start;
+  justify-self: start;
+  width: max-content;
+  height: auto;
+  border: 0;
+  border-bottom: 1px solid #c4aa8d;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  padding: 0 4px 14px 0;
+  margin: 0 0 28px;
+  font-family: var(--font-display);
+  font-size: 76px;
+  font-style: normal;
+  font-weight: 400;
+  font-variant-numeric: lining-nums;
+  letter-spacing: -.04em;
+  line-height: .95;
+  color: #74856a;
+}
+body:has(#interiorImage) .how-it-works .step-number::before { content: '0'; }
+body:has(#interiorImage) .how-it-works .step-number::after { content: none; }
+@media (max-width: 700px) {
+  body:has(#interiorImage) .how-it-works .step-number {
+    font-size: 52px;
+    padding-bottom: 12px;
+    margin: 0;
+  }
+}

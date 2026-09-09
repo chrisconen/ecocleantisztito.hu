@@ -15804,7 +15804,7 @@
       "source": "img/vegyszermentes-karpittisztito.webp"
     },
     "index.html": {
-      "sha256": "23891a35d7f2f249437461c23c39f5cc7836bd972bda21c16ff81f79c59f3425",
+      "sha256": "29d2a3263a59654d8869579e7b673aca1e474b09f138e46ef37d010ac3c6c9aa",
       "bytes": 115557,
       "source": "demo/index.html"
     },
@@ -16544,8 +16544,8 @@
       "source": "release-support/calendar-live.js"
     },
     "ui/design.css": {
-      "sha256": "fe7550a473090eb24888d0a017a2b950f332c496b68d5c3df9152ce7fbbe0a5b",
-      "bytes": 39990,
+      "sha256": "8a9be96ad368c2b24ac9c0b66b8bcc44a65ff03ea3e62d6ac504e8b464bdcc27",
+      "bytes": 40912,
       "source": "demo/design.css"
     },
     "ui/modern.css": {
@@ -17299,6 +17299,6 @@
   },
   "reviewOverlay": {
     "path": "release-support/material-review/overlay.json",
-    "sha256": "93fa555918d816362e7d730698dfe44f19b52fe5c582c19476fbfaf1190d20a5"
+    "sha256": "9de1f6ee980de018546f61b8cd10a8537b9692c77b3d409a8c8d4ef94a6fb1e6"
   }
 }

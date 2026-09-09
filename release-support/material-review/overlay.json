@@ -22,13 +22,13 @@
     {
       "file": "ui/design.css",
       "beforeSha256": "c2fee50158f2a6eb72779573131846314737a2ae4a1a7b1fb02e5c816af0ea02",
-      "afterSha256": "fe7550a473090eb24888d0a017a2b950f332c496b68d5c3df9152ce7fbbe0a5b",
+      "afterSha256": "8a9be96ad368c2b24ac9c0b66b8bcc44a65ff03ea3e62d6ac504e8b464bdcc27",
       "baseline": "release-support/material-review/baseline/ui-design.css"
     },
     {
       "file": "index.html",
       "beforeSha256": "3892caf0b463453003004a238c903b6338bf18bfeba61e6a4de29fb472dda3bd",
-      "afterSha256": "23891a35d7f2f249437461c23c39f5cc7836bd972bda21c16ff81f79c59f3425",
+      "afterSha256": "29d2a3263a59654d8869579e7b673aca1e474b09f138e46ef37d010ac3c6c9aa",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -40,7 +40,7 @@
         },
         {
           "before": "ui/design.css?v=c2fee50158f2",
-          "after": "ui/design.css?v=fe7550a47309"
+          "after": "ui/design.css?v=8a9be96ad368"
         }
       ]
     },
@@ -566,7 +566,7 @@
     },
     {
       "path": "demo/material-review/home-mobile.css",
-      "sha256": "33ba042a3467217a297fc27594e5645e68d99c1764eaf1412d7ebc0b36b088a6"
+      "sha256": "ece28ad10003a6ef2b5e7a087a968d8f64d30785769dc27bdb0cf93fd552044b"
     }
   ]
 }
