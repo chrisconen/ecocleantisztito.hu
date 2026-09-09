@@ -39,8 +39,9 @@ def main():
             panel=page.locator('[data-material-result] [data-novalife-status=likely_other]');panel.wait_for(timeout=90000)
             assert len(calls)==1 and calls[0]['http']==200
             result=calls[0]['result'];assert result['_meta']['reference_count']==3 and not result['_meta']['archive_saved']
-            assert 'valószínűleg nem NovaLife' in panel.inner_text()
+            assert 'nem NovaLife' in panel.inner_text()
             assert 'nem zárja ki' not in panel.inner_text()
+            assert 'helyszín' not in page.locator('[data-material-result]').inner_text().lower()
             assert page.locator('[data-material-result] .eco-material-result-actions a').first.get_attribute('href')=='#studio-kalkulator'
             assert not errors and not writes, (errors,writes)
             panel.screenshot(path=str(out/f'owner-result-live-{width}.png'),style='.nav{visibility:hidden!important}')
