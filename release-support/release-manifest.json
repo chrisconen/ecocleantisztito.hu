@@ -15804,63 +15804,63 @@
       "source": "img/vegyszermentes-karpittisztito.webp"
     },
     "index.html": {
-      "sha256": "e925517219209270739b4bab4eb2c9fb5feb31d67f02d7f2168b08eeccdddd4b",
-      "bytes": 115385,
+      "sha256": "9b46b28634a760687be7da3b9e4996e0400ef544d4ccc98af81c25a96205ff27",
+      "bytes": 115438,
       "source": "demo/index.html"
     },
     "karpittisztitas-badacsony.html": {
-      "sha256": "9ded15e9f9316713a5414bd29a24baa3cc95227ea7e56bfba7d63964e336d962",
-      "bytes": 100546,
+      "sha256": "77f91b7829f0408b38c5b3a5d8c99fea896705aca7abc9f1aef6dbee92f1ccf7",
+      "bytes": 100599,
       "source": "demo/karpittisztitas-badacsony.html"
     },
     "karpittisztitas-baja.html": {
-      "sha256": "b7e4c6e4a460bd33e6e8eba0db6df34c71e2ce65bfe0cbc6717a697554cd45b0",
-      "bytes": 88482,
+      "sha256": "c8e8fb1ebbff53789c0a4323174e8721ea2654ea92f57a23310a454f5888de84",
+      "bytes": 88535,
       "source": "demo/karpittisztitas-baja.html"
     },
     "karpittisztitas-balatonalmadi.html": {
-      "sha256": "1cfde060ceb3b42d64a0ee43d75f0c88d729b540d70563d62942b9a172e5183a",
-      "bytes": 100884,
+      "sha256": "46ea8eaad3532d136136677db468778101c68ada8059ad7f8086c3587f75e2ab",
+      "bytes": 100937,
       "source": "demo/karpittisztitas-balatonalmadi.html"
     },
     "karpittisztitas-balatonboglar.html": {
-      "sha256": "6827c8b49a0472facc784f9fb6f745469702033ed080ce37da48cf4f8a019e80",
-      "bytes": 100897,
+      "sha256": "06570eb495c99fb1baab810f85b78e3d0c2be021e00f7968e6001e427f30b567",
+      "bytes": 100950,
       "source": "demo/karpittisztitas-balatonboglar.html"
     },
     "karpittisztitas-balatonfoldvar.html": {
-      "sha256": "7045c2c6d01d3b51c38a92db6176b26d793e0b09c35d9957e32b336f0d9c300d",
-      "bytes": 100977,
+      "sha256": "9d30fc6d11d61e08872f419dc4b5183ddd1f85f27446ceb78502cc9ff67a97e7",
+      "bytes": 101030,
       "source": "demo/karpittisztitas-balatonfoldvar.html"
     },
     "karpittisztitas-balatonfured.html": {
-      "sha256": "b8624106318d2aefe814a3b39741dabaf5e686833618cf48d3d4c58ed98984c2",
-      "bytes": 100858,
+      "sha256": "14db295b4a0ad34d03ba2d9250c53eb40b258cbfd976060133de8bd823d4974f",
+      "bytes": 100911,
       "source": "demo/karpittisztitas-balatonfured.html"
     },
     "karpittisztitas-balatonfuzfo.html": {
-      "sha256": "44470bacbffa1abeea4a4a420850ede4f490de45ea86a080a23fd623bede24ff",
-      "bytes": 100663,
+      "sha256": "b953fb04561db996c422060ccba6583f16f1c59a10ef5e104bc1f4a2bdffea9e",
+      "bytes": 100716,
       "source": "demo/karpittisztitas-balatonfuzfo.html"
     },
     "karpittisztitas-balatonkenese.html": {
-      "sha256": "e8e2515608c4b2682be84a522eb6e351c6c9500bf439a774668773d7965fc2b5",
-      "bytes": 100692,
+      "sha256": "9bc54c9ac0808220572b10f3c2d6365ad0f37077180eae11799a4649df77aaf1",
+      "bytes": 100745,
       "source": "demo/karpittisztitas-balatonkenese.html"
     },
     "karpittisztitas-balatonlelle.html": {
-      "sha256": "bd6f09becdcf7ec398f20d70d4b5eb493743b0dbea575745b0443fe19de26e4d",
-      "bytes": 100756,
+      "sha256": "6ef15c01a5756da104c4b53bcfe419f5b8265dc590812dbddd579d908ac9d3fd",
+      "bytes": 100809,
       "source": "demo/karpittisztitas-balatonlelle.html"
     },
     "karpittisztitas-balatonszemes.html": {
-      "sha256": "ebdc7fde8dca21231c403eb16b0d76ffead7ba52acc5b769a169c73487314303",
-      "bytes": 100626,
+      "sha256": "d3ca467b115cf95b75cd3b6a1ab48428add7a4f59f5000a72838e0ee97ae911d",
+      "bytes": 100679,
       "source": "demo/karpittisztitas-balatonszemes.html"
     },
     "karpittisztitas-dunafoldvar.html": {
-      "sha256": "5d48c0d9b953ac081bfb1bf5f5a5e5279eb9fc6dffdaac36d3db5e096a974847",
-      "bytes": 88446,
+      "sha256": "f65f9995ce76d66fe70450af5da8e2e83f178e0d3101d2b871e6d2970233afee",
+      "bytes": 88499,
       "source": "demo/karpittisztitas-dunafoldvar.html"
     },
     "karpittisztitas-elotte-utana.html": {
@@ -15869,118 +15869,118 @@
       "source": "demo/karpittisztitas-elotte-utana.html"
     },
     "karpittisztitas-fonyod.html": {
-      "sha256": "7886873a501f6714547743e8566ac9172f8afa4d7458e4037ad82b8c4410dd99",
-      "bytes": 100403,
+      "sha256": "3eb04a8211d325eafe80086ef72244bea49a3810547b6fb1559c25c6eb25ef56",
+      "bytes": 100456,
       "source": "demo/karpittisztitas-fonyod.html"
     },
     "karpittisztitas-gyor.html": {
-      "sha256": "e63a8ee8e9670635b5bba078409772f866847e6e7e70b2007bd297ab3be52dc5",
-      "bytes": 74380,
+      "sha256": "7eeb03146bcd465a410b9e881cc1ae3dfdddd20c9c862b7648e8e0ea3bfcc68f",
+      "bytes": 74433,
       "source": "demo/karpittisztitas-gyor.html"
     },
     "karpittisztitas-heviz.html": {
-      "sha256": "a405e3eb51ba5593022074a2978837f5543eea0fab2269bf1921a183442ae579",
-      "bytes": 100381,
+      "sha256": "3d9b71105cdbffec95d0ad283a388ebab3cf9123465d16dda8ce24b37ba1c0dc",
+      "bytes": 100434,
       "source": "demo/karpittisztitas-heviz.html"
     },
     "karpittisztitas-kalocsa.html": {
-      "sha256": "74f42d6fb7448e33ffe4f59b7ab2c130fe1c597b7485d03a71ec9add761dcc6a",
-      "bytes": 88770,
+      "sha256": "42996ac783345394b26fe1189cfa82b7d59518c4b1f4bf10304d5f424104fa04",
+      "bytes": 88823,
       "source": "demo/karpittisztitas-kalocsa.html"
     },
     "karpittisztitas-keszthely.html": {
-      "sha256": "5ab6c7c820d706a8a2f3e7cc4647c7cc12e1107d2a066ac13073d261e98fe53b",
-      "bytes": 100438,
+      "sha256": "1dca487af0b90de44f1829df0fe4c3eaaf072ee33f5068af301c6829d93e3016",
+      "bytes": 100491,
       "source": "demo/karpittisztitas-keszthely.html"
     },
     "karpittisztitas-kiskoros.html": {
-      "sha256": "ecf1a180e400e793d217a8d7156ac3f9ddd870d2fcc9aeee5762f0fe7f26a60f",
-      "bytes": 88387,
+      "sha256": "76e71a2e846a876b02958856bd32f4fc645662f1bde5b97d386ae4a432b2dea8",
+      "bytes": 88440,
       "source": "demo/karpittisztitas-kiskoros.html"
     },
     "karpittisztitas-komarom.html": {
-      "sha256": "3bf8012a699110e6615f08ae3a28863d83f2d36c6cf639c3872fe5a47b6d2320",
-      "bytes": 71175,
+      "sha256": "a8cb5670a16e1fb2b36f71750db48f3b010177b33a255161216beceb6e28dc62",
+      "bytes": 71228,
       "source": "demo/karpittisztitas-komarom.html"
     },
     "karpittisztitas-matractisztitas.html": {
-      "sha256": "d986bd4e1e928581c4ac933a1bef243d160dc49db9c0244890852342890a8fac",
-      "bytes": 103137,
+      "sha256": "1ffced1a505f8acc492d69211f54d7a89c3ecce924f40dcad4371940727fb508",
+      "bytes": 103190,
       "source": "demo/karpittisztitas-matractisztitas.html"
     },
     "karpittisztitas-mosonmagyarovar.html": {
-      "sha256": "6f97b5f73ecb164a640c7623214a431a2213185dcf150e8f31f313816562586b",
-      "bytes": 71556,
+      "sha256": "435f96a1829b627a915c202b3f178f23f66e6dbfe9181cb9e4a90d4a9ab8496d",
+      "bytes": 71609,
       "source": "demo/karpittisztitas-mosonmagyarovar.html"
     },
     "karpittisztitas-paks.html": {
-      "sha256": "4961835a343f9d1fb2107cedf1305a6428ff4009900ee774d7ecc127c2c0f480",
-      "bytes": 88320,
+      "sha256": "b7cf5667a3e227a8efa84011363d1d19533e7f7ff503d65e514cfbdf2389afb9",
+      "bytes": 88373,
       "source": "demo/karpittisztitas-paks.html"
     },
     "karpittisztitas-papa.html": {
-      "sha256": "77437cc4a6ddf19bf80541281289e885a05d834864cac9637f120747757f16c9",
-      "bytes": 70968,
+      "sha256": "fba550820de5994ea6ad44c6ef6baa66b59fb25338567e44e9b7aa28a6ad40aa",
+      "bytes": 71021,
       "source": "demo/karpittisztitas-papa.html"
     },
     "karpittisztitas-revfulop.html": {
-      "sha256": "7a7f52a2172e31190af508d03c405dee3e562d870c8c7771c0359da503141f91",
-      "bytes": 100576,
+      "sha256": "98191faf2f79149abe74f591df22bda077d18c4939ef55d53b8b44c2d4b4efaa",
+      "bytes": 100629,
       "source": "demo/karpittisztitas-revfulop.html"
     },
     "karpittisztitas-siofok.html": {
-      "sha256": "b5771e3e7db05b61bbf20a2823b42e3cf67d00dabcd7d61f1a995ccdb599f78b",
-      "bytes": 100443,
+      "sha256": "0fa573c65105bf0bd2a8b04cf037c30e1c4be0e53baad53e21493367374c30c6",
+      "bytes": 100496,
       "source": "demo/karpittisztitas-siofok.html"
     },
     "karpittisztitas-solt.html": {
-      "sha256": "6eb95a7ade03064599213bcec77cc13d8bcdd141dc08eed817d270963c8c3ac7",
-      "bytes": 88307,
+      "sha256": "adca499386c80849a021e648ea450e884110bdcd85e2a61540489fb8401e7c53",
+      "bytes": 88360,
       "source": "demo/karpittisztitas-solt.html"
     },
     "karpittisztitas-sopron.html": {
-      "sha256": "997fb2cf05d7495437b1c47136122645b37a73f168994239625fb612226e301c",
-      "bytes": 71280,
+      "sha256": "8f1769cbac94aee66f62be8806620be70e125e942d4ad2d1db7d403f4dbadd1b",
+      "bytes": 71333,
       "source": "demo/karpittisztitas-sopron.html"
     },
     "karpittisztitas-szekszard.html": {
-      "sha256": "7228ec488e8169e75f19897ce6ff842488c6c11e505bfdef433a2bf7b87ffb20",
-      "bytes": 88452,
+      "sha256": "9f4186d7f6a9619c8f73d46ec99128dc4ae23564fae11767d07b42ce87c0ff5c",
+      "bytes": 88505,
       "source": "demo/karpittisztitas-szekszard.html"
     },
     "karpittisztitas-szombathely.html": {
-      "sha256": "6a6a9920730749462d12dc3ba288d621f8d8797528676563119a89bafde7025f",
-      "bytes": 71334,
+      "sha256": "96047c0ffa96395aaed0ea99b62f9c3ad2deb6f1b48da843fb7ae68149504462",
+      "bytes": 71387,
       "source": "demo/karpittisztitas-szombathely.html"
     },
     "karpittisztitas-tapolca.html": {
-      "sha256": "d4ab73dffedb27a0f44dd8ea06785ac3d4bd49537668c81e4946aa50f5b39502",
-      "bytes": 100370,
+      "sha256": "f868dc6292051b1abffa26efa86ea024b41ea527946f517bb463334ef985cbb2",
+      "bytes": 100423,
       "source": "demo/karpittisztitas-tapolca.html"
     },
     "karpittisztitas-tata.html": {
-      "sha256": "8d79ec14a8aed39f542c876d37dfe4c7bf3f0b3e20e7cf3c993f35b906a4ebaf",
-      "bytes": 70915,
+      "sha256": "d0b8a3c33e25775920cbcd6e30d2a94aeb3efd2000982ba45ee9c6053cb2cc1e",
+      "bytes": 70968,
       "source": "demo/karpittisztitas-tata.html"
     },
     "karpittisztitas-tatabanya.html": {
-      "sha256": "2a80aab88e5392bbc896ccb7b7aae3c6544704f782c77e063de9693d184415d7",
-      "bytes": 71026,
+      "sha256": "234e5d442abaaf21b82f283e1659f846cde349cdc58e4c57d85e1978be23ac20",
+      "bytes": 71079,
       "source": "demo/karpittisztitas-tatabanya.html"
     },
     "karpittisztitas-tihany.html": {
-      "sha256": "c4458589dc1653f567787a37b44db1fcefa0133700283ef562291dac1baa7754",
-      "bytes": 100189,
+      "sha256": "9177ac56d46f3b043e4f6bd2f4c54d59e46732e42b048305e5251c9e8e8ee07c",
+      "bytes": 100242,
       "source": "demo/karpittisztitas-tihany.html"
     },
     "karpittisztitas-veszprem.html": {
-      "sha256": "93debdf959ef0b3a1208d888aa146dc9fba588090c2bce6b16baac6fc3243577",
-      "bytes": 71113,
+      "sha256": "6960c63b0729d3382baf0ca61f839a41132a9cdc5de9fffe916ac1dca431060b",
+      "bytes": 71166,
       "source": "demo/karpittisztitas-veszprem.html"
     },
     "karpittisztitas-zamardi.html": {
-      "sha256": "f7aca9e0b9b4315ea5efb0170d24026fe518241a4b8f603dbcbc0186b4d46a69",
-      "bytes": 100333,
+      "sha256": "678593af992d1d4ac6c9c5f565768fe3716d827cf4315404090d8000b74d898c",
+      "bytes": 100386,
       "source": "demo/karpittisztitas-zamardi.html"
     },
     "karpittisztitas.html": {
@@ -17207,6 +17207,6 @@
   "unresolved": [],
   "widgetOverlay": {
     "path": "release-support/material-widget-overlay.json",
-    "sha256": "8160d257b22172685959bf7a09fc414dee11f1ae66b1eeb7d4ab99a096eb79c0"
+    "sha256": "f9771d3c26fccf2fe1b6ff99f50d9ce42640d4271bc1e3d256dfdc0c10702281"
   }
 }
