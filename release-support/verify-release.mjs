@@ -30,7 +30,7 @@ function reference(url,file,kind){
 }
 const bodyText=d=>{
   const body=d.body.cloneNode(true);
-  if(overlay)body.querySelector('#anyagfelismero')?.remove();
+  if(overlay)body.querySelectorAll('#anyagfelismero,.eco-novalife-cta').forEach(el=>el.remove());
   body.querySelectorAll('script,style,.demo-notice,.demo-calendar-note,#demoResult,#configStatus').forEach(e=>e.remove());
   for(const anchor of body.querySelectorAll('a[href]')){
     const url=new URL(anchor.getAttribute('href'),'https://ecocleantisztito.hu/');
@@ -46,7 +46,7 @@ for(const rec of manifest.pageInventory||inventory){
   const file=rec.file,target=path.join(out,file);
   if(!fs.existsSync(target)){issues.push({file,message:'Missing production page'});continue;}
   const raw=fs.readFileSync(target,'utf8'),dom=new JSDOM(raw,{virtualConsole:log}),d=dom.window.document;
-  const approvedSource=overlay?raw.replace(/<!-- ECO-MATERIAL:(style|section|script):START -->[\s\S]*?<!-- ECO-MATERIAL:\1:END -->/g,''):fs.readFileSync(path.join(root,rec.source||'demo/'+file),'utf8');
+  const approvedSource=overlay?raw.replace(/<!-- ECO-MATERIAL:(style|section|script|cta):START -->[\s\S]*?<!-- ECO-MATERIAL:\1:END -->/g,''):fs.readFileSync(path.join(root,rec.source||'demo/'+file),'utf8');
   const approved=new JSDOM(approvedSource,{virtualConsole:log});
   counts.pages++;
   check(bodyText(d)===bodyText(approved.window.document),file,'Approved visible text differs');

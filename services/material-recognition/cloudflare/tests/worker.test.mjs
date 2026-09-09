@@ -48,8 +48,8 @@ const ORIGIN = 'https://ecocleantisztito.hu', TOKEN = 'fixture-owner-token-never
 const UUID = '11111111-2222-4333-8444-555555555555';
 const JPEG = '/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wgARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAT/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/aAAwDAQACEAMQAAABpEz/AP/EABQQAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQEAAQUCf//EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQMBAT8Bf//EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQIBAT8Bf//EABQQAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQEABj8Cf//EABQQAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQEAAT8hf//aAAwDAQACAAMAAAAQB//EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQMBAT8Qf//EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQIBAT8Qf//EABQQAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQEAAT8Qf//Z';
 const upload = extra => ({ image: 'data:image/jpeg;base64,' + JPEG, media_type: 'image/jpeg', note: 'private customer note', archive_consent: false, turnstile_token: 'fixture-turnstile', ...extra });
-const result = () => ({ kep_tipus: 'anyag', anyag: 'bouclé', anyag_alt: 'Hurkolt felület.', biztonsag: 83, indoklas: 'A hurkolt szerkezet látható.', tisztitasi_kod: 'W', cimke_szoveg: '', modszer: 'unused', kerulendo: [], kockazatok: [], ellenorzes: 'Címkeellenőrzés szükséges.', kerdes_ugyfelnek: 'Megvan a címke?' });
-const geminiResult = () => ({ candidates: [{ finishReason: 'STOP', content: { role: 'model', parts: [{ text: JSON.stringify(result()) }] } }] });
+const result = extra => ({ kep_tipus: 'anyag', anyag: 'bouclé', anyag_alt: 'Hurkolt felület.', biztonsag: 83, indoklas: 'A hurkolt szerkezet látható.', tisztitasi_kod: 'W', cimke_szoveg: '', modszer: 'unused', kerulendo: [], kockazatok: [], ellenorzes: 'Címkeellenőrzés szükséges.', kerdes_ugyfelnek: 'Megvan a címke?', ...extra });
+const geminiResult = (value = result()) => ({ candidates: [{ finishReason: 'STOP', content: { role: 'model', parts: [{ text: JSON.stringify(value) }] } }] });
 function bindings() {
   const storage = new MemoryStorage(), durable = new MaterialQuota({ storage }), bucket = new MemoryR2(), calls = [];
   return { storage, durable, bucket, calls, env: { MATERIAL_PROVIDER: 'gemini', MATERIAL_PHOTOS: bucket, MATERIAL_QUOTA: { idFromName: name => name, get: id => { assert.equal(id, 'global-v1'); return { fetch: request => { calls.push(new URL(request.url).pathname); return durable.fetch(request); } }; } }, MATERIAL_SYNC_TOKEN: TOKEN, GEMINI_API_KEY: 'fixture-gemini-key', OPENAI_API_KEY: 'fixture-openai-key', TURNSTILE_SITE_KEY: 'fixture-public-site', TURNSTILE_SECRET_KEY: 'fixture-private-secret' } };
@@ -114,7 +114,7 @@ test('consentless success does not write R2; sanitized result and quota release'
   const net = network(t), { env, bucket, storage, calls } = bindings();
   const response = await worker.fetch(request(), env), data = await response.json();
   assert.equal(response.status, 200); assert.equal(data.anyag, 'bouclé'); assert.equal(data.tisztitasi_kod, 'ismeretlen');
-  assert.deepEqual(data._meta, { archive_requested: false, archive_saved: false, reference_count: 0 }); assert.equal(Object.keys(data).length, 12);
+  assert.deepEqual(data._meta, { archive_requested: false, archive_saved: false, reference_count: 0 }); assert.equal(Object.keys(data).length, 13); assert.equal(data.novalife.status, 'uncertain');
   assert.deepEqual(bucket.calls, [['get', 'references/active.json']]); assert.equal(bucket.objects.size, 0);
   assert.equal(net.provider().length, 1); assert.equal(net.challenge().length, 1); assert.deepEqual(calls, ['/reserve', '/release']);
   const quota = await storage.get('quota'); assert.equal(quota.count, 1); assert.equal(Object.keys(quota.leases).length, 0);
@@ -132,6 +132,15 @@ test('consented success archives normalized photo and finalized record before ma
   const manifest = await (await worker.fetch(ownerRequest('manifest'), env)).json(); assert.equal(manifest.items.length, 1);
   const item = await worker.fetch(ownerRequest('items/' + record.record.id), env); assert.equal(item.status, 200); const downloaded = await item.json();
   assert.equal(downloaded.image, encodeBase64(validateImage(Uint8Array.from(Buffer.from(JPEG, 'base64'))))); assert.equal(downloaded.record.id, record.record.id);
+});
+test('NovaLife uncertain screening survives route, R2 finalization and authenticated desktop download', async t => {
+  const net = network(t, { providerBody: geminiResult(result({ anyag: 'mikroszálas/velúr (alcantara-jellegű)', novalife_status: 'likely_other', novalife_reason: 'Gemini: biztosan nem NovaLife, tisztítható.', novalife_label_text: '' })) }), { env, bucket } = bindings();
+  const response = await worker.fetch(request(undefined, upload({ archive_consent: true })), env), actual = await response.json();
+  assert.equal(response.status, 200); assert.equal(actual.novalife.status, 'uncertain'); assert.equal(net.provider().length, 1);
+  const recordKey = [...bucket.objects.keys()].find(k => k.startsWith('records/')), stored = await (await bucket.get(recordKey)).json();
+  assert.deepEqual(stored.annotation.novalife, actual.novalife);
+  const item = await (await worker.fetch(ownerRequest('items/' + stored.record.id), env)).json(); assert.deepEqual(item.annotation.novalife, actual.novalife);
+  assert.doesNotMatch(JSON.stringify(actual), /Gemini|biztosan nem/);
 });
 test('provider failure finalizes consented photo with null annotation and truthful saved flag, without fallback', async t => {
   const net = network(t, { providerStatus: 429 }), { env, bucket, storage } = bindings();

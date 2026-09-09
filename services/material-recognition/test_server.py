@@ -65,12 +65,13 @@ class ValidationTests(unittest.TestCase):
 
     def test_schema_clamps_and_removes_unknown_fields(self):
         clean = server.sanitize_result(result(biztonsag=900, anyag='invented material', unexpected='never return', kockazatok=['x'] * 20))
-        self.assertEqual(set(clean), set(server.FIELDS))
+        self.assertEqual(set(clean), set(server.FIELDS) | {'novalife'})
         self.assertEqual(clean['biztonsag'], 100)
         self.assertEqual(clean['anyag'], 'nem eldönthető')
         self.assertEqual(clean['tisztitasi_kod'], 'ismeretlen')
         self.assertEqual(clean['modszer'], server.NO_CODE)
-        self.assertIn('nem bevizsgált pontosság', clean['indoklas'])
+        self.assertIn('nem anyagvizsgálati igazolás vagy tisztítási engedély', clean['indoklas'])
+        self.assertNotIn('százalék', clean['indoklas'])
         self.assertEqual(len(clean['kockazatok']), 8)
         self.assertEqual(server.sanitize_result(result(biztonsag=True))['biztonsag'], 0)
         self.assertEqual(server.sanitize_result(result(biztonsag=float('nan')))['biztonsag'], 0)
@@ -189,9 +190,15 @@ class HTTPTests(unittest.TestCase):
                                            {'Content-Type': 'application/json', 'Origin': 'http://127.0.0.1:8089'})
         self.assertEqual(status, 200)
         self.assertEqual(headers['Access-Control-Allow-Origin'], 'http://127.0.0.1:8089')
-        self.assertEqual(set(json.loads(raw)), set(server.FIELDS))
+        self.assertEqual(set(json.loads(raw)), set(server.FIELDS) | {'novalife'})
         self.assertEqual(self.calls, [('image/png', 'Offline fixture')])
         self.assertFalse((server.HERE / 'log').exists())
+
+    def test_legacy_eleven_field_provider_gains_uncertain_novalife(self):
+        self.config.provider = lambda *_: result()
+        status, _, raw = self.request('POST', '/api/material-analyze', json.dumps(image_payload()), {'Content-Type': 'application/json'})
+        self.assertEqual(status, 200)
+        self.assertEqual(json.loads(raw)['novalife']['status'], 'uncertain')
 
     def test_health_and_disabled_provider(self):
         self.config.api_key = ''

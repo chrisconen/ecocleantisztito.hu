@@ -153,6 +153,32 @@ A helyi 2 GiB korlát nem felhős R2-kvóta vagy megőrzési határidő. A két 
 
 ## Ellenőrzés
 
+### NovaLife előzetes szűrés
+
+A widget 35 éles oldalon érhető el: a főoldalon és a 34 kárpittisztítási oldalon.
+Az árak környékén megjelenő CTA az adott oldal saját `#anyagfelismero` részére visz.
+A nyolc mediterrán oldal továbbra is e-mailes ajánlatkérést használ.
+
+A régi 11 válaszmező mellé a `novalife: {status, reason}` objektum került.
+Lehetséges státuszok: `likely_other`, `possible_novalife`, `label_novalife`, `uncertain`.
+A hiányzó régi mező a felületen bizonytalannak számít. A címkés jelzés előzetes
+kiolvasás; a fotó, a megjegyzés és a szolgáltatói válasz nem hiteles anyagigazolás.
+Csak a `likely_other` állapot kínál visszautat a helyi árkalkulátorhoz/foglalóhoz;
+a többi telefonos egyeztetést és új fotót kínál. Egyik sem ad tisztítási engedélyt.
+A fotó alapján a víztaszítás, impregnálás és pontos szálösszetétel nem igazolható.
+
+Gyártói háttér: [ANDANTE bevonóanyagok](https://andante.hu/bevono-anyagok/),
+[2024-es kezelési útmutató](https://andante.hu/wp-content/uploads/2024/05/HKU-Magyar-5.7-KanizsaTrend-2024-04-15-javitott.pdf).
+Az ANDANTE márka és a NovaLife anyagcsalád külön fogalom; nem minden ANDANTE bútor NovaLife.
+A prompt a NovaLife külön kezelési előírásaira hivatkozik, nem általános víztilalomra.
+
+Kézi, fizetős integrációs próba: `python services/material-recognition/cloudflare/verify_novalife_live.py`.
+Három gyártói katalógusmintát tölt le memóriába és elemez, archiválás és referencia-aktiválás nélkül.
+A 2026-09-09-i pilot eredménye két `possible_novalife` és egy `uncertain`; nincs `likely_other`.
+Ez kis mintás működési próba, nem pontosságmérés. Ellenőrzött valódi NovaLife- és
+nem NovaLife-fotókból álló, külön tesztkészlet szükséges a téves kizárás és a
+felesleges bizonytalanság arányának méréséhez. Egyetlen ügyfélfotóra ne hangoljuk a szűrést.
+
 ```powershell
 python -m unittest discover -s services/material-recognition -p "test_*.py" -v
 node --test demo/material-recognition/provider.test.mjs

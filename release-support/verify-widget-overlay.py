@@ -5,7 +5,7 @@ import hashlib,json,re,sys
 ROOT=Path(__file__).resolve().parent.parent
 def sha(data):return hashlib.sha256(data).hexdigest()
 def strip_widget(data):
- for name in ('style','section','script'):
+ for name in ('style','section','script','cta'):
   start=f'<!-- ECO-MATERIAL:{name}:START -->'.encode();end=f'<!-- ECO-MATERIAL:{name}:END -->'.encode()
   if data.count(start)!=1 or data.count(end)!=1:raise ValueError('Missing or duplicate widget marker '+name)
   a=data.index(start);b=data.index(end,a);data=data[:a]+data[b+len(end):]
@@ -41,12 +41,15 @@ def verify(manifest):
     check(sha(data)==page['outputSha256']==manifest['files'][file]['sha256'],'Widget page hash changed: '+file)
     check(page.get('next')==('#booking' if file=='index.html' else '#arak'),'Regional widget route changed: '+file)
     class Scan(HTMLParser):
-     def __init__(self):super().__init__();self.ids=[];self.targets=[]
+     def __init__(self):super().__init__();self.ids=[];self.targets=[];self.ctas=0;self.local_links=0
      def handle_starttag(self,tag,attrs):
       a=dict(attrs)
       if 'id' in a:self.ids.append(a['id'])
       if 'data-material-app' in a:self.targets.append(a.get('data-next'))
+      if 'eco-novalife-cta' in a.get('class','').split():self.ctas+=1
+      if tag=='a' and a.get('href')=='#anyagfelismero':self.local_links+=1
     doc=Scan();doc.feed(data.decode('utf-8-sig'));check(doc.ids.count('anyagfelismero')==1 and doc.targets==[page['next']] and page['next'][1:] in doc.ids,'Widget anchor missing or duplicated: '+file)
+    check(doc.ctas==1 and doc.local_links>=1,'NovaLife promotion missing or duplicated: '+file)
    else:check(sha(data)==record['sha256'] and manifest['files'][file]==record,'Unrelated production file changed: '+file)
   for file,dep in deps.items():check(sha((ROOT/'release'/file).read_bytes())==dep['sha256']==manifest['files'][file]['sha256'],'Widget dependency changed: '+file)
  except (OSError,ValueError,KeyError,TypeError) as exc:errors.append('Widget proof incomplete: '+str(exc))

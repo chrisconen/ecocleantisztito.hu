@@ -14,7 +14,7 @@ class ProofTests(unittest.TestCase):
   base={'files':{},'approvedMediterranean':{'manifestSha256':medsha,'pages':pages[:15]},'unresolved':[]};overlay={'pages':[],'dependencies':[]}
   for file in pages:
    next='#booking' if file=='index.html' else '#arak';original=f'<html><head></head><body><section id="{next[1:]}">ORIGINAL</section></body></html>'.encode();output=original
-   for name,content in [('style','<link href="material-recognition/design.css">'),('section',f'<section id="anyagfelismero"><div data-material-app data-next="{next}"></div></section>'),('script','<script src="material-recognition/app.js"></script>')]:output+=f'<!-- ECO-MATERIAL:{name}:START -->{content}<!-- ECO-MATERIAL:{name}:END -->'.encode()
+   for name,content in [('style','<link href="material-recognition/design.css">'),('section',f'<section id="anyagfelismero"><div data-material-app data-next="{next}"></div></section>'),('cta','<aside class="eco-novalife-cta"><a href="#anyagfelismero">Szövetvizsgálat</a></aside>'),('script','<script src="material-recognition/app.js"></script>')]:output+=f'<!-- ECO-MATERIAL:{name}:START -->{content}<!-- ECO-MATERIAL:{name}:END -->'.encode()
    p=self.root/'release'/file;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(output);base['files'][file]={'sha256':digest(original),'bytes':len(original)};overlay['pages'].append({'file':file,'next':next,'originalSha256':digest(original),'outputSha256':digest(output)})
   (self.root/'release/original.css').write_bytes(b'original');base['files']['original.css']={'sha256':digest(b'original'),'bytes':8}
   basesha=save('release-support/base/manifest.json',base);reportsha=save('release-support/base/report.json',{'issues':[],'manifestSha256':basesha})
@@ -36,4 +36,6 @@ class ProofTests(unittest.TestCase):
   p=self.root/'release/karpittisztitas-aa.html';p.write_bytes(p.read_bytes().replace(b'data-next="#arak"',b'data-next="#booking"'));self.assertTrue(gate.verify(self.manifest))
  def test_manifest_metadata_tamper(self):
   self.manifest['approvedMediterranean']['manifestSha256']='changed';self.assertTrue(gate.verify(self.manifest))
+ def test_missing_novalife_promotion(self):
+  p=self.root/'release/index.html';p.write_bytes(p.read_bytes().replace(b'eco-novalife-cta',b'missing-cta'));self.assertTrue(gate.verify(self.manifest))
 if __name__=='__main__':unittest.main()

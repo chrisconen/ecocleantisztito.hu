@@ -82,6 +82,18 @@ class FakeOpener:
 
 
 class SyncTests(unittest.TestCase):
+    def test_remote_novalife_and_legacy_annotations_both_sync_without_contract_change(self):
+        first, old = remote_fixture()
+        second, new = remote_fixture()
+        new['annotation']['novalife'] = {'status': 'possible_novalife', 'reason': 'Unverified visual similarity'}
+        self.transport.responses = [self.manifest([first, second]), old, new]
+        self.assertEqual(self.client.pull_once()['imported'], 2)
+        old_saved = json.loads((self.path / 'inbox' / first['id'] / 'annotation.json').read_text('utf-8'))
+        new_saved = json.loads((self.path / 'inbox' / second['id'] / 'annotation.json').read_text('utf-8'))
+        self.assertNotIn('novalife', old_saved['result'])
+        self.assertEqual(new_saved['result']['novalife']['status'], 'possible_novalife')
+        self.assertFalse(new_saved['human_verified'])
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)

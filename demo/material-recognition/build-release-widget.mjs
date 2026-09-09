@@ -4,7 +4,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import {createRequire} from 'node:module';
 import {execFileSync} from 'node:child_process';
-import {integrateMaterialRecognition} from './component.mjs';
+import {integrateMaterialRecognition,novaLifeCTA} from './component.mjs';
 const require=createRequire(path.join(process.env.TEMP,'ecoclean-demo-qa/package.json'));
 const {JSDOM}=require('jsdom');
 const workspace=path.resolve(import.meta.dirname,'../..'),release=path.join(workspace,'release');
@@ -24,14 +24,16 @@ if(sha(medBytes)!==baseline.approvedMediterranean.manifestSha256)throw Error('Hi
 const excluded=new Set(['kalocsa','baja','kiskoros','szekszard','paks','solt','dunafoldvar'].map(c=>`karpittisztitas-${c}.html`));
 const files=['index.html',...Object.keys(baseline.files).filter(file=>/^karpittisztitas-[a-z]+\.html$/.test(file)&&!excluded.has(file)&&file!=='karpittisztitas-matractisztitas.html').sort(),...excluded,'karpittisztitas-matractisztitas.html'];
 if(files.length!==35||new Set(files).size!==35||files.some(f=>!/^index\.html$|^karpittisztitas-[a-z-]+\.html$/.test(f)))throw Error('Unexpected 35-page scope');
-const markers=['style','section','script'];
+const markers=['style','section','script','cta'];
 function strip(source){
  for(const name of markers){const start=`<!-- ECO-MATERIAL:${name}:START -->`,end=`<!-- ECO-MATERIAL:${name}:END -->`;
   const count=source.split(start).length-1;if(count>1||count!==source.split(end).length-1)throw Error('Invalid overlay markers');
   if(count){const a=source.indexOf(start),b=source.indexOf(end,a);source=source.slice(0,a)+source.slice(b+end.length);}
  }return source;
 }
-const block=(name,html)=>`<!-- ECO-MATERIAL:${name}:START -->\n${html}\n<!-- ECO-MATERIAL:${name}:END -->`;
+// A CTA can sit between adjacent minified elements. Keep marker whitespace
+// inside the element so removing the owned DOM adds no original text nodes.
+const block=(name,html)=>`<!-- ECO-MATERIAL:${name}:START -->${name==='cta'?'':'\n'}${html}${name==='cta'?'':'\n'}<!-- ECO-MATERIAL:${name}:END -->`;
 const pages=[],outputs=[];
 for(const file of files){
  const source=fs.readFileSync(path.join(release,file),'utf8'),base=strip(source);
@@ -40,23 +42,29 @@ for(const file of files){
  if(d.querySelector('#anyagfelismero,script[src*="material-recognition/app.js"],link[href*="material-recognition/design.css"]'))throw Error(`${file}: unmarked widget exists; manual review required`);
  const next=file==='index.html'?'#booking':'#arak',anchor=d.querySelector(next);
  if(!anchor)throw Error(`${file}: missing real next anchor ${next}`);
- const sectionOffset=dom.nodeLocation(anchor)?.startOffset;
+ const sectionOffset=file==='index.html'?dom.nodeLocation(anchor)?.startOffset:dom.nodeLocation(anchor)?.endOffset;
+ const warning=[...d.querySelectorAll('.pricing-note-box')].find(el=>/andante/i.test(el.textContent));
+ const medConfig=d.querySelector('[data-med-configurator]');
+ const indexStep=d.querySelector('#priceConfigurator #step2');
+ const ctaOffset=warning?dom.nodeLocation(warning)?.endTag?.startOffset:medConfig?dom.nodeLocation(medConfig)?.startOffset:indexStep?dom.nodeLocation(indexStep)?.endOffset:undefined;
+ const ctaPlacement=warning?'inside-andante-warning':medConfig?'before-email-configurator':'after-home-service-choice';
  const headOffset=dom.nodeLocation(d.head)?.endTag?.startOffset,bodyOffset=dom.nodeLocation(d.body)?.endTag?.startOffset;
- if(![sectionOffset,headOffset,bodyOffset].every(Number.isInteger))throw Error(`${file}: insertion boundary missing`);
+ if(![sectionOffset,headOffset,bodyOffset,ctaOffset].every(Number.isInteger))throw Error(`${file}: insertion boundary missing`);
  const oldIds=new Set([...d.querySelectorAll('[id]')].map(el=>el.id));
  const widget=integrateMaterialRecognition(d,{home:file==='index.html',next,assetUrl:'material-recognition/assets/fotel-bukle-olvasosarok.webp'});
  for(const el of [widget,...widget.querySelectorAll('[id]')])if(el.id&&oldIds.has(el.id))throw Error(`${file}: widget ID collision ${el.id}`);
  let output=base;
- for(const [offset,html] of [[headOffset,block('style','<link rel="stylesheet" href="material-recognition/design.css">')],[sectionOffset,block('section',widget.outerHTML)],[bodyOffset,block('script','<script src="material-recognition/app.js" defer></script>')]].sort((a,b)=>b[0]-a[0]))output=output.slice(0,offset)+html+output.slice(offset);
+ for(const [offset,html] of [[headOffset,block('style','<link rel="stylesheet" href="material-recognition/design.css">')],[sectionOffset,block('section',widget.outerHTML)],[ctaOffset,block('cta',novaLifeCTA({compact:!medConfig}))],[bodyOffset,block('script','<script src="material-recognition/app.js" defer></script>')]].sort((a,b)=>b[0]-a[0]))output=output.slice(0,offset)+html+output.slice(offset);
  if(strip(output)!==base)throw Error(`${file}: original content changed`);
  const check=new JSDOM(output).window.document;
  if(check.querySelectorAll('#anyagfelismero').length!==1||!check.querySelector(check.querySelector('[data-material-app]').dataset.next))throw Error(`${file}: invalid output`);
  if(!check.head.querySelector('link[href="material-recognition/design.css"]')||check.title!==d.title)throw Error(`${file}: widget insertion changed HTML parsing`);
- pages.push({file,next,bookingMode:excluded.has(file)||file==='karpittisztitas-matractisztitas.html'?'existing-email-route':'existing-online-route',originalSha256:sha(base),outputSha256:sha(output),originalBytesPreserved:true});
+ if(check.querySelectorAll('.eco-novalife-cta').length!==1||check.querySelector('.eco-novalife-cta a')?.getAttribute('href')!=='#anyagfelismero')throw Error(`${file}: NovaLife CTA missing or invalid`);
+ pages.push({file,next,ctaPlacement,bookingMode:excluded.has(file)||file==='karpittisztitas-matractisztitas.html'?'existing-email-route':'existing-online-route',originalSha256:sha(base),outputSha256:sha(output),originalBytesPreserved:true});
  outputs.push([file,output,base]);dom.window.close();
 }
 const dependencies=[['demo/material-recognition/app.js','material-recognition/app.js'],['demo/material-recognition/design.css','material-recognition/design.css'],['demo/material-recognition/assets/fotel-bukle-olvasosarok.webp','material-recognition/assets/fotel-bukle-olvasosarok.webp']].map(([source,file])=>({source,file,sha256:sha(fs.readFileSync(path.join(workspace,source)))}));
-const report={scope:'widget-only release overlay; original HTML byte-preserved outside owned markers',pages,dependencies};
+const report={scope:'NovaLife screening widget and pricing CTA; original HTML byte-preserved outside owned markers',pages,dependencies};
 const additional=new Set(dependencies.map(d=>d.file));
 function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(dir,e.name)):[path.relative(release,path.join(dir,e.name)).replaceAll('\\','/')]);}
 for(const file of walk(release))if(!baseline.files[file]&&!additional.has(file))throw Error(`Unreviewed release addition: ${file}`);

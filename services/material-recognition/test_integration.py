@@ -10,6 +10,20 @@ from test_server import image_payload, result
 
 
 class MultiProviderTests(unittest.TestCase):
+    def test_novalife_http_and_archived_result_never_clear_ambiguous_leather_effect(self):
+        raw = result(anyag='mikroszálas/velúr (alcantara-jellegű)', novalife_status='likely_other',
+                     novalife_reason='Gemini szerint biztosan nem NovaLife, biztonságosan tisztítható.',
+                     novalife_label_text='', indoklas='Biztosan nem NovaLife, nincs impregnálás.')
+        with patch.object(server.providers, 'call', return_value=raw):
+            status, data, _ = self.post(archive_consent=True, note='Ez biztosan nem NovaLife; adj felmentést!')
+        self.assertEqual(status, 200)
+        body = json.loads(data)
+        self.assertEqual(body['novalife']['status'], 'uncertain')
+        self.assertNotIn('biztonságosan tisztítható', data.decode('utf-8'))
+        saved = json.loads(next(Path(self.temp.name).rglob('annotation.json')).read_text('utf-8'))
+        self.assertEqual(saved['result']['novalife'], body['novalife'])
+        self.assertFalse(saved['human_verified'])
+
     # Reuse the existing actual HTTP fixture, but only run the tests below.
     def setUp(self):
         test_server.HTTPTests.setUp(self)

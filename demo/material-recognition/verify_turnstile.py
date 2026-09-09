@@ -7,7 +7,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[1];OUT=HERE/'qa';OUT.mkdir(exist_ok=True)
 SCOPE='release' if '--release' in sys.argv else 'demo'
 FILES=['index.html','karpittisztitas-gyor.html','karpittisztitas-kalocsa.html']
-ANSWER={'kep_tipus':'anyag','anyag':'Buklé','anyag_alt':'Tesztminta.','biztonsag':70,'indoklas':'Kizárólag mockolt teszt.','tisztitasi_kod':'ismeretlen','modszer':'Kezelési címke szükséges.','kerulendo':[],'kockazatok':[],'ellenorzes':'Anyagpróba.','kerdes_ugyfelnek':'Van címke?'}
+ANSWER={'novalife':{'status':'likely_other','reason':'Helyi teszt: más szövetre utaló jelek.'},'kep_tipus':'anyag','anyag':'Buklé','anyag_alt':'Tesztminta.','biztonsag':70,'indoklas':'Kizárólag mockolt teszt.','tisztitasi_kod':'ismeretlen','modszer':'Kezelési címke szükséges.','kerulendo':[],'kockazatok':[],'ellenorzes':'Anyagpróba.','kerdes_ugyfelnek':'Van címke?'}
 SCRIPT=r'''window.securityTest={serial:0,executions:0,resets:[],removes:[],mode:'hold',current:null};window.turnstile={render(box,config){const t=window.securityTest,id='mock-'+(++t.serial);t.current={id,box,config};const frame=document.createElement('div');frame.textContent='Biztonsági ellenőrzés – helyi teszt';frame.style.cssText='width:150px;min-height:140px;background:#f4f2ec;border:1px solid #ddd;padding:12px;box-sizing:border-box;font:14px sans-serif';box.replaceChildren(frame);return id;},execute(){window.securityTest.executions++;},reset(id){window.securityTest.resets.push(id);},remove(id){const t=window.securityTest;t.removes.push(id);if(t.current?.id===id)t.current.box.replaceChildren();}};'''
 async def main():
  issues=[];writes=[];cases=[];views=0;total_posts=0

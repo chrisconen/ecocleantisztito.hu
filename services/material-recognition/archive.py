@@ -463,6 +463,11 @@ class Archive:
         confidence = result.get('biztonsag')
         if type(confidence) is int or type(confidence) is float and math.isfinite(confidence):
             sanitized['biztonsag'] = max(0, min(100, confidence))
+        if 'novalife' in result:
+            # Old 11-field annotations remain valid. New optional data is bounded
+            # and retains UNVERIFIED status, including remotely synchronized data.
+            from providers import public_novalife
+            sanitized['novalife'] = public_novalife(result['novalife'])
         return {'schema_version': SCHEMA_VERSION, 'record_id': _id(record_id),
                 'status': 'unverified_model_prediction', 'human_verified': False,
                 'recorded_utc': _utc(), 'result': sanitized}

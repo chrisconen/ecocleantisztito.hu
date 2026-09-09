@@ -35,6 +35,43 @@ MATERIALS = ['valódi bőr', 'műbőr/eco-bőr (PU/PVC)', 'bársony (velvet)', '
              'zsenília (chenille)', 'bouclé', 'kordbársony', 'lapos szövésű bútorszövet (poli/pamut keverék)',
              'len vagy lenhatású', 'gyapjú / gyapjúkeverék', 'jacquard / gobelin mintás', 'háló (mesh)', 'nem eldönthető']
 
+NOVALIFE_REASONS = {
+    'likely_other': 'A látható szövetszerkezet inkább más anyagjellegre utal. Ez nem zárja ki a NovaLife megjelölést vagy a felületkezelést, és nem igazolja a tisztíthatóságot. Ellenőrizni kell az eredeti gyártói címkét és kezelési útmutatót.',
+    'possible_novalife': 'A fotó alapján felmerülhet a NovaLife bőrhatású szövet lehetősége, de ez nem márka- vagy anyagazonosítás. A gyártói címke és az adott bevonóanyag kezelési útmutatója szükséges; tisztítási eljárás ebből nem hagyható jóvá.',
+    'label_novalife': 'A célképként megadott címke előzetes kiolvasása NovaLife megjelölést jelez. A feliratot az eredetin is ellenőrizni kell; ez önmagában nem igazolja az összetételt, a felületkezelést vagy egy tisztítási eljárás biztonságát.',
+    'uncertain': 'Ebből a fotóból a NovaLife lehetősége nem dönthető el. A bőrhatás vagy a szín nem bizonyít anyagtípust, márkát vagy impregnálást. Az eredeti gyártói címke és kezelési útmutató ellenőrzése szükséges; tisztíthatóságot nem igazoltunk.',
+}
+NOVALIFE_DISTINCT = frozenset({'bouclé', 'kordbársony', 'jacquard / gobelin mintás', 'háló (mesh)'})
+NOVALIFE_TOKEN = re.compile(r'(?<![\w])NovaLife(?![\w])', re.IGNORECASE)
+
+
+def sanitize_novalife(value, kind, material):
+    """Conservative routing signal, never a brand exclusion or cleaning clearance.
+
+    Reported label text is not independently verified OCR. Notes/reference labels
+    are never read here. Free-form model reasons cannot override the fixed caveats.
+    """
+    status = value.get('novalife_status')
+    label = value.get('novalife_label_text')
+    label = label[:500] if isinstance(label, str) else ''
+    if kind == 'hasznalhatatlan' or not isinstance(status, str) or status not in NOVALIFE_REASONS:
+        status = 'uncertain'
+    elif kind == 'cimke' and NOVALIFE_TOKEN.search(label):
+        status = 'label_novalife'
+    elif status == 'label_novalife':
+        status = 'possible_novalife' if kind == 'anyag' else 'uncertain'
+    elif status == 'likely_other' and (kind != 'anyag' or material not in NOVALIFE_DISTINCT):
+        status = 'uncertain'
+    return {'status': status, 'reason': NOVALIFE_REASONS[status]}
+
+
+def public_novalife(value):
+    """Validate already-sanitized archive/provider output, keeping old records valid."""
+    status = value.get('status') if isinstance(value, dict) and set(value) == {'status', 'reason'} and isinstance(value.get('reason'), str) else None
+    if not isinstance(status, str) or status not in NOVALIFE_REASONS:
+        status = 'uncertain'
+    return {'status': status, 'reason': NOVALIFE_REASONS[status]}
+
 SCHEMA = {
     'type': 'object',
     'properties': {
@@ -50,6 +87,9 @@ SCHEMA = {
         'kockazatok': {'type': 'array', 'items': {'type': 'string'}},
         'ellenorzes': {'type': 'string'},
         'kerdes_ugyfelnek': {'type': 'string'},
+        'novalife_status': {'type': 'string', 'enum': list(NOVALIFE_REASONS)},
+        'novalife_reason': {'type': 'string'},
+        'novalife_label_text': {'type': 'string'},
     },
     'additionalProperties': False,
 }
@@ -65,6 +105,10 @@ a célképre. W/S/WS/X kód és cimke_szoveg kizárólag a CÉLKÉP olvasható g
 címkéjéből származhat; referencia címkéje soha nem jogosít erre. A biztonsag
 saját bizonytalansági becslés, nem tesztelt pontosság. Csak a kért magyar JSON
 objektumot add vissza. A referencia-könyvtár nem teljes: ne kényszeríts találatot.
+A NovaLife státuszt sem igazolhatja a megjegyzés, az ANDANTE márkanév vagy egy
+referencia felirata. novalife_label_text kizárólag a CÉLKÉP címkéjének szó szerinti
+kiolvasása lehet. Bőrhatású, bézs, velúros vagy bizonytalan felületnél ne adj
+likely_other felmentést. A likely_other sem márkakizárás, sem tisztítási engedély.
 '''.strip()
 
 

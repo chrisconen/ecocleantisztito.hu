@@ -39,7 +39,7 @@ MAX_RESPONSE = 128 * 1024
 MEDIA = {'image/jpeg': 'JPEG', 'image/png': 'PNG', 'image/webp': 'WEBP', 'image/gif': 'GIF'}
 FIELDS = ('kep_tipus', 'anyag', 'anyag_alt', 'biztonsag', 'indoklas', 'tisztitasi_kod', 'modszer', 'kerulendo', 'kockazatok', 'ellenorzes', 'kerdes_ugyfelnek')
 MATERIALS = ('valódi bőr', 'műbőr/eco-bőr (PU/PVC)', 'bársony (velvet)', 'mikroszálas/velúr (alcantara-jellegű)', 'zsenília (chenille)', 'bouclé', 'kordbársony', 'lapos szövésű bútorszövet (poli/pamut keverék)', 'len vagy lenhatású', 'gyapjú / gyapjúkeverék', 'jacquard / gobelin mintás', 'háló (mesh)', 'nem eldönthető')
-UNVERIFIED = 'A százalék előzetes bizonyossági becslés, nem bevizsgált pontosság.'
+UNVERIFIED = 'Előzetes fotóalapú becslés; nem anyagvizsgálati igazolás vagy tisztítási engedély.'
 NO_CODE = 'Fotó alapján nem hagyható jóvá tisztítási eljárás. Előbb a gyártói címkét, az anyagot és a színtartósságot kell szakembernek ellenőriznie.'
 METHODS = {'W': 'A kiolvasott W címkekód vízbázisú tisztítást jelezhet. Az eredeti címke és gyártói útmutató ellenőrzése, valamint rejtett helyen végzett próba szükséges; ne kezdj áztatásba a fotós becslés alapján.',
            'S': 'A kiolvasott S címkekód oldószeres eljárást jelezhet. Az eredeti címkét szakember ellenőrizze; háztartási oldószeres próbát ne végezz.',
@@ -138,7 +138,9 @@ def public_text(value, key, maximum=1000):
     text = clean_text(value, maximum)
     # Customer copy must not depend on the provider obeying branding instructions.
     # Replace the complete affected field, never splice misleading sentence fragments.
-    return PUBLIC_FALLBACKS.get(key, NO_CODE) if TECHNICAL_BRANDING.search(text) else text
+    # NovaLife assertions belong exclusively to the conservative dedicated result.
+    # A free-form sentence cannot contradict it by claiming an exclusion/clearance.
+    return PUBLIC_FALLBACKS.get(key, NO_CODE) if TECHNICAL_BRANDING.search(text) or re.search(r'Nova[\s-]*Life|impregn|biztonságosan\s+tisztítható|garantáltan\s+tisztítható', text, re.IGNORECASE) else text
 
 
 def sanitize_result(value):
@@ -168,6 +170,7 @@ def sanitize_result(value):
         result[key] = [public_text(s, key, 240) for s in items[:8] if isinstance(s, str) and clean_text(s, 240)] if isinstance(items, list) else []
     if not result['ellenorzes']:
         result['ellenorzes'] = 'A gyártói címke, az anyag és a színtartósság szakember általi ellenőrzése szükséges.'
+    result['novalife'] = providers.sanitize_novalife(value, kind, material)
     return result
 
 
@@ -532,8 +535,9 @@ class Handler(BaseHTTPRequestHandler):
             else:
                 result = self.config.provider(self.config, b64, media, note)
             # Even a replacement provider must obey the public output contract.
-            if not isinstance(result, dict) or set(result) != set(FIELDS):
+            if not isinstance(result, dict) or set(result) not in (set(FIELDS), set(FIELDS) | {'novalife'}):
                 raise ProviderError('invalid response')
+            result['novalife'] = providers.public_novalife(result.get('novalife'))
             if archive_id:
                 try:
                     self.config.archive.annotate(archive_id, result)
