@@ -42,7 +42,9 @@ def main():
             assert 'nem NovaLife' in panel.inner_text()
             assert 'nem zárja ki' not in panel.inner_text()
             assert 'helyszín' not in page.locator('[data-material-result]').inner_text().lower()
-            assert page.locator('[data-material-result] .eco-material-result-actions a').first.get_attribute('href')=='#studio-kalkulator'
+            expect(panel.locator('.eco-material-novalife-actions a[href="#studio-kalkulator"]')).to_have_count(1)
+            expect(panel.locator('[data-material-followup=label]')).not_to_be_visible()
+            expect(panel.locator('.eco-material-novalife-next')).to_have_count(0)
             assert not errors and not writes, (errors,writes)
             panel.screenshot(path=str(out/f'owner-result-live-{width}.png'),style='.nav{visibility:hidden!important}')
             results.append({'width':width,'status':result['novalife']['status'],'references':3,'archiveSaved':False,'calculatorLink':True,'headline':panel.locator('h3,h4').first.inner_text(),'passed':True})

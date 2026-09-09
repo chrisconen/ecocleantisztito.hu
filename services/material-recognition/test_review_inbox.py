@@ -1,4 +1,5 @@
 import base64,hashlib,io,json,tempfile,unittest
+from unittest.mock import patch
 from pathlib import Path
 from PIL import Image
 from archive import Archive
@@ -52,4 +53,10 @@ class ReviewTests(unittest.TestCase):
   page=(self.archive.root/'emailes-ellenorzes'/'index.html').read_text('utf-8')
   self.assertIn('1 válaszra vár · 1 lezárva',page)
   self.assertLess(page.index('<summary>Lezárt kérések'),page.index('older@example.invalid'))
+ def test_daily_work_requires_explicit_sent_confirmation(self):
+  with patch('review_inbox.load_config',return_value={}),patch('review_inbox.SyncClient',return_value=self.client()),patch('webbrowser.open'),patch('builtins.print'):
+   with patch('builtins.input',side_effect=['1','1','Kereszteződő fonalak','NEM','']):review_inbox.work(self.archive)
+   self.assertFalse((self.archive.root/'emailes-ellenorzes'/self.id/'completed.json').exists())
+   with patch('builtins.input',side_effect=['1','1','Kereszteződő fonalak','ELKÜLDTEM']):review_inbox.work(self.archive)
+   self.assertTrue((self.archive.root/'emailes-ellenorzes'/self.id/'completed.json').exists())
 if __name__=='__main__':unittest.main()
