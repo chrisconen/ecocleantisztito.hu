@@ -41,7 +41,7 @@ def main():
     config=load_config(DEFAULT_ROOT/'sync-config.json')
     _,before=call('/api/material-admin/manifest',owner=True)
     ids={i['id'] for i in before.get('items',[])}
-    fixture=HERE.parents[2]/'demo/studio/assets/fotel-bukle-olvasosarok.webp'
+    fixture=HERE.parents[2]/'demo/material-recognition/assets/fotel-bukle-olvasosarok.webp'
     with Image.open(fixture) as image:
         image=image.convert('RGB');image.thumbnail((1200,1200));buffer=io.BytesIO();image.save(buffer,'JPEG',quality=80)
     payload={'image':'data:image/jpeg;base64,'+base64.b64encode(buffer.getvalue()).decode(),

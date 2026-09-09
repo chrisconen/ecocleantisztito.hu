@@ -18,7 +18,7 @@ import providers
 import server
 
 HERE = Path(__file__).resolve().parent
-FIXTURE = HERE.parent.parent / 'demo/studio/assets/fotel-bukle-olvasosarok.webp'
+FIXTURE = HERE.parent.parent / 'demo/material-recognition/assets/fotel-bukle-olvasosarok.webp'
 REPORT = HERE / 'qa/provider-live.json'
 SAFE_ERROR_CODES = {'INVALID_ARGUMENT', 'UNAUTHENTICATED', 'PERMISSION_DENIED', 'RESOURCE_EXHAUSTED',
                     'NOT_FOUND', 'UNAVAILABLE', 'DEADLINE_EXCEEDED', 'INTERNAL', 'FAILED_PRECONDITION',
@@ -32,7 +32,7 @@ def main():
     model = providers.DEFAULT_MODELS[args.provider]
     key = os.getenv('GEMINI_API_KEY', os.getenv('GOOGLE_API_KEY', '')) if args.provider == 'gemini' else os.getenv('OPENAI_API_KEY', '')
     report = {'checked_at': datetime.now(timezone.utc).isoformat(), 'provider': args.provider, 'model': model,
-              'fixture': 'demo/studio/assets/fotel-bukle-olvasosarok.webp', 'fixture_kind': 'generated_interior',
+              'fixture': 'demo/material-recognition/assets/fotel-bukle-olvasosarok.webp', 'fixture_kind': 'generated_interior',
               'customer_data': False, 'collection': False, 'references': 0, 'transport_attempts': 0,
               'real_calls': 0, 'http_status': None, 'status': 'not_run', 'elapsed_seconds': 0,
               'accuracy_claim': False}
