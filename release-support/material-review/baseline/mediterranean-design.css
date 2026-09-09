@@ -236,6 +236,3 @@ body.eco-mediterranean{
 }
 @media(max-width:360px){.med-shell,.eco-mediterranean .bixol-header .header-bottom>.container,.eco-mediterranean .container,.eco-mediterranean .section-container{width:calc(100% - 32px)}.med-hero h1{font-size:51px}.med-section h2{font-size:37px}.med-product-body{padding:20px}.med-assurances>span{font-size:8px}.med-button{font-size:10px;padding-inline:12px}.eco-mediterranean .footer-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.eco-mediterranean *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
-
-/* Keep the process heading clear of the preceding divider at every breakpoint. */
-.med-section.med-process { padding-top: clamp(48px, 6vw, 88px); }

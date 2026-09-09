@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "baseline": {
     "manifest": "release-support/material-review/baseline-manifest.json",
     "manifestSha256": "23f45f6d7a1c3b47e4a3e4e7e5dfd45b52527d5f01dfcbc427b2b794f5355fbc",
@@ -24,6 +24,18 @@
       "beforeSha256": "c2fee50158f2a6eb72779573131846314737a2ae4a1a7b1fb02e5c816af0ea02",
       "afterSha256": "8a9be96ad368c2b24ac9c0b66b8bcc44a65ff03ea3e62d6ac504e8b464bdcc27",
       "baseline": "release-support/material-review/baseline/ui-design.css"
+    },
+    {
+      "file": "studio/design.css",
+      "beforeSha256": "719c919c61e0071614560fedc4e7f2454f654ef9a4b63924f0f76e19ed378c2e",
+      "afterSha256": "8323cecc169161aa0219c85faf09164351602a8f93b41cde91fb4c116245f358",
+      "baseline": "release-support/material-review/baseline/studio-design.css"
+    },
+    {
+      "file": "mediterranean/design.css",
+      "beforeSha256": "a3c58c0eb27096ce7abbbb0d756cd6980357867b402d1b26b90d1a6bb8dc411a",
+      "afterSha256": "43ed00dd0005f6615de726d1bb184a65b447166538a53fa6896ff215b9a79cf1",
+      "baseline": "release-support/material-review/baseline/mediterranean-design.css"
     },
     {
       "file": "index.html",
@@ -89,7 +101,7 @@
     {
       "file": "karpittisztitas-badacsony.html",
       "beforeSha256": "785632a04fdca91bcc760a09213f1ed45d7453a8339568b122e9f539cd0c98ba",
-      "afterSha256": "1f2d1019440bf94d37891a66dcaed18ceca8fd15dfc174432463ef1d6eb9eda5",
+      "afterSha256": "3a23743a8e1b0bfdb0a3a71473e17228ce4eb4a9caf17d7aededadf6f80141a5",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -98,6 +110,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "studio/design.css?v=719c919c61e0",
+          "after": "studio/design.css?v=8323cecc1691"
         }
       ],
       "copyEdits": [
@@ -146,7 +162,7 @@
     {
       "file": "karpittisztitas-balatonalmadi.html",
       "beforeSha256": "3f50877b7ad53ee79ed396dc9aad9605d02824557d733cc190e63f1bbfc52bce",
-      "afterSha256": "a58088a4240dbecb35278301d3ff1170669310d425896e0e0943901ff8fe3108",
+      "afterSha256": "f67ba907e21a7be631d18845c865375a316de91dfbeff4be48cea74b6a649c63",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -155,6 +171,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "studio/design.css?v=719c919c61e0",
+          "after": "studio/design.css?v=8323cecc1691"
         }
       ],
       "copyEdits": [
@@ -203,7 +223,7 @@
     {
       "file": "karpittisztitas-balatonboglar.html",
       "beforeSha256": "d93ad00e49c2e718d59fe0a2f130f341ed59b1dae47d67a6788d8dbbb19a685e",
-      "afterSha256": "0df42ed4c130d5249e962a09a9d933fcf2751b8d90706ba30cf26b7282222dd1",
+      "afterSha256": "0f4414db1603916ad6936a79fa6bdb266914c317be416f19cccfa74ee44e9995",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -212,6 +232,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "studio/design.css?v=719c919c61e0",
+          "after": "studio/design.css?v=8323cecc1691"
         }
       ],
       "copyEdits": [
@@ -260,7 +284,7 @@
     {
       "file": "karpittisztitas-balatonfoldvar.html",
       "beforeSha256": "f43e7308e60122fe739251fc54c0475e68098bfbcda61638b39e1eb241488748",
-      "afterSha256": "a34e7813ca61fe14f7ef38b17e4085f3573e24795e5adaffbc2660d48d72373b",
+      "afterSha256": "caeac8757857e654bcedad42ed8cfb911dd76b404fe5bfe2da75ab659804ca7d",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -269,6 +293,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "studio/design.css?v=719c919c61e0",
+          "after": "studio/design.css?v=8323cecc1691"
         }
       ],
       "copyEdits": [
@@ -317,7 +345,7 @@
     {
       "file": "karpittisztitas-balatonfured.html",
       "beforeSha256": "e48cd5abbf4f9a14295069c8cab4365b10b471ef4beaa16f86518b6bc55f5ec2",
-      "afterSha256": "8ea07c656af6ec3eed61738bf7d8217d8d61a55f1d099c911be0f185d9888ff9",
+      "afterSha256": "ba1f72eb71c13be74f9d4ff53ce78916370470d59c189bffb75af306ca2338dc",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -326,6 +354,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "studio/design.css?v=719c919c61e0",
+          "after": "studio/design.css?v=8323cecc1691"
         }
       ],
       "copyEdits": [
@@ -374,7 +406,7 @@
     {
       "file": "karpittisztitas-balatonfuzfo.html",
       "beforeSha256": "1df49ef1480e7f73415a8efd7b4a726e84787fdf5e67a91d540d43c99b9f4c5c",
-      "afterSha256": "ce3d915ee1ce16d461d7d038d8cf6149110a737545ad61c9988ec44211abf389",
+      "afterSha256": "8ce689376e6d0190576c43918e67388fdef18c1cee3cd2276fe4c3cefa88931d",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -383,6 +415,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "studio/design.css?v=719c919c61e0",
+          "after": "studio/design.css?v=8323cecc1691"
         }
       ],
       "copyEdits": [
@@ -431,7 +467,7 @@
     {
       "file": "karpittisztitas-balatonkenese.html",
       "beforeSha256": "eb2d62b71a0907d5b427df273e870042cc58d7c709d1da07fc817205838ba0f5",
-      "afterSha256": "d02b1b3d7ee45a5a1336c24d79d96e823d5219cefe2d18ab51982c7af64303ea",
+      "afterSha256": "6ff696efa130dbe419f7172d86dfb4222556bbc96cafa49b3084fb1bf98cbded",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -440,6 +476,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "studio/design.css?v=719c919c61e0",
+          "after": "studio/design.css?v=8323cecc1691"
         }
       ],
       "copyEdits": [
@@ -488,7 +528,7 @@
     {
       "file": "karpittisztitas-balatonlelle.html",
       "beforeSha256": "c01e552ef72e66a3afe40a8bd304a02567647a9e3eeadfdf892d668af1117ad9",
-      "afterSha256": "97f5b59b84a1c63351cf10c6948372a90068d1774cb452d5270ab8d3e464e2f9",
+      "afterSha256": "5f5a2323c293088575e4b53b35853279002770ea6a0e8d1f8f97788b84270bf5",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -497,6 +537,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "studio/design.css?v=719c919c61e0",
+          "after": "studio/design.css?v=8323cecc1691"
         }
       ],
       "copyEdits": [
@@ -545,7 +589,7 @@
     {
       "file": "karpittisztitas-balatonszemes.html",
       "beforeSha256": "5b990b9646adb015cbfd600060621f8e96fa3c91366e9aa4eecd9735e45c66d6",
-      "afterSha256": "50cd258bf1b34250cb08427276a483ceb26bdfe20cce363def361d043a516dae",
+      "afterSha256": "1d221ea8cbca270f9c8378f120b35a6e47a3e6db1a8c85d59547cd7f33a1b62c",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -554,6 +598,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "studio/design.css?v=719c919c61e0",
+          "after": "studio/design.css?v=8323cecc1691"
         }
       ],
       "copyEdits": [
@@ -602,7 +650,7 @@
     {
       "file": "karpittisztitas-fonyod.html",
       "beforeSha256": "301f07a07bc831aa4f97bfe3a683878505b50486c8a9ee9e0290e5e56195bace",
-      "afterSha256": "ed399b6beeb6c0718b5d2c6cfc2856b62f3e3cfe92819bd419a2d95636a23f0f",
+      "afterSha256": "260a89d7bfc4c2b3cb800889dfe2aff60e1de33a1b3f900c8c63e1c62e0346f4",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -611,6 +659,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "studio/design.css?v=719c919c61e0",
+          "after": "studio/design.css?v=8323cecc1691"
         }
       ],
       "copyEdits": [
@@ -659,7 +711,7 @@
     {
       "file": "karpittisztitas-gyor.html",
       "beforeSha256": "e1bbad9cfdf8f7a11f9c16db7651cf6fb767414391de47588428e385fd398128",
-      "afterSha256": "f5e586762c3bfb354f438b4d0d5e3746d7b43f91b6b2f31e45502c13692c6c9a",
+      "afterSha256": "3cc039ae7560fb188039156f0350a0cca0fb774b4d304d10ce74f9007a76d25d",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -668,6 +720,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "studio/design.css?v=719c919c61e0",
+          "after": "studio/design.css?v=8323cecc1691"
         }
       ],
       "copyEdits": [
@@ -716,7 +772,7 @@
     {
       "file": "karpittisztitas-heviz.html",
       "beforeSha256": "101c0550eac40a8c4d5907df374eb9cf47ae417c7c6e6d200866c964d296f3cc",
-      "afterSha256": "844024c1136dc935d910c5de609d16e2f95386a995a6cd58955fee9abaad2047",
+      "afterSha256": "0266697050de2b815b8f06a792d2784b9c49d1af68ad891c87c3d044313025e6",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -725,6 +781,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "studio/design.css?v=719c919c61e0",
+          "after": "studio/design.css?v=8323cecc1691"
         }
       ],
       "copyEdits": [
@@ -773,7 +833,7 @@
     {
       "file": "karpittisztitas-keszthely.html",
       "beforeSha256": "9036df04af31b3ad7fbc27ea12b217fe87a5ceecd0195cdbe55b63c0439d5898",
-      "afterSha256": "11ae4d7358d58227adf06da30ca5ec9f83920b620902bbf987fa4b22128fdcde",
+      "afterSha256": "119bcdfe8925eacf4b6e39366f2b48ab23723f1f1d215e60af7ae528c1beb79b",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -782,6 +842,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "studio/design.css?v=719c919c61e0",
+          "after": "studio/design.css?v=8323cecc1691"
         }
       ],
       "copyEdits": [
@@ -830,7 +894,7 @@
     {
       "file": "karpittisztitas-komarom.html",
       "beforeSha256": "0c388bc34eb57e54fb7d06d03b419dcbb2600d1e13f2d3b27618340de90988c5",
-      "afterSha256": "3634b5ea373d7baeaab71a808cc75fd586d89d2ac06606ee123dcd6061615ae1",
+      "afterSha256": "b923374b686fc649722d5a0dbd33bfe3c1c8e37df9438fc98af6d27e6e5f5511",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -839,6 +903,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "studio/design.css?v=719c919c61e0",
+          "after": "studio/design.css?v=8323cecc1691"
         }
       ],
       "copyEdits": [
@@ -887,7 +955,7 @@
     {
       "file": "karpittisztitas-mosonmagyarovar.html",
       "beforeSha256": "49a43a17e86eb90c1cae3875da87ac922cb9bdb98cc00383e8afdc384cbf135f",
-      "afterSha256": "b46d4a1a4ca1711ed279bfdd24dc388e04c2c20bf79d9ae1dc9136a27c2fc27b",
+      "afterSha256": "c5782ad12f8ae5a1f45080bac768d5abaa0a8102e620ac093bedb1365441b181",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -896,6 +964,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "studio/design.css?v=719c919c61e0",
+          "after": "studio/design.css?v=8323cecc1691"
         }
       ],
       "copyEdits": [
@@ -944,7 +1016,7 @@
     {
       "file": "karpittisztitas-papa.html",
       "beforeSha256": "b5a81d0ee06aae62e9df2dcfa2925c969c7db02927dba81cd4ff4d7ffd9fae11",
-      "afterSha256": "141bbf2b87d1d2ecbc078a92148cc760a6d519407fec7247afcb420eca94d693",
+      "afterSha256": "35a90d45266db26fb341d233557104ac71b5c1f88093a9e64930cc4f4fb65f71",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -953,6 +1025,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "studio/design.css?v=719c919c61e0",
+          "after": "studio/design.css?v=8323cecc1691"
         }
       ],
       "copyEdits": [
@@ -1001,7 +1077,7 @@
     {
       "file": "karpittisztitas-revfulop.html",
       "beforeSha256": "d9abd525df42a575a20cd2dae2d31e2393190a344cc8bafb5b368843dfb48fcf",
-      "afterSha256": "5efaa0a5b0dffbbb57811342169481ce0500b463389eeef6ed858aa2db5c89b0",
+      "afterSha256": "1e5f9b817c21db767582698665b2e61ef3bdc7c3402cbb34c316cc11e4ae7295",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -1010,6 +1086,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "studio/design.css?v=719c919c61e0",
+          "after": "studio/design.css?v=8323cecc1691"
         }
       ],
       "copyEdits": [
@@ -1058,7 +1138,7 @@
     {
       "file": "karpittisztitas-siofok.html",
       "beforeSha256": "3aa8e19e63e1c06ccf28f312728498d854b60db20880c3f55b635c69f045d3a7",
-      "afterSha256": "d2bcb1b05f5f0a2ce79dfdb89225f979bbb72c61d80cb72d91f6f4c236573673",
+      "afterSha256": "68f13d5933d1fe12b110bae6576db09c9704dd80cd18217e5bd0f867a4d55e09",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -1067,6 +1147,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "studio/design.css?v=719c919c61e0",
+          "after": "studio/design.css?v=8323cecc1691"
         }
       ],
       "copyEdits": [
@@ -1115,7 +1199,7 @@
     {
       "file": "karpittisztitas-sopron.html",
       "beforeSha256": "ccf0834136463a5d9b39da7d8c91a00b6249eaf8ac436bd67ea22b9d30e1f3f4",
-      "afterSha256": "376fe714878e8e8bfe6f41e449df389169b9c1ccd49bac1f6c981738d9050cb3",
+      "afterSha256": "dbff3e0e0f9b5d5d75743ef7b0da471276e695b429a9f12983fa4fed557780d9",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -1124,6 +1208,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "studio/design.css?v=719c919c61e0",
+          "after": "studio/design.css?v=8323cecc1691"
         }
       ],
       "copyEdits": [
@@ -1172,7 +1260,7 @@
     {
       "file": "karpittisztitas-szombathely.html",
       "beforeSha256": "a8adad8cd6b9359652fcddba0410333b76fb05605644cd4bf668ed89ff20ea3f",
-      "afterSha256": "c445af3fe1b9a616630fbe885b374857b851fc8fff41dc710eb393ca05d126f6",
+      "afterSha256": "338d60a58738b1526aa2d917d83aeeaf70099e5612969cc33bcd80aa1cb04770",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -1181,6 +1269,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "studio/design.css?v=719c919c61e0",
+          "after": "studio/design.css?v=8323cecc1691"
         }
       ],
       "copyEdits": [
@@ -1229,7 +1321,7 @@
     {
       "file": "karpittisztitas-tapolca.html",
       "beforeSha256": "f97648c388c39e1158ab4d8bc094d6b14c04ba36118f462f8760262482fd3fbb",
-      "afterSha256": "2ad36399cea0d3b819b4c0c2cb8b599ced4fa7a1902298fd438d952c1c525be6",
+      "afterSha256": "85e931a66b1a6c399de48c44535cb415facb7bcb7f2df11cf9bad79d5aee9e6f",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -1238,6 +1330,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "studio/design.css?v=719c919c61e0",
+          "after": "studio/design.css?v=8323cecc1691"
         }
       ],
       "copyEdits": [
@@ -1286,7 +1382,7 @@
     {
       "file": "karpittisztitas-tata.html",
       "beforeSha256": "58a71bff6be12b910027378a09b027ef92d580359bb8ebf3b8c76ae7b4aba427",
-      "afterSha256": "3831ee7b12e00da0875b7f8ba077d403c6f9667e1b36df2e38abadf537487965",
+      "afterSha256": "a2231c258bdbb09e26bab63f80d3ebf8be7a519a34d7a82df6cd2b4a928f4f66",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -1295,6 +1391,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "studio/design.css?v=719c919c61e0",
+          "after": "studio/design.css?v=8323cecc1691"
         }
       ],
       "copyEdits": [
@@ -1343,7 +1443,7 @@
     {
       "file": "karpittisztitas-tatabanya.html",
       "beforeSha256": "97f783c43e9b8da0477ff0af7fabea33289cf6736e0be26cf9816b9f4d55c0e0",
-      "afterSha256": "cfe277879f856802f920e4e4ec941fa9607881dab845bd15ffe72c4e621618ca",
+      "afterSha256": "efe2991c050dc5735ad22429786ce36928464134754b89cfd7274d262c73b998",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -1352,6 +1452,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "studio/design.css?v=719c919c61e0",
+          "after": "studio/design.css?v=8323cecc1691"
         }
       ],
       "copyEdits": [
@@ -1400,7 +1504,7 @@
     {
       "file": "karpittisztitas-tihany.html",
       "beforeSha256": "d45909126dc55c20d2c317e5ece1dff3d0a983e1c47b040388f4d7d8d5e0998a",
-      "afterSha256": "15b398a8c543b563ba35554287a3c086c1c6e68e4c7b3c2a46ab4221c631799c",
+      "afterSha256": "2ab0ef5422b9483761a0acd778cf96b8db383a305fcc209b526baf550e7df7c4",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -1409,6 +1513,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "studio/design.css?v=719c919c61e0",
+          "after": "studio/design.css?v=8323cecc1691"
         }
       ],
       "copyEdits": [
@@ -1457,7 +1565,7 @@
     {
       "file": "karpittisztitas-veszprem.html",
       "beforeSha256": "67731f39153039fc528fb049fdc26933f0568ef39056f6c7666bf65a94bdfa69",
-      "afterSha256": "c334556d632892bf50f8e0193a842590a7113ccce9d7592f37ff4207d4f4a0fa",
+      "afterSha256": "90b410acf96ab077914ee8db3362e4428e8660f3a3dd0a622f1877b6e015dd78",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -1466,6 +1574,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "studio/design.css?v=719c919c61e0",
+          "after": "studio/design.css?v=8323cecc1691"
         }
       ],
       "copyEdits": [
@@ -1514,7 +1626,7 @@
     {
       "file": "karpittisztitas-zamardi.html",
       "beforeSha256": "3ca46dc86776d9d493ce1284f5d66565cdf42cf819aa9559a2c0dc4fa11cbecf",
-      "afterSha256": "6cc9a3d8999e46afee4740807c3194a4954ce26a7ff888913e93788ba501cc3e",
+      "afterSha256": "48258572d6b850bb0a7cb4d51c82d780072c21060ad64a0c320c26da88f37c99",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -1523,6 +1635,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "studio/design.css?v=719c919c61e0",
+          "after": "studio/design.css?v=8323cecc1691"
         }
       ],
       "copyEdits": [
@@ -1571,7 +1687,7 @@
     {
       "file": "karpittisztitas-kalocsa.html",
       "beforeSha256": "42996ac783345394b26fe1189cfa82b7d59518c4b1f4bf10304d5f424104fa04",
-      "afterSha256": "0315ce4a5d552881f0326bc978e7167739dad43f5a646e1d2f57b9495bcfa2a0",
+      "afterSha256": "bdf497892af66d67214c8443c3b4b1f0f816f8405e2714f4aa93bb621f1ab3f9",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -1580,6 +1696,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "mediterranean/design.css?v=a3c58c0eb270",
+          "after": "mediterranean/design.css?v=43ed00dd0005"
         }
       ],
       "copyEdits": [
@@ -1628,7 +1748,7 @@
     {
       "file": "karpittisztitas-baja.html",
       "beforeSha256": "c8e8fb1ebbff53789c0a4323174e8721ea2654ea92f57a23310a454f5888de84",
-      "afterSha256": "deecb18d5361450c1c2f42d624581db05475bfc9af5e410e93b83257d4160db4",
+      "afterSha256": "adab6d2bb85a13eb129db96cffcf7b4993e1cf8ae6d48200b5936ce1bcff3727",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -1637,6 +1757,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "mediterranean/design.css?v=a3c58c0eb270",
+          "after": "mediterranean/design.css?v=43ed00dd0005"
         }
       ],
       "copyEdits": [
@@ -1685,7 +1809,7 @@
     {
       "file": "karpittisztitas-kiskoros.html",
       "beforeSha256": "76e71a2e846a876b02958856bd32f4fc645662f1bde5b97d386ae4a432b2dea8",
-      "afterSha256": "24900b9984572efaa10f5c516396aa1c5dc0f8abb076fdfb81662f01d6174abf",
+      "afterSha256": "f524be921058af987376380dc63fa3b148c2cc01a36cd7c16225527a58fe626d",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -1694,6 +1818,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "mediterranean/design.css?v=a3c58c0eb270",
+          "after": "mediterranean/design.css?v=43ed00dd0005"
         }
       ],
       "copyEdits": [
@@ -1742,7 +1870,7 @@
     {
       "file": "karpittisztitas-szekszard.html",
       "beforeSha256": "9f4186d7f6a9619c8f73d46ec99128dc4ae23564fae11767d07b42ce87c0ff5c",
-      "afterSha256": "8c671c0e4518bd561419d9b2949f1db3968b2ea5962079be504d6d7d4ebf66f9",
+      "afterSha256": "4d45909fd9b1058be8053df592e68386f96292ae5553a9639093345bbae05f6c",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -1751,6 +1879,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "mediterranean/design.css?v=a3c58c0eb270",
+          "after": "mediterranean/design.css?v=43ed00dd0005"
         }
       ],
       "copyEdits": [
@@ -1799,7 +1931,7 @@
     {
       "file": "karpittisztitas-paks.html",
       "beforeSha256": "b7cf5667a3e227a8efa84011363d1d19533e7f7ff503d65e514cfbdf2389afb9",
-      "afterSha256": "81f39107078d43da6a2731ad7f486f0c7410cc94c3bd8a536c504e5f7ee6b6c6",
+      "afterSha256": "0e894dff730e8a947ae55fe9a3cda9d8b3ca508eee610f83ac703e57f1944bdb",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -1808,6 +1940,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "mediterranean/design.css?v=a3c58c0eb270",
+          "after": "mediterranean/design.css?v=43ed00dd0005"
         }
       ],
       "copyEdits": [
@@ -1856,7 +1992,7 @@
     {
       "file": "karpittisztitas-solt.html",
       "beforeSha256": "adca499386c80849a021e648ea450e884110bdcd85e2a61540489fb8401e7c53",
-      "afterSha256": "cb1204105f14ddf66017ccf56a171bf8809161ecee90c278400baafb1541b1cd",
+      "afterSha256": "05d855b5cdb92f354ff835d82bcd5ed934b5d54b7f4319ac9e7e062d5b904efe",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -1865,6 +2001,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "mediterranean/design.css?v=a3c58c0eb270",
+          "after": "mediterranean/design.css?v=43ed00dd0005"
         }
       ],
       "copyEdits": [
@@ -1913,7 +2053,7 @@
     {
       "file": "karpittisztitas-dunafoldvar.html",
       "beforeSha256": "f65f9995ce76d66fe70450af5da8e2e83f178e0d3101d2b871e6d2970233afee",
-      "afterSha256": "f8a7564a73d283acbb849f157526581170aa7d0cf7df7c0b953aa0fb41212995",
+      "afterSha256": "c735ae738ee5dc9d7555ad504dc0eced1bd8554d7ec5b2a7b3ac3e98b0f77b21",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -1922,6 +2062,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "mediterranean/design.css?v=a3c58c0eb270",
+          "after": "mediterranean/design.css?v=43ed00dd0005"
         }
       ],
       "copyEdits": [
@@ -1970,7 +2114,7 @@
     {
       "file": "karpittisztitas-matractisztitas.html",
       "beforeSha256": "1ffced1a505f8acc492d69211f54d7a89c3ecce924f40dcad4371940727fb508",
-      "afterSha256": "bb467185491ed3fa486ced2850bef158f2ce88e7e43950211d64a448b15eb2b0",
+      "afterSha256": "45738cc5676767103f27b494e881421dad24e2661884cd97b9828380efb99a12",
       "edits": [
         {
           "before": "material-recognition/app.js?v=6a51333ef5d7",
@@ -1979,6 +2123,10 @@
         {
           "before": "material-recognition/design.css?v=22b93360d348",
           "after": "material-recognition/design.css?v=ca8698ac2949"
+        },
+        {
+          "before": "mediterranean/design.css?v=a3c58c0eb270",
+          "after": "mediterranean/design.css?v=43ed00dd0005"
         }
       ],
       "copyEdits": [
@@ -2023,6 +2171,90 @@
           "after": "ANDANTE NovaLife-kockázatszűrés"
         }
       ]
+    },
+    {
+      "file": "matractisztitas-baja.html",
+      "beforeSha256": "5c24359e93e5c5b5ce091b6baa0347c80e402680df713d675ee7e11ab2e9639f",
+      "afterSha256": "027be85b97f45e2d64b478e5ec2d10760d758ac09eb5ac248b25beddbca1a177",
+      "edits": [
+        {
+          "before": "mediterranean/design.css?v=a3c58c0eb270",
+          "after": "mediterranean/design.css?v=43ed00dd0005"
+        }
+      ],
+      "copyEdits": []
+    },
+    {
+      "file": "matractisztitas-dunafoldvar.html",
+      "beforeSha256": "4fcb836104a1e60ed542d2eeeda3eaa3e60d1d30c7c9f54a6fde90e21854263d",
+      "afterSha256": "8e59e754ef9490d1d5400f9fac0be426f798bb0820c0e28205b1d5a459fa8a00",
+      "edits": [
+        {
+          "before": "mediterranean/design.css?v=a3c58c0eb270",
+          "after": "mediterranean/design.css?v=43ed00dd0005"
+        }
+      ],
+      "copyEdits": []
+    },
+    {
+      "file": "matractisztitas-kalocsa.html",
+      "beforeSha256": "d178b012dd783fc125f60994710e6740359d9166fc67a099d917ef225bef1919",
+      "afterSha256": "af52941b4968988add3900f5fc6ca7807c2c3532081a8cef1eb255511d5eb605",
+      "edits": [
+        {
+          "before": "mediterranean/design.css?v=a3c58c0eb270",
+          "after": "mediterranean/design.css?v=43ed00dd0005"
+        }
+      ],
+      "copyEdits": []
+    },
+    {
+      "file": "matractisztitas-kiskoros.html",
+      "beforeSha256": "ba1467cc77f05a149e2fae04f506ba9418690a8dadcf64a844235f7cd1c1b719",
+      "afterSha256": "e34b3518256e557a77ac353c6c651fcb1e54464f27dacc1ac4574d63c8806f1e",
+      "edits": [
+        {
+          "before": "mediterranean/design.css?v=a3c58c0eb270",
+          "after": "mediterranean/design.css?v=43ed00dd0005"
+        }
+      ],
+      "copyEdits": []
+    },
+    {
+      "file": "matractisztitas-paks.html",
+      "beforeSha256": "3acd10586144aaf8b976fb4f085be2baa4259f2f06571e87b9a8628e42242a27",
+      "afterSha256": "3b6e571234740659fddf9def99b7d407842e5703dcf6d9cf66b8237bed3e85b9",
+      "edits": [
+        {
+          "before": "mediterranean/design.css?v=a3c58c0eb270",
+          "after": "mediterranean/design.css?v=43ed00dd0005"
+        }
+      ],
+      "copyEdits": []
+    },
+    {
+      "file": "matractisztitas-solt.html",
+      "beforeSha256": "80de79eca9453fbe837d214200266abdda59d94358cd2d01322ebcc8c93bc1a6",
+      "afterSha256": "5b8462ea57655e7bf37b5798a3bd41a78657fb1e870462e8e2275c36f7512a1d",
+      "edits": [
+        {
+          "before": "mediterranean/design.css?v=a3c58c0eb270",
+          "after": "mediterranean/design.css?v=43ed00dd0005"
+        }
+      ],
+      "copyEdits": []
+    },
+    {
+      "file": "matractisztitas-szekszard.html",
+      "beforeSha256": "a1760ba3cffffbf8d2d17a67531cc13c0182b30c9b95c23fd16c51de42055b69",
+      "afterSha256": "116e52383c922c51e5e6d2f07b8c1b433a99378fbe19853b5f60aba284022d1b",
+      "edits": [
+        {
+          "before": "mediterranean/design.css?v=a3c58c0eb270",
+          "after": "mediterranean/design.css?v=43ed00dd0005"
+        }
+      ],
+      "copyEdits": []
     }
   ],
   "sources": [
@@ -2037,6 +2269,10 @@
     {
       "path": "demo/material-review/home-mobile.css",
       "sha256": "ece28ad10003a6ef2b5e7a087a968d8f64d30785769dc27bdb0cf93fd552044b"
+    },
+    {
+      "path": "demo/material-review/process-spacing.css",
+      "sha256": "4fb1eed15ddc472d8c5f1d751bee557f33d56fff54318765626b652223456d31"
     }
   ]
 }
