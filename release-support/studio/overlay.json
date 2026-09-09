@@ -11,170 +11,170 @@
       "file": "karpittisztitas-badacsony.html",
       "baseline": "release-support/studio/baseline/karpittisztitas-badacsony.html",
       "beforeSha256": "74fd977788aea190ce3571f2625b4088fda4185c9971df74de9f7a7fa001f611",
-      "afterSha256": "a46ede9f09341550387b659680d796a1f46a4c9b47de245902955163299fbe9d"
+      "afterSha256": "785632a04fdca91bcc760a09213f1ed45d7453a8339568b122e9f539cd0c98ba"
     },
     {
       "file": "karpittisztitas-balatonalmadi.html",
       "baseline": "release-support/studio/baseline/karpittisztitas-balatonalmadi.html",
       "beforeSha256": "59eb7ae4e85b48ee38c688d7d377a3001ad2c097eba4784c53214ca7f9f5934f",
-      "afterSha256": "7b1c5ae5648168964eee332b4bca70c067ec8d304a7a6ebf16b46e2d88ac3d7d"
+      "afterSha256": "3f50877b7ad53ee79ed396dc9aad9605d02824557d733cc190e63f1bbfc52bce"
     },
     {
       "file": "karpittisztitas-balatonboglar.html",
       "baseline": "release-support/studio/baseline/karpittisztitas-balatonboglar.html",
       "beforeSha256": "8cd0bbd87ea1afd5200ab890ceef3b1d47ce8ebe297ee4e89c14b3ac7102618d",
-      "afterSha256": "130c36d1e105573018f61a8d7d310e4d2c714fe8d2254ef86d305f7f0f82b2fa"
+      "afterSha256": "d93ad00e49c2e718d59fe0a2f130f341ed59b1dae47d67a6788d8dbbb19a685e"
     },
     {
       "file": "karpittisztitas-balatonfoldvar.html",
       "baseline": "release-support/studio/baseline/karpittisztitas-balatonfoldvar.html",
       "beforeSha256": "d500826aab54ca9b4ebc615499158f5e938db7705f85453577335195dc95cdc9",
-      "afterSha256": "c94f5b458ed72b99fa703b4ee623ffab4749de264cba2f976d00498e460a6911"
+      "afterSha256": "f43e7308e60122fe739251fc54c0475e68098bfbcda61638b39e1eb241488748"
     },
     {
       "file": "karpittisztitas-balatonfured.html",
       "baseline": "release-support/studio/baseline/karpittisztitas-balatonfured.html",
       "beforeSha256": "9daaaca7fe3ae215f59b27d7477c7f1dca8c4725cfd71b012c98d8b51a1c2f79",
-      "afterSha256": "60dd0a96fbefac29ac99b3f829cddc16f3879cc9722aaa04da27190c76265f4b"
+      "afterSha256": "e48cd5abbf4f9a14295069c8cab4365b10b471ef4beaa16f86518b6bc55f5ec2"
     },
     {
       "file": "karpittisztitas-balatonfuzfo.html",
       "baseline": "release-support/studio/baseline/karpittisztitas-balatonfuzfo.html",
       "beforeSha256": "945cc25e76b75fdfc5ae891ef7c3f7b61522792c02478239aa3839961e6dbe2c",
-      "afterSha256": "8552e1b44e56644a9975a2d3c92f0fba612d217e119c00b131454db6f7fe92cc"
+      "afterSha256": "1df49ef1480e7f73415a8efd7b4a726e84787fdf5e67a91d540d43c99b9f4c5c"
     },
     {
       "file": "karpittisztitas-balatonkenese.html",
       "baseline": "release-support/studio/baseline/karpittisztitas-balatonkenese.html",
       "beforeSha256": "9149ceac1d602799a2aa7b585f201059c871b1f6eb297ab1a7568e884b089b1c",
-      "afterSha256": "0626de9febc104f08d5d0196ad4dedee0bb19e0c6346eb4478edda968ed9d795"
+      "afterSha256": "eb2d62b71a0907d5b427df273e870042cc58d7c709d1da07fc817205838ba0f5"
     },
     {
       "file": "karpittisztitas-balatonlelle.html",
       "baseline": "release-support/studio/baseline/karpittisztitas-balatonlelle.html",
       "beforeSha256": "5bc275bac3c8d9349eb6bb745e470745a61ed61bd3e71a0b881c6cad23162d38",
-      "afterSha256": "bb4692a51327ddbe61e422a8e28c5bb553200b8caf2424c480a15b1fe7f7fb1a"
+      "afterSha256": "c01e552ef72e66a3afe40a8bd304a02567647a9e3eeadfdf892d668af1117ad9"
     },
     {
       "file": "karpittisztitas-balatonszemes.html",
       "baseline": "release-support/studio/baseline/karpittisztitas-balatonszemes.html",
       "beforeSha256": "58ef79299319029ac102140cfc44c6d6f4bedb2eb29f4382e4ec255900887e83",
-      "afterSha256": "c85880a9e2593b9deaf621268cd3d5f035d6bbb70f6c7b33bd187d72441f6970"
+      "afterSha256": "5b990b9646adb015cbfd600060621f8e96fa3c91366e9aa4eecd9735e45c66d6"
     },
     {
       "file": "karpittisztitas-fonyod.html",
       "baseline": "release-support/studio/baseline/karpittisztitas-fonyod.html",
       "beforeSha256": "64b977ff0379dfdee9a13b96af8bcfefb357b5ffe0b02c7f1ba8fed82c59a144",
-      "afterSha256": "d20ab9583abd3220e9be6b20965b06c2eab10279d829cfc4633945919cd4f44c"
+      "afterSha256": "301f07a07bc831aa4f97bfe3a683878505b50486c8a9ee9e0290e5e56195bace"
     },
     {
       "file": "karpittisztitas-gyor.html",
       "baseline": "release-support/studio/baseline/karpittisztitas-gyor.html",
       "beforeSha256": "cae7c0aeb29b7388ab9b3c45b6b521e7b97712e0917f2fd64b8cd03d446fc7ac",
-      "afterSha256": "2244a73cd39b8feeb9f8ae071a41c5e58fa84239dc03638b6aa68f1f7c42c465"
+      "afterSha256": "e1bbad9cfdf8f7a11f9c16db7651cf6fb767414391de47588428e385fd398128"
     },
     {
       "file": "karpittisztitas-heviz.html",
       "baseline": "release-support/studio/baseline/karpittisztitas-heviz.html",
       "beforeSha256": "5b196b9c65f88910e09e07f4b2e300ba35e773e905db8dac1cb67015506e12a9",
-      "afterSha256": "3e7e7c955165917692cce4c00e241bc0b9cdaaf5765bb0b559166ba341b5c1a3"
+      "afterSha256": "101c0550eac40a8c4d5907df374eb9cf47ae417c7c6e6d200866c964d296f3cc"
     },
     {
       "file": "karpittisztitas-keszthely.html",
       "baseline": "release-support/studio/baseline/karpittisztitas-keszthely.html",
       "beforeSha256": "4253abbbd10c17388a3c7451c6348a236e457ea60a4a8cff3a6a480d2c0609be",
-      "afterSha256": "841ff2c3c2a912301b8d9907b3ed3b549bd8f49a4e50f74e3fb428f1ddde2ec8"
+      "afterSha256": "9036df04af31b3ad7fbc27ea12b217fe87a5ceecd0195cdbe55b63c0439d5898"
     },
     {
       "file": "karpittisztitas-komarom.html",
       "baseline": "release-support/studio/baseline/karpittisztitas-komarom.html",
       "beforeSha256": "bfbbe8aa8abdf9cc9d93a8ca37251d1204302f64e7e9d5bbe26c152b8b55abe8",
-      "afterSha256": "a649cb434288c7d56b00c43bb1465e88c6b877268ec195b80d87bee31ff3a50a"
+      "afterSha256": "0c388bc34eb57e54fb7d06d03b419dcbb2600d1e13f2d3b27618340de90988c5"
     },
     {
       "file": "karpittisztitas-mosonmagyarovar.html",
       "baseline": "release-support/studio/baseline/karpittisztitas-mosonmagyarovar.html",
       "beforeSha256": "ce07e62f3cbda23b45f12b7684e93d323c41f7f85a93c520fe9a2411cdd1ba8a",
-      "afterSha256": "eab48e772830ddafc35be9a78135399c58a8848b606fe74ccfe5f0019de30bcb"
+      "afterSha256": "49a43a17e86eb90c1cae3875da87ac922cb9bdb98cc00383e8afdc384cbf135f"
     },
     {
       "file": "karpittisztitas-papa.html",
       "baseline": "release-support/studio/baseline/karpittisztitas-papa.html",
       "beforeSha256": "0a82541b159a4ba9dde399bd8fe9df3331cda9a6c126b0badb9230273f488178",
-      "afterSha256": "00f6b16f1d5458a09571ad4a559b029e1037ae711545013a6e6f05ba88059baa"
+      "afterSha256": "b5a81d0ee06aae62e9df2dcfa2925c969c7db02927dba81cd4ff4d7ffd9fae11"
     },
     {
       "file": "karpittisztitas-revfulop.html",
       "baseline": "release-support/studio/baseline/karpittisztitas-revfulop.html",
       "beforeSha256": "42e13da133b3039eabbc1d47a7df59611a11278944a142d3ac303172eb14001c",
-      "afterSha256": "91336aa719f469a85818f2115ffb520d74001b5a45a0f5999246b74f80c7f049"
+      "afterSha256": "d9abd525df42a575a20cd2dae2d31e2393190a344cc8bafb5b368843dfb48fcf"
     },
     {
       "file": "karpittisztitas-siofok.html",
       "baseline": "release-support/studio/baseline/karpittisztitas-siofok.html",
       "beforeSha256": "793836c60dde6836aa81e1a51ab678b2c00ecd5560166ff59306fe047eeffa3b",
-      "afterSha256": "02c945b24ff0710e12947060ccdb2ef3aa91941cd6ad7a3ca684da35f49ed2fd"
+      "afterSha256": "3aa8e19e63e1c06ccf28f312728498d854b60db20880c3f55b635c69f045d3a7"
     },
     {
       "file": "karpittisztitas-sopron.html",
       "baseline": "release-support/studio/baseline/karpittisztitas-sopron.html",
       "beforeSha256": "c1ab4d5ebdd18c8645a9e688a6ec2ac5bf2b5483c6fc97ba3d9142801e0d7720",
-      "afterSha256": "84df36ddd90adf316e74d0cc214195a3f701e0da739aa2453ca46cbbe70bf284"
+      "afterSha256": "ccf0834136463a5d9b39da7d8c91a00b6249eaf8ac436bd67ea22b9d30e1f3f4"
     },
     {
       "file": "karpittisztitas-szombathely.html",
       "baseline": "release-support/studio/baseline/karpittisztitas-szombathely.html",
       "beforeSha256": "38d4082b00b633254dae78f2b4d9b1726b2b81cbf00ccb18c86387a0bac697a7",
-      "afterSha256": "8746ffae75afe9ba1106445d6567113aede3688224f3ab9d66b18a41d50737d8"
+      "afterSha256": "a8adad8cd6b9359652fcddba0410333b76fb05605644cd4bf668ed89ff20ea3f"
     },
     {
       "file": "karpittisztitas-tapolca.html",
       "baseline": "release-support/studio/baseline/karpittisztitas-tapolca.html",
       "beforeSha256": "58a21f51fbdbd0fe6c4b8633ae848f18452e091a4149f5ef32df56acf88b6472",
-      "afterSha256": "0bf891af31862850e083a75e43661781f0465fed2ab3c2d63aa0be288ca22da3"
+      "afterSha256": "f97648c388c39e1158ab4d8bc094d6b14c04ba36118f462f8760262482fd3fbb"
     },
     {
       "file": "karpittisztitas-tata.html",
       "baseline": "release-support/studio/baseline/karpittisztitas-tata.html",
       "beforeSha256": "6f58756cea898548d319a5b348ae790f2069d61e3e751b8218e3f28707ab8064",
-      "afterSha256": "434a690d8298f61850b3467c8450fa2f867818ca2df9de7340db2ac992242d7b"
+      "afterSha256": "58a71bff6be12b910027378a09b027ef92d580359bb8ebf3b8c76ae7b4aba427"
     },
     {
       "file": "karpittisztitas-tatabanya.html",
       "baseline": "release-support/studio/baseline/karpittisztitas-tatabanya.html",
       "beforeSha256": "23193c6ca1f6371e2629826f43a2d756f75b948bc2fc1b42bce2894747af827e",
-      "afterSha256": "6ea7d8d9f78b939378231d675c34f2ee5ae908418c46407cc2c6e1bfbbf3d6f1"
+      "afterSha256": "97f783c43e9b8da0477ff0af7fabea33289cf6736e0be26cf9816b9f4d55c0e0"
     },
     {
       "file": "karpittisztitas-tihany.html",
       "baseline": "release-support/studio/baseline/karpittisztitas-tihany.html",
       "beforeSha256": "4bb4d91d8986d658ea02930bd62f8c9a6a58920c8b7a245bbfebb165b9d9fd6d",
-      "afterSha256": "7033d88fbdd243af8a9e4ad8041a045323e8774307ed638d1e70bf81326be68b"
+      "afterSha256": "d45909126dc55c20d2c317e5ece1dff3d0a983e1c47b040388f4d7d8d5e0998a"
     },
     {
       "file": "karpittisztitas-veszprem.html",
       "baseline": "release-support/studio/baseline/karpittisztitas-veszprem.html",
       "beforeSha256": "8818f7b555a078c9cce7bc537b59d09966d632cf4fa93bd806dcb7661eeff5a5",
-      "afterSha256": "253e9272e6e6c7cec1cf2685cfb456380d0b805d888b3ae2341db4b8e5556313"
+      "afterSha256": "67731f39153039fc528fb049fdc26933f0568ef39056f6c7666bf65a94bdfa69"
     },
     {
       "file": "karpittisztitas-zamardi.html",
       "baseline": "release-support/studio/baseline/karpittisztitas-zamardi.html",
       "beforeSha256": "62899b119774b5aad9e30081e5dca890f815c2002574949ccbc12b262409f896",
-      "afterSha256": "bd8344076f5324d656fd78e36cb14acdbcde0461a1f470902158185fb6980697"
+      "afterSha256": "3ca46dc86776d9d493ce1284f5d66565cdf42cf819aa9559a2c0dc4fa11cbecf"
     },
     {
       "file": "index.html",
       "baseline": "release-support/studio/baseline/index.html",
       "beforeSha256": "016e63dde5611d8c0e7d16a3b31f02e36616a2dbb979ff1d8e046e2b8ba4fc80",
-      "afterSha256": "1182d9cb22d7bbac9a85a2746d507062b7fbbbd202cb831a46879c4d843d148e"
+      "afterSha256": "3892caf0b463453003004a238c903b6338bf18bfeba61e6a4de29fb472dda3bd"
     }
   ],
   "dependencies": [
     {
       "file": "studio/design.css",
-      "sha256": "962dc9aa0cd2121b56662f9ab090886a66fc85693b5d1dd92855b58d27636371",
-      "bytes": 42324
+      "sha256": "719c919c61e0071614560fedc4e7f2454f654ef9a4b63924f0f76e19ed378c2e",
+      "bytes": 42897
     },
     {
       "file": "studio/handoff.css",
@@ -183,8 +183,8 @@
     },
     {
       "file": "studio/configurator.js",
-      "sha256": "0c1d67712ecb1b12b52845d598b7d12200ee6df784d0a406fb3a51b3bdd7e014",
-      "bytes": 18475
+      "sha256": "b361c692f392d57bfbf9750ba2b599649fc83b7e8ea435e2d3a50d2a9864a9c9",
+      "bytes": 19608
     },
     {
       "file": "studio/interactions.js",
@@ -259,7 +259,7 @@
     },
     {
       "path": "demo/studio/design.css",
-      "sha256": "962dc9aa0cd2121b56662f9ab090886a66fc85693b5d1dd92855b58d27636371"
+      "sha256": "719c919c61e0071614560fedc4e7f2454f654ef9a4b63924f0f76e19ed378c2e"
     },
     {
       "path": "demo/studio/handoff.css",
@@ -267,7 +267,7 @@
     },
     {
       "path": "demo/studio/configurator.js",
-      "sha256": "0c1d67712ecb1b12b52845d598b7d12200ee6df784d0a406fb3a51b3bdd7e014"
+      "sha256": "b361c692f392d57bfbf9750ba2b599649fc83b7e8ea435e2d3a50d2a9864a9c9"
     },
     {
       "path": "demo/studio/interactions.js",
