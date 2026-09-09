@@ -9,3 +9,4 @@
 # Immutable widget overlay provenance is also verified byte-for-byte in CI.
 /release-support/material-widget-overlay.json -text
 /release-support/material-widget-baseline/*.json -text
+/release-support/copy-tone/*.json -text

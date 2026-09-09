@@ -1,0 +1,177 @@
+[
+  {
+    "id": "3859f8dc92514d23",
+    "before": "<p class=\"summary-empty\">Válasszon szolgáltatást a kezdéshez...</p>",
+    "after": "<p class=\"summary-empty\">Válassz szolgáltatást a kezdéshez...</p>"
+  },
+  {
+    "id": "d6ec00fecd325b87",
+    "before": "<div class=\"large-order-header\"> <span class=\"large-order-icon\">🏢</span> <h3>Nagymegrendelés - Egyedi árajánlat</h3> </div> <div class=\"large-order-info\"> <p>Az Ön megrendelése meghaladja az egy napos kapacitást!</p> <p>Becsült munkaidő: <strong id=\"largeOrderDuration\">",
+    "after": "<div class=\"large-order-header\"> <span class=\"large-order-icon\">🏢</span> <h3>Nagymegrendelés - Egyedi árajánlat</h3> </div> <div class=\"large-order-info\"> <p>A megrendelésed meghaladja az egy napos kapacitást!</p> <p>Becsült munkaidő: <strong id=\"largeOrderDuration\">"
+  },
+  {
+    "id": "705cefe8237dd806",
+    "before": "Ft</strong></p> <p class=\"large-order-note\">📧 Kérjük küldje el az adatokat és <strong>24 órán belül</strong> személyre szabott árajánlatot küldünk a pontos időpontokkal és esetleges mennyiségi kedvezménnyel!</p> </div> <div class=\"large-order-form\"> <div class=\"form-row\"> <label for=\"largeOrderName\">Név / Cég *</label> <input type=\"text\" id=\"largeOrderName\" required placeholder=\"Minta Géza Alapítvány\"> </div> <div class=\"form-row\"> <label for=\"largeOrderEmail\">E-mail *</label> <input type=\"email\" id=\"largeOrderEmail\" required placeholder=\"info@example.com\"> </div> <div class=\"form-row\"> <label for=\"largeOrderPhone\">Telefon *</label> <input type=\"tel\" id=\"largeOrderPhone\" required placeholder=\"+36 30 123 4567\"> </div> <div class=\"form-row\"> <label for=\"largeOrderAddress\">Cím / Helyszín</label> <input type=\"text\" id=\"largeOrderAddress\" placeholder=\"2890 Tata, Példa utca 1.\"> </div> <div class=\"form-row\"> <label for=\"largeOrderMessage\">Megjegyzés (preferált időszak, stb.)</label> <textarea id=\"largeOrderMessage\" rows=\"3\" placeholder=\"Pl. Január második fele lenne ideális...\"></textarea> </div> <button type=\"button\" class=\"large-order-submit\" onclick=\"submitLargeOrder()\"> 📧 Árajánlat kérése </button> </div>",
+    "after": "Ft</strong></p> <p class=\"large-order-note\">📧 Kérjük küldd el az adataidat és <strong>24 órán belül</strong> személyre szabott árajánlatot küldünk a pontos időpontokkal és esetleges mennyiségi kedvezménnyel!</p> </div> <div class=\"large-order-form\"> <div class=\"form-row\"> <label for=\"largeOrderName\">Név / Cég *</label> <input type=\"text\" id=\"largeOrderName\" required placeholder=\"Minta Géza Alapítvány\"> </div> <div class=\"form-row\"> <label for=\"largeOrderEmail\">E-mail *</label> <input type=\"email\" id=\"largeOrderEmail\" required placeholder=\"info@example.com\"> </div> <div class=\"form-row\"> <label for=\"largeOrderPhone\">Telefon *</label> <input type=\"tel\" id=\"largeOrderPhone\" required placeholder=\"+36 30 123 4567\"> </div> <div class=\"form-row\"> <label for=\"largeOrderAddress\">Cím / Helyszín</label> <input type=\"text\" id=\"largeOrderAddress\" placeholder=\"2890 Tata, Példa utca 1.\"> </div> <div class=\"form-row\"> <label for=\"largeOrderMessage\">Megjegyzés (preferált időszak, stb.)</label> <textarea id=\"largeOrderMessage\" rows=\"3\" placeholder=\"Pl. Január második fele lenne ideális...\"></textarea> </div> <button type=\"button\" class=\"large-order-submit\" onclick=\"submitLargeOrder()\"> 📧 Árajánlat kérése </button> </div>"
+  },
+  {
+    "id": "5e512ed74fe4589a",
+    "before": "Kérjük állítsa össze a nagymegrendelés tételeit!",
+    "after": "Kérjük állítsd össze a nagymegrendelés tételeit!"
+  },
+  {
+    "id": "9c80fd47d1113b60",
+    "before": "Kérjük töltse ki a kötelező mezőket (Név, E-mail, Telefon)!",
+    "after": "Kérjük töltsd ki a kötelező mezőket (Név, E-mail, Telefon)!"
+  },
+  {
+    "id": "d60f7999c744fd82",
+    "before": "Kérjük adjon meg érvényes e-mail címet!",
+    "after": "Kérjük adj meg érvényes e-mail címet!"
+  },
+  {
+    "id": "8884d02b3cc79846",
+    "before": "Kérjük adjon meg érvényes magyar telefonszámot!",
+    "after": "Kérjük adj meg érvényes magyar telefonszámot!"
+  },
+  {
+    "id": "3881009883d1f82d",
+    "before": "Kérjük válasszon legalább egy tételt! Nagymegrendeléshez használja az árajánlatkérést.",
+    "after": "Kérjük válassz legalább egy tételt! Nagymegrendeléshez használd az árajánlatkérést."
+  },
+  {
+    "id": "ea57f1c721ea2cdc",
+    "before": "Kérjük válassza ki a régiót!",
+    "after": "Kérjük válaszd ki a régiót!"
+  },
+  {
+    "id": "dbffb741c032e19a",
+    "before": "Az időpontok nem tölthetők be. Hívjon: 06 70 240 8141",
+    "after": "Az időpontok nem tölthetők be. Hívj: 06 70 240 8141"
+  },
+  {
+    "id": "bc4ba0a171a8348e",
+    "before": "❌ Kérjük adja meg a nevét!",
+    "after": "❌ Kérjük add meg a neved!"
+  },
+  {
+    "id": "f5b42c0f07be64c8",
+    "before": "❌ Kérjük adja meg az e-mail címét!",
+    "after": "❌ Kérjük add meg az e-mail címed!"
+  },
+  {
+    "id": "bf918c36f692ac76",
+    "before": "❌ Kérjük adjon meg érvényes e-mail címet!",
+    "after": "❌ Kérjük adj meg érvényes e-mail címet!"
+  },
+  {
+    "id": "c494364496d05da6",
+    "before": "❌ Kérjük erősítse meg az e-mail címét!",
+    "after": "❌ Kérjük erősítsd meg az e-mail címed!"
+  },
+  {
+    "id": "a14220f6812cbbef",
+    "before": "❌ Az e-mail címek nem egyeznek! Kérjük ellenőrizze.",
+    "after": "❌ Az e-mail címek nem egyeznek! Kérjük ellenőrizd."
+  },
+  {
+    "id": "30e9f41d818de45b",
+    "before": "❌ Kérjük adja meg a telefonszámát!",
+    "after": "❌ Kérjük add meg a telefonszámod!"
+  },
+  {
+    "id": "9d4cc1b28d25f4b5",
+    "before": "❌ Kérjük adjon meg érvényes magyar telefonszámot! (pl. +36 30 123 4567 vagy 06 30 123 4567)",
+    "after": "❌ Kérjük adj meg érvényes magyar telefonszámot! (pl. +36 30 123 4567 vagy 06 30 123 4567)"
+  },
+  {
+    "id": "7545ef563a5b6e7a",
+    "before": "❌ Kérjük töltse ki a pontos címet (utca, irányítószám, város)!",
+    "after": "❌ Kérjük töltsd ki a pontos címet (utca, irányítószám, város)!"
+  },
+  {
+    "id": "002742d05cfc0a08",
+    "before": "❌ Kérjük válassza ki a kiszállási zónát!\\n\\nEz szükséges a pontos ár kiszámításához.",
+    "after": "❌ Kérjük válaszd ki a kiszállási zónát!\\n\\nEz szükséges a pontos ár kiszámításához."
+  },
+  {
+    "id": "bcf9e390e77f5cd9",
+    "before": "Ezen a napon nem érhető el a kiválasztott régió. Kérjük válasszon másik napot.",
+    "after": "Ezen a napon nem érhető el a kiválasztott régió. Kérjük válassz másik napot."
+  },
+  {
+    "id": "5900ea6262712b74",
+    "before": "Ez az időpont időközben betelt. Kérjük válasszon másik időpontot a frissített naptárból.",
+    "after": "Ez az időpont időközben betelt. Kérjük válassz másik időpontot a frissített naptárból."
+  },
+  {
+    "id": "70e9e2a418a82d15",
+    "before": "A kiválasztott dátum nem érvényes. Kérjük válasszon jövőbeli időpontot.",
+    "after": "A kiválasztott dátum nem érvényes. Kérjük válassz jövőbeli időpontot."
+  },
+  {
+    "id": "f9e71e5d39d9e6d6",
+    "before": "A kérés feldolgozása nem sikerült. Kérjük egyeztessen velünk a 06 70 240 8141 telefonszámon.",
+    "after": "A kérés feldolgozása nem sikerült. Kérjük egyeztess velünk a 06 70 240 8141 telefonszámon."
+  },
+  {
+    "id": "76019b85d9f7ce66",
+    "before": "ANDANTE vagy vízre érzékeny szövet esetén kérjük, még a kiszállás előtt egyeztessen: 06 70 240 8141.",
+    "after": "ANDANTE vagy vízre érzékeny szövet esetén kérjük, még a kiszállás előtt egyeztess: 06 70 240 8141."
+  },
+  {
+    "id": "83629764143e9ca4",
+    "before": "Nem tudtuk ellenőrizni, hogy megérkezett-e a kérés. Újraküldés előtt kérjük egyeztessen velünk: 06 70 240 8141.",
+    "after": "Nem tudtuk ellenőrizni, hogy megérkezett-e a kérés. Újraküldés előtt kérjük egyeztess velünk: 06 70 240 8141."
+  },
+  {
+    "id": "d42a7b8fec32a871",
+    "before": "A szabad időpontok jelenleg nem tölthetők be. Próbálja újra, vagy hívjon minket: 06 70 240 8141.",
+    "after": "A szabad időpontok jelenleg nem tölthetők be. Próbáld újra, vagy hívj minket: 06 70 240 8141."
+  },
+  {
+    "id": "aef51ada45796515",
+    "before": "Kérjük várja meg a szabad időpontok betöltését.",
+    "after": "Kérjük várd meg a szabad időpontok betöltését."
+  },
+  {
+    "id": "61dd5a92ca697d8b",
+    "before": "Kérjük válasszon szabad dátumot és időpontot a naptárból.",
+    "after": "Kérjük válassz szabad dátumot és időpontot a naptárból."
+  },
+  {
+    "id": "422449c16f5e0cdb",
+    "before": "Kérjük fogadja el az érkezési idő ±30 perces rugalmasságát.",
+    "after": "Kérjük fogadd el az érkezési idő ±30 perces rugalmasságát."
+  },
+  {
+    "id": "e4125fd06cc7210e",
+    "before": "Az időpont már nem érvényes. Kérjük válasszon újra a naptárból.",
+    "after": "Az időpont már nem érvényes. Kérjük válassz újra a naptárból."
+  },
+  {
+    "id": "0c6d013269e2cb4d",
+    "before": "<p class=\"demo-date-confirmation\" role=\"status\">Kérjük először válassza ki a helyszínt és a tételeket.</p>",
+    "after": "<p class=\"demo-date-confirmation\" role=\"status\">Kérjük először válaszd ki a helyszínt és a tételeket.</p>"
+  },
+  {
+    "id": "4096d811df295645",
+    "before": "· Válasszon időpontot:</p><div class=\"demo-slots live-slots\" role=\"group\" aria-label=\"Szabad időpontok\">",
+    "after": "· Válassz időpontot:</p><div class=\"demo-slots live-slots\" role=\"group\" aria-label=\"Szabad időpontok\">"
+  },
+  {
+    "id": "8e79a9ff1792bcba",
+    "before": "<div class=\"mega-section-label\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg> Válasszon várost</div>",
+    "after": "<div class=\"mega-section-label\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg> Válassz várost</div>"
+  },
+  {
+    "id": "bb078f7ece2d108f",
+    "before": "<p class=\"reviews-unavailable\">A Google-vélemények jelenleg nem tölthetők be. Kérjük, próbálja újra később.</p>",
+    "after": "<p class=\"reviews-unavailable\">A Google-vélemények jelenleg nem tölthetők be. Kérjük, próbáld újra később.</p>"
+  },
+  {
+    "id": "cd3c88580a9d88dc",
+    "before": "Válasszon régiót",
+    "after": "Válassz régiót"
+  }
+]

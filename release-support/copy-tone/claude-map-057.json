@@ -1,0 +1,22 @@
+[
+  {
+    "id": "418eb9b05fbf7526",
+    "before": "❓ Milyen típusú takarítást vállalnak Hévízen?",
+    "after": "❓ Milyen típusú takarítást vállaltok Hévízen?"
+  },
+  {
+    "id": "957038500e4b9c87",
+    "before": "❓ Vállalnak napi rendszeres irodatakarítást Hévízen?",
+    "after": "❓ Vállaltok napi rendszeres irodatakarítást Hévízen?"
+  },
+  {
+    "id": "573ecd55100d93fa",
+    "before": "❓ Milyen típusú takarítást vállalnak Keszthelyen?",
+    "after": "❓ Milyen típusú takarítást vállaltok Keszthelyen?"
+  },
+  {
+    "id": "8a14219e13de5daf",
+    "before": "❓ Vállalnak napi rendszeres irodatakarítást Keszthelyen?",
+    "after": "❓ Vállaltok napi rendszeres irodatakarítást Keszthelyen?"
+  }
+]

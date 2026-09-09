@@ -12,6 +12,8 @@ on:
       - 'release-support/verify-widget-overlay.py'
       - 'release-support/material-widget-overlay.json'
       - 'release-support/material-widget-baseline/**'
+      - 'release-support/verify-copy-overlay.py'
+      - 'release-support/copy-tone/**'
       - '.github/workflows/deploy-pages.yml'
       - '.gitattributes'
 

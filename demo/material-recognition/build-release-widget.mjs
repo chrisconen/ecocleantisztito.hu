@@ -12,6 +12,7 @@ const sha=data=>crypto.createHash('sha256').update(data).digest('hex');
 const write=process.argv.includes('--write');
 const support=path.join(workspace,'release-support'),manifestPath=path.join(support,'release-manifest.json');
 const currentManifest=JSON.parse(fs.readFileSync(manifestPath,'utf8'));
+if(currentManifest.copyOverlay)throw Error('A reviewed copy overlay is active. Rebase the copy layer explicitly before rebuilding the widget; do not restore the old wording.');
 const baselineDir=path.join(support,'material-widget-baseline');
 const baselineManifestBytes=currentManifest.widgetOverlay?fs.readFileSync(path.join(baselineDir,'release-manifest.json')):fs.readFileSync(manifestPath);
 const baseline=JSON.parse(baselineManifestBytes);

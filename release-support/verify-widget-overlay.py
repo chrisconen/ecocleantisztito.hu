@@ -10,8 +10,9 @@ def strip_widget(data):
   if data.count(start)!=1 or data.count(end)!=1:raise ValueError('Missing or duplicate widget marker '+name)
   a=data.index(start);b=data.index(end,a);data=data[:a]+data[b+len(end):]
  return data
-def verify(manifest):
+def verify(manifest, reader=None):
  errors=[]
+ if reader is None:reader=lambda file:(ROOT/'release'/file).read_bytes()
  def check(ok,message):
   if not ok:errors.append(message)
  def load_bound(relative,digest):
@@ -35,7 +36,7 @@ def verify(manifest):
   deps={d['file']:d for d in overlay['dependencies']};check(len(deps)==len(overlay['dependencies'])==3 and set(deps)==allowed,'Widget asset scope changed')
   check(set(manifest['files'])==set(base['files'])|allowed,'Release file set exceeds widget scope')
   for file,record in base['files'].items():
-   data=(ROOT/'release'/file).read_bytes()
+   data=reader(file)
    if file in pages:
     page=pages[file];check(sha(strip_widget(data))==record['sha256']==page['originalSha256'],'Original HTML bytes changed: '+file)
     check(sha(data)==page['outputSha256']==manifest['files'][file]['sha256'],'Widget page hash changed: '+file)
@@ -51,7 +52,7 @@ def verify(manifest):
     doc=Scan();doc.feed(data.decode('utf-8-sig'));check(doc.ids.count('anyagfelismero')==1 and doc.targets==[page['next']] and page['next'][1:] in doc.ids,'Widget anchor missing or duplicated: '+file)
     check(doc.ctas==1 and doc.local_links>=1,'NovaLife promotion missing or duplicated: '+file)
    else:check(sha(data)==record['sha256'] and manifest['files'][file]==record,'Unrelated production file changed: '+file)
-  for file,dep in deps.items():check(sha((ROOT/'release'/file).read_bytes())==dep['sha256']==manifest['files'][file]['sha256'],'Widget dependency changed: '+file)
+  for file,dep in deps.items():check(sha(reader(file))==dep['sha256']==manifest['files'][file]['sha256'],'Widget dependency changed: '+file)
  except (OSError,ValueError,KeyError,TypeError) as exc:errors.append('Widget proof incomplete: '+str(exc))
  return errors
 if __name__=='__main__':

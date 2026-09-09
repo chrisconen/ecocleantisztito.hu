@@ -100,7 +100,7 @@ const BookingCalendar = {
             return true;
         } catch {
             if (request !== this.requestNumber) return false;
-            this.state.error = 'A szabad időpontok jelenleg nem tölthetők be. Próbálja újra, vagy hívjon minket: 06 70 240 8141.';
+            this.state.error = 'A szabad időpontok jelenleg nem tölthetők be. Próbáld újra, vagy hívj minket: 06 70 240 8141.';
             return false;
         } finally {
             clearTimeout(timeout);
@@ -200,10 +200,10 @@ const BookingCalendar = {
     },
     getValidationMessage() {
         if (this.state.error) return this.state.error;
-        if (this.state.isLoading) return 'Kérjük várja meg a szabad időpontok betöltését.';
-        if (!this.state.selectedDate || !this.state.selectedSlot) return 'Kérjük válasszon szabad dátumot és időpontot a naptárból.';
-        if (!this.state.selectedSlot.isFirstSlot && !this.state.flexibilityAccepted) return 'Kérjük fogadja el az érkezési idő ±30 perces rugalmasságát.';
-        return 'Az időpont már nem érvényes. Kérjük válasszon újra a naptárból.';
+        if (this.state.isLoading) return 'Kérjük várd meg a szabad időpontok betöltését.';
+        if (!this.state.selectedDate || !this.state.selectedSlot) return 'Kérjük válassz szabad dátumot és időpontot a naptárból.';
+        if (!this.state.selectedSlot.isFirstSlot && !this.state.flexibilityAccepted) return 'Kérjük fogadd el az érkezési idő ±30 perces rugalmasságát.';
+        return 'Az időpont már nem érvényes. Kérjük válassz újra a naptárból.';
     },
     render() {
         if (!this.container) return;
@@ -211,7 +211,7 @@ const BookingCalendar = {
         const active = document.activeElement;
         const focusedKey = this.container.contains(active) ? active.dataset?.calendarKey : null;
         if (!this.state.selectedCity || !this.state.requiredDuration) {
-            this.container.innerHTML = '<p class="demo-date-confirmation" role="status">Kérjük először válassza ki a helyszínt és a tételeket.</p>';
+            this.container.innerHTML = '<p class="demo-date-confirmation" role="status">Kérjük először válaszd ki a helyszínt és a tételeket.</p>';
         } else if (this.state.isLoading) {
             this.container.innerHTML = '<p class="demo-date-confirmation" role="status">Szabad időpontok betöltése…</p>';
         } else if (this.state.error) {
@@ -272,7 +272,7 @@ const BookingCalendar = {
             const label = slot.status === 'booked' ? 'Foglalt' : !fits ? 'Nincs elég idő' : slot.isFirstSlot ? 'Első időpont' : 'Érkezés ±30 perc';
             return `<button type="button" class="${isSelected ? 'selected' : ''}" data-calendar-action="slot" data-calendar-key="slot-${slot.startMinutes}" data-minutes="${slot.startMinutes}" ${fits ? '' : 'disabled'} aria-pressed="${isSelected}"><span>${slot.startTime}${slot.endTime ? `–${slot.endTime}` : ''}</span><small>${label}</small></button>`;
         }).join('');
-        let html = `<p class="demo-date-confirmation">${this.state.selectedDate} · Válasszon időpontot:</p><div class="demo-slots live-slots" role="group" aria-label="Szabad időpontok">${slots}</div>`;
+        let html = `<p class="demo-date-confirmation">${this.state.selectedDate} · Válassz időpontot:</p><div class="demo-slots live-slots" role="group" aria-label="Szabad időpontok">${slots}</div>`;
         if (selected) {
             if (!selected.isFirstSlot) html += `<div class="calendar-flexibility"><p>Az érkezési idő ±30 perccel eltérhet. Várható érkezés: ${this.calculateExpectedArrival(selected.startTime)}.</p><label><input type="checkbox" data-calendar-flexibility data-calendar-key="flexibility" ${this.state.flexibilityAccepted ? 'checked' : ''}> Megértettem és elfogadom a ±30 perc rugalmasságot.</label></div>`;
             html += `<button type="button" class="btn btn-primary calendar-confirm" data-calendar-action="confirm" data-calendar-key="confirm" ${this.isValid() ? '' : 'disabled'}>Időpont kiválasztása: ${selected.startTime}</button>`;

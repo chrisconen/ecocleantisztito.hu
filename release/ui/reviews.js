@@ -32,10 +32,10 @@
                         if ((b.rating || 0) !== (a.rating || 0)) return (b.rating || 0) - (a.rating || 0);
                         return String(b.time || "").localeCompare(String(a.time || ""));
                     });
-                if (!reviews.length) { mount.innerHTML = '<p class="reviews-unavailable">A Google-vélemények jelenleg nem tölthetők be. Kérjük, próbálja újra később.</p>'; return; }
+                if (!reviews.length) { mount.innerHTML = '<p class="reviews-unavailable">A Google-vélemények jelenleg nem tölthetők be. Kérjük, próbáld újra később.</p>'; return; }
                 render(root, mount, data, reviews);
             })
-            .catch(function () { mount.innerHTML = '<p class="reviews-unavailable">A Google-vélemények jelenleg nem tölthetők be. Kérjük, próbálja újra később.</p>'; });
+            .catch(function () { mount.innerHTML = '<p class="reviews-unavailable">A Google-vélemények jelenleg nem tölthetők be. Kérjük, próbáld újra később.</p>'; });
     }
 
     function render(root, mount, data, reviews) {

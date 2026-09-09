@@ -675,7 +675,7 @@ function updateSummary() {
     // Details
     const detailsEl = document.getElementById('summaryDetails');
     if (details.length === 0) {
-        detailsEl.innerHTML = '<p class="summary-empty">Válasszon szolgáltatást a kezdéshez...</p>';
+        detailsEl.innerHTML = '<p class="summary-empty">Válassz szolgáltatást a kezdéshez...</p>';
     } else {
         detailsEl.innerHTML = details.map(d => `
             <div class="summary-item ${d.isUpsell ? 'is-upsell' : ''} ${d.isDiscount ? 'is-discount' : ''} ${d.isTravel ? 'is-travel' : ''}">
@@ -755,41 +755,8 @@ function createLargeOrderPanel() {
     panel.id = 'largeOrderPanel';
     panel.className = 'large-order-panel';
     panel.innerHTML = `
-        <div class="large-order-header">
-            <span class="large-order-icon">🏢</span>
-            <h3>Nagymegrendelés - Egyedi árajánlat</h3>
-        </div>
-        <div class="large-order-info">
-            <p>Az Ön megrendelése meghaladja az egy napos kapacitást!</p>
-            <p>Becsült munkaidő: <strong id="largeOrderDuration">${formatDuration(State.totalDuration)}</strong></p>
-            <p>Becsült ár: <strong id="largeOrderPrice">${State.totalPrice.toLocaleString('hu-HU')} Ft</strong></p>
-            <p class="large-order-note">📧 Kérjük küldje el az adatokat és <strong>24 órán belül</strong> személyre szabott árajánlatot küldünk a pontos időpontokkal és esetleges mennyiségi kedvezménnyel!</p>
-        </div>
-        <div class="large-order-form">
-            <div class="form-row">
-                <label for="largeOrderName">Név / Cég *</label>
-                <input type="text" id="largeOrderName" required placeholder="Minta Géza Alapítvány">
-            </div>
-            <div class="form-row">
-                <label for="largeOrderEmail">E-mail *</label>
-                <input type="email" id="largeOrderEmail" required placeholder="info@example.com">
-            </div>
-            <div class="form-row">
-                <label for="largeOrderPhone">Telefon *</label>
-                <input type="tel" id="largeOrderPhone" required placeholder="+36 30 123 4567">
-            </div>
-            <div class="form-row">
-                <label for="largeOrderAddress">Cím / Helyszín</label>
-                <input type="text" id="largeOrderAddress" placeholder="2890 Tata, Példa utca 1.">
-            </div>
-            <div class="form-row">
-                <label for="largeOrderMessage">Megjegyzés (preferált időszak, stb.)</label>
-                <textarea id="largeOrderMessage" rows="3" placeholder="Pl. Január második fele lenne ideális..."></textarea>
-            </div>
-            <button type="button" class="large-order-submit" onclick="submitLargeOrder()">
-                📧 Árajánlat kérése
-            </button>
-        </div>
+        <div class="large-order-header"> <span class="large-order-icon">🏢</span> <h3>Nagymegrendelés - Egyedi árajánlat</h3> </div> <div class="large-order-info"> <p>A megrendelésed meghaladja az egy napos kapacitást!</p> <p>Becsült munkaidő: <strong id="largeOrderDuration">${formatDuration(State.totalDuration)}</strong></p>
+            <p>Becsült ár: <strong id="largeOrderPrice">${State.totalPrice.toLocaleString('hu-HU')} Ft</strong></p> <p class="large-order-note">📧 Kérjük küldd el az adataidat és <strong>24 órán belül</strong> személyre szabott árajánlatot küldünk a pontos időpontokkal és esetleges mennyiségi kedvezménnyel!</p> </div> <div class="large-order-form"> <div class="form-row"> <label for="largeOrderName">Név / Cég *</label> <input type="text" id="largeOrderName" required placeholder="Minta Géza Alapítvány"> </div> <div class="form-row"> <label for="largeOrderEmail">E-mail *</label> <input type="email" id="largeOrderEmail" required placeholder="info@example.com"> </div> <div class="form-row"> <label for="largeOrderPhone">Telefon *</label> <input type="tel" id="largeOrderPhone" required placeholder="+36 30 123 4567"> </div> <div class="form-row"> <label for="largeOrderAddress">Cím / Helyszín</label> <input type="text" id="largeOrderAddress" placeholder="2890 Tata, Példa utca 1."> </div> <div class="form-row"> <label for="largeOrderMessage">Megjegyzés (preferált időszak, stb.)</label> <textarea id="largeOrderMessage" rows="3" placeholder="Pl. Január második fele lenne ideális..."></textarea> </div> <button type="button" class="large-order-submit" onclick="submitLargeOrder()"> 📧 Árajánlat kérése </button> </div>
     `;
 
     // Beszúrjuk a calendar wrapper helyére
@@ -816,7 +783,7 @@ function formatDuration(minutes) {
 async function submitLargeOrder() {
     if (BookingTransport.pending || BookingTransport.largeOrderSent) return false;
     if (!State.isLargeOrder || !Object.values(State.selectedItems).some(item => item.count > 0)) {
-        alert('Kérjük állítsa össze a nagymegrendelés tételeit!');
+        alert('Kérjük állítsd össze a nagymegrendelés tételeit!');
         return false;
     }
     const name = document.getElementById('largeOrderName')?.value.trim();
@@ -827,19 +794,19 @@ async function submitLargeOrder() {
 
     // Validáció
     if (!name || !email || !phone) {
-        alert('Kérjük töltse ki a kötelező mezőket (Név, E-mail, Telefon)!');
+        alert('Kérjük töltsd ki a kötelező mezőket (Név, E-mail, Telefon)!');
         return;
     }
 
     // Email validáció
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        alert('Kérjük adjon meg érvényes e-mail címet!');
+        alert('Kérjük adj meg érvényes e-mail címet!');
         return;
     }
 
     // Apply the ordinary booking's Hungarian-phone validation to quote requests too.
     if (!/^(\+36|06)?[0-9]{9,10}$/.test(phone.replace(/[\s\-]/g, ''))) {
-        alert('Kérjük adjon meg érvényes magyar telefonszámot!');
+        alert('Kérjük adj meg érvényes magyar telefonszámot!');
         document.getElementById('largeOrderPhone').focus();
         return false;
     }
@@ -930,18 +897,18 @@ async function submitBooking(event) {
     event.preventDefault();
     if (BookingTransport.pending || BookingTransport.bookingSent) return false;
     if (!Object.values(State.selectedItems).some(item => item.count > 0) || State.isLargeOrder) {
-        alert('Kérjük válasszon legalább egy tételt! Nagymegrendeléshez használja az árajánlatkérést.');
+        alert('Kérjük válassz legalább egy tételt! Nagymegrendeléshez használd az árajánlatkérést.');
         return false;
     }
     if (!State.city) {
-        alert('Kérjük válassza ki a régiót!');
+        alert('Kérjük válaszd ki a régiót!');
         document.getElementById('citySelect').focus();
         return false;
     }
     if (typeof BookingCalendar === 'undefined' || !BookingCalendar.isValid() ||
         BookingCalendar.state.selectedCity !== State.city ||
         BookingCalendar.state.requiredDuration !== State.totalDuration) {
-        alert(typeof BookingCalendar === 'undefined' ? 'Az időpontok nem tölthetők be. Hívjon: 06 70 240 8141' : BookingCalendar.getValidationMessage());
+        alert(typeof BookingCalendar === 'undefined' ? 'Az időpontok nem tölthetők be. Hívj: 06 70 240 8141' : BookingCalendar.getValidationMessage());
         document.getElementById('bookingCalendar').scrollIntoView({ behavior: 'smooth', block: 'center' });
         return false;
     }
@@ -958,13 +925,13 @@ async function submitBooking(event) {
 
     // Validation: Required fields
     if (!name) {
-        alert('❌ Kérjük adja meg a nevét!');
+        alert('❌ Kérjük add meg a neved!');
         document.getElementById('nameInput').focus();
         return false;
     }
 
     if (!email) {
-        alert('❌ Kérjük adja meg az e-mail címét!');
+        alert('❌ Kérjük add meg az e-mail címed!');
         document.getElementById('emailInput').focus();
         return false;
     }
@@ -972,27 +939,27 @@ async function submitBooking(event) {
     // Validation: Email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-        alert('❌ Kérjük adjon meg érvényes e-mail címet!');
+        alert('❌ Kérjük adj meg érvényes e-mail címet!');
         document.getElementById('emailInput').focus();
         return false;
     }
 
     if (!emailConfirm) {
-        alert('❌ Kérjük erősítse meg az e-mail címét!');
+        alert('❌ Kérjük erősítsd meg az e-mail címed!');
         document.getElementById('emailConfirmInput').focus();
         return false;
     }
 
     // Validation: Email match
     if (email !== emailConfirm) {
-        alert('❌ Az e-mail címek nem egyeznek! Kérjük ellenőrizze.');
+        alert('❌ Az e-mail címek nem egyeznek! Kérjük ellenőrizd.');
         document.getElementById('emailConfirmInput').focus();
         document.getElementById('emailConfirmInput').select();
         return false;
     }
 
     if (!phone) {
-        alert('❌ Kérjük adja meg a telefonszámát!');
+        alert('❌ Kérjük add meg a telefonszámod!');
         document.getElementById('phoneInput').focus();
         return false;
     }
@@ -1001,14 +968,14 @@ async function submitBooking(event) {
     const phoneRegex = /^(\+36|06)?[0-9]{9,10}$/;
     const cleanPhone = phone.replace(/[\s\-]/g, '');
     if (!phoneRegex.test(cleanPhone)) {
-        alert('❌ Kérjük adjon meg érvényes magyar telefonszámot!\n(pl. +36 30 123 4567 vagy 06 30 123 4567)');
+        alert('❌ Kérjük adj meg érvényes magyar telefonszámot! (pl. +36 30 123 4567 vagy 06 30 123 4567)');
         document.getElementById('phoneInput').focus();
         return false;
     }
 
     // Validation: Address fields
     if (!street || !plz || !city) {
-        alert('❌ Kérjük töltse ki a pontos címet (utca, irányítószám, város)!');
+        alert('❌ Kérjük töltsd ki a pontos címet (utca, irányítószám, város)!');
         if (!street) document.getElementById('streetInput').focus();
         else if (!plz) document.getElementById('plzInput').focus();
         else document.getElementById('cityInput').focus();
@@ -1039,7 +1006,7 @@ async function submitBooking(event) {
 
     // Validation: Travel Zone (REQUIRED for pricing!)
     if (!State.travelZone) {
-        alert('❌ Kérjük válassza ki a kiszállási zónát!\\n\\nEz szükséges a pontos ár kiszámításához.');
+        alert('❌ Kérjük válaszd ki a kiszállási zónát!\\n\\nEz szükséges a pontos ár kiszámításához.');
         // Scroll to the travel zone section
         document.getElementById('travelZoneWrap').scrollIntoView({ behavior: 'smooth', block: 'center' });
         return false;
@@ -1127,13 +1094,13 @@ function showBookingResult({ title, message, detail = '', total = '', success = 
 function bookingFailure(result) {
     const code = String(result?.error || result?.status || '');
     if (['CLUSTER_MISMATCH', 'ZONE_INCOMPATIBLE'].includes(code)) {
-        return 'Ezen a napon nem érhető el a kiválasztott régió. Kérjük válasszon másik napot.';
+        return 'Ezen a napon nem érhető el a kiválasztott régió. Kérjük válassz másik napot.';
     }
     if (['FULLY_BOOKED', 'DAY_FULL', 'SLOT_CONFLICT', 'SLOT_TAKEN_ON_RECHECK'].includes(code)) {
-        return 'Ez az időpont időközben betelt. Kérjük válasszon másik időpontot a frissített naptárból.';
+        return 'Ez az időpont időközben betelt. Kérjük válassz másik időpontot a frissített naptárból.';
     }
-    if (code === 'INVALID_DATE') return 'A kiválasztott dátum nem érvényes. Kérjük válasszon jövőbeli időpontot.';
-    return 'A kérés feldolgozása nem sikerült. Kérjük egyeztessen velünk a 06 70 240 8141 telefonszámon.';
+    if (code === 'INVALID_DATE') return 'A kiválasztott dátum nem érvényes. Kérjük válassz jövőbeli időpontot.';
+    return 'A kérés feldolgozása nem sikerült. Kérjük egyeztess velünk a 06 70 240 8141 telefonszámon.';
 }
 
 async function transmitBookingRequest(url, payload, button, kind) {
@@ -1167,9 +1134,9 @@ async function transmitBookingRequest(url, payload, button, kind) {
         if (kind === 'booking') {
             showBookingResult({
                 success: true,
-                title: 'Foglalási kérelme elküldve.',
-                message: 'Köszönjük! Hamarosan felvesszük Önnel a kapcsolatot a megadott elérhetőségeken.',
-                detail: `Kért időpont: ${payload.date} · ${payload.slotStartTime}${payload.isFirstSlot ? '' : ' (±30 perc)'}. ${payload.isKarpitBooking ? 'ANDANTE vagy vízre érzékeny szövet esetén kérjük, még a kiszállás előtt egyeztessen: 06 70 240 8141.' : ''}`,
+                title: 'Foglalási kérelmed elküldve.',
+                message: 'Köszönjük! Hamarosan felvesszük veled a kapcsolatot a megadott elérhetőségeiden.',
+                detail: `Kért időpont: ${payload.date} · ${payload.slotStartTime}${payload.isFirstSlot ? '' : ' (±30 perc)'}. ${payload.isKarpitBooking ? 'ANDANTE vagy vízre érzékeny szövet esetén kérjük, még a kiszállás előtt egyeztess: 06 70 240 8141.' : ''}`,
                 total: `Kalkulált összeg: ${payload.totalPrice.toLocaleString('hu-HU')} Ft`
             });
             document.getElementById('bookingForm').reset();
@@ -1179,7 +1146,7 @@ async function transmitBookingRequest(url, payload, button, kind) {
             showBookingResult({
                 success: true,
                 title: 'Árajánlatkérése elküldve.',
-                message: 'Köszönjük! Hamarosan felvesszük Önnel a kapcsolatot az egyedi árajánlattal és az időpont egyeztetésével.',
+                message: 'Köszönjük! Hamarosan felvesszük veled a kapcsolatot az egyedi árajánlattal és az időpont egyeztetésével.',
                 total: `Becsült összeg: ${payload.totals.estimatedPrice.toLocaleString('hu-HU')} Ft`
             });
         }
@@ -1187,7 +1154,7 @@ async function transmitBookingRequest(url, payload, button, kind) {
         // A dropped response does not tell us whether the server already processed it.
         showBookingResult({
             title: 'A visszaigazolás nem érkezett meg.',
-            message: 'Nem tudtuk ellenőrizni, hogy megérkezett-e a kérés. Újraküldés előtt kérjük egyeztessen velünk: 06 70 240 8141.'
+            message: 'Nem tudtuk ellenőrizni, hogy megérkezett-e a kérés. Újraküldés előtt kérjük egyeztess velünk: 06 70 240 8141.'
         });
     } finally {
         clearTimeout(timeout);

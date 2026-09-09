@@ -1,0 +1,22 @@
+[
+  {
+    "id": "19826d3cbeae5ad2",
+    "before": "Az Ön adatai",
+    "after": "A te adataid"
+  },
+  {
+    "id": "4a514f20d02dda43",
+    "before": "AZ ÖN KONFIGURÁCIÓJA",
+    "after": "A TE KONFIGURÁCIÓD"
+  },
+  {
+    "id": "9251e001ffb36040",
+    "before": "előzetesen egyeztessen munkatársunkkal",
+    "after": "előzetesen egyeztess munkatársunkkal"
+  },
+  {
+    "id": "01c83962cbc0a336",
+    "before": "Köszönjük megértését!",
+    "after": "Köszönjük megértésed!"
+  }
+]

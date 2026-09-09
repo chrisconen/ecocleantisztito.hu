@@ -1,0 +1,17 @@
+[
+  {
+    "id": "4293268aa6559e17",
+    "before": "Időpontfoglalás egyszerűen: hívja a",
+    "after": "Időpontfoglalás egyszerűen: hívd a"
+  },
+  {
+    "id": "7621762a2a3417f8",
+    "before": "e-mail címre. Kollégánk felmér minden szükséges részletet (bútor típusa, állapota, elhelyezkedés), és a legmegfelelőbb időpontot egyezteti Önnel. A megrendelést SMS-ben kell megerősíteni, amely tartalmazza a megbeszélt időpontot, nevét és pontos címét. Hamarosan elérhető lesz online foglalási rendszerünk is, amellyel a nap 24 órájában foglalhat.",
+    "after": "e-mail címre. Kollégánk felmér minden szükséges részletet (bútor típusa, állapota, elhelyezkedés), és a legmegfelelőbb időpontot egyezteti veled. A megrendelést SMS-ben kell megerősíteni, amely tartalmazza a megbeszélt időpontot, neved és pontos címed. Hamarosan elérhető lesz online foglalási rendszerünk is, amellyel a nap 24 órájában foglalhatsz."
+  },
+  {
+    "id": "343a550f9a693021",
+    "before": "-es számon. Garanciát vállalunk: ha nem elégedett az eredménnyel, ingyen visszajövünk!",
+    "after": "-es számon. Garanciát vállalunk: ha nem vagy elégedett az eredménnyel, ingyen visszajövünk!"
+  }
+]

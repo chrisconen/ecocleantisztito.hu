@@ -1,0 +1,417 @@
+[
+  {
+    "id": "c04adfc933b4d48e",
+    "before": "❓ Vállalnak emelt szintű ablaktisztítást is?",
+    "after": "❓ Vállaltok emelt szintű ablaktisztítást is?"
+  },
+  {
+    "id": "6b5a68aeb9dda77e",
+    "before": "❓ Éjszaka vagy hétvégén is vállalnak ablaktisztítást?",
+    "after": "❓ Éjszaka vagy hétvégén is vállaltok ablaktisztítást?"
+  },
+  {
+    "id": "efa1d0d5e24921f6",
+    "before": "Vállalnak emelt szintű ablaktisztítást is?",
+    "after": "Vállaltok emelt szintű ablaktisztítást is?"
+  },
+  {
+    "id": "b69fcc0c9b7482ea",
+    "before": "Éjszaka vagy hétvégén is vállalnak ablaktisztítást?",
+    "after": "Éjszaka vagy hétvégén is vállaltok ablaktisztítást?"
+  },
+  {
+    "id": "d91314356f3f1cbe",
+    "before": "❓ Vállalnak nagyobb volumenű munkát borászatoknak, szállodáknak?",
+    "after": "❓ Vállaltok nagyobb volumenű munkát borászatoknak, szállodáknak?"
+  },
+  {
+    "id": "c8cb9f235c27c259",
+    "before": "Vállalnak-e garanciát a kárpittisztításra?",
+    "after": "Vállaltok-e garanciát a kárpittisztításra?"
+  },
+  {
+    "id": "e5f94520384d8bd9",
+    "before": "Vállalnak-e munkát Komárno (Szlovákia) oldaláról érkező megrendelésekre?",
+    "after": "Vállaltok-e munkát Komárno (Szlovákia) oldaláról érkező megrendelésekre?"
+  },
+  {
+    "id": "93138e7a2d277547",
+    "before": "❓ Vállalnak nagyobb volumenű munkát szállodáknak?",
+    "after": "❓ Vállaltok nagyobb volumenű munkát szállodáknak?"
+  },
+  {
+    "id": "d048c06388f2c60c",
+    "before": "Vállalnak nagyobb volumenű munkát szállodáknak?",
+    "after": "Vállaltok nagyobb volumenű munkát szállodáknak?"
+  },
+  {
+    "id": "b3573b86b366c0ec",
+    "before": "❓ Vállalnak rendszeres szőnyegtisztítást szállodáknak Badacsonyban?",
+    "after": "❓ Vállaltok rendszeres szőnyegtisztítást szállodáknak Badacsonyban?"
+  },
+  {
+    "id": "08599a47477a7f08",
+    "before": "❓ Éjszaka vagy hétvégén is vállalnak szőnyegtisztítást?",
+    "after": "❓ Éjszaka vagy hétvégén is vállaltok szőnyegtisztítást?"
+  },
+  {
+    "id": "8ef5c8d57f54083b",
+    "before": "Vállalnak rendszeres szőnyegtisztítást szállodáknak Badacsonyban?",
+    "after": "Vállaltok rendszeres szőnyegtisztítást szállodáknak Badacsonyban?"
+  },
+  {
+    "id": "aa7ac042815ba760",
+    "before": "Éjszaka vagy hétvégén is vállalnak szőnyegtisztítást?",
+    "after": "Éjszaka vagy hétvégén is vállaltok szőnyegtisztítást?"
+  },
+  {
+    "id": "26ebf33487071cb2",
+    "before": "❓ Vállalnak rendszeres szőnyegtisztítást szállodáknak Balatonalmádiban?",
+    "after": "❓ Vállaltok rendszeres szőnyegtisztítást szállodáknak Balatonalmádiban?"
+  },
+  {
+    "id": "de10c5ada4d5fdae",
+    "before": "Vállalnak rendszeres szőnyegtisztítást szállodáknak Balatonalmádiban?",
+    "after": "Vállaltok rendszeres szőnyegtisztítást szállodáknak Balatonalmádiban?"
+  },
+  {
+    "id": "6f97b640616bcbdd",
+    "before": "❓ Vállalnak rendszeres szőnyegtisztítást szállodáknak Balatonföldváron?",
+    "after": "❓ Vállaltok rendszeres szőnyegtisztítást szállodáknak Balatonföldváron?"
+  },
+  {
+    "id": "32072159a1bc1ce7",
+    "before": "Vállalnak rendszeres szőnyegtisztítást szállodáknak Balatonföldváron?",
+    "after": "Vállaltok rendszeres szőnyegtisztítást szállodáknak Balatonföldváron?"
+  },
+  {
+    "id": "c21fbf48cd6ef3e9",
+    "before": "❓ Vállalnak rendszeres szőnyegtisztítást szállodáknak Balatonfüreden?",
+    "after": "❓ Vállaltok rendszeres szőnyegtisztítást szállodáknak Balatonfüreden?"
+  },
+  {
+    "id": "69bf345311b51a75",
+    "before": "Vállalnak rendszeres szőnyegtisztítást szállodáknak Balatonfüreden?",
+    "after": "Vállaltok rendszeres szőnyegtisztítást szállodáknak Balatonfüreden?"
+  },
+  {
+    "id": "e7dfaa2104aa940f",
+    "before": "❓ Vállalnak rendszeres szőnyegtisztítást szállodáknak Balatonlellén?",
+    "after": "❓ Vállaltok rendszeres szőnyegtisztítást szállodáknak Balatonlellén?"
+  },
+  {
+    "id": "1d8f2497fb5f8aae",
+    "before": "Vállalnak rendszeres szőnyegtisztítást szállodáknak Balatonlellén?",
+    "after": "Vállaltok rendszeres szőnyegtisztítást szállodáknak Balatonlellén?"
+  },
+  {
+    "id": "94a4412c64d19074",
+    "before": "❓ Vállalnak rendszeres szőnyegtisztítást szállodáknak Fonyódon?",
+    "after": "❓ Vállaltok rendszeres szőnyegtisztítást szállodáknak Fonyódon?"
+  },
+  {
+    "id": "fab4c9245d0ba490",
+    "before": "Vállalnak rendszeres szőnyegtisztítást szállodáknak Fonyódon?",
+    "after": "Vállaltok rendszeres szőnyegtisztítást szállodáknak Fonyódon?"
+  },
+  {
+    "id": "40e093f42d419817",
+    "before": "❓ Vállalnak rendszeres szőnyegtisztítást szállodáknak Hévízen?",
+    "after": "❓ Vállaltok rendszeres szőnyegtisztítást szállodáknak Hévízen?"
+  },
+  {
+    "id": "8ead197e8feb58b3",
+    "before": "Vállalnak rendszeres szőnyegtisztítást szállodáknak Hévízen?",
+    "after": "Vállaltok rendszeres szőnyegtisztítást szállodáknak Hévízen?"
+  },
+  {
+    "id": "2284ae092b325ff3",
+    "before": "❓ Vállalnak rendszeres szőnyegtisztítást szállodáknak Keszthelyen?",
+    "after": "❓ Vállaltok rendszeres szőnyegtisztítást szállodáknak Keszthelyen?"
+  },
+  {
+    "id": "efe288153f58bd26",
+    "before": "Vállalnak rendszeres szőnyegtisztítást szállodáknak Keszthelyen?",
+    "after": "Vállaltok rendszeres szőnyegtisztítást szállodáknak Keszthelyen?"
+  },
+  {
+    "id": "7ed80d7fe8d0dbdb",
+    "before": "❓ Vállalnak rendszeres szőnyegtisztítást szállodáknak Révfülöpön?",
+    "after": "❓ Vállaltok rendszeres szőnyegtisztítást szállodáknak Révfülöpön?"
+  },
+  {
+    "id": "3b10726835f2dac0",
+    "before": "Vállalnak rendszeres szőnyegtisztítást szállodáknak Révfülöpön?",
+    "after": "Vállaltok rendszeres szőnyegtisztítást szállodáknak Révfülöpön?"
+  },
+  {
+    "id": "23bd2e9cc837ab72",
+    "before": "❓ Vállalnak rendszeres szőnyegtisztítást szállodáknak Siófokon?",
+    "after": "❓ Vállaltok rendszeres szőnyegtisztítást szállodáknak Siófokon?"
+  },
+  {
+    "id": "d68166a283b29ae0",
+    "before": "Vállalnak rendszeres szőnyegtisztítást szállodáknak Siófokon?",
+    "after": "Vállaltok rendszeres szőnyegtisztítást szállodáknak Siófokon?"
+  },
+  {
+    "id": "141f7ed3615b2ce5",
+    "before": "❓ Vállalnak rendszeres szőnyegtisztítást szállodáknak Tapolcán?",
+    "after": "❓ Vállaltok rendszeres szőnyegtisztítást szállodáknak Tapolcán?"
+  },
+  {
+    "id": "8475f347c5c2d59a",
+    "before": "Vállalnak rendszeres szőnyegtisztítást szállodáknak Tapolcán?",
+    "after": "Vállaltok rendszeres szőnyegtisztítást szállodáknak Tapolcán?"
+  },
+  {
+    "id": "57754f0d7418b17a",
+    "before": "❓ Vállalnak rendszeres szőnyegtisztítást szállodáknak Tihanyban?",
+    "after": "❓ Vállaltok rendszeres szőnyegtisztítást szállodáknak Tihanyban?"
+  },
+  {
+    "id": "1f14f44816992bbb",
+    "before": "Vállalnak rendszeres szőnyegtisztítást szállodáknak Tihanyban?",
+    "after": "Vállaltok rendszeres szőnyegtisztítást szállodáknak Tihanyban?"
+  },
+  {
+    "id": "0b1d9d6cc19514f9",
+    "before": "❓ Vállalnak rendszeres szőnyegtisztítást szállodáknak Zamárdiban?",
+    "after": "❓ Vállaltok rendszeres szőnyegtisztítást szállodáknak Zamárdiban?"
+  },
+  {
+    "id": "5af38b70fb2b4264",
+    "before": "Vállalnak rendszeres szőnyegtisztítást szállodáknak Zamárdiban?",
+    "after": "Vállaltok rendszeres szőnyegtisztítást szállodáknak Zamárdiban?"
+  },
+  {
+    "id": "57aef8bdeb0fba4b",
+    "before": "Milyen típusú takarítást vállalnak Badacsonyban?",
+    "after": "Milyen típusú takarítást vállaltok Badacsonyban?"
+  },
+  {
+    "id": "b24d9d51c2c7462a",
+    "before": "Vállalnak vendégváltás közötti expressz takarítást szálláshelyeknek?",
+    "after": "Vállaltok vendégváltás közötti expressz takarítást szálláshelyeknek?"
+  },
+  {
+    "id": "3b049a893ac91f1f",
+    "before": "HACCP-kompatibilis takarítást is vállalnak éttermeknek?",
+    "after": "HACCP-kompatibilis takarítást is vállaltok éttermeknek?"
+  },
+  {
+    "id": "086be51adeb31b2f",
+    "before": "Vállalnak napi rendszeres irodatakarítást Badacsonyban?",
+    "after": "Vállaltok napi rendszeres irodatakarítást Badacsonyban?"
+  },
+  {
+    "id": "ee5fe7873631cb11",
+    "before": "Éjszaka vagy hajnalban is vállalnak takarítást?",
+    "after": "Éjszaka vagy hajnalban is vállaltok takarítást?"
+  },
+  {
+    "id": "90c66b43acf33523",
+    "before": "Vállalnak építés utáni takarítást is?",
+    "after": "Vállaltok építés utáni takarítást is?"
+  },
+  {
+    "id": "b65d65e41bb8a5c8",
+    "before": "Milyen típusú takarítást vállalnak Balatonalmádiban?",
+    "after": "Milyen típusú takarítást vállaltok Balatonalmádiban?"
+  },
+  {
+    "id": "577c6b02181f4b2e",
+    "before": "Vállalnak napi rendszeres irodatakarítást Balatonalmádiban?",
+    "after": "Vállaltok napi rendszeres irodatakarítást Balatonalmádiban?"
+  },
+  {
+    "id": "ebb60fac48ecad1a",
+    "before": "Milyen típusú takarítást vállalnak Balatonföldváron?",
+    "after": "Milyen típusú takarítást vállaltok Balatonföldváron?"
+  },
+  {
+    "id": "16fa66572333afa2",
+    "before": "Vállalnak napi rendszeres irodatakarítást Balatonföldváron?",
+    "after": "Vállaltok napi rendszeres irodatakarítást Balatonföldváron?"
+  },
+  {
+    "id": "1d4e63fc853ed8a7",
+    "before": "❓ Milyen típusú takarítást vállalnak Balatonfüreden?",
+    "after": "❓ Milyen típusú takarítást vállaltok Balatonfüreden?"
+  },
+  {
+    "id": "0abcb8822d5ce07c",
+    "before": "❓ Vállalnak napi rendszeres irodatakarítást Balatonfüreden?",
+    "after": "❓ Vállaltok napi rendszeres irodatakarítást Balatonfüreden?"
+  },
+  {
+    "id": "15026f63a0cdb6a2",
+    "before": "Milyen típusú takarítást vállalnak Balatonfüreden?",
+    "after": "Milyen típusú takarítást vállaltok Balatonfüreden?"
+  },
+  {
+    "id": "48106f21d090e3d0",
+    "before": "Vállalnak napi rendszeres irodatakarítást Balatonfüreden?",
+    "after": "Vállaltok napi rendszeres irodatakarítást Balatonfüreden?"
+  },
+  {
+    "id": "6b020a9f4e0de845",
+    "before": "❓ Milyen típusú takarítást vállalnak Balatonlellén?",
+    "after": "❓ Milyen típusú takarítást vállaltok Balatonlellén?"
+  },
+  {
+    "id": "c3a72ebb01e8ae2b",
+    "before": "❓ Vállalnak napi rendszeres irodatakarítást Balatonlellén?",
+    "after": "❓ Vállaltok napi rendszeres irodatakarítást Balatonlellén?"
+  },
+  {
+    "id": "100aff14fc6863fc",
+    "before": "Milyen típusú takarítást vállalnak Balatonlellén?",
+    "after": "Milyen típusú takarítást vállaltok Balatonlellén?"
+  },
+  {
+    "id": "5bfe3a219bf0752c",
+    "before": "Vállalnak napi rendszeres irodatakarítást Balatonlellén?",
+    "after": "Vállaltok napi rendszeres irodatakarítást Balatonlellén?"
+  },
+  {
+    "id": "473cb5a81aa3a7d2",
+    "before": "❓ Milyen típusú takarítást vállalnak Fonyódon?",
+    "after": "❓ Milyen típusú takarítást vállaltok Fonyódon?"
+  },
+  {
+    "id": "ac1671de4791c57f",
+    "before": "❓ Vállalnak napi rendszeres irodatakarítást Fonyódon?",
+    "after": "❓ Vállaltok napi rendszeres irodatakarítást Fonyódon?"
+  },
+  {
+    "id": "9588860dcb35331a",
+    "before": "Milyen típusú takarítást vállalnak Fonyódon?",
+    "after": "Milyen típusú takarítást vállaltok Fonyódon?"
+  },
+  {
+    "id": "1a217a46b5c7e6e1",
+    "before": "Vállalnak napi rendszeres irodatakarítást Fonyódon?",
+    "after": "Vállaltok napi rendszeres irodatakarítást Fonyódon?"
+  },
+  {
+    "id": "6247524dfd6a1d16",
+    "before": "Milyen típusú takarítást vállalnak Hévízen?",
+    "after": "Milyen típusú takarítást vállaltok Hévízen?"
+  },
+  {
+    "id": "fbebeb7c4c04c2fe",
+    "before": "Vállalnak napi rendszeres irodatakarítást Hévízen?",
+    "after": "Vállaltok napi rendszeres irodatakarítást Hévízen?"
+  },
+  {
+    "id": "ed9db6cf46b2064a",
+    "before": "Milyen típusú takarítást vállalnak Keszthelyen?",
+    "after": "Milyen típusú takarítást vállaltok Keszthelyen?"
+  },
+  {
+    "id": "fc40d3d6a49020a6",
+    "before": "Vállalnak napi rendszeres irodatakarítást Keszthelyen?",
+    "after": "Vállaltok napi rendszeres irodatakarítást Keszthelyen?"
+  },
+  {
+    "id": "9433f89f7ea45784",
+    "before": "❓ Milyen típusú takarítást vállalnak Révfülöpön?",
+    "after": "❓ Milyen típusú takarítást vállaltok Révfülöpön?"
+  },
+  {
+    "id": "5584be5216b78c3b",
+    "before": "❓ Vállalnak napi rendszeres irodatakarítást Révfülöpön?",
+    "after": "❓ Vállaltok napi rendszeres irodatakarítást Révfülöpön?"
+  },
+  {
+    "id": "31ab571eb5e26bea",
+    "before": "Milyen típusú takarítást vállalnak Révfülöpön?",
+    "after": "Milyen típusú takarítást vállaltok Révfülöpön?"
+  },
+  {
+    "id": "96bf4a87b059ed03",
+    "before": "Vállalnak napi rendszeres irodatakarítást Révfülöpön?",
+    "after": "Vállaltok napi rendszeres irodatakarítást Révfülöpön?"
+  },
+  {
+    "id": "f848e3f1a8eb3796",
+    "before": "❓ Milyen típusú takarítást vállalnak Siófokon?",
+    "after": "❓ Milyen típusú takarítást vállaltok Siófokon?"
+  },
+  {
+    "id": "827013fbab3904cf",
+    "before": "❓ Vállalnak napi rendszeres irodatakarítást Siófokon?",
+    "after": "❓ Vállaltok napi rendszeres irodatakarítást Siófokon?"
+  },
+  {
+    "id": "19aa776f5209a8ca",
+    "before": "Milyen típusú takarítást vállalnak Siófokon?",
+    "after": "Milyen típusú takarítást vállaltok Siófokon?"
+  },
+  {
+    "id": "e4117ce5c1955e1d",
+    "before": "Vállalnak napi rendszeres irodatakarítást Siófokon?",
+    "after": "Vállaltok napi rendszeres irodatakarítást Siófokon?"
+  },
+  {
+    "id": "2f4624af6dba821e",
+    "before": "❓ Milyen típusú takarítást vállalnak Tapolcán?",
+    "after": "❓ Milyen típusú takarítást vállaltok Tapolcán?"
+  },
+  {
+    "id": "b10983d91d97cb93",
+    "before": "❓ Vállalnak napi rendszeres irodatakarítást Tapolcán?",
+    "after": "❓ Vállaltok napi rendszeres irodatakarítást Tapolcán?"
+  },
+  {
+    "id": "f153bf672ed6487b",
+    "before": "Milyen típusú takarítást vállalnak Tapolcán?",
+    "after": "Milyen típusú takarítást vállaltok Tapolcán?"
+  },
+  {
+    "id": "0e250fbd335200be",
+    "before": "Vállalnak napi rendszeres irodatakarítást Tapolcán?",
+    "after": "Vállaltok napi rendszeres irodatakarítást Tapolcán?"
+  },
+  {
+    "id": "29f58fb056c59d52",
+    "before": "❓ Milyen típusú takarítást vállalnak Tihanyban?",
+    "after": "❓ Milyen típusú takarítást vállaltok Tihanyban?"
+  },
+  {
+    "id": "a72196259ca818ad",
+    "before": "❓ Vállalnak napi rendszeres irodatakarítást Tihanyban?",
+    "after": "❓ Vállaltok napi rendszeres irodatakarítást Tihanyban?"
+  },
+  {
+    "id": "f41f24ace2193f43",
+    "before": "Milyen típusú takarítást vállalnak Tihanyban?",
+    "after": "Milyen típusú takarítást vállaltok Tihanyban?"
+  },
+  {
+    "id": "5b4347e0c8ab2181",
+    "before": "Vállalnak napi rendszeres irodatakarítást Tihanyban?",
+    "after": "Vállaltok napi rendszeres irodatakarítást Tihanyban?"
+  },
+  {
+    "id": "9e15035b8c3c2cec",
+    "before": "❓ Milyen típusú takarítást vállalnak Zamárdiban?",
+    "after": "❓ Milyen típusú takarítást vállaltok Zamárdiban?"
+  },
+  {
+    "id": "4ed06a4fcfa5ac08",
+    "before": "❓ Vállalnak napi rendszeres irodatakarítást Zamárdiban?",
+    "after": "❓ Vállaltok napi rendszeres irodatakarítást Zamárdiban?"
+  },
+  {
+    "id": "9b1adab18d6f9b8d",
+    "before": "Milyen típusú takarítást vállalnak Zamárdiban?",
+    "after": "Milyen típusú takarítást vállaltok Zamárdiban?"
+  },
+  {
+    "id": "11190ee028df5510",
+    "before": "Vállalnak napi rendszeres irodatakarítást Zamárdiban?",
+    "after": "Vállaltok napi rendszeres irodatakarítást Zamárdiban?"
+  }
+]

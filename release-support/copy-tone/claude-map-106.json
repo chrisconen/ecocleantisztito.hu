@@ -1,0 +1,42 @@
+[
+  {
+    "id": "c0984d6313454b5d",
+    "before": "Az áraink a minőséget tükrözik. Egy fotel tisztítása 6.500 Ft-tól, egy kanapé 15.500 Ft-tól indul. Pontos árat az állapotfelmérés után adunk, de garanciát vállalunk: ha nem elégedett, ingyen újratisztítjuk.",
+    "after": "Az áraink a minőséget tükrözik. Egy fotel tisztítása 6.500 Ft-tól, egy kanapé 15.500 Ft-tól indul. Pontos árat az állapotfelmérés után adunk, de garanciát vállalunk: ha nem vagy elégedett, ingyen újratisztítjuk."
+  },
+  {
+    "id": "bcbf45bb92e99b9f",
+    "before": "Telefonon a 06 70 240 8141-es számon hétfőtől péntekig 8-18 óra között, szombaton 8-14 óra között. Online foglalási rendszerünkön keresztül a weboldalon is leadhat időpontot.",
+    "after": "Telefonon a 06 70 240 8141-es számon hétfőtől péntekig 8-18 óra között, szombaton 8-14 óra között. Online foglalási rendszerünkön keresztül a weboldalon is leadhatsz időpontot."
+  },
+  {
+    "id": "6adac123a6770ba0",
+    "before": "Igen, 100% elégedettségi garanciát vállalunk. Ha nem elégedett az eredménnyel, ingyen visszajövünk és újratisztítjuk a bútort.",
+    "after": "Igen, 100% elégedettségi garanciát vállalunk. Ha nem vagy elégedett az eredménnyel, ingyen visszajövünk és újratisztítjuk a bútort."
+  },
+  {
+    "id": "b533104abbf7e87c",
+    "before": "Jelenleg telefonon a 06 70 240 8141-es számon. Hamarosan indul AI-vezérelt (Mesterséges Intelligencia alapú) online foglalási rendszerünk, amivel másodpercek alatt foglalhat Komárom és környékén.",
+    "after": "Jelenleg telefonon a 06 70 240 8141-es számon. Hamarosan indul AI-vezérelt (Mesterséges Intelligencia alapú) online foglalási rendszerünk, amivel másodpercek alatt foglalhatsz Komárom és környékén."
+  },
+  {
+    "id": "98e6bf20652313fa",
+    "before": "Jelenleg telefonon a 06 70 240 8141-es számon. Hamarosan indul AI-vezérelt (Mesterséges Intelligencia alapú) online foglalási rendszerünk, amivel másodpercek alatt foglalhat Mosonmagyaróvár és környékén.",
+    "after": "Jelenleg telefonon a 06 70 240 8141-es számon. Hamarosan indul AI-vezérelt (Mesterséges Intelligencia alapú) online foglalási rendszerünk, amivel másodpercek alatt foglalhatsz Mosonmagyaróvár és környékén."
+  },
+  {
+    "id": "6e7939d4b2ce7f90",
+    "before": "Jelenleg telefonon a 06 70 240 8141-es számon. Hamarosan indul AI-vezérelt (Mesterséges Intelligencia alapú) online foglalási rendszerünk, amivel másodpercek alatt foglalhat Pápa és környékén.",
+    "after": "Jelenleg telefonon a 06 70 240 8141-es számon. Hamarosan indul AI-vezérelt (Mesterséges Intelligencia alapú) online foglalási rendszerünk, amivel másodpercek alatt foglalhatsz Pápa és környékén."
+  },
+  {
+    "id": "ad9f921e7dbcdd2f",
+    "before": "Jelenleg telefonon a 06 70 240 8141-es számon. Hamarosan indul AI-vezérelt (Mesterséges Intelligencia alapú) online foglalási rendszerünk, amivel másodpercek alatt foglalhat Sopron és környékén.",
+    "after": "Jelenleg telefonon a 06 70 240 8141-es számon. Hamarosan indul AI-vezérelt (Mesterséges Intelligencia alapú) online foglalási rendszerünk, amivel másodpercek alatt foglalhatsz Sopron és környékén."
+  },
+  {
+    "id": "d770df02a176c7cb",
+    "before": "Jelenleg telefonon a 06 70 240 8141-es számon. Hamarosan indul AI-vezérelt (Mesterséges Intelligencia alapú) online foglalási rendszerünk, amivel másodpercek alatt foglalhat Szombathely és környékén.",
+    "after": "Jelenleg telefonon a 06 70 240 8141-es számon. Hamarosan indul AI-vezérelt (Mesterséges Intelligencia alapú) online foglalási rendszerünk, amivel másodpercek alatt foglalhatsz Szombathely és környékén."
+  }
+]

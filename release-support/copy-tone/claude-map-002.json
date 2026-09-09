@@ -1,0 +1,182 @@
+[
+  {
+    "id": "101e4ab2c34afa80",
+    "before": "Konfigurálja szolgáltatását és foglaljon időpontot pár kattintással!",
+    "after": "Konfiguráld szolgáltatásodat és foglalj időpontot pár kattintással!"
+  },
+  {
+    "id": "e5de9b5248c6987f",
+    "before": "Mit szeretne tisztíttatni?",
+    "after": "Mit szeretnél tisztíttatni?"
+  },
+  {
+    "id": "384eb5ab26d70a3e",
+    "before": "Válassza ki a tételeket",
+    "after": "Válaszd ki a tételeket"
+  },
+  {
+    "id": "1870e3934883a738",
+    "before": "Válasszon régiót...",
+    "after": "Válassz régiót..."
+  },
+  {
+    "id": "3e540f54a95085d3",
+    "before": "Pontos elhelyezkedés (kérjük válasszon zónát) *",
+    "after": "Pontos elhelyezkedés (kérjük válassz zónát) *"
+  },
+  {
+    "id": "6e147c5a0726e9fa",
+    "before": "Válasszon időpontot",
+    "after": "Válassz időpontot"
+  },
+  {
+    "id": "fafb3c695edaf428",
+    "before": "Válasszon szolgáltatást a kezdéshez...",
+    "after": "Válassz szolgáltatást a kezdéshez..."
+  },
+  {
+    "id": "3cf6475bc0b45c2e",
+    "before": "Kérjen",
+    "after": "Kérj"
+  },
+  {
+    "id": "2bfac3aad93cd9f4",
+    "before": "Magánszemélyeknek és vállalatoknak egyaránt. Hívjon vagy írjon!",
+    "after": "Magánszemélyeknek és vállalatoknak egyaránt. Hívj vagy írj!"
+  },
+  {
+    "id": "7aa32ccb687ff41d",
+    "before": "Kérjük, hogy megrendelés előtt minden esetben ellenőrizze bútora szövetének típusát és tisztíthatóságát! A Kanizsai Bútorgyár ANDANTE típusú bútorai és a hasonló \"mosható\", víztaszító anyagok jellemzően nem alkalmasak az extrakciós (vizes) kárpittisztítási eljárásra.",
+    "after": "Kérjük, hogy megrendelés előtt minden esetben ellenőrizd bútorod szövetének típusát és tisztíthatóságát! A Kanizsai Bútorgyár ANDANTE típusú bútorai és a hasonló \"mosható\", víztaszító anyagok jellemzően nem alkalmasak az extrakciós (vizes) kárpittisztítási eljárásra."
+  },
+  {
+    "id": "8fe085aab71764b3",
+    "before": "Kérjük, ha bizonytalan bútora szövetének típusában,",
+    "after": "Kérjük, ha bizonytalan vagy bútorod szövetének típusában,"
+  },
+  {
+    "id": "1faf477ed1dcb78d",
+    "before": "Kérjük, hogy megrendelés előtt minden esetben ellenőrizze a bútor szövetének típusát és tisztíthatóságát. Amennyiben a helyszínen derül ki, hogy a bútor anyaga az alkalmazott technológiával nem tisztítható, a lefoglalt időpont és kiszállás kiesése miatt a szolgáltatás díjának 50%-a kapacitás-foglalási díjként felszámításra kerülhet.",
+    "after": "Kérjük, hogy megrendelés előtt minden esetben ellenőrizd a bútor szövetének típusát és tisztíthatóságát. Amennyiben a helyszínen derül ki, hogy a bútor anyaga az alkalmazott technológiával nem tisztítható, a lefoglalt időpont és kiszállás kiesése miatt a szolgáltatás díjának 50%-a kapacitás-foglalási díjként felszámításra kerülhet."
+  },
+  {
+    "id": "40256af9ad7d4c01",
+    "before": "Hívjon minket a",
+    "after": "Hívj minket a"
+  },
+  {
+    "id": "655824b14503389d",
+    "before": "számon, vagy foglaljon online. Beszéljük át az igényeit és egyeztessünk időpontot.",
+    "after": "számon, vagy foglalj online. Beszéljük át az igényeidet és egyeztessünk időpontot."
+  },
+  {
+    "id": "56f8a72773cad068",
+    "before": "Tekintse meg a teljes előtte-utána galériát",
+    "after": "Tekintsd meg a teljes előtte-utána galériát"
+  },
+  {
+    "id": "236e7ad7e72fc84e",
+    "before": "A badacsonyi panorámás éttermek exkluzív kárpitozott bútorait a szezon intenzív forgalma alaposan igénybe veszi. Szezon végi professzionális kárpittisztítással megőrizheti bútorai szépségét és higiéniáját.",
+    "after": "A badacsonyi panorámás éttermek exkluzív kárpitozott bútorait a szezon intenzív forgalma alaposan igénybe veszi. Szezon végi professzionális kárpittisztítással megőrizheted bútoraid szépségét és higiéniáját."
+  },
+  {
+    "id": "412686a8866f71c3",
+    "before": "A badacsonyi nyaralók bútorait a hosszú téli szünet alatt a poratkák zavartalanul kolonizálják. Szezonnyitás előtti atkaírtással garantálhatja, hogy családja egészséges környezetben kezdje a nyarat.",
+    "after": "A badacsonyi nyaralók bútorait a hosszú téli szünet alatt a poratkák zavartalanul kolonizálják. Szezonnyitás előtti atkaírtással garantálhatod, hogy családod egészséges környezetben kezdje a nyarat."
+  },
+  {
+    "id": "c6571fed33860cb0",
+    "before": "💡 Foglaljon 2-3 héttel előre – nagy a kereslet!",
+    "after": "💡 Foglalj 2-3 héttel előre – nagy a kereslet!"
+  },
+  {
+    "id": "ed1b0175871c6b24",
+    "before": "Kérjen ingyenes helyszíni felmérést és árajánlatot Badacsonyon!",
+    "after": "Kérj ingyenes helyszíni felmérést és árajánlatot Badacsonyon!"
+  },
+  {
+    "id": "feadeb6621239a69",
+    "before": ", ahol másodpercek alatt megtalálja az Önnek legmegfelelőbb időpontot. Szezonban érdemes 1-2 héttel előre foglalni.",
+    "after": ", ahol másodpercek alatt megtalálod a neked legmegfelelőbb időpontot. Szezonban érdemes 1-2 héttel előre foglalni."
+  },
+  {
+    "id": "cefbee17755f1d5a",
+    "before": "Abszolút! Ez a technológiánk alapköve és egyik legnagyobb előnye. Nem használunk agresszív vegyszereket, így a tisztítás után azonnal, biztonsággal használhatja a bútorokat. Nincs bőrirritáció, nincs vegyszergőz – éttermek, borkóstolók számára ideális megoldás.",
+    "after": "Abszolút! Ez a technológiánk alapköve és egyik legnagyobb előnye. Nem használunk agresszív vegyszereket, így a tisztítás után azonnal, biztonsággal használhatod a bútorokat. Nincs bőrirritáció, nincs vegyszergőz – éttermek, borkóstolók számára ideális megoldás."
+  },
+  {
+    "id": "4d506f48490fbf34",
+    "before": "Ne csak tisztítsa, újítsa meg bútorait! Vegyszermentes mélytisztítás a Badacsony-hegyen. Borászatok, szállások, éttermek részére. 2004 óta.",
+    "after": "Ne csak tisztítsd, újítsd meg bútoraid! Vegyszermentes mélytisztítás a Badacsony-hegyen. Borászatok, szállások, éttermek részére. 2004 óta."
+  },
+  {
+    "id": "c5b28bc85c618304",
+    "before": "Balatonalmádiban a nyaralótulajdonosok ECO Cleanre bízzák bútoraikat: szezon végi mélytisztítás, ami megóvja a berendezést. Ne kísérletezzen bérelt géppel!",
+    "after": "Balatonalmádiban a nyaralótulajdonosok ECO Cleanre bízzák bútoraikat: szezon végi mélytisztítás, ami megóvja a berendezést. Ne kísérletezz bérelt géppel!"
+  },
+  {
+    "id": "337c659c1d0e2ec5",
+    "before": "Balatonalmádi piros homokkő partjai és zöld domboldalai között a bútorok is megérdemlik a professzionális gondoskodást. Ismerje meg atkaírtó kárpittisztításunkat!",
+    "after": "Balatonalmádi piros homokkő partjai és zöld domboldalai között a bútorok is megérdemlik a professzionális gondoskodást. Ismerd meg atkaírtó kárpittisztításunkat!"
+  },
+  {
+    "id": "a7b8d3d4ba9cf167",
+    "before": "Ne csak tisztítsa, újítsa meg bútorait! Vegyszermentes mélytisztítás a Balatonalmádi. Borászatok, szállások, éttermek részére. 2004 óta.",
+    "after": "Ne csak tisztítsd, újítsd meg bútoraid! Vegyszermentes mélytisztítás a Balatonalmádi. Borászatok, szállások, éttermek részére. 2004 óta."
+  },
+  {
+    "id": "bd2bb9e8a8697248",
+    "before": "Miért válassza az ECO Clean technológiát Balatonbogláron?",
+    "after": "Miért válaszd az ECO Clean technológiát Balatonbogláron?"
+  },
+  {
+    "id": "8fdf7721ef888558",
+    "before": "Kérjen ingyenes helyszíni felmérést és árajánlatot Balatonbogláron!",
+    "after": "Kérj ingyenes helyszíni felmérést és árajánlatot Balatonbogláron!"
+  },
+  {
+    "id": "725b53078dedbb53",
+    "before": "Ne csak tisztítsa, újítsa meg bútorait! Vegyszermentes mélytisztítás a Balatonboglár. Borászatok, szállások, éttermek részére. 2004 óta.",
+    "after": "Ne csak tisztítsd, újítsd meg bútoraid! Vegyszermentes mélytisztítás a Balatonboglár. Borászatok, szállások, éttermek részére. 2004 óta."
+  },
+  {
+    "id": "9e2ad710371600d2",
+    "before": "Balatonföldváron a bérbeadók ECO Cleannel készítik elő lakásukat az új szezonra: profi mélytisztítás, ami értéket óv. Bérelt gép helyett válasszon profin!",
+    "after": "Balatonföldváron a bérbeadók ECO Cleannel készítik elő lakásukat az új szezonra: profi mélytisztítás, ami értéket óv. Bérelt gép helyett válassz profin!"
+  },
+  {
+    "id": "b13a36378eb8d566",
+    "before": "Balatonföldvár elegáns villanegyedeiben a minőségi bútorok értéket képviselnek. A poratkák azonban nem válogatnak — professzionális kárpittisztításunkkal megóvjuk bútorainak szépségét és az Ön egészségét egyaránt.",
+    "after": "Balatonföldvár elegáns villanegyedeiben a minőségi bútorok értéket képviselnek. A poratkák azonban nem válogatnak — professzionális kárpittisztításunkkal megóvjuk bútoraid szépségét és egészségedet egyaránt."
+  },
+  {
+    "id": "ce9418ed72b97217",
+    "before": "Balatonföldvár közvetlen vízparti fekvése miatt a beltéri páratartalom tartósan magas. Ez a poratkák számára ideális közeg — rendszeres kárpittisztítással megtörheti az allergiás panaszok ördögi körét.",
+    "after": "Balatonföldvár közvetlen vízparti fekvése miatt a beltéri páratartalom tartósan magas. Ez a poratkák számára ideális közeg — rendszeres kárpittisztítással megtörheted az allergiás panaszok ördögi körét."
+  },
+  {
+    "id": "c5c0677de21490a5",
+    "before": "Ne csak tisztítsa, újítsa meg bútorait! Vegyszermentes mélytisztítás a Balatonföldvár. Borászatok, szállások, éttermek részére. 2004 óta.",
+    "after": "Ne csak tisztítsd, újítsd meg bútoraid! Vegyszermentes mélytisztítás a Balatonföldvár. Borászatok, szállások, éttermek részére. 2004 óta."
+  },
+  {
+    "id": "11456d31489dcad2",
+    "before": "Balatonfüreden a szálláskiadók ECO Cleant választanak szezon végén: gyors, alapos, és a bútor kész a következő évre. Ne bérelt géppel pepecseljen - hívjon minket!",
+    "after": "Balatonfüreden a szálláskiadók ECO Cleant választanak szezon végén: gyors, alapos, és a bútor kész a következő évre. Ne bérelt géppel pepecselj - hívj minket!"
+  },
+  {
+    "id": "f3070d555a6bdbd5",
+    "before": "Ne csak tisztítsa, újítsa meg bútorait! Vegyszermentes mélytisztítás a Balatonfüred. Borászatok, szállások, éttermek részére. 2004 óta.",
+    "after": "Ne csak tisztítsd, újítsd meg bútoraid! Vegyszermentes mélytisztítás a Balatonfüred. Borászatok, szállások, éttermek részére. 2004 óta."
+  },
+  {
+    "id": "fa34fea400638741",
+    "before": "Balatonfüzfőn az ECO Clean az ipari por ellensége: mélytisztítás, ami a legfinomabb részecskéket is eltávolítja. Bérelt gép erre képtelen - hívjon profit!",
+    "after": "Balatonfüzfőn az ECO Clean az ipari por ellensége: mélytisztítás, ami a legfinomabb részecskéket is eltávolítja. Bérelt gép erre képtelen - hívj profit!"
+  },
+  {
+    "id": "511f8ded4ca475c3",
+    "before": "Miért válassza az ECO Clean technológiát Balatonfűzfőn?",
+    "after": "Miért válaszd az ECO Clean technológiát Balatonfűzfőn?"
+  }
+]

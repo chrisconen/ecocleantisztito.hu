@@ -1,0 +1,332 @@
+{
+  "delegate": "Authenticated Claude CLI",
+  "models": [
+    "claude-haiku-4-5-20251001",
+    "claude-sonnet-5"
+  ],
+  "completedBatches": 79,
+  "initialTexts": 8268,
+  "additionalMetadataTexts": 1168,
+  "finalFaqReviewQuestions": 83,
+  "changedUniqueTexts": 528,
+  "maps": [
+    {
+      "file": "claude-map-001.json",
+      "sha256": "9d298ff1656052b0fec3fcd2dd73383fda44b4701e110fa4c17244fc1d62ee6e"
+    },
+    {
+      "file": "claude-map-002.json",
+      "sha256": "9ac260ce18581937484d21f191b9a60961dd8c6005cdbd8925548af9613801ea"
+    },
+    {
+      "file": "claude-map-003.json",
+      "sha256": "957888bf584f833f339b0cb2146537f874b93900b44f4669eeea2fa6cefe5670"
+    },
+    {
+      "file": "claude-map-004.json",
+      "sha256": "2ca3822ca16e45c3338c23eadb74ca2cd27a0eefd35ea1a26f6e63db2e7166f4"
+    },
+    {
+      "file": "claude-map-005.json",
+      "sha256": "622b8e01bb70ee5296917dd999a8f15db2a61d129e5ce16cd185e6541a8aef04"
+    },
+    {
+      "file": "claude-map-006.json",
+      "sha256": "91899df6f20e29bc2f75957749c41211759d864a44677f98b2e7528528fca164"
+    },
+    {
+      "file": "claude-map-007.json",
+      "sha256": "30818e57ef8f8a859705e93b4f9973c9f2f4d2e0ab3676d6e88a793b07352e28"
+    },
+    {
+      "file": "claude-map-008.json",
+      "sha256": "a26ab1435059987e75deef951c585cf042758f3a4dd130edebee9d863b76db5c"
+    },
+    {
+      "file": "claude-map-009.json",
+      "sha256": "5555db22d50161cacf93f86f1310ab3543779e1f7b71652b2cba782622b7c693"
+    },
+    {
+      "file": "claude-map-010.json",
+      "sha256": "1dde58eea38a7b710c685fa4be610278de88ec3b0bd2eaaa51e3218437c90120"
+    },
+    {
+      "file": "claude-map-011.json",
+      "sha256": "c3e3df20087bc1348b02c1be7fdc8da76cc66ad660bbeac47a612a5657eb56a3"
+    },
+    {
+      "file": "claude-map-012.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-013.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-014.json",
+      "sha256": "4227d02e757b8eeeddbd65b66a536098daac27011f5fce62baead2d13c5ba28c"
+    },
+    {
+      "file": "claude-map-015.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-016.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-017.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-018.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-019.json",
+      "sha256": "f619af38cae004786659a09e304d3c19b0456a54410dbc4685006f492f31b710"
+    },
+    {
+      "file": "claude-map-020.json",
+      "sha256": "458d0b168d49e22cc183dc5950c410265ae45d4da39bd27bcccb5f09c13cea21"
+    },
+    {
+      "file": "claude-map-021.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-022.json",
+      "sha256": "a6d805300f21a9c79ee47761cfd1c3c7f3534ed0eb0ba4390b99a381d649f950"
+    },
+    {
+      "file": "claude-map-023.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-024.json",
+      "sha256": "8edbb14db54a123ee649d8bd7807dd566042d6ea4b7f3395d8cdceb9a0d683eb"
+    },
+    {
+      "file": "claude-map-025.json",
+      "sha256": "d9a4581c9fe136329e89f73a29e671d792b2c664a19fbbbccb39754a951b8a62"
+    },
+    {
+      "file": "claude-map-026.json",
+      "sha256": "ed368ab26d82d4ad4fcca105d2fb2cdc231097c180e55111621f4d63d031cb33"
+    },
+    {
+      "file": "claude-map-027.json",
+      "sha256": "9edfc6bb7f2cf07da514c5420289adee8338f0439ca11f4984c1f33d0e95ab74"
+    },
+    {
+      "file": "claude-map-028.json",
+      "sha256": "06fe6b30529f4deaf1240f935e97a379646fd9fd8a1c4ea56b8eea360eaef05d"
+    },
+    {
+      "file": "claude-map-029.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-030.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-031.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-032.json",
+      "sha256": "bf09cab940ba804f61a9440dba7967014ac1cb1baa338cb8ab7b53202be4c3bd"
+    },
+    {
+      "file": "claude-map-033.json",
+      "sha256": "d00bcd8ccc9668e3566b5503a5b8b07c5425e795bb1600f028e14040f736e975"
+    },
+    {
+      "file": "claude-map-034.json",
+      "sha256": "fc3bf7eba55ab5b58e731a07c09311a4e3599d15260884b8faec315ec9ed1331"
+    },
+    {
+      "file": "claude-map-035.json",
+      "sha256": "36e6a40598866f79795c490f875c6acf831c9ebb4b4dd16d484af53bea021259"
+    },
+    {
+      "file": "claude-map-036.json",
+      "sha256": "4a9066741a68b796438c1f1c5aa71b9cadad1c971d4774f1f24035541e1d4d6a"
+    },
+    {
+      "file": "claude-map-037.json",
+      "sha256": "04accd14c2562c64d4b51e6af2e8ecbbf829c9b2331f7c5386de15fd5c638f8d"
+    },
+    {
+      "file": "claude-map-038.json",
+      "sha256": "c6d2dbb404c69f088df666cc25ab728c136b8562fd887e9613e8be4d636a8d12"
+    },
+    {
+      "file": "claude-map-039.json",
+      "sha256": "e9ef4b79d0b3f6936c69e278b054f993a751cc5cb50856c6d94a4509009d9066"
+    },
+    {
+      "file": "claude-map-040.json",
+      "sha256": "89c40642cc709f9d743090317c177225ca1bb8c0e2da979caa6f4152871fd8f8"
+    },
+    {
+      "file": "claude-map-041.json",
+      "sha256": "054ef988341989638fbcb3f41bef460458f5469eadc78c472219371e071c5964"
+    },
+    {
+      "file": "claude-map-042.json",
+      "sha256": "4773785c20aaba1dddfdfb43e863fec69d2476667a66124f88213829bb030794"
+    },
+    {
+      "file": "claude-map-043.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-044.json",
+      "sha256": "1dcf68d85d3e88dfa9d5b16ae4f5770209a9d44225f695b137f95cd276a0ec5e"
+    },
+    {
+      "file": "claude-map-045.json",
+      "sha256": "743fc21b14c1eb346af91ed29f43b4038b003b4aa2f2ee28032945dabd89058f"
+    },
+    {
+      "file": "claude-map-046.json",
+      "sha256": "4eb65832a94403688a1704706224a5cb421acf5b1eec218358b3649acb8f8a63"
+    },
+    {
+      "file": "claude-map-047.json",
+      "sha256": "5a876753cd9b9ff2722252e7248277c1de875a915baab3ca5c064d92d3f4fb28"
+    },
+    {
+      "file": "claude-map-048.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-049.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-050.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-051.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-052.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-053.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-054.json",
+      "sha256": "0a416fb243b27b8c8e838b251178212f1f3487b2bb23f875fc1ba31daa241227"
+    },
+    {
+      "file": "claude-map-055.json",
+      "sha256": "20e3e7a072d1fe6e06632bf93d54edb8ba650d9dd8bf598bcd35b7bd738fd334"
+    },
+    {
+      "file": "claude-map-056.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-057.json",
+      "sha256": "a738a03593680543359f62a63c938609b03c44fbd761b966bd928dcfa3a7b569"
+    },
+    {
+      "file": "claude-map-058.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-059.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-060.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-061.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-062.json",
+      "sha256": "84f9242677fc8941d15e9884a021b1a6a9f07abb592a3dd7eb28c7a75a8950ab"
+    },
+    {
+      "file": "claude-map-063.json",
+      "sha256": "1ae21b64c3b48c1045be83dd4a0626b3050c86b661980a9b677f988b9903f95e"
+    },
+    {
+      "file": "claude-map-064.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-065.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-066.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-100.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-101.json",
+      "sha256": "b230c839a39424b084e05f0ae828e60e591d04e2677921252e3b4be2f1af8157"
+    },
+    {
+      "file": "claude-map-102.json",
+      "sha256": "7f1f659bf5e28e6e755db246cf92ff1ac89cf23bf777c3147eb4def9c2a1e2cd"
+    },
+    {
+      "file": "claude-map-103.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-104.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-105.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-106.json",
+      "sha256": "1b89ddddc9a6e459054b1f24a9150ca59f5ba14cdcb38fbe6f9b9e17d6a901b7"
+    },
+    {
+      "file": "claude-map-107.json",
+      "sha256": "432470101697e15a88fc88a357e38c0c4fda1f9263e8042f95d51b13e02c7ff3"
+    },
+    {
+      "file": "claude-map-108.json",
+      "sha256": "6c1c8569d20f4c4b88ebddbf95f1bb3d10aa05cf4e127de038121dc9226b305b"
+    },
+    {
+      "file": "claude-map-109.json",
+      "sha256": "0ab1da950863dc68332c110308bf8511b12e595a7418562e33dc47cef8601da8"
+    },
+    {
+      "file": "claude-map-110.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-111.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "claude-map-200.json",
+      "sha256": "c1caf8fb603e3ce6272d2c8828d5559d7f1ad61796bd38ef3b6dd23bf14b12c9"
+    }
+  ],
+  "finalCorpusSha256": "85c3b548ca9edd242c8f08bf45c8b5e83b919c91c90cac1aa11269e73b2e0be5",
+  "editorialReview": "editorial-review.json"
+}

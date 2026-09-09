@@ -1,0 +1,17 @@
+[
+  {
+    "id": "4fd211f7f1e17dd9",
+    "before": "❓ Vállalnak vendégváltás közötti expressz takarítást szálláshelyeknek?",
+    "after": "❓ Vállaltok vendégváltás közötti expressz takarítást szálláshelyeknek?"
+  },
+  {
+    "id": "880cd7697d919a11",
+    "before": "❓ Milyen típusú takarítást vállalnak Badacsonyban?",
+    "after": "❓ Milyen típusú takarítást vállaltok Badacsonyban?"
+  },
+  {
+    "id": "3b2f992afc6c2ebb",
+    "before": "❓ HACCP-kompatibilis takarítást is vállalnak éttermeknek?",
+    "after": "❓ HACCP-kompatibilis takarítást is vállaltok éttermeknek?"
+  }
+]

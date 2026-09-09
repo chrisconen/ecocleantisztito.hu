@@ -148,7 +148,7 @@
     document.getElementById('calendarWrapper').style.display=hasItems&&State.city&&!State.isLargeOrder?'block':'none';
     enhanceFields();
   };
-  document.getElementById('citySelect').setAttribute('aria-label','Válasszon régiót');
+  document.getElementById('citySelect').setAttribute('aria-label','Válassz régiót');
   document.getElementById('totalPrice').setAttribute('aria-live','polite');
   document.getElementById('totalPrice').setAttribute('aria-atomic','true');
   const autocomplete={nameInput:'name',emailInput:'email',emailConfirmInput:'off',phoneInput:'tel',streetInput:'street-address',cityInput:'address-level2',plzInput:'postal-code'};

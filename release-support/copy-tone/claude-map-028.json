@@ -1,0 +1,22 @@
+[
+  {
+    "id": "dbab4eac6577b2a0",
+    "before": "Kérje a tisztítást a saját városában",
+    "after": "Kérd a tisztítást a saját városodban"
+  },
+  {
+    "id": "8349b7a8a63c21b9",
+    "before": "Húzza el a csúszkát, és lássa a különbséget",
+    "after": "Húzd el a csúszkát, és lásd a különbséget"
+  },
+  {
+    "id": "2a7020d16744f7ba",
+    "before": "Az alábbi munkák mind valós ügyfeleinknél készültek. Mozgassa a csúszkát balra-jobbra, hogy összehasonlítsa a tisztítás előtti és utáni állapotot.",
+    "after": "Az alábbi munkák mind valós ügyfeleinknél készültek. Mozgasd a csúszkát balra-jobbra, hogy összehasonlítsd a tisztítás előtti és utáni állapotot."
+  },
+  {
+    "id": "1557e6a9f6325347",
+    "before": "Húzza el a fogantyút az összehasonlításhoz",
+    "after": "Húzd el a fogantyút az összehasonlításhoz"
+  }
+]

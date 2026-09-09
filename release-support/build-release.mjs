@@ -18,6 +18,7 @@ const pageInventory=[...inventory.map(rec=>({...rec,source:'demo/'+rec.file})),.
 const approvedMediterranean=JSON.parse(fs.readFileSync(path.join(demo,'mediterranean/manifest.json'),'utf8'));
 const mediterraneanPages=new Map(approvedMediterranean.pages.map(page=>[page.file,page]));
 const previousManifest=JSON.parse(fs.readFileSync(path.join(support,'release-manifest.json'),'utf8'));
+if(previousManifest.copyOverlay)throw Error('Reviewed informal copy is active. Rebase the copy overlay before a full rebuild; see release-support/copy-tone/README.md.');
 const homeDOM=new JSDOM(fs.readFileSync(path.join(demo,'index.html'),'utf8'));
 const socialLinks=new Map([['fa-facebook-f','Facebook'],['fa-twitter','X'],['fa-linkedin','LinkedIn']].map(([icon,label])=>[icon,homeDOM.window.document.querySelector(`.footer-social a[aria-label="${label}"]`).outerHTML]));
 socialLinks.set('fa-instagram','<a href="https://www.instagram.com/ecocleantisztito" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg></a>');
