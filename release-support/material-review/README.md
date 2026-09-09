@@ -21,15 +21,18 @@ Commands from the project folder:
 ```powershell
 python services/material-recognition/review_inbox.py sync
 python services/material-recognition/review_inbox.py gallery
-python services/material-recognition/review_inbox.py complete --id UUID
+python services/material-recognition/review_inbox.py work
 ```
 
-The `complete` command marks a request closed locally after the operator sends
-the reply; it does not send mail. No review image is activated as a reference.
+The interactive `work` command fetches a fresh queue, opens the private gallery,
+and records the operator's decision, evidence and sent-reply attestation. The
+underlying `complete` command requires `--outcome`, `--evidence`, `--reply-sent`.
+It does not send mail. No review image is activated as a reference.
 The private operator endpoint permits deletion of a specific request when needed.
 
-Deployment uses a bounded `reviewOverlay`: only the two widget assets and their
-versioned references on 35 existing pages change. The parent Studio/copy/widget
+Deployment uses a bounded `reviewOverlay` version 2: the two widget assets and their
+versioned references on 35 existing pages change, plus append-only home CSS and its
+one index reference (38 files). The parent Studio/copy/widget
 proof is restored and rerun; the existing baselines are not overwritten. The
 new sources are in `demo/material-review`, based on the current informal release
 copy. Do not rerun the earlier widget/Studio builders over this later layer.

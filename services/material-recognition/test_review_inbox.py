@@ -2,6 +2,7 @@ import base64,hashlib,io,json,tempfile,unittest
 from pathlib import Path
 from PIL import Image
 from archive import Archive
+import review_inbox
 from review_inbox import pull_reviews,validate
 from sync import SyncError
 
@@ -29,4 +30,26 @@ class ReviewTests(unittest.TestCase):
   self.assertFalse((self.archive.root/'emailes-ellenorzes'/self.id/'request.json').exists())
   self.record['consent']['granted']=False
   with self.assertRaises(SyncError):validate(self.record,self.id)
+ def test_completion_requires_sent_reply_and_human_evidence(self):
+  pull_reviews(self.client())
+  with self.assertRaises(ValueError):review_inbox.complete(self.archive,self.id,'woven','',True)
+  with self.assertRaises(ValueError):review_inbox.complete(self.archive,self.id,'woven','Kereszteződő fonalak',False)
+  review_inbox.complete(self.archive,self.id,'woven','Kereszteződő fonalak',True)
+  saved=json.loads((self.archive.root/'emailes-ellenorzes'/self.id/'completed.json').read_bytes())
+  self.assertEqual(saved['outcome'],'woven');self.assertIn('completed_utc',saved)
+  self.assertEqual(self.archive.references(),[])
+  page=(self.archive.root/'emailes-ellenorzes'/'index.html').read_text('utf-8')
+  self.assertIn('0 válaszra vár',page);self.assertIn('1 lezárva',page)
+  self.assertIn('Kereszteződő fonalak',page)
+  with self.assertRaises(ValueError):review_inbox.complete(self.archive,self.id,'novalife','Másik döntés',True)
+ def test_oldest_pending_first_and_closed_collapsed(self):
+  pull_reviews(self.client())
+  newer=self.id
+  self.id='00000000-2222-4333-8444-555555555555';self.record=dict(self.record,id=self.id,received_utc='2026-09-08T10:00:00Z',email='older@example.invalid')
+  pull_reviews(self.client());page=(self.archive.root/'emailes-ellenorzes'/'index.html').read_text('utf-8')
+  self.assertLess(page.index('older@example.invalid'),page.index('test@example.invalid'))
+  review_inbox.complete(self.archive,self.id,'more_photo','A kép életlen, új fotót kértünk',True)
+  page=(self.archive.root/'emailes-ellenorzes'/'index.html').read_text('utf-8')
+  self.assertIn('1 válaszra vár · 1 lezárva',page)
+  self.assertLess(page.index('<summary>Lezárt kérések'),page.index('older@example.invalid'))
 if __name__=='__main__':unittest.main()

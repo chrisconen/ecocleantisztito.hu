@@ -85,6 +85,9 @@ def build_targets():
         studio = bound(manifest['studioOverlay'])
         names.update(record['file'] for record in studio['pages'])
         names.update(record['file'] for record in studio['dependencies'])
+    if manifest.get('reviewOverlay'):
+        review = bound(manifest['reviewOverlay'])
+        names.update(record['file'] for record in review['files'])
     if not names:
         raise ValueError('No widget/copy release overlay to verify')
     references = {}

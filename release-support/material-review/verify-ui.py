@@ -33,11 +33,24 @@ with sync_playwright() as p:
    fail[0]=False;submit.click();expect(form.locator('[data-review-status]')).to_contain_text('Megkaptuk');expect(submit).to_be_disabled();assert all(k=='review' for k,_ in posts)
    page.locator('[data-material-file]').set_input_files(photo);expect(form.locator('[data-review-consent]')).not_to_be_checked();expect(submit).to_be_enabled()
    page.locator('[data-material-analyze]').click();expect(page.locator('[data-novalife-status=likely_other]')).to_be_visible();assert 'helyszín' not in page.locator('[data-material-result]').inner_text().lower()
+   panel=page.locator('[data-novalife-status=likely_other]');expect(panel.locator('.eco-material-novalife-next')).to_have_count(0)
+   expect(panel.locator('.eco-material-novalife-reason')).to_have_text(fixture['indoklas'])
+   expect(page.locator('[data-material-result] a').filter(has_text='Tovább az árkalkulátorhoz')).to_have_count(1)
+   expect(panel.locator('[data-material-followup=label]')).not_to_be_visible()
+   disclosure=panel.locator('.eco-material-optional-label summary');disclosure.focus();page.keyboard.press('Enter');expect(panel.locator('[data-material-followup=label]')).to_be_visible();page.keyboard.press('Enter')
+   expect(page.locator('.eco-material-result-details')).not_to_have_attribute('open','')
+   if file=='karpittisztitas-gyor.html':page.locator('[data-material-result]').screenshot(path=str(OUT/f'{"live" if live else "local"}-result-{width}.png'),style='.nav{visibility:hidden!important}')
    page.locator('[data-material-result] a[href="#material-email-review"]').click();form.locator('[data-review-consent]').check();submit.click();expect(form.locator('[data-review-status]')).to_contain_text('Megkaptuk');assert posts[-1][1]['analysis_summary']['status']=='likely_other';assert sum(k=='analyze' for k,_ in posts)==1
    assert not errors and not writes,(errors,writes)
    assert page.evaluate('document.documentElement.scrollWidth')<=max(width,baseline_width)+1,'New document overflow'
    assert not page.locator('#anyagfelismero').evaluate("s=>[...s.querySelectorAll('*')].filter(e=>{const r=e.getBoundingClientRect();return r.width&&r.right>innerWidth+1}).map(e=>e.className)"),'Widget overflow'
    if file=='karpittisztitas-gyor.html':form.screenshot(path=str(OUT/f'{"live" if live else "local"}-email-review-{width}.png'),style='.nav{visibility:hidden!important}')
+   if file=='karpittisztitas-gyor.html':
+    for state in ('uncertain','possible_novalife','label_novalife'):
+     fixture['novalife']['status']=state;fixture['kep_tipus']='cimke' if state=='label_novalife' else 'anyag'
+     page.locator('[data-material-file]').set_input_files(photo);page.locator('[data-material-analyze]').click()
+     active=page.locator('[data-novalife-status='+state+']');expect(active).to_be_visible();expect(active.locator('[data-material-followup=label]')).to_be_visible();expect(page.locator('.eco-material-result-details')).to_have_count(0)
+    fixture['novalife']['status']='likely_other';fixture['kep_tipus']='anyag'
    reports.append({'file':file,'width':width,'reviewWithoutAnalysis':True,'noDuplicateAnalysis':True,'validationAndRetry':True,'passed':True});context.close()
  browser.close()
 (OUT/('live-ui.json' if live else 'ui.json')).write_text(json.dumps(reports,indent=2),encoding='utf-8');print(json.dumps({'cases':len(reports),'passed':True}))

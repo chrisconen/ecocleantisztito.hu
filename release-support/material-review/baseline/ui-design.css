@@ -443,13 +443,3 @@ input::placeholder,textarea::placeholder {color:#8a917d; opacity:1;}
   *,*:before,*:after {animation:none!important; transition:none!important; scroll-behavior:auto!important;}
   .reveal.is-pending {opacity:1; translate:none;} .hero-placeholder>#interiorImage {transform:none;}
 }
-
-/* Narrow home cards and booking heading: preserve readable, intrinsic sizing. */
-@media (max-width: 480px) {
-  body:has(#interiorImage) .services .services-grid { grid-template-columns: minmax(0, 1fr); }
-  body:has(#interiorImage) .services .service-card:not(.service-card-featured) { min-height: 0; }
-  body:has(#interiorImage) .services .service-title { overflow-wrap: anywhere; }
-  body:has(#interiorImage) .price-configurator .config-header { flex-wrap: wrap; align-items: flex-start; }
-  body:has(#interiorImage) .price-configurator .config-header h3 { min-width: 0; }
-  body:has(#interiorImage) .price-configurator .config-status { flex: 0 0 auto; margin-left: 0; }
-}
