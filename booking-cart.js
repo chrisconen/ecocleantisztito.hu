@@ -16,6 +16,7 @@
         tab.type = 'button';
         tab.id = 'bookingCartTab';
         tab.className = 'booking-cart-tab';
+        tab.hidden = true;
         tab.setAttribute('aria-controls', 'bookingCartDrawer');
         tab.setAttribute('aria-haspopup', 'dialog');
         tab.setAttribute('aria-expanded', 'false');
@@ -37,6 +38,14 @@
         const quantity = drawer.querySelector('#bookingCartQuantity');
         let closeTimer, pulseTimer, lastCount = 0, lastPrice = 0, scrollLock;
 
+        function hasItems() {
+            return Object.values(State.selectedItems).some(item => item.count > 0);
+        }
+
+        function syncTabVisibility() {
+            tab.hidden = !mobile.matches || drawer.open || !hasItems();
+        }
+
         function lockScroll() {
             const body = document.body;
             const properties = ['position', 'top', 'left', 'right', 'width', 'overflow'];
@@ -56,10 +65,10 @@
             clearTimeout(closeTimer);
             if (drawer.open) drawer.close();
             delete drawer.dataset.closing;
-            tab.hidden = !mobile.matches;
+            syncTabVisibility();
             tab.setAttribute('aria-expanded', 'false');
             unlockScroll();
-            if (mobile.matches) tab.focus({ preventScroll: true });
+            if (!tab.hidden) tab.focus({ preventScroll: true });
         }
 
         function closeCart() {
@@ -70,7 +79,7 @@
         }
 
         tab.addEventListener('click', () => {
-            if (!mobile.matches || drawer.open) return;
+            if (!mobile.matches || drawer.open || !hasItems()) return;
             drawer.showModal();
             tab.hidden = true;
             tab.setAttribute('aria-expanded', 'true');
@@ -85,7 +94,7 @@
             if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) closeCart();
         });
         drawer.addEventListener('close', () => {
-            tab.hidden = !mobile.matches;
+            syncTabVisibility();
             tab.setAttribute('aria-expanded', 'false');
             unlockScroll();
         });
@@ -94,11 +103,13 @@
             if (!mobile.matches && drawer.open) finishClose();
             if (mobile.matches) content.append(summary);
             else home.after(summary);
-            tab.hidden = !mobile.matches || drawer.open;
+            syncTabVisibility();
         }
 
         function syncCart() {
             const count = Object.values(State.selectedItems).reduce((total, item) => total + Math.max(0, Number(item.count) || 0), 0);
+            if (count === 0 && drawer.open) finishClose();
+            syncTabVisibility();
             const price = State.totalPrice;
             const money = `${price.toLocaleString('hu-HU')} Ft`;
             badge.textContent = String(count);

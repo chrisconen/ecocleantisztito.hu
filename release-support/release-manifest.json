@@ -15804,7 +15804,7 @@
       "source": "img/vegyszermentes-karpittisztito.webp"
     },
     "index.html": {
-      "sha256": "313915457b7a014da3139e6d4dd5e80904afe68ca8c780c32182586c351f0c1f",
+      "sha256": "99446b0addc2225056a30f183fd75868f474e1539ccbea07d66ad4def9f4fce9",
       "bytes": 115819,
       "source": "demo/index.html"
     },
@@ -17290,8 +17290,8 @@
     },
     "ui/booking-cart.js": {
       "source": "booking-cart.js",
-      "sha256": "87533a84e8e8e298665cc48f64423f9be5e5128a9c1357867ebce947c222d61b",
-      "bytes": 7009
+      "sha256": "123e3a3629759f36af33667950bca4b5f2234b0f76d901e6bea1f97ea4100687",
+      "bytes": 7345
     },
     "ui/booking-cart.css": {
       "source": "booking-cart.css",
@@ -17318,6 +17318,6 @@
   },
   "bookingExtrasOverlay": {
     "path": "release-support/booking-extras/overlay.json",
-    "sha256": "9b0b4532b72bca590014eef43a1cbffec4e9ebbeced27c3a008a2a7e08d9c7ca"
+    "sha256": "08125d2ec768b51b37faafaca82eb71e0f2b88982630946407bbf5cf4e94726b"
   }
 }
