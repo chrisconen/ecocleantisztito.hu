@@ -325,19 +325,10 @@ input::placeholder,textarea::placeholder {color:#8a917d; opacity:1;}
 .calendar-month-button:disabled {opacity:.35; cursor:default;}
 .demo-calendar-grid {display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:5px;}
 .calendar-weekday {font-size:10px; color:#889478; text-align:center; padding-bottom:10px;}
-.calendar-day {aspect-ratio:1.1; min-height:32px; border:1px solid transparent; border-radius:4px; font-size:12px;}
-.calendar-day.free {background:#e7f0dc; border-color:#5b7a45; color:#3c5a2c;}
-.calendar-day.limited {background:#fbe6c9; border-color:#dca24a; color:#8a5a1c;}
-.calendar-day.full,.calendar-day.zone_blocked,.calendar-day.unavailable,.calendar-day.not_enough_time,.calendar-day.unknown {background:#f6dcd8; border-color:#cf6b5e; color:#9c3b30;}
-.calendar-day.past,.calendar-day.weekend {background:#f4f5ee; border-color:transparent; color:#b0b6a5; cursor:default;}
-.calendar-day:hover:not(:disabled) {filter:brightness(.97); border-color:#3c5a2c;}
-.calendar-day.selected {background:#536d3f; border-color:#3f5830; color:white;}
-.calendar-legend {display:flex; flex-wrap:wrap; gap:14px 18px; margin-top:16px; padding-top:14px; border-top:1px solid #e1e6d7; font-size:11px; color:#5a6b4d;}
-.calendar-legend span {display:inline-flex; align-items:center; gap:7px;}
-.calendar-legend-swatch {width:13px; height:13px; border-radius:3px; display:inline-block;}
-.calendar-legend-swatch--free {background:#e7f0dc; border:1px solid #5b7a45;}
-.calendar-legend-swatch--limited {background:#fbe6c9; border:1px solid #dca24a;}
-.calendar-legend-swatch--full {background:#f6dcd8; border:1px solid #cf6b5e;}
+.calendar-day {aspect-ratio:1.1; min-height:32px; border:1px solid transparent; border-radius:4px; background:#edf2e5; font-size:12px; color:#577145;}
+.calendar-day:hover:not(:disabled) {background:#dfe9d0; border-color:#a9bb90;}
+.calendar-day:disabled {color:#b0b6a5; background:#f4f5ee; cursor:default;}
+.calendar-day.selected {background:#536d3f; color:white;}
 .demo-slots {display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; border-top:1px solid #e1e6d7; padding-top:18px;}
 .demo-slots button {border:1px solid #d3dec6; background:#eef3e5; color:#5d764b; border-radius:4px; padding:10px 18px; font-size:12px;}
 .demo-slots button.selected {background:#526d3e; color:white;}

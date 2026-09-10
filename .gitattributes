@@ -18,3 +18,4 @@
 /release-support/material-review/** -text
 /demo/material-review/** -text
 /release-support/booking-extras/** -text
+/release-support/calendar-status.css -text

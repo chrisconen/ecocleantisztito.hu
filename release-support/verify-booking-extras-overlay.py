@@ -19,7 +19,7 @@ def verify(manifest):
         data = (ROOT/ref['path']).read_bytes()
         assert sha(data) == ref['sha256']
         overlay = json.loads(data)
-        assert overlay['version'] == 2
+        assert overlay['version'] == 3
         parent_bytes = (HERE/'baseline-manifest.json').read_bytes()
         report_bytes = (HERE/'baseline-verification.json').read_bytes()
         assert sha(parent_bytes) == overlay['parentSha256']
@@ -28,12 +28,13 @@ def verify(manifest):
         assert report['issues'] == [] and report['manifestSha256'] == sha(parent_bytes)
         assert set(manifest) == set(parent) | {'bookingExtrasOverlay'}
         assert all(manifest[k] == parent[k] for k in parent if k != 'files')
-        assert set(manifest['files']) == set(parent['files']) | {'ui/booking-extras.css', 'ui/booking-cart.js', 'ui/booking-cart.css'}
-        assert set(overlay['sources']) == {'booking-config.js', 'style.css', 'booking-cart.js', 'booking-cart.css'}
+        assert set(manifest['files']) == set(parent['files']) | {'ui/booking-extras.css', 'ui/booking-cart.js', 'ui/booking-cart.css', 'ui/calendar-status.css'}
+        assert set(overlay['sources']) == {'booking-config.js', 'style.css', 'booking-cart.js', 'booking-cart.css', 'release-support/calendar-status.css'}
         for name, digest in overlay['sources'].items():
             assert sha((ROOT/name).read_text('utf-8-sig').encode()) == digest, 'Booking source differs: '+name
         assert sha((HERE/'root-before.js').read_bytes()) == overlay['rootBeforeSha256']
-        restored = {name: (HERE/'baseline'/Path(name).name).read_bytes() for name in ['index.html', 'ui/booking-live.js']}
+        assert sha((HERE/'baseline/calendar-live.js').read_bytes()) == overlay['calendarBaselineSha256']
+        restored = {name: (HERE/'baseline'/Path(name).name).read_bytes() for name in ['index.html', 'ui/booking-live.js', 'ui/calendar-live.js']}
         for name, baseline in restored.items():
             assert sha(baseline) == parent['files'][name]['sha256'], 'Wrong booking baseline: '+name
         builder = load_module('booking_extras_builder', HERE/'build.py')
@@ -42,12 +43,18 @@ def verify(manifest):
         css = (ROOT/'style.css').read_text('utf-8')
         css = css[css.index('.mattress-extra,'):css.index('.upsell-group-title {')]
         expected = {'ui/booking-live.js': runtime.encode(), 'ui/booking-extras.css': css.encode()}
+        expected['ui/calendar-live.js'] = builder.apply_calendar_legend(restored['ui/calendar-live.js'].decode('utf-8')).encode('utf-8')
+        expected['ui/calendar-status.css'] = (ROOT/'release-support/calendar-status.css').read_bytes()
         for name in ['booking-cart.js', 'booking-cart.css']:
             expected['ui/'+name] = (ROOT/name).read_text('utf-8-sig').encode()
         old_url = 'ui/booking-live.js?v='+parent['files']['ui/booking-live.js']['sha256'][:12]
         html = restored['index.html'].decode().replace('\r\n', '\n')
         assert html.count(old_url) == 1 and html.count('</head>') == 1
         html = html.replace(old_url, 'ui/booking-live.js?v='+sha(expected['ui/booking-live.js'])[:12])
+        old_cal = 'ui/calendar-live.js?v='+parent['files']['ui/calendar-live.js']['sha256'][:12]
+        assert html.count(old_cal) == 1
+        html = html.replace(old_cal, 'ui/calendar-live.js?v='+sha(expected['ui/calendar-live.js'])[:12])
+        html = html.replace('</head>', '<link rel="stylesheet" href="ui/calendar-status.css?v='+sha(expected['ui/calendar-status.css'])[:12]+'"></head>')
         html = html.replace('</head>', '<link rel="stylesheet" href="ui/booking-extras.css?v='+sha(expected['ui/booking-extras.css'])[:12]+'"></head>')
         html = html.replace('</head>', '<link rel="stylesheet" href="ui/booking-cart.css?v='+sha(expected['ui/booking-cart.css'])[:12]+'"></head>')
         assert html.count('</body>') == 1
@@ -56,7 +63,10 @@ def verify(manifest):
             current = (ROOT/'release'/name).read_bytes()
             if name in expected:
                 assert current == expected[name], 'Unexpected booking patch: '+name
-                source = Path(name).name if name.startswith('ui/booking-cart.') else 'style.css'
+                if name == 'ui/calendar-status.css':
+                    source = 'release-support/calendar-status.css'
+                else:
+                    source = Path(name).name if name.startswith('ui/booking-cart.') else 'style.css'
                 assert record == {**parent['files'].get(name, {'source': source}), 'sha256': sha(current), 'bytes': len(current)}
             else:
                 assert record == parent['files'][name] and sha(current) == record['sha256'], 'Unrelated release change: '+name

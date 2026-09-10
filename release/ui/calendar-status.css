@@ -1,0 +1,14 @@
+/* Reviewed source for the live booking calendar day colors; shipped as ui/calendar-status.css by the booking-extras overlay. */
+.calendar-day {aspect-ratio:1.1; min-height:32px; border:1px solid transparent; border-radius:4px; font-size:12px;}
+.calendar-day.free {background:#e7f0dc; border-color:#5b7a45; color:#3c5a2c;}
+.calendar-day.limited {background:#fbe6c9; border-color:#dca24a; color:#8a5a1c;}
+.calendar-day.full,.calendar-day.zone_blocked,.calendar-day.unavailable,.calendar-day.not_enough_time,.calendar-day.unknown {background:#f6dcd8; border-color:#cf6b5e; color:#9c3b30;}
+.calendar-day.past,.calendar-day.weekend {background:#f4f5ee; border-color:transparent; color:#b0b6a5; cursor:default;}
+.calendar-day:hover:not(:disabled) {filter:brightness(.97); border-color:#3c5a2c;}
+.calendar-day.selected {background:#536d3f; border-color:#3f5830; color:white;}
+.calendar-legend {display:flex; flex-wrap:wrap; gap:14px 18px; margin-top:16px; padding-top:14px; border-top:1px solid #e1e6d7; font-size:11px; color:#5a6b4d;}
+.calendar-legend span {display:inline-flex; align-items:center; gap:7px;}
+.calendar-legend-swatch {width:13px; height:13px; border-radius:3px; display:inline-block;}
+.calendar-legend-swatch--free {background:#e7f0dc; border:1px solid #5b7a45;}
+.calendar-legend-swatch--limited {background:#fbe6c9; border:1px solid #dca24a;}
+.calendar-legend-swatch--full {background:#f6dcd8; border:1px solid #cf6b5e;}
