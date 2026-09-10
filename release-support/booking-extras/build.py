@@ -46,19 +46,24 @@ def main():
     css = (ROOT/'style.css').read_text('utf-8')
     css = css[css.index('.mattress-extra,'):css.index('.upsell-group-title {')]
     outputs = {'ui/booking-live.js': runtime.encode(), 'ui/booking-extras.css': css.encode()}
+    for name in ['booking-cart.js', 'booking-cart.css']:
+        outputs['ui/'+name] = (ROOT/name).read_text('utf-8-sig').encode()
     html = (HERE/'baseline/index.html').read_text('utf-8')
     old_url = 'ui/booking-live.js?v=' + parent['files']['ui/booking-live.js']['sha256'][:12]
     new_url = 'ui/booking-live.js?v=' + sha(outputs['ui/booking-live.js'])[:12]
     assert html.count(old_url) == 1
     html = html.replace(old_url, new_url)
     html = html.replace('</head>', '<link rel="stylesheet" href="ui/booking-extras.css?v=' + sha(outputs['ui/booking-extras.css'])[:12] + '"></head>')
+    html = html.replace('</head>', '<link rel="stylesheet" href="ui/booking-cart.css?v=' + sha(outputs['ui/booking-cart.css'])[:12] + '"></head>')
+    html = html.replace('</body>', '<script defer src="ui/booking-cart.js?v=' + sha(outputs['ui/booking-cart.js'])[:12] + '"></script></body>')
     outputs['index.html'] = html.encode()
-    overlay = {'version': 1, 'parentSha256': sha(parent_bytes), 'reportSha256': sha(report_bytes),
+    overlay = {'version': 2, 'parentSha256': sha(parent_bytes), 'reportSha256': sha(report_bytes),
         'rootBeforeSha256': sha((HERE/'root-before.js').read_bytes()), 'edits': edits,
-        'sources': {name: sha((ROOT/name).read_text('utf-8-sig').encode()) for name in ['booking-config.js', 'style.css']}}
+        'sources': {name: sha((ROOT/name).read_text('utf-8-sig').encode()) for name in ['booking-config.js', 'style.css', 'booking-cart.js', 'booking-cart.css']}}
     manifest = json.loads(parent_bytes)
     for name, data in outputs.items():
-        manifest['files'][name] = {**parent['files'].get(name, {'source': 'style.css'}), 'sha256': sha(data), 'bytes': len(data)}
+        source = Path(name).name if name.startswith('ui/booking-cart.') else 'style.css'
+        manifest['files'][name] = {**parent['files'].get(name, {'source': source}), 'sha256': sha(data), 'bytes': len(data)}
         (ROOT/'release'/name).write_bytes(data)
     overlay_bytes = (json.dumps(overlay, ensure_ascii=False, indent=2)+'\n').encode()
     (HERE/'overlay.json').write_bytes(overlay_bytes)

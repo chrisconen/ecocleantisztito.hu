@@ -15804,8 +15804,8 @@
       "source": "img/vegyszermentes-karpittisztito.webp"
     },
     "index.html": {
-      "sha256": "5d92f2f2469052c80653455023d4e2eeff8c11b9c7935ee8c507c0cd83a30064",
-      "bytes": 115691,
+      "sha256": "313915457b7a014da3139e6d4dd5e80904afe68ca8c780c32182586c351f0c1f",
+      "bytes": 115819,
       "source": "demo/index.html"
     },
     "karpittisztitas-badacsony.html": {
@@ -17287,6 +17287,16 @@
       "source": "style.css",
       "sha256": "bdd124c7e8a175cbb2de3edf221b1849b1e0b2da35980ac8ab8d6c33c60c19e6",
       "bytes": 1052
+    },
+    "ui/booking-cart.js": {
+      "source": "booking-cart.js",
+      "sha256": "87533a84e8e8e298665cc48f64423f9be5e5128a9c1357867ebce947c222d61b",
+      "bytes": 7009
+    },
+    "ui/booking-cart.css": {
+      "source": "booking-cart.css",
+      "sha256": "97b9f9dbbb77293370569925773ca6abe92d2ec069fa8a038e12cd09f7583434",
+      "bytes": 5433
     }
   },
   "unresolved": [],
@@ -17308,6 +17318,6 @@
   },
   "bookingExtrasOverlay": {
     "path": "release-support/booking-extras/overlay.json",
-    "sha256": "2537ab68ab11840db3f53e688f7a03fbc3c9815497d4362ae760cb63ffda5935"
+    "sha256": "9b0b4532b72bca590014eef43a1cbffec4e9ebbeced27c3a008a2a7e08d9c7ca"
   }
 }

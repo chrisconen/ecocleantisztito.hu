@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "parentSha256": "4751b828c02d3ffcb96e0ea6465b5b5335bab3fc356439bbdc5346b75e9a9002",
   "reportSha256": "a53f79fe2a2ff466dc20fab1172a633943c9f1ee4ed6c458a26f52bdd00f6710",
   "rootBeforeSha256": "5a314196bbb2a03e07e121bfe145b025c7c0f08d4138b21061a923de4ce7cddf",
@@ -75,6 +75,8 @@
   ],
   "sources": {
     "booking-config.js": "7bf70934c4580bf4b77baaace9e186a63d3500bee4e82aadd7430d0ae6aec3ac",
-    "style.css": "ce27669e8a39faabfbcb45e038da4cb44ff03f0dceb9cc848a8022b638358f8d"
+    "style.css": "ce27669e8a39faabfbcb45e038da4cb44ff03f0dceb9cc848a8022b638358f8d",
+    "booking-cart.js": "87533a84e8e8e298665cc48f64423f9be5e5128a9c1357867ebce947c222d61b",
+    "booking-cart.css": "97b9f9dbbb77293370569925773ca6abe92d2ec069fa8a038e12cd09f7583434"
   }
 }
