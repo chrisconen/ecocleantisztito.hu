@@ -118,13 +118,15 @@
   }
 
   let instanceCount = 0;
-  function mount(root) {
+  function mount(root, options = {}) {
     if (!root || root.nodeType !== 1) throw new TypeError('A konfigurátorhoz egy DOM-elem szükséges.');
     if (root.ecoMediterraneanConfigurator) return root.ecoMediterraneanConfigurator;
     const prefix = 'med-config-' + (++instanceCount);
     const assets = (root.dataset.assets || 'mediterranean/assets').replace(/\/$/, '');
     const state = { items: [], extras: {}, travelZone: '', city: cities[root.dataset.city] ? root.dataset.city : '' };
     const choices = Object.fromEntries(catalog.map(p => [p.id, p.variants[0].id]));
+    const mobileBar = options.mobileBar || null;
+    const drawer = options.drawer || null;
     root.classList.add('med-config');
     root.innerHTML = `<div class="med-config-layout"><div class="med-config-main"><div class="med-config-products">${catalog.map(product => `
       <article class="med-product" data-product="${product.id}">
@@ -149,8 +151,17 @@
       if (!item) { item = { id: productId, variant: choices[productId], quantity: 0 }; state.items.push(item); }
       return item;
     }
+    function syncMobileBar(result) {
+      if (!mobileBar || !drawer) return;
+      const count = state.items.reduce((sum, item) => sum + (item.quantity || 0), 0);
+      mobileBar.classList.toggle('is-visible', result.hasItems);
+      mobileBar.querySelector('[data-bar-total]').textContent = money(result.total);
+      mobileBar.querySelector('[data-bar-status]').textContent = !result.hasItems ? 'Válaszd ki a bútorokat a kalkulációhoz.' : result.travelIncluded ? 'Kiszállással együtt · tájékoztató összeg' : 'Kiszállás nélkül · válassz körzetet';
+      mobileBar.querySelector('[data-bar-count]').textContent = String(count);
+    }
     function update() {
       const result = calculate(state);
+      syncMobileBar(result);
       const inquiry = createInquiry(state);
       const emailLink = root.querySelector('[data-email-inquiry]');
       emailLink.setAttribute('aria-disabled', String(!inquiry));
@@ -231,15 +242,70 @@
       else return;
       update();
     });
+    if (mobileBar && drawer) {
+      const cart = mobileBar.querySelector('[data-cart]');
+      const openDrawer = () => { drawer.showModal(); drawer.classList.add('is-open'); cart.setAttribute('aria-expanded', 'true'); };
+      const closeDrawer = () => { drawer.classList.remove('is-open'); if (drawer.open) drawer.close(); cart.setAttribute('aria-expanded', 'false'); };
+      cart.addEventListener('click', openDrawer);
+      drawer.querySelector('[data-drawer-close]').addEventListener('click', closeDrawer);
+      drawer.addEventListener('close', closeDrawer);
+      const drawerBody = drawer.querySelector('.med-config-drawer-body');
+      drawerBody.addEventListener('click', event => {
+        const button = event.target.closest('button');
+        if (!button || !drawerBody.contains(button)) return;
+        if (button.hasAttribute('data-copy-inquiry')) {
+          const field = drawerBody.querySelector('[data-email-text]');
+          const status = drawerBody.querySelector('[data-copy-status]');
+          global.navigator.clipboard.writeText(field.value).then(
+            () => { status.textContent = 'A levélszöveget másoltuk. Illeszd be a leveleződbe, egészítsd ki az elérhetőségeddel, majd küldd el.'; },
+            () => { field.focus(); field.select(); status.textContent = 'Jelöltük a levélszöveget. Másold ki a készüléked másolás parancsával, majd illeszd be a leveleződbe.'; }
+          );
+        } else if (button.dataset.remove) {
+          state.items = state.items.filter(i => i.id + ':' + i.variant !== button.dataset.remove);
+          update();
+          drawerBody.querySelector('.med-config-reset').focus();
+        } else if (button.hasAttribute('data-reset')) {
+          state.items = []; state.extras = {};
+          root.querySelectorAll('[data-extra]').forEach(input => { input.checked = false; });
+          update();
+        }
+      });
+    }
     const instance = { getSelection: () => JSON.parse(JSON.stringify(state)), getEstimate: () => calculate(state) };
     root.ecoMediterraneanConfigurator = instance;
     update();
     return instance;
   }
 
-  global.EcoMediterraneanPricing = Object.freeze({ catalog, cities, travelZones, extras, calculate, createInquiry, mount, formatMoney: money });
+  const cartIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h2l2.4 10.2a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.8L20 8H6"></path><circle cx="9.5" cy="20" r="1.4"></circle><circle cx="17.5" cy="20" r="1.4"></circle></svg>';
+  function createMobileBar(root) {
+    const bar = root.ownerDocument.createElement('div');
+    bar.className = 'med-config-bar';
+    bar.setAttribute('aria-label', 'Árkalkuláció összesítő sáv');
+    bar.innerHTML = '<div class="med-config-bar-total"><span class="med-config-bar-amount" data-bar-total>0 Ft</span><span class="med-config-bar-status" data-bar-status></span></div><button type="button" class="med-config-cart" data-cart aria-expanded="false" aria-label="Összesítő megnyitása"><span class="med-config-cart-badge" data-bar-count>0</span>' + cartIcon + '</button>';
+    const drawer = root.ownerDocument.createElement('dialog');
+    drawer.className = 'med-config-drawer';
+    drawer.setAttribute('aria-label', 'Árkalkuláció összesítő');
+    drawer.innerHTML = '<div class="med-config-drawer-head"><span class="med-config-drawer-title">Az összeállításod</span><button type="button" class="med-config-drawer-close" data-drawer-close aria-label="Összesítő bezárása">×</button></div><div class="med-config-drawer-body"></div>';
+    const body = drawer.querySelector('.med-config-drawer-body');
+    root.addEventListener('med-config-change', () => {
+      const summary = root.querySelector('.med-config-summary');
+      if (summary) body.replaceChildren(summary.cloneNode(true));
+    });
+    return { bar, drawer };
+  }
+
+  global.EcoMediterraneanPricing = Object.freeze({ catalog, cities, travelZones, extras, calculate, createInquiry, mount, formatMoney: money, createMobileBar });
   if (typeof document !== 'undefined') {
-    const start = () => document.querySelectorAll('[data-med-configurator]').forEach(mount);
+    const start = () => document.querySelectorAll('[data-med-configurator]').forEach(root => {
+      let mobile = null;
+      if (root.dataset.mobileBar === 'true') {
+        const created = createMobileBar(root);
+        root.after(created.bar, created.drawer);
+        mobile = created;
+      }
+      mount(root, mobile ? { mobileBar: mobile.bar, drawer: mobile.drawer } : {});
+    });
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, { once: true });
     else start();
   }

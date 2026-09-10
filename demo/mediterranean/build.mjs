@@ -4,6 +4,7 @@ import crypto from 'node:crypto';
 import {createRequire} from 'node:module';
 import {fileURLToPath} from 'node:url';
 import {icon,shapes} from './icons.mjs';
+import {integrateMaterialRecognition} from '../material-recognition/component.mjs';
 const dir=path.dirname(fileURLToPath(import.meta.url)),demo=path.dirname(dir),root=path.dirname(demo);
 const require=createRequire(path.join(process.env.TEMP,'ecoclean-demo-qa','package.json'));
 const {JSDOM}=require('jsdom');
@@ -97,8 +98,10 @@ for(const {file,city,service} of targets){
  const faqSchema={'@context':'https://schema.org','@type':'FAQPage',mainEntity:faq.map(q=>({'@type':'Question',name:q.question,acceptedAnswer:{'@type':'Answer',text:q.answer}}))};
  const serviceSchema={'@context':'https://schema.org','@type':'Service',name:title,description,provider:{'@type':'Organization',name:'ECO Clean',url:'https://ecocleantisztito.hu/',telephone:'+36702408141'},areaServed:(city?[city]:cities).map(c=>({'@type':'City',name:c.name}))};
  const output=`<!doctype html><html lang="hu" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>DEMÓ · ${esc(title)}</title><meta name="description" content="${esc(description)}"><link rel="canonical" href="https://ecocleantisztito.hu/${file}"><meta name="theme-color" content="#faf7f1"><link rel="icon" href="../favicon-32x32.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet"><link rel="stylesheet" href="modern.css"><link rel="stylesheet" href="mediterranean/design.css"><script type="application/ld+json">${JSON.stringify(serviceSchema).replace(/</g,'\\u003c')}</script><script type="application/ld+json">${JSON.stringify(faqSchema).replace(/</g,'\\u003c')}</script></head><body class="eco-modern eco-mediterranean" data-city="${city?.slug||'region'}" data-med-service="${service}"><a class="med-skip" href="#main-content">Ugrás a tartalomhoz</a>${header.outerHTML}${mobile.outerHTML}${main}${footer.outerHTML}<script src="rollout.js"></script><script src="mediterranean/configurator.js"></script><script src="mediterranean/interactions.js"></script></body></html>`;
- fs.writeFileSync(path.join(demo,file),output);
- manifest.push({file,city:city?.name||'region',service,sourceSha256:crypto.createHash('sha256').update(original).digest('hex'),outputSha256:crypto.createHash('sha256').update(output).digest('hex'),originalPairs,retainedPairs:pairs});
+ let integratedOutput=output;
+ if(file.startsWith('karpittisztitas-')){const integrated=new JSDOM(output);integrateMaterialRecognition(integrated.window.document);integratedOutput=integrated.serialize();integrated.window.close();}
+ fs.writeFileSync(path.join(demo,file),integratedOutput);
+ manifest.push({file,city:city?.name||'region',service,sourceSha256:crypto.createHash('sha256').update(original).digest('hex'),outputSha256:crypto.createHash('sha256').update(integratedOutput).digest('hex'),originalPairs,retainedPairs:pairs});
  dom.window.close();
 }
 fs.writeFileSync(path.join(dir,'manifest.json'),JSON.stringify({createdAt:new Date().toISOString(),scope:'demo',pages:manifest},null,2)+'\n');
