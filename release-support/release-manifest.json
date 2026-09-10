@@ -15804,8 +15804,8 @@
       "source": "img/vegyszermentes-karpittisztito.webp"
     },
     "index.html": {
-      "sha256": "99446b0addc2225056a30f183fd75868f474e1539ccbea07d66ad4def9f4fce9",
-      "bytes": 115819,
+      "sha256": "a7cc72c2bcec03762b074ccda6283cd65e982bb883b920263b1ffa1618fbec57",
+      "bytes": 115887,
       "source": "demo/index.html"
     },
     "karpittisztitas-badacsony.html": {
@@ -16539,8 +16539,8 @@
       "source": "release-support/calendar-live.css"
     },
     "ui/calendar-live.js": {
-      "sha256": "d72fed110e1a4d5e282cfaaf5e9de347a160411b73f16f7b74b18ae26f7ceadc",
-      "bytes": 17423,
+      "sha256": "8d83e03a36c5f3d1878a189960ecec107c0fe3a64452bf1039811ae7383091d3",
+      "bytes": 17855,
       "source": "release-support/calendar-live.js"
     },
     "ui/design.css": {
@@ -17297,6 +17297,11 @@
       "source": "booking-cart.css",
       "sha256": "97b9f9dbbb77293370569925773ca6abe92d2ec069fa8a038e12cd09f7583434",
       "bytes": 5433
+    },
+    "ui/calendar-status.css": {
+      "source": "release-support/calendar-status.css",
+      "sha256": "c604caed183ae0e7fdc743ebb96c5e83b20cd52b5f67c10cfd7a41e99267e449",
+      "bytes": 1433
     }
   },
   "unresolved": [],
@@ -17318,6 +17323,6 @@
   },
   "bookingExtrasOverlay": {
     "path": "release-support/booking-extras/overlay.json",
-    "sha256": "08125d2ec768b51b37faafaca82eb71e0f2b88982630946407bbf5cf4e94726b"
+    "sha256": "d25fbb2bacecbb66592966211a74ad184080c878e7412de131237f06780a1963"
   }
 }

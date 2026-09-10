@@ -6,6 +6,20 @@ ROOT = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).parent
 sha = lambda data: hashlib.sha256(data).hexdigest()
 
+CALENDAR_LEGEND = ('<div class="calendar-legend" role="list" aria-label="Színkódok">'
+    '<span role="listitem"><i class="calendar-legend-swatch calendar-legend-swatch--free"></i>Szabad nap</span>'
+    '<span role="listitem"><i class="calendar-legend-swatch calendar-legend-swatch--limited"></i>Részben foglalt</span>'
+    '<span role="listitem"><i class="calendar-legend-swatch calendar-legend-swatch--full"></i>Foglalt</span></div>')
+CALENDAR_RETURN_ANCHOR = '        return `<div class="demo-calendar live-calendar">'
+CALENDAR_SLOTS_ANCHOR = '${this.renderSlots()}</div>`;'
+
+def apply_calendar_legend(source):
+    assert source.count(CALENDAR_RETURN_ANCHOR) == 1, 'Calendar render anchor changed'
+    assert source.count(CALENDAR_SLOTS_ANCHOR) == 1, 'Calendar slots anchor changed'
+    patched = source.replace(CALENDAR_RETURN_ANCHOR,
+        "        const legend = '" + CALENDAR_LEGEND + "';\n" + CALENDAR_RETURN_ANCHOR, 1)
+    return patched.replace(CALENDAR_SLOTS_ANCHOR, '${this.renderSlots()}${legend}</div>`;', 1)
+
 def apply_changes(before, after, target):
     old, new = before.splitlines(keepends=True), after.splitlines(keepends=True)
     edits = []
@@ -48,21 +62,34 @@ def main():
     outputs = {'ui/booking-live.js': runtime.encode(), 'ui/booking-extras.css': css.encode()}
     for name in ['booking-cart.js', 'booking-cart.css']:
         outputs['ui/'+name] = (ROOT/name).read_text('utf-8-sig').encode()
+    cal_before = (HERE/'baseline/calendar-live.js').read_bytes()
+    assert sha(cal_before) == parent['files']['ui/calendar-live.js']['sha256'], 'Wrong calendar baseline'
+    outputs['ui/calendar-live.js'] = apply_calendar_legend(cal_before.decode('utf-8')).encode('utf-8')
+    outputs['ui/calendar-status.css'] = (ROOT/'release-support/calendar-status.css').read_bytes()
     html = (HERE/'baseline/index.html').read_text('utf-8')
     old_url = 'ui/booking-live.js?v=' + parent['files']['ui/booking-live.js']['sha256'][:12]
     new_url = 'ui/booking-live.js?v=' + sha(outputs['ui/booking-live.js'])[:12]
     assert html.count(old_url) == 1
     html = html.replace(old_url, new_url)
+    old_cal = 'ui/calendar-live.js?v=' + parent['files']['ui/calendar-live.js']['sha256'][:12]
+    new_cal = 'ui/calendar-live.js?v=' + sha(outputs['ui/calendar-live.js'])[:12]
+    assert html.count(old_cal) == 1
+    html = html.replace(old_cal, new_cal)
+    html = html.replace('</head>', '<link rel="stylesheet" href="ui/calendar-status.css?v=' + sha(outputs['ui/calendar-status.css'])[:12] + '"></head>')
     html = html.replace('</head>', '<link rel="stylesheet" href="ui/booking-extras.css?v=' + sha(outputs['ui/booking-extras.css'])[:12] + '"></head>')
     html = html.replace('</head>', '<link rel="stylesheet" href="ui/booking-cart.css?v=' + sha(outputs['ui/booking-cart.css'])[:12] + '"></head>')
     html = html.replace('</body>', '<script defer src="ui/booking-cart.js?v=' + sha(outputs['ui/booking-cart.js'])[:12] + '"></script></body>')
     outputs['index.html'] = html.encode()
-    overlay = {'version': 2, 'parentSha256': sha(parent_bytes), 'reportSha256': sha(report_bytes),
-        'rootBeforeSha256': sha((HERE/'root-before.js').read_bytes()), 'edits': edits,
-        'sources': {name: sha((ROOT/name).read_text('utf-8-sig').encode()) for name in ['booking-config.js', 'style.css', 'booking-cart.js', 'booking-cart.css']}}
+    overlay = {'version': 3, 'parentSha256': sha(parent_bytes), 'reportSha256': sha(report_bytes),
+        'rootBeforeSha256': sha((HERE/'root-before.js').read_bytes()),
+        'calendarBaselineSha256': sha((HERE/'baseline/calendar-live.js').read_bytes()), 'edits': edits,
+        'sources': {name: sha((ROOT/name).read_text('utf-8-sig').encode()) for name in ['booking-config.js', 'style.css', 'booking-cart.js', 'booking-cart.css', 'release-support/calendar-status.css']}}
     manifest = json.loads(parent_bytes)
     for name, data in outputs.items():
-        source = Path(name).name if name.startswith('ui/booking-cart.') else 'style.css'
+        if name == 'ui/calendar-status.css':
+            source = 'release-support/calendar-status.css'
+        else:
+            source = Path(name).name if name.startswith('ui/booking-cart.') else 'style.css'
         manifest['files'][name] = {**parent['files'].get(name, {'source': source}), 'sha256': sha(data), 'bytes': len(data)}
         (ROOT/'release'/name).write_bytes(data)
     overlay_bytes = (json.dumps(overlay, ensure_ascii=False, indent=2)+'\n').encode()

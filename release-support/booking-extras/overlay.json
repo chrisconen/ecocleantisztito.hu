@@ -1,8 +1,9 @@
 {
-  "version": 2,
+  "version": 3,
   "parentSha256": "4751b828c02d3ffcb96e0ea6465b5b5335bab3fc356439bbdc5346b75e9a9002",
   "reportSha256": "a53f79fe2a2ff466dc20fab1172a633943c9f1ee4ed6c458a26f52bdd00f6710",
   "rootBeforeSha256": "5a314196bbb2a03e07e121bfe145b025c7c0f08d4138b21061a923de4ce7cddf",
+  "calendarBaselineSha256": "d72fed110e1a4d5e282cfaaf5e9de347a160411b73f16f7b74b18ae26f7ceadc",
   "edits": [
     {
       "before": "        \"egyagyas_a\": { name: \"Egyágyas matrac (A oldal)\", price: 8000, duration: 25, sides: 1 },\n        \"egyagyas_ab\": { name: \"Egyágyas matrac (A+B oldal)\", price: 12000, duration: 40, sides: 2 },\n        \"francia_a\": { name: \"Franciaágy matrac (A oldal)\", price: 12000, duration: 35, sides: 1 },\n        \"francia_ab\": { name: \"Franciaágy matrac (A+B oldal)\", price: 17000, duration: 55, sides: 2 },\n        \"gyerek_a\": { name: \"Gyerekmatrac (A oldal)\", price: 5000, duration: 15, sides: 1 },\n        \"gyerek_ab\": { name: \"Gyerekmatrac (A+B oldal)\", price: 7000, duration: 25, sides: 2 },\n        \"kisagy_a\": { name: \"Kiságy matrac (A oldal)\", price: 4000, duration: 10, sides: 1 },\n        \"kisagy_ab\": { name: \"Kiságy matrac (A+B oldal)\", price: 6000, duration: 20, sides: 2 }\n",
@@ -77,6 +78,7 @@
     "booking-config.js": "7bf70934c4580bf4b77baaace9e186a63d3500bee4e82aadd7430d0ae6aec3ac",
     "style.css": "ce27669e8a39faabfbcb45e038da4cb44ff03f0dceb9cc848a8022b638358f8d",
     "booking-cart.js": "123e3a3629759f36af33667950bca4b5f2234b0f76d901e6bea1f97ea4100687",
-    "booking-cart.css": "97b9f9dbbb77293370569925773ca6abe92d2ec069fa8a038e12cd09f7583434"
+    "booking-cart.css": "97b9f9dbbb77293370569925773ca6abe92d2ec069fa8a038e12cd09f7583434",
+    "release-support/calendar-status.css": "c604caed183ae0e7fdc743ebb96c5e83b20cd52b5f67c10cfd7a41e99267e449"
   }
 }
