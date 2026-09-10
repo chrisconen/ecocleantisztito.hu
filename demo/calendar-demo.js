@@ -37,10 +37,14 @@ const BookingCalendar = {
     for(let day=1;day<=last;day++) {
       const date=new Date(month.getFullYear(),month.getMonth(),day);
       const key=this.key(date);
-      const unavailable=date<=today || date.getDay()===0 || date.getDay()===6;
+      const weekday=date.getDay();
+      const isPast=date<today;
+      const isWeekend=weekday===0||weekday===6;
+      const status=isPast?'past':isWeekend?'full':(weekday===2||weekday===5)?'partial':'free';
+      const unavailable=status==='past'||status==='full';
       const selected=key===this.state.selectedDate;
       const label=new Intl.DateTimeFormat('hu-HU',{year:'numeric',month:'long',day:'numeric'}).format(date);
-      days+=`<button type="button" class="calendar-day${selected?' selected':''}" ${unavailable?'disabled':''} aria-label="${label}${unavailable?' – nem választható':' – mintaidőpont'}" aria-pressed="${selected}" data-demo-date="${key}">${day}</button>`;
+      days+=`<button type="button" class="calendar-day calendar-day--${status}${selected?' selected':''}" ${unavailable?'disabled':''} aria-label="${label}${unavailable?' – nem választható':' – mintaidőpont'}" aria-pressed="${selected}" data-demo-date="${key}">${day}</button>`;
     }
     let slots='';
     if(this.state.selectedDate) {
@@ -51,7 +55,8 @@ const BookingCalendar = {
       }).join('')+'</div>';
       if(this.state.selectedSlot) slots+=`<p class="demo-date-confirmation" role="status">Mintaidőpont kiválasztva: ${this.state.selectedDate} · ${this.state.selectedSlot.startTime}–${this.state.selectedSlot.endTime}</p>`;
     }
-    this.container.innerHTML=`<div class="demo-calendar"><div class="demo-calendar-top"><button type="button" class="calendar-month-button" data-month="previous" aria-label="Előző hónap" ${this.state.monthOffset===0?'disabled':''}>←</button><strong aria-live="polite">${title}</strong><button type="button" class="calendar-month-button" data-month="next" aria-label="Következő hónap" ${this.state.monthOffset===2?'disabled':''}>→</button></div><div class="demo-calendar-grid">${days}</div>${slots}</div>`;
+    const legend='<div class="calendar-legend" role="list" aria-label="Színkódok"><span role="listitem"><i class="calendar-legend-swatch calendar-legend-swatch--free"></i>Szabad nap</span><span role="listitem"><i class="calendar-legend-swatch calendar-legend-swatch--partial"></i>Részben foglalt</span><span role="listitem"><i class="calendar-legend-swatch calendar-legend-swatch--full"></i>Foglalt</span></div>';
+    this.container.innerHTML=`<div class="demo-calendar"><div class="demo-calendar-top"><button type="button" class="calendar-month-button" data-month="previous" aria-label="Előző hónap" ${this.state.monthOffset===0?'disabled':''}>←</button><strong aria-live="polite">${title}</strong><button type="button" class="calendar-month-button" data-month="next" aria-label="Következő hónap" ${this.state.monthOffset===2?'disabled':''}>→</button></div><div class="demo-calendar-grid">${days}</div>${slots}${legend}</div>`;
     this.container.querySelector('[data-month="previous"]').onclick=()=>this.previousMonth();
     this.container.querySelector('[data-month="next"]').onclick=()=>this.nextMonth();
     this.container.querySelectorAll('[data-demo-date]').forEach(button=>button.onclick=()=>this.selectDate(button.dataset.demoDate));
