@@ -7,7 +7,7 @@
       "city": "Kalocsa",
       "service": "karpittisztitas",
       "sourceSha256": "f8daf8d04012fdb0fea286eef3ce82b77a8c49a30705313bf8ec7825a336e12c",
-      "outputSha256": "8092dabeb4ea7bcdcabe3b566ddacc22db6cf47a7550f0df4eee66c349aa94ef",
+      "outputSha256": "970393d4ce1c173e0cbe96e58d4b0e31694d38677e3c7936dcc67b23c4da6d48",
       "originalPairs": [
         [
           "img/kárpittisztítás előtt.webp",
@@ -45,7 +45,7 @@
       "city": "Baja",
       "service": "karpittisztitas",
       "sourceSha256": "e1c5c00f7c1ee28b9bd3e689948a777e284cf685cc32f6a42c4c32ec131a8002",
-      "outputSha256": "c856444590d96777d017c33464401cbf379ffe7f761b1a3d78c908c264548aae",
+      "outputSha256": "ac494995be657aa156f72bcaf919aa6603767a4b26bb64ac419843ab5391c7fc",
       "originalPairs": [
         [
           "img/kárpittisztítás előtt.webp",
@@ -83,7 +83,7 @@
       "city": "Kiskőrös",
       "service": "karpittisztitas",
       "sourceSha256": "efd1b15625c7fab60e632f3512dc8d1d07390a7d17015207dc5ce1d00229e472",
-      "outputSha256": "dd11d3f1fe2e07760946d74630c630981bf7bb516f05f621d8f3020ef8edb27e",
+      "outputSha256": "47f2dd2717e7e866ef11ae71f4b015f3edf260e21e29e5956d159407c1223551",
       "originalPairs": [
         [
           "img/kárpittisztítás előtt.webp",
@@ -121,7 +121,7 @@
       "city": "Szekszárd",
       "service": "karpittisztitas",
       "sourceSha256": "795c4d50d948d5f2856c6fa24fad57cdf5ea09499dfbe78de9090549a5e82091",
-      "outputSha256": "f5ce5a4594c666b8704307f794d4fb0f0d0a73c5ea7d7e5b6c1af01f013a73a9",
+      "outputSha256": "cd26bfbe1d577ab2a2f9e206a36f1eb8cec0bb7572ea171da73ab58d59f5a3cf",
       "originalPairs": [
         [
           "img/kárpittisztítás előtt.webp",
@@ -159,7 +159,7 @@
       "city": "Paks",
       "service": "karpittisztitas",
       "sourceSha256": "9b851a662c9940de2f93ce2e1c5442c54bf07c74307aacebd01e89b629e9b72f",
-      "outputSha256": "a635655ea72388e7bb575f4d181ddb7365f9bb5732152a1a029fab828564d11f",
+      "outputSha256": "12af4cdd8164f60c1b03e847ccf67a4e8037fae8d376f98106d757d63a901440",
       "originalPairs": [
         [
           "img/kárpittisztítás előtt.webp",
@@ -197,7 +197,7 @@
       "city": "Solt",
       "service": "karpittisztitas",
       "sourceSha256": "7585adb8b03e16915c1dfac733881bc355321c9f8261da8a09a02659c5010bc6",
-      "outputSha256": "c15ca6f50043a717de239f54a0fb0eff5b87d216829f2519528794f5142b1152",
+      "outputSha256": "7464d3c33edf7f893cec33873ccc73b0a84d4f85aa4ab642dc81873e42772ded",
       "originalPairs": [
         [
           "img/kárpittisztítás előtt.webp",
@@ -235,7 +235,7 @@
       "city": "Dunaföldvár",
       "service": "karpittisztitas",
       "sourceSha256": "a274145e28eb191dfcd4f20dbf2efae0ab365be0eb12d977a04ee3bc6018589c",
-      "outputSha256": "7ecf2de4e5e2af35127c18e1e28051ab823d502b81d356f8febfa01376017cf7",
+      "outputSha256": "7915e11b3863c1aae2ca2d6be89bbf4b8813bfa227ec6d189c15442ea23d6a3f",
       "originalPairs": [
         [
           "img/kárpittisztítás előtt.webp",
@@ -273,7 +273,7 @@
       "city": "region",
       "service": "combined",
       "sourceSha256": "2dda810db29ff84c962e67b01ef95d75cfa8d4eaf1f82bc3cce25f557ffd87e1",
-      "outputSha256": "980cec9d938fe5f3cad3e92ba462bb9df499c9ba6e26fce0d894516267dd683e",
+      "outputSha256": "33e37f33ccc02614980f89cbea53f1ea5a2427cd9d3185adbf1fc7f09d6b1b9a",
       "originalPairs": [
         [
           "img/karpittisztitas-elott.webp",

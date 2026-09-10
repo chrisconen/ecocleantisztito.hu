@@ -137,6 +137,32 @@ body.eco-mediterranean{
 .med-email-fallback button{width:100%;margin-top:12px}
 .med-config-reset{border:0;border-bottom:1px solid #c2cbb3;background:none;color:#68755b;padding:3px 0;min-height:36px;font-size:10px!important}
 
+/* Mobile estimate bar and left drawer. */
+.med-config-bar{display:none}
+@media(max-width:1199px){
+ .med-config-bar{position:fixed;left:0;right:0;bottom:0;z-index:1200;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 18px calc(13px + env(safe-area-inset-bottom));background:#faf9ee;border-top:1px solid #d3dac1;box-shadow:0 -12px 32px #2633222e;transform:translateY(115%);transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+ .med-config-bar.is-visible{transform:none}
+ .med-config-bar-total{display:flex;flex-direction:column;gap:2px;min-width:0}
+ .med-config-bar-amount{font:500 24px/1.1 var(--font-display);letter-spacing:-.02em;color:var(--ink);white-space:nowrap}
+ .med-config-bar-status{font-size:9px;line-height:1.6;color:#657457;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+ .med-config-cart{position:relative;display:grid;place-items:center;width:52px;height:52px;flex:0 0 52px;border:1px solid #b7c1a7;border-radius:4px;background:var(--olive);color:#fffdf7;cursor:pointer}
+ .med-config-cart:hover{background:#34472f}
+ .med-config-cart svg{width:26px;height:26px}
+ .med-config-cart-badge{position:absolute;top:-8px;right:-8px;min-width:22px;height:22px;padding:0 6px;display:grid;place-items:center;border-radius:11px;background:#986447;color:#fffdf7;font-size:11px;font-weight:600;line-height:1}
+ .med-config-drawer{position:fixed;left:0;top:0;bottom:0;z-index:1300;width:min(420px,92vw);max-width:none;display:flex;flex-direction:column;background:#faf9ee;border-right:1px solid #d3dac1;box-shadow:18px 0 50px #26332240;transform:translateX(-105%);transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+ .med-config-drawer.is-open{transform:none}
+ .med-config-drawer-head{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 18px;border-bottom:1px solid #d3dac1;background:#f2f0e2}
+ .med-config-drawer-title{font:500 27px/1.1 var(--font-display);color:var(--ink)}
+ .med-config-drawer-close{display:grid;place-items:center;width:42px;height:42px;border:0;background:none;color:var(--ink);font-size:30px;line-height:1;cursor:pointer}
+ .med-config-drawer-body{flex:1;overflow-y:auto;padding:22px 18px calc(26px + env(safe-area-inset-bottom))}
+ .med-config-drawer .med-config-summary{position:static;border:0;background:none;padding:0;max-width:none}
+ .med-config-drawer .med-config-total{font-size:42px;margin-top:12px}
+ .med-config-drawer .med-config-actions{grid-template-columns:1fr}
+ .med-config-drawer .med-config-note{max-width:none}
+ .med-config-drawer .med-config-breakdown{max-width:none}
+ body.med-config-drawer-open{overflow:hidden}
+}
+
 /* Genuine result photographs retain their original proportions, including portrait mattresses. */
 .med-results .med-heading{margin-bottom:55px}
 .med-result-row{display:grid;grid-template-columns:.85fr 1.15fr;gap:95px;align-items:center;padding:35px 0 50px;border-top:1px solid var(--line)}
@@ -225,6 +251,7 @@ body.eco-mediterranean{
  .med-config-check{font-size:12px;grid-template-columns:18px 1fr}.med-config-check input{width:17px;height:17px}.med-config-check small{font-size:11px}.med-product-type{min-height:0;padding:0!important;margin-bottom:20px!important;font-size:12px!important}
  .med-config-extras{grid-template-columns:1fr;padding:20px;gap:18px}.med-config-extras legend{font-size:27px}.med-config-location{grid-template-columns:1fr;gap:18px}.med-config-location select{font-size:13px}
  .med-config-summary{padding:27px 23px}.med-config-summary .med-config-actions{grid-template-columns:1fr}.med-config-total{font-size:49px}.med-config-line{font-size:11px}.med-config-line strong{font-size:12px}.med-config-button{font-size:12px;min-height:49px}
+ .med-config-bar-amount{font-size:27px}.med-config-cart{width:56px;height:56px;flex-basis:56px}.med-config-drawer-body{padding:20px 16px calc(24px + env(safe-area-inset-bottom))}
  .med-result-row{grid-template-columns:1fr;gap:25px;padding-top:28px}.med-results .med-heading{margin-bottom:32px}.med-result-copy h3{font-size:40px}.med-result-copy p{font-size:12px}.med-result-copy{max-width:none}.med-result-figure.med-result-portrait{max-width:350px}.med-result-figure figcaption{font-size:10px;padding:13px}
  .med-hotspot-scene>img{aspect-ratio:4/3}.med-hotspot{width:38px;height:38px;font-size:10px}.med-scene-caption{bottom:12px;left:12px;font-size:9px}.med-soil-detail{padding-top:0}.med-soil-detail h3{font-size:36px}
  .med-mites-grid{grid-template-columns:1fr;gap:24px}.med-mites-grid h2{font-size:42px}.med-mites-grid p{font-size:13px}.med-mites-visual figcaption{font-size:10px}.med-tabs{width:100%}.med-tabs button{flex:1;padding:10px;font-size:11px}.med-mite-legend>span{font-size:11px}
@@ -235,4 +262,4 @@ body.eco-mediterranean{
  .med-closing{padding-block:58px 45px}.med-closing h2{font-size:47px}.med-closing p{font-size:12px}.med-closing-region{margin-top:42px}.med-city-nav{gap:12px 19px;font-size:11px}.eco-mediterranean .footer-grid{gap:25px}.med-process-grid article,.med-furniture-card,.med-product{scroll-margin-top:20px}
 }
 @media(max-width:360px){.med-shell,.eco-mediterranean .bixol-header .header-bottom>.container,.eco-mediterranean .container,.eco-mediterranean .section-container{width:calc(100% - 32px)}.med-hero h1{font-size:51px}.med-section h2{font-size:37px}.med-product-body{padding:20px}.med-assurances>span{font-size:8px}.med-button{font-size:10px;padding-inline:12px}.eco-mediterranean .footer-grid{grid-template-columns:1fr}}
-@media(prefers-reduced-motion:reduce){.eco-mediterranean *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+@media(prefers-reduced-motion:reduce){.eco-mediterranean *{scroll-behavior:auto!important;animation:none!important;transition:none!important}.med-config-bar,.med-config-drawer{transition:none}}
