@@ -19,3 +19,6 @@
 **/.dev.vars.*
 **/.wrangler/
 **/node_modules/
+
+# Python bytecode caches
+__pycache__/

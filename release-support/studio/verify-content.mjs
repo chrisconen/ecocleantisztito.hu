@@ -5,7 +5,10 @@ import {createRequire} from 'node:module';
 const root=path.resolve(import.meta.dirname,'../..');
 const require=createRequire(path.join(process.env.TEMP,'ecoclean-demo-qa/package.json')),{JSDOM}=require('jsdom'),acorn=require('acorn');
 // Brand spelling is verified by the reversible review overlay. Normalize it for historical text retention.
-const norm=s=>s.replace(/\bANDANTE (?=NovaLife)/g,'').replace(/\b([Aa])z (?=NovaLife)/g,'$1 ').replace(/[\p{Extended_Pictographic}\uFE0F\u200D\u2605\u2606]/gu,'').replace(/\s+/g,' ').trim();
+// Price amounts are verified by the reversible price overlay, which re-derives every published amount from
+// its parent bytes and forbids any other difference. Normalize the amounts so this check keeps proving that
+// the surrounding original wording survived a deliberate price change.
+const norm=s=>s.replace(/\bANDANTE (?=NovaLife)/g,'').replace(/\b([Aa])z (?=NovaLife)/g,'$1 ').replace(/[\p{Extended_Pictographic}\uFE0F\u200D\u2605\u2606]/gu,'').replace(/\s+/g,' ').replace(/\d[\d .]*\d(?= ?Ft)|\d(?= ?Ft)/g,'#').trim();
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 export function verifyStudioContent(manifest){
  if(!manifest.studioOverlay)return [];

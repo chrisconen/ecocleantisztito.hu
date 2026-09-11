@@ -9,24 +9,24 @@
 const PRICING = {
     // KÁRPITTISZTÍTÁS (mélytisztítás)
     karpit: {
-        "szofa": { name: "Szófa, heverő", price: 15500, duration: 40, atkaPrice: 5000, agyazhatoPrice: 5000 },
-        "l_kanape": { name: "L-kanapé", price: 17500, duration: 50, atkaPrice: 5000, agyazhatoPrice: 5000 },
-        "u_kanape": { name: "U-kanapé", price: 22500, duration: 60, atkaPrice: 5000, agyazhatoPrice: 5000 },
-        "fotel": { name: "Fotel", price: 6500, duration: 20, atkaPrice: 0 },
-        "ebedlo_szek": { name: "Ebédlő szék", price: 3500, duration: 10, atkaPrice: 0 },
-        "irodai_szek": { name: "Irodai szék", price: 4000, duration: 15, atkaPrice: 0 }
+        "szofa": { name: "Szófa, heverő", price: 18000, duration: 40, atkaPrice: 6000, agyazhatoPrice: 6000 },
+        "l_kanape": { name: "L-kanapé", price: 20000, duration: 50, atkaPrice: 6000, agyazhatoPrice: 6000 },
+        "u_kanape": { name: "U-kanapé", price: 26000, duration: 60, atkaPrice: 6000, agyazhatoPrice: 6000 },
+        "fotel": { name: "Fotel", price: 7500, duration: 20, atkaPrice: 0 },
+        "ebedlo_szek": { name: "Ebédlő szék", price: 4000, duration: 10, atkaPrice: 0 },
+        "irodai_szek": { name: "Irodai szék", price: 4500, duration: 15, atkaPrice: 0 }
     },
 
     // MATRACTISZTÍTÁS (atkairtás)
     matrac: {
-        "egyagyas_a": { name: "Egyágyas matrac 90×200 cm (A oldal)", price: 8000, duration: 25, sides: 1, wetPrice: 5000, framePrice: 5000 },
-        "egyagyas_ab": { name: "Egyágyas matrac 90×200 cm (A+B oldal)", price: 12000, duration: 40, sides: 2, wetPrice: 5000, framePrice: 5000 },
-        "francia_a": { name: "Franciaágy matrac 140/160/180×200 cm (A oldal)", price: 12000, duration: 35, sides: 1, wetPrice: 7500, framePrice: 8000 },
-        "francia_ab": { name: "Franciaágy matrac 140/160/180×200 cm (A+B oldal)", price: 17000, duration: 55, sides: 2, wetPrice: 7500, framePrice: 8000 },
-        "gyerek_a": { name: "Gyerekmatrac 70×140 cm (A oldal)", price: 5000, duration: 15, sides: 1, wetPrice: 3000, framePrice: 4000 },
-        "gyerek_ab": { name: "Gyerekmatrac 70×140 cm (A+B oldal)", price: 7000, duration: 25, sides: 2, wetPrice: 3000, framePrice: 4000 },
-        "kisagy_a": { name: "Kiságy matrac (A oldal)", price: 4000, duration: 10, sides: 1, wetPrice: 3000, framePrice: 4000 },
-        "kisagy_ab": { name: "Kiságy matrac (A+B oldal)", price: 6000, duration: 20, sides: 2, wetPrice: 3000, framePrice: 4000 }
+        "egyagyas_a": { name: "Egyágyas matrac 90×200 cm (A oldal)", price: 9000, duration: 25, sides: 1, wetPrice: 6000, framePrice: 6000 },
+        "egyagyas_ab": { name: "Egyágyas matrac 90×200 cm (A+B oldal)", price: 14000, duration: 40, sides: 2, wetPrice: 6000, framePrice: 6000 },
+        "francia_a": { name: "Franciaágy matrac 140/160/180×200 cm (A oldal)", price: 14000, duration: 35, sides: 1, wetPrice: 8500, framePrice: 9000 },
+        "francia_ab": { name: "Franciaágy matrac 140/160/180×200 cm (A+B oldal)", price: 19500, duration: 55, sides: 2, wetPrice: 8500, framePrice: 9000 },
+        "gyerek_a": { name: "Gyerekmatrac 70×140 cm (A oldal)", price: 6000, duration: 15, sides: 1, wetPrice: 3500, framePrice: 4500 },
+        "gyerek_ab": { name: "Gyerekmatrac 70×140 cm (A+B oldal)", price: 8000, duration: 25, sides: 2, wetPrice: 3500, framePrice: 4500 },
+        "kisagy_a": { name: "Kiságy matrac (A oldal)", price: 4500, duration: 10, sides: 1, wetPrice: 3500, framePrice: 4500 },
+        "kisagy_ab": { name: "Kiságy matrac (A+B oldal)", price: 7000, duration: 20, sides: 2, wetPrice: 3500, framePrice: 4500 }
     },
 
     // KISZÁLLÁSI DÍJAK (egységes minden városra)
@@ -54,7 +54,7 @@ const UPSELLS = {
         "folteltavolitas": {
             name: "Extra folteltávolítás",
             description: "Erős szennyeződések, foltok kezelése",
-            price: 2000,
+            price: 2500,
             priceType: "perSeat", // ülőhelyenként
             duration: 10,
             icon: "✨"
@@ -62,7 +62,7 @@ const UPSELLS = {
         "impregnalas": {
             name: "Impregnálás",
             description: "Védőréteg a könnyebb tisztításért",
-            price: 3000,
+            price: 3500,
             priceType: "perItem", // bútoronként
             duration: 15,
             icon: "🛡️"
@@ -70,7 +70,7 @@ const UPSELLS = {
         "szagtalanitas": {
             name: "Szagtalanítás",
             description: "Háziállat/dohányszag eltávolítása",
-            price: 2500,
+            price: 3000,
             priceType: "perItem",
             duration: 10,
             icon: "🌸"
@@ -102,7 +102,7 @@ const UPSELLS = {
 const PILLOW_CLEANING = {
     name: 'Párnák tisztítása',
     description: 'Mosógépben nem mosható méretű párnák tisztítása',
-    price: 1000,
+    price: 1200,
     duration: 5, // Becsült többletidő párnánként.
     itemIds: ['szofa', 'l_kanape', 'u_kanape']
 };
@@ -339,7 +339,7 @@ function createItemHTML(category, id, item) {
                 <div class="pillow-extra">
                     <label class="upsell-text" for="pillows-${fullId}">${PILLOW_CLEANING.name}
                         <small>${PILLOW_CLEANING.description}</small>
-                        <small>Összes darabszám az itt kiválasztott bútorokhoz · 1000 Ft/db</small>
+                        <small>Összes darabszám az itt kiválasztott bútorokhoz · ${PILLOW_CLEANING.price.toLocaleString('hu-HU')} Ft/db</small>
                     </label>
                     <input class="pillow-count" id="pillows-${fullId}" type="number" min="0" step="1" value="0" inputmode="numeric"
                         onchange="setPillowCount('${fullId}', this.value)">

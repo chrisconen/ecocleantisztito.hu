@@ -6,8 +6,24 @@
   "calendarBaselineSha256": "d72fed110e1a4d5e282cfaaf5e9de347a160411b73f16f7b74b18ae26f7ceadc",
   "edits": [
     {
+      "before": "        \"szofa\": { name: \"Szófa, heverő\", price: 15500, duration: 40, atkaPrice: 5000, agyazhatoPrice: 5000 },\n        \"l_kanape\": { name: \"L-kanapé\", price: 17500, duration: 50, atkaPrice: 5000, agyazhatoPrice: 5000 },\n        \"u_kanape\": { name: \"U-kanapé\", price: 22500, duration: 60, atkaPrice: 5000, agyazhatoPrice: 5000 },\n        \"fotel\": { name: \"Fotel\", price: 6500, duration: 20, atkaPrice: 0 },\n        \"ebedlo_szek\": { name: \"Ebédlő szék\", price: 3500, duration: 10, atkaPrice: 0 },\n        \"irodai_szek\": { name: \"Irodai szék\", price: 4000, duration: 15, atkaPrice: 0 }\n",
+      "after": "        \"szofa\": { name: \"Szófa, heverő\", price: 18000, duration: 40, atkaPrice: 6000, agyazhatoPrice: 6000 },\n        \"l_kanape\": { name: \"L-kanapé\", price: 20000, duration: 50, atkaPrice: 6000, agyazhatoPrice: 6000 },\n        \"u_kanape\": { name: \"U-kanapé\", price: 26000, duration: 60, atkaPrice: 6000, agyazhatoPrice: 6000 },\n        \"fotel\": { name: \"Fotel\", price: 7500, duration: 20, atkaPrice: 0 },\n        \"ebedlo_szek\": { name: \"Ebédlő szék\", price: 4000, duration: 10, atkaPrice: 0 },\n        \"irodai_szek\": { name: \"Irodai szék\", price: 4500, duration: 15, atkaPrice: 0 }\n"
+    },
+    {
       "before": "        \"egyagyas_a\": { name: \"Egyágyas matrac (A oldal)\", price: 8000, duration: 25, sides: 1 },\n        \"egyagyas_ab\": { name: \"Egyágyas matrac (A+B oldal)\", price: 12000, duration: 40, sides: 2 },\n        \"francia_a\": { name: \"Franciaágy matrac (A oldal)\", price: 12000, duration: 35, sides: 1 },\n        \"francia_ab\": { name: \"Franciaágy matrac (A+B oldal)\", price: 17000, duration: 55, sides: 2 },\n        \"gyerek_a\": { name: \"Gyerekmatrac (A oldal)\", price: 5000, duration: 15, sides: 1 },\n        \"gyerek_ab\": { name: \"Gyerekmatrac (A+B oldal)\", price: 7000, duration: 25, sides: 2 },\n        \"kisagy_a\": { name: \"Kiságy matrac (A oldal)\", price: 4000, duration: 10, sides: 1 },\n        \"kisagy_ab\": { name: \"Kiságy matrac (A+B oldal)\", price: 6000, duration: 20, sides: 2 }\n",
-      "after": "        \"egyagyas_a\": { name: \"Egyágyas matrac 90×200 cm (A oldal)\", price: 8000, duration: 25, sides: 1, wetPrice: 5000, framePrice: 5000 },\n        \"egyagyas_ab\": { name: \"Egyágyas matrac 90×200 cm (A+B oldal)\", price: 12000, duration: 40, sides: 2, wetPrice: 5000, framePrice: 5000 },\n        \"francia_a\": { name: \"Franciaágy matrac 140/160/180×200 cm (A oldal)\", price: 12000, duration: 35, sides: 1, wetPrice: 7500, framePrice: 8000 },\n        \"francia_ab\": { name: \"Franciaágy matrac 140/160/180×200 cm (A+B oldal)\", price: 17000, duration: 55, sides: 2, wetPrice: 7500, framePrice: 8000 },\n        \"gyerek_a\": { name: \"Gyerekmatrac 70×140 cm (A oldal)\", price: 5000, duration: 15, sides: 1, wetPrice: 3000, framePrice: 4000 },\n        \"gyerek_ab\": { name: \"Gyerekmatrac 70×140 cm (A+B oldal)\", price: 7000, duration: 25, sides: 2, wetPrice: 3000, framePrice: 4000 },\n        \"kisagy_a\": { name: \"Kiságy matrac (A oldal)\", price: 4000, duration: 10, sides: 1, wetPrice: 3000, framePrice: 4000 },\n        \"kisagy_ab\": { name: \"Kiságy matrac (A+B oldal)\", price: 6000, duration: 20, sides: 2, wetPrice: 3000, framePrice: 4000 }\n"
+      "after": "        \"egyagyas_a\": { name: \"Egyágyas matrac 90×200 cm (A oldal)\", price: 9000, duration: 25, sides: 1, wetPrice: 6000, framePrice: 6000 },\n        \"egyagyas_ab\": { name: \"Egyágyas matrac 90×200 cm (A+B oldal)\", price: 14000, duration: 40, sides: 2, wetPrice: 6000, framePrice: 6000 },\n        \"francia_a\": { name: \"Franciaágy matrac 140/160/180×200 cm (A oldal)\", price: 14000, duration: 35, sides: 1, wetPrice: 8500, framePrice: 9000 },\n        \"francia_ab\": { name: \"Franciaágy matrac 140/160/180×200 cm (A+B oldal)\", price: 19500, duration: 55, sides: 2, wetPrice: 8500, framePrice: 9000 },\n        \"gyerek_a\": { name: \"Gyerekmatrac 70×140 cm (A oldal)\", price: 6000, duration: 15, sides: 1, wetPrice: 3500, framePrice: 4500 },\n        \"gyerek_ab\": { name: \"Gyerekmatrac 70×140 cm (A+B oldal)\", price: 8000, duration: 25, sides: 2, wetPrice: 3500, framePrice: 4500 },\n        \"kisagy_a\": { name: \"Kiságy matrac (A oldal)\", price: 4500, duration: 10, sides: 1, wetPrice: 3500, framePrice: 4500 },\n        \"kisagy_ab\": { name: \"Kiságy matrac (A+B oldal)\", price: 7000, duration: 20, sides: 2, wetPrice: 3500, framePrice: 4500 }\n"
+    },
+    {
+      "before": "            price: 2000,\n",
+      "after": "            price: 2500,\n"
+    },
+    {
+      "before": "            description: \"Védőréteg a könnyebb tisztításért\",\n            price: 3000,\n            priceType: \"perItem\", // bútoronként\n",
+      "after": "            description: \"Védőréteg a könnyebb tisztításért\",\n            price: 3500,\n            priceType: \"perItem\", // bútoronként\n"
+    },
+    {
+      "before": "            description: \"Háziállat/dohányszag eltávolítása\",\n            price: 2500,\n            priceType: \"perItem\",\n",
+      "after": "            description: \"Háziállat/dohányszag eltávolítása\",\n            price: 3000,\n            priceType: \"perItem\",\n"
     },
     {
       "before": "            name: \"Nedves tisztítás + folteltávolítás\",\n            description: \"Foltos matracokhoz - fertőtlenítő mosás\",\n            price: 5000,\n",
@@ -19,7 +35,7 @@
     },
     {
       "before": "        }\n    }\n};\n\n",
-      "after": "        }\n    }\n};\n\nconst PILLOW_CLEANING = {\n    name: 'Párnák tisztítása',\n    description: 'Mosógépben nem mosható méretű párnák tisztítása',\n    price: 1000,\n    duration: 5, // Becsült többletidő párnánként.\n    itemIds: ['szofa', 'l_kanape', 'u_kanape']\n};\n\n"
+      "after": "        }\n    }\n};\n\nconst PILLOW_CLEANING = {\n    name: 'Párnák tisztítása',\n    description: 'Mosógépben nem mosható méretű párnák tisztítása',\n    price: 1200,\n    duration: 5, // Becsült többletidő párnánként.\n    itemIds: ['szofa', 'l_kanape', 'u_kanape']\n};\n\n"
     },
     {
       "before": "    document.getElementById('step4').style.display = 'block';\n",
@@ -31,7 +47,7 @@
     },
     {
       "before": "                ` : ''}\n            </div>\n",
-      "after": "                ` : ''}\n                ${hasMatrac ? Object.entries(UPSELLS.matrac).map(([upsellId, upsell]) => `\n                <label class=\"upsell-checkbox mattress-extra\">\n                    <input type=\"checkbox\" onchange=\"toggleItemUpsell('${fullId}', '${upsellId}')\">\n                    <span class=\"upsell-label\">\n                        <span class=\"upsell-icon\">${upsell.icon}</span>\n                        <span class=\"upsell-text\">${upsell.name}\n                            <small>${upsell.priceType === 'perSide' ? `${item.sides} oldal / matrac · ${upsell.note}` : 'Ágyanként, fejtámlával együtt'}</small>\n                        </span>\n                        <span class=\"upsell-price\">+${item[upsell.priceKey].toLocaleString('hu-HU')} Ft/${upsell.priceType === 'perSide' ? 'oldal' : 'ágy'}</span>\n                    </span>\n                </label>`).join('') : ''}\n                ${hasPillows ? `\n                <div class=\"pillow-extra\">\n                    <label class=\"upsell-text\" for=\"pillows-${fullId}\">${PILLOW_CLEANING.name}\n                        <small>${PILLOW_CLEANING.description}</small>\n                        <small>Összes darabszám az itt kiválasztott bútorokhoz · 1000 Ft/db</small>\n                    </label>\n                    <input class=\"pillow-count\" id=\"pillows-${fullId}\" type=\"number\" min=\"0\" step=\"1\" value=\"0\" inputmode=\"numeric\"\n                        onchange=\"setPillowCount('${fullId}', this.value)\">\n                </div>` : ''}\n            </div>\n"
+      "after": "                ` : ''}\n                ${hasMatrac ? Object.entries(UPSELLS.matrac).map(([upsellId, upsell]) => `\n                <label class=\"upsell-checkbox mattress-extra\">\n                    <input type=\"checkbox\" onchange=\"toggleItemUpsell('${fullId}', '${upsellId}')\">\n                    <span class=\"upsell-label\">\n                        <span class=\"upsell-icon\">${upsell.icon}</span>\n                        <span class=\"upsell-text\">${upsell.name}\n                            <small>${upsell.priceType === 'perSide' ? `${item.sides} oldal / matrac · ${upsell.note}` : 'Ágyanként, fejtámlával együtt'}</small>\n                        </span>\n                        <span class=\"upsell-price\">+${item[upsell.priceKey].toLocaleString('hu-HU')} Ft/${upsell.priceType === 'perSide' ? 'oldal' : 'ágy'}</span>\n                    </span>\n                </label>`).join('') : ''}\n                ${hasPillows ? `\n                <div class=\"pillow-extra\">\n                    <label class=\"upsell-text\" for=\"pillows-${fullId}\">${PILLOW_CLEANING.name}\n                        <small>${PILLOW_CLEANING.description}</small>\n                        <small>Összes darabszám az itt kiválasztott bútorokhoz · ${PILLOW_CLEANING.price.toLocaleString('hu-HU')} Ft/db</small>\n                    </label>\n                    <input class=\"pillow-count\" id=\"pillows-${fullId}\" type=\"number\" min=\"0\" step=\"1\" value=\"0\" inputmode=\"numeric\"\n                        onchange=\"setPillowCount('${fullId}', this.value)\">\n                </div>` : ''}\n            </div>\n"
     },
     {
       "before": "\n    const showKarpit = State.serviceType === 'Kárpit' || State.serviceType === 'Mindkettő';\n    const showMatrac = State.serviceType === 'Matrac' || State.serviceType === 'Mindkettő';\n\n    if (showKarpit) {\n        container.innerHTML += '<div class=\"upsell-group-title\">🛋️ Kárpit extrák</div>';\n",
@@ -75,7 +91,7 @@
     }
   ],
   "sources": {
-    "booking-config.js": "7bf70934c4580bf4b77baaace9e186a63d3500bee4e82aadd7430d0ae6aec3ac",
+    "booking-config.js": "616a2d916c4a7c0e1d3a0313b1f07f6460a7c4e8abad2fbe08baaa89d1307926",
     "style.css": "ce27669e8a39faabfbcb45e038da4cb44ff03f0dceb9cc848a8022b638358f8d",
     "booking-cart.js": "123e3a3629759f36af33667950bca4b5f2234b0f76d901e6bea1f97ea4100687",
     "booking-cart.css": "97b9f9dbbb77293370569925773ca6abe92d2ec069fa8a038e12cd09f7583434",
