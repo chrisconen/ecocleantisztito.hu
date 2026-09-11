@@ -1,0 +1,3473 @@
+{
+  "version": 1,
+  "baseline": {
+    "manifest": "release-support/price-overlay/baseline-manifest.json",
+    "manifestSha256": "46e13a2bbd1f1d7b28ab4d15b798012f0c27159f1a9f7338380ad2bc72ecf5ae",
+    "verification": "release-support/price-overlay/baseline-verification.json",
+    "verificationSha256": "0a68110e9245ee21094d83ad124cd18eab06365c59af53d08e032198597ced0c"
+  },
+  "rule": {
+    "percent": 1.15,
+    "step": 500,
+    "smallStep": 100,
+    "smallBelow": 2000,
+    "minPrice": 3000,
+    "approxStep": 1000
+  },
+  "ruleSha256": "e4e75027c63d3d84397c5343eb99a5b44bb399af65b078b0761a9a1f9938f664",
+  "files": [
+    {
+      "file": "karpittisztitas-badacsony.html",
+      "beforeSha256": "3a23743a8e1b0bfdb0a3a71473e17228ce4eb4a9caf17d7aededadf6f80141a5",
+      "afterSha256": "0e49444e0b83f79ca1ddc4bfbe0b59929b1a5038c517f73d5aa1d6022e8b6166",
+      "edits": [
+        {
+          "offset": 50681,
+          "before": "15 500",
+          "after": "18 000"
+        },
+        {
+          "offset": 50863,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 51328,
+          "before": "17 500",
+          "after": "20 000"
+        },
+        {
+          "offset": 51510,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 51975,
+          "before": "22 500",
+          "after": "26 000"
+        },
+        {
+          "offset": 52157,
+          "before": " 5000",
+          "after": " 6000"
+        },
+        {
+          "offset": 52596,
+          "before": "6 500",
+          "after": "7 500"
+        },
+        {
+          "offset": 53154,
+          "before": "3 500",
+          "after": "4 000"
+        },
+        {
+          "offset": 53704,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 54583,
+          "before": "35 000",
+          "after": "40 000"
+        }
+      ]
+    },
+    {
+      "file": "karpittisztitas-balatonalmadi.html",
+      "beforeSha256": "f67ba907e21a7be631d18845c865375a316de91dfbeff4be48cea74b6a649c63",
+      "afterSha256": "a0715760221ed7a24641059ba21f1d2d6006001bcd28fb1ec1c5592a9bb8a383",
+      "edits": [
+        {
+          "offset": 50860,
+          "before": "15 500",
+          "after": "18 000"
+        },
+        {
+          "offset": 51042,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 51507,
+          "before": "17 500",
+          "after": "20 000"
+        },
+        {
+          "offset": 51689,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 52154,
+          "before": "22 500",
+          "after": "26 000"
+        },
+        {
+          "offset": 52336,
+          "before": " 5000",
+          "after": " 6000"
+        },
+        {
+          "offset": 52775,
+          "before": "6 500",
+          "after": "7 500"
+        },
+        {
+          "offset": 53333,
+          "before": "3 500",
+          "after": "4 000"
+        },
+        {
+          "offset": 53883,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 54762,
+          "before": "35 000",
+          "after": "40 000"
+        }
+      ]
+    },
+    {
+      "file": "karpittisztitas-balatonboglar.html",
+      "beforeSha256": "0f4414db1603916ad6936a79fa6bdb266914c317be416f19cccfa74ee44e9995",
+      "afterSha256": "da0bb8fc525832ad8bdbd4b961107a146d542d82c4cae32e58c6bb1ee4888007",
+      "edits": [
+        {
+          "offset": 50857,
+          "before": "15 500",
+          "after": "18 000"
+        },
+        {
+          "offset": 51039,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 51504,
+          "before": "17 500",
+          "after": "20 000"
+        },
+        {
+          "offset": 51686,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 52151,
+          "before": "22 500",
+          "after": "26 000"
+        },
+        {
+          "offset": 52333,
+          "before": " 5000",
+          "after": " 6000"
+        },
+        {
+          "offset": 52772,
+          "before": "6 500",
+          "after": "7 500"
+        },
+        {
+          "offset": 53330,
+          "before": "3 500",
+          "after": "4 000"
+        },
+        {
+          "offset": 53880,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 54759,
+          "before": "35 000",
+          "after": "40 000"
+        }
+      ]
+    },
+    {
+      "file": "karpittisztitas-balatonfoldvar.html",
+      "beforeSha256": "caeac8757857e654bcedad42ed8cfb911dd76b404fe5bfe2da75ab659804ca7d",
+      "afterSha256": "d77161d9465e7add0a67b4fe06a60279ceaf70d041f6862e4c8c16aa22160b4b",
+      "edits": [
+        {
+          "offset": 50927,
+          "before": "15 500",
+          "after": "18 000"
+        },
+        {
+          "offset": 51109,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 51574,
+          "before": "17 500",
+          "after": "20 000"
+        },
+        {
+          "offset": 51756,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 52221,
+          "before": "22 500",
+          "after": "26 000"
+        },
+        {
+          "offset": 52403,
+          "before": " 5000",
+          "after": " 6000"
+        },
+        {
+          "offset": 52842,
+          "before": "6 500",
+          "after": "7 500"
+        },
+        {
+          "offset": 53400,
+          "before": "3 500",
+          "after": "4 000"
+        },
+        {
+          "offset": 53950,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 54829,
+          "before": "35 000",
+          "after": "40 000"
+        }
+      ]
+    },
+    {
+      "file": "karpittisztitas-balatonfured.html",
+      "beforeSha256": "ba1f72eb71c13be74f9d4ff53ce78916370470d59c189bffb75af306ca2338dc",
+      "afterSha256": "7f5de6a2a7ecc16f006068b034bb867dc7407219ec30c14b61bd2fda95b5f47c",
+      "edits": [
+        {
+          "offset": 50815,
+          "before": "15 500",
+          "after": "18 000"
+        },
+        {
+          "offset": 50997,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 51462,
+          "before": "17 500",
+          "after": "20 000"
+        },
+        {
+          "offset": 51644,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 52109,
+          "before": "22 500",
+          "after": "26 000"
+        },
+        {
+          "offset": 52291,
+          "before": " 5000",
+          "after": " 6000"
+        },
+        {
+          "offset": 52730,
+          "before": "6 500",
+          "after": "7 500"
+        },
+        {
+          "offset": 53288,
+          "before": "3 500",
+          "after": "4 000"
+        },
+        {
+          "offset": 53838,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 54717,
+          "before": "35 000",
+          "after": "40 000"
+        }
+      ]
+    },
+    {
+      "file": "karpittisztitas-balatonfuzfo.html",
+      "beforeSha256": "8ce689376e6d0190576c43918e67388fdef18c1cee3cd2276fe4c3cefa88931d",
+      "afterSha256": "324d7114f1aad423271eb466f809f7b78e954e999cceb87bc15deaeb4cf33917",
+      "edits": [
+        {
+          "offset": 50826,
+          "before": "15 500",
+          "after": "18 000"
+        },
+        {
+          "offset": 51008,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 51473,
+          "before": "17 500",
+          "after": "20 000"
+        },
+        {
+          "offset": 51655,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 52120,
+          "before": "22 500",
+          "after": "26 000"
+        },
+        {
+          "offset": 52302,
+          "before": " 5000",
+          "after": " 6000"
+        },
+        {
+          "offset": 52741,
+          "before": "6 500",
+          "after": "7 500"
+        },
+        {
+          "offset": 53299,
+          "before": "3 500",
+          "after": "4 000"
+        },
+        {
+          "offset": 53849,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 54728,
+          "before": "35 000",
+          "after": "40 000"
+        }
+      ]
+    },
+    {
+      "file": "karpittisztitas-balatonkenese.html",
+      "beforeSha256": "6ff696efa130dbe419f7172d86dfb4222556bbc96cafa49b3084fb1bf98cbded",
+      "afterSha256": "5b4935fb3e19fb4c0425a69cf6131cd137d1ed0e0bc19be3548cf452edbbd296",
+      "edits": [
+        {
+          "offset": 50808,
+          "before": "15 500",
+          "after": "18 000"
+        },
+        {
+          "offset": 50990,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 51455,
+          "before": "17 500",
+          "after": "20 000"
+        },
+        {
+          "offset": 51637,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 52102,
+          "before": "22 500",
+          "after": "26 000"
+        },
+        {
+          "offset": 52284,
+          "before": " 5000",
+          "after": " 6000"
+        },
+        {
+          "offset": 52723,
+          "before": "6 500",
+          "after": "7 500"
+        },
+        {
+          "offset": 53281,
+          "before": "3 500",
+          "after": "4 000"
+        },
+        {
+          "offset": 53831,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 54710,
+          "before": "35 000",
+          "after": "40 000"
+        }
+      ]
+    },
+    {
+      "file": "karpittisztitas-balatonlelle.html",
+      "beforeSha256": "5f5a2323c293088575e4b53b35853279002770ea6a0e8d1f8f97788b84270bf5",
+      "afterSha256": "91ee2563521e5d60619a8c63df0732b27663e3fff71b54c38ec70e684ae6f79f",
+      "edits": [
+        {
+          "offset": 50768,
+          "before": "15 500",
+          "after": "18 000"
+        },
+        {
+          "offset": 50950,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 51415,
+          "before": "17 500",
+          "after": "20 000"
+        },
+        {
+          "offset": 51597,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 52062,
+          "before": "22 500",
+          "after": "26 000"
+        },
+        {
+          "offset": 52244,
+          "before": " 5000",
+          "after": " 6000"
+        },
+        {
+          "offset": 52683,
+          "before": "6 500",
+          "after": "7 500"
+        },
+        {
+          "offset": 53241,
+          "before": "3 500",
+          "after": "4 000"
+        },
+        {
+          "offset": 53791,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 54670,
+          "before": "35 000",
+          "after": "40 000"
+        }
+      ]
+    },
+    {
+      "file": "karpittisztitas-balatonszemes.html",
+      "beforeSha256": "1d221ea8cbca270f9c8378f120b35a6e47a3e6db1a8c85d59547cd7f33a1b62c",
+      "afterSha256": "68cf63c01cf8000c4c19fd9f6f7747d65dab1eb180e5e931fddfdd3bc739783e",
+      "edits": [
+        {
+          "offset": 50808,
+          "before": "15 500",
+          "after": "18 000"
+        },
+        {
+          "offset": 50990,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 51455,
+          "before": "17 500",
+          "after": "20 000"
+        },
+        {
+          "offset": 51637,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 52102,
+          "before": "22 500",
+          "after": "26 000"
+        },
+        {
+          "offset": 52284,
+          "before": " 5000",
+          "after": " 6000"
+        },
+        {
+          "offset": 52723,
+          "before": "6 500",
+          "after": "7 500"
+        },
+        {
+          "offset": 53281,
+          "before": "3 500",
+          "after": "4 000"
+        },
+        {
+          "offset": 53831,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 54710,
+          "before": "35 000",
+          "after": "40 000"
+        }
+      ]
+    },
+    {
+      "file": "karpittisztitas-fonyod.html",
+      "beforeSha256": "260a89d7bfc4c2b3cb800889dfe2aff60e1de33a1b3f900c8c63e1c62e0346f4",
+      "afterSha256": "31fa3dfc5f51263c37b3bd77425f81583a2e958d4efcbcff81969bf20441f579",
+      "edits": [
+        {
+          "offset": 50529,
+          "before": "15 500",
+          "after": "18 000"
+        },
+        {
+          "offset": 50711,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 51176,
+          "before": "17 500",
+          "after": "20 000"
+        },
+        {
+          "offset": 51358,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 51823,
+          "before": "22 500",
+          "after": "26 000"
+        },
+        {
+          "offset": 52005,
+          "before": " 5000",
+          "after": " 6000"
+        },
+        {
+          "offset": 52444,
+          "before": "6 500",
+          "after": "7 500"
+        },
+        {
+          "offset": 53002,
+          "before": "3 500",
+          "after": "4 000"
+        },
+        {
+          "offset": 53552,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 54431,
+          "before": "35 000",
+          "after": "40 000"
+        }
+      ]
+    },
+    {
+      "file": "karpittisztitas-gyor.html",
+      "beforeSha256": "3cc039ae7560fb188039156f0350a0cca0fb774b4d304d10ce74f9007a76d25d",
+      "afterSha256": "97e1d8feaab8377a1d156434b029be36385e3cd09786979be7126a0a10945b90",
+      "edits": [
+        {
+          "offset": 4721,
+          "before": " 6.500",
+          "after": " 7.500"
+        },
+        {
+          "offset": 4748,
+          "before": " 15.500",
+          "after": " 18.000"
+        },
+        {
+          "offset": 44320,
+          "before": "15 500",
+          "after": "18 000"
+        },
+        {
+          "offset": 44502,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 44969,
+          "before": "17 500",
+          "after": "20 000"
+        },
+        {
+          "offset": 45151,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 45618,
+          "before": "22 500",
+          "after": "26 000"
+        },
+        {
+          "offset": 45800,
+          "before": " 5000",
+          "after": " 6000"
+        },
+        {
+          "offset": 46241,
+          "before": "6 500",
+          "after": "7 500"
+        },
+        {
+          "offset": 46801,
+          "before": "3 500",
+          "after": "4 000"
+        },
+        {
+          "offset": 47353,
+          "before": "4 000",
+          "after": "4 500"
+        }
+      ]
+    },
+    {
+      "file": "karpittisztitas-heviz.html",
+      "beforeSha256": "0266697050de2b815b8f06a792d2784b9c49d1af68ad891c87c3d044313025e6",
+      "afterSha256": "333efcd239dd6ee136e99dcb16961420c997dfb533379c9fecfc92b6e12dde0f",
+      "edits": [
+        {
+          "offset": 50447,
+          "before": "15 500",
+          "after": "18 000"
+        },
+        {
+          "offset": 50629,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 51094,
+          "before": "17 500",
+          "after": "20 000"
+        },
+        {
+          "offset": 51276,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 51741,
+          "before": "22 500",
+          "after": "26 000"
+        },
+        {
+          "offset": 51923,
+          "before": " 5000",
+          "after": " 6000"
+        },
+        {
+          "offset": 52362,
+          "before": "6 500",
+          "after": "7 500"
+        },
+        {
+          "offset": 52920,
+          "before": "3 500",
+          "after": "4 000"
+        },
+        {
+          "offset": 53470,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 54349,
+          "before": "35 000",
+          "after": "40 000"
+        }
+      ]
+    },
+    {
+      "file": "karpittisztitas-keszthely.html",
+      "beforeSha256": "119bcdfe8925eacf4b6e39366f2b48ab23723f1f1d215e60af7ae528c1beb79b",
+      "afterSha256": "b66da49abe583c0377f6af43d1d774081ca6cc71bde27ff765ef1dadf668577e",
+      "edits": [
+        {
+          "offset": 50549,
+          "before": "15 500",
+          "after": "18 000"
+        },
+        {
+          "offset": 50731,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 51196,
+          "before": "17 500",
+          "after": "20 000"
+        },
+        {
+          "offset": 51378,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 51843,
+          "before": "22 500",
+          "after": "26 000"
+        },
+        {
+          "offset": 52025,
+          "before": " 5000",
+          "after": " 6000"
+        },
+        {
+          "offset": 52464,
+          "before": "6 500",
+          "after": "7 500"
+        },
+        {
+          "offset": 53022,
+          "before": "3 500",
+          "after": "4 000"
+        },
+        {
+          "offset": 53572,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 54451,
+          "before": "35 000",
+          "after": "40 000"
+        }
+      ]
+    },
+    {
+      "file": "karpittisztitas-komarom.html",
+      "beforeSha256": "b923374b686fc649722d5a0dbd33bfe3c1c8e37df9438fc98af6d27e6e5f5511",
+      "afterSha256": "f5267ee836dedc9533dd98cbc9d4a9894978d324e51f39cec5784e7430e9d0b4",
+      "edits": [
+        {
+          "offset": 3605,
+          "before": " 6.500",
+          "after": " 7.500"
+        },
+        {
+          "offset": 3632,
+          "before": " 15.500",
+          "after": " 18.000"
+        },
+        {
+          "offset": 42175,
+          "before": "15 500",
+          "after": "18 000"
+        },
+        {
+          "offset": 42357,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 42822,
+          "before": "17 500",
+          "after": "20 000"
+        },
+        {
+          "offset": 43004,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 43469,
+          "before": "22 500",
+          "after": "26 000"
+        },
+        {
+          "offset": 43651,
+          "before": " 5000",
+          "after": " 6000"
+        },
+        {
+          "offset": 44090,
+          "before": "6 500",
+          "after": "7 500"
+        },
+        {
+          "offset": 44648,
+          "before": "3 500",
+          "after": "4 000"
+        },
+        {
+          "offset": 45198,
+          "before": "4 000",
+          "after": "4 500"
+        }
+      ]
+    },
+    {
+      "file": "karpittisztitas-mosonmagyarovar.html",
+      "beforeSha256": "c5782ad12f8ae5a1f45080bac768d5abaa0a8102e620ac093bedb1365441b181",
+      "afterSha256": "e9be36f294a085e364cf55090ca63eac1a94a00f80d8a025cdb3c670987ca9b2",
+      "edits": [
+        {
+          "offset": 3730,
+          "before": " 6.500",
+          "after": " 7.500"
+        },
+        {
+          "offset": 3757,
+          "before": " 15.500",
+          "after": " 18.000"
+        },
+        {
+          "offset": 42440,
+          "before": "15 500",
+          "after": "18 000"
+        },
+        {
+          "offset": 42622,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 43087,
+          "before": "17 500",
+          "after": "20 000"
+        },
+        {
+          "offset": 43269,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 43734,
+          "before": "22 500",
+          "after": "26 000"
+        },
+        {
+          "offset": 43916,
+          "before": " 5000",
+          "after": " 6000"
+        },
+        {
+          "offset": 44355,
+          "before": "6 500",
+          "after": "7 500"
+        },
+        {
+          "offset": 44913,
+          "before": "3 500",
+          "after": "4 000"
+        },
+        {
+          "offset": 45463,
+          "before": "4 000",
+          "after": "4 500"
+        }
+      ]
+    },
+    {
+      "file": "karpittisztitas-papa.html",
+      "beforeSha256": "35a90d45266db26fb341d233557104ac71b5c1f88093a9e64930cc4f4fb65f71",
+      "afterSha256": "4d3ed1828905888907e580f1a5f17a956764844f0031f3dcc87e67f96e69d16e",
+      "edits": [
+        {
+          "offset": 3567,
+          "before": " 6.500",
+          "after": " 7.500"
+        },
+        {
+          "offset": 3594,
+          "before": " 15.500",
+          "after": " 18.000"
+        },
+        {
+          "offset": 42090,
+          "before": "15 500",
+          "after": "18 000"
+        },
+        {
+          "offset": 42272,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 42737,
+          "before": "17 500",
+          "after": "20 000"
+        },
+        {
+          "offset": 42919,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 43384,
+          "before": "22 500",
+          "after": "26 000"
+        },
+        {
+          "offset": 43566,
+          "before": " 5000",
+          "after": " 6000"
+        },
+        {
+          "offset": 44005,
+          "before": "6 500",
+          "after": "7 500"
+        },
+        {
+          "offset": 44563,
+          "before": "3 500",
+          "after": "4 000"
+        },
+        {
+          "offset": 45113,
+          "before": "4 000",
+          "after": "4 500"
+        }
+      ]
+    },
+    {
+      "file": "karpittisztitas-revfulop.html",
+      "beforeSha256": "1e5f9b817c21db767582698665b2e61ef3bdc7c3402cbb34c316cc11e4ae7295",
+      "afterSha256": "62d2e587a57aeb2a1d04c9f43bbe12826a26c76ba666d9af51b6bb8699329b08",
+      "edits": [
+        {
+          "offset": 50641,
+          "before": "15 500",
+          "after": "18 000"
+        },
+        {
+          "offset": 50823,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 51288,
+          "before": "17 500",
+          "after": "20 000"
+        },
+        {
+          "offset": 51470,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 51935,
+          "before": "22 500",
+          "after": "26 000"
+        },
+        {
+          "offset": 52117,
+          "before": " 5000",
+          "after": " 6000"
+        },
+        {
+          "offset": 52556,
+          "before": "6 500",
+          "after": "7 500"
+        },
+        {
+          "offset": 53114,
+          "before": "3 500",
+          "after": "4 000"
+        },
+        {
+          "offset": 53664,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 54543,
+          "before": "35 000",
+          "after": "40 000"
+        }
+      ]
+    },
+    {
+      "file": "karpittisztitas-siofok.html",
+      "beforeSha256": "68f13d5933d1fe12b110bae6576db09c9704dd80cd18217e5bd0f867a4d55e09",
+      "afterSha256": "28773707fee18ac5587a1b6fbc07ba2168abab249f2f736b84e47cc07bc4513a",
+      "edits": [
+        {
+          "offset": 50493,
+          "before": "15 500",
+          "after": "18 000"
+        },
+        {
+          "offset": 50675,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 51140,
+          "before": "17 500",
+          "after": "20 000"
+        },
+        {
+          "offset": 51322,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 51787,
+          "before": "22 500",
+          "after": "26 000"
+        },
+        {
+          "offset": 51969,
+          "before": " 5000",
+          "after": " 6000"
+        },
+        {
+          "offset": 52408,
+          "before": "6 500",
+          "after": "7 500"
+        },
+        {
+          "offset": 52966,
+          "before": "3 500",
+          "after": "4 000"
+        },
+        {
+          "offset": 53516,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 54395,
+          "before": "35 000",
+          "after": "40 000"
+        }
+      ]
+    },
+    {
+      "file": "karpittisztitas-sopron.html",
+      "beforeSha256": "dbff3e0e0f9b5d5d75743ef7b0da471276e695b429a9f12983fa4fed557780d9",
+      "afterSha256": "c4e492e888e512fecf7b8d984d172782f67608cca88347c5d348ae36a45a82c1",
+      "edits": [
+        {
+          "offset": 3604,
+          "before": " 6.500",
+          "after": " 7.500"
+        },
+        {
+          "offset": 3631,
+          "before": " 15.500",
+          "after": " 18.000"
+        },
+        {
+          "offset": 42162,
+          "before": "15 500",
+          "after": "18 000"
+        },
+        {
+          "offset": 42344,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 42809,
+          "before": "17 500",
+          "after": "20 000"
+        },
+        {
+          "offset": 42991,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 43456,
+          "before": "22 500",
+          "after": "26 000"
+        },
+        {
+          "offset": 43638,
+          "before": " 5000",
+          "after": " 6000"
+        },
+        {
+          "offset": 44077,
+          "before": "6 500",
+          "after": "7 500"
+        },
+        {
+          "offset": 44635,
+          "before": "3 500",
+          "after": "4 000"
+        },
+        {
+          "offset": 45185,
+          "before": "4 000",
+          "after": "4 500"
+        }
+      ]
+    },
+    {
+      "file": "karpittisztitas-szombathely.html",
+      "beforeSha256": "338d60a58738b1526aa2d917d83aeeaf70099e5612969cc33bcd80aa1cb04770",
+      "afterSha256": "d623ca0ce098a8231195a9516366520ab2079558bc290cf0aa916f5b5ce5b12e",
+      "edits": [
+        {
+          "offset": 3670,
+          "before": " 6.500",
+          "after": " 7.500"
+        },
+        {
+          "offset": 3697,
+          "before": " 15.500",
+          "after": " 18.000"
+        },
+        {
+          "offset": 42297,
+          "before": "15 500",
+          "after": "18 000"
+        },
+        {
+          "offset": 42479,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 42944,
+          "before": "17 500",
+          "after": "20 000"
+        },
+        {
+          "offset": 43126,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 43591,
+          "before": "22 500",
+          "after": "26 000"
+        },
+        {
+          "offset": 43773,
+          "before": " 5000",
+          "after": " 6000"
+        },
+        {
+          "offset": 44212,
+          "before": "6 500",
+          "after": "7 500"
+        },
+        {
+          "offset": 44770,
+          "before": "3 500",
+          "after": "4 000"
+        },
+        {
+          "offset": 45320,
+          "before": "4 000",
+          "after": "4 500"
+        }
+      ]
+    },
+    {
+      "file": "karpittisztitas-tapolca.html",
+      "beforeSha256": "85e931a66b1a6c399de48c44535cb415facb7bcb7f2df11cf9bad79d5aee9e6f",
+      "afterSha256": "3eddc0d59d33271f9a6d960764968539bbc46046a78d61fe22ab019411e93c58",
+      "edits": [
+        {
+          "offset": 50502,
+          "before": "15 500",
+          "after": "18 000"
+        },
+        {
+          "offset": 50684,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 51149,
+          "before": "17 500",
+          "after": "20 000"
+        },
+        {
+          "offset": 51331,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 51796,
+          "before": "22 500",
+          "after": "26 000"
+        },
+        {
+          "offset": 51978,
+          "before": " 5000",
+          "after": " 6000"
+        },
+        {
+          "offset": 52417,
+          "before": "6 500",
+          "after": "7 500"
+        },
+        {
+          "offset": 52975,
+          "before": "3 500",
+          "after": "4 000"
+        },
+        {
+          "offset": 53525,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 54404,
+          "before": "35 000",
+          "after": "40 000"
+        }
+      ]
+    },
+    {
+      "file": "karpittisztitas-tata.html",
+      "beforeSha256": "a2231c258bdbb09e26bab63f80d3ebf8be7a519a34d7a82df6cd2b4a928f4f66",
+      "afterSha256": "7c9f7230ac947fced188ed065ae4d916abbe1d7858b94661e01be2a4db726d33",
+      "edits": [
+        {
+          "offset": 3516,
+          "before": " 6.500",
+          "after": " 7.500"
+        },
+        {
+          "offset": 3543,
+          "before": " 15.500",
+          "after": " 18.000"
+        },
+        {
+          "offset": 41965,
+          "before": "15 500",
+          "after": "18 000"
+        },
+        {
+          "offset": 42147,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 42612,
+          "before": "17 500",
+          "after": "20 000"
+        },
+        {
+          "offset": 42794,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 43259,
+          "before": "22 500",
+          "after": "26 000"
+        },
+        {
+          "offset": 43441,
+          "before": " 5000",
+          "after": " 6000"
+        },
+        {
+          "offset": 43880,
+          "before": "6 500",
+          "after": "7 500"
+        },
+        {
+          "offset": 44438,
+          "before": "3 500",
+          "after": "4 000"
+        },
+        {
+          "offset": 44988,
+          "before": "4 000",
+          "after": "4 500"
+        }
+      ]
+    },
+    {
+      "file": "karpittisztitas-tatabanya.html",
+      "beforeSha256": "efe2991c050dc5735ad22429786ce36928464134754b89cfd7274d262c73b998",
+      "afterSha256": "1b291f8247ff0d8c4ab0ab8135a296ea97d83b4e8fea31353d431462226f8364",
+      "edits": [
+        {
+          "offset": 3604,
+          "before": " 6.500",
+          "after": " 7.500"
+        },
+        {
+          "offset": 3631,
+          "before": " 15.500",
+          "after": " 18.000"
+        },
+        {
+          "offset": 42134,
+          "before": "15 500",
+          "after": "18 000"
+        },
+        {
+          "offset": 42316,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 42781,
+          "before": "17 500",
+          "after": "20 000"
+        },
+        {
+          "offset": 42963,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 43428,
+          "before": "22 500",
+          "after": "26 000"
+        },
+        {
+          "offset": 43610,
+          "before": " 5000",
+          "after": " 6000"
+        },
+        {
+          "offset": 44049,
+          "before": "6 500",
+          "after": "7 500"
+        },
+        {
+          "offset": 44607,
+          "before": "3 500",
+          "after": "4 000"
+        },
+        {
+          "offset": 45157,
+          "before": "4 000",
+          "after": "4 500"
+        }
+      ]
+    },
+    {
+      "file": "karpittisztitas-tihany.html",
+      "beforeSha256": "2ab0ef5422b9483761a0acd778cf96b8db383a305fcc209b526baf550e7df7c4",
+      "afterSha256": "cd574d597149992cfa7cfb651b8cf1e9a3aa80c5b7a39b3ffabbcb302e707ad6",
+      "edits": [
+        {
+          "offset": 50395,
+          "before": "15 500",
+          "after": "18 000"
+        },
+        {
+          "offset": 50577,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 51042,
+          "before": "17 500",
+          "after": "20 000"
+        },
+        {
+          "offset": 51224,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 51689,
+          "before": "22 500",
+          "after": "26 000"
+        },
+        {
+          "offset": 51871,
+          "before": " 5000",
+          "after": " 6000"
+        },
+        {
+          "offset": 52310,
+          "before": "6 500",
+          "after": "7 500"
+        },
+        {
+          "offset": 52868,
+          "before": "3 500",
+          "after": "4 000"
+        },
+        {
+          "offset": 53418,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 54297,
+          "before": "35 000",
+          "after": "40 000"
+        }
+      ]
+    },
+    {
+      "file": "karpittisztitas-veszprem.html",
+      "beforeSha256": "90b410acf96ab077914ee8db3362e4428e8660f3a3dd0a622f1877b6e015dd78",
+      "afterSha256": "091457a19a530a8561028dfc8de252b24bbf934a443a4def719bb514c7085c4d",
+      "edits": [
+        {
+          "offset": 3598,
+          "before": " 6.500",
+          "after": " 7.500"
+        },
+        {
+          "offset": 3625,
+          "before": " 15.500",
+          "after": " 18.000"
+        },
+        {
+          "offset": 42115,
+          "before": "15 500",
+          "after": "18 000"
+        },
+        {
+          "offset": 42297,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 42762,
+          "before": "17 500",
+          "after": "20 000"
+        },
+        {
+          "offset": 42944,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 43409,
+          "before": "22 500",
+          "after": "26 000"
+        },
+        {
+          "offset": 43591,
+          "before": " 5000",
+          "after": " 6000"
+        },
+        {
+          "offset": 44030,
+          "before": "6 500",
+          "after": "7 500"
+        },
+        {
+          "offset": 44588,
+          "before": "3 500",
+          "after": "4 000"
+        },
+        {
+          "offset": 45138,
+          "before": "4 000",
+          "after": "4 500"
+        }
+      ]
+    },
+    {
+      "file": "karpittisztitas-zamardi.html",
+      "beforeSha256": "48258572d6b850bb0a7cb4d51c82d780072c21060ad64a0c320c26da88f37c99",
+      "afterSha256": "27e6c01128f9aa3ac100409697f27258938c365bba27bf7cb66ceef89f2113e4",
+      "edits": [
+        {
+          "offset": 50471,
+          "before": "15 500",
+          "after": "18 000"
+        },
+        {
+          "offset": 50653,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 51118,
+          "before": "17 500",
+          "after": "20 000"
+        },
+        {
+          "offset": 51300,
+          "before": " 3500",
+          "after": " 4000"
+        },
+        {
+          "offset": 51765,
+          "before": "22 500",
+          "after": "26 000"
+        },
+        {
+          "offset": 51947,
+          "before": " 5000",
+          "after": " 6000"
+        },
+        {
+          "offset": 52386,
+          "before": "6 500",
+          "after": "7 500"
+        },
+        {
+          "offset": 52944,
+          "before": "3 500",
+          "after": "4 000"
+        },
+        {
+          "offset": 53494,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 54373,
+          "before": "35 000",
+          "after": "40 000"
+        }
+      ]
+    },
+    {
+      "file": "karpittisztito-gep-berles.html",
+      "beforeSha256": "72b508e3b6fcc2df4f78b2e70dbdb161cac77681833c3c56b0ba84bc2eb41bfc",
+      "afterSha256": "6602cdd22dd223ce8079d655c48c92162422d69ca5a0fd9628cbacb6a95b7b0b",
+      "edits": [
+        {
+          "offset": 31020,
+          "before": "15 500",
+          "after": "18 000"
+        },
+        {
+          "offset": 36821,
+          "before": " 15 500",
+          "after": " 18 000"
+        }
+      ]
+    },
+    {
+      "file": "komarom.html",
+      "beforeSha256": "f1eae01e45f461a5d52f3ff6017fc81d911eab4e1395612d02de075bd59318ba",
+      "afterSha256": "7d96575a3d060bbbe715490e56f4974d3f5117e21eb459e77fa16a2d506bf8b2",
+      "edits": [
+        {
+          "offset": 7613,
+          "before": " 10.500",
+          "after": " 12.000"
+        },
+        {
+          "offset": 7647,
+          "before": " 8.000",
+          "after": " 9.000"
+        },
+        {
+          "offset": 32268,
+          "before": "10 500",
+          "after": "12 000"
+        },
+        {
+          "offset": 32739,
+          "before": "8 000",
+          "after": "9 000"
+        },
+        {
+          "offset": 48653,
+          "before": " 10.500",
+          "after": " 12.000"
+        },
+        {
+          "offset": 48679,
+          "before": " 5.000",
+          "after": " 6.000"
+        },
+        {
+          "offset": 48718,
+          "before": " 8.000",
+          "after": " 9.000"
+        }
+      ]
+    },
+    {
+      "file": "matractisztitas-badacsony.html",
+      "beforeSha256": "ead67b48094da7e2181c34a740915fb8e54cf7938e9e590167a0b0d5d84059c0",
+      "afterSha256": "e6d2f1ea591c6bdc98927704526b94389ac2afbb0f9deb945507412479736cc7",
+      "edits": [
+        {
+          "offset": 8423,
+          "before": "6000",
+          "after": "7000"
+        },
+        {
+          "offset": 36783,
+          "before": " 6000",
+          "after": " 7000"
+        },
+        {
+          "offset": 45379,
+          "before": "8 000",
+          "after": "9 000"
+        },
+        {
+          "offset": 45466,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45788,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45876,
+          "before": "17 000",
+          "after": "19 500"
+        },
+        {
+          "offset": 46175,
+          "before": "5 000",
+          "after": "6 000"
+        },
+        {
+          "offset": 46262,
+          "before": "7 000",
+          "after": "8 000"
+        },
+        {
+          "offset": 46568,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 46655,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 46983,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 48085,
+          "before": "+5 000",
+          "after": "+6 000"
+        },
+        {
+          "offset": 48492,
+          "before": "+3 000",
+          "after": "+3 500"
+        },
+        {
+          "offset": 75183,
+          "before": "6000",
+          "after": "7000"
+        }
+      ]
+    },
+    {
+      "file": "matractisztitas-balatonalmadi.html",
+      "beforeSha256": "c3dea7114ce9f3af9c7ffe45e5496b869f64ee3416b25bfc87ddf866f47094e2",
+      "afterSha256": "ab68ca609f185a9d7139386e0749da8b7bd416f69d762aca3d7d595f50b9c911",
+      "edits": [
+        {
+          "offset": 8506,
+          "before": "6000",
+          "after": "7000"
+        },
+        {
+          "offset": 36925,
+          "before": " 6000",
+          "after": " 7000"
+        },
+        {
+          "offset": 45431,
+          "before": "8 000",
+          "after": "9 000"
+        },
+        {
+          "offset": 45518,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45840,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45928,
+          "before": "17 000",
+          "after": "19 500"
+        },
+        {
+          "offset": 46227,
+          "before": "5 000",
+          "after": "6 000"
+        },
+        {
+          "offset": 46314,
+          "before": "7 000",
+          "after": "8 000"
+        },
+        {
+          "offset": 46620,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 46707,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 47035,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 48137,
+          "before": "+5 000",
+          "after": "+6 000"
+        },
+        {
+          "offset": 48544,
+          "before": "+3 000",
+          "after": "+3 500"
+        },
+        {
+          "offset": 74282,
+          "before": "6000",
+          "after": "7000"
+        }
+      ]
+    },
+    {
+      "file": "matractisztitas-balatonboglar.html",
+      "beforeSha256": "99a676220f0c8859d74c17a7431706be0426769319c9be76b9e18154d8386e76",
+      "afterSha256": "a72d27b623169b1587f29ce98d077bfea5c85850eb76dab7fa66e730037004bb",
+      "edits": [
+        {
+          "offset": 8501,
+          "before": "6000",
+          "after": "7000"
+        },
+        {
+          "offset": 36920,
+          "before": " 6000",
+          "after": " 7000"
+        },
+        {
+          "offset": 45449,
+          "before": "8 000",
+          "after": "9 000"
+        },
+        {
+          "offset": 45536,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45858,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45946,
+          "before": "17 000",
+          "after": "19 500"
+        },
+        {
+          "offset": 46245,
+          "before": "5 000",
+          "after": "6 000"
+        },
+        {
+          "offset": 46332,
+          "before": "7 000",
+          "after": "8 000"
+        },
+        {
+          "offset": 46638,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 46725,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 47053,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 48155,
+          "before": "+5 000",
+          "after": "+6 000"
+        },
+        {
+          "offset": 48562,
+          "before": "+3 000",
+          "after": "+3 500"
+        },
+        {
+          "offset": 74303,
+          "before": "6000",
+          "after": "7000"
+        }
+      ]
+    },
+    {
+      "file": "matractisztitas-balatonfoldvar.html",
+      "beforeSha256": "0ac36c297e4c750c981813ee549a31f097102026b109d01e2685cf1dc6881175",
+      "afterSha256": "64f2851cdde630dd6a60659ac39122ab9289cf7c35efafa601a430f7c16a42b3",
+      "edits": [
+        {
+          "offset": 8532,
+          "before": "6000",
+          "after": "7000"
+        },
+        {
+          "offset": 36971,
+          "before": " 6000",
+          "after": " 7000"
+        },
+        {
+          "offset": 45467,
+          "before": "8 000",
+          "after": "9 000"
+        },
+        {
+          "offset": 45554,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45876,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45964,
+          "before": "17 000",
+          "after": "19 500"
+        },
+        {
+          "offset": 46263,
+          "before": "5 000",
+          "after": "6 000"
+        },
+        {
+          "offset": 46350,
+          "before": "7 000",
+          "after": "8 000"
+        },
+        {
+          "offset": 46656,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 46743,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 47071,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 48173,
+          "before": "+5 000",
+          "after": "+6 000"
+        },
+        {
+          "offset": 48580,
+          "before": "+3 000",
+          "after": "+3 500"
+        },
+        {
+          "offset": 74340,
+          "before": "6000",
+          "after": "7000"
+        }
+      ]
+    },
+    {
+      "file": "matractisztitas-balatonfured.html",
+      "beforeSha256": "052b697d0e789a2156b0aeab80ded1b8890f0612e36994bb8bc7ca29e23e5e13",
+      "afterSha256": "6ab2219b001e3ba2cd82b2ab145f19cc8cf303271bcd0005d402ab8b293aa60a",
+      "edits": [
+        {
+          "offset": 8487,
+          "before": "6000",
+          "after": "7000"
+        },
+        {
+          "offset": 36893,
+          "before": " 6000",
+          "after": " 7000"
+        },
+        {
+          "offset": 45409,
+          "before": "8 000",
+          "after": "9 000"
+        },
+        {
+          "offset": 45496,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45818,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45906,
+          "before": "17 000",
+          "after": "19 500"
+        },
+        {
+          "offset": 46205,
+          "before": "5 000",
+          "after": "6 000"
+        },
+        {
+          "offset": 46292,
+          "before": "7 000",
+          "after": "8 000"
+        },
+        {
+          "offset": 46598,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 46685,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 47013,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 48115,
+          "before": "+5 000",
+          "after": "+6 000"
+        },
+        {
+          "offset": 48522,
+          "before": "+3 000",
+          "after": "+3 500"
+        },
+        {
+          "offset": 74242,
+          "before": "6000",
+          "after": "7000"
+        }
+      ]
+    },
+    {
+      "file": "matractisztitas-balatonfuzfo.html",
+      "beforeSha256": "abbdbe7b2dd51dd5a448f6f5dec17f915e90bbb542b29976c396b6b018e52d4f",
+      "afterSha256": "9909c8898a934fcfccd723e799d5d705ff177ebca8a45cbf9b0ec9f2a44b5d5e",
+      "edits": [
+        {
+          "offset": 8499,
+          "before": "6000",
+          "after": "7000"
+        },
+        {
+          "offset": 36912,
+          "before": " 6000",
+          "after": " 7000"
+        },
+        {
+          "offset": 45396,
+          "before": "8 000",
+          "after": "9 000"
+        },
+        {
+          "offset": 45483,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45805,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45893,
+          "before": "17 000",
+          "after": "19 500"
+        },
+        {
+          "offset": 46192,
+          "before": "5 000",
+          "after": "6 000"
+        },
+        {
+          "offset": 46279,
+          "before": "7 000",
+          "after": "8 000"
+        },
+        {
+          "offset": 46585,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 46672,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 47000,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 48102,
+          "before": "+5 000",
+          "after": "+6 000"
+        },
+        {
+          "offset": 48509,
+          "before": "+3 000",
+          "after": "+3 500"
+        },
+        {
+          "offset": 74244,
+          "before": "6000",
+          "after": "7000"
+        }
+      ]
+    },
+    {
+      "file": "matractisztitas-balatonkenese.html",
+      "beforeSha256": "e63ae72b69b08264bb3cbab9b275eb8f06f41e8746ec8c9dbc43047e491a77e5",
+      "afterSha256": "ffbc67844d106ee6cd487f1943799f83592c7bb38c78d88c214de4d3dabfcbe7",
+      "edits": [
+        {
+          "offset": 8490,
+          "before": "6000",
+          "after": "7000"
+        },
+        {
+          "offset": 36902,
+          "before": " 6000",
+          "after": " 7000"
+        },
+        {
+          "offset": 45387,
+          "before": "8 000",
+          "after": "9 000"
+        },
+        {
+          "offset": 45474,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45796,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45884,
+          "before": "17 000",
+          "after": "19 500"
+        },
+        {
+          "offset": 46183,
+          "before": "5 000",
+          "after": "6 000"
+        },
+        {
+          "offset": 46270,
+          "before": "7 000",
+          "after": "8 000"
+        },
+        {
+          "offset": 46576,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 46663,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 46991,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 48093,
+          "before": "+5 000",
+          "after": "+6 000"
+        },
+        {
+          "offset": 48500,
+          "before": "+3 000",
+          "after": "+3 500"
+        },
+        {
+          "offset": 74226,
+          "before": "6000",
+          "after": "7000"
+        }
+      ]
+    },
+    {
+      "file": "matractisztitas-balatonlelle.html",
+      "beforeSha256": "e1c97acf34399801b058c197206c2a8962d0b29b98cebed827b20ce046f43e6a",
+      "afterSha256": "7d8fb68a2bcd3f75330d777d8e3e75bccf46329616587bcd62675defef8d48c3",
+      "edits": [
+        {
+          "offset": 8470,
+          "before": "6000",
+          "after": "7000"
+        },
+        {
+          "offset": 36869,
+          "before": " 6000",
+          "after": " 7000"
+        },
+        {
+          "offset": 45362,
+          "before": "8 000",
+          "after": "9 000"
+        },
+        {
+          "offset": 45449,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45771,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45859,
+          "before": "17 000",
+          "after": "19 500"
+        },
+        {
+          "offset": 46158,
+          "before": "5 000",
+          "after": "6 000"
+        },
+        {
+          "offset": 46245,
+          "before": "7 000",
+          "after": "8 000"
+        },
+        {
+          "offset": 46551,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 46638,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 46966,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 48068,
+          "before": "+5 000",
+          "after": "+6 000"
+        },
+        {
+          "offset": 48475,
+          "before": "+3 000",
+          "after": "+3 500"
+        },
+        {
+          "offset": 74205,
+          "before": "6000",
+          "after": "7000"
+        }
+      ]
+    },
+    {
+      "file": "matractisztitas-balatonszemes.html",
+      "beforeSha256": "92e85980533226b8bd4dfc54e2e6d4b2a360ce34afe1d62b41ccb218b6c5bb64",
+      "afterSha256": "31b0822cb73d91dbc5532d9bd754d9e1d1bb246857d4c5f1c309a9b471b4f2cf",
+      "edits": [
+        {
+          "offset": 8489,
+          "before": "6000",
+          "after": "7000"
+        },
+        {
+          "offset": 36901,
+          "before": " 6000",
+          "after": " 7000"
+        },
+        {
+          "offset": 45406,
+          "before": "8 000",
+          "after": "9 000"
+        },
+        {
+          "offset": 45493,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45815,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45903,
+          "before": "17 000",
+          "after": "19 500"
+        },
+        {
+          "offset": 46202,
+          "before": "5 000",
+          "after": "6 000"
+        },
+        {
+          "offset": 46289,
+          "before": "7 000",
+          "after": "8 000"
+        },
+        {
+          "offset": 46595,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 46682,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 47010,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 48112,
+          "before": "+5 000",
+          "after": "+6 000"
+        },
+        {
+          "offset": 48519,
+          "before": "+3 000",
+          "after": "+3 500"
+        },
+        {
+          "offset": 74260,
+          "before": "6000",
+          "after": "7000"
+        }
+      ]
+    },
+    {
+      "file": "matractisztitas-fonyod.html",
+      "beforeSha256": "509c05feac516b32db35dd2b489011c5f108ba1c61dacef76f1413d8c2441e1c",
+      "afterSha256": "c386f79294b9c1022d2f916bf26385494d3a67dcdbef341c7a3242e3a9c328d4",
+      "edits": [
+        {
+          "offset": 8382,
+          "before": "6000",
+          "after": "7000"
+        },
+        {
+          "offset": 36710,
+          "before": " 6000",
+          "after": " 7000"
+        },
+        {
+          "offset": 45192,
+          "before": "8 000",
+          "after": "9 000"
+        },
+        {
+          "offset": 45279,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45601,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45689,
+          "before": "17 000",
+          "after": "19 500"
+        },
+        {
+          "offset": 45988,
+          "before": "5 000",
+          "after": "6 000"
+        },
+        {
+          "offset": 46075,
+          "before": "7 000",
+          "after": "8 000"
+        },
+        {
+          "offset": 46381,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 46468,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 46796,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 47898,
+          "before": "+5 000",
+          "after": "+6 000"
+        },
+        {
+          "offset": 48305,
+          "before": "+3 000",
+          "after": "+3 500"
+        },
+        {
+          "offset": 73985,
+          "before": "6000",
+          "after": "7000"
+        }
+      ]
+    },
+    {
+      "file": "matractisztitas-gyor.html",
+      "beforeSha256": "1960c9332a0a9d7785f628fdbb34cdad05f9621140d361474c4acfa1c13196b6",
+      "afterSha256": "d260a0d82105e7501e11a9c9dbafab094c16885f16ccb4519213d0a2955cb059",
+      "edits": [
+        {
+          "offset": 29174,
+          "before": "8 000",
+          "after": "9 000"
+        },
+        {
+          "offset": 29261,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 29494,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 29582,
+          "before": "17 000",
+          "after": "19 500"
+        },
+        {
+          "offset": 29801,
+          "before": "5 000",
+          "after": "6 000"
+        },
+        {
+          "offset": 29889,
+          "before": "7 000",
+          "after": "8 000"
+        },
+        {
+          "offset": 30109,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 30197,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 30423,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 30511,
+          "before": "9 000",
+          "after": "10 500"
+        },
+        {
+          "offset": 31422,
+          "before": "+5000",
+          "after": "+6000"
+        }
+      ]
+    },
+    {
+      "file": "matractisztitas-heviz.html",
+      "beforeSha256": "bfaa50d4f2adeb8f54e5cd3490a7799450d01f23081e971874ee8d36249ce40c",
+      "afterSha256": "0a6bd842788c1431b5e3806b78d59f5577d98433ce5c9474ca165ff0087c3c56",
+      "edits": [
+        {
+          "offset": 8377,
+          "before": "6000",
+          "after": "7000"
+        },
+        {
+          "offset": 36699,
+          "before": " 6000",
+          "after": " 7000"
+        },
+        {
+          "offset": 45190,
+          "before": "8 000",
+          "after": "9 000"
+        },
+        {
+          "offset": 45277,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45599,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45687,
+          "before": "17 000",
+          "after": "19 500"
+        },
+        {
+          "offset": 45986,
+          "before": "5 000",
+          "after": "6 000"
+        },
+        {
+          "offset": 46073,
+          "before": "7 000",
+          "after": "8 000"
+        },
+        {
+          "offset": 46379,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 46466,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 46794,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 47896,
+          "before": "+5 000",
+          "after": "+6 000"
+        },
+        {
+          "offset": 48303,
+          "before": "+3 000",
+          "after": "+3 500"
+        },
+        {
+          "offset": 73983,
+          "before": "6000",
+          "after": "7000"
+        }
+      ]
+    },
+    {
+      "file": "matractisztitas-keszthely.html",
+      "beforeSha256": "1c5fabf70b69745d44819eb007b5b089164aa1b60dc747dbde3fc48969cb5ca7",
+      "afterSha256": "9ffaf657da19e705c18e1b75ae2ef1d9a5e39f8a9c2b71f99220ec9b605118fd",
+      "edits": [
+        {
+          "offset": 8417,
+          "before": "6000",
+          "after": "7000"
+        },
+        {
+          "offset": 36777,
+          "before": " 6000",
+          "after": " 7000"
+        },
+        {
+          "offset": 45290,
+          "before": "8 000",
+          "after": "9 000"
+        },
+        {
+          "offset": 45377,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45699,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45787,
+          "before": "17 000",
+          "after": "19 500"
+        },
+        {
+          "offset": 46086,
+          "before": "5 000",
+          "after": "6 000"
+        },
+        {
+          "offset": 46173,
+          "before": "7 000",
+          "after": "8 000"
+        },
+        {
+          "offset": 46479,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 46566,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 46894,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 47996,
+          "before": "+5 000",
+          "after": "+6 000"
+        },
+        {
+          "offset": 48403,
+          "before": "+3 000",
+          "after": "+3 500"
+        },
+        {
+          "offset": 74094,
+          "before": "6000",
+          "after": "7000"
+        }
+      ]
+    },
+    {
+      "file": "matractisztitas-komarom.html",
+      "beforeSha256": "3fc2ab185e3f0f8742e8c148cae783b50477f35dffc2830caa622d66a9f8baf0",
+      "afterSha256": "a2b5ecddb907ce00129c05b0810da5b475efb0f4b68c4fad8a4c7243778a8382",
+      "edits": [
+        {
+          "offset": 31349,
+          "before": "8 000",
+          "after": "9 000"
+        },
+        {
+          "offset": 31436,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 31678,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 31766,
+          "before": "17 000",
+          "after": "19 500"
+        },
+        {
+          "offset": 31985,
+          "before": "5 000",
+          "after": "6 000"
+        },
+        {
+          "offset": 32073,
+          "before": "7 000",
+          "after": "8 000"
+        },
+        {
+          "offset": 32293,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 32381,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 32611,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 32699,
+          "before": "9 000",
+          "after": "10 500"
+        },
+        {
+          "offset": 33531,
+          "before": "+5000",
+          "after": "+6000"
+        }
+      ]
+    },
+    {
+      "file": "matractisztitas-mosonmagyarovar.html",
+      "beforeSha256": "155f39c4d21f1fcb8760081dabb341395a4812ea3c75066b819d846eae7a2d4a",
+      "afterSha256": "2f4c19fa3709b121c9fea8ad82aa688304d0c25fbd9bade11bfe51c233152e09",
+      "edits": [
+        {
+          "offset": 31540,
+          "before": "8 000",
+          "after": "9 000"
+        },
+        {
+          "offset": 31627,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 31869,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 31957,
+          "before": "17 000",
+          "after": "19 500"
+        },
+        {
+          "offset": 32176,
+          "before": "5 000",
+          "after": "6 000"
+        },
+        {
+          "offset": 32264,
+          "before": "7 000",
+          "after": "8 000"
+        },
+        {
+          "offset": 32484,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 32572,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 32802,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 32890,
+          "before": "9 000",
+          "after": "10 500"
+        },
+        {
+          "offset": 33722,
+          "before": "+5000",
+          "after": "+6000"
+        }
+      ]
+    },
+    {
+      "file": "matractisztitas-papa.html",
+      "beforeSha256": "f8cc101fa5165e00f10d4718450299b424ce6f76566a35fc5d18a16c20d66a5f",
+      "afterSha256": "b6e960f0f60318d753068229d4292b96c0fae654a9800e654c651ef27ca5a619",
+      "edits": [
+        {
+          "offset": 31279,
+          "before": "8 000",
+          "after": "9 000"
+        },
+        {
+          "offset": 31366,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 31608,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 31696,
+          "before": "17 000",
+          "after": "19 500"
+        },
+        {
+          "offset": 31915,
+          "before": "5 000",
+          "after": "6 000"
+        },
+        {
+          "offset": 32003,
+          "before": "7 000",
+          "after": "8 000"
+        },
+        {
+          "offset": 32223,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 32311,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 32541,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 32629,
+          "before": "9 000",
+          "after": "10 500"
+        },
+        {
+          "offset": 33461,
+          "before": "+5000",
+          "after": "+6000"
+        }
+      ]
+    },
+    {
+      "file": "matractisztitas-revfulop.html",
+      "beforeSha256": "425fade0e080037a8640c7121cc5083ef59817bb7695fd896dda39f6eb69ab6f",
+      "afterSha256": "3fcf59033d145ad46ee06bcae6d0e673a31763f48f34a7f775712878e3809afa",
+      "edits": [
+        {
+          "offset": 8449,
+          "before": "6000",
+          "after": "7000"
+        },
+        {
+          "offset": 36817,
+          "before": " 6000",
+          "after": " 7000"
+        },
+        {
+          "offset": 45349,
+          "before": "8 000",
+          "after": "9 000"
+        },
+        {
+          "offset": 45436,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45758,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45846,
+          "before": "17 000",
+          "after": "19 500"
+        },
+        {
+          "offset": 46145,
+          "before": "5 000",
+          "after": "6 000"
+        },
+        {
+          "offset": 46232,
+          "before": "7 000",
+          "after": "8 000"
+        },
+        {
+          "offset": 46538,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 46625,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 46953,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 48055,
+          "before": "+5 000",
+          "after": "+6 000"
+        },
+        {
+          "offset": 48462,
+          "before": "+3 000",
+          "after": "+3 500"
+        },
+        {
+          "offset": 74190,
+          "before": "6000",
+          "after": "7000"
+        }
+      ]
+    },
+    {
+      "file": "matractisztitas-siofok.html",
+      "beforeSha256": "8e1edea3e77958864da56fcf201a08f8a518cebbd1dcae7433d85a1e281399e4",
+      "afterSha256": "639201dae9854e1981aa1daf52073b9a751c355aaa037be40c6768a65d1bc7b1",
+      "edits": [
+        {
+          "offset": 8382,
+          "before": "6000",
+          "after": "7000"
+        },
+        {
+          "offset": 36710,
+          "before": " 6000",
+          "after": " 7000"
+        },
+        {
+          "offset": 45218,
+          "before": "8 000",
+          "after": "9 000"
+        },
+        {
+          "offset": 45305,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45627,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45715,
+          "before": "17 000",
+          "after": "19 500"
+        },
+        {
+          "offset": 46014,
+          "before": "5 000",
+          "after": "6 000"
+        },
+        {
+          "offset": 46101,
+          "before": "7 000",
+          "after": "8 000"
+        },
+        {
+          "offset": 46407,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 46494,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 46822,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 47924,
+          "before": "+5 000",
+          "after": "+6 000"
+        },
+        {
+          "offset": 48331,
+          "before": "+3 000",
+          "after": "+3 500"
+        },
+        {
+          "offset": 73998,
+          "before": "6000",
+          "after": "7000"
+        }
+      ]
+    },
+    {
+      "file": "matractisztitas-sopron.html",
+      "beforeSha256": "cc5b0d3a4bb24d0d46b6abe37f7e91569550db90a48d85b25aa48f0f6be9c09b",
+      "afterSha256": "c6b0e2150b545532159aa72c0c096e3a4ba032095b4838d352c33d8c01974f1c",
+      "edits": [
+        {
+          "offset": 31311,
+          "before": "8 000",
+          "after": "9 000"
+        },
+        {
+          "offset": 31398,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 31640,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 31728,
+          "before": "17 000",
+          "after": "19 500"
+        },
+        {
+          "offset": 31947,
+          "before": "5 000",
+          "after": "6 000"
+        },
+        {
+          "offset": 32035,
+          "before": "7 000",
+          "after": "8 000"
+        },
+        {
+          "offset": 32255,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 32343,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 32573,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 32661,
+          "before": "9 000",
+          "after": "10 500"
+        },
+        {
+          "offset": 33493,
+          "before": "+5000",
+          "after": "+6000"
+        }
+      ]
+    },
+    {
+      "file": "matractisztitas-szombathely.html",
+      "beforeSha256": "c15d6e2b171221f2f9ad3409a3ae6d1ec595449a50f82603fae190c2a13d6732",
+      "afterSha256": "6225896f3e8d92644b8b496a9bf0afb30b03dcf026827e7a924cbdafc0b982fa",
+      "edits": [
+        {
+          "offset": 31422,
+          "before": "8 000",
+          "after": "9 000"
+        },
+        {
+          "offset": 31509,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 31751,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 31839,
+          "before": "17 000",
+          "after": "19 500"
+        },
+        {
+          "offset": 32058,
+          "before": "5 000",
+          "after": "6 000"
+        },
+        {
+          "offset": 32146,
+          "before": "7 000",
+          "after": "8 000"
+        },
+        {
+          "offset": 32366,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 32454,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 32684,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 32772,
+          "before": "9 000",
+          "after": "10 500"
+        },
+        {
+          "offset": 33604,
+          "before": "+5000",
+          "after": "+6000"
+        }
+      ]
+    },
+    {
+      "file": "matractisztitas-tapolca.html",
+      "beforeSha256": "d254597ab1ea7d17ac9dd80892e647cfdb9bc1623059ba0eff8e97abe6d91899",
+      "afterSha256": "45f6f8d8ae5268a4c371e1de93cc6e117d01a9f4ac15bb21126c711227ab6e27",
+      "edits": [
+        {
+          "offset": 8388,
+          "before": "6000",
+          "after": "7000"
+        },
+        {
+          "offset": 36721,
+          "before": " 6000",
+          "after": " 7000"
+        },
+        {
+          "offset": 45213,
+          "before": "8 000",
+          "after": "9 000"
+        },
+        {
+          "offset": 45300,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45622,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45710,
+          "before": "17 000",
+          "after": "19 500"
+        },
+        {
+          "offset": 46009,
+          "before": "5 000",
+          "after": "6 000"
+        },
+        {
+          "offset": 46096,
+          "before": "7 000",
+          "after": "8 000"
+        },
+        {
+          "offset": 46402,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 46489,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 46817,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 47919,
+          "before": "+5 000",
+          "after": "+6 000"
+        },
+        {
+          "offset": 48326,
+          "before": "+3 000",
+          "after": "+3 500"
+        },
+        {
+          "offset": 73978,
+          "before": "6000",
+          "after": "7000"
+        }
+      ]
+    },
+    {
+      "file": "matractisztitas-tata.html",
+      "beforeSha256": "08822eb9fb19e59eae87770c90bfb4e551f38f703dd28711c70ff8d6858e9ba5",
+      "afterSha256": "b2038f8216fc361aab557cf63f83ba4fd67b1103f9b06bc537108de5ec3bb851",
+      "edits": [
+        {
+          "offset": 31262,
+          "before": "8 000",
+          "after": "9 000"
+        },
+        {
+          "offset": 31349,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 31591,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 31679,
+          "before": "17 000",
+          "after": "19 500"
+        },
+        {
+          "offset": 31898,
+          "before": "5 000",
+          "after": "6 000"
+        },
+        {
+          "offset": 31986,
+          "before": "7 000",
+          "after": "8 000"
+        },
+        {
+          "offset": 32206,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 32294,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 32524,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 32612,
+          "before": "9 000",
+          "after": "10 500"
+        },
+        {
+          "offset": 33444,
+          "before": "+5000",
+          "after": "+6000"
+        }
+      ]
+    },
+    {
+      "file": "matractisztitas-tatabanya.html",
+      "beforeSha256": "4b4f9e8aab69fc660ab9d28c4e96f3b88528a7db8ef0382cbc5934c7763415cd",
+      "afterSha256": "c463d7e671bad55598cd6554279c6241a610cfe9e1acc0f64a2663285dba3543",
+      "edits": [
+        {
+          "offset": 31384,
+          "before": "8 000",
+          "after": "9 000"
+        },
+        {
+          "offset": 31471,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 31713,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 31801,
+          "before": "17 000",
+          "after": "19 500"
+        },
+        {
+          "offset": 32020,
+          "before": "5 000",
+          "after": "6 000"
+        },
+        {
+          "offset": 32108,
+          "before": "7 000",
+          "after": "8 000"
+        },
+        {
+          "offset": 32328,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 32416,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 32646,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 32734,
+          "before": "9 000",
+          "after": "10 500"
+        },
+        {
+          "offset": 33566,
+          "before": "+5000",
+          "after": "+6000"
+        }
+      ]
+    },
+    {
+      "file": "matractisztitas-tihany.html",
+      "beforeSha256": "42d701a09aa59446fecde7d9d84794c935bc9140cec0a7c9d5c612830225bbec",
+      "afterSha256": "5e3579105773e3f1090d53c0fc9bc7ad1f02a02431069fea435c7ce5d716411c",
+      "edits": [
+        {
+          "offset": 8373,
+          "before": "6000",
+          "after": "7000"
+        },
+        {
+          "offset": 36694,
+          "before": " 6000",
+          "after": " 7000"
+        },
+        {
+          "offset": 45159,
+          "before": "8 000",
+          "after": "9 000"
+        },
+        {
+          "offset": 45246,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45568,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45656,
+          "before": "17 000",
+          "after": "19 500"
+        },
+        {
+          "offset": 45955,
+          "before": "5 000",
+          "after": "6 000"
+        },
+        {
+          "offset": 46042,
+          "before": "7 000",
+          "after": "8 000"
+        },
+        {
+          "offset": 46348,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 46435,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 46763,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 47865,
+          "before": "+5 000",
+          "after": "+6 000"
+        },
+        {
+          "offset": 48272,
+          "before": "+3 000",
+          "after": "+3 500"
+        },
+        {
+          "offset": 73929,
+          "before": "6000",
+          "after": "7000"
+        }
+      ]
+    },
+    {
+      "file": "matractisztitas-veszprem.html",
+      "beforeSha256": "33cd632a32734e530c53968b18c4f3361088d4875f92f9f228fffa8ba9e89f32",
+      "afterSha256": "abc5ff45ea3f66f1f77e93442b4bdcdc87772d674c7084bdfe5313a218faac79",
+      "edits": [
+        {
+          "offset": 31370,
+          "before": "8 000",
+          "after": "9 000"
+        },
+        {
+          "offset": 31457,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 31699,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 31787,
+          "before": "17 000",
+          "after": "19 500"
+        },
+        {
+          "offset": 32006,
+          "before": "5 000",
+          "after": "6 000"
+        },
+        {
+          "offset": 32094,
+          "before": "7 000",
+          "after": "8 000"
+        },
+        {
+          "offset": 32314,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 32402,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 32632,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 32720,
+          "before": "9 000",
+          "after": "10 500"
+        },
+        {
+          "offset": 33552,
+          "before": "+5000",
+          "after": "+6000"
+        }
+      ]
+    },
+    {
+      "file": "matractisztitas-zamardi.html",
+      "beforeSha256": "b6186fec007f2e4a79a7b155f8eb226e3efa8c80bec8b5405ee64d9733d1c5ad",
+      "afterSha256": "434813abf4db8acfdf6e5ee91e78db0d04e6b24db733045fe9e232f5216f1d0f",
+      "edits": [
+        {
+          "offset": 8401,
+          "before": "6000",
+          "after": "7000"
+        },
+        {
+          "offset": 36738,
+          "before": " 6000",
+          "after": " 7000"
+        },
+        {
+          "offset": 45219,
+          "before": "8 000",
+          "after": "9 000"
+        },
+        {
+          "offset": 45306,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45628,
+          "before": "12 000",
+          "after": "14 000"
+        },
+        {
+          "offset": 45716,
+          "before": "17 000",
+          "after": "19 500"
+        },
+        {
+          "offset": 46015,
+          "before": "5 000",
+          "after": "6 000"
+        },
+        {
+          "offset": 46102,
+          "before": "7 000",
+          "after": "8 000"
+        },
+        {
+          "offset": 46408,
+          "before": "4 000",
+          "after": "4 500"
+        },
+        {
+          "offset": 46495,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 46823,
+          "before": "6 000",
+          "after": "7 000"
+        },
+        {
+          "offset": 47925,
+          "before": "+5 000",
+          "after": "+6 000"
+        },
+        {
+          "offset": 48332,
+          "before": "+3 000",
+          "after": "+3 500"
+        },
+        {
+          "offset": 74027,
+          "before": "6000",
+          "after": "7000"
+        }
+      ]
+    }
+  ]
+}

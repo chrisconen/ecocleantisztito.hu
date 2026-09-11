@@ -12,7 +12,8 @@ def load_module(name, path):
     spec.loader.exec_module(module)
     return module
 
-def verify(manifest):
+def verify(manifest, read_current=None):
+    artifact = read_current or (lambda name: (ROOT/'release'/name).read_bytes())
     try:
         ref = manifest['bookingExtrasOverlay']
         assert ref['path'] == 'release-support/booking-extras/overlay.json'
@@ -60,7 +61,7 @@ def verify(manifest):
         assert html.count('</body>') == 1
         expected['index.html'] = html.replace('</body>', '<script defer src="ui/booking-cart.js?v='+sha(expected['ui/booking-cart.js'])[:12]+'"></script></body>').encode()
         for name, record in manifest['files'].items():
-            current = (ROOT/'release'/name).read_bytes()
+            current = artifact(name)
             if name in expected:
                 assert current == expected[name], 'Unexpected booking patch: '+name
                 if name == 'ui/calendar-status.css':
@@ -71,7 +72,7 @@ def verify(manifest):
             else:
                 assert record == parent['files'][name] and sha(current) == record['sha256'], 'Unrelated release change: '+name
         gate = load_module('booking_review_parent', ROOT/'release-support/verify-review-overlay.py')
-        return gate.verify(parent, read_current=lambda name: restored[name] if name in restored else (ROOT/'release'/name).read_bytes())
+        return gate.verify(parent, read_current=lambda name: restored[name] if name in restored else artifact(name))
     except (AssertionError, OSError, ValueError, KeyError, TypeError) as error:
         return ['Booking extras proof: '+str(error)]
 

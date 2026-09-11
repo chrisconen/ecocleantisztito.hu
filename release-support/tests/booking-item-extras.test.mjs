@@ -31,10 +31,10 @@ function harness() {
 }
 
 const prices = {
-    egyagyas_a: [8000, 25, 1, 5000, 5000], egyagyas_ab: [12000, 40, 2, 5000, 5000],
-    francia_a: [12000, 35, 1, 7500, 8000], francia_ab: [17000, 55, 2, 7500, 8000],
-    gyerek_a: [5000, 15, 1, 3000, 4000], gyerek_ab: [7000, 25, 2, 3000, 4000],
-    kisagy_a: [4000, 10, 1, 3000, 4000], kisagy_ab: [6000, 20, 2, 3000, 4000]
+    egyagyas_a: [9000, 25, 1, 6000, 6000], egyagyas_ab: [14000, 40, 2, 6000, 6000],
+    francia_a: [14000, 35, 1, 8500, 9000], francia_ab: [19500, 55, 2, 8500, 9000],
+    gyerek_a: [6000, 15, 1, 3500, 4500], gyerek_ab: [8000, 25, 2, 3500, 4500],
+    kisagy_a: [4500, 10, 1, 3500, 4500], kisagy_ab: [7000, 20, 2, 3500, 4500]
 };
 
 for (const [id, [base, duration, sides, wet, frame]] of Object.entries(prices)) {
@@ -57,7 +57,7 @@ test('extras remain specific to their mattress, combined discounts and travel st
         matrac_francia_ab: { category: 'matrac', count: 1, upsells: ['agykeret'] },
         karpit_szofa: { category: 'karpit', count: 1, upsells: ['atkairtas', 'agyazhato'], pillowCount: 4 }
     }; State.travelZone = 'belvaros'; updateSummary();`);
-    assert.equal(h.run('State.totalPrice'), 71000 * .9);
+    assert.equal(h.run('State.totalPrice'), 81800 * .9);
     assert.equal(h.run('State.totalDuration'), 210);
     assert.match(h.element('summaryDetails').innerHTML, /mosás \(1 oldal\)/);
     assert.match(h.element('summaryDetails').innerHTML, /tisztítás \(1 ágy\)/);
@@ -73,7 +73,7 @@ test('mattress extras are inside hidden card sections and absent from global ext
     h.run(`incrementItem('matrac_francia_ab', 'matrac');`);
     assert.equal(h.element('upsell-matrac_francia_ab').style.display, 'block');
     h.run(`toggleItemUpsell('matrac_francia_ab', 'nedves_tisztitas');`);
-    assert.equal(h.run('State.totalPrice'), 32000);
+    assert.equal(h.run('State.totalPrice'), 36500);
 });
 
 test('pillows are offered on sofa and both couches only, and count is a total across furniture', () => {
@@ -85,13 +85,13 @@ test('pillows are offered on sofa and both couches only, and count is a total ac
         assert.doesNotMatch(h.run(`createItemHTML('karpit', '${id}', PRICING.karpit.${id})`), /pillow-count/);
     }
     h.run(`incrementItem('karpit_szofa', 'karpit'); incrementItem('karpit_szofa', 'karpit'); setPillowCount('karpit_szofa', '4');`);
-    assert.equal(h.run('State.totalPrice'), 35000);
+    assert.equal(h.run('State.totalPrice'), 40800);
     assert.equal(h.run('State.totalDuration'), 100);
     h.run(`decrementItem('karpit_szofa');`);
-    assert.equal(h.run('State.totalPrice'), 19500);
+    assert.equal(h.run('State.totalPrice'), 22800);
     for (const value of ['-1', '1.5', 'NaN', 'Infinity', '', '9007199254740992']) {
         h.run(`setPillowCount('karpit_szofa', '${value}');`);
-        assert.equal(h.run('State.totalPrice'), 15500);
+        assert.equal(h.run('State.totalPrice'), 18000);
     }
 });
 
@@ -109,7 +109,7 @@ test('removing a card clears all extras and re-adding it starts empty; service s
         assert.equal(h.element('upsell-karpit_szofa').style.display, 'none');
     }
     h.run(`incrementItem('karpit_szofa', 'karpit');`);
-    assert.equal(h.run('State.totalPrice'), 15500);
+    assert.equal(h.run('State.totalPrice'), 18000);
     h.run(`handleServiceType({ dataset: { value: 'Matrac' }, classList: { add() {} } });`);
     assert.equal(h.run('Object.keys(State.selectedItems).length'), 0);
     assert.equal(h.run('State.totalPrice'), 0);
@@ -129,13 +129,13 @@ test('normal and large booking payloads preserve quantities and human-readable e
     const normal = h.requests[0].body, large = h.requests[1].body;
     assert.equal(normal.items.karpit_szofa.pillowCount, 4);
     assert.deepEqual(normal.items.matrac_francia_ab.upsells, ['nedves_tisztitas', 'agykeret']);
-    assert.equal(normal.totalPrice, 56700);
+    assert.equal(normal.totalPrice, 64620);
     assert.equal(large.totals.estimatedPrice, normal.totalPrice);
     for (const payload of [normal, large]) {
         assert.match(payload.message, /^Eredeti megjegyzés\n\n/);
-        assert.match(payload.message, /4 db × 1000 Ft = 4000 Ft/);
-        assert.match(payload.message, /2 oldal × 7500 Ft = 15000 Ft/);
-        assert.match(payload.message, /1 ágy × 8000 Ft = 8000 Ft/);
+        assert.match(payload.message, /4 db × 1200 Ft = 4800 Ft/);
+        assert.match(payload.message, /2 oldal × 8500 Ft = 17000 Ft/);
+        assert.match(payload.message, /1 ágy × 9000 Ft = 9000 Ft/);
     }
     assert.equal(large.order.items[0].cleaningExtras[0].quantity, 4);
 });

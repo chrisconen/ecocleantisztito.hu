@@ -11,6 +11,8 @@ on:
       - 'release-support/verify-package.py'
       - 'release-support/verify-booking-extras-overlay.py'
       - 'release-support/booking-extras/**'
+      - 'release-support/verify-price-overlay.py'
+      - 'release-support/price-overlay/**'
       - 'release-support/verify-widget-overlay.py'
       - 'release-support/material-widget-overlay.json'
       - 'release-support/material-widget-baseline/**'

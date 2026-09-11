@@ -16,7 +16,7 @@ const manifest=JSON.parse(fs.readFileSync(path.join(support,'release-manifest.js
 if(manifest.studioOverlay)issues.push(...verifyStudioContent(manifest));
 if(manifest.copyOverlay&&!manifest.studioOverlay)issues.push(...verifyStructure(manifest));
 const overlay=manifest.widgetOverlay?JSON.parse(fs.readFileSync(path.join(root,manifest.widgetOverlay.path),'utf8')):null;
-const provenanceGate=manifest.bookingExtrasOverlay?'verify-booking-extras-overlay.py':manifest.reviewOverlay?'verify-review-overlay.py':manifest.studioOverlay?'verify-studio-overlay.py':manifest.copyOverlay?'verify-copy-overlay.py':'verify-widget-overlay.py';
+const provenanceGate=manifest.priceOverlay?'verify-price-overlay.py':manifest.bookingExtrasOverlay?'verify-booking-extras-overlay.py':manifest.reviewOverlay?'verify-review-overlay.py':manifest.studioOverlay?'verify-studio-overlay.py':manifest.copyOverlay?'verify-copy-overlay.py':'verify-widget-overlay.py';
 if(overlay){const proof=spawnSync('python',[path.join(support,provenanceGate)],{cwd:root,encoding:'utf8'});if(proof.error||proof.status!==0)issues.push({file:manifest.reviewOverlay?'material-review/overlay.json':manifest.studioOverlay?'studio/overlay.json':manifest.copyOverlay?'copy-tone/overlay.json':'material-widget-overlay.json',message:'Release provenance failed: '+(proof.error?.message||proof.stdout||proof.stderr)});}
 const medManifestBytes=fs.readFileSync(path.join(root,overlay?overlay.baseline.mediterranean:'demo/mediterranean/manifest.json'));
 const medManifest=JSON.parse(medManifestBytes);
