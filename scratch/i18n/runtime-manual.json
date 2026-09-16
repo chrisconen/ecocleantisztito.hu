@@ -1,0 +1,35 @@
+{
+  "_comment": "Hand-reviewed English for release/ui/booking-live.js. Each key is the exact Hungarian text unit; every one was checked against its source context. Logic values (Kárpit, Magánszemély, Haziallat, …), identifiers and code fragments are deliberately absent so their bytes stay untouched.",
+
+  "💡 Háziállat esetén ajánljuk a szagtalanítást!": "💡 With pets in the home we recommend odour removal.",
+  "💡 Allergia esetén ajánljuk az atkairtást minden bútorra!": "💡 For allergy sufferers we recommend dust mite treatment on every item.",
+  "🛋️ Kárpittisztítás": "🛋️ Upholstery cleaning",
+  "🛏️ Matractisztítás": "🛏️ Mattress cleaning",
+  "🛋️ Kárpit extrák": "🛋️ Upholstery extras",
+  "Generált enteriőrkép:": "Generated interior image:",
+
+  "Ft": "HUF",
+  "Ft/": "HUF/",
+  "Ft/db": "HUF each",
+  "Ft/ülőhely": "HUF/seat",
+  "Ft/felület": "HUF/surface",
+  "oldal": "side",
+  "db": "pcs",
+  "perc": "min",
+  "óra": "h",
+
+  "+Atkairtás": "+Dust mite treatment",
+  "+Atkairtás (": "+Dust mite treatment (",
+  "🚗 Kiszállás (": "🚗 Call-out (",
+  "Összes darabszám az itt kiválasztott bútorokhoz ·": "Total quantity for the items selected here ·",
+  "Kiválasztott kiegészítő tisztítások (kedvezmény előtt):\n": "Selected additional cleaning (before discount):\n",
+  "Válassz szolgáltatást a kezdéshez...": "Choose a service to get started…",
+
+  "A megrendelésed meghaladja az egy napos kapacitást!": "Your order exceeds what we can complete in a single day.",
+  "📧 Kérjük küldd el az adataidat és": "📧 Send us your details and",
+  "személyre szabott árajánlatot küldünk a pontos időpontokkal és esetleges mennyiségi kedvezménnyel!": "we will send a tailored quote with exact dates and any volume discount that applies.",
+  "📧 Árajánlat kérése": "📧 Request a quote",
+  "Kérjük állítsd össze a nagymegrendelés tételeit!": "Please add the items for your large order.",
+  "Kérjük töltsd ki a kötelező mezőket (Név, E-mail, Telefon)!": "Please fill in the required fields (Name, Email, Phone).",
+  "Kérjük adj meg érvényes e-mail címet!": "Please enter a valid email address."
+}

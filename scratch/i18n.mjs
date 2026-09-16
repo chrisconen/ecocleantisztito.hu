@@ -20,9 +20,16 @@ import { createHash } from 'node:crypto';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const OUT = join(ROOT, 'scratch', 'i18n');
-const EN = join(ROOT, 'en');
+const REPO = join(dirname(fileURLToPath(import.meta.url)), '..');
+// SRC is the tree the Hungarian pages are read from and the English pages are
+// written next to. It defaults to the repo root (the build INPUTS), but the
+// published site is built from `release/`, whose pages carry the informal-copy
+// layer and a different layout — so the shipping English pages must be
+// generated with `--src release`.
+const SRC = join(REPO, process.env.I18N_SRC || '.');
+const ROOT = SRC;
+const OUT = join(REPO, 'scratch', 'i18n');
+const EN = join(SRC, 'en');
 
 // ── HTML tokenizer ───────────────────────────────────────────────────────────
 
@@ -185,11 +192,25 @@ function maskUnit(slice) {
     return { masked: out.replace(/\s+/g, ' ').trim(), tags };
 }
 
-function unmask(masked, tags) {
+// `translateAttrs` rewrites alt/title/placeholder/aria-label INSIDE a preserved
+// tag. Those attributes sit within the enclosing unit's span, so translating
+// them as separate units would splice two overlapping ranges into the same
+// bytes and corrupt the file once the lengths differ — which is exactly what
+// turned href="takaritas-balatonalmadi.html" into a mangled path.
+function translateAttrs(tagSource, en) {
+    if (!en) return tagSource;
+    return tagSource.replace(/\b(alt|title|placeholder|aria-label|aria-description)="([^"]*)"/gi,
+        (m, attr, value) => {
+            const t = en[hash(value.replace(/\s+/g, ' ').trim())];
+            return t === undefined ? m : `${attr}="${t.replace(/"/g, '&quot;')}"`;
+        });
+}
+
+function unmask(masked, tags, en) {
     return masked.replace(/<(\d+)(\/?)>|<\/(\d+)>/g, (m, a, slash, b) => {
         const t = tags[Number(a ?? b)];
         if (!t) return '';                       // translator invented a placeholder
-        return b !== undefined ? (t.close ?? '') : t.open;
+        return b !== undefined ? (t.close ?? '') : translateAttrs(t.open, en);
     });
 }
 
@@ -299,10 +320,13 @@ function extractJsonLd(src, file, units) {
 // form — without an English copy of it the translated city pages would have to
 // send English visitors to a Hungarian booking flow.
 function targets() {
+    // adatvedelem/aszf exist only in the source tree: release-support/
+    // publication-policy.json deliberately omits them from the published
+    // package, so they simply drop out when SRC is `release`.
     return ['index.html', 'adatvedelem.html', 'aszf.html', ...readdirSync(ROOT)
         .filter((f) => /^(karpittisztitas|matractisztitas)-.*\.html$/.test(f))
         .filter((f) => !/backup/.test(f))
-        .sort()];
+        .sort()].filter((f) => existsSync(join(ROOT, f)));
 }
 
 function runExtract() {
@@ -311,6 +335,9 @@ function runExtract() {
     for (const f of targets()) extractFile(readFileSync(join(ROOT, f), 'utf8'), f, units);
     const strings = {};
     for (const u of units) strings[u.h] = u.hu;
+    const sources = {};
+    for (const f of targets()) sources[f] = hash(readFileSync(join(ROOT, f), 'utf8'));
+    writeFileSync(join(OUT, 'sources.json'), JSON.stringify(sources, null, 2));
     writeFileSync(join(OUT, 'strings.hu.json'), JSON.stringify(strings, null, 2));
     writeFileSync(join(OUT, 'map.json'), JSON.stringify(units));
     return { units, strings };
@@ -377,8 +404,18 @@ function injectLangSwitch(html, snippet) {
         : html + snippet;
 }
 
-// The English booking page needs the string table loaded before the engine.
+// Two shapes of booking page exist:
+//   * source tree  — loads ../booking-config.js, so the string table goes first
+//   * release tree — loads ../ui/booking-live.js, which has a fully translated
+//     English twin (booking-live-en.js) built by scratch/build-en-runtime.mjs;
+//     the English page must point at that instead.
 function injectBookingI18n(html) {
+    if (/ui\/booking-live\.js/.test(html)) {
+        const en = join(REPO, 'release', 'ui', 'booking-live-en.js');
+        if (!existsSync(en)) throw new Error('booking-live-en.js missing — run scratch/build-en-runtime.mjs first');
+        const v = createHash('sha256').update(readFileSync(en)).digest('hex').slice(0, 12);
+        return html.replace(/\.\.\/ui\/booking-live\.js\?v=[a-f0-9]+/g, `../ui/booking-live-en.js?v=${v}`);
+    }
     if (!/booking-config\.js/.test(html) || /booking-i18n\.js/.test(html)) return html;
     return html.replace(/(\s*)(<script src="\.\.\/booking-config\.js)/,
         '$1<script src="../booking-i18n.js"></script>$1$2');
@@ -389,7 +426,10 @@ const ABSOLUTE = /^(https?:|\/\/|\/|#|tel:|mailto:|data:|javascript:)/i;
 // Pages live in en/, so every relative URL gains a ../ — except links to pages
 // that were themselves translated, which stay inside en/.
 function rewriteUrls(html, translated) {
-    return html.replace(/\b(href|src|poster)\s*=\s*"([^"]*)"/gi, (m, attr, url) => {
+    // Every attribute verify-package.py treats as a local URL must be rewritten,
+    // not just href/src/poster — the lightbox uses data-full/data-zoom/data-src
+    // and those pointed at release/en/img/… until they were covered here.
+    return html.replace(/\b(href|src|poster|data-src|data-full|data-zoom|data-booking-url)\s*=\s*"([^"]*)"/gi, (m, attr, url) => {
         if (!url || ABSOLUTE.test(url)) return m;
         if (translated.has(url)) return `${attr}="${enName(url)}"`;
         const [path, frag] = url.split(/(?=#)/);
@@ -417,6 +457,8 @@ function localiseHead(html, huFile) {
 }
 
 function runReinject({ identity = false } = {}) {
+    const sourceHashes = existsSync(join(OUT, 'sources.json'))
+        ? JSON.parse(readFileSync(join(OUT, 'sources.json'), 'utf8')) : {};
     const units = JSON.parse(readFileSync(join(OUT, 'map.json'), 'utf8'));
     const hu = JSON.parse(readFileSync(join(OUT, 'strings.hu.json'), 'utf8'));
     const en = identity ? hu
@@ -435,11 +477,31 @@ function runReinject({ identity = false } = {}) {
     const results = [];
     for (const [file, list] of byFile) {
         let src = readFileSync(join(ROOT, file), 'utf8');
+        // Offsets in map.json only mean anything for the exact bytes they were
+        // taken from. Anything that edits a source page between extract and
+        // reinject (the overlay builder inserting hreflang, for instance) shifts
+        // every later offset and splices translations into the middle of tags.
+        if (sourceHashes[file] && sourceHashes[file] !== hash(src)) {
+            throw new Error(`${file} changed since extract — re-run "extract" before "reinject"`);
+        }
+        // Nested units (an attribute inside a block that is itself a unit) share
+        // bytes with their parent. Splicing both corrupts the file as soon as a
+        // translation changes length, so only the outermost unit is spliced —
+        // the nested attributes are translated inside its preserved tags by
+        // unmask(). Widest-first ordering makes "contained" easy to detect.
+        const ordered = [...list].sort((a, b) => a.start - b.start || b.end - a.end);
+        const outer = [];
+        let reach = -1;
+        for (const u of ordered) {
+            if (u.start < reach) continue;        // contained in the previous unit
+            outer.push(u);
+            reach = u.end;
+        }
         // descending offset order so earlier splices keep later offsets valid
-        for (const u of [...list].sort((a, b) => b.start - a.start)) {
+        for (const u of [...outer].sort((a, b) => b.start - a.start)) {
             let text = en[u.h];
             if (text === undefined) { missing.add(u.h); text = hu[u.h]; }
-            src = src.slice(0, u.start) + unmask(text, u.tags) + src.slice(u.end);
+            src = src.slice(0, u.start) + unmask(text, u.tags, en) + src.slice(u.end);
         }
         src = translateJsonLd(src, en, hu, missing);
         if (identity) { results.push([file, src]); continue; }
