@@ -25,13 +25,19 @@ OUT = ROOT / 'release'
 sha = lambda data: hashlib.sha256(data).hexdigest()
 
 BASE = 'https://ecocleantisztito.hu'
+# Sits immediately LEFT of .theme-toggle, which is fixed bottom-right with
+# z-index 1001 — 56px at right:2rem on desktop, and 48px at right:1rem below
+# 768px, i.e. exactly where a naive bottom-right pill lands. The first version
+# was placed there and was completely hidden behind it on mobile.
 SWITCH_CSS = (
-    '.lang-switch{position:fixed;right:1rem;bottom:1rem;z-index:995;display:inline-flex;'
-    'align-items:center;justify-content:center;min-width:2.75rem;height:2.75rem;padding:0 .8rem;'
+    '.lang-switch{position:fixed;right:6.5rem;bottom:2rem;z-index:1002;display:inline-flex;'
+    'align-items:center;justify-content:center;min-width:3.5rem;height:56px;padding:0 .9rem;'
     'border-radius:999px;background:#405b37;color:#fffef8;'
-    'font:600 .875rem/1 system-ui,-apple-system,sans-serif;letter-spacing:.06em;'
+    'font:600 .9rem/1 system-ui,-apple-system,sans-serif;letter-spacing:.06em;'
     'text-decoration:none;box-shadow:0 3px 14px rgba(40,62,52,.28)}'
     '.lang-switch:hover,.lang-switch:focus-visible{background:#2f4429;color:#fff}'
+    '@media (max-width:768px){.lang-switch{right:4.5rem;bottom:1rem;height:48px;'
+    'min-width:3rem;padding:0 .75rem}}'
     '@media print{.lang-switch{display:none}}'
 )
 
