@@ -25,21 +25,29 @@ OUT = ROOT / 'release'
 sha = lambda data: hashlib.sha256(data).hexdigest()
 
 BASE = 'https://ecocleantisztito.hu'
-# Sits immediately LEFT of .theme-toggle, which is fixed bottom-right with
-# z-index 1001 — 56px at right:2rem on desktop, and 48px at right:1rem below
-# 768px, i.e. exactly where a naive bottom-right pill lands. The first version
-# was placed there and was completely hidden behind it on mobile.
+# The switcher belongs in the header, where people look for it. Two earlier
+# versions floated it in the bottom-right corner: the first sat under another
+# control, the second cleared it and was still invisible in practice — a lone
+# pill over the hero photo reads as a gallery button, not a language choice.
 SWITCH_CSS = (
-    '.lang-switch{position:fixed;right:6.5rem;bottom:2rem;z-index:1002;display:inline-flex;'
-    'align-items:center;justify-content:center;min-width:3.5rem;height:56px;padding:0 .9rem;'
-    'border-radius:999px;background:#405b37;color:#fffef8;'
-    'font:600 .9rem/1 system-ui,-apple-system,sans-serif;letter-spacing:.06em;'
-    'text-decoration:none;box-shadow:0 3px 14px rgba(40,62,52,.28)}'
-    '.lang-switch:hover,.lang-switch:focus-visible{background:#2f4429;color:#fff}'
-    '@media (max-width:768px){.lang-switch{right:4.5rem;bottom:1rem;height:48px;'
-    'min-width:3rem;padding:0 .75rem}}'
+    '.lang-switch{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;'
+    'min-width:2.5rem;padding:.45rem .72rem;border:1px solid rgba(64,91,55,.35);'
+    'border-radius:999px;color:#405b37;background:#fff;font-weight:700;font-size:.75rem;'
+    'line-height:1;letter-spacing:.09em;text-decoration:none;white-space:nowrap;'
+    'transition:background-color .15s ease,color .15s ease,border-color .15s ease}'
+    '.lang-switch:hover,.lang-switch:focus-visible{background:#405b37;border-color:#405b37;'
+    'color:#fffef8}'
+    # .header-right holds only the hamburger and has no rule of its own, so the
+    # switcher would stack above it instead of sitting beside it.
+    '.header-right{display:flex;align-items:center;justify-content:flex-end;gap:10px}'
     '@media print{.lang-switch{display:none}}'
 )
+
+# Both header templates in the package. The modern nav puts the switcher just
+# left of the hamburger, which is where it lands on desktop too (after the CTA
+# group); the legacy bixol header puts it left of its own hamburger.
+NAV_ANCHOR = '<button class="nav-mobile-toggle"'
+LEGACY_ANCHOR = '<div class="header-right">'
 
 
 def en_name(hu_file):
@@ -65,13 +73,20 @@ def head_block(hu_file):
     )
 
 
-def switch_block(hu_file):
-    return (
-        '\n<!-- i18n language switch -->'
-        f'\n<a class="lang-switch" href="en/{en_name(hu_file)}" hreflang="en" lang="en"'
-        ' title="English version" aria-label="English version">EN</a>'
-        f'\n<style>{SWITCH_CSS}</style>\n'
-    )
+def style_block():
+    return f'\n<!-- i18n language switch -->\n<style>{SWITCH_CSS}</style>\n'
+
+
+def insert_switch(text, hu_file):
+    """Put the switcher in the page header; return the new text and the fragment."""
+    link = (f'<a class="lang-switch" href="en/{en_name(hu_file)}" hreflang="en" lang="en"'
+            ' title="English version" aria-label="English version">EN</a>')
+    if text.count(NAV_ANCHOR) == 1:
+        frag = link + '\n            '
+        return text.replace(NAV_ANCHOR, frag + NAV_ANCHOR, 1), frag
+    assert text.count(LEGACY_ANCHOR) == 1, 'No header to anchor the switcher: ' + hu_file
+    frag = '\n                                ' + link
+    return text.replace(LEGACY_ANCHOR, LEGACY_ANCHOR + frag, 1), frag
 
 
 def main():
@@ -85,7 +100,11 @@ def main():
         # rebase: put every edited page back to its parent bytes first
         for name, rec in previous['pages'].items():
             restored = (OUT / name).read_text('utf-8')
-            restored = restored.replace(rec['head'], '', 1).replace(rec['switch'], '', 1)
+            # 'switch' was a single before-</body> block until the switcher moved
+            # into the header, which needs two fragments to reverse.
+            fragments = rec.get('fragments') or [rec['switch']]
+            for fragment in [rec['head'], *fragments]:
+                restored = restored.replace(fragment, '', 1)
             assert sha(restored.encode()) == rec['beforeSha256'], 'Cannot rebase ' + name
             (OUT / name).write_text(restored, encoding='utf-8', newline='')
         sitemap_prev = previous['sitemap']
@@ -112,20 +131,21 @@ def main():
         before = (OUT / hu_file).read_bytes()
         assert sha(before) == parent['files'][hu_file]['sha256'], 'Parent page changed: ' + hu_file
         text = before.decode('utf-8')
-        head, switch = head_block(hu_file), switch_block(hu_file)
+        head, style = head_block(hu_file), style_block()
         assert 'rel="canonical"' in text, 'No canonical to anchor hreflang: ' + hu_file
-        text = text.replace('>', '>' + head, 0) if False else text
-        # insert hreflang right after the canonical tag, switcher before </body>
+        # hreflang right after the canonical tag, the switcher in the header and
+        # its stylesheet before </body> (a <style> inside <nav> is not conforming)
         idx = text.index('rel="canonical"')
         close = text.index('>', idx) + 1
         text = text[:close] + head + text[close:]
+        text, link = insert_switch(text, hu_file)
         assert '</body>' in text, 'No </body>: ' + hu_file
-        text = text.replace('</body>', switch + '</body>', 1)
+        text = text.replace('</body>', style + '</body>', 1)
         after = text.encode('utf-8')
         (OUT / hu_file).write_bytes(after)
         manifest['files'][hu_file] = {**parent['files'][hu_file], 'sha256': sha(after), 'bytes': len(after)}
         pages[hu_file] = {'beforeSha256': sha(before), 'afterSha256': sha(after),
-                          'head': head, 'switch': switch}
+                          'head': head, 'fragments': [link, style]}
 
     # ── 2. register the new English artifacts ────────────────────────────────
     added = {}
@@ -154,7 +174,7 @@ def main():
 
     # ── 4. record the overlay ────────────────────────────────────────────────
     overlay = {
-        'version': 1,
+        'version': 2,
         'parentSha256': sha(parent_bytes),
         'reportSha256': sha(report_bytes),
         'runtimeParentSha256': sha((OUT / 'ui/booking-live.js').read_bytes()),

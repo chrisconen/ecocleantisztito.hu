@@ -378,31 +378,51 @@ export function enName(huFile) {
         .replace(/^matractisztitas-/, 'mattress-cleaning-');
 }
 
-// A floating pill rather than a new <li> in .nav-main: the nav markup differs
-// between the desktop and mobile menus on 138 pages, and a self-contained,
-// scoped element cannot disturb either layout. The mobile cart tab sits at
-// mid-left (booking-cart.css), so bottom-right is free.
-function langSwitch(href, label, lang, title) {
-    return `
-<!-- i18n language switch -->
-<a class="lang-switch" href="${href}" hreflang="${lang}" lang="${lang}" title="${title}" aria-label="${title}">${label}</a>
-<style>
-.lang-switch{position:fixed;right:6.5rem;bottom:2rem;z-index:1002;display:inline-flex;align-items:center;
-justify-content:center;min-width:3.5rem;height:56px;padding:0 .9rem;border-radius:999px;
-background:#405b37;color:#fffef8;font:600 .9rem/1 system-ui,-apple-system,sans-serif;
-letter-spacing:.06em;text-decoration:none;box-shadow:0 3px 14px rgba(40,62,52,.28)}
-.lang-switch:hover,.lang-switch:focus-visible{background:#2f4429;color:#fff}
-@media (max-width:768px){.lang-switch{right:4.5rem;bottom:1rem;height:48px;min-width:3rem;padding:0 .75rem}}
-@media print{.lang-switch{display:none}}
-</style>
-`;
+// Kept byte-identical to SWITCH_CSS in release-support/english-overlay/build.py,
+// which writes the same switcher onto the Hungarian pages.
+const SWITCH_CSS = `.lang-switch{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;`
+    + `min-width:2.5rem;padding:.45rem .72rem;border:1px solid rgba(64,91,55,.35);`
+    + `border-radius:999px;color:#405b37;background:#fff;font-weight:700;font-size:.75rem;`
+    + `line-height:1;letter-spacing:.09em;text-decoration:none;white-space:nowrap;`
+    + `transition:background-color .15s ease,color .15s ease,border-color .15s ease}`
+    + `.lang-switch:hover,.lang-switch:focus-visible{background:#405b37;border-color:#405b37;`
+    + `color:#fffef8}`
+    + `.header-right{display:flex;align-items:center;justify-content:flex-end;gap:10px}`
+    + `@media print{.lang-switch{display:none}}`;
+
+// Both header templates in the package: the modern nav (switcher left of the
+// hamburger, after the CTA group on desktop) and the legacy bixol header.
+const NAV_ANCHOR = '<button class="nav-mobile-toggle"';
+const LEGACY_ANCHOR = '<div class="header-right">';
+
+function langLink(href, label, lang, title) {
+    return `<a class="lang-switch" href="${href}" hreflang="${lang}" lang="${lang}"`
+        + ` title="${title}" aria-label="${title}">${label}</a>`;
 }
 
-function injectLangSwitch(html, snippet) {
-    if (html.includes('class="lang-switch"')) return html;
+// The switcher goes in the header, where people look for it — an earlier
+// version floated it in the bottom-right corner and read as a stray button.
+// The <style> stays before </body>; a <style> inside <nav> is not conforming.
+function stripLangSwitch(html) {
+    return html
+        .replace(/\n?<!-- i18n language switch -->/g, '')
+        .replace(/\n?\s*<a class="lang-switch"[\s\S]*?<\/a>/g, '')
+        .replace(/\n?<style>\s*\.lang-switch\{[\s\S]*?<\/style>\n?/g, '');
+}
+
+function injectLangSwitch(html, link) {
+    html = stripLangSwitch(html);       // re-placing an older switcher must not stack
+    if (html.split(NAV_ANCHOR).length - 1 === 1) {
+        html = html.replace(NAV_ANCHOR, `${link}\n            ${NAV_ANCHOR}`);
+    } else if (html.split(LEGACY_ANCHOR).length - 1 === 1) {
+        html = html.replace(LEGACY_ANCHOR, `${LEGACY_ANCHOR}\n                                ${link}`);
+    } else {
+        throw new Error('No header to anchor the language switcher');
+    }
+    const style = `\n<!-- i18n language switch -->\n<style>${SWITCH_CSS}</style>\n`;
     return html.includes('</body>')
-        ? html.replace(/<\/body>/i, `${snippet}</body>`)
-        : html + snippet;
+        ? html.replace(/<\/body>/i, `${style}</body>`)
+        : html + style;
 }
 
 // Two shapes of booking page exist:
@@ -507,7 +527,7 @@ function runReinject({ identity = false } = {}) {
         src = translateJsonLd(src, en, hu, missing);
         if (identity) { results.push([file, src]); continue; }
         src = injectBookingI18n(localiseHead(rewriteUrls(src, translated), file));
-        src = injectLangSwitch(src, langSwitch(`../${file}`, 'HU', 'hu', 'Magyar változat'));
+        src = injectLangSwitch(src, langLink(`../${file}`, 'HU', 'hu', 'Magyar változat'));
         writeFileSync(join(EN, enName(file)), src);
         results.push([file, src]);
     }
@@ -590,7 +610,7 @@ function runHreflangHu() {
         } else {
             src = src.replace(/<\/head>/i, `${links}\n</head>`);
         }
-        src = injectLangSwitch(src, langSwitch(`en/${enName(file)}`, 'EN', 'en', 'English version'));
+        src = injectLangSwitch(src, langLink(`en/${enName(file)}`, 'EN', 'en', 'English version'));
         writeFileSync(path, src);
         touched++;
     }
@@ -618,7 +638,23 @@ function runSitemap() {
     console.log(`sitemap.xml: added ${added} English URL(s)`);
 }
 
+// Re-places the language switcher on the already generated English pages,
+// without re-running translation. Used when only the switcher markup changes.
+function runReswitch() {
+    let touched = 0;
+    for (const file of targets()) {
+        const path = join(EN, enName(file));
+        if (!existsSync(path)) continue;
+        const before = readFileSync(path, 'utf8');
+        const after = injectLangSwitch(before, langLink(`../${file}`, 'HU', 'hu', 'Magyar változat'));
+        if (after !== before) { writeFileSync(path, after); touched++; }
+    }
+    console.log(`language switcher re-placed on ${touched} English page(s)`);
+}
+
 const cmd = process.argv[2] || 'stats';
+if (cmd === 'reswitch') runReswitch();
+else
 if (cmd === 'extract') { runExtract(); console.log('wrote', OUT); }
 else if (cmd === 'stats') runStats();
 else if (cmd === 'verify') runVerify();
