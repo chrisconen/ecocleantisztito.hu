@@ -299,7 +299,7 @@ function extractJsonLd(src, file, units) {
 // form — without an English copy of it the translated city pages would have to
 // send English visitors to a Hungarian booking flow.
 function targets() {
-    return ['index.html', ...readdirSync(ROOT)
+    return ['index.html', 'adatvedelem.html', 'aszf.html', ...readdirSync(ROOT)
         .filter((f) => /^(karpittisztitas|matractisztitas)-.*\.html$/.test(f))
         .filter((f) => !/backup/.test(f))
         .sort()];
@@ -342,6 +342,8 @@ export function enName(huFile) {
     const SPECIAL = {
         'karpittisztitas-matractisztitas.html': 'upholstery-and-mattress-cleaning.html',
         'karpittisztitas-elotte-utana.html': 'upholstery-cleaning-before-after.html',
+        'adatvedelem.html': 'privacy-policy.html',
+        'aszf.html': 'terms.html',
     };
     if (SPECIAL[huFile]) return SPECIAL[huFile];
     return huFile
@@ -512,7 +514,10 @@ function runHreflangHu() {
     for (const file of targets()) {
         const path = join(ROOT, file);
         let src = readFileSync(path, 'utf8');
-        if (src.includes('hreflang="en"')) { skipped++; continue; }
+        // Must match the <link rel="alternate"> form specifically: the language
+        // switcher anchor also carries hreflang="en", and a looser test made
+        // this skip pages that had the switcher but no alternate links.
+        if (/<link[^>]*rel="alternate"[^>]*hreflang="en"/i.test(src)) { skipped++; continue; }
         const links =
             `\n    <link rel="alternate" hreflang="hu" href="${base}/${file}">` +
             `\n    <link rel="alternate" hreflang="en" href="${base}/en/${enName(file)}">` +
