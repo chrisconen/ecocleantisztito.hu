@@ -3,6 +3,30 @@
 // ═══════════════════════════════════════════════════════════════════════════════
 
 // ═══════════════════════════════════════════════════════════════════════════════
+// I18N
+// ═══════════════════════════════════════════════════════════════════════════════
+// English pages load booking-i18n.js BEFORE this file; Hungarian pages do not.
+// With no table present T() returns its own argument, so the Hungarian site
+// behaves byte-for-byte as it did before i18n existed.
+//
+// Only DISPLAY goes through T(). The PRICING / UPSELLS data below stays
+// Hungarian and is what gets POSTed to the backend, so the n8n workflow and the
+// internal order e-mails keep working unchanged — `lang` in the payload is what
+// tells n8n which language to write the CUSTOMER confirmation in.
+
+const T = (hu) => (window.BOOKING_I18N && window.BOOKING_I18N[hu]) || hu;
+const isEN = () => window.BOOKING_LANG === 'en';
+
+// Interpolating variant: the KEY keeps the {placeholders} so word order can move.
+//   fmt('Kosár frissítve: {n} bútor', { n: 3 })  ->  'Cart updated: 3 items'
+const fmt = (hu, vars) => T(hu).replace(/\{(\w+)\}/g, (m, k) => (k in vars ? vars[k] : m));
+
+// 18000 -> "18.000 Ft" (hu) / "18,000 HUF" (en)
+const money = (amount) => isEN()
+    ? `${amount.toLocaleString('en-GB')} HUF`
+    : `${amount.toLocaleString('hu-HU')} Ft`;
+
+// ═══════════════════════════════════════════════════════════════════════════════
 // PRICING - ALAPÁRAK
 // ═══════════════════════════════════════════════════════════════════════════════
 
@@ -239,10 +263,10 @@ function updateConditionNote() {
     let text = '';
 
     if (State.conditions.includes('Haziallat')) {
-        text += '💡 Háziállat esetén ajánljuk a szagtalanítást! ';
+        text += `💡 ${T('Háziállat esetén ajánljuk a szagtalanítást!')} `;
     }
     if (State.conditions.includes('Allergias')) {
-        text += '💡 Allergia esetén ajánljuk az atkairtást minden bútorra! ';
+        text += `💡 ${T('Allergia esetén ajánljuk az atkairtást minden bútorra!')} `;
     }
 
     if (text) {
@@ -265,14 +289,14 @@ function populateItems() {
     const showMatrac = State.serviceType === 'Matrac' || State.serviceType === 'Mindkettő';
 
     if (showKarpit) {
-        container.innerHTML += '<div class="item-group-title">🛋️ Kárpittisztítás</div>';
+        container.innerHTML += `<div class="item-group-title">🛋️ ${T('Kárpittisztítás')}</div>`;
         Object.entries(PRICING.karpit).forEach(([id, item]) => {
             container.innerHTML += createItemHTML('karpit', id, item);
         });
     }
 
     if (showMatrac) {
-        container.innerHTML += '<div class="item-group-title" style="margin-top: 1.5rem;">🛏️ Matractisztítás</div>';
+        container.innerHTML += `<div class="item-group-title" style="margin-top: 1.5rem;">🛏️ ${T('Matractisztítás')}</div>`;
         Object.entries(PRICING.matrac).forEach(([id, item]) => {
             container.innerHTML += createItemHTML('matrac', id, item);
         });
@@ -293,8 +317,8 @@ function createItemHTML(category, id, item) {
         <div class="config-item" data-item-id="${fullId}">
             <div class="item-main">
                 <div class="item-info">
-                    <span class="item-name">${item.name}</span>
-                    <span class="item-price">${item.price.toLocaleString('hu-HU')} Ft</span>
+                    <span class="item-name">${T(item.name)}</span>
+                    <span class="item-price">${money(item.price)}</span>
                 </div>
                 <div class="item-counter">
                     <button class="counter-btn" onclick="decrementItem('${fullId}')">−</button>
@@ -309,8 +333,8 @@ function createItemHTML(category, id, item) {
                     <input type="checkbox" onchange="toggleItemUpsell('${fullId}', 'atkairtas', ${item.atkaPrice})">
                     <span class="upsell-label">
                         <span class="upsell-icon">🦠</span>
-                        <span class="upsell-text">+Atkairtás</span>
-                        <span class="upsell-price">+${item.atkaPrice.toLocaleString('hu-HU')} Ft</span>
+                        <span class="upsell-text">+${T('Atkairtás')}</span>
+                        <span class="upsell-price">+${money(item.atkaPrice)}</span>
                     </span>
                 </label>
                 ` : ''}
@@ -319,8 +343,8 @@ function createItemHTML(category, id, item) {
                     <input type="checkbox" onchange="toggleItemUpsell('${fullId}', 'agyazhato', ${item.agyazhatoPrice})">
                     <span class="upsell-label">
                         <span class="upsell-icon">🛏️</span>
-                        <span class="upsell-text">+Ágyazható felület tisztítása (kihúzható / lenyitható)</span>
-                        <span class="upsell-price">+${item.agyazhatoPrice.toLocaleString('hu-HU')} Ft</span>
+                        <span class="upsell-text">+${T('Ágyazható felület tisztítása (kihúzható / lenyitható)')}</span>
+                        <span class="upsell-price">+${money(item.agyazhatoPrice)}</span>
                     </span>
                 </label>
                 ` : ''}
@@ -329,17 +353,19 @@ function createItemHTML(category, id, item) {
                     <input type="checkbox" onchange="toggleItemUpsell('${fullId}', '${upsellId}')">
                     <span class="upsell-label">
                         <span class="upsell-icon">${upsell.icon}</span>
-                        <span class="upsell-text">${upsell.name}
-                            <small>${upsell.priceType === 'perSide' ? `${item.sides} oldal / matrac · ${upsell.note}` : 'Ágyanként, fejtámlával együtt'}</small>
+                        <span class="upsell-text">${T(upsell.name)}
+                            <small>${upsell.priceType === 'perSide'
+                                ? fmt('{n} oldal / matrac · {note}', { n: item.sides, note: T(upsell.note) })
+                                : T('Ágyanként, fejtámlával együtt')}</small>
                         </span>
-                        <span class="upsell-price">+${item[upsell.priceKey].toLocaleString('hu-HU')} Ft/${upsell.priceType === 'perSide' ? 'oldal' : 'ágy'}</span>
+                        <span class="upsell-price">+${money(item[upsell.priceKey])}/${T(upsell.priceType === 'perSide' ? 'oldal' : 'ágy')}</span>
                     </span>
                 </label>`).join('') : ''}
                 ${hasPillows ? `
                 <div class="pillow-extra">
-                    <label class="upsell-text" for="pillows-${fullId}">${PILLOW_CLEANING.name}
-                        <small>${PILLOW_CLEANING.description}</small>
-                        <small>Összes darabszám az itt kiválasztott bútorokhoz · ${PILLOW_CLEANING.price.toLocaleString('hu-HU')} Ft/db</small>
+                    <label class="upsell-text" for="pillows-${fullId}">${T(PILLOW_CLEANING.name)}
+                        <small>${T(PILLOW_CLEANING.description)}</small>
+                        <small>${fmt('Összes darabszám az itt kiválasztott bútorokhoz · {price}/db', { price: money(PILLOW_CLEANING.price) })}</small>
                     </label>
                     <input class="pillow-count" id="pillows-${fullId}" type="number" min="0" step="1" value="0" inputmode="numeric"
                         onchange="setPillowCount('${fullId}', this.value)">
@@ -356,7 +382,7 @@ function populateUpsells() {
 
     const showKarpit = State.serviceType === 'Kárpit' || State.serviceType === 'Mindkettő';
     if (showKarpit) {
-        container.innerHTML += '<div class="upsell-group-title">🛋️ Kárpit extrák</div>';
+        container.innerHTML += `<div class="upsell-group-title">🛋️ ${T('Kárpit extrák')}</div>`;
         Object.entries(UPSELLS.karpit).forEach(([id, upsell]) => {
             if (id !== 'atkairtas') { // Atkairtás item-level
                 container.innerHTML += createGlobalUpsellHTML('karpit', id, upsell);
@@ -368,10 +394,10 @@ function populateUpsells() {
 
 function createGlobalUpsellHTML(category, id, upsell) {
     const fullId = `${category}_${id}`;
-    const priceText = upsell.priceType === 'perSeat' ? `+${upsell.price.toLocaleString('hu-HU')} Ft/ülőhely` :
-        upsell.priceType === 'perSide' ? `+${upsell.price.toLocaleString('hu-HU')} Ft/felület` :
-            upsell.priceType === 'perItem' ? `+${upsell.price.toLocaleString('hu-HU')} Ft/db` :
-                `+${upsell.price.toLocaleString('hu-HU')} Ft`;
+    const priceText = upsell.priceType === 'perSeat' ? `+${money(upsell.price)}/${T('ülőhely')}` :
+        upsell.priceType === 'perSide' ? `+${money(upsell.price)}/${T('felület')}` :
+            upsell.priceType === 'perItem' ? `+${money(upsell.price)}/${T('db')}` :
+                `+${money(upsell.price)}`;
 
     return `
         <label class="global-upsell">
@@ -379,9 +405,9 @@ function createGlobalUpsellHTML(category, id, upsell) {
             <span class="global-upsell-card">
                 <span class="global-upsell-icon">${upsell.icon}</span>
                 <span class="global-upsell-info">
-                    <span class="global-upsell-name">${upsell.name}</span>
-                    <span class="global-upsell-desc">${upsell.description}</span>
-                    ${upsell.note ? `<span class="global-upsell-note">⚠️ ${upsell.note}</span>` : ''}
+                    <span class="global-upsell-name">${T(upsell.name)}</span>
+                    <span class="global-upsell-desc">${T(upsell.description)}</span>
+                    ${upsell.note ? `<span class="global-upsell-note">⚠️ ${T(upsell.note)}</span>` : ''}
                 </span>
                 <span class="global-upsell-price">${priceText}</span>
             </span>
@@ -601,7 +627,7 @@ function updateSummary() {
         }
 
         details.push({
-            text: `${item.count}x ${pricing.name}`,
+            text: `${item.count}x ${T(pricing.name)}`,
             price: itemTotal
         });
 
@@ -612,7 +638,7 @@ function updateSummary() {
                 subtotal += atkaTotal;
                 totalDuration += 15 * item.count;
                 details.push({
-                    text: `  +Atkairtás (${item.count}x)`,
+                    text: `  +${T('Atkairtás')} (${item.count}x)`,
                     price: atkaTotal,
                     isUpsell: true
                 });
@@ -622,7 +648,7 @@ function updateSummary() {
                 subtotal += agyTotal;
                 totalDuration += 20 * item.count;
                 details.push({
-                    text: `  +Ágyazható felület tisztítása (${item.count}x)`,
+                    text: `  +${T('Ágyazható felület tisztítása')} (${item.count}x)`,
                     price: agyTotal,
                     isUpsell: true
                 });
@@ -631,7 +657,7 @@ function updateSummary() {
         getItemCleaningExtras(fullId, item).forEach(extra => {
             subtotal += extra.total;
             totalDuration += extra.duration;
-            details.push({ text: `  +${extra.name} (${extra.quantity} ${extra.unit})`, price: extra.total, isUpsell: true });
+            details.push({ text: `  +${T(extra.name)} (${extra.quantity} ${T(extra.unit)})`, price: extra.total, isUpsell: true });
         });
     });
 
@@ -664,7 +690,7 @@ function updateSummary() {
             subtotal += upsellTotal;
             totalDuration += upsellDuration;
             details.push({
-                text: `${upsell.icon} ${upsell.name}`,
+                text: `${upsell.icon} ${T(upsell.name)}`,
                 price: upsellTotal,
                 isUpsell: true
             });
@@ -677,7 +703,7 @@ function updateSummary() {
         if (zone) {
             subtotal += zone.fee;
             details.push({
-                text: `🚗 Kiszállás (${zone.label})`,
+                text: `🚗 ${T('Kiszállás')} (${T(zone.label)})`,
                 price: zone.fee,
                 isTravel: true
             });
@@ -691,7 +717,7 @@ function updateSummary() {
     if (hasKarpit && hasMatrac) {
         discount = Math.round(subtotal * DISCOUNTS.combo.percent / 100);
         details.push({
-            text: `🎉 ${DISCOUNTS.combo.label}`,
+            text: `🎉 ${T(DISCOUNTS.combo.label)}`,
             price: -discount,
             isDiscount: true
         });
@@ -700,7 +726,7 @@ function updateSummary() {
     else if (totalItems >= 3) {
         discount = Math.round(subtotal * DISCOUNTS.quantity3.percent / 100);
         details.push({
-            text: `🎉 ${DISCOUNTS.quantity3.label}`,
+            text: `🎉 ${T(DISCOUNTS.quantity3.label)}`,
             price: -discount,
             isDiscount: true
         });
@@ -713,15 +739,15 @@ function updateSummary() {
     State.totalDuration = totalDuration;
     State.discount = discount;
 
-    document.getElementById('totalPrice').textContent = `${finalTotal.toLocaleString('hu-HU')} Ft`;
+    document.getElementById('totalPrice').textContent = `${money(finalTotal)}`;
 
     // Original price (if discount)
     const originalEl = document.getElementById('originalPrice');
     if (discount > 0) {
-        originalEl.textContent = `${originalPrice.toLocaleString('hu-HU')} Ft`;
+        originalEl.textContent = `${money(originalPrice)}`;
         originalEl.style.display = 'block';
         document.getElementById('summaryDiscount').style.display = 'flex';
-        document.getElementById('discountAmount').textContent = `-${discount.toLocaleString('hu-HU')} Ft`;
+        document.getElementById('discountAmount').textContent = `-${money(discount)}`;
     } else {
         originalEl.style.display = 'none';
         document.getElementById('summaryDiscount').style.display = 'none';
@@ -733,7 +759,7 @@ function updateSummary() {
         const hours = Math.floor(totalDuration / 60);
         const mins = totalDuration % 60;
         document.getElementById('totalDuration').textContent =
-            hours > 0 ? `${hours} óra ${mins} perc` : `${mins} perc`;
+            hours > 0 ? fmt('{h} óra {m} perc', { h: hours, m: mins }) : fmt('{m} perc', { m: mins });
     } else {
         document.getElementById('summaryDuration').style.display = 'none';
     }
@@ -741,12 +767,12 @@ function updateSummary() {
     // Details
     const detailsEl = document.getElementById('summaryDetails');
     if (details.length === 0) {
-        detailsEl.innerHTML = '<p class="summary-empty">Válasszon szolgáltatást a kezdéshez...</p>';
+        detailsEl.innerHTML = `<p class="summary-empty">${T('Válasszon szolgáltatást a kezdéshez...')}</p>`;
     } else {
         detailsEl.innerHTML = details.map(d => `
             <div class="summary-item ${d.isUpsell ? 'is-upsell' : ''} ${d.isDiscount ? 'is-discount' : ''} ${d.isTravel ? 'is-travel' : ''}">
                 <span>${d.text}</span>
-                <span>${d.price >= 0 ? '' : ''}${d.price.toLocaleString('hu-HU')} Ft</span>
+                <span>${d.price >= 0 ? '' : ''}${money(d.price)}</span>
             </div>
         `).join('');
     }
@@ -810,7 +836,7 @@ function updateLargeOrderPanelValues() {
         durationEl.textContent = formatDuration(State.totalDuration);
     }
     if (priceEl) {
-        priceEl.textContent = `${State.totalPrice.toLocaleString('hu-HU')} Ft`;
+        priceEl.textContent = `${money(State.totalPrice)}`;
     }
 }
 
@@ -824,37 +850,37 @@ function createLargeOrderPanel() {
     panel.innerHTML = `
         <div class="large-order-header">
             <span class="large-order-icon">🏢</span>
-            <h3>Nagymegrendelés - Egyedi árajánlat</h3>
+            <h3>${T('Nagymegrendelés - Egyedi árajánlat')}</h3>
         </div>
         <div class="large-order-info">
-            <p>Az Ön megrendelése meghaladja az egy napos kapacitást!</p>
-            <p>Becsült munkaidő: <strong id="largeOrderDuration">${formatDuration(State.totalDuration)}</strong></p>
-            <p>Becsült ár: <strong id="largeOrderPrice">${State.totalPrice.toLocaleString('hu-HU')} Ft</strong></p>
-            <p class="large-order-note">📧 Kérjük küldje el az adatokat és <strong>24 órán belül</strong> személyre szabott árajánlatot küldünk a pontos időpontokkal és esetleges mennyiségi kedvezménnyel!</p>
+            <p>${T('Az Ön megrendelése meghaladja az egy napos kapacitást!')}</p>
+            <p>${T('Becsült munkaidő:')} <strong id="largeOrderDuration">${formatDuration(State.totalDuration)}</strong></p>
+            <p>${T('Becsült ár:')} <strong id="largeOrderPrice">${money(State.totalPrice)}</strong></p>
+            <p class="large-order-note">📧 ${T('Kérjük küldje el az adatokat és <strong>24 órán belül</strong> személyre szabott árajánlatot küldünk a pontos időpontokkal és esetleges mennyiségi kedvezménnyel!')}</p>
         </div>
         <div class="large-order-form">
             <div class="form-row">
-                <label for="largeOrderName">Név / Cég *</label>
-                <input type="text" id="largeOrderName" required placeholder="Minta Géza Alapítvány">
+                <label for="largeOrderName">${T('Név / Cég *')}</label>
+                <input type="text" id="largeOrderName" required placeholder="${T('Minta Géza Alapítvány')}">
             </div>
             <div class="form-row">
-                <label for="largeOrderEmail">E-mail *</label>
+                <label for="largeOrderEmail">${T('E-mail *')}</label>
                 <input type="email" id="largeOrderEmail" required placeholder="info@example.com">
             </div>
             <div class="form-row">
-                <label for="largeOrderPhone">Telefon *</label>
+                <label for="largeOrderPhone">${T('Telefon *')}</label>
                 <input type="tel" id="largeOrderPhone" required placeholder="+36 30 123 4567">
             </div>
             <div class="form-row">
-                <label for="largeOrderAddress">Cím / Helyszín</label>
-                <input type="text" id="largeOrderAddress" placeholder="2890 Tata, Példa utca 1.">
+                <label for="largeOrderAddress">${T('Cím / Helyszín')}</label>
+                <input type="text" id="largeOrderAddress" placeholder="${T('2890 Tata, Példa utca 1.')}">
             </div>
             <div class="form-row">
-                <label for="largeOrderMessage">Megjegyzés (preferált időszak, stb.)</label>
-                <textarea id="largeOrderMessage" rows="3" placeholder="Pl. Január második fele lenne ideális..."></textarea>
+                <label for="largeOrderMessage">${T('Megjegyzés (preferált időszak, stb.)')}</label>
+                <textarea id="largeOrderMessage" rows="3" placeholder="${T('Pl. Január második fele lenne ideális...')}"></textarea>
             </div>
             <button type="button" class="large-order-submit" onclick="submitLargeOrder()">
-                📧 Árajánlat kérése
+                📧 ${T('Árajánlat kérése')}
             </button>
         </div>
     `;
@@ -872,11 +898,11 @@ function formatDuration(minutes) {
     const hours = Math.floor(minutes / 60);
     const mins = minutes % 60;
     if (hours > 0 && mins > 0) {
-        return `${hours} óra ${mins} perc`;
+        return fmt('{h} óra {m} perc', { h: hours, m: mins });
     } else if (hours > 0) {
-        return `${hours} óra`;
+        return fmt('{h} óra', { h: hours });
     } else {
-        return `${mins} perc`;
+        return fmt('{m} perc', { m: mins });
     }
 }
 
@@ -889,13 +915,13 @@ async function submitLargeOrder() {
 
     // Validáció
     if (!name || !email || !phone) {
-        alert('Kérjük töltse ki a kötelező mezőket (Név, E-mail, Telefon)!');
+        alert(T('Kérjük töltse ki a kötelező mezőket (Név, E-mail, Telefon)!'));
         return;
     }
 
     // Email validáció
     if (!email.includes('@') || !email.includes('.')) {
-        alert('Kérjük adjon meg érvényes e-mail címet!');
+        alert(T('Kérjük adjon meg érvényes e-mail címet!'));
         return;
     }
 
@@ -923,6 +949,7 @@ async function submitLargeOrder() {
         type: 'large_order',
         source: 'eco-clean-hungary',
         timestamp: new Date().toISOString(),
+        lang: window.BOOKING_LANG || 'hu',
 
         customer: {
             name: name,
@@ -959,7 +986,7 @@ async function submitLargeOrder() {
     const submitBtn = document.querySelector('.large-order-submit');
     const originalText = submitBtn.innerHTML;
     submitBtn.disabled = true;
-    submitBtn.innerHTML = '<span class="loading-spinner"></span> Küldés...';
+    submitBtn.innerHTML = `<span class="loading-spinner"></span> ${T('Küldés...')}`;
 
     try {
         const response = await fetch(LARGE_ORDER.webhookUrl, {
@@ -977,7 +1004,7 @@ async function submitLargeOrder() {
         }
     } catch (error) {
         console.error('Nagymegrendelési hiba:', error);
-        alert('Hiba történt a küldés során. Kérjük próbálja újra, vagy hívjon minket: +36 20 912 3456');
+        alert(T('Hiba történt a küldés során. Kérjük próbálja újra, vagy hívjon minket: +36 20 912 3456'));
     } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
@@ -990,11 +1017,11 @@ function showLargeOrderSuccess(name, email) {
         panel.innerHTML = `
             <div class="large-order-success">
                 <div class="success-icon">✅</div>
-                <h3>Köszönjük, ${name}!</h3>
-                <p>Árajánlat kérését megkaptuk.</p>
-                <p>24 órán belül válaszolunk a <strong>${email}</strong> címre.</p>
-                <p class="success-note">Sürgős esetben hívjon: <a href="tel:+36209123456">+36 20 912 3456</a></p>
-                <button onclick="location.reload()" class="new-order-btn">Új megrendelés</button>
+                <h3>${fmt('Köszönjük, {name}!', { name })}</h3>
+                <p>${T('Árajánlat kérését megkaptuk.')}</p>
+                <p>${fmt('24 órán belül válaszolunk a <strong>{email}</strong> címre.', { email })}</p>
+                <p class="success-note">${T('Sürgős esetben hívjon:')} <a href="tel:+36209123456">+36 20 912 3456</a></p>
+                <button onclick="location.reload()" class="new-order-btn">${T('Új megrendelés')}</button>
             </div>
         `;
     }
@@ -1041,13 +1068,13 @@ async function submitBooking(event) {
 
     // Validation: Required fields
     if (!name) {
-        alert('❌ Kérjük adja meg a nevét!');
+        alert(T('❌ Kérjük adja meg a nevét!'));
         document.getElementById('nameInput').focus();
         return false;
     }
 
     if (!email) {
-        alert('❌ Kérjük adja meg az e-mail címét!');
+        alert(T('❌ Kérjük adja meg az e-mail címét!'));
         document.getElementById('emailInput').focus();
         return false;
     }
@@ -1055,27 +1082,27 @@ async function submitBooking(event) {
     // Validation: Email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-        alert('❌ Kérjük adjon meg érvényes e-mail címet!');
+        alert(T('❌ Kérjük adjon meg érvényes e-mail címet!'));
         document.getElementById('emailInput').focus();
         return false;
     }
 
     if (!emailConfirm) {
-        alert('❌ Kérjük erősítse meg az e-mail címét!');
+        alert(T('❌ Kérjük erősítse meg az e-mail címét!'));
         document.getElementById('emailConfirmInput').focus();
         return false;
     }
 
     // Validation: Email match
     if (email !== emailConfirm) {
-        alert('❌ Az e-mail címek nem egyeznek! Kérjük ellenőrizze.');
+        alert(T('❌ Az e-mail címek nem egyeznek! Kérjük ellenőrizze.'));
         document.getElementById('emailConfirmInput').focus();
         document.getElementById('emailConfirmInput').select();
         return false;
     }
 
     if (!phone) {
-        alert('❌ Kérjük adja meg a telefonszámát!');
+        alert(T('❌ Kérjük adja meg a telefonszámát!'));
         document.getElementById('phoneInput').focus();
         return false;
     }
@@ -1084,14 +1111,14 @@ async function submitBooking(event) {
     const phoneRegex = /^(\+36|06)?[0-9]{9,10}$/;
     const cleanPhone = phone.replace(/[\s\-]/g, '');
     if (!phoneRegex.test(cleanPhone)) {
-        alert('❌ Kérjük adjon meg érvényes magyar telefonszámot!\n(pl. +36 30 123 4567 vagy 06 30 123 4567)');
+        alert(T('❌ Kérjük adjon meg érvényes magyar telefonszámot!\n(pl. +36 30 123 4567 vagy 06 30 123 4567)'));
         document.getElementById('phoneInput').focus();
         return false;
     }
 
     // Validation: Address fields
     if (!street || !plz || !city) {
-        alert('❌ Kérjük töltse ki a pontos címet (utca, irányítószám, város)!');
+        alert(T('❌ Kérjük töltse ki a pontos címet (utca, irányítószám, város)!'));
         if (!street) document.getElementById('streetInput').focus();
         else if (!plz) document.getElementById('plzInput').focus();
         else document.getElementById('cityInput').focus();
@@ -1100,7 +1127,7 @@ async function submitBooking(event) {
 
     // Validation: PLZ format (4 digits)
     if (!/^\d{4}$/.test(plz)) {
-        alert('❌ Az irányítószám 4 számjegyből kell álljon!');
+        alert(T('❌ Az irányítószám 4 számjegyből kell álljon!'));
         document.getElementById('plzInput').focus();
         return false;
     }
@@ -1122,7 +1149,7 @@ async function submitBooking(event) {
 
     // Validation: Travel Zone (REQUIRED for pricing!)
     if (!State.travelZone) {
-        alert('❌ Kérjük válassza ki a kiszállási zónát!\\n\\nEz szükséges a pontos ár kiszámításához.');
+        alert(T('❌ Kérjük válassza ki a kiszállási zónát!\\n\\nEz szükséges a pontos ár kiszámításához.'));
         // Scroll to the travel zone section
         document.getElementById('travelZoneWrap').scrollIntoView({ behavior: 'smooth', block: 'center' });
         return false;
@@ -1161,6 +1188,11 @@ async function submitBooking(event) {
         slotStartTime: selectedSlot?.startTime || null,
         slotEndTime: selectedSlot?.endTime || null,
         isFirstSlot: selectedSlot?.isFirstSlot || false,
+        // Language the customer booked in. Item names, serviceType and
+        // customerType above stay Hungarian for the internal workflow; this
+        // field is what n8n branches on to write the CUSTOMER confirmation
+        // e-mail in the right language.
+        lang: window.BOOKING_LANG || 'hu',
         timestamp: new Date().toISOString()
     };
 
@@ -1170,7 +1202,7 @@ async function submitBooking(event) {
     const submitBtn = document.querySelector('.btn-submit');
     const originalBtnText = submitBtn.innerHTML;
     submitBtn.disabled = true;
-    submitBtn.innerHTML = '<span>Küldés...</span>';
+    submitBtn.innerHTML = `<span>${T('Küldés...')}</span>`;
 
     // Backend-nek küldés
     try {
@@ -1193,27 +1225,27 @@ async function submitBooking(event) {
         } else {
             // Szerver hibát adott vissza - részletes hibaüzenet
             const errorType = result.error || 'UNKNOWN';
-            const errorMessage = result.message || 'Hiba történt a foglalás során';
+            const errorMessage = result.message || T('Hiba történt a foglalás során');
 
             if (errorType === 'CLUSTER_MISMATCH' || errorMessage.includes('CLUSTER_MISMATCH')) {
                 // Cluster konfliktus - specifikus hibaüzenet
-                alert(`❌ Időpont ütközés!\n\n${errorMessage}\n\n💡 Kérjük válasszon másik napot a naptárból, vagy válasszon másik várost a legördülő menüből!`);
+                alert(fmt(`❌ Időpont ütközés!\n\n{msg}\n\n💡 Kérjük válasszon másik napot a naptárból, vagy válasszon másik várost a legördülő menüből!`, { msg: errorMessage }));
             } else if (errorType === 'FULLY_BOOKED' || errorMessage.includes('betelt')) {
                 // Teljesen foglalt nap
-                alert(`❌ Ez a nap már betelt!\n\n${errorMessage}\n\n💡 Kérjük válasszon másik időpontot a naptárból!`);
+                alert(fmt(`❌ Ez a nap már betelt!\n\n{msg}\n\n💡 Kérjük válasszon másik időpontot a naptárból!`, { msg: errorMessage }));
             } else if (errorType === 'INVALID_DATE' || errorMessage.includes('érvénytelen')) {
                 // Érvénytelen dátum
-                alert(`❌ Érvénytelen időpont!\n\n${errorMessage}\n\n💡 Kérjük válasszon egy jövőbeli dátumot!`);
+                alert(fmt(`❌ Érvénytelen időpont!\n\n{msg}\n\n💡 Kérjük válasszon egy jövőbeli dátumot!`, { msg: errorMessage }));
             } else {
                 // Általános hiba
-                alert(`❌ Hiba történt a foglalás során!\n\n${errorMessage}\n\n📞 Kérjük próbálja újra, vagy hívjon minket:\n06 70 240 8141`);
+                alert(fmt(`❌ Hiba történt a foglalás során!\n\n{msg}\n\n📞 Kérjük próbálja újra, vagy hívjon minket:\n06 70 240 8141`, { msg: errorMessage }));
             }
 
             throw new Error(errorMessage);
         }
     } catch (error) {
         console.error('Foglalási hiba:', error);
-        alert('❌ Hiba történt a foglalás küldése során.\n\nKérjük próbálja újra, vagy hívjon minket:\n📞 06 70 240 8141');
+        alert(T('❌ Hiba történt a foglalás küldése során.\n\nKérjük próbálja újra, vagy hívjon minket:\n📞 06 70 240 8141'));
 
         // Gomb újra engedélyezése
         submitBtn.disabled = false;
@@ -1245,10 +1277,10 @@ function showSuccessModal(bookingData) {
                     </svg>
                 </div>
                 
-                <h2 class="success-title">Foglalás sikeresen elküldve!</h2>
+                <h2 class="success-title">${T('Foglalás sikeresen elküldve!')}</h2>
                 
                 <p class="success-message">
-                    Köszönjük a bizalmát! Hamarosan felvesszük Önnel a kapcsolatot a megadott elérhetőségeken.
+                    ${T('Köszönjük a bizalmát! Hamarosan felvesszük Önnel a kapcsolatot a megadott elérhetőségeken.')}
                 </p>
                 
                 <div class="success-details">
@@ -1270,12 +1302,12 @@ function showSuccessModal(bookingData) {
                 
                 ${bookingData.isKarpitBooking ? `
                 <div class="success-andante-note">
-                    <strong>⚠️ ANDANTE bútor tisztítása?</strong>
-                    <p>Kérjük, <strong>még a kiszállás előtt</strong> ellenőrizze bútora szövetének típusát! Ha az ANDANTE típusú vagy vízre érzékeny anyagból készült, kérjük, előzetesen egyeztessen munkatársunkkal a <strong>06 70 240 8141</strong>-es számon. Ellenkező esetben a kiszállás díjának 50%-a kapacitás-foglalási díjként felszámításra kerülhet.</p>
+                    <strong>⚠️ ${T('ANDANTE bútor tisztítása?')}</strong>
+                    <p>${T('Kérjük, <strong>még a kiszállás előtt</strong> ellenőrizze bútora szövetének típusát! Ha az ANDANTE típusú vagy vízre érzékeny anyagból készült, kérjük, előzetesen egyeztessen munkatársunkkal a <strong>06 70 240 8141</strong>-es számon. Ellenkező esetben a kiszállás díjának 50%-a kapacitás-foglalási díjként felszámításra kerülhet.')}</p>
                 </div>
                 ` : ''}
                 <button class="success-close-btn" onclick="closeSuccessModal()">
-                    Bezárás
+                    ${T('Bezárás')}
                 </button>
             </div>
         </div>
@@ -1320,9 +1352,9 @@ document.addEventListener('DOMContentLoaded', function () {
             availabilityEndpoint: 'https://hub.centaur-lang.dev/webhook/check-availability',
             bookingEndpoint: 'https://hub.centaur-lang.dev/webhook/booking-request',
             country: 'HU',
-            currency: 'Ft',
-            locale: 'hu-HU',
-            language: 'hu'
+            currency: isEN() ? 'HUF' : 'Ft',
+            locale: isEN() ? 'en-GB' : 'hu-HU',
+            language: window.BOOKING_LANG || 'hu'
         });
     }
 });

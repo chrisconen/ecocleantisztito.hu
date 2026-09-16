@@ -111,11 +111,15 @@
             if (count === 0 && drawer.open) finishClose();
             syncTabVisibility();
             const price = State.totalPrice;
-            const money = `${price.toLocaleString('hu-HU')} Ft`;
+            const priceLabel = money(price);
             badge.textContent = String(count);
-            tab.setAttribute('aria-label', `Kosár megnyitása: ${count} bútor, ${money}`);
-            quantity.textContent = count ? `${count} bútor az összeállításodban` : 'Még üres a kosarad';
-            if (count !== lastCount || price !== lastPrice) status.textContent = `Kosár frissítve: ${count} bútor, ${money}.`;
+            tab.setAttribute('aria-label', fmt('Kosár megnyitása: {n} bútor, {price}', { n: count, price: priceLabel }));
+            quantity.textContent = count
+                ? fmt('{n} bútor az összeállításodban', { n: count })
+                : T('Még üres a kosarad');
+            if (count !== lastCount || price !== lastPrice) {
+                status.textContent = fmt('Kosár frissítve: {n} bútor, {price}.', { n: count, price: priceLabel });
+            }
             if (count > lastCount) {
                 clearTimeout(pulseTimer);
                 tab.classList.remove('is-updated');

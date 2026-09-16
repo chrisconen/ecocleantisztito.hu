@@ -70,7 +70,9 @@ const BookingCalendar = {
             flexAccept: 'Ich verstehe und akzeptiere die ±30 Min Flexibilität',
             flexRequired: 'Bitte bestätigen Sie die Flexibilität',
             minutes: 'Min',
-            confirmSlot: 'Termin bestätigen'
+            confirmSlot: 'Termin bestätigen',
+            selectDate: 'Bitte wählen Sie ein Datum',
+            selectTime: 'Bitte wählen Sie ein Zeitfenster'
         },
         hu: {
             months: ['Január', 'Február', 'Március', 'Április', 'Május', 'Június',
@@ -100,7 +102,41 @@ const BookingCalendar = {
             flexAccept: 'Megértettem és elfogadom a ±30 perc rugalmasságot',
             flexRequired: 'Kérjük, erősítse meg a rugalmasságot',
             minutes: 'perc',
-            confirmSlot: 'Időpont megerősítése'
+            confirmSlot: 'Időpont megerősítése',
+            selectDate: 'Kérjük válasszon dátumot',
+            selectTime: 'Kérjük válasszon időpontot'
+        },
+        en: {
+            months: ['January', 'February', 'March', 'April', 'May', 'June',
+                'July', 'August', 'September', 'October', 'November', 'December'],
+            weekdays: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            selectCity: 'Please select your location first',
+            loading: 'Loading availability…',
+            free: 'Available',
+            limited: 'Partly available',
+            zoneBlocked: 'Different zone',
+            full: 'Fully booked',
+            notEnoughTime: 'Not enough time',
+            weekend: 'Weekend',
+            past: 'Past',
+            selectSlot: 'Choose a time',
+            back: '← Back to calendar',
+            requiredTime: 'Time required',
+            availableTime: 'Time available',
+            firstSlot: 'First appointment',
+            laterSlot: 'Later appointment',
+            booked: 'Booked',
+            slotFits: 'It fits! ✓',
+            slotTooShort: 'Not enough time',
+            flexWarning: '⚠️ This is NOT the first appointment of the day',
+            flexExplain: 'The arrival time may vary by ±30 minutes.',
+            flexExpected: 'Expected arrival',
+            flexAccept: 'I understand and accept the ±30 minute flexibility',
+            flexRequired: 'Please confirm the flexibility',
+            minutes: 'min',
+            confirmSlot: 'Confirm appointment',
+            selectDate: 'Please choose a date',
+            selectTime: 'Please choose a time slot'
         }
     },
 
@@ -634,10 +670,10 @@ const BookingCalendar = {
 
     getValidationMessage() {
         if (!this.state.selectedDate) {
-            return this.config.language === 'de' ? 'Bitte wählen Sie ein Datum' : 'Kérjük válasszon dátumot';
+            return this.lang.selectDate;
         }
         if (!this.state.selectedSlot) {
-            return this.config.language === 'de' ? 'Bitte wählen Sie ein Zeitfenster' : 'Kérjük válasszon időpontot';
+            return this.lang.selectTime;
         }
         if (!this.state.selectedSlot.isFirstSlot && !this.state.flexibilityAccepted) {
             return this.lang.flexRequired;
