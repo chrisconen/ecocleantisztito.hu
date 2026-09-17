@@ -297,7 +297,7 @@ function createItemHTML(category, id, item) {
 
     return `
         <div class="config-item" data-item-id="${fullId}">
-            ${category === 'karpit' ? `<img class="item-photo" src="assets/${({szofa:'sofa',l_kanape:'living-room',u_kanape:'living-room',fotel:'armchair',ebedlo_szek:'dining',irodai_szek:'office'})[id]}-card.webp" alt="Generated interior image: ${item.name}" width="600" height="400" loading="lazy">` : ''}
+            ${category === 'karpit' ? `<img class="item-photo" src="../assets/${({szofa:'sofa',l_kanape:'living-room',u_kanape:'living-room',fotel:'armchair',ebedlo_szek:'dining',irodai_szek:'office'})[id]}-card.webp" alt="Generated interior image: ${item.name}" width="600" height="400" loading="lazy">` : ''}
             <div class="item-main">
                 <div class="item-info">
                     <span class="item-name">${item.name}</span>

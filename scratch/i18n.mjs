@@ -447,10 +447,12 @@ const ABSOLUTE = /^(https?:|\/\/|\/|#|tel:|mailto:|data:|javascript:)/i;
 // Pages live in en/, so every relative URL gains a ../ — except links to pages
 // that were themselves translated, which stay inside en/.
 function rewriteUrls(html, translated) {
-    // Every attribute verify-package.py treats as a local URL must be rewritten,
-    // not just href/src/poster — the lightbox uses data-full/data-zoom/data-src
-    // and those pointed at release/en/img/… until they were covered here.
-    return html.replace(/\b(href|src|poster|data-src|data-full|data-zoom|data-booking-url)\s*=\s*"([^"]*)"/gi, (m, attr, url) => {
+    // Every attribute treated as a local URL must be rewritten, not just
+    // href/src/poster — the lightbox uses data-full/data-zoom/data-src and those
+    // pointed at release/en/img/… until they were covered here. data-assets is
+    // the configurator's image base: it is a directory, so verify-package.py
+    // cannot see it, and the furniture photos 404'd on all 41 calculator pages.
+    return html.replace(/\b(href|src|poster|data-src|data-full|data-zoom|data-booking-url|data-assets)\s*=\s*"([^"]*)"/gi, (m, attr, url) => {
         if (!url || ABSOLUTE.test(url)) return m;
         if (translated.has(url)) return `${attr}="${enName(url)}"`;
         const [path, frag] = url.split(/(?=#)/);

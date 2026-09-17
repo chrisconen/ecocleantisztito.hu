@@ -69,15 +69,26 @@ out = out.replace(/(\n)(\s*)timestamp: new Date\(\)\.toISOString\(\)/g,
     (m, nl, indent) => `${nl}${indent}lang: 'en',${nl}${indent}timestamp: new Date().toISOString()`);
 const langCount = (out.match(/lang: 'en'/g) || []).length;
 
+// ── 4. asset paths ───────────────────────────────────────────────────────────
+// The runtime writes the furniture photos into the order form with a path
+// relative to the document. This copy is only ever loaded from /en/, so every
+// relative asset needs one level up — without it the cards resolved to
+// /en/assets/…-card.webp, 404'd, and showed their alt text instead.
+const assetCount = (out.match(/src="assets\//g) || []).length;
+out = out.replaceAll('src="assets/', 'src="../assets/');
+
 writeFileSync(OUT, out);
 
 console.log(`text units replaced      : ${replaced} of ${units.length}`);
 console.log(`left Hungarian (safe)    : ${untouched.size} distinct`);
 console.log(`hu-HU -> en-GB           : ${localeCount}`);
 console.log(`payloads tagged lang:'en': ${langCount} (of ${before} timestamp sites)`);
+console.log(`asset paths lifted to ../: ${assetCount}`);
 console.log(`bytes                    : ${src.length} -> ${out.length}`);
 assert.ok(langCount >= 1, 'the booking payload must carry lang');
 assert.ok(!out.includes("toLocaleString('hu-HU')"), 'hu-HU grouping left behind');
+assert.ok(assetCount >= 1, 'the order form must still build its furniture photos');
+assert.ok(!/src="(?!\.\.\/|https?:|\/|#|data:)[^"$]*\//.test(out), 'document-relative asset left behind');
 
 console.log('\nstill Hungarian (expected: logic values, identifiers, comments):');
 for (const t of [...untouched].filter((t) => /[áéíóöőúüűÁÉÍÓÖŐÚÜŰ]/.test(t)).slice(0, 12)) {

@@ -17314,8 +17314,8 @@
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-baja.html": {
-      "sha256": "7141f9d14d0b62b517c33abcfd7bb409786a5fd436df901c1e5a27b88afe2b33",
-      "bytes": 80729,
+      "sha256": "d4a8589c085870034f224cb2620402e8d81a6cbaeb84f8887bcd9d102629096d",
+      "bytes": 80732,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-balatonalmadi.html": {
@@ -17359,8 +17359,8 @@
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-dunafoldvar.html": {
-      "sha256": "8530893211c0961d4c650d40a52b081563c9398d0102f42ea870449a7a83363b",
-      "bytes": 80731,
+      "sha256": "5f92a92dcdfb3179d87ce82e019152441326754bedf602d5df6a34a350e58105",
+      "bytes": 80734,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-fonyod.html": {
@@ -17379,8 +17379,8 @@
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-kalocsa.html": {
-      "sha256": "9853a52fa3a20b97d2e7d9323620aa3e7b91cd8948e88475f62e544ca09dc373",
-      "bytes": 80645,
+      "sha256": "7b0e6755f9efb3df766389cf2dec3edab8106f8182bc9f7fc2a0b6040af1be71",
+      "bytes": 80648,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-keszthely.html": {
@@ -17389,8 +17389,8 @@
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-kiskoros.html": {
-      "sha256": "f77ce582b74c6aff9acb8bfd2d84b77ba481ad22b083328839900b655f2d0e1e",
-      "bytes": 65921,
+      "sha256": "cc61b141b02ba840484c1ef5e6cf9c31915ee73ba5cb99e4b407a308165ca67d",
+      "bytes": 65924,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-komarom.html": {
@@ -17404,8 +17404,8 @@
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-paks.html": {
-      "sha256": "0e27bd0f0b5820cf1f9a8ad633d4ade2421a8d36be22882151ffe49bc587ea9e",
-      "bytes": 80731,
+      "sha256": "8adc781744ed0d7f2bfa67ef305a6f67c8933937f49abb3380b03debf2e20121",
+      "bytes": 80734,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-papa.html": {
@@ -17424,8 +17424,8 @@
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-solt.html": {
-      "sha256": "668fea9ecfb589899f69c8dc0ca1b0a105eb760847b7595281854cb6631e22f3",
-      "bytes": 65821,
+      "sha256": "b654891dcba19330697029c1394cbe60e66a222814480f33ecd49aba7a2a733e",
+      "bytes": 65824,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-sopron.html": {
@@ -17434,8 +17434,8 @@
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-szekszard.html": {
-      "sha256": "c93d9d410a7da104d57367644d09ee172465d920d5d44ba32729354f7a2ea55d",
-      "bytes": 65821,
+      "sha256": "c344891ea439569a6bb620c723670c233a85d7338cef26b4f1e236cad4b7f58f",
+      "bytes": 65824,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-szombathely.html": {
@@ -17474,58 +17474,58 @@
       "source": "release-support/english-overlay"
     },
     "en/upholstery-and-mattress-cleaning.html": {
-      "sha256": "1d3a69707d0d9ab32939f34815147e2ff0c617efbcea0d7e762b4b8b316c80f5",
-      "bytes": 102874,
+      "sha256": "674b138070660edb18bb2aed983f04c31d2840d08cc586a8d3d1908ac62fa50c",
+      "bytes": 102877,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-badacsony.html": {
-      "sha256": "1bd1bf8e0c6cc5aa0ff6940bac7a9ed1af134af9e738b0f518f97c6b8ea3085a",
-      "bytes": 142190,
+      "sha256": "baf5a54afe9b74c2d6f9106673f6d3e39cbe83dd436a8f70b64fb4289c045c6e",
+      "bytes": 142193,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-baja.html": {
-      "sha256": "8ea0e3eb3c5977b4e16ce1da5f38cb4a453becb3d9b23f3664424d923330628a",
-      "bytes": 88125,
+      "sha256": "adef0da445ab14651c0ead6482ed197af9f4d434434ab10fa09a5936474c03fe",
+      "bytes": 88128,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-balatonalmadi.html": {
-      "sha256": "2d4e77238ce10daec0615c7aaa9a45281c5ce64b7910aff6cba9091469a3d79e",
-      "bytes": 142763,
+      "sha256": "55eb326ede9eef1928fa0298bd9a35c769c0384898364ddcf461bb5a06d3d188",
+      "bytes": 142766,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-balatonboglar.html": {
-      "sha256": "f1565c56edbb54786a44b16fa1af322e26658aeaffa2d33ff49a0d0513c91d31",
-      "bytes": 142701,
+      "sha256": "cdd9090c7f310b46902aea17645b7b95d11b2145d9303386133fc9b9c7a6b9a0",
+      "bytes": 142704,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-balatonfoldvar.html": {
-      "sha256": "e8cbb3be932324197830fce213a69d4c1f930f4e0d3ce5f673dcfe695a2616a5",
-      "bytes": 142848,
+      "sha256": "46e195b78040471dfd7d5178afe04fd94584c5fde5d424f54a661f27fac1f4c8",
+      "bytes": 142851,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-balatonfured.html": {
-      "sha256": "58f62b346ef7caede8ad9c863df7b9a4c19183b336e34d0f347eeed100b89345",
-      "bytes": 142585,
+      "sha256": "8c9e7fee2d96b539350cb3b24371fc86cb3732c577ed5c584c72bbae8103449b",
+      "bytes": 142588,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-balatonfuzfo.html": {
-      "sha256": "78c7758be7bcf5bb3e497a5944fdb54b5df70e7e242c4b38f85bcda03c566c86",
-      "bytes": 142424,
+      "sha256": "53d444e2add291bd2bc3ba3e240c640d59f2bd689fa4f8a0959c0ef74c7ccdcf",
+      "bytes": 142427,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-balatonkenese.html": {
-      "sha256": "f9b9899820092acba9ef1a4a41d07026bf8bc06b491633e19e5bab1a8f65cee7",
-      "bytes": 142564,
-      "source": "release-support/english-overlay"
-    },
-    "en/upholstery-cleaning-balatonlelle.html": {
-      "sha256": "f0734f308a53cf626243d0517e4341216d18a035a606d1b5b1835785f23cb455",
+      "sha256": "bf5ba7a4dfc931b62e21419aec10e0775f6c932fa7b4f16c7f201ca1d0bb43ef",
       "bytes": 142567,
       "source": "release-support/english-overlay"
     },
+    "en/upholstery-cleaning-balatonlelle.html": {
+      "sha256": "8febe3ce5b9c00f7ebffd1be351fe0261175a90d2c8089e8f58f0d5faa06a102",
+      "bytes": 142570,
+      "source": "release-support/english-overlay"
+    },
     "en/upholstery-cleaning-balatonszemes.html": {
-      "sha256": "4726a42afc7692c8d43c0d2ed997b16241fdcebfc0fd349e137ad53075ee8ad0",
-      "bytes": 142388,
+      "sha256": "c626d85092e34c0929bff84b59139b24a65110e981c6e146b806852969cad522",
+      "bytes": 142391,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-before-after.html": {
@@ -17534,123 +17534,123 @@
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-dunafoldvar.html": {
-      "sha256": "abc143da0099457a19ba0e3760b51ee144f7d8c30a2186434e83560ca30c3f6b",
-      "bytes": 88156,
+      "sha256": "aebd274f71dd7d9f48cc8e0b0124d5a1ef98ec97d2a7576843db1eb44542d847",
+      "bytes": 88159,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-fonyod.html": {
-      "sha256": "686612d748ae0eeaf09465166200b7257aeb5cbce9eee45dd1ffa3078e475595",
-      "bytes": 142024,
+      "sha256": "cdcad9a8b4ecd7ddd269823275c968492e05151db2fa96e2780a967b1613fa82",
+      "bytes": 142027,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-gyor.html": {
-      "sha256": "64996bc241b8c2ee586da443a333536828b853946825622b6da6a823a343f545",
-      "bytes": 114079,
+      "sha256": "b5e6593edc4e0e07c58d831d11de6bfdf43ec6147e0a72e1b71c37abd9dd2323",
+      "bytes": 114082,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-heviz.html": {
-      "sha256": "cbc3a4bff8ca0b8c07784a7ffe9d18464d0338b203764f2f0e53492ec29f1325",
-      "bytes": 142122,
+      "sha256": "4ac59cfc2bd9d160d6c4c49a8857e6d1a5a1ebc4f82ae0df35250fde986a3645",
+      "bytes": 142125,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-kalocsa.html": {
-      "sha256": "a44ef1e6ec7b194c546d2d4131d36c2b82a975471e7a66bff005901263436b59",
-      "bytes": 88242,
+      "sha256": "5dbc64509551ab535242065a26e7ee6ccf6769bb6e55db625d0a0ac128fc7998",
+      "bytes": 88245,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-keszthely.html": {
-      "sha256": "22e5ad17129eefa15435cb7010a15a379c669d3dd7eee29d5383542c1f98e947",
-      "bytes": 142094,
+      "sha256": "2aab3cf1617c0c1091fd248ff765fd4c44a83b4dc25f2b9eadc49bea0a5c44fa",
+      "bytes": 142097,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-kiskoros.html": {
-      "sha256": "53e4ded0d5797ecfc5c974712c96c5acf65f21c3ed57139a814070395f437e5a",
-      "bytes": 88062,
+      "sha256": "cb2a701f816bd52039973931d27c07b5bf02f5a563a1fb8f52b147e2fa7d7b38",
+      "bytes": 88065,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-komarom.html": {
-      "sha256": "9ee69fcf081de53225599914f1eda32d8deacf209617eeae0a629ec860d57c7f",
-      "bytes": 111565,
+      "sha256": "a5f758b4a6fe886c4224f7aa1fff61c2eb060d63f3a5cdd4821fb3004441c536",
+      "bytes": 111568,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-mosonmagyarovar.html": {
-      "sha256": "0798a496d76b3c503d357403a4be9e934e2c45e69c6bf3c6e206148429778a32",
-      "bytes": 112034,
+      "sha256": "f286f24b4e9f87ae8bfbae4619ad1ba03aaeed23f79f4fa5afb630d04d32532e",
+      "bytes": 112037,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-paks.html": {
-      "sha256": "71431a120236f867dd17d88e850aba9bf05b26d9aba742f0b8e76d9ae6c4ba12",
-      "bytes": 88023,
+      "sha256": "7062127f8a76c5a6ff5af9b0a9c28d0cd6c76192bc35477d2bf9890d40fab057",
+      "bytes": 88026,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-papa.html": {
-      "sha256": "0d2b5b3cfddbf99a87e0688ea39e9d3f613f4ecfac79708995bf43feb318d2ba",
-      "bytes": 111282,
+      "sha256": "ba2bbd873762abefd81ed655bce5db38e2668c2aad25dc9a1b99454c4deea767",
+      "bytes": 111285,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-revfulop.html": {
-      "sha256": "f9656d0bec982ac7194b19059e0dbadf57141dcd8798be07bb53b42fdb1d3ef8",
-      "bytes": 142350,
+      "sha256": "5ea66e35e7b0ff2b03aa4b2b2eeb995a9cc3b2c06c66032c0989c8ec2cdb9777",
+      "bytes": 142353,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-siofok.html": {
-      "sha256": "664fbcaea9ddb006d4741900de47a51b1dbe03cbb9663ef027e099aa9aecf25c",
-      "bytes": 142214,
+      "sha256": "91b0f66d0a7fe2510757eb709bc01b73b569e90b2e58b9f519d4e288b05ff5e3",
+      "bytes": 142217,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-solt.html": {
-      "sha256": "81f4965db9885a670d6d549be6a419b866f84c87bb4db136de6fdc1c8f2eab19",
-      "bytes": 87991,
+      "sha256": "918b9b6c2f84cb821c58e0e523e56d67d9523a4de538a361cda5a936a40a4ddd",
+      "bytes": 87994,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-sopron.html": {
-      "sha256": "ace567fc72b75972ce19a747556d326deb552f7634f8c6f556270cc20b4d52ab",
-      "bytes": 111501,
+      "sha256": "45caff0a63330a7dc21fcec75dadb90bc311be34f3c46953410a141bbd98fc86",
+      "bytes": 111504,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-szekszard.html": {
-      "sha256": "b63e1a02583e504132af9129fef16e2b5548bcae22fcefe66fc1340050c6e264",
-      "bytes": 88174,
+      "sha256": "6276c01ec0f6a6bfaf5aa4667f71013f95f3d2d8c82e6aa250396db4f4884767",
+      "bytes": 88177,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-szombathely.html": {
-      "sha256": "b11685e411dda78363edcdc09e0e3ee9e1f74f6b956654c5dcb3452fda485f1b",
-      "bytes": 111683,
+      "sha256": "dd46e6847d70815fddfb3fc8b20ad04c8a242b9c528b37f3a9b2b65e670e2df3",
+      "bytes": 111686,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-tapolca.html": {
-      "sha256": "01ffc768b7f9fcf776b3804cba613010976cffb19a1ba0296a3a4fec1250d17c",
-      "bytes": 141986,
+      "sha256": "17fdd022b1b01f7f60ec10c15a73a6fa94658d90293f433e29f19054373e11ef",
+      "bytes": 141989,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-tata.html": {
-      "sha256": "54aa3b6f60381b29fc9666e800f2d2d274c1c82ce39b68adea20f4cb89f9b8c7",
-      "bytes": 111220,
+      "sha256": "0ce366ab87cc8c519cd5a80970b9efe5c1cb603d1b68d048cc9321cee1d9fd58",
+      "bytes": 111223,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-tatabanya.html": {
-      "sha256": "f7943127917e65aad7ee3161f1bb8d48cc655673c12a10566413627ec40ada8e",
-      "bytes": 111465,
+      "sha256": "393b97d2d3a77fee0748d9c5160d208f8a3bc06824d211c962886602816d8495",
+      "bytes": 111468,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-tihany.html": {
-      "sha256": "b8956f084135d9dc6f4f60eb8db08c9cc3ac8bf50c8e96803855427f03b93bb0",
-      "bytes": 141786,
+      "sha256": "346e9db66a0805078f1f2ebec132f6d4286d639066d02a9575f56190019377b3",
+      "bytes": 141789,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-veszprem.html": {
-      "sha256": "01a3788e8a7e2efd510899eab97ed0c4d91e285fbe00bc2bc90edf573ed02559",
-      "bytes": 111385,
+      "sha256": "0873045ad2e54391bf551243a5401f702bbd451feebb488f49b8cafc6a29f95b",
+      "bytes": 111388,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-zamardi.html": {
-      "sha256": "903c23e9b21bc44fb995f17a3c6abd21386de848108588d1bbef6e542e8e062b",
-      "bytes": 142063,
+      "sha256": "78e4131f97ecdaa9ef229551c3ccb002465e4da7c7b5d5b219fd0a405327ab13",
+      "bytes": 142066,
       "source": "release-support/english-overlay"
     },
     "ui/booking-live-en.js": {
-      "sha256": "e1c01193c4ba71068e8ec3dc248f900ccc4d308c438b1e5c624a431ec4edba39",
-      "bytes": 57490,
+      "sha256": "70783e6e13a1d22aa6045d4ed813cc28157156cd26f38df8e6b359bfaab70caf",
+      "bytes": 57493,
       "source": "release/ui/booking-live.js"
     }
   },
@@ -17681,6 +17681,6 @@
   },
   "englishOverlay": {
     "path": "release-support/english-overlay/overlay.json",
-    "sha256": "57b9e2e89b29e5f783e2cfd1ee657786ac44eec0e65a6ad227f3a54eaad2a757"
+    "sha256": "1fb5e0a826651176c7130b650149280139d8021b841e066fd1c220f704eb73f4"
   }
 }
