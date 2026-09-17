@@ -36,7 +36,7 @@ def verify(manifest, read_current=None):
         data = (ROOT / ref['path']).read_bytes()
         assert sha(data) == ref['sha256'], 'Overlay record altered'
         overlay = json.loads(data)
-        assert overlay['version'] == 1
+        assert overlay['version'] == 2
 
         parent_bytes = (HERE / 'baseline-manifest.json').read_bytes()
         report_bytes = (HERE / 'baseline-verification.json').read_bytes()
@@ -68,9 +68,12 @@ def verify(manifest, read_current=None):
             assert sha(current) == rec['afterSha256'], 'Edited page differs: ' + name
             assert manifest['files'][name]['sha256'] == rec['afterSha256'], 'Manifest disagrees for ' + name
             text = current.decode('utf-8')
-            assert text.count(rec['head']) == 1, 'hreflang block not found exactly once in ' + name
-            assert text.count(rec['switch']) == 1, 'language switch not found exactly once in ' + name
-            back = text.replace(rec['head'], '', 1).replace(rec['switch'], '', 1).encode('utf-8')
+            # hreflang, the header switcher and its stylesheet
+            back = text
+            for fragment in [rec['head'], *rec['fragments']]:
+                assert text.count(fragment) == 1, 'Insertion not found exactly once in ' + name
+                back = back.replace(fragment, '', 1)
+            back = back.encode('utf-8')
             assert sha(back) == rec['beforeSha256'] == parent['files'][name]['sha256'], \
                 'Page differs from the parent beyond the recorded insertions: ' + name
             restored[name] = back
