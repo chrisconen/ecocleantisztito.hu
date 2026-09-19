@@ -15874,8 +15874,8 @@
       "source": "demo/karpittisztitas-fonyod.html"
     },
     "karpittisztitas-gyor.html": {
-      "sha256": "b1baf6f4d56cbc09fddd9b80f26fbeba2ac453b127f5fdb8079d987421fb5a64",
-      "bytes": 105899,
+      "sha256": "b3512a83aabf9f2b5c5e373aa2099f82a640848399896a6753259ad4125747c6",
+      "bytes": 105028,
       "source": "demo/karpittisztitas-gyor.html"
     },
     "karpittisztitas-heviz.html": {
@@ -17544,8 +17544,8 @@
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-gyor.html": {
-      "sha256": "de2eba2dde712a987b49b291e068a3d6f61f4d995b193a628e3ce77e3459eece",
-      "bytes": 102277,
+      "sha256": "6bbfd979758316c8ef0661c6790f9c30c7cb818bc78be8c5c9376d93bac0c300",
+      "bytes": 100705,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-heviz.html": {
@@ -17652,6 +17652,36 @@
       "sha256": "572a91070500894f468c89d7c6cdadf9657f1a73851259b887b311fccc9eb1f4",
       "bytes": 60905,
       "source": "release/ui/booking-live.js"
+    },
+    "studio/gyor-conversion.css": {
+      "source": "release-support/gyor-conversion/conversion.css",
+      "bytes": 9028,
+      "sha256": "f3b5913fbb97babbe8de5926c08e914be27e78fd32b3b70d5f5cf18370b3246d"
+    },
+    "studio/gyor-conversion.js": {
+      "source": "release-support/gyor-conversion/conversion.js",
+      "bytes": 2005,
+      "sha256": "322181e20ca81d00c512b3a5592fc53380f32eabda4beff51c355b671485cecd"
+    },
+    "img/reference-sofa-before-12.jpg": {
+      "source": "img/kanapé-tisztítás-előtt-12.jpg",
+      "bytes": 272847,
+      "sha256": "10d3501d98f69bf3e2f28293468441ba5a996d477e15db1256a71b69f94fb365"
+    },
+    "img/reference-sofa-after-12.jpg": {
+      "source": "img/kanapé_tisztítás_után_12.jpg",
+      "bytes": 548070,
+      "sha256": "33f9e6ad1814ea70f6545584deb4913d7b383111e6b137c9f40c8f86a6032895"
+    },
+    "img/reference-chair-before-1.jpg": {
+      "source": "img/szék-tisztítás-előtt-1.jpg",
+      "bytes": 153561,
+      "sha256": "6bd3bd08e70d6c1b2119693e6467187dab98e0f1d4cd03ace4080c5f477f4279"
+    },
+    "img/reference-chair-after-1.jpg": {
+      "source": "img/szék-tisztítás-után-1.jpg",
+      "bytes": 153936,
+      "sha256": "562c1745f0c7409e3ac81b3016b71e0b08423c8518fd8716546a414bdeff7cfe"
     }
   },
   "unresolved": [],
@@ -17685,6 +17715,6 @@
   },
   "contentClarityOverlay": {
     "path": "release-support/content-clarity/overlay.json",
-    "sha256": "e9689db02f161d4d45813cc471eab303f5bba037aa7a966dd4b578585e2f555a"
+    "sha256": "3a1ca938da1f078aeea7e9ed77b760715cd642f6462330b7f16ae660b75726f4"
   }
 }

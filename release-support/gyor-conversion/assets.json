@@ -1,0 +1,8 @@
+{
+  "studio/gyor-conversion.css": "release-support/gyor-conversion/conversion.css",
+  "studio/gyor-conversion.js": "release-support/gyor-conversion/conversion.js",
+  "img/reference-sofa-before-12.jpg": "img/kanapé-tisztítás-előtt-12.jpg",
+  "img/reference-sofa-after-12.jpg": "img/kanapé_tisztítás_után_12.jpg",
+  "img/reference-chair-before-1.jpg": "img/szék-tisztítás-előtt-1.jpg",
+  "img/reference-chair-after-1.jpg": "img/szék-tisztítás-után-1.jpg"
+}

@@ -1,0 +1,51 @@
+/* Scoped to the two Győr upholstery pages. Photography and prices lead. */
+.eco-gyor-conversion .gyor-hero{padding:130px 0 38px;background:var(--paper);scroll-margin-top:100px}
+.eco-gyor-conversion .gyor-shell{width:calc(100% - 112px);max-width:1440px;margin-inline:auto}
+.eco-gyor-conversion .gyor-hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:58px;align-items:center}
+.eco-gyor-conversion .gyor-eyebrow{display:block;font-size:11px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:#526d60;margin-bottom:17px}
+.eco-gyor-conversion .gyor-hero h1{font:500 clamp(42px,4.8vw,72px)/1.02 var(--font-display);letter-spacing:-.025em;margin:0 0 22px;color:var(--ink);text-wrap:balance}
+.eco-gyor-conversion .gyor-hero h1 em{font-weight:400;color:#637b66}
+.eco-gyor-conversion .gyor-lead{font-size:15px;line-height:1.8;max-width:560px;margin:0 0 22px}
+.eco-gyor-conversion .gyor-rating-link{display:inline-flex;flex-wrap:wrap;align-items:center;gap:7px 10px;color:var(--ink);font-size:12px;font-weight:700;text-decoration:underline;text-underline-offset:4px;margin:0 0 20px}
+.eco-gyor-conversion .gyor-rating-stars{color:#80612e;letter-spacing:2px;text-decoration:none}
+.eco-gyor-conversion .gyor-prices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-block:1px solid #d3dcd1;margin-bottom:17px}
+.eco-gyor-conversion .gyor-price{padding:14px 9px 14px 0;display:flex;flex-direction:column;color:var(--ink);text-decoration:none;line-height:1.5}
+.eco-gyor-conversion .gyor-price+.gyor-price{border-left:1px solid #d3dcd1;padding-left:16px}
+.eco-gyor-conversion .gyor-price span{font-size:11px}.eco-gyor-conversion .gyor-price strong{font-size:21px;font-weight:700;white-space:nowrap}.eco-gyor-conversion .gyor-price small{font-size:10px}
+.eco-gyor-conversion .gyor-price:hover strong{text-decoration:underline;text-underline-offset:4px}
+.eco-gyor-conversion .gyor-travel{font-size:13px;margin:0 0 16px;color:#344c3d}
+.eco-gyor-conversion .gyor-actions{display:flex;align-items:center;flex-wrap:wrap;gap:16px}
+.eco-gyor-conversion .gyor-button{display:inline-flex;justify-content:center;align-items:center;gap:22px;min-height:52px;background:#385447;color:#fff;padding:13px 24px;border-radius:4px;font-weight:700;font-size:13px;text-decoration:none;line-height:1.5}
+.eco-gyor-conversion .gyor-button:hover{background:#263f32}.eco-gyor-conversion .gyor-phone{font-size:12px;color:var(--ink);text-underline-offset:5px}
+.eco-gyor-conversion .gyor-scope{font-size:11px;line-height:1.75;color:#59675d;margin:12px 0 0;max-width:580px}
+.eco-gyor-conversion .gyor-hero-proof{margin:0;background:#e8ece3;border:1px solid #dce1d5;border-radius:5px;padding:18px}
+.eco-gyor-conversion .gyor-proof-top{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:16px;font-size:10px;letter-spacing:1.4px;text-transform:uppercase}
+.eco-gyor-conversion .gyor-proof-top span:last-child{letter-spacing:0;font-size:11px;text-transform:none}
+.eco-gyor-conversion .gyor-photo-pair{display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:start}
+.eco-gyor-conversion .gyor-photo-pair figure{min-width:0;margin:0;position:relative}
+.eco-gyor-conversion .gyor-photo-pair img{display:block;width:100%;height:auto;border-radius:3px}
+.eco-gyor-conversion .gyor-photo-pair figcaption{position:absolute;top:8px;left:8px;background:#fbfaf5;color:#314439;padding:4px 10px;border-radius:2px;font-size:10px;font-weight:700;box-shadow:0 1px 4px #0001}
+.eco-gyor-conversion .gyor-hero-proof h2{font:500 33px/1.1 var(--font-display);margin:19px 0 9px}
+.eco-gyor-conversion .gyor-hero-proof p{font-size:12px;line-height:1.8;margin:0 0 12px}
+.eco-gyor-conversion .gyor-text-link{display:inline-block;color:#354f40;font-size:12px;font-weight:700;text-underline-offset:5px;padding:5px 0}
+.eco-gyor-conversion .gyor-facts{display:flex;flex-wrap:wrap;gap:12px 34px;border-top:1px solid #d3dcd1;margin-top:34px;padding-top:20px;font-size:12px}
+.eco-gyor-conversion .gyor-facts span{display:flex;align-items:center;gap:9px}.eco-gyor-conversion .gyor-facts i{width:6px;height:6px;background:#6a836e;border-radius:50%}
+.eco-gyor-conversion .studio-chapters{margin-top:0;justify-content:flex-start;padding-inline:56px}
+.eco-gyor-conversion .gyor-stories{padding:62px 0 48px;scroll-margin-top:90px}
+.eco-gyor-conversion .gyor-section-head{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:28px}
+.eco-gyor-conversion .gyor-section-head h2{font:500 clamp(34px,3.7vw,52px)/1.08 var(--font-display);margin:0;letter-spacing:-.02em}
+.eco-gyor-conversion .gyor-section-head p{font-size:13px;line-height:1.85;margin:0;color:#59675d}
+.eco-gyor-conversion .gyor-story-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}
+.eco-gyor-conversion .gyor-story{min-width:0;padding:0 0 22px;border-bottom:1px solid #d3dcd1}
+.eco-gyor-conversion .gyor-story h3{font:500 30px/1.1 var(--font-display);margin:20px 0 12px;letter-spacing:-.01em}
+.eco-gyor-conversion .gyor-story p{font-size:12px;line-height:1.9;color:#59675d;margin:0 0 12px}
+.eco-gyor-conversion .gyor-story .gyor-story-price{color:#314a3b;font-size:12px}.eco-gyor-conversion .gyor-story-price strong{font-size:17px;white-space:nowrap}
+.eco-gyor-conversion .gyor-story-number{font-size:10px;letter-spacing:1.7px;text-transform:uppercase;display:block;color:#647465;margin:0 0 12px}
+.eco-gyor-conversion .gyor-review-note{margin-top:24px;background:#e8ece3;border-radius:4px;padding:19px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.eco-gyor-conversion .gyor-review-note p{font-size:13px;line-height:1.7;margin:0;max-width:750px}.eco-gyor-conversion .gyor-review-note a{flex-shrink:0}
+.eco-gyor-conversion #studio-kalkulator{padding-top:60px;scroll-margin-top:95px;background:#edf0e8}
+.eco-gyor-conversion .gyor-mobile-booking{display:none}
+@media(max-width:1100px){.eco-gyor-conversion .gyor-shell{width:calc(100% - 64px)}.eco-gyor-conversion .gyor-hero-grid{gap:28px}.eco-gyor-conversion .gyor-price strong{font-size:18px}.eco-gyor-conversion .gyor-story-grid{gap:18px}.eco-gyor-conversion .gyor-hero-proof{padding:12px}.eco-gyor-conversion .gyor-section-head{gap:30px}}
+@media(max-width:800px){.eco-gyor-conversion .gyor-hero{padding-top:108px}.eco-gyor-conversion .gyor-hero-grid{grid-template-columns:1fr;gap:28px}.eco-gyor-conversion .gyor-hero h1{font-size:56px;max-width:650px}.eco-gyor-conversion .gyor-hero-proof{max-width:650px}.eco-gyor-conversion .gyor-story-grid{grid-template-columns:1fr}.eco-gyor-conversion .gyor-story{display:grid;grid-template-columns:1fr 1fr;gap:0 24px;align-items:start}.eco-gyor-conversion .gyor-story-number{grid-column:1/-1}.eco-gyor-conversion .gyor-story-body h3{margin-top:0}.eco-gyor-conversion .gyor-section-head{grid-template-columns:1fr;gap:15px}.eco-gyor-conversion .studio-chapters{padding-inline:32px}.eco-gyor-conversion .gyor-review-note{align-items:flex-start;flex-direction:column;gap:10px}}
+@media(max-width:600px){.eco-gyor-conversion{padding-bottom:78px}.eco-gyor-conversion .gyor-shell{width:calc(100% - 40px)}.eco-gyor-conversion .gyor-hero{padding-top:94px;padding-bottom:26px}.eco-gyor-conversion .gyor-hero h1{font-size:45px;margin-bottom:17px}.eco-gyor-conversion .gyor-eyebrow{font-size:9px;letter-spacing:1.3px;margin-bottom:12px}.eco-gyor-conversion .gyor-lead{font-size:13px;margin-bottom:15px}.eco-gyor-conversion .gyor-rating-link{font-size:11px;margin-bottom:16px}.eco-gyor-conversion .gyor-price strong{font-size:18px}.eco-gyor-conversion .gyor-price+.gyor-price{padding-left:10px}.eco-gyor-conversion .gyor-price span{font-size:10px}.eco-gyor-conversion .gyor-actions{gap:10px}.eco-gyor-conversion .gyor-button{flex:1;gap:12px;padding-inline:14px}.eco-gyor-conversion .gyor-phone{font-size:11px}.eco-gyor-conversion .gyor-scope{font-size:10px}.eco-gyor-conversion .gyor-facts{gap:9px;margin-top:24px;padding-top:16px;font-size:11px;flex-direction:column}.eco-gyor-conversion .studio-chapters{padding:15px 20px;gap:10px 18px}.eco-gyor-conversion .gyor-stories{padding:36px 0}.eco-gyor-conversion .gyor-story{display:block}.eco-gyor-conversion .gyor-story-body h3{margin-top:20px}.eco-gyor-conversion .gyor-story-grid{gap:28px}.eco-gyor-conversion .gyor-story .gyor-photo-pair img{max-height:245px;object-fit:contain;background:#e8ece3}.eco-gyor-conversion .gyor-review-note{padding:17px}.eco-gyor-conversion .gyor-mobile-booking{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:80;background:#faf8f3;border-top:1px solid #cbd7c9;padding:10px 20px calc(10px + env(safe-area-inset-bottom));gap:12px;align-items:center;box-shadow:0 -3px 15px #2235240a}.eco-gyor-conversion .gyor-mobile-booking span{font-size:10px;line-height:1.55}.eco-gyor-conversion .gyor-mobile-booking strong{display:block;font-size:13px}.eco-gyor-conversion .gyor-mobile-booking .gyor-button{min-height:44px;font-size:12px}}
+@media(prefers-reduced-motion:reduce){.eco-gyor-conversion{scroll-behavior:auto}}

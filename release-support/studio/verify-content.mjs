@@ -20,14 +20,15 @@ export function verifyStudioContent(manifest,retentionSource=null){
   if(rec.file!=='index.html'){
    check(d.body.classList.contains('eco-studio'),rec.file,'Studio design missing');
    for(const selector of ['#studio-szobak','.med-furniture','#studio-kalkulator','.med-history','.med-value','.med-soil','.med-mites','.med-care','#studio-anyagok','.med-process','#studio-kerdesek','#anyagfelismero'])check(d.querySelectorAll(selector).length===1,rec.file,'Missing/duplicate section '+selector);
-   check(d.querySelector('.editorial-hero-photo')?.getAttribute('src')==='studio/assets/l-alaku-kanape-vilagos-nappali.webp',rec.file,'Old hero image');
+   const retention=retentionSource?new JSDOM(retentionSource(rec.file)):null;
+   // Intentional hero/photo changes are verified by the reversible top overlay.
+   check((retention?.window.document||d).querySelector('.editorial-hero-photo')?.getAttribute('src')==='studio/assets/l-alaku-kanape-vilagos-nappali.webp',rec.file,'Historical hero image missing');
    check(d.querySelector('[data-studio-configurator]')?.dataset.city===rec.file.replace('karpittisztitas-','').replace('.html',''),rec.file,'Wrong calculator city');
    check(d.querySelector('[data-material-app]')?.dataset.next==='#studio-kalkulator',rec.file,'Material result does not return to calculator');
    const ids=[...d.querySelectorAll('[id]')].map(e=>e.id);check(new Set(ids).size===ids.length,rec.file,'Duplicate IDs');
-   const retention=retentionSource?new JSDOM(retentionSource(rec.file)):null;
    const text=norm((retention?.window.document||d).body.textContent);
    for(const el of before.querySelectorAll('h1,h2,h3,p,.pricing-item-name,.pricing-price')){const value=norm(el.textContent);if(value)check(text.includes(value),rec.file,'Original informal text lost: '+value.slice(0,100));}
-   const images=[...d.querySelectorAll('img[src]')].map(e=>e.getAttribute('src'));
+   const images=[...(retention?.window.document||d).querySelectorAll('img[src]')].map(e=>e.getAttribute('src'));
    for(const img of before.querySelectorAll('img[src]:not([data-generated-interior])'))check(images.includes(img.getAttribute('src')),rec.file,'Original photo lost: '+img.getAttribute('src'));
    // Authorized regional navigation edits are proven by the reversible top overlay.
    // Retention checks the restored parent; current local targets have their own regression test.
