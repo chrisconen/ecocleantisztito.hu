@@ -8,6 +8,7 @@ import {applyLocalNavigation} from './local-navigation.mjs';
 import {applyGyorConversion} from '../gyor-conversion/page.mjs';
 import {applyRegionalConversion} from '../gyor-conversion/regional.mjs';
 import {applyHomepageBooking} from '../homepage-booking/page.mjs';
+import {applyMattressCalculators} from '../mattress-calculator/page.mjs';
 const root=path.resolve(import.meta.dirname,'../..'),here=import.meta.dirname;
 const hash=s=>crypto.createHash('sha256').update(s).digest('hex');
 const oldOverlay=fs.existsSync(path.join(here,'overlay.json'))?JSON.parse(fs.readFileSync(path.join(here,'overlay.json'))):null;
@@ -155,6 +156,7 @@ applyGyorLocal({read,edit,matchEdit,tariff});
 applyLocalNavigation({read,edit,root});
 applyGyorConversion({read,edit,tariff});
 applyRegionalConversion({read,edit,tariff});
+applyMattressCalculators({read,edit,root});
 const finishHomepageBooking=applyHomepageBooking({read,edit,root});
 // Version every changed shared script wherever it is referenced.
 const scripts=Object.keys(changes).filter(n=>/\.(js|css)$/.test(n));

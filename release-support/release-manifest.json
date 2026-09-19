@@ -16014,8 +16014,8 @@
       "source": "legacy redirect from OLD/.htaccess"
     },
     "matractisztitas-badacsony.html": {
-      "sha256": "5ccea369db51d8749a6363418d15be1f03a57a7ebe65b62c17d27a8c9b460319",
-      "bytes": 69222,
+      "sha256": "99c10aa048e63ba9a727c5ebba03e549313b0688a5f7e62be2d00800a6937794",
+      "bytes": 70205,
       "source": "demo/matractisztitas-badacsony.html"
     },
     "matractisztitas-baja.html": {
@@ -16024,43 +16024,43 @@
       "source": "demo/matractisztitas-baja.html"
     },
     "matractisztitas-balatonalmadi.html": {
-      "sha256": "c3931ec4ec0cbc165ea186301682c3f56fbf3e45b61c92d5a394901dd4859473",
-      "bytes": 68487,
+      "sha256": "e8e2457488c886b4072d860663b3d576ea0a27fba3e2064014948d24c5910e06",
+      "bytes": 69479,
       "source": "demo/matractisztitas-balatonalmadi.html"
     },
     "matractisztitas-balatonboglar.html": {
-      "sha256": "e672c9f5997c7ca9db22e4e0064f22e6ce6dc0c09c72070e3b79ae4c133826c5",
-      "bytes": 67999,
+      "sha256": "21bd4ceb599c68a9a34282d3a26312d9231728549e645554e27872f4d7d4bd07",
+      "bytes": 68991,
       "source": "demo/matractisztitas-balatonboglar.html"
     },
     "matractisztitas-balatonfoldvar.html": {
-      "sha256": "27dd65ba5c3919eb256c9ef00cdb8053ec88d2c7596afbf59371d756ea151dac",
-      "bytes": 68595,
+      "sha256": "2382f263d7fe2e25983f8a97c7341f4ba370cb4543c02bcff6534d7ae2d0dc9f",
+      "bytes": 69590,
       "source": "demo/matractisztitas-balatonfoldvar.html"
     },
     "matractisztitas-balatonfured.html": {
-      "sha256": "eb27ecf482aac31c291e33275f7b77d0349fec437ee55d5ca7efc6f1d16b6252",
-      "bytes": 68389,
+      "sha256": "aecf70c7dc82064864d3ef1674ce7ff5348a6e998c1600fa29aa5ba766573f80",
+      "bytes": 69379,
       "source": "demo/matractisztitas-balatonfured.html"
     },
     "matractisztitas-balatonfuzfo.html": {
-      "sha256": "72b6632d866050b8ee02af62b197e9af54cdf5191093b06b13cd435be1ae802d",
-      "bytes": 67922,
+      "sha256": "5f206b46fb2c2faa4f7ff2d208bed30b35aae80b5029923b8b9fc9adc58f09d3",
+      "bytes": 68913,
       "source": "demo/matractisztitas-balatonfuzfo.html"
     },
     "matractisztitas-balatonkenese.html": {
-      "sha256": "76c55928b168675164d23eda7454dd52996e3fd90cf8396d17593d2ab7e3ce53",
-      "bytes": 67908,
+      "sha256": "4d8175ff015525f9ce4680966f6b12c2363dbf64ede7e4cdef70b87d56b6b34c",
+      "bytes": 68899,
       "source": "demo/matractisztitas-balatonkenese.html"
     },
     "matractisztitas-balatonlelle.html": {
-      "sha256": "f91fae5965d181fc42133fed6e5d50f96d889f5dafdcd5a4327026135c6db7dc",
-      "bytes": 68359,
+      "sha256": "4bfb4bfce569f9f356e56a227befb3e85e5701a6ce3faaf5bc46e845a398425f",
+      "bytes": 69348,
       "source": "demo/matractisztitas-balatonlelle.html"
     },
     "matractisztitas-balatonszemes.html": {
-      "sha256": "4d4ec53489702077c624dbf9468369f2b3016a9e96093d026e18df45d47be45e",
-      "bytes": 67942,
+      "sha256": "f0450d23a6871d19a80edc6f10ed8408bf9efc66f3fe704f053fee92aa3fcaf7",
+      "bytes": 68933,
       "source": "demo/matractisztitas-balatonszemes.html"
     },
     "matractisztitas-dunafoldvar.html": {
@@ -16069,18 +16069,18 @@
       "source": "demo/matractisztitas-dunafoldvar.html"
     },
     "matractisztitas-fonyod.html": {
-      "sha256": "d72a7e2dde39836bca5d20a296c6c2f8faeee4c80f7785d0bb739d6c8976deba",
-      "bytes": 67937,
+      "sha256": "ccd31a3c567922256542de9dfd99f206bdc62c6318361b6b3232c191cdaaca67",
+      "bytes": 68915,
       "source": "demo/matractisztitas-fonyod.html"
     },
     "matractisztitas-gyor.html": {
-      "sha256": "e638357b84b6ef8bc4d3ebbad0ff5f79fb14ac5f3fba5f36d4fae1077bb76890",
-      "bytes": 35400,
+      "sha256": "b698dec01ced62c633a2ee77cc12a77a7835fa216eb6b6daa43c28fbfe47dd35",
+      "bytes": 36380,
       "source": "demo/matractisztitas-gyor.html"
     },
     "matractisztitas-heviz.html": {
-      "sha256": "d07e233466cbc859468fd80e80348d3f864f69ac7fd2dfacf8a0c9df82f410f9",
-      "bytes": 67914,
+      "sha256": "44da0ec1b847dad4070dee98c133781654d3a36e8bdc97ee8750f36cc683f243",
+      "bytes": 68891,
       "source": "demo/matractisztitas-heviz.html"
     },
     "matractisztitas-kalocsa.html": {
@@ -16089,8 +16089,8 @@
       "source": "demo/matractisztitas-kalocsa.html"
     },
     "matractisztitas-keszthely.html": {
-      "sha256": "b148e3279db51b1619d70fd67dbfe1a7fcbeb1769ba73335b1859f3398b390e1",
-      "bytes": 68139,
+      "sha256": "390e354e7276d66b5508eb22cecb6f523bb5b7e46273a99d80a259a8c37196b3",
+      "bytes": 69122,
       "source": "demo/matractisztitas-keszthely.html"
     },
     "matractisztitas-kiskoros.html": {
@@ -16099,13 +16099,13 @@
       "source": "demo/matractisztitas-kiskoros.html"
     },
     "matractisztitas-komarom.html": {
-      "sha256": "68d87c632999875a0b73d853b79b01eb8c84ee9f80159b73e33796e2d1573ad1",
-      "bytes": 36109,
+      "sha256": "e5aa243e1603c394fdd708714679ddc0af917761b4000679fd917757dba23933",
+      "bytes": 37095,
       "source": "demo/matractisztitas-komarom.html"
     },
     "matractisztitas-mosonmagyarovar.html": {
-      "sha256": "b821063b8b1b55c9091a4bb91216a902b8e95dc38281cbfd79464969a7cd09f1",
-      "bytes": 36545,
+      "sha256": "b384fedec7e4787298f02eb5d9f59ffe433e7574286c206713fff4431bebd669",
+      "bytes": 37548,
       "source": "demo/matractisztitas-mosonmagyarovar.html"
     },
     "matractisztitas-paks.html": {
@@ -16114,18 +16114,18 @@
       "source": "demo/matractisztitas-paks.html"
     },
     "matractisztitas-papa.html": {
-      "sha256": "a5fcfa2330f3046d5b751e4034a5f16f48294c6e841cdb3dbcc7a0b44c5a3fca",
-      "bytes": 35791,
+      "sha256": "b9b828ee902d71757678cd2e1724a1f95083db893c02d0de47de4954254475a1",
+      "bytes": 36771,
       "source": "demo/matractisztitas-papa.html"
     },
     "matractisztitas-revfulop.html": {
-      "sha256": "0178ab77668e116281cbcb34fbd1f53bad6f48ce1bb82f7fe7f78954389737d0",
-      "bytes": 68245,
+      "sha256": "35d626205145cba246e314d32f7666dbb155435662d169beb2b555469d23b5f3",
+      "bytes": 69229,
       "source": "demo/matractisztitas-revfulop.html"
     },
     "matractisztitas-siofok.html": {
-      "sha256": "3c4a135601a53955a9d75dc6c61d8b5081c58c7307bbd1f7c6a54ff7aaedd044",
-      "bytes": 67950,
+      "sha256": "8cb9252cf672ef8239cfe1dab5b4807a5664dc6ec44d5f0f826d3eddf13e4650",
+      "bytes": 68928,
       "source": "demo/matractisztitas-siofok.html"
     },
     "matractisztitas-solt.html": {
@@ -16134,8 +16134,8 @@
       "source": "demo/matractisztitas-solt.html"
     },
     "matractisztitas-sopron.html": {
-      "sha256": "08228520547e1ec508d51512dc3d8c3ee11553684fc07188a1f7c1172017905e",
-      "bytes": 36155,
+      "sha256": "688983c2c6d26b38cbfce7fe709155d7e8ece01940a668ca12824e49e15b20c0",
+      "bytes": 37138,
       "source": "demo/matractisztitas-sopron.html"
     },
     "matractisztitas-szekszard.html": {
@@ -16144,38 +16144,38 @@
       "source": "demo/matractisztitas-szekszard.html"
     },
     "matractisztitas-szombathely.html": {
-      "sha256": "d158b0485f9992911a21fcf61283947a05923b7745db32d158b503a66ad4044c",
-      "bytes": 36292,
+      "sha256": "f477977beb2a8e9277acff641d2d51f54490081c3583f5c624bedd6cfbbe64dc",
+      "bytes": 37285,
       "source": "demo/matractisztitas-szombathely.html"
     },
     "matractisztitas-tapolca.html": {
-      "sha256": "e1b0a415aae61cdeb1d28c7ac29a8bbd482f7180eade24443eca4f1471fa05b7",
-      "bytes": 67952,
+      "sha256": "f7051279b5771a5c3a935c6d0c0bfecfffbed48d7e0b623cc883c9e7aa5f13a2",
+      "bytes": 68931,
       "source": "demo/matractisztitas-tapolca.html"
     },
     "matractisztitas-tata.html": {
-      "sha256": "ed90ebf098b5ac86b249b0cd3f3cd7b96777d794fc38d527a60252fca2a840a5",
-      "bytes": 35583,
+      "sha256": "c1db890bf8177f0ba09a29979bb81d4128103921450234b3aaf221eec62bea91",
+      "bytes": 36562,
       "source": "demo/matractisztitas-tata.html"
     },
     "matractisztitas-tatabanya.html": {
-      "sha256": "b0c6040ec0eb4b8bba5832f574c787b18d0643194333b0698d81fce3f665ac50",
-      "bytes": 36265,
+      "sha256": "4bdad25fa089542169d75d11ee914e6ce7e28e9297d425a9b686a488b482aae8",
+      "bytes": 37255,
       "source": "demo/matractisztitas-tatabanya.html"
     },
     "matractisztitas-tihany.html": {
-      "sha256": "cdd68a9628e9195258ff78459f3e93c73dd7b725fe009aa01127d01a2fa12d0b",
-      "bytes": 67867,
+      "sha256": "7621299ff2bc3a882ebb3ff6b6f14dc9903d636709567498ee63c563068ba3d3",
+      "bytes": 68844,
       "source": "demo/matractisztitas-tihany.html"
     },
     "matractisztitas-veszprem.html": {
-      "sha256": "ddf40199dac6bfaa8d41be4d1db6563074683b26b8e3d53692e4efc46a7cd8f9",
-      "bytes": 36182,
+      "sha256": "1ed3d824149051ce705e90b2fe3b81bfc8652720027141be054d2a32585af512",
+      "bytes": 37170,
       "source": "demo/matractisztitas-veszprem.html"
     },
     "matractisztitas-zamardi.html": {
-      "sha256": "f7f0b85a7a5027938429fd6e14509426529b8d963e753738e29f3a84d669e1e6",
-      "bytes": 68016,
+      "sha256": "a41fee01210b98d020787fea6a283456012849cf72bb26a43b64878928664264",
+      "bytes": 68996,
       "source": "demo/matractisztitas-zamardi.html"
     },
     "matractisztitas.html": {
@@ -17309,8 +17309,8 @@
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-badacsony.html": {
-      "sha256": "3c1e2013e2defd6529aa9357bbabe62f0a55247e4c259378b339afe01a0599ad",
-      "bytes": 68903,
+      "sha256": "a682649df6a6dffbbe73f17bf82098e801226b50a08daf7b355d58ac9294b929",
+      "bytes": 69845,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-baja.html": {
@@ -17319,43 +17319,43 @@
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-balatonalmadi.html": {
-      "sha256": "1edc1deaafcdb13f9ab0352e6f39f379965f7892fd36a5c25e77e149fa81a2ea",
-      "bytes": 68215,
+      "sha256": "eecd0667b62d016753999d9d5ff226ca5ec81b36c809c6465d22c24a46f96570",
+      "bytes": 69166,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-balatonboglar.html": {
-      "sha256": "5cfcd8ef6c2ac48d523f3e85763294c02b766e229208782f9f189509d487489d",
-      "bytes": 67734,
+      "sha256": "bcf9b910cb1745146c3d7167faa432fe84725c76d8e754732c59c09cbe0b906c",
+      "bytes": 68685,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-balatonfoldvar.html": {
-      "sha256": "800529afd3e5299ffee22095e28b19e54cd0584dab679a02a0ed63833c55b82a",
-      "bytes": 68284,
+      "sha256": "e6f6ca309b88b0d13ff7e6208231d5d4d3b288a470ba66cf83f12013231df6a5",
+      "bytes": 69238,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-balatonfured.html": {
-      "sha256": "1b81751babcb79c1d0834e62278e2702a08a3402f9b18d93ce0fdbd30400d894",
-      "bytes": 68068,
+      "sha256": "01b4afc3afaab9ccf97639750a746a4ee53543499c7d114ab8b396fab80155cd",
+      "bytes": 69017,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-balatonfuzfo.html": {
-      "sha256": "b3ef51f82458f24f1130f830a547a59df3f3d77df9d7c80d903f4de27c0dce7d",
-      "bytes": 67664,
+      "sha256": "856fa4fa1d96598ce5bb69f1006f19dd7b26dade9ad27eafe5b21a2e9417f261",
+      "bytes": 68614,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-balatonkenese.html": {
-      "sha256": "45dbde4cf4b45912219aa81ce6638d33682af012d20219cece2cf263227eec6f",
-      "bytes": 67644,
+      "sha256": "342cc55602df763a6add82f8423a76cdb46dcbba27f83e295abbb8b2e3293e98",
+      "bytes": 68594,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-balatonlelle.html": {
-      "sha256": "b52d6e7712504c420e96e1b9e1b0a4ed79e53ed1cb3fdcba8ced48b531c1929f",
-      "bytes": 68066,
+      "sha256": "bd615c73eeb6c4eca9424557cf8b2eb619f294f80dbb769b1d2b57c65666fd81",
+      "bytes": 69014,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-balatonszemes.html": {
-      "sha256": "3bc0db47995e4ba9285f936eb6081a8e395b1d92c35901d3721650972ce10285",
-      "bytes": 67675,
+      "sha256": "8a63c6311242f7f064ea6c6a729ff5707919e349f21f99680c263408a058007c",
+      "bytes": 68625,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-dunafoldvar.html": {
@@ -17364,18 +17364,18 @@
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-fonyod.html": {
-      "sha256": "01f880040ed74f6cac7b1e2f4e0c964fb03ab9f798a5bb305b72c0cf236a4ea5",
-      "bytes": 67659,
+      "sha256": "f22359ecbd91df8527ef6862cb4189e810ae15e577809ca402bbae913adf12c4",
+      "bytes": 68596,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-gyor.html": {
-      "sha256": "e65439452d7634e95907587242d388d512bd03ea22052bdb6ab89daa39dd9d8d",
-      "bytes": 33981,
+      "sha256": "6bb0c12c7e84b76693e11133a1a1c4fff74275114089982829b30eef398d2bfa",
+      "bytes": 34916,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-heviz.html": {
-      "sha256": "8eb3f9a27c94258123a5c49184f3bef0d714cad9d66ae1b80ed2b45bc4e636f0",
-      "bytes": 67633,
+      "sha256": "92c532f75db2ec694e67c02dabfa794b938e0022ecef2c11fb4676406bb46571",
+      "bytes": 68569,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-kalocsa.html": {
@@ -17384,8 +17384,8 @@
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-keszthely.html": {
-      "sha256": "11b594755042fb7da56027c39f5e66355c82629323fd0b616d7407a63767e3c5",
-      "bytes": 67803,
+      "sha256": "27dd08754194a43ee87f299f8cd1b1b6f05721d8eb97fdc2e0f4aa76c27b9e70",
+      "bytes": 68745,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-kiskoros.html": {
@@ -17394,13 +17394,13 @@
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-komarom.html": {
-      "sha256": "e580b6564889f462815bb562e6829814de1806be414464eb19a1424ae565c4b3",
-      "bytes": 34798,
+      "sha256": "e9f46ef35cf7d96622fc8c812ad42f3da2ec840c869caf1e5e285f8eb9224180",
+      "bytes": 35739,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-mosonmagyarovar.html": {
-      "sha256": "20536c57cf889448b11a71e6bcd04ec9600792310f6e172e5d856cf675a8a9cb",
-      "bytes": 35352,
+      "sha256": "431ed9957d100aa58bbc055b74be5f15173ac9514e6f18682220b369f4f9bced",
+      "bytes": 36310,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-paks.html": {
@@ -17409,18 +17409,18 @@
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-papa.html": {
-      "sha256": "967c6d9ccc2b06de5f7389990d8e0a6d382541a32bea090523c18e3719819ff3",
-      "bytes": 34471,
+      "sha256": "70bdb571dbc2c5cf8189c50536115c6c3a4c7806bfca6f1dacfe05afe0814242",
+      "bytes": 35406,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-revfulop.html": {
-      "sha256": "0edd1f4182ed7145939afbdeb0597145426dd524bdbbf12c4b88f1f16adc6629",
-      "bytes": 67875,
+      "sha256": "1fdee47c03a1fe6a59320c8c740dbd64f5a38967ad11b696f3a79cfb09d19b87",
+      "bytes": 68818,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-siofok.html": {
-      "sha256": "93482c62d874489ec1de0b5a133e52d5db369b3478c40c3e5e9a4429ae89c104",
-      "bytes": 67635,
+      "sha256": "458542aae78e13f973e299fe8a47c9a6935a155ecba873df26d3fa0b9ba64830",
+      "bytes": 68572,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-solt.html": {
@@ -17429,8 +17429,8 @@
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-sopron.html": {
-      "sha256": "78ccb0d09a179c81a782c4695d8bc97ee504d44a4af2e302b1a98706296a7c03",
-      "bytes": 34872,
+      "sha256": "03234888677614046bb7104076db86cdb0cdacae9ccfd7d975c5445c0190f454",
+      "bytes": 35810,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-szekszard.html": {
@@ -17439,38 +17439,38 @@
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-szombathely.html": {
-      "sha256": "43d1bed6918980cce052d69ee8b0a363d47753253323c2497364fad7abeb207e",
-      "bytes": 35017,
+      "sha256": "0cf42b0b3c0e8bcc460c0a05a1411ef6b9d6e87c77495a66e120d34ccbe7c01f",
+      "bytes": 35965,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-tapolca.html": {
-      "sha256": "50b2525dec0ec35c5211d1f1941e698448972fbcf30d04f21a3e3a5f440f92f7",
-      "bytes": 67623,
+      "sha256": "15dafd8f5501191d47fd44005ac6160aa3026e0648ba013bcc2797497e475875",
+      "bytes": 68561,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-tata.html": {
-      "sha256": "6c5375498334210504d9d760804c92623ec2386104e895a375beba3b4a9800e4",
-      "bytes": 34246,
+      "sha256": "36395fbf76bd02ea75a682baf6eb79ebc67774663374c05a59e873bf2c211905",
+      "bytes": 35180,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-tatabanya.html": {
-      "sha256": "920e13fa2173db1b89b88c2b8202e7317fdf685486fc4141ee8e1d2d780a2eea",
-      "bytes": 34990,
+      "sha256": "af40de474c4bdb51207ee6090c4d4e5787139ffebb575b7287ae6c2d80aa3411",
+      "bytes": 35935,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-tihany.html": {
-      "sha256": "72ed53855ef2dbec85ed46e25c88852a6a0cd18ab0e5be58e34123742befd558",
-      "bytes": 67580,
+      "sha256": "2306a1830baf2f8149d820675b5ec2c81bdb990681ea0e1ccd9948e3c7fe7707",
+      "bytes": 68516,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-veszprem.html": {
-      "sha256": "8cb8828084c62724f79ba427a221f6dfd1999678d0f64b409d7521d581b46a7a",
-      "bytes": 34885,
+      "sha256": "d40758673dca3eb8874faeb4e36a85d029174d1ea19367abf170a1a43e2f2d6e",
+      "bytes": 35828,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-zamardi.html": {
-      "sha256": "5f393a3d1d89e348be59acf18b2a8be638b54ac6534fd7401a80c9e5b4c95c19",
-      "bytes": 67683,
+      "sha256": "83e87834fd06f0ba9704b78684558e9271faf846de08e3a9dd00d1b58b8f4999",
+      "bytes": 68622,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-and-mattress-cleaning.html": {
@@ -17653,6 +17653,16 @@
       "bytes": 60905,
       "source": "release/ui/booking-live.js"
     },
+    "ui/mattress-calculator.js": {
+      "source": "release-support/mattress-calculator/calculator.js",
+      "bytes": 10903,
+      "sha256": "d2f21d36cfa4b0eae3301119b4f93e9820b7d096a946a43bb86084ea3049865f"
+    },
+    "ui/mattress-calculator.css": {
+      "source": "release-support/mattress-calculator/calculator.css",
+      "bytes": 3831,
+      "sha256": "71b7658e56cfa18127beb768edfa3a948f6bb1d78b2059a680ff4d1ec5e38093"
+    },
     "megrendeles.html": {
       "source": "release-support/homepage-booking/booking-hu.html",
       "bytes": 23643,
@@ -17740,6 +17750,6 @@
   },
   "contentClarityOverlay": {
     "path": "release-support/content-clarity/overlay.json",
-    "sha256": "90df502edf3b3c7d498029bf05447773fa1728f96486efae7bb66825879d933d"
+    "sha256": "7d68013047ac660008d1f51e34452e0818bb1bf29748cbde878b1dd3f19b2200"
   }
 }

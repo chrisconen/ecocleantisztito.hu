@@ -1,0 +1,5 @@
+Mattress pages previously linked to an empty booking form that started with Upholstery and no selected city. All 26 booking-enabled cities now have a dedicated mattress calculator in Hungarian and English. It supports multiple sizes, one/both sides, quantities, wet treatment, bed frames, travel zones and item removal. The existing explicit booking import transfers the full selection and selects Mattress plus the originating city.
+
+The new renderer uses the existing validated pricing and cart-encoding API without modifying any financial or calendar runtime. Original price grids and all 14 southern inquiry-only mattress pages remain byte-identical. Every mattress-page booking CTA now starts at its local calculator. Existing upholstery flows are preserved.
+
+Validation: 54 automated checks, 14 responsive browser scenarios (HU/EN, Győr/Szombathely/Mosonmagyaróvár, 320–1440 px), both-side wet/frame transfer, zone tariff changes, independent review, release/package/staged gates. Browser checks block external customer writes. No actual bookings are submitted.
