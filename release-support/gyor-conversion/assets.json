@@ -1,4 +1,9 @@
 {
+  "megrendeles.html": "release-support/homepage-booking/booking-hu.html",
+  "en/booking.html": "release-support/homepage-booking/booking-en.html",
+  "ui/booking-page.js": "release-support/homepage-booking/booking-page.js",
+  "ui/booking-page.css": "release-support/homepage-booking/booking-page.css",
+  "ui/booking-route.js": "release-support/homepage-booking/booking-route.js",
   "studio/gyor-conversion.css": "release-support/gyor-conversion/conversion.css",
   "studio/gyor-conversion.js": "release-support/gyor-conversion/conversion.js",
   "img/reference-sofa-before-12.jpg": "img/kanapé-tisztítás-előtt-12.jpg",

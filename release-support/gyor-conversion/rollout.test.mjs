@@ -18,7 +18,9 @@ test('all 64 regional pages preserve their entire existing calculator, price gri
  for(const [file,info]of Object.entries(baseline.pages)){
   if(info.city==='gyor')continue;
   const html=read(file),calc=html.match(info.studio?/<section class="med-section med-price-section" id="studio-kalkulator">[\s\S]*?<\/section>/:/<section class="med-section med-price-section" id="arak">[\s\S]*?<\/section>/)?.[0];
-  assert.ok(calc,file);assert.equal(sha(calc),info.calculatorSha256,file+' calculator');
+  // Only the destination moved from the homepage to its dedicated form.
+  const originalDestination=calc?.replace(/ data-booking-url="(?:megrendeles|booking)\.html#booking"/g,'').replaceAll('megrendeles.html','index.html').replaceAll('booking.html','index.html');
+  assert.ok(calc,file);assert.equal(sha(originalDestination),info.calculatorSha256,file+' calculator');
   if(info.pricesSha256)assert.equal(sha(html.match(/<section class="pricing"[\s\S]*?<\/section>/)[0]),info.pricesSha256,file+' price grid');
   const phones=[...new Set([...html.matchAll(/href="(tel:[^"]+)"/g)].map(m=>m[1]))];assert.deepEqual(phones,info.phones,file+' phone');checked++;
  }

@@ -64,7 +64,7 @@ test('changed extra tariffs fail before a cart can be imported',()=>{
 const require=createRequire(path.join(process.env.TEMP,'ecoclean-demo-qa/package.json'));
 const {JSDOM}=require('jsdom');
 async function importFixture(s,tamper=false){
- const dom=new JSDOM(source('index.html'),{runScripts:'outside-only',url:'https://ecocleantisztito.hu/'+api.encode(s)}),w=dom.window;
+ const dom=new JSDOM(source('megrendeles.html'),{runScripts:'outside-only',url:'https://ecocleantisztito.hu/megrendeles.html'+api.encode(s)}),w=dom.window;
  // Classic scripts share global lexical bindings; separate indirect eval calls do not.
  w.eval=code=>vm.runInContext(code,dom.getInternalVMContext());
  await new Promise(resolve=>w.document.readyState==='loading'?w.document.addEventListener('DOMContentLoaded',resolve,{once:true}):resolve());

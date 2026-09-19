@@ -14,14 +14,17 @@ def digest(data):
     return hashlib.sha256(data).hexdigest()
 
 class Page(HTMLParser):
-    def __init__(self):
+    def __init__(self, transaction_page=False):
         super().__init__()
         self.urls = []
         self.preview = False
+        self.transaction_page = transaction_page
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
         if tag == 'meta' and a.get('name') in ('robots', 'googlebot'):
-            self.preview |= bool(re.search(r'noindex|nofollow', a.get('content', ''), re.I))
+            # The two standalone checkout forms intentionally stay out of search.
+            approved_checkout = self.transaction_page and a.get('name') == 'robots' and a.get('content') == 'noindex,follow'
+            self.preview |= bool(re.search(r'noindex|nofollow', a.get('content', ''), re.I)) and not approved_checkout
         self.preview |= a.get('id') == 'demoResult' or 'missing-source' in a.get('class', '').split()
         self.urls.extend(a[k] for k in ('href', 'src', 'poster', 'data-src', 'data-full', 'data-zoom', 'data-booking-url') if a.get(k))
 
@@ -99,7 +102,7 @@ for name, record in manifest['files'].items():
     if digest(data) != record['sha256']:
         errors.append('Artifact changed after verification: ' + name)
     if name.endswith('.html'):
-        page = Page()
+        page = Page(transaction_page=name in ('megrendeles.html', 'en/booking.html'))
         page.feed(data.decode('utf-8-sig'))
         if page.preview:
             errors.append('Preview behavior or noindex in ' + name)

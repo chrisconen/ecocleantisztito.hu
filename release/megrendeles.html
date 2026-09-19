@@ -1,0 +1,294 @@
+<!DOCTYPE html><html lang="hu" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,follow"><title>Online megrendelés | ECO Clean</title><link rel="canonical" href="https://ecocleantisztito.hu/megrendeles.html"><link rel="alternate" hreflang="hu" href="https://ecocleantisztito.hu/megrendeles.html"><link rel="alternate" hreflang="en" href="https://ecocleantisztito.hu/en/booking.html"><link rel="icon" href="favicon.ico"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap"><link rel="stylesheet" href="ui/design.css?v=801f2f4ea2dd"><link rel="stylesheet" href="ui/calendar-live.css?v=8c750daa15cb"><link rel="stylesheet" href="ui/calendar-status.css?v=c604caed183a"><link rel="stylesheet" href="ui/booking-extras.css?v=bdd124c7e8a1"><link rel="stylesheet" href="ui/booking-cart.css?v=97b9f9dbbb77"><link rel="stylesheet" href="studio/handoff.css?v=9ace450ab952"><link rel="stylesheet" href="ui/booking-page.css?v=3c9014df5260"></head><body class="eco-site eco-booking-page"><header class="booking-page-nav"><a class="booking-page-brand" href="index.html">ECO Clean</a><nav aria-label="Megrendelés navigáció"><a href="index.html#teruletek">Városok és árak</a><a href="tel:+36702408141">Telefon</a><a hreflang="en" lang="en" href="en/booking.html">EN</a></nav></header><main><section class="booking-section" id="booking">
+            <div class="booking-container">
+                <div class="booking-header">
+                    <h1>Online <span>foglalás</span></h1>
+                    <p>Konfiguráld szolgáltatásodat és foglalj időpontot pár kattintással!</p>
+                </div>
+
+                <!-- SELECTED ITEMS BADGES -->
+                <div class="selected-badges" id="selectedBadges" style="display:none;">
+                    <div class="badges-header">🛒 Kiválasztott szolgáltatások:</div>
+                    <div class="badges-list" id="badgesList"></div>
+                </div>
+
+                <!-- PRICE CONFIGURATOR -->
+                <div class="price-configurator" id="priceConfigurator">
+                    <div class="config-header">
+                        <span class="config-icon">💰</span>
+                        <h3>Ár-konfigurátor</h3>
+                        <span class="config-status" id="configStatus">● Online foglalás</span>
+                    </div>
+
+                    
+<!-- Step 1: Customer Type -->
+                    <div class="config-step" id="step1">
+                        <div class="config-step-header">
+                            <div class="config-step-num">1</div>
+                            <span class="config-step-label">Magán vagy céges ügyfél?</span>
+                        </div>
+                        <div class="config-options" id="customerType">
+                            <button class="config-btn active" data-value="Magánszemély" onclick="handleCustomerType(this)">Magánszemély</button>
+                            <button class="config-btn" data-value="Céges" onclick="handleCustomerType(this)">Céges
+                                ügyfél</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Service Type -->
+                    <div class="config-step" id="step2">
+                        <div class="config-step-header">
+                            <div class="config-step-num">2</div>
+                            <span class="config-step-label">Mit szeretnél tisztíttatni?</span>
+                        </div>
+                        <div class="config-options" id="serviceType">
+                            <button class="config-btn" data-value="Kárpit" onclick="handleServiceType(this)">
+                                🛋️ Kárpitozott bútor
+                            </button>
+                            <button class="config-btn" data-value="Matrac" onclick="handleServiceType(this)">
+                                🛏️ Matrac
+                            </button>
+                            <button class="config-btn combo-btn" data-value="Mindkettő" onclick="handleServiceType(this)">
+                                ⭐ Mindkettő <span class="combo-badge">-10%</span>
+                            </button>
+                        </div>
+                    </div><!-- ECO-MATERIAL:cta:START --><aside class="eco-novalife-cta eco-novalife-cta-compact" aria-label="ANDANTE NovaLife kárpitkalauz"><div class="eco-novalife-cta-art" aria-hidden="true"><svg width="62" height="62" viewBox="0 0 100 100" fill="none" focusable="false"><rect x="13" y="17" width="59" height="62" rx="13" stroke="currentColor" stroke-width="1.2"/><path d="M24 29c9-7 16 7 25 0s12-1 13 0M24 40c9-7 16 7 25 0s12-1 13 0M24 51c9-7 16 7 25 0M24 62c9-7 16 7 25 0M31 24v47M43 24v47M55 24v20" stroke="currentColor" stroke-width="1" opacity=".45"/><circle cx="65" cy="62" r="17" fill="#f6f2e8" stroke="currentColor" stroke-width="1.5"/><path d="m78 75 12 12M58 58c5-4 9 4 14 0M58 65c5-4 9 4 14 0M63 52v20M69 52v20" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="82" cy="24" r="3" fill="#b38c77" stroke="none"/></svg></div><div class="eco-novalife-cta-copy"><span class="eco-novalife-cta-kicker">A részletek számítanak</span><h3>Bizonytalan, hogy ANDANTE NovaLife a kárpit?</h3><p>Egy közeli fotó segíthet felismerni az ANDANTE NovaLife-ra utaló jeleket. A nálunk alkalmazott tisztítás alkalmasságát a címke és a szakmai egyeztetés alapján pontosítjuk.</p></div><a href="#anyagfelismero" class="eco-novalife-cta-link">Megnézetem a szövetet <span aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" focusable="false"><path d="m6 18 12-12M6 6h12v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></aside><!-- ECO-MATERIAL:cta:END -->
+
+                    <!-- Step 3: Item Selection (Dynamic) -->
+                    <div class="config-step" id="step3" style="display:none;">
+                        <div class="config-step-header">
+                            <div class="config-step-num">3</div>
+                            <span class="config-step-label">Válaszd ki a tételeket</span>
+                        </div>
+                        <p id="gyorLocalTariffNotice" role="status">A győri városi árakhoz és a díjmentes kiszálláshoz válaszd Győrt és a belvárosi vagy külvárosi körzetet a címnél.</p><div class="config-items" id="itemSelection">
+                            <!-- Dynamically populated -->
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Extra Services / Upsells -->
+                    <div class="config-step" id="step4" style="display:none;">
+                        <div class="config-step-header">
+                            <div class="config-step-num">4</div>
+                            <span class="config-step-label">Extra szolgáltatások <span class="recommended-badge">💡
+                                    Ajánlott</span></span>
+                        </div>
+                        <div class="upsell-options" id="upsellOptions">
+                            <!-- Dynamically populated based on selected items -->
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Location & Travel Zone -->
+                    <div class="config-step" id="step5" style="display:none;">
+                        <div class="config-step-header">
+                            <div class="config-step-num">5</div>
+                            <span class="config-step-label">Hol található?</span>
+                        </div>
+
+                        <!-- City Selection -->
+                        <div class="config-select-wrap">
+                            <select class="config-select" id="citySelect" onchange="handleCityChange(this)">
+                                <option value="">Válassz régiót...</option>
+                                <optgroup label="Győr régió">
+                                    <option value="gyor">Győr és környéke</option>
+                                    <option value="mosonmagyarovar">Mosonmagyaróvár és környéke</option>
+                                    <option value="csorna">Csorna és környéke</option>
+                                    <option value="kapuvar">Kapuvár és környéke</option>
+                                </optgroup>
+                                <optgroup label="Sopron régió">
+                                    <option value="sopron">Sopron és környéke</option>
+                                    <option value="fertod">Fertőd és környéke</option>
+                                </optgroup>
+                                <optgroup label="Szombathely régió">
+                                    <option value="szombathely">Szombathely és környéke</option>
+                                    <option value="koszeg">Kőszeg és környéke</option>
+                                    <option value="sarvar">Sárvár és környéke</option>
+                                </optgroup>
+                                <optgroup label="Veszprém régió">
+                                    <option value="veszprem">Veszprém és környéke</option>
+                                    <option value="papa">Pápa és környéke</option>
+                                    <option value="ajka">Ajka és környéke</option>
+                                </optgroup>
+                                <optgroup label="Komárom-Tata régió">
+                                    <option value="tata">Tata és környéke</option>
+                                    <option value="tatabanya">Tatabánya és környéke</option>
+                                    <option value="komarom">Komárom és környéke</option>
+                                </optgroup>
+                                <optgroup label="🏖️ Balaton - Északi part">
+                                    <option value="balatonfured">Balatonfüred és környéke</option>
+                                    <option value="tihany">Tihany és környéke</option>
+                                    <option value="balatonalmadi">Balatonalmádi és környéke</option>
+                                    <option value="balatonfuzfo">Balatonfűzfő és környéke</option>
+                                    <option value="balatonkenese">Balatonkenese és környéke</option>
+                                    <option value="revfulop">Révfülöp és környéke</option>
+                                    <option value="badacsony">Badacsony és környéke</option>
+                                </optgroup>
+                                <optgroup label="🏖️ Balaton - Déli part">
+                                    <option value="siofok">Siófok és környéke</option>
+                                    <option value="zamardi">Zamárdi és környéke</option>
+                                    <option value="balatonszemes">Balatonszemes és környéke</option>
+                                    <option value="balatonfoldvar">Balatonföldvár és környéke</option>
+                                    <option value="balatonlelle">Balatonlelle és környéke</option>
+                                    <option value="balatonboglar">Balatonboglár és környéke</option>
+                                    <option value="fonyod">Fonyód és környéke</option>
+                                </optgroup>
+                                <optgroup label="🏖️ Balaton - Nyugati rész">
+                                    <option value="keszthely">Keszthely és környéke</option>
+                                    <option value="heviz">Hévíz és környéke</option>
+                                    <option value="tapolca">Tapolca és környéke</option>
+                                </optgroup>
+                                <option value="egyeb">Egyéb helyszín</option>
+                            </select>
+                        </div>
+
+                        <!-- Travel Zone Selection -->
+                        <div class="travel-zone-wrap" id="travelZoneWrap" style="display:none; margin-top: 1rem;">
+                            <p class="zone-label">Pontos elhelyezkedés (kérjük válassz zónát) *</p>
+                            <div class="zone-options" id="zoneOptions">
+                                <label class="zone-option">
+                                    <input type="radio" name="travelZone" value="belvaros" onchange="handleZoneChange(this)">
+                                    <span class="zone-card">
+                                        <span class="zone-name">🏙️ Belváros</span>
+                                        <span class="zone-price">3.500 Ft</span>
+                                    </span>
+                                </label>
+                                <label class="zone-option">
+                                    <input type="radio" name="travelZone" value="kulso" onchange="handleZoneChange(this)">
+                                    <span class="zone-card">
+                                        <span class="zone-name">🏘️ Külváros</span>
+                                        <span class="zone-price">4.000 Ft</span>
+                                    </span>
+                                </label>
+                                <label class="zone-option">
+                                    <input type="radio" name="travelZone" value="20km" onchange="handleZoneChange(this)">
+                                    <span class="zone-card">
+                                        <span class="zone-name">🚗 10 km-ig</span>
+                                        <span class="zone-price">4.500 Ft</span>
+                                    </span>
+                                </label>
+                                <label class="zone-option">
+                                    <input type="radio" name="travelZone" value="40km" onchange="handleZoneChange(this)">
+                                    <span class="zone-card">
+                                        <span class="zone-name">🚙 20 km-ig</span>
+                                        <span class="zone-price">5.500 Ft</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Exact Address -->
+                        <div class="address-inputs" id="addressInputs" style="display:none; margin-top: 1rem;">
+                            <p class="address-label">Pontos cím</p>
+                            <input type="text" id="streetInput" class="config-input" placeholder="Utca, házszám *" required="">
+                            <div class="address-row">
+                                <input type="text" id="plzInput" class="config-input" placeholder="Irsz. *" maxlength="4" required="">
+                                <input type="text" id="cityInput" class="config-input" placeholder="Város / Település *" required="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 6: Special Conditions -->
+                    <div class="config-step" id="step6" style="display:none;">
+                        <div class="config-step-header">
+                            <div class="config-step-num">6</div>
+                            <span class="config-step-label">Van speciális körülmény?</span>
+                        </div>
+                        <div class="config-options" id="conditions">
+                            <button class="config-btn toggle" data-value="Haziallat" onclick="toggleCondition(this)">🐕
+                                Háziállat van</button>
+                            <button class="config-btn toggle" data-value="Kisgyerek" onclick="toggleCondition(this)">👶
+                                Kisgyerek van</button>
+                            <button class="config-btn toggle" data-value="Allergias" onclick="toggleCondition(this)">🤧
+                                Allergiás a családban</button>
+                        </div>
+                        <p class="condition-note" id="conditionNote" style="display:none;"></p>
+                    </div>
+
+                    <!-- Calendar Wrapper -->
+                    <div class="calendar-wrapper" id="calendarWrapper" style="display:none;">
+                        <div class="config-step-header">
+                            <div class="config-step-num">7</div>
+                            <span class="config-step-label">Válassz időpontot</span>
+                        </div>
+                        <div id="bookingCalendar"></div>
+                    </div>
+
+                    <!-- Booking Form -->
+                    <div class="booking-form-wrapper" id="bookingFormWrapper" style="display:none;">
+                        <div class="config-step-header">
+                            <div class="config-step-num">8</div>
+                            <span class="config-step-label">A te adataid</span>
+                        </div>
+                        <form id="bookingForm" class="booking-form" onsubmit="return submitBooking(event)">
+                            <div class="form-row">
+                                <input type="text" id="nameInput" placeholder="Teljes név *" required="">
+                            </div>
+                            <div class="form-row">
+                                <input type="email" id="emailInput" placeholder="E-mail cím *" required="">
+                            </div>
+                            <div class="form-row">
+                                <input type="email" id="emailConfirmInput" placeholder="E-mail cím megerősítése *" required="">
+                            </div>
+                            <div class="form-row">
+                                <input type="tel" id="phoneInput" placeholder="Telefonszám *" required="">
+                            </div>
+                            <div class="form-row">
+                                <textarea id="messageInput" placeholder="Megjegyzés (opcionális)" rows="3"></textarea>
+                            </div>
+
+                            <!-- ANDANTE checkbox (csak kárpittisztításnál jelenik meg) -->
+                            <div class="form-row" id="andanteRow" style="display:none;">
+                                <label class="andante-checkbox-label">
+                                    <input type="checkbox" id="andanteCheckbox" disabled="">
+                                    <span class="andante-checkbox-text">
+                                        Tudomásul vettem: <span class="andante-highlight">ANDANTE</span> vagy vízre érzékeny bútoranyag esetén a tisztítási díj <strong>50%-a (legfeljebb 30 000 Ft)</strong> kapacitás-foglalási díjként felszámításra kerülhet. <a href="#" id="andanteLink" onclick="openAndanteModal(); return false;"><span class="andante-highlight">ANDANTE</span> tájékoztató megtekintése</a>.
+                                    </span>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span>Foglalás véglegesítése</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Price Summary -->
+                    <div class="price-summary" id="priceSummary">
+                        <div class="summary-header">
+                            <span>A TE KONFIGURÁCIÓD</span>
+                            <div class="summary-price-wrap">
+                                <span class="summary-price-original" id="originalPrice" style="display:none;"></span>
+                                <span class="summary-price" id="totalPrice">0 Ft</span>
+                            </div>
+                        </div>
+                        <div class="summary-details" id="summaryDetails">
+                            <p class="summary-empty">Válassz szolgáltatást a kezdéshez...</p>
+                        </div>
+                        <div class="summary-discount" id="summaryDiscount" style="display:none;">
+                            <span class="discount-label">💰 Megtakarítás:</span>
+                            <span class="discount-amount" id="discountAmount">0 Ft</span>
+                        </div>
+                        <div class="summary-duration" id="summaryDuration" style="display:none;">
+                            <span>⏱️ Becsült időtartam:</span>
+                            <span id="totalDuration">0 perc</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section></main><div class="andante-modal-overlay" id="andanteModal" style="display:none;" onclick="closeAndanteModal(event)">
+        <div class="andante-modal-content" onclick="event.stopPropagation()">
+            <button class="andante-modal-close" onclick="closeAndanteModal()">×</button>
+            <h3>ANDANTE bútorok – Fontos tájékoztató</h3>
+            <div class="andante-modal-body">
+                <p><strong>Az ANDANTE bútorok egy részénél speciális, impregnált vagy vízre érzékeny szövet kerül felhasználásra, amely extrakciós kárpittisztító technológiával nem tisztítható biztonságosan.</strong></p>
+                <p>Kérjük, hogy megrendelés előtt minden esetben ellenőrizd bútorod szövetének típusát és tisztíthatóságát! A Kanizsai Bútorgyár ANDANTE típusú bútorai és a hasonló "mosható", víztaszító anyagok jellemzően nem alkalmasak az extrakciós (vizes) kárpittisztítási eljárásra.</p>
+                <p><strong>Következmények:</strong></p>
+                <ul>
+                    <li>Ha csak a helyszínen derül ki, hogy az ANDANTE vagy vízre érzékeny bútor az alkalmazott eljárással nem tisztítható, a tisztítási díj 50%-a, legfeljebb 30 000 Ft kapacitás-foglalási díj számítható fel.</li>
+                    <li>Kérjük, ha bizonytalan vagy bútorod szövetének típusában, <strong>előzetesen egyeztess munkatársunkkal</strong> a 06 70 240 8141-es telefonszámon.</li>
+                </ul>
+                <p>Köszönjük megértésed!</p>
+                <button class="andante-modal-confirm" onclick="confirmAndante()">Megértettem, tudomásul vettem</button>
+            </div>
+        </div>
+    </div><script src="ui/booking-live.js?v=551e3665f70a"></script><script src="ui/calendar-live.js?v=8d83e03a36c5"></script><script src="ui/booking-page.js?v=9223b811a854"></script><script src="studio/configurator.js?v=e02e799aded5"></script><script src="studio/booking-handoff.js?v=16a249cdcabe"></script><script src="ui/booking-cart.js?v=123e3a362975"></script></body></html>
