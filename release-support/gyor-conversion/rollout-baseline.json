@@ -1,0 +1,740 @@
+{
+  "commit": "a6d0a8b613c7546b2e1704edd461bec1c20d2870",
+  "pages": {
+    "karpittisztitas-badacsony.html": {
+      "city": "badacsony",
+      "label": "Badacsony",
+      "studio": true,
+      "sha256": "11e674a8df6a4be20aa05227d99ee82e435ee2b32e7ff8a086933a11bdb4de5e",
+      "calculatorSha256": "f567394460bfbe2d41708671e02c509628fbb62533bfd98cb8e426318166f22e",
+      "pricesSha256": "76a5eb9c7f2248451afedc0c652df23a2311e1a84bafec76a1b425e0dbc1496b",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-baja.html": {
+      "city": "baja",
+      "label": "Baja",
+      "studio": false,
+      "sha256": "16f1ba9e9aea365a9171ff809f0aaf35e8541b67a40a6e984c7867983d79cc47",
+      "calculatorSha256": "503c27af46eed041c18b516ff8cafa18e7d3d8b02998d080bbf7106ff3aaddb1",
+      "pricesSha256": null,
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-balatonalmadi.html": {
+      "city": "balatonalmadi",
+      "label": "Balatonalmádi",
+      "studio": true,
+      "sha256": "5d34d58715f4b527a2ac92c8918b8afcee7476e13e03cbe1805a6eb84918a829",
+      "calculatorSha256": "64c5ead70f58d53cb174c83de8fdd86f99b1cb7c99d709411d16b04117493af4",
+      "pricesSha256": "97460d67143adf12ae1828cd0bda69b88d8afd4ea6ba7315500c16843bc898f7",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-balatonboglar.html": {
+      "city": "balatonboglar",
+      "label": "Balatonboglár",
+      "studio": true,
+      "sha256": "8cc96d6bdf3643871ae2ea85b95993b8e320f2e4d8726fc03ac38b83a398eeeb",
+      "calculatorSha256": "f8976f4efcca84bc7823c0bcd2ebb9d94e9e74ad3269b4ae55ea8080e06982fd",
+      "pricesSha256": "5373c6c6c0bd7507ac21e8c4048cee820d69a1f80af3c1a6ce9a898d364781e5",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-balatonfoldvar.html": {
+      "city": "balatonfoldvar",
+      "label": "Balatonföldvár",
+      "studio": true,
+      "sha256": "37215ac1244512487a3efc3f7a91b3080ab0332f2caf7ac73ff9516507bcf3cb",
+      "calculatorSha256": "0b3f0134cb1812c10e02d35de3f5b39be521667920f1ddd2fb7a84639f7ee2c8",
+      "pricesSha256": "c8b12fa9668e2b817d4ebe2f7cb9d0b866588e887f93aed887d3c32a7dc85bbf",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-balatonfured.html": {
+      "city": "balatonfured",
+      "label": "Balatonfüred",
+      "studio": true,
+      "sha256": "54cbbe795836096262844a15480383e0c2c67bfe9e731586655f0b97cdd5afc9",
+      "calculatorSha256": "e5285e63c7ed164f2c79307ce2515d6bd78264b75db8e438bf3f519a5eaf40b3",
+      "pricesSha256": "c4e40fde83678e4a78614cc14fdb886ab7ba572228ca2b6f39990d06fb563b67",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-balatonfuzfo.html": {
+      "city": "balatonfuzfo",
+      "label": "Balatonfűzfő",
+      "studio": true,
+      "sha256": "f0cdd7a83112d79e3cebccd1f8303d5d2cd697e13e2fed2815d92a8ae86d2278",
+      "calculatorSha256": "476605c0c7f6d6eb44219be4515dbc0c3eff65b290323cc3c2a19e0dac00c5ae",
+      "pricesSha256": "a5141541ef0ce312044178604a089541598f15b8bbd7880874cb8d6d2b146d7b",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-balatonkenese.html": {
+      "city": "balatonkenese",
+      "label": "Balatonkenese",
+      "studio": true,
+      "sha256": "090de3f300bbac6903cfe6a85ded9abb0911d38bab147b6bd1851ccbf4822063",
+      "calculatorSha256": "13ff3bac6c34a15643c0e12797fa0f7c7117d1b04609f7202ee43849705fac04",
+      "pricesSha256": "a8103042aeaf0c690162d35e9086ec91e37f5ba0a63e4fcbbfa4d0947065b6aa",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-balatonlelle.html": {
+      "city": "balatonlelle",
+      "label": "Balatonlelle",
+      "studio": true,
+      "sha256": "ccdc5833df14bffdffd101fc48320e7a3978efc0041a8ebea21e27e3fb9f260d",
+      "calculatorSha256": "82198de8637fd133c47ed3280bfeb8843645085a766f6dadfc86a751f3a61842",
+      "pricesSha256": "d073d457b8f1c8802bcee60096e07faac292778075e3052f977515e9c270708d",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-balatonszemes.html": {
+      "city": "balatonszemes",
+      "label": "Balatonszemes",
+      "studio": true,
+      "sha256": "26cff858413535df95ac27ffc639216f75b0331c9fc1e3106deaef88634c9f5e",
+      "calculatorSha256": "1566bdd91a2a4d66869c019e03c0bf5bba829311184ea77acb2e264c52030e26",
+      "pricesSha256": "79958e9690ecdb390ba9e160e48d0576c7199f1eef99878109a2f883ce3ee25a",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-dunafoldvar.html": {
+      "city": "dunafoldvar",
+      "label": "Dunaföldvár",
+      "studio": false,
+      "sha256": "79f048c523970d3e23abf54cb0109ae671f21e66c0aea005c602cb90e204ff54",
+      "calculatorSha256": "ef385103fc4e1f110a53935c3e5ac960ede72960754ac7e07f38f6a59117a49f",
+      "pricesSha256": null,
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-fonyod.html": {
+      "city": "fonyod",
+      "label": "Fonyód",
+      "studio": true,
+      "sha256": "ca57f707c1e1a4bd82eda9280d1068c0bdff1eaf1511a66261af883eebed5820",
+      "calculatorSha256": "77bf7e8fe62e6f14e0448e81b2299b17c2d5a6ea917aa9a7eaa3fb5c9ecd9584",
+      "pricesSha256": "dc63e6a72f334e468827b85f294e3f5a2bf6ee8c9f1b08e60e2f949458dd5dba",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-gyor.html": {
+      "city": "gyor",
+      "label": "Győr",
+      "studio": true,
+      "sha256": "b3512a83aabf9f2b5c5e373aa2099f82a640848399896a6753259ad4125747c6",
+      "calculatorSha256": "c2c0a445e977b194af0738526b74df0907b7413eeb1eeadca59ed0213870f5b0",
+      "pricesSha256": "f8c5fd5f3978dbacaa39abf067d867c864591e2b85a3929dfd5076360ef82c1b",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-heviz.html": {
+      "city": "heviz",
+      "label": "Hévíz",
+      "studio": true,
+      "sha256": "617c1d437e10d93c2b4c64f18d6461b51fe4a7bd2bb4ed9a87f53c8790ee45c8",
+      "calculatorSha256": "cb95c29a0ecb2df3af0d4e4cdbf6f2235fdb708ea5263f2387513c6c1ac81c50",
+      "pricesSha256": "1cec3d4d8e13d5c00dfec9e07de4251bfb563f78161ab5958548277c86386b54",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-kalocsa.html": {
+      "city": "kalocsa",
+      "label": "Kalocsa",
+      "studio": false,
+      "sha256": "d0e06c30ed369db0910f5b22d27ae1e4ab4dc87412b14b0a391bdf1200d56ef5",
+      "calculatorSha256": "3292b9cbf61832b66529b7134957340ec704645103ed4b5c51bc6077a02e1451",
+      "pricesSha256": null,
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-keszthely.html": {
+      "city": "keszthely",
+      "label": "Keszthely",
+      "studio": true,
+      "sha256": "fa58c384f8992b0bbb0503a2e2bb8c6e29bd32fabee66dfa31d3febe4d6b1c93",
+      "calculatorSha256": "67132067e27228c7f53b4801eccd91690cd18aee51ef5848aa2a94031adadf75",
+      "pricesSha256": "895f201ddafb9bba0355a31cc26f6a350ce87625ad20a42f8eaa967aac406a1d",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-kiskoros.html": {
+      "city": "kiskoros",
+      "label": "Kiskőrös",
+      "studio": false,
+      "sha256": "226266ca352771c05790c282209113464df15db831b34850589f0d2016341147",
+      "calculatorSha256": "b96d4c32b41c447d2b5b38cf79b2619c05847facbf5a1c3d9a0aba4971798144",
+      "pricesSha256": null,
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-komarom.html": {
+      "city": "komarom",
+      "label": "Komárom",
+      "studio": true,
+      "sha256": "b1b5b6daeb9e89230e54f822d26d612939e3f0e1d8d09687e666c487d460085a",
+      "calculatorSha256": "d2c0691cfc4366742af8a0a9a1037b65b330c7e1e1dd63502cf59981eaa98a77",
+      "pricesSha256": "9084e4da4342932472e80663258d6d4b4b854e8c2975c959a608aebc105e407d",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-mosonmagyarovar.html": {
+      "city": "mosonmagyarovar",
+      "label": "Mosonmagyaróvár",
+      "studio": true,
+      "sha256": "bdd76388363620d5125d09c8ca20dca1101a16d193d12a1075cb2344c5e1c2b1",
+      "calculatorSha256": "80c2a041b21f37894de2fc02ad4155b71b8994cd6012db13b22d5531907c2ecb",
+      "pricesSha256": "955ed32bee98595d394cd2ecaf06a8bf83fec391798120474d184a53f92bbbf8",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-paks.html": {
+      "city": "paks",
+      "label": "Paks",
+      "studio": false,
+      "sha256": "e4ec3cd9a149dc297c52a779758ffde4b96372f125513df90ac067c861e00b60",
+      "calculatorSha256": "1e4fd626437c7ff51221730c97b8c29f38c6ee6c5bc61607c77aa7d19dfe16c6",
+      "pricesSha256": null,
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-papa.html": {
+      "city": "papa",
+      "label": "Pápa",
+      "studio": true,
+      "sha256": "97e28604493a70a9cf20cceff6e3b39dbe881ea8deab58cfc830df12d49f3bc0",
+      "calculatorSha256": "f35cc893e085b5b927c0e1a34dd3330eca957e13e552ebd224f52e4aa3a38bb2",
+      "pricesSha256": "6e74dad9ddf7983d7cf1120196726f02a7bbb461b807c8e53e74343b76a6e5ee",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-revfulop.html": {
+      "city": "revfulop",
+      "label": "Révfülöp",
+      "studio": true,
+      "sha256": "6d3391a4e3b8b4c8d8674096fada2fdb07c29a8e44e0c309d8bf143060fe4f33",
+      "calculatorSha256": "109bb66bea3a6691d07aeeae3b08852856fa8f3c4820746f109841fff9b3e3dc",
+      "pricesSha256": "7028524674e258fb9ead5a7ba547e3512ef0040b08e63a973d9d0f219fc82c99",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-siofok.html": {
+      "city": "siofok",
+      "label": "Siófok",
+      "studio": true,
+      "sha256": "898e0d68bdec75c85af4f786d5611cc1930589f49e52d55ff6e4ba8ba05201ac",
+      "calculatorSha256": "1bc14414b522fbacecd78365a3db2a9938d9827f7ac7e86f8c7422b9bf08e91c",
+      "pricesSha256": "f6ee6b6fd2b222c77c8fc8daea3aa4fbd314af6c0e20dc97e140d28402c3c683",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-solt.html": {
+      "city": "solt",
+      "label": "Solt",
+      "studio": false,
+      "sha256": "b50af1faa8843c724fcc0bb5fb2339ceacabb512b6132710c6787a7abf39f8f0",
+      "calculatorSha256": "a7b8dca7a304bc9237bcc9b70430a9f0c26693b6e9726f7f7eccf1fcd7a174d9",
+      "pricesSha256": null,
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-sopron.html": {
+      "city": "sopron",
+      "label": "Sopron",
+      "studio": true,
+      "sha256": "7755e39c8ec60ecd0ba37829bc54b5c0f5e04436ce1d4e71681ba7a785d99098",
+      "calculatorSha256": "1560a295141e87d17e501f3d502d45f532090cf1ea664cb6e5d0d1bcc459614f",
+      "pricesSha256": "fd7559e5281e1ccccbd0af56f024e27dd0c3a07da7a4d6cc2ff76ca69c49289a",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-szekszard.html": {
+      "city": "szekszard",
+      "label": "Szekszárd",
+      "studio": false,
+      "sha256": "b1d46aaad4f2220558dab9b750e50db46e89494cfd5dce3551a8b05a55d28b8a",
+      "calculatorSha256": "e2a2d650279def44a2a9c99ac025e209c63e4d0ed9d1757b3491ec828df335c0",
+      "pricesSha256": null,
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-szombathely.html": {
+      "city": "szombathely",
+      "label": "Szombathely",
+      "studio": true,
+      "sha256": "93c57c6a77f70b1a83d282e2f17b837a47f3d99707d962b9deb4aef90056aef5",
+      "calculatorSha256": "0514e80a7b1587a67674c4b0674a57729572199267b30ed65b6315b9efd05a91",
+      "pricesSha256": "d22f107a95985f74c415dd9bb4a531e163f71153d666589df916d1cbc819f17b",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-tapolca.html": {
+      "city": "tapolca",
+      "label": "Tapolca",
+      "studio": true,
+      "sha256": "ebe6d6ec599f27f77c7af2129ee7a1e0c998ec522efa8425337729fbcce2817f",
+      "calculatorSha256": "4cd94dcc7e2cc166912ca0794c1d05791b8d42c82e57eb8e3d89e91d03001845",
+      "pricesSha256": "2f727f7e91fe123ce04828f60bcba7f0ef94ddab301d74ec6d90ee3a3e2444f1",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-tata.html": {
+      "city": "tata",
+      "label": "Tata",
+      "studio": true,
+      "sha256": "59a28ad89e2e83ccd80fde45a6cf51bb17b53da6d13234b2f9820816c815862a",
+      "calculatorSha256": "7d790671fc26f4c5ec415513109f5afcddb51de8926e47df7fdc728247056504",
+      "pricesSha256": "aab40a1e94de5f452968955c3c753de6f5c8731fd74e1f3c0698df3a2600455b",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-tatabanya.html": {
+      "city": "tatabanya",
+      "label": "Tatabánya",
+      "studio": true,
+      "sha256": "bdea20e2771bd314d8c80b39d31917c841bbbac0750cabe092b35621b998fc48",
+      "calculatorSha256": "74f0e7781f18a8142262731a38f1f56c79afa46295eb45db3c537f481b476a32",
+      "pricesSha256": "a96fa457a09d9980efbf4f0d0b65043ca9b9781725c518570c827c87a80e4353",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-tihany.html": {
+      "city": "tihany",
+      "label": "Tihany",
+      "studio": true,
+      "sha256": "c24dc49d4f438f7964415e707b2f11aeef36a8e8e553cb2e4c90bb75027a8f34",
+      "calculatorSha256": "7feb2af15381ae86bf0d27d51c8583b8e46bdd3e7e645f12ac7edf4348c57bc1",
+      "pricesSha256": "ee03e64f816d54b6221be1f02285f582c3643f8bda75844875035cb7b0fa55f7",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-veszprem.html": {
+      "city": "veszprem",
+      "label": "Veszprém",
+      "studio": true,
+      "sha256": "6683562120e0a78daff8a1ec7b43341dd8b77413c9e89179d9315c1759394799",
+      "calculatorSha256": "a59949eb35163d53700244ffebcccfa9309eb312a87999b0e0d51d22be3c91fe",
+      "pricesSha256": "dfc483b19e4466e10c7ade6aa8ac55c79e816380eb002248b73c2b530529bcd8",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "karpittisztitas-zamardi.html": {
+      "city": "zamardi",
+      "label": "Zamárdi",
+      "studio": true,
+      "sha256": "9ad820adec24f9fb6caebc14ee75ac96fdeb9cf198e3f2a8fcd479bfc9e7d17f",
+      "calculatorSha256": "117d98814c5d604f25e4389fb71d7fd9b1c5ddddd4cd44f4b014609e7f631618",
+      "pricesSha256": "2361d98d3a04e842d1f3862a59537ee25edf71a2edfc78e8efa7d27e3f443908",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-badacsony.html": {
+      "city": "badacsony",
+      "label": "Badacsony",
+      "studio": true,
+      "sha256": "a738274b2f24038229cf7afcdb060c9fb6b505af5971cd8a89625d050c608360",
+      "calculatorSha256": "e7635de7e8f893648cbe1a0341138a028af2fb8ff1abe7b079170ff61917382e",
+      "pricesSha256": "e7602679c8244b7de7fd6280651b2065e2d641c76862c372312b94329503b98a",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-baja.html": {
+      "city": "baja",
+      "label": "Baja",
+      "studio": false,
+      "sha256": "47fb563a9d062d0c5c36c7fedc164ae2ed307c099110f196055295edcc09bd50",
+      "calculatorSha256": "2f02dc9bf86fd271f5ac1bda5d7c5c6aec0c875e87bbb1cad91a631244e184c3",
+      "pricesSha256": null,
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-balatonalmadi.html": {
+      "city": "balatonalmadi",
+      "label": "Balatonalmádi",
+      "studio": true,
+      "sha256": "b637c6106e27fc57ff3cbf3e8cd87a6c279f236ee51758b0a6cdd8d3a56541d5",
+      "calculatorSha256": "2799fe760857cc36569dea4f5aa4f67e720d63f6257a17aa9be689c044fc80fa",
+      "pricesSha256": "5e8589230dcaf41b17a1fa43442fc385d4a3cf4dbf983bd46a305327cbcc7d16",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-balatonboglar.html": {
+      "city": "balatonboglar",
+      "label": "Balatonboglár",
+      "studio": true,
+      "sha256": "5f0ec900dd544e123296aa8889765baed3319c78564fb2d6a186158a0bf9b217",
+      "calculatorSha256": "3b61a8afb7afa053941e900c54e927ab3a13878e0a11b7866e92161522a31529",
+      "pricesSha256": "0ad3d0fd6452fbdc66c3907df1e65a44aec3978daf1ffc1851ca3e8216a287e5",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-balatonfoldvar.html": {
+      "city": "balatonfoldvar",
+      "label": "Balatonföldvár",
+      "studio": true,
+      "sha256": "ba737f9eb69cb7b4f97d14fd9690f09aa544c38c051fd984a74fc4ed8e8a6210",
+      "calculatorSha256": "c37a849c9f8e7a9db6c101d3990197d005ec71e73c61c7bf3ff794f20a02a6bb",
+      "pricesSha256": "19f5bef3be3f6234631f0ca698b91088fa213bd59e0a201c9d5589811c02ad52",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-balatonfured.html": {
+      "city": "balatonfured",
+      "label": "Balatonfüred",
+      "studio": true,
+      "sha256": "27dbc12285b3816493687f6daac359c48eabcebc662986e455bbf3c88ec78ceb",
+      "calculatorSha256": "a7c618e3ff4f55fe3180bd097222c785eae531765a0371447a12e2bd605aaf03",
+      "pricesSha256": "1148ea39869fcd0266761341ee77bd4eb905f9f8461b215ab27bd81189de6fc8",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-balatonfuzfo.html": {
+      "city": "balatonfuzfo",
+      "label": "Balatonfűzfő",
+      "studio": true,
+      "sha256": "1b1a9ab43a74ac229178345a8191df92d4ec5130c328525c2607a30a9fc58b68",
+      "calculatorSha256": "c14a45bdbb07d9c401a14b24f5ee4e665f2853a25e187cc29d6a52a5da3cc654",
+      "pricesSha256": "3e704360d9fdc4b8febbe1e59830757a74b19816f63d1ec8d34a286aa4dfcecd",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-balatonkenese.html": {
+      "city": "balatonkenese",
+      "label": "Balatonkenese",
+      "studio": true,
+      "sha256": "2d981e5c771b9b0bda7b933daa98a2ae48528561e0eb3b879ac6b4e12bea92af",
+      "calculatorSha256": "ac0aa6df518d641ff1eb848e077d468798cb129fcda1f9aa88ae8cb21ca18129",
+      "pricesSha256": "c058014f4377865c64458867651444ac9c99f7b234ed8e91ab5d5187bd10dfa9",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-balatonlelle.html": {
+      "city": "balatonlelle",
+      "label": "Balatonlelle",
+      "studio": true,
+      "sha256": "f3dc5730fe05f084ab3413a3685ef5c47d03d32624c67b9603e439334cae4045",
+      "calculatorSha256": "76447bb9f87e8c7110e84608c28cea38c09b8a36f8b5b54157b98f9a6d4d4dbc",
+      "pricesSha256": "7cd94180c8d005be8f095b02e96bb1c70d003df526d89c2388828f1a5602d8af",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-balatonszemes.html": {
+      "city": "balatonszemes",
+      "label": "Balatonszemes",
+      "studio": true,
+      "sha256": "cfd5fc500ad36a590d392f1f3e9a549017fa01cab0b9cb37b1d167d0ea1a8eea",
+      "calculatorSha256": "590154064c1d737e6aed0dfa0bce1d3dcee43bcb7c172c76135aaf284c0e326e",
+      "pricesSha256": "d1ff3b5ca1068963d97e22dc54cdd03c639ed074222db845324305d31e36dc61",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-dunafoldvar.html": {
+      "city": "dunafoldvar",
+      "label": "Dunaföldvár",
+      "studio": false,
+      "sha256": "a1b13c051010876a4a877bd84ad0f106ba6fbdad7434ea37f1157c93d219c7ec",
+      "calculatorSha256": "0d3f9e2a3995726568a1481fe4b24aad389f4512653c24fb4456969e07484ddb",
+      "pricesSha256": null,
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-fonyod.html": {
+      "city": "fonyod",
+      "label": "Fonyód",
+      "studio": true,
+      "sha256": "bd96274744f52de39e0bc50d065f1baeca078699d0903d798730ef913f496d2a",
+      "calculatorSha256": "4b30db8ff1f0d4d4eb9da9da8d299b2e63bd40d6c04db7c4a6f386ad3ddac058",
+      "pricesSha256": "603bda00404b1645d8621a8167ab402a0fa93536f58efa129fe7b999b023ac99",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-gyor.html": {
+      "city": "gyor",
+      "label": "Győr",
+      "studio": true,
+      "sha256": "6bbfd979758316c8ef0661c6790f9c30c7cb818bc78be8c5c9376d93bac0c300",
+      "calculatorSha256": "57d711a039976f5b38d5f88f011d7c2477667fcf50c24db4cc270df94f0f6ae4",
+      "pricesSha256": "1d54233e7222b5c07acd1c2920c1c01aeee3e1151619e68ae1a5b7b2a14319f3",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-heviz.html": {
+      "city": "heviz",
+      "label": "Hévíz",
+      "studio": true,
+      "sha256": "86b28249f428638428375a42f4a7a715c605cb3145434ff3f6a65403a5160dc6",
+      "calculatorSha256": "ff3cf478b7a5d7f715d05456b6cce41096ce12813b7231823ef19fdb8aea375e",
+      "pricesSha256": "e5b1ed5563b2077be2d5b79e5195434ad11e133b7a7695bb5d235b829cc61589",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-kalocsa.html": {
+      "city": "kalocsa",
+      "label": "Kalocsa",
+      "studio": false,
+      "sha256": "8e5398a55b43ff7b2eeef773d05e73cb9a9533c6d0ee1cf53e8bd6e30255fa03",
+      "calculatorSha256": "dbe13c2faada74882ac282c2b4c53e681edcc6a684cc3bf3a5514024bf888e57",
+      "pricesSha256": null,
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-keszthely.html": {
+      "city": "keszthely",
+      "label": "Keszthely",
+      "studio": true,
+      "sha256": "b764a86bc1cc2d0fdeac6073e02c8067ec51d4d213d5fc686f4d529f911e8b9e",
+      "calculatorSha256": "eb7d6f6d42dbed7765b335abe584e1aa72c966d8581559d557562ecb2f3df699",
+      "pricesSha256": "1e10791793478f917ecc49155486f283d75ee204d254e77c9640692a12fdf87a",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-kiskoros.html": {
+      "city": "kiskoros",
+      "label": "Kiskőrös",
+      "studio": false,
+      "sha256": "859915bdb4ea7558f243fcb012e53b9e40d03937837c088bd63d5fd4b250db35",
+      "calculatorSha256": "d11189201eb2553fdef469423e3a8be6ea6d044af5cb51df679910cd5054ea2b",
+      "pricesSha256": null,
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-komarom.html": {
+      "city": "komarom",
+      "label": "Komárom",
+      "studio": true,
+      "sha256": "ef35e53b9e5b4c204c135add95ac3ac92e63a17938fe3829af86e81e6812412f",
+      "calculatorSha256": "e7d036645545d430c0d2718fc864c028ebec1cd1dff30a082fe2c9d4af066be4",
+      "pricesSha256": "e1a9f4178f95b63d62280a607737f528528bdd0c7140c63acb73c462236ffef9",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-mosonmagyarovar.html": {
+      "city": "mosonmagyarovar",
+      "label": "Mosonmagyaróvár",
+      "studio": true,
+      "sha256": "0ca2d86a9ccc04a993f5c1ad49d76d95588969e464c287ff7faf05169d65a75e",
+      "calculatorSha256": "379a35a1dbd315da403c11cd76f77c8e46bc04160a1a99c0d5c6d26b99ae4d9b",
+      "pricesSha256": "e6fccde79642cbf903ec70de6b7a5cb19fe81e50cfa0ce289f06054461bec43e",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-paks.html": {
+      "city": "paks",
+      "label": "Paks",
+      "studio": false,
+      "sha256": "23aeb812d4e31f9a86ebf8b513278b12b30a76c4f5808a09e6c8896214ac4b4b",
+      "calculatorSha256": "6bbfcc76fbf4c352289ea7c18cb3daee5cb41d5416cc1b6af0c5e8f7d1f12025",
+      "pricesSha256": null,
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-papa.html": {
+      "city": "papa",
+      "label": "Pápa",
+      "studio": true,
+      "sha256": "38bd9fcd0919f90408b1a8d002b976d2da4ceccc04799386bf6795a83d672229",
+      "calculatorSha256": "300c199b92b1ebd7ee501117d44a0e00b3d43a8746dfd023a99e7ac2ff35d003",
+      "pricesSha256": "4f27c444f71aa6d2c78deb2e8b3394b2e5618e213862c7a18791fe604975a7bf",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-revfulop.html": {
+      "city": "revfulop",
+      "label": "Révfülöp",
+      "studio": true,
+      "sha256": "81031a04773a7c380ab2d603c140f4f6e7f1e3e9bb7fd5ea81e1c9d5cac5298d",
+      "calculatorSha256": "8242bd3dff52c20e080ffafcbbffe1c2f6c402613ec3226de74bf12bef480e89",
+      "pricesSha256": "2b8c77209ce862d1c70f1c6cc3cb3903be9b7828534fc0eeac910e0076e5dff7",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-siofok.html": {
+      "city": "siofok",
+      "label": "Siófok",
+      "studio": true,
+      "sha256": "1e8bbfab7102881c0d95bb2572bcc99a8256beab60bb77b6c3171ab83840213d",
+      "calculatorSha256": "642b58adfa36562d011e9068205ed11210ec3cc5d1b957e08283a147e008470d",
+      "pricesSha256": "095f1c0b9f976c3a2bca5b54438cc4ba968aefcdc0bfeef09c11f06d02d597a0",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-solt.html": {
+      "city": "solt",
+      "label": "Solt",
+      "studio": false,
+      "sha256": "6e227d47044347eca015e49597118fd9760a88775ddcbe16945b56259ea08b96",
+      "calculatorSha256": "da35b0a33d502d3724ea44890bdae3fa3ff17f58d80289acfecfe3f3a26473aa",
+      "pricesSha256": null,
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-sopron.html": {
+      "city": "sopron",
+      "label": "Sopron",
+      "studio": true,
+      "sha256": "e6bb85d34d828b3e3b698d735d53468f159f0fe8bda6b0064a28096c84b17b10",
+      "calculatorSha256": "c809be742b42a990ab04ac289b0450442d6dbbc108ee8f43547d04f0cbb49510",
+      "pricesSha256": "546bcb423a44bd6c4335d64c8987d93fd8596f3abd8dc44a02e63230af9fc33b",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-szekszard.html": {
+      "city": "szekszard",
+      "label": "Szekszárd",
+      "studio": false,
+      "sha256": "25b64eec8126134561a8049a22ec2b811ff71ef972ee3cf0e7c199943a49ca15",
+      "calculatorSha256": "05517f73dc3ffe31f39d7a32b1d95472cc6c16f1f3a784946609f3347a8cf358",
+      "pricesSha256": null,
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-szombathely.html": {
+      "city": "szombathely",
+      "label": "Szombathely",
+      "studio": true,
+      "sha256": "0a7ef4019b1715532f40df0cef6ac353e2a3635181d66a88e155f5a3e4b2b111",
+      "calculatorSha256": "d25998f6c1abf0e9eca5bf405e1b2049cc072feb79d4b0609c64c26944801bdd",
+      "pricesSha256": "3563d7b9cd21023c71f7a5477ce565ac7d40083708c1690fc34078419364f294",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-tapolca.html": {
+      "city": "tapolca",
+      "label": "Tapolca",
+      "studio": true,
+      "sha256": "cfc31175a560bad365948259eebc7e035c3ab01454d4bbfa46f9bb567509041f",
+      "calculatorSha256": "84045ade5c9355bfca830af15b1060340d9923065aefafcc4c85860ac541739a",
+      "pricesSha256": "9b580627cc204c867ac2fcc77b9b7cd8f7d33b7cc210b4ecb0944af60a1eb898",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-tata.html": {
+      "city": "tata",
+      "label": "Tata",
+      "studio": true,
+      "sha256": "624a442cc1816d131fde828e13879d4317f768d65a0160cefe81167937cf8787",
+      "calculatorSha256": "bb5f0d8f3f4215619ff42c079fa71e75315fa8b2f3849b539c3d6db0bbefcfb9",
+      "pricesSha256": "d42b9884ef525ea3d13d11dc72d9ff23ef03fb1ded1e8e4463317c2e39384176",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-tatabanya.html": {
+      "city": "tatabanya",
+      "label": "Tatabánya",
+      "studio": true,
+      "sha256": "51e2d06acf2f73645056e15e30fb8eff325cfd9af636f42e1362606407c9acda",
+      "calculatorSha256": "703990153020c95d897a587a02aa779ceff51166f157199dea0884f5bcfa9fe9",
+      "pricesSha256": "6a3496f792fc7029ffe1557efb86a80947ef056c2fe3878fdbaea0bd9d8329db",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-tihany.html": {
+      "city": "tihany",
+      "label": "Tihany",
+      "studio": true,
+      "sha256": "74258eecfcfe929544488e6c04e6b510d2e8ade00dcfe20d4601e843e61896ab",
+      "calculatorSha256": "ca9aa4620fecf0b23f6da2bb436822bd05849b97f97b0e4718a78b89cf3bcce5",
+      "pricesSha256": "89ae35405ce4d13b2f74baf888eda00bfaef9f304dbed8b358abeb502c6ddca4",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-veszprem.html": {
+      "city": "veszprem",
+      "label": "Veszprém",
+      "studio": true,
+      "sha256": "a178f731dbbb6c8f171b43b79a85d37309e9ee1a937239ac118b3b6da283aa92",
+      "calculatorSha256": "35d81f4a0f24b6aa4a27e0c1ed60aa25ddd55f3b60d9e00ccaef9ace71aa26b4",
+      "pricesSha256": "5cce111197b653ce3bf09dbe5ed304761cfbbd3c43e1c06ee0ffba30d3c3281f",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    },
+    "en/upholstery-cleaning-zamardi.html": {
+      "city": "zamardi",
+      "label": "Zamárdi",
+      "studio": true,
+      "sha256": "c860843492b3d9d2c0aef53cc7cced40ee01dbc3f89e1df96f52a9cde6581a6d",
+      "calculatorSha256": "380d409a46bb873102d1c4ec56cd0e11da7995dc20d2f951ebd7b30e70d48e22",
+      "pricesSha256": "8a45d817f9c65f8ea5c1327241e1f7fba06b53b56be2b4b488ffccab3c93e599",
+      "phones": [
+        "tel:+36702408141"
+      ]
+    }
+  },
+  "runtimes": {
+    "studio/configurator.js": "e02e799aded57b6e5ec817b213152835bb90ae99697c8690f796e62ed8268035",
+    "studio/booking-handoff.js": "16a249cdcabe846b2093de1020927a9f4e945bd8677cec8cc577519a6ae9ac2b",
+    "mediterranean/configurator.js": "6be2a3b8bc3ffe2a9f56d2f563a6a1b7b04314441c2b54c0218691f9c9a891fd",
+    "mediterranean/interactions.js": "a90ba124f7163b1280c1e20baf45d062a3e51aca58e556599ab06f4e36c8290a",
+    "ui/booking-live.js": "551e3665f70ad9b99c881bdb15687551aeeeab5b8ac1158c52ddb7e1c2951faf",
+    "ui/booking-live-en.js": "572a91070500894f468c89d7c6cdadf9657f1a73851259b887b311fccc9eb1f4",
+    "ui/calendar-live.js": "8d83e03a36c5f3d1878a189960ecec107c0fe3a64452bf1039811ae7383091d3"
+  }
+}

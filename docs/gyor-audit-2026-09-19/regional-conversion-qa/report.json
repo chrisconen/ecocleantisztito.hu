@@ -1,0 +1,418 @@
+[
+  {
+    "file": "karpittisztitas-szombathely.html",
+    "width": 320,
+    "basePrice": 18000,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "booking",
+    "passed": true
+  },
+  {
+    "file": "karpittisztitas-szombathely.html",
+    "width": 390,
+    "basePrice": 18000,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "booking",
+    "passed": true
+  },
+  {
+    "file": "karpittisztitas-szombathely.html",
+    "width": 768,
+    "basePrice": 18000,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "booking",
+    "passed": true
+  },
+  {
+    "file": "karpittisztitas-szombathely.html",
+    "width": 1440,
+    "basePrice": 18000,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "booking",
+    "passed": true
+  },
+  {
+    "file": "en/upholstery-cleaning-szombathely.html",
+    "width": 320,
+    "basePrice": 18000,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "booking",
+    "passed": true
+  },
+  {
+    "file": "en/upholstery-cleaning-szombathely.html",
+    "width": 390,
+    "basePrice": 18000,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "booking",
+    "passed": true
+  },
+  {
+    "file": "en/upholstery-cleaning-szombathely.html",
+    "width": 768,
+    "basePrice": 18000,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "booking",
+    "passed": true
+  },
+  {
+    "file": "en/upholstery-cleaning-szombathely.html",
+    "width": 1440,
+    "basePrice": 18000,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "booking",
+    "passed": true
+  },
+  {
+    "file": "karpittisztitas-mosonmagyarovar.html",
+    "width": 320,
+    "basePrice": 18000,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "booking",
+    "passed": true
+  },
+  {
+    "file": "karpittisztitas-mosonmagyarovar.html",
+    "width": 390,
+    "basePrice": 18000,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "booking",
+    "passed": true
+  },
+  {
+    "file": "karpittisztitas-mosonmagyarovar.html",
+    "width": 768,
+    "basePrice": 18000,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "booking",
+    "passed": true
+  },
+  {
+    "file": "karpittisztitas-mosonmagyarovar.html",
+    "width": 1440,
+    "basePrice": 18000,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "booking",
+    "passed": true
+  },
+  {
+    "file": "en/upholstery-cleaning-mosonmagyarovar.html",
+    "width": 320,
+    "basePrice": 18000,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "booking",
+    "passed": true
+  },
+  {
+    "file": "en/upholstery-cleaning-mosonmagyarovar.html",
+    "width": 390,
+    "basePrice": 18000,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "booking",
+    "passed": true
+  },
+  {
+    "file": "en/upholstery-cleaning-mosonmagyarovar.html",
+    "width": 768,
+    "basePrice": 18000,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "booking",
+    "passed": true
+  },
+  {
+    "file": "en/upholstery-cleaning-mosonmagyarovar.html",
+    "width": 1440,
+    "basePrice": 18000,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "booking",
+    "passed": true
+  },
+  {
+    "file": "karpittisztitas-baja.html",
+    "width": 320,
+    "basePrice": 15500,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "inquiry",
+    "passed": true
+  },
+  {
+    "file": "karpittisztitas-baja.html",
+    "width": 390,
+    "basePrice": 15500,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "inquiry",
+    "passed": true
+  },
+  {
+    "file": "karpittisztitas-baja.html",
+    "width": 768,
+    "basePrice": 15500,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "inquiry",
+    "passed": true
+  },
+  {
+    "file": "karpittisztitas-baja.html",
+    "width": 1440,
+    "basePrice": 15500,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "inquiry",
+    "passed": true
+  },
+  {
+    "file": "en/upholstery-cleaning-baja.html",
+    "width": 320,
+    "basePrice": 15500,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "inquiry",
+    "passed": true
+  },
+  {
+    "file": "en/upholstery-cleaning-baja.html",
+    "width": 390,
+    "basePrice": 15500,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "inquiry",
+    "passed": true
+  },
+  {
+    "file": "en/upholstery-cleaning-baja.html",
+    "width": 768,
+    "basePrice": 15500,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "inquiry",
+    "passed": true
+  },
+  {
+    "file": "en/upholstery-cleaning-baja.html",
+    "width": 1440,
+    "basePrice": 15500,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "inquiry",
+    "passed": true
+  },
+  {
+    "file": "karpittisztitas-dunafoldvar.html",
+    "width": 320,
+    "basePrice": 15500,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "inquiry",
+    "passed": true
+  },
+  {
+    "file": "karpittisztitas-dunafoldvar.html",
+    "width": 390,
+    "basePrice": 15500,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "inquiry",
+    "passed": true
+  },
+  {
+    "file": "karpittisztitas-dunafoldvar.html",
+    "width": 768,
+    "basePrice": 15500,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "inquiry",
+    "passed": true
+  },
+  {
+    "file": "karpittisztitas-dunafoldvar.html",
+    "width": 1440,
+    "basePrice": 15500,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "inquiry",
+    "passed": true
+  },
+  {
+    "file": "en/upholstery-cleaning-dunafoldvar.html",
+    "width": 320,
+    "basePrice": 15500,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "inquiry",
+    "passed": true
+  },
+  {
+    "file": "en/upholstery-cleaning-dunafoldvar.html",
+    "width": 390,
+    "basePrice": 15500,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "inquiry",
+    "passed": true
+  },
+  {
+    "file": "en/upholstery-cleaning-dunafoldvar.html",
+    "width": 768,
+    "basePrice": 15500,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "inquiry",
+    "passed": true
+  },
+  {
+    "file": "en/upholstery-cleaning-dunafoldvar.html",
+    "width": 1440,
+    "basePrice": 15500,
+    "travelFees": [
+      3500,
+      4000,
+      4500,
+      5500
+    ],
+    "flow": "inquiry",
+    "passed": true
+  }
+]

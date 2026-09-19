@@ -1,0 +1,7 @@
+The approved Győr reference-led layout now covers the other 32 upholstery service cities in Hungarian and English. Each page leads with original ECO Clean before/after photographs, its existing service prices and chargeable travel, followed by reference stories and the original calculator. The references and Google reputation are clearly brand-wide.
+
+Regional pricing is preserved: standard Studio pages keep their online booking handoff; the seven southern Mediterranean cities keep their distinct catalogue and email/phone quote-request flow. No calculator, booking or calendar engine is modified. All original calculator sections, published price grids and phone routes are checked against a snapshot of the previous production release. The Győr city-only discounts and free travel remain confined to Győr.
+
+The shared mobile action bar targets the appropriate calculator. Southern menus gain an accessible close button, and long city names receive explicit wrapping. Existing URLs, canonicals and local navigation remain intact.
+
+Validation: 64-page rollout checks, all seven financial/booking runtime byte hashes, 46 existing booking/pricing/navigation tests, responsive browser checks for both page families and languages, independent code review, full release and staged package gates. Test routing blocks external writes; no bookings or emails are sent. The southern English calculator retains its existing Hungarian runtime, rather than changing that workflow in this visual rollout.

@@ -1,4 +1,4 @@
-/* Győr only. Live reputation from the existing source; no tracking or customer writes. */
+/* Regional reference layout. Brand reputation; no tracking or customer writes. */
 (() => {
   'use strict';
   const root = document.querySelector('.eco-gyor-conversion');
@@ -18,7 +18,8 @@
       .catch(() => {}); // The static, accessible Google link remains usable.
   }
   const bar = document.querySelector('.gyor-mobile-booking');
-  const calculator = document.getElementById('studio-kalkulator');
+  document.querySelector('[data-conversion-menu-close]')?.addEventListener('click', () => document.querySelector('.bixol-mobile-hamburger')?.click());
+  const calculator = document.getElementById(document.querySelector('[data-conversion-calculator]')?.dataset.conversionCalculator || 'studio-kalkulator');
   if (bar && calculator && 'IntersectionObserver' in window) {
     let inCalculator = false;
     const menu = document.querySelector('.nav-mobile,.bixol-mobile-menu');
