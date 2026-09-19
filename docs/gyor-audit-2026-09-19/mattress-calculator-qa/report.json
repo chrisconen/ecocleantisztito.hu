@@ -1,0 +1,128 @@
+[
+  {
+    "file": "matractisztitas-gyor.html",
+    "width": 320,
+    "total": 15600,
+    "service": "Matrac",
+    "wetBothSides": true,
+    "frame": true,
+    "passed": true
+  },
+  {
+    "file": "matractisztitas-gyor.html",
+    "width": 390,
+    "total": 15600,
+    "service": "Matrac",
+    "wetBothSides": true,
+    "frame": true,
+    "passed": true
+  },
+  {
+    "file": "matractisztitas-gyor.html",
+    "width": 1440,
+    "total": 15600,
+    "service": "Matrac",
+    "wetBothSides": true,
+    "frame": true,
+    "passed": true
+  },
+  {
+    "file": "en/mattress-cleaning-gyor.html",
+    "width": 320,
+    "total": 15600,
+    "service": "Matrac",
+    "wetBothSides": true,
+    "frame": true,
+    "passed": true
+  },
+  {
+    "file": "en/mattress-cleaning-gyor.html",
+    "width": 390,
+    "total": 15600,
+    "service": "Matrac",
+    "wetBothSides": true,
+    "frame": true,
+    "passed": true
+  },
+  {
+    "file": "en/mattress-cleaning-gyor.html",
+    "width": 1440,
+    "total": 15600,
+    "service": "Matrac",
+    "wetBothSides": true,
+    "frame": true,
+    "passed": true
+  },
+  {
+    "file": "matractisztitas-szombathely.html",
+    "width": 320,
+    "total": 44000,
+    "service": "Matrac",
+    "wetBothSides": true,
+    "frame": true,
+    "passed": true
+  },
+  {
+    "file": "matractisztitas-szombathely.html",
+    "width": 390,
+    "total": 44000,
+    "service": "Matrac",
+    "wetBothSides": true,
+    "frame": true,
+    "passed": true
+  },
+  {
+    "file": "matractisztitas-szombathely.html",
+    "width": 1440,
+    "total": 44000,
+    "service": "Matrac",
+    "wetBothSides": true,
+    "frame": true,
+    "passed": true
+  },
+  {
+    "file": "en/mattress-cleaning-szombathely.html",
+    "width": 320,
+    "total": 44000,
+    "service": "Matrac",
+    "wetBothSides": true,
+    "frame": true,
+    "passed": true
+  },
+  {
+    "file": "en/mattress-cleaning-szombathely.html",
+    "width": 390,
+    "total": 44000,
+    "service": "Matrac",
+    "wetBothSides": true,
+    "frame": true,
+    "passed": true
+  },
+  {
+    "file": "en/mattress-cleaning-szombathely.html",
+    "width": 1440,
+    "total": 44000,
+    "service": "Matrac",
+    "wetBothSides": true,
+    "frame": true,
+    "passed": true
+  },
+  {
+    "file": "matractisztitas-mosonmagyarovar.html",
+    "width": 320,
+    "total": 44000,
+    "service": "Matrac",
+    "wetBothSides": true,
+    "frame": true,
+    "passed": true
+  },
+  {
+    "file": "en/mattress-cleaning-mosonmagyarovar.html",
+    "width": 320,
+    "total": 44000,
+    "service": "Matrac",
+    "wetBothSides": true,
+    "frame": true,
+    "passed": true
+  }
+]

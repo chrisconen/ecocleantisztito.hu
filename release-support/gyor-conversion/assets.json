@@ -1,4 +1,6 @@
 {
+  "ui/mattress-calculator.js": "release-support/mattress-calculator/calculator.js",
+  "ui/mattress-calculator.css": "release-support/mattress-calculator/calculator.css",
   "megrendeles.html": "release-support/homepage-booking/booking-hu.html",
   "en/booking.html": "release-support/homepage-booking/booking-en.html",
   "ui/booking-page.js": "release-support/homepage-booking/booking-page.js",

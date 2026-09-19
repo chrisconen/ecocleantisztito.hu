@@ -36,7 +36,7 @@ test('new booking page links and scripts resolve and city handoffs use the corre
  }
  for(const dir of ['', 'en'])for(const file of fs.readdirSync(path.join(root,dir)).filter(f=>f.endsWith('.html'))){
   const html=read(path.join(dir,file));
-  assert.equal((html.match(/data-booking-url=/g)||[]).length,(html.match(/data-studio-configurator=/g)||[]).length,file+' explicit destination');
-  for(const [,url]of html.matchAll(/data-booking-url="([^"]+)"/g))assert.equal(url,(dir?'booking.html':'megrendeles.html')+'#booking',file);
+  assert.equal((html.match(/data-booking-url=/g)||[]).length,(html.match(/data-studio-configurator=/g)||[]).length+(html.match(/data-mattress-calculator\b/g)||[]).length,file+' explicit destination');
+  for(const [,url]of html.matchAll(/data-booking-url="([^"]+)"/g))assert.equal(url.split('#')[0],dir?'booking.html':'megrendeles.html',file);
  }
 });
