@@ -6,6 +6,31 @@ ROOT = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).parent
 sha = lambda data: hashlib.sha256(data).hexdigest()
 
+def added_target(name, parent_names, seen):
+    assert isinstance(name, str) and name and '\\' not in name and ':' not in name, 'Invalid added target'
+    assert all(part not in ('', '.', '..') for part in name.split('/')), 'Noncanonical added target: '+name
+    key = name.casefold()
+    assert key not in {n.casefold() for n in parent_names} and key not in seen, 'Added target collision: '+name
+    target = (ROOT/'release'/name).resolve()
+    assert target.is_relative_to((ROOT/'release').resolve()), 'Added target escapes release'
+    seen.add(key)
+    return target
+
+def added_assets(parent):
+    """Explicit source-to-output mapping; additions cannot overwrite parent files."""
+    mapping_path = ROOT/'release-support/gyor-conversion/assets.json'
+    raw = mapping_path.read_bytes()
+    mapping = json.loads(raw)
+    outputs, records, seen = {}, {}, set()
+    for name, source in mapping.items():
+        target, origin = added_target(name, parent['files'], seen), (ROOT/source).resolve()
+        assert origin.is_relative_to(ROOT.resolve()) and not origin.is_relative_to((ROOT/'release').resolve()), 'Invalid added source'
+        assert origin.is_file() and not (ROOT/source).is_symlink(), source
+        data = origin.read_bytes()
+        outputs[name] = data
+        records[name] = dict(source=source, bytes=len(data), sha256=sha(data))
+    return outputs, records, sha(raw)
+
 def restore(data, edits):
     for e in reversed(edits):
         a, b, pos = e['after'].encode(), e['before'].encode(), e['offset']
@@ -63,15 +88,25 @@ def main():
         outputs[name] = after
         records[name] = dict(beforeSha256=sha(before), afterSha256=sha(after), edits=edits)
     assert set(originals) <= set(outputs), 'Do not silently drop existing changes'
+    added, added_records, mapping_sha = added_assets(parent)
+    if current.get('contentClarityOverlay'):
+        for name, record in old.get('addedAssets', {}).items():
+            assert name in added and sha((ROOT/'release'/name).read_bytes()) == record['sha256'], 'Changed added asset: '+name
     overlay = dict(version=1, parentSha256=sha(parent_bytes), reportSha256=sha(report_bytes),
                    replacementsSha256=sha((HERE/'replacements.json').read_bytes()),
-                   tariffSha256=sha((HERE/'tariff.json').read_bytes()), files=records)
+                   tariffSha256=sha((HERE/'tariff.json').read_bytes()), files=records,
+                   addedAssets=added_records, addedAssetsMappingSha256=mapping_sha)
     overlay_bytes = (json.dumps(overlay, ensure_ascii=False, indent=2)+'\n').encode()
     manifest = json.loads(parent_bytes)
     for name, data in outputs.items():
         manifest['files'][name] = dict(parent['files'][name], bytes=len(data), sha256=sha(data))
+    manifest['files'].update(added_records)
     manifest['contentClarityOverlay'] = dict(path='release-support/content-clarity/overlay.json', sha256=sha(overlay_bytes))
     for name, data in outputs.items(): (ROOT/'release'/name).write_bytes(data)
+    for name, data in added.items():
+        target = ROOT/'release'/name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(data)
     (HERE/'overlay.json').write_bytes(overlay_bytes)
     mp.write_text(json.dumps(manifest, ensure_ascii=False, indent=2)+'\n', encoding='utf-8', newline='')
     print(json.dumps(dict(changedFiles=len(outputs), replacements=sum(len(r['edits']) for r in records.values()))))

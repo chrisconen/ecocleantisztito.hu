@@ -1,0 +1,80 @@
+[
+  {
+    "file": "karpittisztitas-gyor.html",
+    "width": 320,
+    "passed": true,
+    "checks": "images, city prices, surrounding tariff, CTA, layout, reviews"
+  },
+  {
+    "file": "karpittisztitas-gyor.html",
+    "width": 390,
+    "passed": true,
+    "checks": "images, city prices, surrounding tariff, CTA, layout, reviews"
+  },
+  {
+    "file": "karpittisztitas-gyor.html",
+    "width": 768,
+    "passed": true,
+    "checks": "images, city prices, surrounding tariff, CTA, layout, reviews"
+  },
+  {
+    "file": "karpittisztitas-gyor.html",
+    "width": 1440,
+    "passed": true,
+    "checks": "images, city prices, surrounding tariff, CTA, layout, reviews"
+  },
+  {
+    "file": "en/upholstery-cleaning-gyor.html",
+    "width": 320,
+    "passed": true,
+    "checks": "images, city prices, surrounding tariff, CTA, layout, reviews"
+  },
+  {
+    "file": "en/upholstery-cleaning-gyor.html",
+    "width": 390,
+    "passed": true,
+    "checks": "images, city prices, surrounding tariff, CTA, layout, reviews"
+  },
+  {
+    "file": "en/upholstery-cleaning-gyor.html",
+    "width": 768,
+    "passed": true,
+    "checks": "images, city prices, surrounding tariff, CTA, layout, reviews"
+  },
+  {
+    "file": "en/upholstery-cleaning-gyor.html",
+    "width": 1440,
+    "passed": true,
+    "checks": "images, city prices, surrounding tariff, CTA, layout, reviews"
+  },
+  {
+    "flow": "karpittisztitas-gyor.html → booking import",
+    "total": 7900,
+    "passed": true
+  },
+  {
+    "flow": "en/upholstery-cleaning-gyor.html → booking import",
+    "total": 7900,
+    "passed": true
+  },
+  {
+    "flow": "review unavailable",
+    "passed": true
+  },
+  {
+    "flow": "review wrong-business",
+    "passed": true
+  },
+  {
+    "flow": "review malformed",
+    "passed": true
+  },
+  {
+    "flow": "review changed-rating",
+    "passed": true
+  },
+  {
+    "flow": "static photos and review link without JavaScript",
+    "passed": true
+  }
+]

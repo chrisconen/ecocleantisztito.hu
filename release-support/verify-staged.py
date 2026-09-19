@@ -23,10 +23,16 @@ for row in git('ls-files','--stage','-z').split(b'\0'):
 expected={'release/'+name for name in manifest['files']}
 actual={name for name in entries if name.startswith('release/')}
 if expected!=actual:errors.append('Staged artifact file set differs from manifest')
+# The owner explicitly selected these original photos for public references.
+# Allow only declared sources whose bytes match their verified public copies.
+public_photo_sources={record['source']:record for name,record in manifest['files'].items()
+                      if name.startswith('img/reference-') and record.get('source','').startswith('img/')}
+for name in public_photo_sources:
+    if name not in entries:errors.append('Public photo source is not staged: '+name)
 deleted=set(changed)-set(entries)
 # Deleted paths have no staged blob. The complete artifact set comparison above
 # still checks that release deletions agree with the staged release manifest.
-requested=sorted((set(changed)&set(entries))|expected)
+requested=sorted((set(changed)&set(entries))|expected|(set(public_photo_sources)&set(entries)))
 raw=subprocess.check_output(['git','cat-file','--batch'],cwd=ROOT,input=b''.join(entries[name][1]+b'\n' for name in requested))
 position=0
 for name in requested:
@@ -36,8 +42,10 @@ for name in requested:
     if name.startswith('release/'):
         if hashlib.sha256(data).hexdigest()!=manifest['files'][name[8:]]['sha256']:
             errors.append('Staged artifact hash mismatch: '+name)
+    if name in public_photo_sources and hashlib.sha256(data).hexdigest()!=public_photo_sources[name]['sha256']:
+        errors.append('Public photo source differs from verified copy: '+name)
     if name in changed:
-        if re.search(r'(^|/)(backups|\.opencode|\.playwright-mcp|node_modules|\.env)(/|$)|ecocleantisztito\.hu\.txt$|\.(png|jpe?g)$',name) and not name.startswith('release/'):
+        if re.search(r'(^|/)(backups|\.opencode|\.playwright-mcp|node_modules|\.env)(/|$)|ecocleantisztito\.hu\.txt$|\.(png|jpe?g)$',name) and not name.startswith('release/') and name not in public_photo_sources:
             errors.append('Unexpected private or bulky source artifact: '+name)
         if re.search(rb'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|\bgh[pousr]_[A-Za-z0-9]{30,}\b|\bgithub_pat_[A-Za-z0-9_]{40,}\b|\bAKIA[A-Z0-9]{16}\b',data):
             errors.append('Credential signature in staged file: '+name)

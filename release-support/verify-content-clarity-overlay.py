@@ -26,13 +26,20 @@ def verify(manifest, read_current=None):
         assert not parent.get('contentClarityOverlay')
         assert set(manifest) == set(parent)|{'contentClarityOverlay'}
         assert all(manifest[k] == parent[k] for k in parent if k != 'files')
-        assert set(manifest['files']) == set(parent['files'])
         changes_raw = (HERE/'replacements.json').read_bytes()
         assert sha(changes_raw) == overlay['replacementsSha256']
         assert sha((HERE/'tariff.json').read_bytes()) == overlay['tariffSha256']
         changes = json.loads(changes_raw)
         assert set(changes) == set(overlay['files'])
         builder = load('clarity_builder', HERE/'build.py')
+        additions = overlay.get('addedAssets', {})
+        assert set(manifest['files']) == set(parent['files']) | set(additions)
+        if additions:
+            added, records, mapping_sha = builder.added_assets(parent)
+            assert mapping_sha == overlay['addedAssetsMappingSha256']
+            assert records == additions
+            for name, data in added.items():
+                assert manifest['files'][name] == records[name] and artifact(name) == data, 'Added asset differs: '+name
         restored = {}
         for name, record in parent['files'].items():
             data = artifact(name)

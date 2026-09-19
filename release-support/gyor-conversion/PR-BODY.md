@@ -1,0 +1,7 @@
+Győr upholstery visitors can now compare original ECO Clean work and see city prices before starting a booking. The Hungarian and English pages lead with a real before/after pair, sofa/L-sofa/chair prices and free travel within Győr. Three photo stories describe visible results without invented customer details or cleaning product names. Current tariff examples are explicitly separate from historical job invoices.
+
+The existing calculator now follows the reference section. Hero and mobile CTAs lead to it, and the original city-specific basket handoff remains intact. The reputation link uses the existing Kárpittisztítás ECO Clean Google business; its live aggregate score and review count are validated against the business ID, with a usable link on failure.
+
+Four owner-authorized original photos and two scoped UI files are included through explicit, hashed asset mappings. The release proof retains its immutable parent and rejects noncanonical paths and destination collisions. Historical hero/photo retention now checks the restored parent, while the new photos and tariff route are checked on the current page.
+
+Validation: 46 existing pricing/navigation/booking checks, 15 HU/EN browser flows at 320/390/768/1440 px, three asset-boundary checks, independent code review, full release/package and staged artifact verification. Browser QA blocks external writes and sends no real bookings. No customer messages, advertisements or new analytics integration are introduced.
