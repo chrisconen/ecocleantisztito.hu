@@ -1,0 +1,924 @@
+{
+  "version": 1,
+  "parentSha256": "1af7ab247e04ca51b029f75c8e408f1ae363ae5160f4f9360b5fdb96ac499cfd",
+  "reportSha256": "151c535e2f4d729dc3c75978be9dce3e255f69a8ceaf213b76f6796201b9e8a6",
+  "replacementsSha256": "2ff5bc333b295f9a54c55f494f33b325cc81c3c6c675cef2b69655f53c4d8c48",
+  "tariffSha256": "9f6e1d93c77b9a1b221b48e9144938ac85a88bd5e9fb108622cef47b9780e7fe",
+  "files": {
+    "ui/booking-live.js": {
+      "beforeSha256": "c29fbe7429419eef576a36d40338b94f121e5837134390dbe72019921d042dd7",
+      "afterSha256": "1655f39a8e43a9e5a2c76bdcb60ca248036589bcbd1adf259410a070b94ca797",
+      "edits": [
+        {
+          "offset": 1126,
+          "before": "\"szofa\": { name: \"Szófa, heverő\", price: 18000, duration: 40, atkaPrice: 6000, agyazhatoPrice: 6000 },",
+          "after": "\"szofa\": { name: \"Szófa, heverő\", price: 18000, duration: 40, atkaPrice: 4000, agyazhatoPrice: 6000 },"
+        },
+        {
+          "offset": 1239,
+          "before": "\"l_kanape\": { name: \"L-kanapé\", price: 20000, duration: 50, atkaPrice: 6000, agyazhatoPrice: 6000 },",
+          "after": "\"l_kanape\": { name: \"L-kanapé\", price: 20000, duration: 50, atkaPrice: 4000, agyazhatoPrice: 6000 },"
+        },
+        {
+          "offset": 2069,
+          "before": "\"francia_a\": { name: \"Franciaágy matrac 140/160/180×200 cm (A oldal)\", price: 14000, duration: 35, sides: 1, wetPrice: 8500, framePrice: 9000 },",
+          "after": "\"francia_a\": { name: \"Franciaágy matrac 140/160/180×200 cm (A oldal)\", price: 14000, duration: 35, sides: 1, wetPrice: 6000, framePrice: 9000 },"
+        },
+        {
+          "offset": 2224,
+          "before": "\"francia_ab\": { name: \"Franciaágy matrac 140/160/180×200 cm (A+B oldal)\", price: 19500, duration: 55, sides: 2, wetPrice: 8500, framePrice: 9000 },",
+          "after": "\"francia_ab\": { name: \"Franciaágy matrac 140/160/180×200 cm (A+B oldal)\", price: 19500, duration: 55, sides: 2, wetPrice: 6000, framePrice: 9000 },"
+        },
+        {
+          "offset": 5195,
+          "before": "note: \"Száradási idő: kb. 24 óra!\"",
+          "after": "note: \"Száradási idő: általában 6–12 óra; csak teljes száradás után használd.\""
+        }
+      ]
+    },
+    "ui/booking-live-en.js": {
+      "beforeSha256": "70783e6e13a1d22aa6045d4ed813cc28157156cd26f38df8e6b359bfaab70caf",
+      "afterSha256": "527ec8f05779ed73b48198dc00348b783060e6a907f832f3c22dbeb3e774e8b6",
+      "edits": [
+        {
+          "offset": 1126,
+          "before": "\"szofa\": { name: \"Sofa / daybed\", price: 18000, duration: 40, atkaPrice: 6000, agyazhatoPrice: 6000 },",
+          "after": "\"szofa\": { name: \"Sofa / daybed\", price: 18000, duration: 40, atkaPrice: 4000, agyazhatoPrice: 6000 },"
+        },
+        {
+          "offset": 1237,
+          "before": "\"l_kanape\": { name: \"L-shaped sofa\", price: 20000, duration: 50, atkaPrice: 6000, agyazhatoPrice: 6000 },",
+          "after": "\"l_kanape\": { name: \"L-shaped sofa\", price: 20000, duration: 50, atkaPrice: 4000, agyazhatoPrice: 6000 },"
+        },
+        {
+          "offset": 2073,
+          "before": "\"francia_a\": { name: \"Double mattress 140/160/180×200 cm (side A)\", price: 14000, duration: 35, sides: 1, wetPrice: 8500, framePrice: 9000 },",
+          "after": "\"francia_a\": { name: \"Double mattress 140/160/180×200 cm (side A)\", price: 14000, duration: 35, sides: 1, wetPrice: 6000, framePrice: 9000 },"
+        },
+        {
+          "offset": 2224,
+          "before": "\"francia_ab\": { name: \"Double mattress 140/160/180×200 cm (sides A+B)\", price: 19500, duration: 55, sides: 2, wetPrice: 8500, framePrice: 9000 },",
+          "after": "\"francia_ab\": { name: \"Double mattress 140/160/180×200 cm (sides A+B)\", price: 19500, duration: 55, sides: 2, wetPrice: 6000, framePrice: 9000 },"
+        },
+        {
+          "offset": 5205,
+          "before": "note: \"Drying time: approx. 24 hours!\"",
+          "after": "note: \"Drying usually takes 6–12 hours; use only when fully dry.\""
+        }
+      ]
+    },
+    "studio/configurator.js": {
+      "beforeSha256": "b361c692f392d57bfbf9750ba2b599649fc83b7e8ea435e2d3a50d2a9864a9c9",
+      "afterSha256": "93c50522837ca5368fe83a4f77b5b0d823cfc986e9ccbc2b23dec2d806e692e3",
+      "edits": [
+        {
+          "offset": 110,
+          "before": "  'use strict';",
+          "after": "  'use strict';\n  const english=typeof document!=='undefined'&&document.documentElement.lang==='en';"
+        },
+        {
+          "offset": 1808,
+          "before": "  const catalog = [\r\n    {id:'karpit_szofa',label:'Szófa, heverő',price:15500,duration:40,seats:3,image:'sofa'},\r\n    {id:'karpit_l_kanape',label:'L alakú kanapé',price:17500,duration:50,seats:4,image:'l-sofa'},\r\n    {id:'karpit_u_kanape',label:'U alakú kanapé',price:22500,duration:60,seats:6,image:'u-sofa'},\r\n    {id:'karpit_fotel',label:'Kárpitozott fotel',price:6500,duration:20,seats:1,image:'armchair'},\r\n    {id:'karpit_ebedlo_szek',label:'Kárpitozott ebédlőszék',price:3500,duration:10,seats:1,image:'dining'},\r\n    {id:'karpit_irodai_szek',label:'Kárpitozott irodai szék',price:4000,duration:15,seats:1,image:'office'},\r\n    {id:'matrac_egyagyas_a',label:'Egyágyas matrac · egy oldal',price:8000,duration:25,sides:1,image:'mattress'},\r\n    {id:'matrac_egyagyas_ab',label:'Egyágyas matrac · két oldal',price:12000,duration:40,sides:2,image:'mattress'},\r\n    {id:'matrac_francia_a',label:'Franciaágy matrac · egy oldal',price:12000,duration:35,sides:1,image:'mattress'},\r\n    {id:'matrac_francia_ab',label:'Franciaágy matrac · két oldal',price:17000,duration:55,sides:2,image:'mattress'},\r\n    {id:'matrac_gyerek_a',label:'Gyerekmatrac · egy oldal',price:5000,duration:15,sides:1,image:'mattress'},\r\n    {id:'matrac_gyerek_ab',label:'Gyerekmatrac · két oldal',price:7000,duration:25,sides:2,image:'mattress'},\r\n    {id:'matrac_kisagy_a',label:'Kiságy matrac · egy oldal',price:4000,duration:10,sides:1,image:'mattress'},\r\n    {id:'matrac_kisagy_ab',label:'Kiságy matrac · két oldal',price:6000,duration:20,sides:2,image:'mattress'}\r\n  ];",
+          "after": "  const catalog = [\n  {\n    \"id\": \"karpit_szofa\",\n    \"label\": \"Szófa, heverő\",\n    \"price\": 18000,\n    \"duration\": 40,\n    \"seats\": 3,\n    \"image\": \"sofa\",\n    \"atkaPrice\": 4000,\n    \"agyazhatoPrice\": 6000\n  },\n  {\n    \"id\": \"karpit_l_kanape\",\n    \"label\": \"L alakú kanapé\",\n    \"price\": 20000,\n    \"duration\": 50,\n    \"seats\": 4,\n    \"image\": \"l-sofa\",\n    \"atkaPrice\": 4000,\n    \"agyazhatoPrice\": 6000\n  },\n  {\n    \"id\": \"karpit_u_kanape\",\n    \"label\": \"U alakú kanapé\",\n    \"price\": 26000,\n    \"duration\": 60,\n    \"seats\": 6,\n    \"image\": \"u-sofa\",\n    \"atkaPrice\": 6000,\n    \"agyazhatoPrice\": 6000\n  },\n  {\n    \"id\": \"karpit_fotel\",\n    \"label\": \"Kárpitozott fotel\",\n    \"price\": 7500,\n    \"duration\": 20,\n    \"seats\": 1,\n    \"image\": \"armchair\",\n    \"atkaPrice\": 0\n  },\n  {\n    \"id\": \"karpit_ebedlo_szek\",\n    \"label\": \"Kárpitozott ebédlőszék\",\n    \"price\": 4000,\n    \"duration\": 10,\n    \"seats\": 1,\n    \"image\": \"dining\",\n    \"atkaPrice\": 0\n  },\n  {\n    \"id\": \"karpit_irodai_szek\",\n    \"label\": \"Kárpitozott irodai szék\",\n    \"price\": 4500,\n    \"duration\": 15,\n    \"seats\": 1,\n    \"image\": \"office\",\n    \"atkaPrice\": 0\n  },\n  {\n    \"id\": \"matrac_egyagyas_a\",\n    \"label\": \"Egyágyas matrac · egy oldal\",\n    \"price\": 9000,\n    \"duration\": 25,\n    \"sides\": 1,\n    \"image\": \"mattress\",\n    \"wetPrice\": 6000,\n    \"framePrice\": 6000\n  },\n  {\n    \"id\": \"matrac_egyagyas_ab\",\n    \"label\": \"Egyágyas matrac · két oldal\",\n    \"price\": 14000,\n    \"duration\": 40,\n    \"sides\": 2,\n    \"image\": \"mattress\",\n    \"wetPrice\": 6000,\n    \"framePrice\": 6000\n  },\n  {\n    \"id\": \"matrac_francia_a\",\n    \"label\": \"Franciaágy matrac · egy oldal\",\n    \"price\": 14000,\n    \"duration\": 35,\n    \"sides\": 1,\n    \"image\": \"mattress\",\n    \"wetPrice\": 6000,\n    \"framePrice\": 9000\n  },\n  {\n    \"id\": \"matrac_francia_ab\",\n    \"label\": \"Franciaágy matrac · két oldal\",\n    \"price\": 19500,\n    \"duration\": 55,\n    \"sides\": 2,\n    \"image\": \"mattress\",\n    \"wetPrice\": 6000,\n    \"framePrice\": 9000\n  },\n  {\n    \"id\": \"matrac_gyerek_a\",\n    \"label\": \"Gyerekmatrac · egy oldal\",\n    \"price\": 6000,\n    \"duration\": 15,\n    \"sides\": 1,\n    \"image\": \"mattress\",\n    \"wetPrice\": 3500,\n    \"framePrice\": 4500\n  },\n  {\n    \"id\": \"matrac_gyerek_ab\",\n    \"label\": \"Gyerekmatrac · két oldal\",\n    \"price\": 8000,\n    \"duration\": 25,\n    \"sides\": 2,\n    \"image\": \"mattress\",\n    \"wetPrice\": 3500,\n    \"framePrice\": 4500\n  },\n  {\n    \"id\": \"matrac_kisagy_a\",\n    \"label\": \"Kiságy matrac · egy oldal\",\n    \"price\": 4500,\n    \"duration\": 10,\n    \"sides\": 1,\n    \"image\": \"mattress\",\n    \"wetPrice\": 3500,\n    \"framePrice\": 4500\n  },\n  {\n    \"id\": \"matrac_kisagy_ab\",\n    \"label\": \"Kiságy matrac · két oldal\",\n    \"price\": 7000,\n    \"duration\": 20,\n    \"sides\": 2,\n    \"image\": \"mattress\",\n    \"wetPrice\": 3500,\n    \"framePrice\": 4500\n  }\n];"
+        },
+        {
+          "offset": 5088,
+          "before": "  const extras = {\r\n    karpit_folteltavolitas:{label:'Extra folteltávolítás',price:2000,basis:'seats',duration:10,unit:'ülőhely'},\r\n    karpit_impregnalas:{label:'Impregnálás',price:3000,basis:'upholstery',duration:15,unit:'bútor'},\r\n    karpit_szagtalanitas:{label:'Szagtalanítás',price:2500,basis:'upholstery',duration:10,unit:'bútor'},\r\n    matrac_nedves_tisztitas:{label:'Folteltávolítás és fertőtlenítő nedves matractisztítás',price:5000,basis:'sides',duration:20,unit:'oldal'},\r\n    matrac_agykeret:{label:'Ágykeret, fejtámla tisztítása',price:3000,basis:'mattresses',duration:15,unit:'matrac'}\r\n  };",
+          "after": "  const extras = {\n  \"karpit_folteltavolitas\": {\n    \"label\": \"Extra folteltávolítás\",\n    \"price\": 2500,\n    \"basis\": \"seats\",\n    \"duration\": 10,\n    \"unit\": \"ülőhely\"\n  },\n  \"karpit_impregnalas\": {\n    \"label\": \"Impregnálás\",\n    \"price\": 3500,\n    \"basis\": \"upholstery\",\n    \"duration\": 15,\n    \"unit\": \"bútor\"\n  },\n  \"karpit_szagtalanitas\": {\n    \"label\": \"Szagtalanítás\",\n    \"price\": 3000,\n    \"basis\": \"upholstery\",\n    \"duration\": 10,\n    \"unit\": \"bútor\"\n  },\n  \"matrac_nedves_tisztitas\": {\n    \"label\": \"Folteltávolítás és fertőtlenítő nedves matractisztítás\",\n    \"price\": 3500,\n    \"basis\": \"sides\",\n    \"duration\": 20,\n    \"unit\": \"oldal\",\n    \"priceKey\": \"wetPrice\"\n  },\n  \"matrac_agykeret\": {\n    \"label\": \"Ágykeret, fejtámla tisztítása\",\n    \"price\": 4500,\n    \"basis\": \"mattresses\",\n    \"duration\": 15,\n    \"unit\": \"matrac\",\n    \"priceKey\": \"framePrice\"\n  }\n};"
+        },
+        {
+          "offset": 9347,
+          "before": "5000*i.count",
+          "after": "p[x==='atkairtas'?'atkaPrice':'agyazhatoPrice']*i.count"
+        },
+        {
+          "offset": 9458,
+          "before": "s.extras.forEach(x=>{const e=extras[x],n=counts[e.basis];add(e.label,e.price*n);duration+=e.duration*(e.basis==='seats'?Math.ceil(n/2):n);});",
+          "after": "s.extras.forEach(x=>{const e=extras[x];if(e.priceKey){s.items.filter(i=>i.id.startsWith('matrac_')).forEach(i=>{const p=byId[i.id],n=i.count*(e.basis==='sides'?p.sides:1);add(e.label+' · '+p.label,p[e.priceKey]*n);duration+=e.duration*n;});}else{const n=counts[e.basis];add(e.label,e.price*n);duration+=e.duration*(e.basis==='seats'?Math.ceil(n/2):n);}});"
+        },
+        {
+          "offset": 13450,
+          "before": "Atkairtás<small>+ ${money(5000)} / db",
+          "after": "Atkairtás<small>+ ${money(p.atkaPrice)} / db"
+        },
+        {
+          "offset": 13607,
+          "before": "Ágyazható felület tisztítása<small>+ ${money(5000)} / db",
+          "after": "Ágyazható felület tisztítása<small>+ ${money(p.agyazhatoPrice)} / db"
+        },
+        {
+          "offset": 14162,
+          "before": "${money(e.price)} / ${e.unit}",
+          "after": "${money(e.price)}${e.priceKey?(english?' and up':'-tól'):''} / ${e.unit}"
+        },
+        {
+          "offset": 18677,
+          "before": "c.checked=!!i?.upsells.includes(c.dataset.itemExtra);",
+          "after": "c.checked=!!i?.upsells.includes(c.dataset.itemExtra);c.closest('label').querySelector('small').textContent='+ '+money(p[c.dataset.itemExtra==='atkairtas'?'atkaPrice':'agyazhatoPrice'])+' / db';"
+        },
+        {
+          "offset": 14441,
+          "before": "Nedves matractisztításnál a száradás körülbelül 24 óra.",
+          "after": "${english?'Wet cleaning usually needs 6–12 hours to dry. Use furniture only when fully dry. Mattress extras depend on the type and treated sides; the summary shows the exact amount.':'Nedves tisztítás után a száradás általában 6–12 óra. Csak teljes száradás után használd a bútort. A matrac kiegészítőinek pontos díja a típustól és a kezelt oldalak számától függ; az összesítőben látod.'}"
+        },
+        {
+          "offset": 10400,
+          "before": "  function encode(input){",
+          "after": "  function assertTariff(pricing,upsells,discounts,input){\n    const s=validate(input),message='Az online díjak időközben változtak. Kérjük, állítsd össze újra a tételeket a megrendelőben.';\n    for(const i of s.items){const sep=i.id.indexOf('_'),p=pricing[i.id.slice(0,sep)]?.[i.id.slice(sep+1)],expected=byId[i.id];\n      assert(p&&['price','duration','sides'].every(k=>expected[k]===undefined||p[k]===expected[k]),message);\n      for(const x of i.upsells){const k=x==='atkairtas'?'atkaPrice':'agyazhatoPrice';assert(p[k]===expected[k],message);}\n      for(const x of s.extras){const e=extras[x];if(e.priceKey&&i.id.startsWith('matrac_'))assert(p[e.priceKey]===expected[e.priceKey],message);}\n    }\n    if(s.travelZone)assert(pricing.travelZones[s.travelZone]?.fee===zones[s.travelZone].fee,message);\n    assert(discounts.combo.percent===10&&discounts.quantity3.percent===5,message);\n    for(const x of s.extras){const sep=x.indexOf('_'),a=upsells[x.slice(0,sep)]?.[x.slice(sep+1)],e=extras[x];\n      assert(a&&a.duration===e.duration&&a.priceType===(e.basis==='seats'?'perSeat':e.basis==='sides'?'perSide':'perItem')&&(e.priceKey?a.priceKey===e.priceKey:a.price===e.price),message);\n    }\n    return true;\n  }\n  function encode(input){"
+        },
+        {
+          "offset": 22783,
+          "before": "excluded,validate,calculate,encode",
+          "after": "excluded,validate,calculate,assertTariff,encode"
+        }
+      ]
+    },
+    "studio/booking-handoff.js": {
+      "beforeSha256": "e1640e2de2eb117af9b0c9027ec909fb075593851e0875007dfb95a4ecd3a47f",
+      "afterSha256": "fc5d830a279fdd76e715fed317dd4cffcf3069b8d1c85757d8d5fcc33943b656",
+      "edits": [
+        {
+          "offset": 3935,
+          "before": "        // Check tariff agreement before mutating any existing cart.\n        for(const item of selection.items){const sep=item.id.indexOf('_'),category=item.id.slice(0,sep),id=item.id.slice(sep+1),p=PRICING[category]?.[id],expected=api.catalog.find(x=>x.id===item.id);if(!p||p.price!==expected.price||p.duration!==expected.duration||(expected.sides&&p.sides!==expected.sides)||item.upsells.some(x=>(x==='atkairtas'?p.atkaPrice:p.agyazhatoPrice)!==5000))throw Error('Az online díjak időközben változtak. Kérjük, állítsd össze újra a tételeket a megrendelőben.');}\n        if(selection.travelZone&&PRICING.travelZones[selection.travelZone]?.fee!==api.zones[selection.travelZone].fee)throw Error('A kiszállási díj időközben változott.');\n        if(typeof UPSELLS==='undefined'||typeof DISCOUNTS==='undefined'||DISCOUNTS.combo.percent!==10||DISCOUNTS.quantity3.percent!==5)throw Error('A kedvezmények időközben változtak.');\n        for(const fullId of selection.extras){const sep=fullId.indexOf('_'),actual=UPSELLS[fullId.slice(0,sep)]?.[fullId.slice(sep+1)],expected=api.extras[fullId],basis=expected.basis==='seats'?'perSeat':expected.basis==='sides'?'perSide':'perItem';if(!actual||actual.price!==expected.price||actual.duration!==expected.duration||actual.priceType!==basis)throw Error('A kiegészítések díjai időközben változtak.');}\n",
+          "after": "        // Validate every tariff before mutating the existing cart.\n        api.assertTariff(PRICING, UPSELLS, DISCOUNTS, selection);\n"
+        },
+        {
+          "offset": 4504,
+          "before": "toggleItemUpsell(item.id,extra,5000);",
+          "after": "toggleItemUpsell(item.id,extra);"
+        },
+        {
+          "offset": 4733,
+          "before": "        selection.extras.forEach(fullId=>{const sep=fullId.indexOf('_'),category=fullId.slice(0,sep),id=fullId.slice(sep+1);toggleGlobalUpsell(fullId,category,id);const box=[...document.querySelectorAll('#upsellOptions input')].find(c=>(c.getAttribute('onchange')||'').includes(\"'\"+fullId+\"'\"));if(box)box.checked=true;});",
+          "after": "        selection.extras.forEach(fullId=>{const sep=fullId.indexOf('_'),category=fullId.slice(0,sep),id=fullId.slice(sep+1);if(category==='matrac'){selection.items.filter(i=>i.id.startsWith('matrac_')).forEach(item=>{toggleItemUpsell(item.id,id);const wrap=document.getElementById('upsell-'+item.id);const box=[...wrap.querySelectorAll('input')].find(c=>(c.getAttribute('onchange')||'').includes(\"'\"+id+\"'\"));if(box)box.checked=true;});}else{toggleGlobalUpsell(fullId,category,id);const box=[...document.querySelectorAll('#upsellOptions input')].find(c=>(c.getAttribute('onchange')||'').includes(\"'\"+fullId+\"'\"));if(box)box.checked=true;}});"
+        }
+      ]
+    },
+    "karpittisztitas-gyor.html": {
+      "beforeSha256": "2136f2e46a1150dba580feaa267642d61f3018cd802b54547f1fd65caeda3f9f",
+      "afterSha256": "56c56cafb3f4c76d982e71f0f32c9551efec28c866c082f0e81aac53fb5acbef",
+      "edits": [
+        {
+          "offset": 6164,
+          "before": "Az ipari extrakciós technológiánknak köszönhetően a száradási idő mindössze 2-4 óra, szemben a hagyományos módszerek 12-24 órájával. Ennyi idő után a bútor teljes mértékben használható.",
+          "after": "Nedves tisztítás után a száradás általában 6–12 óra. Az anyag, a töltet, a hőmérséklet, a páratartalom és a szellőzés befolyásolja az időt. Csak teljes száradás után használd és takard le a bútort."
+        },
+        {
+          "offset": 106456,
+          "before": "Az ipari elszívó technológiánknak köszönhetően a száradási idő minimális. Normál körülmények\n                        között 4-6 óra, de fűtött lakásban ez az idő 3-4 órára is csökkenhet.",
+          "after": "Nedves tisztítás után a száradás általában 6–12 óra. Az anyag, a töltet, a hőmérséklet, a páratartalom és a szellőzés befolyásolja az időt. Csak teljes száradás után használd és takard le a bútort."
+        },
+        {
+          "offset": 28243,
+          "before": "azonnali száradási idővel",
+          "after": "általában 6–12 órás száradási idővel"
+        },
+        {
+          "offset": 105937,
+          "before": "Abszolút! Ez a technológiánk alapköve. Nem használunk agresszív vegyszereket, így a tisztítás után azonnal, biztonsággal használhatod a bútorokat. Nincs bőrirritáció, nincs vegyszergőz.",
+          "after": "A tisztíthatóságot a szövet és a gyártói útmutató alapján ellenőrizzük. Nedves tisztítás után a száradás általában 6–12 óra. Az anyag, a töltet, a hőmérséklet, a páratartalom és a szellőzés befolyásolja az időt. Csak teljes száradás után használd és takard le a bútort."
+        },
+        {
+          "offset": 83174,
+          "before": "Nem kell egész nap várnod a \"szemlét\". Precíz érkezés, hamarosan elérhető online foglalási rendszerrel a nap 24 órájában.",
+          "after": "Állítsd össze a bútorokat az online kalkulátorban, majd a megrendelőben válassz elérhető időpontot. Telefonon is segítünk: 06 70 240 8141. A kalkuláció önmagában még nem foglalás."
+        },
+        {
+          "offset": 104726,
+          "before": "<p>Jelenleg telefonon a <strong>06 70 240 8141</strong>-es számon tudunk egyeztetni, de hamarosan\n                        elérhető lesz <strong>AI-vezérelt Online Foglalási Rendszerünk</strong>, ahol a mesterséges intelligencia segít másodpercek alatt megtalálni a neked legmegfelelőbb időpontot, várakozás nélkül.</p>",
+          "after": "<p>Állítsd össze a bútorokat az online kalkulátorban, majd a megrendelőben válassz elérhető időpontot. Telefonon is segítünk: 06 70 240 8141. A kalkuláció önmagában még nem foglalás.</p>"
+        },
+        {
+          "offset": 98388,
+          "before": "<p>Kárpittisztítással kapcsolatban árajánlatot és információt kizárólag telefonos megkeresés alapján tudunk adni. A kárpittisztítás árak meghatározása során kollégánk célirányos kérdések alapján kalkulál hozzávetőleges árat — végleges árat a helyszínen tudunk kalkulálni! Amennyiben a megrendelést követően a kárpittisztítás 48 órával előbb nem kerül lemondásra, vagy bármilyen okból kifolyólag a tisztítás nem kivitelezhető, úgy a kiszállás teljes egészében, valamint a megbeszélt kárpittisztítás árának az 50%-a kerül kiszámlázásra. A kárpittisztítás megrendelését telefonos megbeszélés után, kizárólag SMS formájában adhatod le! Az SMS-nek tartalmaznia kell a telefonon megbeszélt tisztítás időpontját, a megrendelő nevét és pontos címét.</p>",
+          "after": "<p>Állítsd össze a bútorokat az online kalkulátorban, majd a megrendelőben válassz elérhető időpontot. Telefonon is segítünk: 06 70 240 8141. A kalkuláció önmagában még nem foglalás. Az online összeg a megadott tételek alapján számolt tájékoztató ár; a végleges árat az anyag, méret és állapot alapján, a munka előtt egyeztetjük. Telefonon egyeztetett megrendelést SMS-ben is leadhatsz a megbeszélt időponttal, neveddel és pontos címeddel.</p><p>A 48 órán belül lemondott megrendelésnél a kiszállás teljes díja és a megbeszélt tisztítási díj 50%-a kerül felszámításra. Ha csak a helyszínen derül ki, hogy az ANDANTE vagy vízre érzékeny bútor az alkalmazott eljárással nem tisztítható, a tisztítási díj 50%-a, legfeljebb 30 000 Ft kapacitás-foglalási díj számítható fel. Például 40 000 Ft tisztítási díjnál ez 20 000 Ft; 80 000 Ft-nál a felső határ miatt 30 000 Ft.</p>"
+        },
+        {
+          "offset": 48552,
+          "before": "Amennyiben a helyszínen derül ki, hogy a bútor anyaga az alkalmazott technológiával nem tisztítható, a lefoglalt időpont és kiszállás kiesése miatt a szolgáltatás díjának 50%-a kapacitás-foglalási díjként felszámításra kerülhet.",
+          "after": "Ha csak a helyszínen derül ki, hogy az ANDANTE vagy vízre érzékeny bútor az alkalmazott eljárással nem tisztítható, a tisztítási díj 50%-a, legfeljebb 30 000 Ft kapacitás-foglalási díj számítható fel."
+        },
+        {
+          "offset": 119252,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "en/upholstery-cleaning-gyor.html": {
+      "beforeSha256": "b5e6593edc4e0e07c58d831d11de6bfdf43ec6147e0a72e1b71c37abd9dd2323",
+      "afterSha256": "ea88d8cb9b254e48c6ade817ab03c63be6d5388a451a0b60e6668fda09de047b",
+      "edits": [
+        {
+          "offset": 6616,
+          "before": "Thanks to our industrial hot water extraction technology, drying takes just 2-4 hours, compared with 12-24 hours for traditional methods. After that, your furniture is fully ready to use.",
+          "after": "After wet cleaning, drying usually takes 6–12 hours. The fabric, filling, temperature, humidity and ventilation affect the time needed. Use or cover the furniture only when it is fully dry."
+        },
+        {
+          "offset": 100805,
+          "before": "Our industrial extraction technology keeps drying time to a minimum. In normal conditions it takes 4-6 hours, but in a heated home this can fall to 3-4 hours.",
+          "after": "After wet cleaning, drying usually takes 6–12 hours. The fabric, filling, temperature, humidity and ventilation affect the time needed. Use or cover the furniture only when it is fully dry."
+        },
+        {
+          "offset": 26579,
+          "before": "with instant drying time",
+          "after": "with a usual drying time of 6–12 hours"
+        },
+        {
+          "offset": 100292,
+          "before": "Absolutely! This is the cornerstone of our technology. We do not use aggressive chemicals, so you can use your furniture immediately and safely after cleaning. No skin irritation, no chemical fumes.",
+          "after": "We assess suitability using the fabric and manufacturer’s care instructions. After wet cleaning, drying usually takes 6–12 hours. The fabric, filling, temperature, humidity and ventilation affect the time needed. Use or cover the furniture only when it is fully dry."
+        },
+        {
+          "offset": 79400,
+          "before": "No need to wait all day for the \"survey\". Punctual arrival, with a 24/7 online booking system coming soon.",
+          "after": "Choose your furniture in the online calculator, then select an available appointment in the booking form. You can also call us on 06 70 240 8141. A price calculation alone is not a booking."
+        },
+        {
+          "offset": 99211,
+          "before": "<p>For now, you can reach us by phone on <strong>06 70 240 8141</strong>, but our <strong>AI-powered Online Booking System</strong> will soon be available, where artificial intelligence helps you find the most suitable appointment in seconds, with no waiting.</p>",
+          "after": "<p>Choose your furniture in the online calculator, then select an available appointment in the booking form. You can also call us on 06 70 240 8141. A price calculation alone is not a booking.</p>"
+        },
+        {
+          "offset": 93553,
+          "before": "<p>For upholstery cleaning, we can only provide quotes and information in response to a phone enquiry. When determining upholstery cleaning prices, our colleague calculates an approximate price based on targeted questions — the final price can only be calculated on site! If, after placing the order, the upholstery cleaning is not cancelled 48 hours in advance, or the cleaning cannot be carried out for any reason, the full call-out plus 50% of the agreed upholstery cleaning price will be invoiced. You can place your upholstery cleaning order after a phone discussion, by SMS only! The SMS must include the cleaning date agreed by phone, the customer's name and exact address.</p>",
+          "after": "<p>Choose your furniture in the online calculator, then select an available appointment in the booking form. You can also call us on 06 70 240 8141. A price calculation alone is not a booking. The online amount is an estimate based on your selection; we agree the final price before work begins, considering the material, size and condition. Following a phone discussion, you can also send your order by SMS with the agreed time, your name and address.</p><p>For cancellations within 48 hours, the full call-out fee and 50% of the agreed cleaning price are charged. If we discover only on arrival that ANDANTE furniture or a water-sensitive fabric cannot be cleaned with the selected method, a capacity reservation fee of 50% of the cleaning price, capped at 30,000 HUF, may apply. For example, a cleaning price of 40,000 HUF gives a fee of 20,000 HUF; for 80,000 HUF, the cap limits it to 30,000 HUF.</p>"
+        },
+        {
+          "offset": 46235,
+          "before": "If it only turns out on site that the furniture material cannot be cleaned with the technology used, 50% of the service fee may be charged as a capacity booking fee because of the lost appointment and call-out.",
+          "after": "If we discover only on arrival that ANDANTE furniture or a water-sensitive fabric cannot be cleaned with the selected method, a capacity reservation fee of 50% of the cleaning price, capped at 30,000 HUF, may apply."
+        },
+        {
+          "offset": 113637,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "index.html": {
+      "beforeSha256": "554e66c691074c41ef86e45a18aa9e70b5aca203cf9d78a4549e3c54a65dbf45",
+      "afterSha256": "75199ffd06fdb3e76009ae3240956574959adb3bc91f29634a8257d723665a0a",
+      "edits": [
+        {
+          "offset": 105432,
+          "before": "a helyszíni kiszállás díjának <strong>50%-a (legfeljebb 30.000 Ft)</strong>",
+          "after": "a tisztítási díj <strong>50%-a (legfeljebb 30 000 Ft)</strong>"
+        },
+        {
+          "offset": 114786,
+          "before": "<li>Ha a helyszínen derül ki, hogy a bútor anyaga az alkalmazott technológiával nem tisztítható, a kiszállás díja és a lefoglalt időpont kiesése miatt <strong>a szolgáltatás díjának 50%-a kapacitás-foglalási díjként felszámításra kerülhet</strong>.</li>",
+          "after": "<li>Ha csak a helyszínen derül ki, hogy az ANDANTE vagy vízre érzékeny bútor az alkalmazott eljárással nem tisztítható, a tisztítási díj 50%-a, legfeljebb 30 000 Ft kapacitás-foglalási díj számítható fel.</li>"
+        },
+        {
+          "offset": 71568,
+          "before": "Gyors száradás, azonnali használat",
+          "after": "Nedves tisztítás után általában 6–12 óra száradás"
+        },
+        {
+          "offset": 73627,
+          "before": "A bútor 4-6 óra alatt szárad",
+          "after": "A bútor általában 6–12 óra alatt szárad; csak teljes száradás után használd"
+        },
+        {
+          "offset": 107933,
+          "before": "ui/booking-live.js?v=c29fbe742941",
+          "after": "ui/booking-live.js?v=1655f39a8e43"
+        },
+        {
+          "offset": 116084,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        },
+        {
+          "offset": 116151,
+          "before": "studio/booking-handoff.js?v=e1640e2de2eb",
+          "after": "studio/booking-handoff.js?v=fc5d830a279f"
+        }
+      ]
+    },
+    "en/index.html": {
+      "beforeSha256": "ae51b8abfcb723f7f02ade745e55946121972c71020bb7356ef7b75e4a7745b4",
+      "afterSha256": "dcdd96942a0f9bc2e22993b20a173a71314f881638b0e0fee0b8983b577de3de",
+      "edits": [
+        {
+          "offset": 102543,
+          "before": "50% of the call-out fee (up to 30,000 HUF)",
+          "after": "50% of the cleaning price (up to 30,000 HUF)"
+        },
+        {
+          "offset": 111500,
+          "before": "<li>If we discover on arrival that the furniture's fabric cannot be cleaned using our technology, <strong>50% of the service fee may be charged as a capacity reservation fee</strong> to cover the call-out fee and the lost booking slot.</li>",
+          "after": "<li>If we discover only on arrival that ANDANTE furniture or a water-sensitive fabric cannot be cleaned with the selected method, a capacity reservation fee of 50% of the cleaning price, capped at 30,000 HUF, may apply.</li>"
+        },
+        {
+          "offset": 69864,
+          "before": "Fast drying, ready for immediate use",
+          "after": "Wet cleaning: usually 6–12 hours to dry"
+        },
+        {
+          "offset": 71750,
+          "before": " removes 99,9% of dirt, dust mites and allergens, even from the deepest layers of upholstery. Furniture dries in 4-6 hours, and we leave ",
+          "after": " removes 99,9% of dirt, dust mites and allergens, even from the deepest layers of upholstery. Furniture usually dries in 6–12 hours, and we leave "
+        },
+        {
+          "offset": 104807,
+          "before": "ui/booking-live-en.js?v=e1c01193c4ba",
+          "after": "ui/booking-live-en.js?v=527ec8f05779"
+        },
+        {
+          "offset": 112736,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        },
+        {
+          "offset": 112806,
+          "before": "studio/booking-handoff.js?v=e1640e2de2eb",
+          "after": "studio/booking-handoff.js?v=fc5d830a279f"
+        }
+      ]
+    },
+    "matractisztitas-gyor.html": {
+      "beforeSha256": "5578675ce64fc0c9ea2aeda0bd7d57fe5f24159e1186452c62283ae60a6f22b7",
+      "afterSha256": "6cfb22d9d94721070c5959fc09f1df7e60e5883196a57efbdc3edab6b25d64f6",
+      "edits": [
+        {
+          "offset": 2986,
+          "before": "Speciális elszívó technológiánknak köszönhetően a száradási idő minimális. Száraz tisztítás esetén azonnal, nedves mélytisztítás esetén (hőmérséklettől függően) 4-24 órán belül használható az ágy.",
+          "after": "Száraz kezelés után a matrac használható. Nedves tisztítás után a száradás általában 6–12 óra. Az anyag, a töltet, a hőmérséklet, a páratartalom és a szellőzés befolyásolja az időt. Csak teljes száradás után használd és takard le a bútort."
+        },
+        {
+          "offset": 31686,
+          "before": "<p data-legacy-style=\"1\"><strong>Higiéniai mélytisztítás (folteltávolítás):</strong> Makacs\n                    szennyeződések, biológiai foltok és szagok esetén speciális, nedves fertőtlenítő eljárást\n                    alkalmazunk (+6000 Ft / fekvőfelület). Száradási idő kb. 24 óra!</p>",
+          "after": "<p data-legacy-style=\"1\"><strong>Nedves folteltávolítás:</strong> Külön választható kezelés. Egyágyas és franciaágy-matracnál +6 000 Ft kezelt oldalanként; gyerek- és kiságymatracnál +3 500 Ft oldalanként. Két kezelt oldalnál a felár kétszer számítandó. Nedves tisztítás után a száradás általában 6–12 óra. Az anyag, a töltet, a hőmérséklet, a páratartalom és a szellőzés befolyásolja az időt. Csak teljes száradás után használd és takard le a bútort.</p>"
+        }
+      ]
+    },
+    "en/mattress-cleaning-gyor.html": {
+      "beforeSha256": "a8e7a4ccdaea043c055839fb9f43f24064fec80bd0aedd87b54ebdb3c31d2bac",
+      "afterSha256": "167f1c65981f5e6b2a9c8338ec9b6302f6b9218f2a647010ed874ff58ee2400b",
+      "edits": [
+        {
+          "offset": 3115,
+          "before": "Our specialist extraction technology keeps drying time to a minimum. The bed can be used immediately after dry cleaning, or within 4-24 hours after wet deep cleaning, depending on the temperature.",
+          "after": "The mattress can be used after dry treatment. After wet cleaning, drying usually takes 6–12 hours. The fabric, filling, temperature, humidity and ventilation affect the time needed. Use or cover the furniture only when it is fully dry."
+        },
+        {
+          "offset": 29110,
+          "before": "<p data-legacy-style=\"1\"><strong>Hygienic deep cleaning (stain removal):</strong> For stubborn dirt, biological stains and odours, we use a specialist wet sanitising process (+6000 HUF / sleeping surface). Drying time is approximately 24 hours!</p>",
+          "after": "<p data-legacy-style=\"1\"><strong>Wet stain treatment:</strong> An optional service. Single and double mattresses: +6,000 HUF per treated side; children’s and cot mattresses: +3,500 HUF per side. Treating both sides doubles this extra charge. After wet cleaning, drying usually takes 6–12 hours. The fabric, filling, temperature, humidity and ventilation affect the time needed. Use or cover the furniture only when it is fully dry.</p>"
+        }
+      ]
+    },
+    "karpittisztitas-badacsony.html": {
+      "beforeSha256": "4969a17247f70f2b97660451fc6f248627d13f40fabda035a239dd467e3bdd16",
+      "afterSha256": "f56a03424735588f5c2ba89d4a5aa25cf5d4fdec818aadf3f2e8a9fc8395740b",
+      "edits": [
+        {
+          "offset": 148175,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "karpittisztitas-balatonalmadi.html": {
+      "beforeSha256": "0612c922790abff7c81786ebb41ddf51bd0ffe13713333487c58dec5bab94591",
+      "afterSha256": "4e40bb10a3fc803221e885d58400c2a2516edb33577a1b849ea4b80300abb464",
+      "edits": [
+        {
+          "offset": 148709,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "karpittisztitas-balatonboglar.html": {
+      "beforeSha256": "85630e008bbe96355cda4be2ceb475f12f3e9853f0c34049330f64c1670726a9",
+      "afterSha256": "5f8003a7b0984a58a4eb944b8c393a9f924a3f6684945d48aab7d2f2df9d5320",
+      "edits": [
+        {
+          "offset": 148728,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "karpittisztitas-balatonfoldvar.html": {
+      "beforeSha256": "17fc199966c8c79c9179541e6308d83230c0bddb53992257e2941019768e28a2",
+      "afterSha256": "4f179f9524cf52cd439b2ec58f4b50f0019c8055d73d484842311a6f016f30d6",
+      "edits": [
+        {
+          "offset": 148805,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "karpittisztitas-balatonfured.html": {
+      "beforeSha256": "62afc2cdef2fb841fab43b4bf7828d50d863d6ede4bf667bc0b10fe4671d4a1c",
+      "afterSha256": "ba3777ccef0386723a63e394b99a0d62760631dbe6c3574257b5f0de1054defa",
+      "edits": [
+        {
+          "offset": 148678,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "karpittisztitas-balatonfuzfo.html": {
+      "beforeSha256": "216a22e689d0044f7a1a945afe2e2f628c2a026a8d594b411434a6462268cadd",
+      "afterSha256": "7608c2e1674f13e6b57a82a8233ee6c65dcbaccb8cc73df37490bd76ace71015",
+      "edits": [
+        {
+          "offset": 148485,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "karpittisztitas-balatonkenese.html": {
+      "beforeSha256": "3b10679c103d9c57a5811598ae62c25c058f52b47b5c70531de4743c00d20d9a",
+      "afterSha256": "ee812ab92c125047d373670f2c4b869f0928ad56fb0dfef35363fce7120e28a7",
+      "edits": [
+        {
+          "offset": 148531,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "karpittisztitas-balatonlelle.html": {
+      "beforeSha256": "7cb477e391de0d505b2aac7c3921b8bd16570b130b4bf58cec04a0bc7683d5df",
+      "afterSha256": "1b54b3020c3f6aab0ca1e5e9033c3c62337690d56cf80524583cb9065a1a170a",
+      "edits": [
+        {
+          "offset": 148608,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "karpittisztitas-balatonszemes.html": {
+      "beforeSha256": "cca9a6c2fb2c90bb56b65cdfa65f0adfef14db53166c7b1f0130a68cb65b832e",
+      "afterSha256": "d2aaf0d505c4d2ca91fdc759dad7980e939979e65ac3e3e565e5d5a1d53ed6e1",
+      "edits": [
+        {
+          "offset": 148446,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "karpittisztitas-fonyod.html": {
+      "beforeSha256": "61abad8c19b94db58f83ff352006e25b49668cd7d0d0e7edd74bd1ccb52fd7ac",
+      "afterSha256": "a05dd4431e5ef5120ceb587fc9472a9f56139c6ee80d983488c959166f865227",
+      "edits": [
+        {
+          "offset": 147998,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "karpittisztitas-heviz.html": {
+      "beforeSha256": "53f4aac853a315cb9582ba4d728a344718ce67bc69bb8cbb11891eb4fcd1105c",
+      "afterSha256": "b6e44e4073f433a49a574901eeb0513d11d6b5bc707a28a8c1428c4de4437493",
+      "edits": [
+        {
+          "offset": 147994,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "karpittisztitas-keszthely.html": {
+      "beforeSha256": "bd11a43bfaff71fe44ef09225ca8c107c5dda4517d6906db0bf7b31a1b22a39a",
+      "afterSha256": "76eb397d5f9f971ad260703eda3709940b4ea96a19bf87158791e7da99fbbcaa",
+      "edits": [
+        {
+          "offset": 148066,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "karpittisztitas-komarom.html": {
+      "beforeSha256": "4a5e46aebe86b10d45e0da36a0c1d8f124601466598fcada0198c86052d92ce8",
+      "afterSha256": "f1240ab41dab3ad6a09d48fe5512310dbbc0d62654c48bbf03eb0aae0167161d",
+      "edits": [
+        {
+          "offset": 116161,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "karpittisztitas-mosonmagyarovar.html": {
+      "beforeSha256": "9c2c9cd6415e5a8423c57bc56540439430ec97990b7c03130229176cbab6e0a9",
+      "afterSha256": "635981c377c4d3691c696ea440bc12bd57bf3e15c0bc0af91546f33f22923931",
+      "edits": [
+        {
+          "offset": 116739,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "karpittisztitas-papa.html": {
+      "beforeSha256": "965c706ddc96d54e712855d179630e9d7cb1cc257d8b790e364b0178d21591b6",
+      "afterSha256": "18d2189f5ec0e50b777080f57cc32643fadb900a52150c9005e9826e567a942d",
+      "edits": [
+        {
+          "offset": 115885,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "karpittisztitas-revfulop.html": {
+      "beforeSha256": "404eb97692bafa8ee0a35b785c375f91dae8eef6e2afa8a5b7956b00a52eb2d6",
+      "afterSha256": "93c2ef63e5b068e010079a12b9d9c56ceef5ddf89ae54f9a21d57e4d2805922a",
+      "edits": [
+        {
+          "offset": 148285,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "karpittisztitas-siofok.html": {
+      "beforeSha256": "bc60e6e1c58c67319dd2b9e19ba9e2d8603a9420369614e00d27b4422ec78e18",
+      "afterSha256": "87c96b95b225565c1a50cf304900fa174bd91a62c35dd0d36d575b85043b64e3",
+      "edits": [
+        {
+          "offset": 148052,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "karpittisztitas-sopron.html": {
+      "beforeSha256": "cdd4af137be123b7976a493d4be328f647a0c8490a2c63a3e413e09400e25360",
+      "afterSha256": "f63b1efaf5858884773417272d31fa973bfcc391e14278dbd47c79154729ac8b",
+      "edits": [
+        {
+          "offset": 116218,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "karpittisztitas-szombathely.html": {
+      "beforeSha256": "2ee72244b6417e012a964f5307e9212138b7f2b9dbc0034701a068b716366500",
+      "afterSha256": "ba73d12f7b818fb0ff2aae7f556f0ccd75ac2e8035cc315c5a2b7c3bb9c3abb8",
+      "edits": [
+        {
+          "offset": 116342,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "karpittisztitas-tapolca.html": {
+      "beforeSha256": "803db446557b53f7ee278a5ed41552207fba7ccc103e7b51feddd9bae438dc93",
+      "afterSha256": "abad6763f604f9c11fcbaf5a7de544b040d269044fe851849b90279b6a9fd9f7",
+      "edits": [
+        {
+          "offset": 147981,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "karpittisztitas-tata.html": {
+      "beforeSha256": "2044d571e99f7cff33da7c36f92de7e475c5cc5057b8ad4051a9338e857eb1b1",
+      "afterSha256": "83559adcd0471f3550227bbbd96029c7d2450b195603b5d960beb82d33f85db4",
+      "edits": [
+        {
+          "offset": 115848,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "karpittisztitas-tatabanya.html": {
+      "beforeSha256": "9b2c887fe39c52db434b716bfec7cf22ce6d23d64e8344f635250dd864642d22",
+      "afterSha256": "30649b544db7d54729487b9ef68cb5f3d35a7fe4300f25eee375a76760b6a71e",
+      "edits": [
+        {
+          "offset": 116010,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "karpittisztitas-tihany.html": {
+      "beforeSha256": "7797ee0323eddac68f59d474d79be145e8eacb9e119cb74d4c77860b20cb1b3a",
+      "afterSha256": "5eed103deced7bae364e22dc19b2c9739cfc54f1b9e55d65a92840ee4c7ff1f4",
+      "edits": [
+        {
+          "offset": 147832,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "karpittisztitas-veszprem.html": {
+      "beforeSha256": "581d5c2a25cf20408c5dcf9ad5ab12157d4e4b9c06f49ae86bd80afa08f4d13b",
+      "afterSha256": "7d60196704791bfbde19a2b5340398b55becad4065fe29728499379a0cb1a8d0",
+      "edits": [
+        {
+          "offset": 116091,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "karpittisztitas-zamardi.html": {
+      "beforeSha256": "a58214018c73f0532cfead9b9929a151205f1e4b87860dfede9763341137507d",
+      "afterSha256": "9f05af13e1e5d87fee95654c685189a57935e6b9a6eabda3265c55e543294554",
+      "edits": [
+        {
+          "offset": 147962,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "en/upholstery-cleaning-badacsony.html": {
+      "beforeSha256": "baf5a54afe9b74c2d6f9106673f6d3e39cbe83dd436a8f70b64fb4289c045c6e",
+      "afterSha256": "590d7ad7d61d28bccf37a598db2b9547064c618ed96087ed386173c585e207bb",
+      "edits": [
+        {
+          "offset": 141383,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "en/upholstery-cleaning-balatonalmadi.html": {
+      "beforeSha256": "55eb326ede9eef1928fa0298bd9a35c769c0384898364ddcf461bb5a06d3d188",
+      "afterSha256": "3a9e5e3ce64b04c65b2a4e74993a5ce230a08ea067c954feb1d14c1f2771a117",
+      "edits": [
+        {
+          "offset": 141956,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "en/upholstery-cleaning-balatonboglar.html": {
+      "beforeSha256": "cdd9090c7f310b46902aea17645b7b95d11b2145d9303386133fc9b9c7a6b9a0",
+      "afterSha256": "6a9dcefb2e6e40a9791f48b2515b85e45c32acdf436fef14cf6919dcfe6706ee",
+      "edits": [
+        {
+          "offset": 141894,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "en/upholstery-cleaning-balatonfoldvar.html": {
+      "beforeSha256": "46e195b78040471dfd7d5178afe04fd94584c5fde5d424f54a661f27fac1f4c8",
+      "afterSha256": "7ba96dcd423578c3bdef81227d4fc918a09de0c4444dc69186122dd2b7fdce08",
+      "edits": [
+        {
+          "offset": 142041,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "en/upholstery-cleaning-balatonfured.html": {
+      "beforeSha256": "8c9e7fee2d96b539350cb3b24371fc86cb3732c577ed5c584c72bbae8103449b",
+      "afterSha256": "537822f77dff8a0cef29fff4ba1673362baf024302bcb17a89ae399ffa2f7002",
+      "edits": [
+        {
+          "offset": 141778,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "en/upholstery-cleaning-balatonfuzfo.html": {
+      "beforeSha256": "53d444e2add291bd2bc3ba3e240c640d59f2bd689fa4f8a0959c0ef74c7ccdcf",
+      "afterSha256": "34854cc8bc71a5153bdbaf36a1bb2e21a6e93e3c16668226229dc505ce3697e1",
+      "edits": [
+        {
+          "offset": 141617,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "en/upholstery-cleaning-balatonkenese.html": {
+      "beforeSha256": "bf5ba7a4dfc931b62e21419aec10e0775f6c932fa7b4f16c7f201ca1d0bb43ef",
+      "afterSha256": "9ca75ad7fd2747600a901e53d31efeaf306e47e8c4a7d4ba12d31cb44b8ca77e",
+      "edits": [
+        {
+          "offset": 141757,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "en/upholstery-cleaning-balatonlelle.html": {
+      "beforeSha256": "8febe3ce5b9c00f7ebffd1be351fe0261175a90d2c8089e8f58f0d5faa06a102",
+      "afterSha256": "f982833780c4e827dff5d5a8c0f5daead6b045bb5606c3c73a6846f489f336b6",
+      "edits": [
+        {
+          "offset": 141760,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "en/upholstery-cleaning-balatonszemes.html": {
+      "beforeSha256": "c626d85092e34c0929bff84b59139b24a65110e981c6e146b806852969cad522",
+      "afterSha256": "b40fc81b65be90c4fdbda181b74b221b2683372eddfedbd10a4d85dd24f98eea",
+      "edits": [
+        {
+          "offset": 141581,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "en/upholstery-cleaning-fonyod.html": {
+      "beforeSha256": "cdcad9a8b4ecd7ddd269823275c968492e05151db2fa96e2780a967b1613fa82",
+      "afterSha256": "48976b11548a9b830ea2fc130fec2763b41222c58ca45e72c20ed5992b18b185",
+      "edits": [
+        {
+          "offset": 141217,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "en/upholstery-cleaning-heviz.html": {
+      "beforeSha256": "4ac59cfc2bd9d160d6c4c49a8857e6d1a5a1ebc4f82ae0df35250fde986a3645",
+      "afterSha256": "b2c17490eeaa9c53bf5c301e023a1defea9825616f72ba3587b7f94dd9533a49",
+      "edits": [
+        {
+          "offset": 141315,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "en/upholstery-cleaning-keszthely.html": {
+      "beforeSha256": "2aab3cf1617c0c1091fd248ff765fd4c44a83b4dc25f2b9eadc49bea0a5c44fa",
+      "afterSha256": "5b074bf1d7f4eb403fb2fac553c0336111c3d6c4c5d98c36e858d419765f45d4",
+      "edits": [
+        {
+          "offset": 141287,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "en/upholstery-cleaning-komarom.html": {
+      "beforeSha256": "a5f758b4a6fe886c4224f7aa1fff61c2eb060d63f3a5cdd4821fb3004441c536",
+      "afterSha256": "23a3a416f608ba9527d7db998807dc1424387de317bf0a31a7b9cc2f21fc3a3f",
+      "edits": [
+        {
+          "offset": 110758,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "en/upholstery-cleaning-mosonmagyarovar.html": {
+      "beforeSha256": "f286f24b4e9f87ae8bfbae4619ad1ba03aaeed23f79f4fa5afb630d04d32532e",
+      "afterSha256": "767e7bd8cac5c457be5cd51f4e39181b15944652cfeeba86bbe1049c852cd36c",
+      "edits": [
+        {
+          "offset": 111227,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "en/upholstery-cleaning-papa.html": {
+      "beforeSha256": "ba2bbd873762abefd81ed655bce5db38e2668c2aad25dc9a1b99454c4deea767",
+      "afterSha256": "0e5e958587fbbea2f033dfa1800d662ab97aa5c85d7c6665120f641482ec2c5b",
+      "edits": [
+        {
+          "offset": 110475,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "en/upholstery-cleaning-revfulop.html": {
+      "beforeSha256": "5ea66e35e7b0ff2b03aa4b2b2eeb995a9cc3b2c06c66032c0989c8ec2cdb9777",
+      "afterSha256": "f93e0715c16037de56a49b2a18d6fbfc2a99674bb3ab555595a3b4e95fa22a48",
+      "edits": [
+        {
+          "offset": 141543,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "en/upholstery-cleaning-siofok.html": {
+      "beforeSha256": "91b0f66d0a7fe2510757eb709bc01b73b569e90b2e58b9f519d4e288b05ff5e3",
+      "afterSha256": "f51f30fdc0689f02e50b77f47ed608b4b6a1031ec5cf02a7679ae5320a2a4cf9",
+      "edits": [
+        {
+          "offset": 141407,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "en/upholstery-cleaning-sopron.html": {
+      "beforeSha256": "45caff0a63330a7dc21fcec75dadb90bc311be34f3c46953410a141bbd98fc86",
+      "afterSha256": "3574156ece6d42a5d95ecccb7ae7a0a0f5e58d8cdf625e670096cef693e660d2",
+      "edits": [
+        {
+          "offset": 110694,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "en/upholstery-cleaning-szombathely.html": {
+      "beforeSha256": "dd46e6847d70815fddfb3fc8b20ad04c8a242b9c528b37f3a9b2b65e670e2df3",
+      "afterSha256": "5afb61875b3f0ef20146521f681799a7133f82993dff92753f76c0ea51e39ba8",
+      "edits": [
+        {
+          "offset": 110876,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "en/upholstery-cleaning-tapolca.html": {
+      "beforeSha256": "17fdd022b1b01f7f60ec10c15a73a6fa94658d90293f433e29f19054373e11ef",
+      "afterSha256": "1b5b1f1895ea9b879b3d595079c6d5a35e739a3faf430de7df126a1a702d8e5d",
+      "edits": [
+        {
+          "offset": 141179,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "en/upholstery-cleaning-tata.html": {
+      "beforeSha256": "0ce366ab87cc8c519cd5a80970b9efe5c1cb603d1b68d048cc9321cee1d9fd58",
+      "afterSha256": "82f01b464ff4ca8108efc154512bf3243f6c51970e60c5c2a4bfa9c2c471ec08",
+      "edits": [
+        {
+          "offset": 110413,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "en/upholstery-cleaning-tatabanya.html": {
+      "beforeSha256": "393b97d2d3a77fee0748d9c5160d208f8a3bc06824d211c962886602816d8495",
+      "afterSha256": "ff381668f96d28b36b3b4de0e22314a4c8794bc4220e997eb8d816fc7dfc7f02",
+      "edits": [
+        {
+          "offset": 110658,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "en/upholstery-cleaning-tihany.html": {
+      "beforeSha256": "346e9db66a0805078f1f2ebec132f6d4286d639066d02a9575f56190019377b3",
+      "afterSha256": "583038754cd55b02647bfe1f2cdde681313e39bdb453baae554d38ff6e991451",
+      "edits": [
+        {
+          "offset": 140979,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "en/upholstery-cleaning-veszprem.html": {
+      "beforeSha256": "0873045ad2e54391bf551243a5401f702bbd451feebb488f49b8cafc6a29f95b",
+      "afterSha256": "367fd3fca945c76cdf624d37e4df1c18aef218463831f27ec0634dc563d83de7",
+      "edits": [
+        {
+          "offset": 110578,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    },
+    "en/upholstery-cleaning-zamardi.html": {
+      "beforeSha256": "78e4131f97ecdaa9ef229551c3ccb002465e4da7c7b5d5b219fd0a405327ab13",
+      "afterSha256": "6126da157dedd143497956e33c28b2a43fa1a12507bc2157c963c51f0c8b18bc",
+      "edits": [
+        {
+          "offset": 141256,
+          "before": "studio/configurator.js?v=b361c692f392",
+          "after": "studio/configurator.js?v=93c50522837c"
+        }
+      ]
+    }
+  }
+}

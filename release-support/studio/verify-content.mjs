@@ -10,7 +10,7 @@ const require=createRequire(path.join(process.env.TEMP,'ecoclean-demo-qa/package
 // the surrounding original wording survived a deliberate price change.
 const norm=s=>s.replace(/\bANDANTE (?=NovaLife)/g,'').replace(/\b([Aa])z (?=NovaLife)/g,'$1 ').replace(/[\p{Extended_Pictographic}\uFE0F\u200D\u2605\u2606]/gu,'').replace(/\s+/g,' ').replace(/\d[\d .]*\d(?= ?Ft)|\d(?= ?Ft)/g,'#').trim();
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
-export function verifyStudioContent(manifest){
+export function verifyStudioContent(manifest,retentionSource=null){
  if(!manifest.studioOverlay)return [];
  const overlay=JSON.parse(fs.readFileSync(path.join(root,manifest.studioOverlay.path))),issues=[];
  const check=(ok,file,message)=>{if(!ok)issues.push({file,message});};
@@ -24,7 +24,9 @@ export function verifyStudioContent(manifest){
    check(d.querySelector('[data-studio-configurator]')?.dataset.city===rec.file.replace('karpittisztitas-','').replace('.html',''),rec.file,'Wrong calculator city');
    check(d.querySelector('[data-material-app]')?.dataset.next==='#studio-kalkulator',rec.file,'Material result does not return to calculator');
    const ids=[...d.querySelectorAll('[id]')].map(e=>e.id);check(new Set(ids).size===ids.length,rec.file,'Duplicate IDs');
-   const text=norm(d.body.textContent);
+   const retention=retentionSource?new JSDOM(retentionSource(rec.file)):null;
+   const text=norm((retention?.window.document||d).body.textContent);
+   retention?.window.close();
    for(const el of before.querySelectorAll('h1,h2,h3,p,.pricing-item-name,.pricing-price')){const value=norm(el.textContent);if(value)check(text.includes(value),rec.file,'Original informal text lost: '+value.slice(0,100));}
    const images=[...d.querySelectorAll('img[src]')].map(e=>e.getAttribute('src'));
    for(const img of before.querySelectorAll('img[src]:not([data-generated-interior])'))check(images.includes(img.getAttribute('src')),rec.file,'Original photo lost: '+img.getAttribute('src'));
