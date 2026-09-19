@@ -26,12 +26,14 @@ export function verifyStudioContent(manifest,retentionSource=null){
    const ids=[...d.querySelectorAll('[id]')].map(e=>e.id);check(new Set(ids).size===ids.length,rec.file,'Duplicate IDs');
    const retention=retentionSource?new JSDOM(retentionSource(rec.file)):null;
    const text=norm((retention?.window.document||d).body.textContent);
-   retention?.window.close();
    for(const el of before.querySelectorAll('h1,h2,h3,p,.pricing-item-name,.pricing-price')){const value=norm(el.textContent);if(value)check(text.includes(value),rec.file,'Original informal text lost: '+value.slice(0,100));}
    const images=[...d.querySelectorAll('img[src]')].map(e=>e.getAttribute('src'));
    for(const img of before.querySelectorAll('img[src]:not([data-generated-interior])'))check(images.includes(img.getAttribute('src')),rec.file,'Original photo lost: '+img.getAttribute('src'));
-   const links=[...d.querySelectorAll('nav a[href],footer a[href]')].map(e=>e.getAttribute('href'));
+   // Authorized regional navigation edits are proven by the reversible top overlay.
+   // Retention checks the restored parent; current local targets have their own regression test.
+   const links=[...(retention?.window.document||d).querySelectorAll('nav a[href],footer a[href]')].map(e=>e.getAttribute('href'));
    for(const a of before.querySelectorAll('nav a[href],footer a[href]'))check(links.includes(a.getAttribute('href')),rec.file,'Navigation link lost: '+a.getAttribute('href'));
+   retention?.window.close();
    const body=d.body.cloneNode(true);body.querySelectorAll('script,style').forEach(e=>e.remove());check(!/\p{Extended_Pictographic}/u.test(body.textContent),rec.file,'Static decorative emoji remains');
   }
   for(const el of d.querySelectorAll('script[src^="studio/"],link[href^="studio/"]')){const url=el.getAttribute('src')||el.getAttribute('href'),[file,query]=url.split('?');check(query==='v='+sha(fs.readFileSync(path.join(root,'release',file))).slice(0,12),rec.file,'Unversioned Studio runtime '+url);}

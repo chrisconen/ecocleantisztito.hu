@@ -15434,113 +15434,113 @@
       "source": "generated"
     },
     "ablaktisztitas-badacsony.html": {
-      "sha256": "b819932f6be067591395460dd930ab724695cb06cb897e4cf2eb9eccf1244daf",
-      "bytes": 75007,
+      "sha256": "0b95364a2a836a215485bae6109b55069acd7698ebd7bee63c569377bc4b5206",
+      "bytes": 61487,
       "source": "demo/ablaktisztitas-badacsony.html"
     },
     "ablaktisztitas-balatonalmadi.html": {
-      "sha256": "16510c37b3ac21955728a6d1cfa48ce3f386c47976400a662d6bbc6fc0aa1309",
-      "bytes": 73773,
+      "sha256": "6b7af32ca5d46a830367b31abf29969c0ba7dc3f4539988a7d0bf4c700515021",
+      "bytes": 60349,
       "source": "demo/ablaktisztitas-balatonalmadi.html"
     },
     "ablaktisztitas-balatonfoldvar.html": {
-      "sha256": "b31f8d0041763fb7a2b1dbdf1971652f88b91f11f98549fd3a8039904263c587",
-      "bytes": 73693,
+      "sha256": "b5a896d7544a9c539f385c6dcf4570efb9121a7d3c47089acb6e5689ab96b7ff",
+      "bytes": 60299,
       "source": "demo/ablaktisztitas-balatonfoldvar.html"
     },
     "ablaktisztitas-balatonfured.html": {
-      "sha256": "928f952328ea383856aebe9dcc61a3bbab04a7321ec03db5cf33a675d5dba8d0",
-      "bytes": 73494,
+      "sha256": "0e257476b0b8a5668601a8fcefc53a563d6611440aca192e68cc3d89b14cbe62",
+      "bytes": 60028,
       "source": "demo/ablaktisztitas-balatonfured.html"
     },
     "ablaktisztitas-balatonlelle.html": {
-      "sha256": "695523e415a57968b7bea715536ca8584e4f769fbe6d2976d0f1a0e9d82c8d93",
-      "bytes": 73429,
+      "sha256": "77cf55d72cc398ea83d543eb9ead8497a96ca97ea2e5ca9c06d7f858d8e88cb7",
+      "bytes": 59975,
       "source": "demo/ablaktisztitas-balatonlelle.html"
     },
     "ablaktisztitas-fonyod.html": {
-      "sha256": "9a735ca59cf94c45e1b6e53dcfad06a07c370a80f75339d9db5948d9ad4eb408",
-      "bytes": 72948,
+      "sha256": "aa58c18a705c686d366c0e591f87c0aac5e9b3e9c5bd21f0997ecf747622099a",
+      "bytes": 59370,
       "source": "demo/ablaktisztitas-fonyod.html"
     },
     "ablaktisztitas-gyor.html": {
-      "sha256": "e5729d430f8ee63700e6a1a674ab433d7441c696c6d99cd438991aff678efa11",
-      "bytes": 34785,
+      "sha256": "4c12ad5b67bfc4e8e8c343a1d452027c6acbc22655aa14efedd387b782d14159",
+      "bytes": 20945,
       "source": "demo/ablaktisztitas-gyor.html"
     },
     "ablaktisztitas-heviz.html": {
-      "sha256": "7eeaba2f59cf5be4ff5fbc19abbc3abbae62bace99929aeaf0059af40a5bf700",
-      "bytes": 73068,
+      "sha256": "b7b2c6e507544fdb99a3c29ebdd31982bfca8ca53f9608e1cc50909e6f3a00ab",
+      "bytes": 59476,
       "source": "demo/ablaktisztitas-heviz.html"
     },
     "ablaktisztitas-keszthely.html": {
-      "sha256": "0b20797f5c96904324abed44facf8d6d86f8de51e6616680099c8dcd964400f6",
-      "bytes": 73168,
+      "sha256": "fe81233c39604c23bd8e8ed5ada3a96a550c423e5d014c8b48849fba9f4d8159",
+      "bytes": 59648,
       "source": "demo/ablaktisztitas-keszthely.html"
     },
     "ablaktisztitas-komarom.html": {
-      "sha256": "4441998e90c4779cc54fb3b3ea3c30e05b36a6af0b09496fe6714efe4997cd08",
-      "bytes": 34839,
+      "sha256": "ee549d278299e5a7081a46981b9719f703dc6842c97a88c08c42ffd05f0511b0",
+      "bytes": 21151,
       "source": "demo/ablaktisztitas-komarom.html"
     },
     "ablaktisztitas-mosonmagyarovar.html": {
-      "sha256": "ebadbf232f728f2a9e87f266b3885fb9d913ca4192cbea35383d1b5defb534f8",
-      "bytes": 34987,
+      "sha256": "8488f818846b6d69437d38d7c2d6ed3177a4d46d0839ddd117f799a33769445a",
+      "bytes": 21753,
       "source": "demo/ablaktisztitas-mosonmagyarovar.html"
     },
     "ablaktisztitas-papa.html": {
-      "sha256": "645392f1bfa9d63c805c7cc3996b64dde8cc0cdcb1ac4919fe648bf2920782c7",
-      "bytes": 34780,
+      "sha256": "4a337768470779f575b9a5af13bae705b9d95a094df927d2255c2e6c454cdf96",
+      "bytes": 20974,
       "source": "demo/ablaktisztitas-papa.html"
     },
     "ablaktisztitas-revfulop.html": {
-      "sha256": "fb361845c2af78ac5faa6236534ae286d73c13644c451e0707c22add3e3c28b7",
-      "bytes": 73399,
+      "sha256": "d899623147634b275741ae409d0ecebf291e6216bba9c3e4b5838e87638aeb6d",
+      "bytes": 59881,
       "source": "demo/ablaktisztitas-revfulop.html"
     },
     "ablaktisztitas-siofok.html": {
-      "sha256": "57b3fe8e19268a066b2424651df080f7de319f328dd39beb8d34f85ee988fdc6",
-      "bytes": 72991,
+      "sha256": "acaf05be9daadab81a5cffa02e346d47e39c6a344aff07762afc1bfc94e77f60",
+      "bytes": 59413,
       "source": "demo/ablaktisztitas-siofok.html"
     },
     "ablaktisztitas-sopron.html": {
-      "sha256": "ecc0df9e39213bdf7404e57f556ccc116dfade47781109ad0d73102e6ab3f8f1",
-      "bytes": 34806,
+      "sha256": "72b97678bc020eccf786ff691aaf6bf2d27d663842d520be55ba426c2c3e4bf8",
+      "bytes": 21078,
       "source": "demo/ablaktisztitas-sopron.html"
     },
     "ablaktisztitas-szombathely.html": {
-      "sha256": "eb24a97dc32455f6bddd729b81d7a0e1c8cf1313f5b6d3e6a44aac1a321c1eea",
-      "bytes": 34891,
+      "sha256": "216b95ae1fe4ed545502f7535ee8d0c5d0974b4f543c16131bf676c73622145d",
+      "bytes": 21413,
       "source": "demo/ablaktisztitas-szombathely.html"
     },
     "ablaktisztitas-tapolca.html": {
-      "sha256": "1f6285160bdcd45f7771d2226e3f0a7f780d4f550dff10c85c8926706ae97994",
-      "bytes": 72914,
+      "sha256": "67887ab457c58037be4984b7b61b0ec5a5251f6d5243b19be24d3bb981dd67ad",
+      "bytes": 59350,
       "source": "demo/ablaktisztitas-tapolca.html"
     },
     "ablaktisztitas-tata.html": {
-      "sha256": "42ed9f0899f51d8646ce747347d58d7433b7e79d0dbac3c66d0ef04be545d975",
-      "bytes": 34765,
+      "sha256": "02ee68cdb7542a9ff5cdc9e1a47cb0b37bf5adbc5938ca5a2cc49eb6efc4cbb4",
+      "bytes": 20937,
       "source": "demo/ablaktisztitas-tata.html"
     },
     "ablaktisztitas-tatabanya.html": {
-      "sha256": "098046268c1d67101932c658ae162f88fecfddab6c131f2d6e4150fd72f9acac",
-      "bytes": 34870,
+      "sha256": "94c90378c266385d56a35e88de8602067bbe9eb802341e932ffb390ab821f408",
+      "bytes": 21314,
       "source": "demo/ablaktisztitas-tatabanya.html"
     },
     "ablaktisztitas-tihany.html": {
-      "sha256": "01d96527ce6fa6e0fc7643c9b80a11cb5fab5d645635dc9986d38507112a5f1b",
-      "bytes": 72931,
+      "sha256": "c28ceeb54eab28fe404c5f364b3ab1ed01467c293c6abe3942a660c4dcb68c1d",
+      "bytes": 59345,
       "source": "demo/ablaktisztitas-tihany.html"
     },
     "ablaktisztitas-veszprem.html": {
-      "sha256": "76c82dfae8f41ef33f255140ee7a919d90197c01ba0bb431a2fea25fb48439a1",
-      "bytes": 34857,
+      "sha256": "05f516177ba4b0f263e7f3ddb557c465746e7fb64074a72c0848ac01b72a5272",
+      "bytes": 21251,
       "source": "demo/ablaktisztitas-veszprem.html"
     },
     "ablaktisztitas-zamardi.html": {
-      "sha256": "1ae21f2928599c75f8b1f26c8a9080a324c94763e648619b8634a53be374a17e",
-      "bytes": 73132,
+      "sha256": "2f4950018fb408b823a8dde69b0d63f7a62781772d9cc334e4b3f09a35688999",
+      "bytes": 59576,
       "source": "demo/ablaktisztitas-zamardi.html"
     },
     "ablaktisztitas.html": {
@@ -15804,183 +15804,183 @@
       "source": "img/vegyszermentes-karpittisztito.webp"
     },
     "index.html": {
-      "sha256": "75199ffd06fdb3e76009ae3240956574959adb3bc91f29634a8257d723665a0a",
-      "bytes": 116976,
+      "sha256": "5b6e815c75308a42add46c33a9343ee54b001214b96fd26b45481d687d7538c6",
+      "bytes": 117153,
       "source": "demo/index.html"
     },
     "karpittisztitas-badacsony.html": {
-      "sha256": "f56a03424735588f5c2ba89d4a5aa25cf5d4fdec818aadf3f2e8a9fc8395740b",
-      "bytes": 148982,
+      "sha256": "11e674a8df6a4be20aa05227d99ee82e435ee2b32e7ff8a086933a11bdb4de5e",
+      "bytes": 134382,
       "source": "demo/karpittisztitas-badacsony.html"
     },
     "karpittisztitas-baja.html": {
-      "sha256": "e6a4830aebcfd2cc18effa3675e1fdb7bf50cd7a1f4fe40a7632423b044bed6f",
-      "bytes": 89767,
+      "sha256": "16f1ba9e9aea365a9171ff809f0aaf35e8541b67a40a6e984c7867983d79cc47",
+      "bytes": 84434,
       "source": "demo/karpittisztitas-baja.html"
     },
     "karpittisztitas-balatonalmadi.html": {
-      "sha256": "4e40bb10a3fc803221e885d58400c2a2516edb33577a1b849ea4b80300abb464",
-      "bytes": 149516,
+      "sha256": "5d34d58715f4b527a2ac92c8918b8afcee7476e13e03cbe1805a6eb84918a829",
+      "bytes": 135042,
       "source": "demo/karpittisztitas-balatonalmadi.html"
     },
     "karpittisztitas-balatonboglar.html": {
-      "sha256": "5f8003a7b0984a58a4eb944b8c393a9f924a3f6684945d48aab7d2f2df9d5320",
-      "bytes": 149535,
+      "sha256": "8cc96d6bdf3643871ae2ea85b95993b8e320f2e4d8726fc03ac38b83a398eeeb",
+      "bytes": 134435,
       "source": "demo/karpittisztitas-balatonboglar.html"
     },
     "karpittisztitas-balatonfoldvar.html": {
-      "sha256": "4f179f9524cf52cd439b2ec58f4b50f0019c8055d73d484842311a6f016f30d6",
-      "bytes": 149612,
+      "sha256": "37215ac1244512487a3efc3f7a91b3080ab0332f2caf7ac73ff9516507bcf3cb",
+      "bytes": 135177,
       "source": "demo/karpittisztitas-balatonfoldvar.html"
     },
     "karpittisztitas-balatonfured.html": {
-      "sha256": "ba3777ccef0386723a63e394b99a0d62760631dbe6c3574257b5f0de1054defa",
-      "bytes": 149485,
+      "sha256": "54cbbe795836096262844a15480383e0c2c67bfe9e731586655f0b97cdd5afc9",
+      "bytes": 134960,
       "source": "demo/karpittisztitas-balatonfured.html"
     },
     "karpittisztitas-balatonfuzfo.html": {
-      "sha256": "7608c2e1674f13e6b57a82a8233ee6c65dcbaccb8cc73df37490bd76ace71015",
-      "bytes": 149292,
+      "sha256": "f0cdd7a83112d79e3cebccd1f8303d5d2cd697e13e2fed2815d92a8ae86d2278",
+      "bytes": 134179,
       "source": "demo/karpittisztitas-balatonfuzfo.html"
     },
     "karpittisztitas-balatonkenese.html": {
-      "sha256": "ee812ab92c125047d373670f2c4b869f0928ad56fb0dfef35363fce7120e28a7",
-      "bytes": 149338,
+      "sha256": "090de3f300bbac6903cfe6a85ded9abb0911d38bab147b6bd1851ccbf4822063",
+      "bytes": 134228,
       "source": "demo/karpittisztitas-balatonkenese.html"
     },
     "karpittisztitas-balatonlelle.html": {
-      "sha256": "1b54b3020c3f6aab0ca1e5e9033c3c62337690d56cf80524583cb9065a1a170a",
-      "bytes": 149415,
+      "sha256": "ccdc5833df14bffdffd101fc48320e7a3978efc0041a8ebea21e27e3fb9f260d",
+      "bytes": 134902,
       "source": "demo/karpittisztitas-balatonlelle.html"
     },
     "karpittisztitas-balatonszemes.html": {
-      "sha256": "d2aaf0d505c4d2ca91fdc759dad7980e939979e65ac3e3e565e5d5a1d53ed6e1",
-      "bytes": 149253,
+      "sha256": "26cff858413535df95ac27ffc639216f75b0331c9fc1e3106deaef88634c9f5e",
+      "bytes": 134143,
       "source": "demo/karpittisztitas-balatonszemes.html"
     },
     "karpittisztitas-dunafoldvar.html": {
-      "sha256": "4aac2008018a2ad1ec0592764dc2e13e75d6978c979e8136fbbfe9df814cdd4d",
-      "bytes": 89759,
+      "sha256": "79f048c523970d3e23abf54cb0109ae671f21e66c0aea005c602cb90e204ff54",
+      "bytes": 84556,
       "source": "demo/karpittisztitas-dunafoldvar.html"
     },
     "karpittisztitas-elotte-utana.html": {
-      "sha256": "5c01d7aac3b7b3322de339371cba83dc2df114654ad18e7afb1fd6c22736941f",
+      "sha256": "72d54f8c65f67cb54e60189495c5cbaf726c912c9affbb4ca8dee659df3e0db0",
       "bytes": 195292,
       "source": "demo/karpittisztitas-elotte-utana.html"
     },
     "karpittisztitas-fonyod.html": {
-      "sha256": "a05dd4431e5ef5120ceb587fc9472a9f56139c6ee80d983488c959166f865227",
-      "bytes": 148805,
+      "sha256": "ca57f707c1e1a4bd82eda9280d1068c0bdff1eaf1511a66261af883eebed5820",
+      "bytes": 134128,
       "source": "demo/karpittisztitas-fonyod.html"
     },
     "karpittisztitas-gyor.html": {
-      "sha256": "56c56cafb3f4c76d982e71f0f32c9551efec28c866c082f0e81aac53fb5acbef",
-      "bytes": 120059,
+      "sha256": "b1baf6f4d56cbc09fddd9b80f26fbeba2ac453b127f5fdb8079d987421fb5a64",
+      "bytes": 105899,
       "source": "demo/karpittisztitas-gyor.html"
     },
     "karpittisztitas-heviz.html": {
-      "sha256": "b6e44e4073f433a49a574901eeb0513d11d6b5bc707a28a8c1428c4de4437493",
-      "bytes": 148801,
+      "sha256": "617c1d437e10d93c2b4c64f18d6461b51fe4a7bd2bb4ed9a87f53c8790ee45c8",
+      "bytes": 134105,
       "source": "demo/karpittisztitas-heviz.html"
     },
     "karpittisztitas-kalocsa.html": {
-      "sha256": "920ae956c65939149f053675e90ca4d9b3cb755416348a2d3260dbf82a01f28a",
-      "bytes": 90067,
+      "sha256": "d0e06c30ed369db0910f5b22d27ae1e4ab4dc87412b14b0a391bdf1200d56ef5",
+      "bytes": 84788,
       "source": "demo/karpittisztitas-kalocsa.html"
     },
     "karpittisztitas-keszthely.html": {
-      "sha256": "76eb397d5f9f971ad260703eda3709940b4ea96a19bf87158791e7da99fbbcaa",
-      "bytes": 148873,
+      "sha256": "fa58c384f8992b0bbb0503a2e2bb8c6e29bd32fabee66dfa31d3febe4d6b1c93",
+      "bytes": 134273,
       "source": "demo/karpittisztitas-keszthely.html"
     },
     "karpittisztitas-kiskoros.html": {
-      "sha256": "d78a9948e44cf3db453b426fc0785df83e6ac950176e5b72992f2cfd38d97d5b",
-      "bytes": 89688,
+      "sha256": "226266ca352771c05790c282209113464df15db831b34850589f0d2016341147",
+      "bytes": 84437,
       "source": "demo/karpittisztitas-kiskoros.html"
     },
     "karpittisztitas-komarom.html": {
-      "sha256": "f1240ab41dab3ad6a09d48fe5512310dbbc0d62654c48bbf03eb0aae0167161d",
-      "bytes": 116968,
+      "sha256": "b1b5b6daeb9e89230e54f822d26d612939e3f0e1d8d09687e666c487d460085a",
+      "bytes": 102545,
       "source": "demo/karpittisztitas-komarom.html"
     },
     "karpittisztitas-matractisztitas.html": {
-      "sha256": "994635e83cd050e723b58adbac570271d4ffea4dfaf0576845c2a185eb72c827",
+      "sha256": "5219a1ca07e49fd0ed6fc529a0c62790cbba248aa7ee83bec52f267f40fb1bbe",
       "bytes": 104460,
       "source": "demo/karpittisztitas-matractisztitas.html"
     },
     "karpittisztitas-mosonmagyarovar.html": {
-      "sha256": "635981c377c4d3691c696ea440bc12bd57bf3e15c0bc0af91546f33f22923931",
-      "bytes": 117546,
+      "sha256": "bdd76388363620d5125d09c8ca20dca1101a16d193d12a1075cb2344c5e1c2b1",
+      "bytes": 103431,
       "source": "demo/karpittisztitas-mosonmagyarovar.html"
     },
     "karpittisztitas-paks.html": {
-      "sha256": "ace07a329b7b90d058f5b3197598eec3ea9fb5b7ef3fed639c20cb47e77964d9",
-      "bytes": 89605,
+      "sha256": "e4ec3cd9a149dc297c52a779758ffde4b96372f125513df90ac067c861e00b60",
+      "bytes": 84278,
       "source": "demo/karpittisztitas-paks.html"
     },
     "karpittisztitas-papa.html": {
-      "sha256": "18d2189f5ec0e50b777080f57cc32643fadb900a52150c9005e9826e567a942d",
-      "bytes": 116692,
+      "sha256": "97e28604493a70a9cf20cceff6e3b39dbe881ea8deab58cfc830df12d49f3bc0",
+      "bytes": 102202,
       "source": "demo/karpittisztitas-papa.html"
     },
     "karpittisztitas-revfulop.html": {
-      "sha256": "93c2ef63e5b068e010079a12b9d9c56ceef5ddf89ae54f9a21d57e4d2805922a",
-      "bytes": 149092,
+      "sha256": "6d3391a4e3b8b4c8d8674096fada2fdb07c29a8e44e0c309d8bf143060fe4f33",
+      "bytes": 134493,
       "source": "demo/karpittisztitas-revfulop.html"
     },
     "karpittisztitas-siofok.html": {
-      "sha256": "87c96b95b225565c1a50cf304900fa174bd91a62c35dd0d36d575b85043b64e3",
-      "bytes": 148859,
+      "sha256": "898e0d68bdec75c85af4f786d5611cc1930589f49e52d55ff6e4ba8ba05201ac",
+      "bytes": 134182,
       "source": "demo/karpittisztitas-siofok.html"
     },
     "karpittisztitas-solt.html": {
-      "sha256": "22c0e53e43e4546ec78edd1dbe76fa1df313f3c94aa73d635ea52fdf1050a746",
-      "bytes": 89592,
+      "sha256": "b50af1faa8843c724fcc0bb5fb2339ceacabb512b6132710c6787a7abf39f8f0",
+      "bytes": 84265,
       "source": "demo/karpittisztitas-solt.html"
     },
     "karpittisztitas-sopron.html": {
-      "sha256": "f63b1efaf5858884773417272d31fa973bfcc391e14278dbd47c79154729ac8b",
-      "bytes": 117025,
+      "sha256": "7755e39c8ec60ecd0ba37829bc54b5c0f5e04436ce1d4e71681ba7a785d99098",
+      "bytes": 102589,
       "source": "demo/karpittisztitas-sopron.html"
     },
     "karpittisztitas-szekszard.html": {
-      "sha256": "1672d33344d972bb441de3d00c1f6ede08d0f31efa7b9125c41a7aa28159d0cb",
-      "bytes": 89757,
+      "sha256": "b1d46aaad4f2220558dab9b750e50db46e89494cfd5dce3551a8b05a55d28b8a",
+      "bytes": 84516,
       "source": "demo/karpittisztitas-szekszard.html"
     },
     "karpittisztitas-szombathely.html": {
-      "sha256": "ba73d12f7b818fb0ff2aae7f556f0ccd75ac2e8035cc315c5a2b7c3bb9c3abb8",
-      "bytes": 117149,
+      "sha256": "93c57c6a77f70b1a83d282e2f17b837a47f3d99707d962b9deb4aef90056aef5",
+      "bytes": 102878,
       "source": "demo/karpittisztitas-szombathely.html"
     },
     "karpittisztitas-tapolca.html": {
-      "sha256": "abad6763f604f9c11fcbaf5a7de544b040d269044fe851849b90279b6a9fd9f7",
-      "bytes": 148788,
+      "sha256": "ebe6d6ec599f27f77c7af2129ee7a1e0c998ec522efa8425337729fbcce2817f",
+      "bytes": 134130,
       "source": "demo/karpittisztitas-tapolca.html"
     },
     "karpittisztitas-tata.html": {
-      "sha256": "83559adcd0471f3550227bbbd96029c7d2450b195603b5d960beb82d33f85db4",
-      "bytes": 116655,
+      "sha256": "59a28ad89e2e83ccd80fde45a6cf51bb17b53da6d13234b2f9820816c815862a",
+      "bytes": 102153,
       "source": "demo/karpittisztitas-tata.html"
     },
     "karpittisztitas-tatabanya.html": {
-      "sha256": "30649b544db7d54729487b9ef68cb5f3d35a7fe4300f25eee375a76760b6a71e",
-      "bytes": 116817,
+      "sha256": "bdea20e2771bd314d8c80b39d31917c841bbbac0750cabe092b35621b998fc48",
+      "bytes": 102492,
       "source": "demo/karpittisztitas-tatabanya.html"
     },
     "karpittisztitas-tihany.html": {
-      "sha256": "5eed103deced7bae364e22dc19b2c9739cfc54f1b9e55d65a92840ee4c7ff1f4",
-      "bytes": 148639,
+      "sha256": "c24dc49d4f438f7964415e707b2f11aeef36a8e8e553cb2e4c90bb75027a8f34",
+      "bytes": 133952,
       "source": "demo/karpittisztitas-tihany.html"
     },
     "karpittisztitas-veszprem.html": {
-      "sha256": "7d60196704791bfbde19a2b5340398b55becad4065fe29728499379a0cb1a8d0",
-      "bytes": 116898,
+      "sha256": "6683562120e0a78daff8a1ec7b43341dd8b77413c9e89179d9315c1759394799",
+      "bytes": 102540,
       "source": "demo/karpittisztitas-veszprem.html"
     },
     "karpittisztitas-zamardi.html": {
-      "sha256": "9f05af13e1e5d87fee95654c685189a57935e6b9a6eabda3265c55e543294554",
-      "bytes": 148769,
+      "sha256": "9ad820adec24f9fb6caebc14ee75ac96fdeb9cf198e3f2a8fcd479bfc9e7d17f",
+      "bytes": 134121,
       "source": "demo/karpittisztitas-zamardi.html"
     },
     "karpittisztitas.html": {
@@ -15989,13 +15989,13 @@
       "source": "legacy redirect from OLD/.htaccess"
     },
     "karpittisztito-gep-berles.html": {
-      "sha256": "6602cdd22dd223ce8079d655c48c92162422d69ca5a0fd9628cbacb6a95b7b0b",
+      "sha256": "23ae437052932c41a6081bdd11ec4f7ae4d90eff90b29496077488ac6409d28c",
       "bytes": 50280,
       "source": "demo/karpittisztito-gep-berles.html"
     },
     "komarom.html": {
-      "sha256": "7d96575a3d060bbbe715490e56f4974d3f5117e21eb459e77fa16a2d506bf8b2",
-      "bytes": 64214,
+      "sha256": "db3b76319672f2fc5ccf9228750ba5384e5e8d77aef78b6311189b5221358e0c",
+      "bytes": 49608,
       "source": "demo/komarom.html"
     },
     "large-order-panel.css": {
@@ -16014,168 +16014,168 @@
       "source": "legacy redirect from OLD/.htaccess"
     },
     "matractisztitas-badacsony.html": {
-      "sha256": "f5bee33c02f8269d5eee50bedd2bec102480cb6163a4476597868b9549e5ee6d",
-      "bytes": 82862,
+      "sha256": "f872f852879088b0597d88406f07bb4566eb87c1668145a7a49f7cf1f41e45d2",
+      "bytes": 69198,
       "source": "demo/matractisztitas-badacsony.html"
     },
     "matractisztitas-baja.html": {
-      "sha256": "382f67e01e28d1f96982b7bace3b2f81f95d06677d24b2d4e5b1b6aa97474dac",
-      "bytes": 82052,
+      "sha256": "e6821a120edb43518d112764c70ccb8d7f76b7f6485c36151fe78c8e7c6bfd89",
+      "bytes": 76720,
       "source": "demo/matractisztitas-baja.html"
     },
     "matractisztitas-balatonalmadi.html": {
-      "sha256": "ccf02ed242abb642a2b57fa01dbc3cffb7b54b06bd71a018c209c3f446de5de5",
-      "bytes": 82031,
+      "sha256": "d6c9dd4461120de970f7953df961947501589d94f3e748e0db78213270c16d13",
+      "bytes": 68463,
       "source": "demo/matractisztitas-balatonalmadi.html"
     },
     "matractisztitas-balatonboglar.html": {
-      "sha256": "c12a17b40b355626f643b6eb8d9bae61ae372138c40e6cf1a068e713288c5b49",
-      "bytes": 82051,
+      "sha256": "7d7dd000f8697f8e5d90aad283a1a9aceb00a69ac3a6b9e3ea59232bdad775bf",
+      "bytes": 67975,
       "source": "demo/matractisztitas-balatonboglar.html"
     },
     "matractisztitas-balatonfoldvar.html": {
-      "sha256": "ef76542f24d9bbc139ea28976029d2ae4a8788fcd6abe26f6eab073ade5c018f",
-      "bytes": 82109,
+      "sha256": "02f34599092059674a449b7606ffcf38413c58a7069a52a0bf607089deb8c6fc",
+      "bytes": 68571,
       "source": "demo/matractisztitas-balatonfoldvar.html"
     },
     "matractisztitas-balatonfured.html": {
-      "sha256": "f4ba8c10e08b9b557e4b2dfeb329a7f2b339ef0a8b3caaca2273118bab33f0d6",
-      "bytes": 81976,
+      "sha256": "895a955c6d8fe79edcdfb04c67b88e5d07854a9fd3a35bfde1e25d06a7be4673",
+      "bytes": 68365,
       "source": "demo/matractisztitas-balatonfured.html"
     },
     "matractisztitas-balatonfuzfo.html": {
-      "sha256": "ac6019dc1645ecd9c3614d1be73451db2c7cbe54adb2cbd56699b8806877b0d6",
-      "bytes": 81984,
+      "sha256": "f6f3a600d7c9adad042399b3eb74273f49c2aaca57560cefdd8ea9202c7f5e20",
+      "bytes": 67898,
       "source": "demo/matractisztitas-balatonfuzfo.html"
     },
     "matractisztitas-balatonkenese.html": {
-      "sha256": "1231b522df2b043679cdb97284da6e13a7ff426eb6839bb4bdaf2a005b1145d9",
-      "bytes": 81968,
+      "sha256": "2af223706c7cd9625f780f4f7fb32bd29b1b0640afb6e5007f70a66e1bb2e78f",
+      "bytes": 67884,
       "source": "demo/matractisztitas-balatonkenese.html"
     },
     "matractisztitas-balatonlelle.html": {
-      "sha256": "7867f884f98cc90881cc8c4c30b043650491953f20c71bb8005c8f2d00370a80",
-      "bytes": 81933,
+      "sha256": "42e84109bb27de472d9affe75d4bad639b81b56cce10485b22c0963650569bfa",
+      "bytes": 68335,
       "source": "demo/matractisztitas-balatonlelle.html"
     },
     "matractisztitas-balatonszemes.html": {
-      "sha256": "b073ea7b28fe280e4038246045ed81e9068ef96beb152a6f455ae1eb201771b9",
-      "bytes": 82002,
+      "sha256": "645760785434fd0ecad3b6fa60c4950ee7900a2d47f861c9766b83aab7169107",
+      "bytes": 67918,
       "source": "demo/matractisztitas-balatonszemes.html"
     },
     "matractisztitas-dunafoldvar.html": {
-      "sha256": "63da5afbbd3ec2988ac10f69532f8b93c781c8ae95de7d6d7feb72c3efed05dc",
-      "bytes": 82123,
+      "sha256": "4c17d8fbfa67d76f7ca34faab951580e17e0851455e51004a8184f586bfb6a28",
+      "bytes": 76921,
       "source": "demo/matractisztitas-dunafoldvar.html"
     },
     "matractisztitas-fonyod.html": {
-      "sha256": "c4d510636962d13d5b7f7000e7dcb420821dcafa9a9d0e57687e0e1e84bb7e87",
-      "bytes": 81635,
+      "sha256": "bd1c608c6ddb3a28acd821278d39c0af19ae900155a891e58bcf6f0280eb1499",
+      "bytes": 67913,
       "source": "demo/matractisztitas-fonyod.html"
     },
     "matractisztitas-gyor.html": {
-      "sha256": "6cfb22d9d94721070c5959fc09f1df7e60e5883196a57efbdc3edab6b25d64f6",
-      "bytes": 48311,
+      "sha256": "dc4f8c8d9241e5d86ee0c04dcdcbe56b029ce062456d28fdd9a170bc91afbc2a",
+      "bytes": 35382,
       "source": "demo/matractisztitas-gyor.html"
     },
     "matractisztitas-heviz.html": {
-      "sha256": "2fff12d66601053712d0b1534a73a3a93ca0e9474ae0f9fe16edeabd703aa655",
-      "bytes": 81626,
+      "sha256": "bff60f7f1f9d28c42a22436b80995c4b1fe1bb63aec546a9bd3c1e86195f4bc3",
+      "bytes": 67890,
       "source": "demo/matractisztitas-heviz.html"
     },
     "matractisztitas-kalocsa.html": {
-      "sha256": "e36a2a615941eb25ee69aa43baf8eba8d795a4cea69f467881758524a13063c4",
-      "bytes": 82044,
+      "sha256": "d83a92e391a10dc202d5403b02ef413122918d2e06c34e1a3e7d96a163e9780c",
+      "bytes": 76766,
       "source": "demo/matractisztitas-kalocsa.html"
     },
     "matractisztitas-keszthely.html": {
-      "sha256": "8a980022ab977855bdb0d84f2885bc5225f6ae604d8e277a2ac6f053d5155d09",
-      "bytes": 81779,
+      "sha256": "e09fadb1a569cfddadaed10fb18eb5884d39c86e2327089d070d9aa7e803d19b",
+      "bytes": 68115,
       "source": "demo/matractisztitas-keszthely.html"
     },
     "matractisztitas-kiskoros.html": {
-      "sha256": "799bb74c50916aaed4367642eabb1b0dd02397876835f292e4448e5c93eb12b0",
-      "bytes": 67078,
+      "sha256": "9d8afc867bad64607c741fbd8e037f8d0f2314d0cfbb3c63586aa27cd7860f61",
+      "bytes": 61828,
       "source": "demo/matractisztitas-kiskoros.html"
     },
     "matractisztitas-komarom.html": {
-      "sha256": "19d1070e09a6ed8d55bdde27f877115899fc38a8af1a88a4ac0c7e7b00545643",
-      "bytes": 50304,
+      "sha256": "160c46c0a4cb172d835e8d1cde4fe38a98ed01fb98b1c719d7872d39c8fab6cb",
+      "bytes": 36091,
       "source": "demo/matractisztitas-komarom.html"
     },
     "matractisztitas-mosonmagyarovar.html": {
-      "sha256": "0982fefcd57cae0b4b7eb1daeb7d79c93361100460c8281fed90eedb8337015e",
-      "bytes": 50286,
+      "sha256": "e2a03e64e2d234a15a232d82bbc70a63765c47367ca511062d75ffc65f30d6ab",
+      "bytes": 36527,
       "source": "demo/matractisztitas-mosonmagyarovar.html"
     },
     "matractisztitas-paks.html": {
-      "sha256": "9c2c6a14a5c77b3b728a0a505a944a73170f24a05e01fac6af90faa172aec79a",
-      "bytes": 82017,
+      "sha256": "e4cf3ddafe1bc043c935c747c7515423ba0cef8ab488bcfe50c141f3778f7da2",
+      "bytes": 76691,
       "source": "demo/matractisztitas-paks.html"
     },
     "matractisztitas-papa.html": {
-      "sha256": "7922ef227e49ab636ebf994846b16490ed407ee56fbcc13a5568280eb75f668f",
-      "bytes": 50104,
+      "sha256": "6d552fa42037a6e49dfb9b1cf40cbb577521e6d4398eea817c425d18b75fe9bf",
+      "bytes": 35773,
       "source": "demo/matractisztitas-papa.html"
     },
     "matractisztitas-revfulop.html": {
-      "sha256": "d5d79af097abec23fa4862ee309a10d6f5ae63e50f1ea2fd470c45453cd35988",
-      "bytes": 81883,
+      "sha256": "2c3301672c79a50c28e812b4c539854000467ad84f10d4b9f8ab266e72c85529",
+      "bytes": 68221,
       "source": "demo/matractisztitas-revfulop.html"
     },
     "matractisztitas-siofok.html": {
-      "sha256": "be860bb52a7e447f770bcb4c2cf94476d9d4f476d4c74ff5774a1c4fbecec873",
-      "bytes": 81648,
+      "sha256": "27d73163d2e7072ebe1cf8faab27a0bf2a7a02ffd8276814ae1d70262f9e7395",
+      "bytes": 67926,
       "source": "demo/matractisztitas-siofok.html"
     },
     "matractisztitas-solt.html": {
-      "sha256": "558eecbf8dcf6b8e05e3798583de5869795dc745310051f6d27955df25c34e57",
-      "bytes": 66957,
+      "sha256": "6f6fe507556c3ae3bf3234164c6286603a142629373acdafba17b6f5e6053f9a",
+      "bytes": 61631,
       "source": "demo/matractisztitas-solt.html"
     },
     "matractisztitas-sopron.html": {
-      "sha256": "9a58ac0144ad53edbcd9e9d1bd82e242182764c074ea3e48f3eabef3761e5f8a",
-      "bytes": 50390,
+      "sha256": "91a768e3aa45781fe4155886e6ecd760263c593ae6eb24948485c3f4253da70e",
+      "bytes": 36137,
       "source": "demo/matractisztitas-sopron.html"
     },
     "matractisztitas-szekszard.html": {
-      "sha256": "70948d9f6a719b0b30b1b5403468685bd337735953877c8fbb1a53b504881b8b",
-      "bytes": 66977,
+      "sha256": "deeedb29a0591ef27d436081f3af36afe76a7a6b8a04a3894bcfcf1068e04404",
+      "bytes": 61841,
       "source": "demo/matractisztitas-szekszard.html"
     },
     "matractisztitas-szombathely.html": {
-      "sha256": "9184b69b56078cc4dddddf0230c16d5a9d118d38a08a9c461c94ea071551e052",
-      "bytes": 50277,
+      "sha256": "6e517cb484706efd5f6d119c39c9188a948e86688e8819726fcd85d9e6000a59",
+      "bytes": 36274,
       "source": "demo/matractisztitas-szombathely.html"
     },
     "matractisztitas-tapolca.html": {
-      "sha256": "2817693bd57575373800008f78d894b76a60db933bb316c49a3340d4e47f86ac",
-      "bytes": 81636,
+      "sha256": "0c7ace84a954c1fa201b3baba482e22b5e3fa6d31048284aa118205245b902de",
+      "bytes": 67928,
       "source": "demo/matractisztitas-tapolca.html"
     },
     "matractisztitas-tata.html": {
-      "sha256": "42e9ef8eb6968881091bfa08302964d2fb9215608f40455da75b8dd005718e4f",
-      "bytes": 49918,
+      "sha256": "dce6dc514f26bf50e32054b9ca000b3dfc322626f14a39a1eded3489d46373bf",
+      "bytes": 35565,
       "source": "demo/matractisztitas-tata.html"
     },
     "matractisztitas-tatabanya.html": {
-      "sha256": "30ab267e1c7a9efca960dc9f0276ed0dc6b3f6785350f8392e30f5901da75d2a",
-      "bytes": 50328,
+      "sha256": "e77990708cec5952aa4ec6621a9adee4b63ff81131a3ae3673b60ffc06af73bf",
+      "bytes": 36247,
       "source": "demo/matractisztitas-tatabanya.html"
     },
     "matractisztitas-tihany.html": {
-      "sha256": "c4d4ba4d14f3ce7c76581f08a84782874f45533bff392511fddf56c490a43858",
-      "bytes": 81573,
+      "sha256": "090a5a3a4ad6cf9fb9768ba915721f184cfd4bac56a6615ac78746f6f55d4e24",
+      "bytes": 67843,
       "source": "demo/matractisztitas-tihany.html"
     },
     "matractisztitas-veszprem.html": {
-      "sha256": "433f02a21bc3b129de4f00dfa6556f063c7c86876cc6421d59a0ee3c2a1ce2d1",
-      "bytes": 50295,
+      "sha256": "953a95cda33c585a6443cc0f859f1ede8562c6d85705861dc81acc6e182aad0e",
+      "bytes": 36164,
       "source": "demo/matractisztitas-veszprem.html"
     },
     "matractisztitas-zamardi.html": {
-      "sha256": "b503e5ca77b96578a2977deca93524548267e42b926e61fb9000da5cc7b3be18",
-      "bytes": 81692,
+      "sha256": "f39d5cf2f33246ab2c6322e373cde5e3a07fb202b0751c1cdc70e1eb527c0369",
+      "bytes": 67992,
       "source": "demo/matractisztitas-zamardi.html"
     },
     "matractisztitas.html": {
@@ -16284,243 +16284,243 @@
       "source": "style.css"
     },
     "szonyegtisztitas-badacsony.html": {
-      "sha256": "25c994830d958939d9be804f933025288c31d44496d31ea91a917a051b4806d5",
-      "bytes": 74155,
+      "sha256": "cd8ca21ce586a17fe368c584648eb9f7eb7787c3821f5c430fac22c72b37bf67",
+      "bytes": 60630,
       "source": "demo/szonyegtisztitas-badacsony.html"
     },
     "szonyegtisztitas-balatonalmadi.html": {
-      "sha256": "679eff2ee34d7bf8c799bccc47e540cb66345eee9c06fd2d7fe4e1e159a13d19",
-      "bytes": 74563,
+      "sha256": "e54e36de03304fb33344bc9aa61f19f712f2842ac3797ebe81d673d7134e7fa0",
+      "bytes": 61134,
       "source": "demo/szonyegtisztitas-balatonalmadi.html"
     },
     "szonyegtisztitas-balatonboglar.html": {
-      "sha256": "47184045039f42aeafa3df41ee14094812309c541695c119946e2f0778049b90",
-      "bytes": 29952,
+      "sha256": "7cb794666d47dfa2795b52931881a1aa2bb79a04c0b2a9def109d06506c3baad",
+      "bytes": 15383,
       "source": "release-support/supplemental/szonyegtisztitas-balatonboglar.html"
     },
     "szonyegtisztitas-balatonfoldvar.html": {
-      "sha256": "0cca3cf80536b92ed3fdac191db03fe0821e179e4e3c720a233c8e59d9b656f8",
-      "bytes": 74569,
+      "sha256": "f18b2fc9a3909fb9ad2864de7a88acec046f04aa79844ecb4dfdafd9db1ccd84",
+      "bytes": 61170,
       "source": "demo/szonyegtisztitas-balatonfoldvar.html"
     },
     "szonyegtisztitas-balatonfured.html": {
-      "sha256": "ba7ee2c84c37aeb375878785d853a7cff81d1119fa05dc5c314781c164ec27a5",
-      "bytes": 74318,
+      "sha256": "55b8c2d7be4b3677208e8eb8d664a000f40e11f51ef245be95ee623d319449e9",
+      "bytes": 60844,
       "source": "demo/szonyegtisztitas-balatonfured.html"
     },
     "szonyegtisztitas-balatonfuzfo.html": {
-      "sha256": "03ffae8cc3afe7bb8fc763fd363976be5344bbf884206458f487d2348f06fc75",
-      "bytes": 29946,
+      "sha256": "9b5cc3140450dceb30ffe4c0547b3eb400129f8d1ba6fade9040ffbf4554495f",
+      "bytes": 15358,
       "source": "release-support/supplemental/szonyegtisztitas-balatonfuzfo.html"
     },
     "szonyegtisztitas-balatonkenese.html": {
-      "sha256": "9c2fa87b6d34152cd7619f3aab5e5ae5096958b246be90d468a79c7406d5d98d",
-      "bytes": 29941,
+      "sha256": "1fdbeeae73dc5ddc4272989f52691a775042d375d86fdea2bfcb4a9806324458",
+      "bytes": 15355,
       "source": "release-support/supplemental/szonyegtisztitas-balatonkenese.html"
     },
     "szonyegtisztitas-balatonlelle.html": {
-      "sha256": "5f43637c9d4fbe0d7b51c72df4266fab20371efca594f460d19262ce1fbc284f",
-      "bytes": 74226,
+      "sha256": "671c8d23dc2ce895cfadf655e7f97695ba91b54841942e9bcf5aa08029c5ac1b",
+      "bytes": 60767,
       "source": "demo/szonyegtisztitas-balatonlelle.html"
     },
     "szonyegtisztitas-balatonszemes.html": {
-      "sha256": "8da960deef18ee26e48774dd6c2322b4f4ad33b629d866e2d79dc33e2096c563",
-      "bytes": 29941,
+      "sha256": "22e56ee9d7fb2b16f8a61dd279552cdc2a9febdb5e103d2cdaf208f0dd8c2cdf",
+      "bytes": 15355,
       "source": "release-support/supplemental/szonyegtisztitas-balatonszemes.html"
     },
     "szonyegtisztitas-fonyod.html": {
-      "sha256": "63a6ad63350e5a9a46c5d656dd0401f73af3d3024298251bc2c8b1877ff8147d",
-      "bytes": 73761,
+      "sha256": "149e12c42171deade5eefed78cf9f9afe9c05176494086196f677d75bf517d4c",
+      "bytes": 60178,
       "source": "demo/szonyegtisztitas-fonyod.html"
     },
     "szonyegtisztitas-gyor.html": {
-      "sha256": "2c8461c4cac8434d9e1e89db419cb658361ca00532cbc78fad89fe071e2e6836",
-      "bytes": 34854,
+      "sha256": "fa96ee5e521ee9dff595dc766b3fe9c9ca8e94120c217093d0d521ec1f715bd3",
+      "bytes": 21038,
       "source": "demo/szonyegtisztitas-gyor.html"
     },
     "szonyegtisztitas-heviz.html": {
-      "sha256": "87fc7b080fade014a24c9947f7f13088e0e349c6e7964c6548ee77724bd8ae44",
-      "bytes": 73870,
+      "sha256": "03387f85da93de18ba6739485e384f81924442f8dced9b56af0c0359ee082f15",
+      "bytes": 60273,
       "source": "demo/szonyegtisztitas-heviz.html"
     },
     "szonyegtisztitas-keszthely.html": {
-      "sha256": "8c1b10fa18c4cda734d565ab547b93fdc7ba67ff8b5397edfad5f74fd5b883b8",
-      "bytes": 74016,
+      "sha256": "3cf75c1f506d78d87fc2fd722de94db0e45aa9a306cb5df9c5d9a5b997e2515c",
+      "bytes": 60491,
       "source": "demo/szonyegtisztitas-keszthely.html"
     },
     "szonyegtisztitas-komarom.html": {
-      "sha256": "3a68c0e4323293a4ea87a50e80e4b7fe72a2c0f216ab3bbbd11a9a4e29a8da07",
-      "bytes": 34908,
+      "sha256": "f8b12c7d4d23ab7f0e07e6f7d0188d0bf88a1d9c9ea6f50fd92a10934df4c266",
+      "bytes": 21245,
       "source": "demo/szonyegtisztitas-komarom.html"
     },
     "szonyegtisztitas-mosonmagyarovar.html": {
-      "sha256": "2bbe17c51c2badecb20bb10a3812508ab11adee6dd67e0ecbb3044635da03177",
-      "bytes": 35062,
+      "sha256": "10b709612c473d73d91523649813aa92a1b6fa947755ebdd29ee40d4c007a8af",
+      "bytes": 21853,
       "source": "demo/szonyegtisztitas-mosonmagyarovar.html"
     },
     "szonyegtisztitas-papa.html": {
-      "sha256": "8299a607d2c618179f3bf55b2e27892a1d4ca40ec3c29fb4ae7eb40ddd8bb72d",
-      "bytes": 34849,
+      "sha256": "c201897c84a90f91a03027f7ba2955fdd6716b19c731c8726f969f140899ed60",
+      "bytes": 21068,
       "source": "demo/szonyegtisztitas-papa.html"
     },
     "szonyegtisztitas-revfulop.html": {
-      "sha256": "8a98301e08efc4cf3e8f12471383bc7cc94e65d69220ed9d0d1425860dfc3378",
-      "bytes": 74229,
+      "sha256": "aaab48a3f7bccd8aacbd433ef9d14f895fff02bcf0a91a32c391014aed4cfc5c",
+      "bytes": 60706,
       "source": "demo/szonyegtisztitas-revfulop.html"
     },
     "szonyegtisztitas-siofok.html": {
-      "sha256": "b79a2c98e0984efa6d8bb06a5760f67747eba7bd248b4deb7f0f3cad9802c3b4",
-      "bytes": 73836,
+      "sha256": "b1b10244a793dcc1bfa6e5cb828789db535888ca7b2a06053df8edb7ffd49876",
+      "bytes": 60253,
       "source": "demo/szonyegtisztitas-siofok.html"
     },
     "szonyegtisztitas-sopron.html": {
-      "sha256": "0f2687f7c377a8ffa49ded9c9da7e231b87aad8803603c774ea569ff70d1cfb6",
-      "bytes": 34875,
+      "sha256": "6920c252927892c0b8be73b00d7c8426457eb1c288c745f4c70d3d1dc4cbb8d9",
+      "bytes": 21172,
       "source": "demo/szonyegtisztitas-sopron.html"
     },
     "szonyegtisztitas-szombathely.html": {
-      "sha256": "e08a03733490316fe016fb9e1b20a87d0e08e6ef04cd22466cd37c35125d81d9",
-      "bytes": 34960,
+      "sha256": "8bb96fdce78333df752bb78fb558d0237231150279697a05c84103c5874628f6",
+      "bytes": 21507,
       "source": "demo/szonyegtisztitas-szombathely.html"
     },
     "szonyegtisztitas-tapolca.html": {
-      "sha256": "ec72e598d93bc126fb71913b21d7d1d97a478ffcbe5f00b284b797bb6bdb6846",
-      "bytes": 73773,
+      "sha256": "d5aeb6cd15f554b6c647d78a7c79f4571b89477dc73c2842c55a83173d9e3a8a",
+      "bytes": 60204,
       "source": "demo/szonyegtisztitas-tapolca.html"
     },
     "szonyegtisztitas-tata.html": {
-      "sha256": "99235c0f2f314726a568a984a923cae63523098f07ace460608694316abaf973",
-      "bytes": 34834,
+      "sha256": "f6d6e448e1c0cf13391d6e8c71d0e1e016ee3b7d58415bd3dd0b7edadfebd9ca",
+      "bytes": 21031,
       "source": "demo/szonyegtisztitas-tata.html"
     },
     "szonyegtisztitas-tatabanya.html": {
-      "sha256": "1bd6a4eb27a8d72a6105f98354566cec2946176845e98aaadd7fa706c9b5302a",
-      "bytes": 34939,
+      "sha256": "82ca17977d076a99865898a73481568e2bfd8c2e33c3c1dd1e89f7163a607728",
+      "bytes": 21408,
       "source": "demo/szonyegtisztitas-tatabanya.html"
     },
     "szonyegtisztitas-tihany.html": {
-      "sha256": "c376fd84e9b930fcc78b1e1a4de597a0ce2232fa1caf9c484b5e3fe22679ca71",
-      "bytes": 73782,
+      "sha256": "fb2913d0aea34c7709de0e92e23d7cd0c4df1be4ef5f8bafd12b13988696c1dc",
+      "bytes": 60191,
       "source": "demo/szonyegtisztitas-tihany.html"
     },
     "szonyegtisztitas-veszprem.html": {
-      "sha256": "98234d654105fca48839b92e5dfe27609ec4f83d3ba8cdc81b7cefdf2cf30c9a",
-      "bytes": 34926,
+      "sha256": "cae0265ff8885f4a523b19eb5acc55f3ec472a80d36fa9abcc5931ab49d2f57e",
+      "bytes": 21345,
       "source": "demo/szonyegtisztitas-veszprem.html"
     },
     "szonyegtisztitas-zamardi.html": {
-      "sha256": "d24432d05dbecff14cad4abf3293ce59499273e0ed24df3147fd0272ec837437",
-      "bytes": 74014,
+      "sha256": "b8b086332a67a85b66a6b70f1953ef67bce9f5cb4ccbe1e3574764be5f00db77",
+      "bytes": 60453,
       "source": "demo/szonyegtisztitas-zamardi.html"
     },
     "takaritas-badacsony.html": {
-      "sha256": "64c51e0cfb994b23a5784b6c9997988131bdc70affa2fbb7eac137e048ef1c84",
-      "bytes": 73716,
+      "sha256": "467c2630182806e4a29806c7e3be6495f8b68dcda2dbbe5e5f692492357434c6",
+      "bytes": 60211,
       "source": "demo/takaritas-badacsony.html"
     },
     "takaritas-balatonalmadi.html": {
-      "sha256": "98a9dbb2f8f05c84bf0ab785cf9c95afb66726832be97ce5f4eb802aa6c4869a",
-      "bytes": 74139,
+      "sha256": "38aa7bdd4854fd5587bf90e58b5660e88c5b365975d2c94fc266333603f5b141",
+      "bytes": 60730,
       "source": "demo/takaritas-balatonalmadi.html"
     },
     "takaritas-balatonfoldvar.html": {
-      "sha256": "d76c4969d83d26caaf1e59311134ba99ccef8ad87952ba733fd17b6d5fd39903",
-      "bytes": 74128,
+      "sha256": "04d56fb4b3a65fe922cfc029b6838a3aac922b47c32e5b6c74f08dae1b8a78e5",
+      "bytes": 60749,
       "source": "demo/takaritas-balatonfoldvar.html"
     },
     "takaritas-balatonfured.html": {
-      "sha256": "e2e1d605a0f038d27fa887194a81487f74a6411cc9ff4b4a844991fa0f7c0fa8",
-      "bytes": 73949,
+      "sha256": "074f287643cd386f0c8113a648033857a085efd27463420b40e460e90134ec00",
+      "bytes": 60503,
       "source": "demo/takaritas-balatonfured.html"
     },
     "takaritas-balatonlelle.html": {
-      "sha256": "ad5ed451413bc4542c0bde1dac7be8c644fec36bd29c4d77ac9fc4585955c00e",
-      "bytes": 73761,
+      "sha256": "2149922510d837cf8144622d8e21e9cdba3f90bcc68bea7772fe5b1aaa6d6fdd",
+      "bytes": 60322,
       "source": "demo/takaritas-balatonlelle.html"
     },
     "takaritas-fonyod.html": {
-      "sha256": "eb0080f2591bc5af7d75841b7e8ddf8f72804618f7f3ae4d67e34a878fcb3a63",
-      "bytes": 73363,
+      "sha256": "3f4b047298a29c0747d1c38553e77f1853041b44985d93adc794364e804f7803",
+      "bytes": 59800,
       "source": "demo/takaritas-fonyod.html"
     },
     "takaritas-gyor.html": {
-      "sha256": "1e82fc111960760f62b6991d8b8a49df0bcad9e1ca27625aba3b383037a5a958",
-      "bytes": 34711,
+      "sha256": "f6c5b48ef1c01d636e25f54866e985acf9f82a20ec68b7ae634c1a9a5dd46012",
+      "bytes": 20831,
       "source": "demo/takaritas-gyor.html"
     },
     "takaritas-heviz.html": {
-      "sha256": "e52d221dc49b70fa2262b09487dc936fff688f6a6d7cd13b0525b723fd090f2e",
-      "bytes": 73432,
+      "sha256": "2d5524eadff337ca4ece4036585ebc8258290eaddd4668899ae162896342f36d",
+      "bytes": 59855,
       "source": "demo/takaritas-heviz.html"
     },
     "takaritas-keszthely.html": {
-      "sha256": "90297f85db3916c6853ed19cc717208a4a10a95e4b5ebf0eb4f7696a5c716720",
-      "bytes": 73572,
+      "sha256": "2a3fd4af0a0c2854ac024d95c316b76f9b09ff11e92d9d282240d519b86ac574",
+      "bytes": 60067,
       "source": "demo/takaritas-keszthely.html"
     },
     "takaritas-komarom.html": {
-      "sha256": "9c87e4583c01c97c69c2b24aa8a15018ded7de2fc0c8f4b7d1f8a65a8fe8f1c0",
-      "bytes": 34765,
+      "sha256": "d9e538d96b206d18e78f5dfeff2fb8e25eb4c21471ceb263f8fca21c37286d97",
+      "bytes": 21038,
       "source": "demo/takaritas-komarom.html"
     },
     "takaritas-mosonmagyarovar.html": {
-      "sha256": "ddb0be85679f6bb552c0884774f11e2e9b71e76800b77dd6b447eb415dda0523",
-      "bytes": 34919,
+      "sha256": "f21a0fffc36f0c1ef428a877b5df292f8b4ce3cfb342dc315ac969c95074c4a3",
+      "bytes": 21646,
       "source": "demo/takaritas-mosonmagyarovar.html"
     },
     "takaritas-papa.html": {
-      "sha256": "231c95218cf3a9f09948a20a8f4d71bec44bd361ae517836cc424325b09cc10e",
-      "bytes": 34706,
+      "sha256": "67b06dd8478c9bc33ade3620360602d9dbdf499056e641a4b16ca80c9fc44d74",
+      "bytes": 20861,
       "source": "demo/takaritas-papa.html"
     },
     "takaritas-revfulop.html": {
-      "sha256": "01211b7670ed01a69e55887245cfbc40d1ce80ab36a7c1516e58e64f97af13ce",
-      "bytes": 73776,
+      "sha256": "557f1daccb22569d1daeb18691d9760677983b3801ca3107c1b11cd2152e4857",
+      "bytes": 60273,
       "source": "demo/takaritas-revfulop.html"
     },
     "takaritas-siofok.html": {
-      "sha256": "9c2108bfb076a258732e3556f8232b60163541618e7723d5d9d02a572f0d7cab",
-      "bytes": 73403,
+      "sha256": "f8f37de8256f355d9fe480b3c53af47d238bee0718836750a2f2a1798d6c84be",
+      "bytes": 59840,
       "source": "demo/takaritas-siofok.html"
     },
     "takaritas-sopron.html": {
-      "sha256": "dc40981a5ac9d2b1f9eac100c8ebfcf0b378c8fe1c715e84b826696b9a5e32bf",
-      "bytes": 34732,
+      "sha256": "e3571e60a9d5f1e014e4b4a9b042463ad053ac8c2634b8138e60477a75f7d641",
+      "bytes": 20965,
       "source": "demo/takaritas-sopron.html"
     },
     "takaritas-szombathely.html": {
-      "sha256": "947f5a816de28459d3e4969a6a0601e42235bd2f72a674de313bb97d1bcf3e36",
-      "bytes": 34817,
+      "sha256": "afb26a792ba79beef05a739191f0a04ddab52bbeb1a06925beec82344fdee1e7",
+      "bytes": 21300,
       "source": "demo/takaritas-szombathely.html"
     },
     "takaritas-tapolca.html": {
-      "sha256": "69e4b028df6f932abb29e12838c2cce8c1397d934a900ac774ff940e806e6194",
-      "bytes": 73352,
+      "sha256": "3847228452437858ecf9b4acfe0b05d4296bded7adfa0dffd40bd8635ad382bb",
+      "bytes": 59803,
       "source": "demo/takaritas-tapolca.html"
     },
     "takaritas-tata.html": {
-      "sha256": "78cd606acd646ee9f2ebe4d0414a295be57fd5233d6418f39d3398e65f30894d",
-      "bytes": 34691,
+      "sha256": "490de25934bc243f032c0d117d62a8cee6d21f5759bdfe2bff9a298d26bef08b",
+      "bytes": 20824,
       "source": "demo/takaritas-tata.html"
     },
     "takaritas-tatabanya.html": {
-      "sha256": "b0b8fccc97000e0fd9b6ee0835716a6c0e8ce9b7637819ad45d02d736bef31ca",
-      "bytes": 34796,
+      "sha256": "07e9ee9bb84b467d349163d964644c027a32601670e8deb25e165defa1fc4513",
+      "bytes": 21201,
       "source": "demo/takaritas-tatabanya.html"
     },
     "takaritas-tihany.html": {
-      "sha256": "525c4d783c2cff527da3a0bbe7be59f572e370b93a0f004524699b827327b603",
-      "bytes": 73308,
+      "sha256": "3a3811f7743cf96dc1e02bb719f4453e94372baba12cf8be81fb87ed5e283780",
+      "bytes": 59737,
       "source": "demo/takaritas-tihany.html"
     },
     "takaritas-veszprem.html": {
-      "sha256": "9f0d5cd915ed093151c5afa48ba1bb7cd7a3de1322ce16680f84e701f0d3da04",
-      "bytes": 34783,
+      "sha256": "6ec2bf3eaaecf0dba97bd2e44b1538df7a5685e0b907d637c68399023e829cb7",
+      "bytes": 21138,
       "source": "demo/takaritas-veszprem.html"
     },
     "takaritas-zamardi.html": {
-      "sha256": "0d5dcae4deb918061cc73c935e5f7b313ff7ee43089b831393c85a00cdfb3313",
-      "bytes": 73554,
+      "sha256": "113fd868a7a5d8379c9775e3a4d721b6787c97e5492580a3a5fbe73e2e58d37a",
+      "bytes": 60013,
       "source": "demo/takaritas-zamardi.html"
     },
     "ui/assets/dining-card.webp": {
@@ -16529,8 +16529,8 @@
       "source": "demo/assets/dining-card.webp"
     },
     "ui/booking-live.js": {
-      "sha256": "1655f39a8e43a9e5a2c76bdcb60ca248036589bcbd1adf259410a070b94ca797",
-      "bytes": 57592,
+      "sha256": "551e3665f70ad9b99c881bdb15687551aeeeab5b8ac1158c52ddb7e1c2951faf",
+      "bytes": 61106,
       "source": "release-support/booking-live.js"
     },
     "ui/calendar-live.css": {
@@ -16544,13 +16544,13 @@
       "source": "release-support/calendar-live.js"
     },
     "ui/design.css": {
-      "sha256": "8a9be96ad368c2b24ac9c0b66b8bcc44a65ff03ea3e62d6ac504e8b464bdcc27",
-      "bytes": 40912,
+      "sha256": "801f2f4ea2ddebd47926aca9e471f7aceb2253c4f37de380592dd44621ebcec4",
+      "bytes": 42357,
       "source": "demo/design.css"
     },
     "ui/modern.css": {
-      "sha256": "d241ac8a6975eeb26a2efff27af9af84b3336f5d139f1d7d44a87719d8ad03b7",
-      "bytes": 23390,
+      "sha256": "83b929d2b62b07dc03c850f27f4f40e4fec3304005255d2f09dab4e6e356767d",
+      "bytes": 24835,
       "source": "demo/modern.css"
     },
     "ui/navigation.js": {
@@ -17215,8 +17215,8 @@
     },
     "studio/configurator.js": {
       "source": "demo/studio/configurator.js",
-      "sha256": "93c50522837ca5368fe83a4f77b5b0d823cfc986e9ccbc2b23dec2d806e692e3",
-      "bytes": 23267
+      "sha256": "e02e799aded57b6e5ec817b213152835bb90ae99697c8690f796e62ed8268035",
+      "bytes": 25222
     },
     "studio/interactions.js": {
       "source": "demo/studio/interactions.js",
@@ -17225,8 +17225,8 @@
     },
     "studio/booking-handoff.js": {
       "source": "demo/studio/booking-handoff.js",
-      "sha256": "fc5d830a279fdd76e715fed317dd4cffcf3069b8d1c85757d8d5fcc33943b656",
-      "bytes": 6454
+      "sha256": "16a249cdcabe846b2093de1020927a9f4e945bd8677cec8cc577519a6ae9ac2b",
+      "bytes": 6497
     },
     "studio/assets/l-alaku-kanape-vilagos-nappali.webp": {
       "source": "demo/studio/assets/l-alaku-kanape-vilagos-nappali.webp",
@@ -17304,353 +17304,353 @@
       "bytes": 1433
     },
     "en/index.html": {
-      "sha256": "dcdd96942a0f9bc2e22993b20a173a71314f881638b0e0fee0b8983b577de3de",
-      "bytes": 113634,
+      "sha256": "c95ad3e4f594bded58fde066ede11a8d031806876bb83960080ca15cb30b5a4f",
+      "bytes": 113772,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-badacsony.html": {
-      "sha256": "51b60144e82f4098e556d3a0c6951387a42a8d9f8556835ebd2e089e0f0fd1f1",
-      "bytes": 80417,
+      "sha256": "c2fb68b0de17b80029d6e532a572741109883679df18fb717cb742f1b0cfae3e",
+      "bytes": 68895,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-baja.html": {
-      "sha256": "d4a8589c085870034f224cb2620402e8d81a6cbaeb84f8887bcd9d102629096d",
-      "bytes": 80732,
+      "sha256": "805adc404b215231b758b1c2808f40d8052ff48f259db0d05d751cb175f699fe",
+      "bytes": 75332,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-balatonalmadi.html": {
-      "sha256": "fedf12a54069067c30e24d081a34e391f45b89fb8494b8208b850de44dd4bbfe",
-      "bytes": 79633,
+      "sha256": "005038e67141f4d6412d98970f4e6ed436f62441bad7fd699ca5ed91953d190c",
+      "bytes": 68207,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-balatonboglar.html": {
-      "sha256": "75d84fcb6ab4138d739d5509fe5415e21a14a164571f6c21b87b228669bd1322",
-      "bytes": 79648,
+      "sha256": "75906e2d90dec1c9f470802d3599c6df48e32e041bf6ac39cda1c2eb107826d8",
+      "bytes": 67726,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-balatonfoldvar.html": {
-      "sha256": "26c39ced74dcfa93bd9fbd14b872ab0f2a2cc82ad526ced67a607d1bed208ab1",
-      "bytes": 79672,
+      "sha256": "23325652121116ad580d480521db6bf95c03fc256448ebed6c952fb83796759b",
+      "bytes": 68276,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-balatonfured.html": {
-      "sha256": "0d619a71f0f11bb4a4f1a4782fb2a532f0f0ac46e69072899d7ff5a241d3d140",
-      "bytes": 79522,
+      "sha256": "92bcfc8863b5ac841cd9e372f088ed62c64ee41a789475eae6104387d2e5d2fc",
+      "bytes": 68060,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-balatonfuzfo.html": {
-      "sha256": "9a2b47e62eaf9c018060b1e94e0e51674c655abb23e3c748309d26c955b1bf62",
-      "bytes": 79588,
+      "sha256": "4885d1ffe287e51ece464fc43821a7bf0ebfbf0ef8213b98a2c82b09bde48658",
+      "bytes": 67656,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-balatonkenese.html": {
-      "sha256": "4cfcfc3801d3b255df8c39647c0157fd1d3b6cdf90264aa469e216290f23f9b5",
-      "bytes": 79566,
+      "sha256": "04425ed107f229dd143a1cd00fa7bff54b65c1761cd31152ac8c9f822274052c",
+      "bytes": 67636,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-balatonlelle.html": {
-      "sha256": "13703aafe04a267069a0cf9ab899ebbfee07fb3172cc6f353909339d6ccf559d",
-      "bytes": 79514,
+      "sha256": "bbab815b4ec983932b424c01c11df293edeec0652547abef8154225dd995cd8c",
+      "bytes": 68058,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-balatonszemes.html": {
-      "sha256": "6135f59f969cba9aeb66483a18c0cd7f8b4b5e379cb0caffd1f700acf2229e28",
-      "bytes": 79597,
+      "sha256": "65823d90c07664cd93d582eda237e8980dd30fcf62e04933c92f5d75db1e7700",
+      "bytes": 67667,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-dunafoldvar.html": {
-      "sha256": "5f92a92dcdfb3179d87ce82e019152441326754bedf602d5df6a34a350e58105",
-      "bytes": 80734,
+      "sha256": "d5ad0295092deb474cefa7c732e04c499746ef49650ab4ccdea7838f216729bf",
+      "bytes": 75417,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-fonyod.html": {
-      "sha256": "d937f1eaa78802ee3391b1673f0c030164568497816505a7738562d7a58b6797",
-      "bytes": 79231,
+      "sha256": "a408d6ed9e9bd60cf3ab7a7aa0da144ebbeb5e7106e786b95255c80300b42e7a",
+      "bytes": 67651,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-gyor.html": {
-      "sha256": "167f1c65981f5e6b2a9c8338ec9b6302f6b9218f2a647010ed874ff58ee2400b",
-      "bytes": 44923,
+      "sha256": "02165698450dd5b3e3df0b1044c2549db7b4878f011dc387d795ad689c2e7eb9",
+      "bytes": 33975,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-heviz.html": {
-      "sha256": "beb577960f8829452214357cd3bafacd111f0785b8d8c566313f8fc98d607805",
-      "bytes": 79219,
+      "sha256": "1369dd39184a86e46226ebedd152a1b807cf219b06f72453d862fc67bec35ddb",
+      "bytes": 67625,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-kalocsa.html": {
-      "sha256": "7b0e6755f9efb3df766389cf2dec3edab8106f8182bc9f7fc2a0b6040af1be71",
-      "bytes": 80648,
+      "sha256": "c46b609baf0d06df3938b06cbc005577d331a4ff891753f929c399f825473dd3",
+      "bytes": 75271,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-keszthely.html": {
-      "sha256": "14993ec4f2196cb3be7257775939da4dd0100ce231368b58decc5a6c6c76b204",
-      "bytes": 79317,
+      "sha256": "f1d30f4b26e71b66fc84e59cc625e4c132558ec8b4778bd747d0b5cb5daa4f69",
+      "bytes": 67795,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-kiskoros.html": {
-      "sha256": "cc61b141b02ba840484c1ef5e6cf9c31915ee73ba5cb99e4b407a308165ca67d",
-      "bytes": 65924,
+      "sha256": "a233d5591ea6a5ce8fbafea682113f2b05537018e756cf06581fbdfd0854326f",
+      "bytes": 60568,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-komarom.html": {
-      "sha256": "b33a0f836a79ddb8ff996b844559c7356ed4f66b6691d028630d053d0a73d649",
-      "bytes": 46946,
+      "sha256": "ce5f6e50e4c7e081dd0ad5c5d2a04c9a71b3b577351ff9ff0f0e6e27095d8889",
+      "bytes": 34792,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-mosonmagyarovar.html": {
-      "sha256": "f3f69309ec4d8acf2243925e83b3b6de5a5e673ae9b981f79922c55aee95fc05",
-      "bytes": 47078,
+      "sha256": "cffeeedc7945862eef0f5bb5588fe0025d4c94404d4928d89753b97761a07c54",
+      "bytes": 35346,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-paks.html": {
-      "sha256": "8adc781744ed0d7f2bfa67ef305a6f67c8933937f49abb3380b03debf2e20121",
-      "bytes": 80734,
+      "sha256": "09912dcd524acf34ffad59c5ae90219ac9d3ac800cdd9ae9b69fdddf262d3387",
+      "bytes": 75318,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-papa.html": {
-      "sha256": "9d7d934af36986599fb1e8a28eab1640c74ce4ee5fad9fe52a933b5bd989db80",
-      "bytes": 46769,
+      "sha256": "48084b433094e4d1b73f44469a148b4737a3069da730d05e5c87d3524138ce1e",
+      "bytes": 34465,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-revfulop.html": {
-      "sha256": "fc606516153b7cd5408c0e6cb12151d1a8135fc4cb405cbc188c9c39779fd79e",
-      "bytes": 79387,
+      "sha256": "cc11ce552ce5fd7b8f0685e2273dbc93f17b1c871731612c1f3d1158146c165c",
+      "bytes": 67867,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-siofok.html": {
-      "sha256": "0b032a54d6716e3ffddc001a2ddb14730e58e775de5ab798e9c41fb218874266",
-      "bytes": 79207,
+      "sha256": "3036359a057ca67cd99c05d58c85b9299ba7ace522d3575c34e20d570895a55a",
+      "bytes": 67627,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-solt.html": {
-      "sha256": "b654891dcba19330697029c1394cbe60e66a222814480f33ecd49aba7a2a733e",
-      "bytes": 65824,
+      "sha256": "3d5c9081240018beab7bd7d583bc928831e9087cc0d39821dcc9ad6970fe9877",
+      "bytes": 60408,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-sopron.html": {
-      "sha256": "b8768c266ac0ea0db59922321868b6102da2a3c3d38774040c764c0a1f7959ee",
-      "bytes": 47092,
+      "sha256": "29c77dece6b420561acf0ce094f5aeafe817e6c807b8db8ed29283aa956ce74a",
+      "bytes": 34866,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-szekszard.html": {
-      "sha256": "c344891ea439569a6bb620c723670c233a85d7338cef26b4f1e236cad4b7f58f",
-      "bytes": 65824,
+      "sha256": "892533db0ae4cec96e5f7c9c6f4317bee387157c6312c50062cb4cefd798c79a",
+      "bytes": 60654,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-szombathely.html": {
-      "sha256": "a8090e37f51e0ea44189950d3d2b200eeaf19440909131f8454a3282479415f1",
-      "bytes": 46987,
+      "sha256": "b148c9e7d1ecbea17bab0b4d1741f00d80cbda0b3394dfac73e5825474e26172",
+      "bytes": 35011,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-tapolca.html": {
-      "sha256": "e56675707153ca240a48de24d87aa4acd83cf8303beea2f30462538ed735848c",
-      "bytes": 79181,
+      "sha256": "486e0b183fc358bceedc2495ef75ffe29a4aaf5c02ee8eade1b1385d5934c079",
+      "bytes": 67615,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-tata.html": {
-      "sha256": "98249469a0331f22e6af660152ae4fc054759c12cee974a425c9f497e367af33",
-      "bytes": 46566,
+      "sha256": "473cdeca4d539a7fb4e1396e6c2cb72c68634fef2eeb51df18a61a67b7076633",
+      "bytes": 34240,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-tatabanya.html": {
-      "sha256": "988a591e9dd7623567ab2812e340ea751261ff8802e10ab485e8ab931605ae71",
-      "bytes": 47038,
+      "sha256": "2fa0a1b58cc6f2fbb3d7f797942371551b5d46e90a7be389a8b611c4b3406723",
+      "bytes": 34984,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-tihany.html": {
-      "sha256": "1cbc25fcc31d21300feebead6164fb515fe6ecb04fd27b3786c78b2e848c4daa",
-      "bytes": 79160,
+      "sha256": "6f7f6484cc1b4c1a32e3041bb769b2ebff0bf0ed46c3be562854181445994f61",
+      "bytes": 67572,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-veszprem.html": {
-      "sha256": "e456e1653152970c70ab552d63c02b165904c3a97982c3f39ccd28a30cbc2afe",
-      "bytes": 46983,
+      "sha256": "bfec5617755114e4019835fdbb3f5e00f841374915a7cd2d4f90b89c0c3f30bd",
+      "bytes": 34879,
       "source": "release-support/english-overlay"
     },
     "en/mattress-cleaning-zamardi.html": {
-      "sha256": "07a00170d912198b14e9252cde0ceacaf6110ea932517924f06dba5bbcbfae6e",
-      "bytes": 79233,
+      "sha256": "6f50bed7534dbffb6cc01b03f8a5877f507f6b798c6d6e5249208597321f023f",
+      "bytes": 67675,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-and-mattress-cleaning.html": {
-      "sha256": "674b138070660edb18bb2aed983f04c31d2840d08cc586a8d3d1908ac62fa50c",
+      "sha256": "bd21eaf8c9644a4db6d90a3515e05128d98cb6b6e6acb8d5c914bbf3cdc46aac",
       "bytes": 102877,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-badacsony.html": {
-      "sha256": "590d7ad7d61d28bccf37a598db2b9547064c618ed96087ed386173c585e207bb",
-      "bytes": 142193,
+      "sha256": "a738274b2f24038229cf7afcdb060c9fb6b505af5971cd8a89625d050c608360",
+      "bytes": 129616,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-baja.html": {
-      "sha256": "adef0da445ab14651c0ead6482ed197af9f4d434434ab10fa09a5936474c03fe",
-      "bytes": 88128,
+      "sha256": "47fb563a9d062d0c5c36c7fedc164ae2ed307c099110f196055295edcc09bd50",
+      "bytes": 82712,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-balatonalmadi.html": {
-      "sha256": "3a9e5e3ce64b04c65b2a4e74993a5ce230a08ea067c954feb1d14c1f2771a117",
-      "bytes": 142766,
+      "sha256": "b637c6106e27fc57ff3cbf3e8cd87a6c279f236ee51758b0a6cdd8d3a56541d5",
+      "bytes": 130315,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-balatonboglar.html": {
-      "sha256": "6a9dcefb2e6e40a9791f48b2515b85e45c32acdf436fef14cf6919dcfe6706ee",
-      "bytes": 142704,
+      "sha256": "5f0ec900dd544e123296aa8889765baed3319c78564fb2d6a186158a0bf9b217",
+      "bytes": 129645,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-balatonfoldvar.html": {
-      "sha256": "7ba96dcd423578c3bdef81227d4fc918a09de0c4444dc69186122dd2b7fdce08",
-      "bytes": 142851,
+      "sha256": "ba737f9eb69cb7b4f97d14fd9690f09aa544c38c051fd984a74fc4ed8e8a6210",
+      "bytes": 130439,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-balatonfured.html": {
-      "sha256": "537822f77dff8a0cef29fff4ba1673362baf024302bcb17a89ae399ffa2f7002",
-      "bytes": 142588,
+      "sha256": "27dbc12285b3816493687f6daac359c48eabcebc662986e455bbf3c88ec78ceb",
+      "bytes": 130094,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-balatonfuzfo.html": {
-      "sha256": "34854cc8bc71a5153bdbaf36a1bb2e21a6e93e3c16668226229dc505ce3697e1",
-      "bytes": 142427,
+      "sha256": "1b1a9ab43a74ac229178345a8191df92d4ec5130c328525c2607a30a9fc58b68",
+      "bytes": 129355,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-balatonkenese.html": {
-      "sha256": "9ca75ad7fd2747600a901e53d31efeaf306e47e8c4a7d4ba12d31cb44b8ca77e",
-      "bytes": 142567,
+      "sha256": "2d981e5c771b9b0bda7b933daa98a2ae48528561e0eb3b879ac6b4e12bea92af",
+      "bytes": 129498,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-balatonlelle.html": {
-      "sha256": "f982833780c4e827dff5d5a8c0f5daead6b045bb5606c3c73a6846f489f336b6",
-      "bytes": 142570,
+      "sha256": "f3dc5730fe05f084ab3413a3685ef5c47d03d32624c67b9603e439334cae4045",
+      "bytes": 130080,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-balatonszemes.html": {
-      "sha256": "b40fc81b65be90c4fdbda181b74b221b2683372eddfedbd10a4d85dd24f98eea",
-      "bytes": 142391,
+      "sha256": "cfd5fc500ad36a590d392f1f3e9a549017fa01cab0b9cb37b1d167d0ea1a8eea",
+      "bytes": 129322,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-before-after.html": {
-      "sha256": "8a5bf43050c86bcbbaa2b2e2877ae6bccb0b39912f79652d028d6b932bd9cbe4",
+      "sha256": "10479f4003f202f71c059679ae253f2ccca7f1c423dd528d700ee7299ea4e23f",
       "bytes": 203297,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-dunafoldvar.html": {
-      "sha256": "aebd274f71dd7d9f48cc8e0b0124d5a1ef98ec97d2a7576843db1eb44542d847",
-      "bytes": 88159,
+      "sha256": "a1b13c051010876a4a877bd84ad0f106ba6fbdad7434ea37f1157c93d219c7ec",
+      "bytes": 82826,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-fonyod.html": {
-      "sha256": "48976b11548a9b830ea2fc130fec2763b41222c58ca45e72c20ed5992b18b185",
-      "bytes": 142027,
+      "sha256": "bd96274744f52de39e0bc50d065f1baeca078699d0903d798730ef913f496d2a",
+      "bytes": 129373,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-gyor.html": {
-      "sha256": "ea88d8cb9b254e48c6ade817ab03c63be6d5388a451a0b60e6668fda09de047b",
-      "bytes": 114447,
+      "sha256": "de2eba2dde712a987b49b291e068a3d6f61f4d995b193a628e3ce77e3459eece",
+      "bytes": 102277,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-heviz.html": {
-      "sha256": "b2c17490eeaa9c53bf5c301e023a1defea9825616f72ba3587b7f94dd9533a49",
-      "bytes": 142125,
+      "sha256": "86b28249f428638428375a42f4a7a715c605cb3145434ff3f6a65403a5160dc6",
+      "bytes": 129452,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-kalocsa.html": {
-      "sha256": "5dbc64509551ab535242065a26e7ee6ccf6769bb6e55db625d0a0ac128fc7998",
-      "bytes": 88245,
+      "sha256": "8e5398a55b43ff7b2eeef773d05e73cb9a9533c6d0ee1cf53e8bd6e30255fa03",
+      "bytes": 82852,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-keszthely.html": {
-      "sha256": "5b074bf1d7f4eb403fb2fac553c0336111c3d6c4c5d98c36e858d419765f45d4",
-      "bytes": 142097,
+      "sha256": "b764a86bc1cc2d0fdeac6073e02c8067ec51d4d213d5fc686f4d529f911e8b9e",
+      "bytes": 129520,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-kiskoros.html": {
-      "sha256": "cb2a701f816bd52039973931d27c07b5bf02f5a563a1fb8f52b147e2fa7d7b38",
-      "bytes": 88065,
+      "sha256": "859915bdb4ea7558f243fcb012e53b9e40d03937837c088bd63d5fd4b250db35",
+      "bytes": 82693,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-komarom.html": {
-      "sha256": "23a3a416f608ba9527d7db998807dc1424387de317bf0a31a7b9cc2f21fc3a3f",
-      "bytes": 111568,
+      "sha256": "ef35e53b9e5b4c204c135add95ac3ac92e63a17938fe3829af86e81e6812412f",
+      "bytes": 99173,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-mosonmagyarovar.html": {
-      "sha256": "767e7bd8cac5c457be5cd51f4e39181b15944652cfeeba86bbe1049c852cd36c",
-      "bytes": 112037,
+      "sha256": "0ca2d86a9ccc04a993f5c1ad49d76d95588969e464c287ff7faf05169d65a75e",
+      "bytes": 99918,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-paks.html": {
-      "sha256": "7062127f8a76c5a6ff5af9b0a9c28d0cd6c76192bc35477d2bf9890d40fab057",
-      "bytes": 88026,
+      "sha256": "23aeb812d4e31f9a86ebf8b513278b12b30a76c4f5808a09e6c8896214ac4b4b",
+      "bytes": 82594,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-papa.html": {
-      "sha256": "0e5e958587fbbea2f033dfa1800d662ab97aa5c85d7c6665120f641482ec2c5b",
-      "bytes": 111285,
+      "sha256": "38bd9fcd0919f90408b1a8d002b976d2da4ceccc04799386bf6795a83d672229",
+      "bytes": 98791,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-revfulop.html": {
-      "sha256": "f93e0715c16037de56a49b2a18d6fbfc2a99674bb3ab555595a3b4e95fa22a48",
-      "bytes": 142353,
+      "sha256": "81031a04773a7c380ab2d603c140f4f6e7f1e3e9bb7fd5ea81e1c9d5cac5298d",
+      "bytes": 129777,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-siofok.html": {
-      "sha256": "f51f30fdc0689f02e50b77f47ed608b4b6a1031ec5cf02a7679ae5320a2a4cf9",
-      "bytes": 142217,
+      "sha256": "1e8bbfab7102881c0d95bb2572bcc99a8256beab60bb77b6c3171ab83840213d",
+      "bytes": 129563,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-solt.html": {
-      "sha256": "918b9b6c2f84cb821c58e0e523e56d67d9523a4de538a361cda5a936a40a4ddd",
-      "bytes": 87994,
+      "sha256": "6e227d47044347eca015e49597118fd9760a88775ddcbe16945b56259ea08b96",
+      "bytes": 82562,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-sopron.html": {
-      "sha256": "3574156ece6d42a5d95ecccb7ae7a0a0f5e58d8cdf625e670096cef693e660d2",
-      "bytes": 111504,
+      "sha256": "e6bb85d34d828b3e3b698d735d53468f159f0fe8bda6b0064a28096c84b17b10",
+      "bytes": 99064,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-szekszard.html": {
-      "sha256": "6276c01ec0f6a6bfaf5aa4667f71013f95f3d2d8c82e6aa250396db4f4884767",
-      "bytes": 88177,
+      "sha256": "25b64eec8126134561a8049a22ec2b811ff71ef972ee3cf0e7c199943a49ca15",
+      "bytes": 82814,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-szombathely.html": {
-      "sha256": "5afb61875b3f0ef20146521f681799a7133f82993dff92753f76c0ea51e39ba8",
-      "bytes": 111686,
+      "sha256": "0a7ef4019b1715532f40df0cef6ac353e2a3635181d66a88e155f5a3e4b2b111",
+      "bytes": 99411,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-tapolca.html": {
-      "sha256": "1b5b1f1895ea9b879b3d595079c6d5a35e739a3faf430de7df126a1a702d8e5d",
-      "bytes": 141989,
+      "sha256": "cfc31175a560bad365948259eebc7e035c3ab01454d4bbfa46f9bb567509041f",
+      "bytes": 129354,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-tata.html": {
-      "sha256": "82f01b464ff4ca8108efc154512bf3243f6c51970e60c5c2a4bfa9c2c471ec08",
-      "bytes": 111223,
+      "sha256": "624a442cc1816d131fde828e13879d4317f768d65a0160cefe81167937cf8787",
+      "bytes": 98717,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-tatabanya.html": {
-      "sha256": "ff381668f96d28b36b3b4de0e22314a4c8794bc4220e997eb8d816fc7dfc7f02",
-      "bytes": 111468,
+      "sha256": "51e2d06acf2f73645056e15e30fb8eff325cfd9af636f42e1362606407c9acda",
+      "bytes": 99139,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-tihany.html": {
-      "sha256": "583038754cd55b02647bfe1f2cdde681313e39bdb453baae554d38ff6e991451",
-      "bytes": 141789,
+      "sha256": "74258eecfcfe929544488e6c04e6b510d2e8ade00dcfe20d4601e843e61896ab",
+      "bytes": 129125,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-veszprem.html": {
-      "sha256": "367fd3fca945c76cdf624d37e4df1c18aef218463831f27ec0634dc563d83de7",
-      "bytes": 111388,
+      "sha256": "a178f731dbbb6c8f171b43b79a85d37309e9ee1a937239ac118b3b6da283aa92",
+      "bytes": 99026,
       "source": "release-support/english-overlay"
     },
     "en/upholstery-cleaning-zamardi.html": {
-      "sha256": "6126da157dedd143497956e33c28b2a43fa1a12507bc2157c963c51f0c8b18bc",
-      "bytes": 142066,
+      "sha256": "c860843492b3d9d2c0aef53cc7cced40ee01dbc3f89e1df96f52a9cde6581a6d",
+      "bytes": 129441,
       "source": "release-support/english-overlay"
     },
     "ui/booking-live-en.js": {
-      "sha256": "527ec8f05779ed73b48198dc00348b783060e6a907f832f3c22dbeb3e774e8b6",
-      "bytes": 57522,
+      "sha256": "572a91070500894f468c89d7c6cdadf9657f1a73851259b887b311fccc9eb1f4",
+      "bytes": 60905,
       "source": "release/ui/booking-live.js"
     }
   },
@@ -17685,6 +17685,6 @@
   },
   "contentClarityOverlay": {
     "path": "release-support/content-clarity/overlay.json",
-    "sha256": "89d2de22882a8991498587391cb7a108c9ef1113a0efb05347e78c6747ac5420"
+    "sha256": "e9689db02f161d4d45813cc471eab303f5bba037aa7a966dd4b578585e2f555a"
   }
 }

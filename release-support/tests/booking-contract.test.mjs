@@ -221,7 +221,7 @@ test('large orders preserve original nested payload and require explicit backend
         assert.deepEqual(Object.keys(payload).sort(), ['type', 'source', 'timestamp', 'customer', 'location', 'order', 'totals', 'message'].sort());
         assert.deepEqual(payload.totals, { estimatedPrice: 155000, estimatedDuration: 520, discount: 0, currency: 'HUF' });
         assert.equal(payload.customer.name, 'Offline Company');
-        assert.equal(payload.order.items[0].unitPrice, 18000);
+        assert.equal(payload.order.items[0].unitPrice, 7900);
         assert.equal(h.run('BookingTransport.largeOrderSent'), accepted);
         assert.equal(h.document.querySelector('.large-order-submit').disabled, accepted);
     }

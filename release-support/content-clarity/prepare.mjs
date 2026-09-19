@@ -3,6 +3,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import crypto from 'node:crypto';
+import {applyGyorLocal} from './gyor-local.mjs';
+import {applyLocalNavigation} from './local-navigation.mjs';
 const root=path.resolve(import.meta.dirname,'../..'),here=import.meta.dirname;
 const hash=s=>crypto.createHash('sha256').update(s).digest('hex');
 const oldOverlay=fs.existsSync(path.join(here,'overlay.json'))?JSON.parse(fs.readFileSync(path.join(here,'overlay.json'))):null;
@@ -146,8 +148,10 @@ for(const [name,isEn]of [['matractisztitas-gyor.html',false],['en/mattress-clean
   matchEdit(name,/<p data-legacy-style="1"><strong>Hygienic deep cleaning[\s\S]*?<\/p>/g,'<p data-legacy-style="1"><strong>Wet stain treatment:</strong> An optional service. Single and double mattresses: +6,000 HUF per treated side; children’s and cot mattresses: +3,500 HUF per side. Treating both sides doubles this extra charge. '+dryEn+'</p>');
  }
 }
+applyGyorLocal({read,edit,matchEdit,tariff});
+applyLocalNavigation({read,edit,root});
 // Version every changed shared script wherever it is referenced.
-const scripts=Object.keys(changes).filter(n=>n.endsWith('.js'));
+const scripts=Object.keys(changes).filter(n=>/\.(js|css)$/.test(n));
 for(const name of fs.readdirSync(path.join(root,'release')).filter(n=>n.endsWith('.html')).concat(fs.readdirSync(path.join(root,'release/en')).filter(n=>n.endsWith('.html')).map(n=>'en/'+n))){
  for(const asset of scripts){
   const pattern=new RegExp(asset.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\?v=[a-zA-Z0-9_-]+','g');

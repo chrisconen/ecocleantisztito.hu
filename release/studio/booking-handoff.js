@@ -29,7 +29,7 @@
         const allK=selection.items.every(i=>i.id.startsWith('karpit_')),allM=selection.items.every(i=>i.id.startsWith('matrac_')),service=allK?'Kárpit':allM?'Matrac':'Mindkettő';
         const serviceButton=[...document.querySelectorAll('#serviceType [data-value]')].find(b=>b.dataset.value===service);if(!serviceButton)throw Error('A szolgáltatás nem tölthető be.');
         // Validate every tariff before mutating the existing cart.
-        api.assertTariff(PRICING, UPSELLS, DISCOUNTS, selection);
+        api.assertTariff(activePricing(selection.city,selection.travelZone), UPSELLS, DISCOUNTS, selection);
         imported=true;accept.disabled=true;
         State.city=null;citySelect.value='';State.travelZone=null;BookingCalendar.setCity(null);
         handleServiceType(serviceButton);

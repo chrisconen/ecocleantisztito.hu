@@ -272,14 +272,14 @@ function populateItems() {
 
     if (showKarpit) {
         container.innerHTML += '<div class="item-group-title">🛋️ Upholstery cleaning</div>';
-        Object.entries(PRICING.karpit).forEach(([id, item]) => {
+        Object.entries(activePricing().karpit).forEach(([id, item]) => {
             container.innerHTML += createItemHTML('karpit', id, item);
         });
     }
 
     if (showMatrac) {
         container.innerHTML += '<div class="item-group-title" style="margin-top: 1.5rem;">🛏️ Mattress cleaning</div>';
-        Object.entries(PRICING.matrac).forEach(([id, item]) => {
+        Object.entries(activePricing().matrac).forEach(([id, item]) => {
             container.innerHTML += createItemHTML('matrac', id, item);
         });
     }
@@ -346,7 +346,7 @@ function createItemHTML(category, id, item) {
                 <div class="pillow-extra">
                     <label class="upsell-text" for="pillows-${fullId}">${PILLOW_CLEANING.name}
                         <small>${PILLOW_CLEANING.description}</small>
-                        <small>Total quantity for the items selected here · ${PILLOW_CLEANING.price.toLocaleString('en-GB')} HUF each</small>
+                        <small>Total quantity for the items selected here · ${activePillowPrice().toLocaleString('en-GB')} HUF each</small>
                     </label>
                     <input class="pillow-count" id="pillows-${fullId}" type="number" min="0" step="1" value="0" inputmode="numeric"
                         onchange="setPillowCount('${fullId}', this.value)">
@@ -465,7 +465,7 @@ function setPillowCount(fullId, value) {
 
 function getItemCleaningExtras(fullId, item) {
     const extras = [];
-    const pricing = PRICING.matrac[fullId.slice(7)];
+    const pricing = activePricing().matrac[fullId.slice(7)];
     if (fullId.startsWith('matrac_') && pricing) {
         item.upsells.forEach(id => {
             const extra = UPSELLS.matrac[id];
@@ -477,7 +477,7 @@ function getItemCleaningExtras(fullId, item) {
     }
     if (fullId.startsWith('karpit_') && PILLOW_CLEANING.itemIds.includes(fullId.slice(7)) && item.pillowCount > 0) {
         extras.push({ name: PILLOW_CLEANING.description, quantity: item.pillowCount, unit: 'pcs',
-            unitPrice: PILLOW_CLEANING.price, total: PILLOW_CLEANING.price * item.pillowCount, duration: PILLOW_CLEANING.duration * item.pillowCount });
+            unitPrice: activePillowPrice(), total: activePillowPrice() * item.pillowCount, duration: PILLOW_CLEANING.duration * item.pillowCount });
     }
     return extras;
 }
@@ -485,7 +485,7 @@ function getItemCleaningExtras(fullId, item) {
 // Include readable details in the existing message field for booking recipients.
 function bookingMessageWithExtras(message) {
     const lines = Object.entries(State.selectedItems).flatMap(([fullId, item]) => {
-        const pricing = PRICING[item.category]?.[fullId.slice(fullId.indexOf('_') + 1)];
+        const pricing = activePricing()[item.category]?.[fullId.slice(fullId.indexOf('_') + 1)];
         return getItemCleaningExtras(fullId, item).map(extra =>
             `${pricing.name}: ${extra.name} – ${extra.quantity} ${extra.unit} × ${extra.unitPrice} Ft = ${extra.total} HUF`);
     });
@@ -538,7 +538,7 @@ function updateBadges() {
     //     const separatorIndex = fullId.indexOf('_');
     //     const category = fullId.substring(0, separatorIndex);
     //     const id = fullId.substring(separatorIndex + 1);
-    //     const pricing = category === 'karpit' ? PRICING.karpit[id] : PRICING.matrac[id];
+    //     const pricing = category === 'karpit' ? activePricing().karpit[id] : activePricing().matrac[id];
     //     return `
     //         <span class="badge">
     //             ${item.count}x ${pricing?.name || id}
@@ -566,7 +566,33 @@ function removeItem(fullId) {
 // SUMMARY CALCULATION
 // ═══════════════════════════════════════════════════════════════════════════════
 
+
+const GYOR_CITY_TARIFF = {"karpit":{"szofa":{"price":7900},"l_kanape":{"price":17900},"u_kanape":{"price":18900},"fotel":{"price":3900},"ebedlo_szek":{"price":2400},"irodai_szek":{"price":2400}},"matrac":{"egyagyas_a":{"price":4900,"wetPrice":1900,"framePrice":3900},"egyagyas_ab":{"price":5900,"wetPrice":1900,"framePrice":3900},"francia_a":{"price":6900,"wetPrice":1900,"framePrice":3900},"francia_ab":{"price":7900,"wetPrice":1900,"framePrice":3900},"gyerek_a":{"price":2900,"wetPrice":900,"framePrice":3900},"gyerek_ab":{"price":3900,"wetPrice":900,"framePrice":3900},"kisagy_a":{"price":2400,"wetPrice":900,"framePrice":3900},"kisagy_ab":{"price":3400,"wetPrice":900,"framePrice":3900}},"pillowPrice":400};
+function isGyorCity(city=State.city,zone=State.travelZone){return city==='gyor'&&(zone==='belvaros'||zone==='kulso');}
+function activePricing(city=State.city,zone=State.travelZone){
+ if(!isGyorCity(city,zone))return PRICING;
+ const merge=group=>Object.fromEntries(Object.entries(PRICING[group]).map(([id,p])=>[id,{...p,...GYOR_CITY_TARIFF[group][id]}]));
+ return {...PRICING,karpit:merge('karpit'),matrac:merge('matrac'),travelZones:{...PRICING.travelZones,belvaros:{...PRICING.travelZones.belvaros,fee:0},kulso:{...PRICING.travelZones.kulso,fee:0}}};
+}
+function activePillowPrice(){return isGyorCity()?GYOR_CITY_TARIFF.pillowPrice:PILLOW_CLEANING.price;}
+function refreshLocalPriceLabels(){
+ const pricing=activePricing();
+ document.querySelectorAll('[data-item-id]').forEach(card=>{
+  const fullId=card.dataset.itemId,sep=fullId.indexOf('_'),p=pricing[fullId.slice(0,sep)]?.[fullId.slice(sep+1)];if(!p)return;
+  const label=card.querySelector('.item-price');if(label)label.textContent=p.price.toLocaleString('en-GB')+' Ft';
+  card.querySelectorAll('.upsell-checkbox').forEach(row=>{const input=row.querySelector('input'),out=row.querySelector('.upsell-price');if(!input||!out)return;
+   const id=(input.getAttribute('onchange')||'').match(/,\s*'([^']+)'/)?.[1],extra=UPSELLS.matrac[id];
+   const value=id==='atkairtas'?p.atkaPrice:id==='agyazhato'?p.agyazhatoPrice:extra?p[extra.priceKey]:undefined;
+   if(value!==undefined)out.textContent='+'+value.toLocaleString('en-GB')+' Ft'+(extra?(extra.priceType==='perSide'?'/side':'/bed'):'');
+  });
+  const pillow=card.querySelector('.pillow-extra .upsell-text small:last-child');if(pillow)pillow.textContent='Total cushions for these items · '+activePillowPrice().toLocaleString('en-GB')+' Ft/item';
+ });
+ document.querySelectorAll('[name="travelZone"]').forEach(r=>{const out=r.closest('label')?.querySelector('.zone-price');if(out)out.textContent=activePricing(State.city,r.value).travelZones[r.value].fee.toLocaleString('en-GB')+' Ft';});
+ const notice=document.getElementById('gyorLocalTariffNotice');if(notice)notice.textContent=isGyorCity()?'Győr city prices active · free travel within city limits.':'For Győr city prices, select Győr and a city zone in the address section. Other towns and surrounding villages use the standard tariff.';
+}
+
 function updateSummary() {
+    refreshLocalPriceLabels();
     let subtotal = 0;
     let totalDuration = 0;
     let discount = 0;
@@ -585,7 +611,7 @@ function updateSummary() {
         const separatorIndex = fullId.indexOf('_');
         const category = fullId.substring(0, separatorIndex);
         const id = fullId.substring(separatorIndex + 1);
-        const pricing = category === 'karpit' ? PRICING.karpit[id] : PRICING.matrac[id];
+        const pricing = category === 'karpit' ? activePricing().karpit[id] : activePricing().matrac[id];
 
         if (!pricing) return;
 
@@ -680,7 +706,7 @@ function updateSummary() {
 
     // Travel fee
     if (State.travelZone && subtotal > 0) {
-        const zone = PRICING.travelZones[State.travelZone];
+        const zone = activePricing().travelZones[State.travelZone];
         if (zone) {
             subtotal += zone.fee;
             details.push({
@@ -891,7 +917,7 @@ async function submitLargeOrder() {
         const separatorIndex = fullId.indexOf('_');
         const category = fullId.substring(0, separatorIndex);
         const id = fullId.substring(separatorIndex + 1);
-        const pricing = category === 'karpit' ? PRICING.karpit[id] : PRICING.matrac[id];
+        const pricing = category === 'karpit' ? activePricing().karpit[id] : activePricing().matrac[id];
         if (pricing) {
             itemDetails.push({
                 name: pricing.name,
@@ -1087,6 +1113,10 @@ async function submitBooking(event) {
         return false;
     }
 
+    if(isGyorCity()&&!/^gy[oő]r(?:$|[\s,\-])/iu.test(city.trim())){
+        alert("Győr city prices apply only to addresses within Győr. Please correct the town or travel zone.");
+        document.getElementById('cityInput').focus();return false;
+    }
     const fullAddress = `${street}, ${plz} ${city}, Magyarország`;
 
     // Get selected calendar slot data
