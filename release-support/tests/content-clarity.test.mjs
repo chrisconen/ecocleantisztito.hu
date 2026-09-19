@@ -16,17 +16,17 @@ const item=(id,count=1,upsells=[])=>({id,count,upsells});
 function compare(s){
  const selectedItems=Object.fromEntries(s.items.map(i=>[i.id,{count:i.count,category:i.id.split('_')[0],upsells:[...i.upsells,...(i.id.startsWith('matrac_')?s.extras.filter(x=>x.startsWith('matrac_')).map(x=>x.slice(7)):[])]}]));
  const globalUpsells=Object.fromEntries(s.extras.filter(x=>x.startsWith('karpit_')).map(x=>[x,{category:'karpit',upsellId:x.slice(7)}]));
- h.run(`Object.assign(State,${JSON.stringify({selectedItems,globalUpsells,travelZone:s.travelZone})});updateSummary();`);
+ h.run(`Object.assign(State,${JSON.stringify({selectedItems,globalUpsells,city:s.city,travelZone:s.travelZone})});updateSummary();`);
  const r=api.calculate(s);
  assert.deepEqual([r.total,r.duration,r.discount,r.isLargeOrder],h.json('[State.totalPrice,State.totalDuration,State.discount,State.isLargeOrder]'),JSON.stringify(s));
- assert.equal(api.assertTariff(h.json('PRICING'),h.json('UPSELLS'),h.json('DISCOUNTS'),s),true);
+ assert.equal(api.assertTariff(h.json('activePricing()'),h.json('UPSELLS'),h.json('DISCOUNTS'),s),true);
  return r;
 }
 test('explicit owner price examples, one/two sides and cleaning-time additions',()=>{
- assert.equal(compare(selection([item('karpit_szofa',1,['atkairtas'])])).total,25500);
- assert.equal(compare(selection([item('karpit_l_kanape',1,['atkairtas'])])).total,27500);
- assert.equal(compare(selection([item('matrac_francia_a')],['matrac_nedves_tisztitas'])).total,23500);
- assert.equal(compare(selection([item('matrac_francia_ab')],['matrac_nedves_tisztitas'])).total,35000);
+ assert.equal(compare(selection([item('karpit_szofa',1,['atkairtas'])])).total,11900);
+ assert.equal(compare(selection([item('karpit_l_kanape',1,['atkairtas'])])).total,21900);
+ assert.equal(compare(selection([item('matrac_francia_a')],['matrac_nedves_tisztitas'])).total,8800);
+ assert.equal(compare(selection([item('matrac_francia_ab')],['matrac_nedves_tisztitas'])).total,11700);
 });
 test('Studio and booking agree across every item, extras, quantities, zones and discount boundaries',()=>{
  let cases=0;
@@ -37,6 +37,21 @@ test('Studio and booking agree across every item, extras, quantities, zones and 
  }
  for(const zone of Object.keys(api.zones))compare(selection([item('karpit_l_kanape',2,['atkairtas']),item('matrac_francia_ab'),item('matrac_gyerek_a')],Object.keys(api.extras),zone));
  assert.equal(cases,1000);
+});
+test('Győr reductions stop at city limits and changing location restores the standard tariff',()=>{
+ for(const [city,zone,expected]of [['gyor','belvaros',7900],['gyor','kulso',7900],['gyor','20km',22500],['gyor','40km',23500],['mosonmagyarovar','belvaros',21500],['papa','kulso',22000],['szombathely','belvaros',21500],['tatabanya','kulso',22000],['gyor','belvaros',7900]]){
+  const s={...selection([item('karpit_szofa')],[],zone),city,sourcePage:'karpittisztitas-'+city+'.html'};
+  assert.equal(compare(s).total,expected,city+'/'+zone);
+ }
+});
+test('local wet mattress totals undercut researched benchmarks including both sides',()=>{
+ for(const [id,expected,benchmark]of [['egyagyas_a',6800,7000],['egyagyas_ab',9700,10000],['francia_a',8800,10000],['francia_ab',11700,12000],['gyerek_ab',5700,6000],['kisagy_ab',5200,6000]]){
+  const r=compare(selection([item('matrac_'+id)],['matrac_nedves_tisztitas']));assert.equal(r.total,expected);assert.ok(r.total<benchmark);
+ }
+});
+test('a local price preview cannot import into an outdated main-booking tariff',()=>{
+ const s=selection([item('karpit_szofa')]);
+ assert.throws(()=>api.assertTariff(h.json('PRICING'),h.json('UPSELLS'),h.json('DISCOUNTS'),s),/díjak/);
 });
 test('changed extra tariffs fail before a cart can be imported',()=>{
  const s=selection([item('karpit_szofa',1,['atkairtas']),item('matrac_francia_ab')],['matrac_nedves_tisztitas']);
@@ -78,6 +93,25 @@ test('actual DOM handoff transfers mattress extras to each item and preserves ca
 test('actual DOM handoff rejects a stale tariff without replacing the existing cart',async()=>{
  const {dom,w,before}=await importFixture(selection([item('karpit_szofa',1,['atkairtas'])]),true);
  try{assert.equal(w.eval('JSON.stringify(State.selectedItems)'),before);assert.match(w.document.querySelector('.studio-handoff [role="status"]').textContent,/díjak/);}finally{dom.window.close();}
+});
+test('actual form shows correct item, mattress-extra and travel prices after city changes',async()=>{
+ const {dom,w}=await importFixture(selection([item('karpit_szofa'),item('matrac_francia_ab')],['matrac_nedves_tisztitas']));
+ try{
+  const normalize=s=>s.replace(/\s/g,'');
+  assert.equal(normalize(w.document.querySelector('[data-item-id="karpit_szofa"] .item-price').textContent),'7900Ft');
+  assert.equal(normalize(w.document.querySelector('[name="travelZone"][value="belvaros"]').closest('label').querySelector('.zone-price').textContent),'0Ft');
+  const before=w.eval('JSON.stringify(State.selectedItems)');
+  w.eval("handleCityChange({value:'papa'})");
+  assert.equal(w.eval('JSON.stringify(State.selectedItems)'),before);
+  assert.equal(normalize(w.document.querySelector('[data-item-id="karpit_szofa"] .item-price').textContent),'18000Ft');
+  assert.match(w.document.querySelector('[data-item-id="matrac_francia_ab"] .mattress-extra .upsell-price').textContent.replace(/\s/g,''),/6000/);
+  assert.equal(normalize(w.document.querySelector('[name="travelZone"][value="belvaros"]').closest('label').querySelector('.zone-price').textContent),'3500Ft');
+  w.eval("handleCityChange({value:'gyor'});handleZoneChange({value:'20km'})");
+  assert.equal(normalize(w.document.querySelector('[data-item-id="karpit_szofa"] .item-price').textContent),'18000Ft');
+  w.eval("handleZoneChange({value:'kulso'})");
+  assert.equal(normalize(w.document.querySelector('[data-item-id="karpit_szofa"] .item-price').textContent),'7900Ft');
+  assert.match(w.document.querySelector('[data-item-id="matrac_francia_ab"] .mattress-extra .upsell-price').textContent.replace(/\s/g,''),/1900/);
+ }finally{dom.window.close();}
 });
 test('Győr published copy and structured data contain the confirmed drying range and current booking channels',()=>{
  for(const name of ['index.html','karpittisztitas-gyor.html','matractisztitas-gyor.html','en/index.html','en/upholstery-cleaning-gyor.html','en/mattress-cleaning-gyor.html']){

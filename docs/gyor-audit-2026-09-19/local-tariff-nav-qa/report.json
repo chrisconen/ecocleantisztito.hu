@@ -1,0 +1,91 @@
+[
+  {
+    "file": "karpittisztitas-gyor.html",
+    "width": 390,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "karpittisztitas-gyor.html",
+    "width": 1440,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "karpittisztitas-szombathely.html",
+    "width": 390,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "karpittisztitas-szombathely.html",
+    "width": 1440,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "matractisztitas-tatabanya.html",
+    "width": 390,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "matractisztitas-tatabanya.html",
+    "width": 1440,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "takaritas-szombathely.html",
+    "width": 390,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "takaritas-szombathely.html",
+    "width": 1440,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "karpittisztitas-paks.html",
+    "width": 390,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "karpittisztitas-paks.html",
+    "width": 1440,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "komarom.html",
+    "width": 390,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "komarom.html",
+    "width": 1440,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "en/upholstery-cleaning-szombathely.html",
+    "width": 390,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "en/upholstery-cleaning-szombathely.html",
+    "width": 1440,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "flow": "Győr sofa city → surroundings → city → booking import",
+    "total": 7900,
+    "passed": true
+  }
+]

@@ -189,5 +189,70 @@
       "percent": 5,
       "label": "3+ bútor kedvezmény"
     }
+  },
+  "gyorCity": {
+    "karpit": {
+      "szofa": {
+        "price": 7900
+      },
+      "l_kanape": {
+        "price": 17900
+      },
+      "u_kanape": {
+        "price": 18900
+      },
+      "fotel": {
+        "price": 3900
+      },
+      "ebedlo_szek": {
+        "price": 2400
+      },
+      "irodai_szek": {
+        "price": 2400
+      }
+    },
+    "matrac": {
+      "egyagyas_a": {
+        "price": 4900,
+        "wetPrice": 1900,
+        "framePrice": 3900
+      },
+      "egyagyas_ab": {
+        "price": 5900,
+        "wetPrice": 1900,
+        "framePrice": 3900
+      },
+      "francia_a": {
+        "price": 6900,
+        "wetPrice": 1900,
+        "framePrice": 3900
+      },
+      "francia_ab": {
+        "price": 7900,
+        "wetPrice": 1900,
+        "framePrice": 3900
+      },
+      "gyerek_a": {
+        "price": 2900,
+        "wetPrice": 900,
+        "framePrice": 3900
+      },
+      "gyerek_ab": {
+        "price": 3900,
+        "wetPrice": 900,
+        "framePrice": 3900
+      },
+      "kisagy_a": {
+        "price": 2400,
+        "wetPrice": 900,
+        "framePrice": 3900
+      },
+      "kisagy_ab": {
+        "price": 3400,
+        "wetPrice": 900,
+        "framePrice": 3900
+      }
+    },
+    "pillowPrice": 400
   }
 }
