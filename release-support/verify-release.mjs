@@ -95,7 +95,8 @@ for(const rec of manifest.pageInventory||inventory){
     const originals=[...d.querySelectorAll('.med-result-figure img')].map(img=>img.getAttribute('src'));
     check(originals.length===approvedPage.retainedPairs.flat().length,file,'Original reference photo count differs');
     for(const src of approvedPage.retainedPairs.flat())check(originals.includes(src.replace(/^\.\.\//,'')),file,'Original reference photo lost: '+src);
-    check(d.querySelector('meta[property="og:image"]')?.content.includes('/mediterranean/assets/'),file,'New sharing image absent');
+    const sharingImage=d.querySelector('meta[property="og:image"]')?.content;
+    check(d.body.classList.contains('eco-gyor-conversion')?sharingImage==='https://ecocleantisztito.hu/img/karpittisztitas-utan-2.webp':sharingImage?.includes('/mediterranean/assets/'),file,'Expected sharing image absent');
   }
   for(const el of d.querySelectorAll('[srcset]'))for(const entry of el.getAttribute('srcset').split(','))reference(entry.trim().split(/\s+/)[0],file,'srcset asset');
   if(rec.family==='homepage'){
