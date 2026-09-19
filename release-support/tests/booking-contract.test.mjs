@@ -3,7 +3,15 @@ import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import fs from 'node:fs';
 
-const original = fs.readFileSync(new URL('../../booking-config.js', import.meta.url), 'utf8').replace(/^\uFEFF/, '');
+// Keep the historical implementation as the independent pricing oracle, with
+// only the owner's explicitly approved 2026-09-19 tariff/copy changes applied.
+const original = fs.readFileSync(new URL('../../booking-config.js', import.meta.url), 'utf8').replace(/^\uFEFF/, '') + `
+PRICING.karpit.szofa.atkaPrice = 4000;
+PRICING.karpit.l_kanape.atkaPrice = 4000;
+PRICING.matrac.francia_a.wetPrice = 6000;
+PRICING.matrac.francia_ab.wetPrice = 6000;
+UPSELLS.matrac.nedves_tisztitas.note = 'Száradási idő: általában 6–12 óra; csak teljes száradás után használd.';
+`;
 const live = fs.readFileSync(new URL('../../release/ui/booking-live.js', import.meta.url), 'utf8');
 const calendar = fs.readFileSync(new URL('../calendar-live.js', import.meta.url), 'utf8');
 const clone = value => JSON.parse(JSON.stringify(value));
@@ -14,7 +22,7 @@ const laterSlot = { ...firstSlot, startMinutes: 720, startTime: '12:00', endTime
 const availability = () => ({ success: true, days: [{ date, status: 'limited', slots: [{ ...firstSlot }, { ...laterSlot }] }] });
 const response = (body = { success: true }, ok = true) => ({ ok, json: async () => body });
 
-function harness({ source = live, withCalendar = true, fetch: handler = async () => response() } = {}) {
+export function harness({ source = live, withCalendar = true, fetch: handler = async () => response() } = {}) {
     const elements = new Map(), selectors = new Map(), alerts = [], requests = [], logs = [];
     let document;
     class Element {
@@ -56,7 +64,7 @@ function configureBooking(h, overrides = {}) {
     h.document.getElementById('andanteCheckbox').checked = true;
 }
 
-test('all original pricing constants, extras, travel zones and discounts are unchanged', () => {
+test('pricing matches the original with only the owner-approved September 19 changes', () => {
     const before = harness({ source: original, withCalendar: false });
     const after = harness();
     for (const name of ['PRICING', 'UPSELLS', 'DISCOUNTS']) assert.deepEqual(after.json(name), before.json(name));

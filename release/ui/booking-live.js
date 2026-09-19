@@ -9,8 +9,8 @@
 const PRICING = {
     // KÁRPITTISZTÍTÁS (mélytisztítás)
     karpit: {
-        "szofa": { name: "Szófa, heverő", price: 18000, duration: 40, atkaPrice: 6000, agyazhatoPrice: 6000 },
-        "l_kanape": { name: "L-kanapé", price: 20000, duration: 50, atkaPrice: 6000, agyazhatoPrice: 6000 },
+        "szofa": { name: "Szófa, heverő", price: 18000, duration: 40, atkaPrice: 4000, agyazhatoPrice: 6000 },
+        "l_kanape": { name: "L-kanapé", price: 20000, duration: 50, atkaPrice: 4000, agyazhatoPrice: 6000 },
         "u_kanape": { name: "U-kanapé", price: 26000, duration: 60, atkaPrice: 6000, agyazhatoPrice: 6000 },
         "fotel": { name: "Fotel", price: 7500, duration: 20, atkaPrice: 0 },
         "ebedlo_szek": { name: "Ebédlő szék", price: 4000, duration: 10, atkaPrice: 0 },
@@ -21,8 +21,8 @@ const PRICING = {
     matrac: {
         "egyagyas_a": { name: "Egyágyas matrac 90×200 cm (A oldal)", price: 9000, duration: 25, sides: 1, wetPrice: 6000, framePrice: 6000 },
         "egyagyas_ab": { name: "Egyágyas matrac 90×200 cm (A+B oldal)", price: 14000, duration: 40, sides: 2, wetPrice: 6000, framePrice: 6000 },
-        "francia_a": { name: "Franciaágy matrac 140/160/180×200 cm (A oldal)", price: 14000, duration: 35, sides: 1, wetPrice: 8500, framePrice: 9000 },
-        "francia_ab": { name: "Franciaágy matrac 140/160/180×200 cm (A+B oldal)", price: 19500, duration: 55, sides: 2, wetPrice: 8500, framePrice: 9000 },
+        "francia_a": { name: "Franciaágy matrac 140/160/180×200 cm (A oldal)", price: 14000, duration: 35, sides: 1, wetPrice: 6000, framePrice: 9000 },
+        "francia_ab": { name: "Franciaágy matrac 140/160/180×200 cm (A+B oldal)", price: 19500, duration: 55, sides: 2, wetPrice: 6000, framePrice: 9000 },
         "gyerek_a": { name: "Gyerekmatrac 70×140 cm (A oldal)", price: 6000, duration: 15, sides: 1, wetPrice: 3500, framePrice: 4500 },
         "gyerek_ab": { name: "Gyerekmatrac 70×140 cm (A+B oldal)", price: 8000, duration: 25, sides: 2, wetPrice: 3500, framePrice: 4500 },
         "kisagy_a": { name: "Kiságy matrac (A oldal)", price: 4500, duration: 10, sides: 1, wetPrice: 3500, framePrice: 4500 },
@@ -86,7 +86,7 @@ const UPSELLS = {
             priceType: "perSide", // felületenként
             duration: 20,
             icon: "💧",
-            note: "Száradási idő: kb. 24 óra!"
+            note: "Száradási idő: általában 6–12 óra; csak teljes száradás után használd."
         },
         "agykeret": {
             name: "Ágykeret, fejtámla tisztítás",

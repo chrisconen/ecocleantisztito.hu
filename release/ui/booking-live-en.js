@@ -9,8 +9,8 @@
 const PRICING = {
     // KÁRPITTISZTÍTÁS (mélytisztítás)
     karpit: {
-        "szofa": { name: "Sofa / daybed", price: 18000, duration: 40, atkaPrice: 6000, agyazhatoPrice: 6000 },
-        "l_kanape": { name: "L-shaped sofa", price: 20000, duration: 50, atkaPrice: 6000, agyazhatoPrice: 6000 },
+        "szofa": { name: "Sofa / daybed", price: 18000, duration: 40, atkaPrice: 4000, agyazhatoPrice: 6000 },
+        "l_kanape": { name: "L-shaped sofa", price: 20000, duration: 50, atkaPrice: 4000, agyazhatoPrice: 6000 },
         "u_kanape": { name: "U-shaped sofa", price: 26000, duration: 60, atkaPrice: 6000, agyazhatoPrice: 6000 },
         "fotel": { name: "Armchair", price: 7500, duration: 20, atkaPrice: 0 },
         "ebedlo_szek": { name: "Dining chair", price: 4000, duration: 10, atkaPrice: 0 },
@@ -21,8 +21,8 @@ const PRICING = {
     matrac: {
         "egyagyas_a": { name: "Single mattress 90×200 cm (side A)", price: 9000, duration: 25, sides: 1, wetPrice: 6000, framePrice: 6000 },
         "egyagyas_ab": { name: "Single mattress 90×200 cm (sides A+B)", price: 14000, duration: 40, sides: 2, wetPrice: 6000, framePrice: 6000 },
-        "francia_a": { name: "Double mattress 140/160/180×200 cm (side A)", price: 14000, duration: 35, sides: 1, wetPrice: 8500, framePrice: 9000 },
-        "francia_ab": { name: "Double mattress 140/160/180×200 cm (sides A+B)", price: 19500, duration: 55, sides: 2, wetPrice: 8500, framePrice: 9000 },
+        "francia_a": { name: "Double mattress 140/160/180×200 cm (side A)", price: 14000, duration: 35, sides: 1, wetPrice: 6000, framePrice: 9000 },
+        "francia_ab": { name: "Double mattress 140/160/180×200 cm (sides A+B)", price: 19500, duration: 55, sides: 2, wetPrice: 6000, framePrice: 9000 },
         "gyerek_a": { name: "Children's mattress 70×140 cm (side A)", price: 6000, duration: 15, sides: 1, wetPrice: 3500, framePrice: 4500 },
         "gyerek_ab": { name: "Children's mattress 70×140 cm (sides A+B)", price: 8000, duration: 25, sides: 2, wetPrice: 3500, framePrice: 4500 },
         "kisagy_a": { name: "Cot mattress (side A)", price: 4500, duration: 10, sides: 1, wetPrice: 3500, framePrice: 4500 },
@@ -86,7 +86,7 @@ const UPSELLS = {
             priceType: "perSide", // felületenként
             duration: 20,
             icon: "💧",
-            note: "Drying time: approx. 24 hours!"
+            note: "Drying usually takes 6–12 hours; use only when fully dry."
         },
         "agykeret": {
             name: "Bed frame and headboard cleaning",

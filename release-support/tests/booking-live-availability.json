@@ -1,0 +1,73 @@
+{
+  "success": true,
+  "days": [
+    {
+      "date": "2026-09-08",
+      "status": "zone_blocked",
+      "slots": []
+    },
+    {
+      "date": "2026-09-09",
+      "status": "zone_blocked",
+      "slots": []
+    },
+    {
+      "date": "2026-09-10",
+      "status": "zone_blocked",
+      "slots": []
+    },
+    {
+      "date": "2026-09-11",
+      "status": "zone_blocked",
+      "slots": []
+    },
+    {
+      "date": "2026-09-12",
+      "status": "weekend",
+      "slots": []
+    },
+    {
+      "date": "2026-09-13",
+      "status": "weekend",
+      "slots": []
+    },
+    {
+      "date": "2026-09-14",
+      "status": "limited",
+      "slots": [
+        {
+          "startMinutes": 540,
+          "startTime": "09:00",
+          "endTime": "11:05",
+          "maxDuration": 0,
+          "status": "booked",
+          "isFirstSlot": false,
+          "fitsRequested": false
+        },
+        {
+          "startMinutes": 695,
+          "startTime": "11:35",
+          "endTime": "12:45",
+          "maxDuration": 0,
+          "status": "booked",
+          "isFirstSlot": false,
+          "fitsRequested": false
+        },
+        {
+          "startMinutes": 795,
+          "startTime": "13:15",
+          "endTime": null,
+          "maxDuration": 225,
+          "status": "available",
+          "isFirstSlot": false,
+          "fitsRequested": true
+        }
+      ]
+    },
+    {
+      "date": "2026-09-15",
+      "status": "zone_blocked",
+      "slots": []
+    }
+  ]
+}

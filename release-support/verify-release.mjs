@@ -13,10 +13,22 @@ const csstree=require('css-tree');
 const log=new VirtualConsole(),issues=[],counts={pages:0,links:0,assets:0,css:0};
 const inventory=JSON.parse(fs.readFileSync(path.join(root,'demo/rollout/inventory.json'),'utf8'));
 const manifest=JSON.parse(fs.readFileSync(path.join(support,'release-manifest.json'),'utf8'));
-if(manifest.studioOverlay)issues.push(...verifyStudioContent(manifest));
+// Historical text retention is checked against the exactly restored parent;
+// the top provenance gate proves every intentional content replacement.
+const clarity=manifest.contentClarityOverlay?JSON.parse(fs.readFileSync(path.join(root,manifest.contentClarityOverlay.path))):null;
+function retentionSource(name){
+ let bytes=fs.readFileSync(path.join(out,name));
+ for(const e of [...(clarity?.files[name]?.edits||[])].reverse()){
+  const a=Buffer.from(e.after),b=Buffer.from(e.before);
+  if(!bytes.subarray(e.offset,e.offset+a.length).equals(a))throw Error('Clarity restoration mismatch '+name);
+  bytes=Buffer.concat([bytes.subarray(0,e.offset),b,bytes.subarray(e.offset+a.length)]);
+ }
+ return bytes.toString('utf8');
+}
+if(manifest.studioOverlay)issues.push(...verifyStudioContent(manifest,clarity?retentionSource:null));
 if(manifest.copyOverlay&&!manifest.studioOverlay)issues.push(...verifyStructure(manifest));
 const overlay=manifest.widgetOverlay?JSON.parse(fs.readFileSync(path.join(root,manifest.widgetOverlay.path),'utf8')):null;
-const provenanceGate=manifest.englishOverlay?'verify-english-overlay.py':manifest.priceOverlay?'verify-price-overlay.py':manifest.bookingExtrasOverlay?'verify-booking-extras-overlay.py':manifest.reviewOverlay?'verify-review-overlay.py':manifest.studioOverlay?'verify-studio-overlay.py':manifest.copyOverlay?'verify-copy-overlay.py':'verify-widget-overlay.py';
+const provenanceGate=manifest.contentClarityOverlay?'verify-content-clarity-overlay.py':manifest.englishOverlay?'verify-english-overlay.py':manifest.priceOverlay?'verify-price-overlay.py':manifest.bookingExtrasOverlay?'verify-booking-extras-overlay.py':manifest.reviewOverlay?'verify-review-overlay.py':manifest.studioOverlay?'verify-studio-overlay.py':manifest.copyOverlay?'verify-copy-overlay.py':'verify-widget-overlay.py';
 if(overlay){const proof=spawnSync('python',[path.join(support,provenanceGate)],{cwd:root,encoding:'utf8'});if(proof.error||proof.status!==0)issues.push({file:manifest.reviewOverlay?'material-review/overlay.json':manifest.studioOverlay?'studio/overlay.json':manifest.copyOverlay?'copy-tone/overlay.json':'material-widget-overlay.json',message:'Release provenance failed: '+(proof.error?.message||proof.stdout||proof.stderr)});}
 const medManifestBytes=fs.readFileSync(path.join(root,overlay?overlay.baseline.mediterranean:'demo/mediterranean/manifest.json'));
 const medManifest=JSON.parse(medManifestBytes);
