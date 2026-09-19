@@ -1,0 +1,267 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,follow"><title>Online booking | ECO Clean</title><link rel="canonical" href="https://ecocleantisztito.hu/en/booking.html"><link rel="alternate" hreflang="hu" href="https://ecocleantisztito.hu/megrendeles.html"><link rel="alternate" hreflang="en" href="https://ecocleantisztito.hu/en/booking.html"><link rel="icon" href="../favicon.ico"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap"><link rel="stylesheet" href="../ui/design.css?v=801f2f4ea2dd"><link rel="stylesheet" href="../ui/calendar-live.css?v=8c750daa15cb"><link rel="stylesheet" href="../ui/calendar-status.css?v=c604caed183a"><link rel="stylesheet" href="../ui/booking-extras.css?v=bdd124c7e8a1"><link rel="stylesheet" href="../ui/booking-cart.css?v=97b9f9dbbb77"><link rel="stylesheet" href="../studio/handoff.css?v=9ace450ab952"><link rel="stylesheet" href="../ui/booking-page.css?v=3c9014df5260"></head><body class="eco-site eco-booking-page"><header class="booking-page-nav"><a class="booking-page-brand" href="index.html">ECO Clean</a><nav aria-label="Booking navigation"><a href="index.html#teruletek">Cities & prices</a><a href="tel:+36702408141">Call us</a><a hreflang="hu" lang="hu" href="../megrendeles.html">HU</a></nav></header><main><section class="booking-section" id="booking">
+            <div class="booking-container">
+                <div class="booking-header">
+                    <h1>Online <span>booking</span></h1>
+                    <p>Configure your service and book in a few clicks!</p>
+                </div>
+
+                <!-- SELECTED ITEMS BADGES -->
+                <div class="selected-badges" id="selectedBadges" style="display:none;">
+                    <div class="badges-header">🛒 Selected services:</div>
+                    <div class="badges-list" id="badgesList"></div>
+                </div>
+
+                <!-- PRICE CONFIGURATOR -->
+                <div class="price-configurator" id="priceConfigurator">
+                    <div class="config-header">
+                        <span class="config-icon">💰</span>
+                        <h3>Price calculator</h3>
+                        <span class="config-status" id="configStatus">● Online booking</span>
+                    </div>
+
+                    
+<!-- Step 1: Customer Type -->
+                    <div class="config-step" id="step1">
+                        <div class="config-step-header">
+                            <div class="config-step-num">1</div>
+                            <span class="config-step-label">Private or business customer?</span>
+                        </div>
+                        <div class="config-options" id="customerType">
+                            <button class="config-btn active" data-value="Magánszemély" onclick="handleCustomerType(this)">Private customer</button>
+                            <button class="config-btn" data-value="Céges" onclick="handleCustomerType(this)">Business customer</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Service Type -->
+                    <div class="config-step" id="step2">
+                        <div class="config-step-header">
+                            <div class="config-step-num">2</div>
+                            <span class="config-step-label">What would you like to have cleaned?</span>
+                        </div>
+                        <div class="config-options" id="serviceType">
+                            <button class="config-btn" data-value="Kárpit" onclick="handleServiceType(this)">
+                                🛋️ Upholstered furniture
+                            </button>
+                            <button class="config-btn" data-value="Matrac" onclick="handleServiceType(this)">
+                                🛏️ Mattress
+                            </button>
+                            <button class="config-btn combo-btn" data-value="Mindkettő" onclick="handleServiceType(this)">
+                                ⭐ Both <span class="combo-badge">-10%</span>
+                            </button>
+                        </div>
+                    </div><!-- ECO-MATERIAL:cta:START --><aside class="eco-novalife-cta eco-novalife-cta-compact" aria-label="ANDANTE NovaLife upholstery guide"><div class="eco-novalife-cta-art" aria-hidden="true"><svg width="62" height="62" viewBox="0 0 100 100" fill="none" focusable="false"><rect x="13" y="17" width="59" height="62" rx="13" stroke="currentColor" stroke-width="1.2"/><path d="M24 29c9-7 16 7 25 0s12-1 13 0M24 40c9-7 16 7 25 0s12-1 13 0M24 51c9-7 16 7 25 0M24 62c9-7 16 7 25 0M31 24v47M43 24v47M55 24v20" stroke="currentColor" stroke-width="1" opacity=".45"/><circle cx="65" cy="62" r="17" fill="#f6f2e8" stroke="currentColor" stroke-width="1.5"/><path d="m78 75 12 12M58 58c5-4 9 4 14 0M58 65c5-4 9 4 14 0M63 52v20M69 52v20" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="82" cy="24" r="3" fill="#b38c77" stroke="none"/></svg></div><div class="eco-novalife-cta-copy"><span class="eco-novalife-cta-kicker">The details matter</span><h3>Unsure whether your upholstery is ANDANTE NovaLife?</h3><p>A close-up photo can help identify signs of ANDANTE NovaLife. We confirm the suitability of our cleaning based on the label and professional consultation.</p></div><a href="#anyagfelismero" class="eco-novalife-cta-link">Get my fabric checked <span aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" focusable="false"><path d="m6 18 12-12M6 6h12v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></aside><!-- ECO-MATERIAL:cta:END -->
+
+                    <!-- Step 3: Item Selection (Dynamic) -->
+                    <div class="config-step" id="step3" style="display:none;">
+                        <div class="config-step-header">
+                            <div class="config-step-num">3</div>
+                            <span class="config-step-label">Select the items</span>
+                        </div>
+                        <p id="gyorLocalTariffNotice" role="status">Select Győr and a city zone in the address section for lower city prices and free travel.</p><div class="config-items" id="itemSelection">
+                            <!-- Dynamically populated -->
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Extra Services / Upsells -->
+                    <div class="config-step" id="step4" style="display:none;">
+                        <div class="config-step-header">
+                            <div class="config-step-num">4</div>
+                            <span class="config-step-label">Additional services <span class="recommended-badge">💡 Recommended</span></span>
+                        </div>
+                        <div class="upsell-options" id="upsellOptions">
+                            <!-- Dynamically populated based on selected items -->
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Location & Travel Zone -->
+                    <div class="config-step" id="step5" style="display:none;">
+                        <div class="config-step-header">
+                            <div class="config-step-num">5</div>
+                            <span class="config-step-label">Where is it located?</span>
+                        </div>
+
+                        <!-- City Selection -->
+                        <div class="config-select-wrap">
+                            <select class="config-select" id="citySelect" onchange="handleCityChange(this)">
+                                <option value="">Choose a region...</option>
+                                <optgroup label="Győr régió">
+                                    <option value="gyor">Győr and surrounding areas</option>
+                                    <option value="mosonmagyarovar">Mosonmagyaróvár and surrounding areas</option>
+                                    <option value="csorna">Csorna and surrounding areas</option>
+                                    <option value="kapuvar">Kapuvár and surrounding areas</option>
+                                </optgroup>
+                                <optgroup label="Sopron régió">
+                                    <option value="sopron">Sopron and surrounding areas</option>
+                                    <option value="fertod">Fertőd and surrounding areas</option>
+                                </optgroup>
+                                <optgroup label="Szombathely régió">
+                                    <option value="szombathely">Szombathely and surrounding areas</option>
+                                    <option value="koszeg">Kőszeg and surrounding areas</option>
+                                    <option value="sarvar">Sárvár and surrounding areas</option>
+                                </optgroup>
+                                <optgroup label="Veszprém régió">
+                                    <option value="veszprem">Veszprém and surrounding areas</option>
+                                    <option value="papa">Pápa and surrounding areas</option>
+                                    <option value="ajka">Ajka and surrounding areas</option>
+                                </optgroup>
+                                <optgroup label="Komárom-Tata régió">
+                                    <option value="tata">Tata and surrounding areas</option>
+                                    <option value="tatabanya">Tatabánya and surrounding areas</option>
+                                    <option value="komarom">Komárom and surrounding areas</option>
+                                </optgroup>
+                                <optgroup label="🏖️ Balaton - Északi part">
+                                    <option value="balatonfured">Balatonfüred and surrounding areas</option>
+                                    <option value="tihany">Tihany and surrounding areas</option>
+                                    <option value="balatonalmadi">Balatonalmádi and surrounding areas</option>
+                                    <option value="balatonfuzfo">Balatonfűzfő and surrounding areas</option>
+                                    <option value="balatonkenese">Balatonkenese and surrounding areas</option>
+                                    <option value="revfulop">Révfülöp and surrounding areas</option>
+                                    <option value="badacsony">Badacsony and surrounding areas</option>
+                                </optgroup>
+                                <optgroup label="🏖️ Balaton - Déli part">
+                                    <option value="siofok">Siófok and surrounding areas</option>
+                                    <option value="zamardi">Zamárdi and surrounding areas</option>
+                                    <option value="balatonszemes">Balatonszemes and surrounding areas</option>
+                                    <option value="balatonfoldvar">Balatonföldvár and surrounding areas</option>
+                                    <option value="balatonlelle">Balatonlelle and surrounding areas</option>
+                                    <option value="balatonboglar">Balatonboglár and surrounding areas</option>
+                                    <option value="fonyod">Fonyód and surrounding areas</option>
+                                </optgroup>
+                                <optgroup label="🏖️ Balaton - Nyugati rész">
+                                    <option value="keszthely">Keszthely and surrounding areas</option>
+                                    <option value="heviz">Hévíz and surrounding areas</option>
+                                    <option value="tapolca">Tapolca and surrounding areas</option>
+                                </optgroup>
+                                <option value="egyeb">Other location</option>
+                            </select>
+                        </div>
+
+                        <!-- Travel Zone Selection -->
+                        <div class="travel-zone-wrap" id="travelZoneWrap" style="display:none; margin-top: 1rem;">
+                            <p class="zone-label">Exact location (please select a zone) *</p>
+                            <div class="zone-options" id="zoneOptions">
+                                <label class="zone-option">
+                                    <input type="radio" name="travelZone" value="belvaros" onchange="handleZoneChange(this)"> <span class="zone-card"> <span class="zone-name">🏙️ City centre</span> <span class="zone-price">3,500 HUF</span> </span>
+                                </label>
+                                <label class="zone-option">
+                                    <input type="radio" name="travelZone" value="kulso" onchange="handleZoneChange(this)"> <span class="zone-card"> <span class="zone-name">🏘️ Suburbs</span> <span class="zone-price">4,000 HUF</span> </span>
+                                </label>
+                                <label class="zone-option">
+                                    <input type="radio" name="travelZone" value="20km" onchange="handleZoneChange(this)"> <span class="zone-card"> <span class="zone-name">🚗 Up to 10 km</span> <span class="zone-price">4,500 HUF</span> </span>
+                                </label>
+                                <label class="zone-option">
+                                    <input type="radio" name="travelZone" value="40km" onchange="handleZoneChange(this)"> <span class="zone-card"> <span class="zone-name">🚙 Up to 20 km</span> <span class="zone-price">5,500 HUF</span> </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Exact Address -->
+                        <div class="address-inputs" id="addressInputs" style="display:none; margin-top: 1rem;">
+                            <p class="address-label">Full address</p>
+                            <input type="text" id="streetInput" class="config-input" placeholder="Street and house number *" required="">
+                            <div class="address-row">
+                                <input type="text" id="plzInput" class="config-input" placeholder="Postcode *" maxlength="4" required="">
+                                <input type="text" id="cityInput" class="config-input" placeholder="City / Town / Village *" required="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 6: Special Conditions -->
+                    <div class="config-step" id="step6" style="display:none;">
+                        <div class="config-step-header">
+                            <div class="config-step-num">6</div>
+                            <span class="config-step-label">Any special circumstances?</span>
+                        </div>
+                        <div class="config-options" id="conditions">
+                            <button class="config-btn toggle" data-value="Haziallat" onclick="toggleCondition(this)">🐕 Pets in the home</button>
+                            <button class="config-btn toggle" data-value="Kisgyerek" onclick="toggleCondition(this)">👶 Young children in the home</button>
+                            <button class="config-btn toggle" data-value="Allergias" onclick="toggleCondition(this)">🤧 Family member with allergies</button>
+                        </div>
+                        <p class="condition-note" id="conditionNote" style="display:none;"></p>
+                    </div>
+
+                    <!-- Calendar Wrapper -->
+                    <div class="calendar-wrapper" id="calendarWrapper" style="display:none;">
+                        <div class="config-step-header">
+                            <div class="config-step-num">7</div>
+                            <span class="config-step-label">Choose a date</span>
+                        </div>
+                        <div id="bookingCalendar"></div>
+                    </div>
+
+                    <!-- Booking Form -->
+                    <div class="booking-form-wrapper" id="bookingFormWrapper" style="display:none;">
+                        <div class="config-step-header">
+                            <div class="config-step-num">8</div>
+                            <span class="config-step-label">Your details</span>
+                        </div>
+                        <form id="bookingForm" class="booking-form" onsubmit="return submitBooking(event)">
+                            <div class="form-row">
+                                <input type="text" id="nameInput" placeholder="Full name *" required="">
+                            </div>
+                            <div class="form-row">
+                                <input type="email" id="emailInput" placeholder="Email address *" required="">
+                            </div>
+                            <div class="form-row">
+                                <input type="email" id="emailConfirmInput" placeholder="Confirm email address *" required="">
+                            </div>
+                            <div class="form-row">
+                                <input type="tel" id="phoneInput" placeholder="Phone number *" required="">
+                            </div>
+                            <div class="form-row">
+                                <textarea id="messageInput" placeholder="Notes (optional)" rows="3"></textarea>
+                            </div>
+
+                            <!-- ANDANTE checkbox (csak kárpittisztításnál jelenik meg) -->
+                            <div class="form-row" id="andanteRow" style="display:none;">
+                                <label class="andante-checkbox-label">
+                                    <input type="checkbox" id="andanteCheckbox" disabled=""> <span class="andante-checkbox-text"> I acknowledge that for <span class="andante-highlight">ANDANTE</span> furniture or fabrics sensitive to water, <strong>50% of the cleaning price (up to 30,000 HUF)</strong> may be charged as a fee for reserving capacity. <a href="#" id="andanteLink" onclick="openAndanteModal(); return false;">View the <span class="andante-highlight">ANDANTE</span> information</a>. </span>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span>Confirm booking</span> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Price Summary -->
+                    <div class="price-summary" id="priceSummary">
+                        <div class="summary-header">
+                            <span>YOUR CONFIGURATION</span>
+                            <div class="summary-price-wrap">
+                                <span class="summary-price-original" id="originalPrice" style="display:none;"></span>
+                                <span class="summary-price" id="totalPrice">0 Ft</span>
+                            </div>
+                        </div>
+                        <div class="summary-details" id="summaryDetails">
+                            <p class="summary-empty">Choose a service to get started...</p>
+                        </div>
+                        <div class="summary-discount" id="summaryDiscount" style="display:none;">
+                            <span class="discount-label">💰 Savings:</span> <span class="discount-amount" id="discountAmount">0 HUF</span>
+                        </div>
+                        <div class="summary-duration" id="summaryDuration" style="display:none;">
+                            <span>⏱️ Estimated duration:</span> <span id="totalDuration">0 minutes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section></main><div class="andante-modal-overlay" id="andanteModal" style="display:none;" onclick="closeAndanteModal(event)">
+        <div class="andante-modal-content" onclick="event.stopPropagation()">
+            <button class="andante-modal-close" onclick="closeAndanteModal()">×</button>
+            <h3>ANDANTE furniture – Important information</h3>
+            <div class="andante-modal-body">
+                <p><strong>Some ANDANTE furniture uses specialist fabrics, fabrics with fabric protection or water-sensitive fabrics that cannot be safely cleaned using hot water extraction for upholstery cleaning.</strong></p>
+                <p>Please always check your furniture's fabric type and cleanability before ordering! Type ANDANTE furniture from Kanizsai Bútorgyár and similar "washable", water-repellent materials are typically not suitable for extraction (water-based) upholstery cleaning.</p>
+                <p><strong>Consequences:</strong></p>
+                <ul>
+                    <li>If we discover only on arrival that ANDANTE furniture or a water-sensitive fabric cannot be cleaned with the selected method, a capacity reservation fee of 50% of the cleaning price, capped at 30,000 HUF, may apply.</li>
+                    <li>If you are unsure about your furniture's fabric type, please <strong>check with our colleague in advance</strong> on 06 70 240 8141.</li>
+                </ul>
+                <p>Thank you for your understanding!</p>
+                <button class="andante-modal-confirm" onclick="confirmAndante()">Understood and acknowledged</button>
+            </div>
+        </div>
+    </div><script src="../ui/booking-live-en.js?v=572a91070500"></script><script src="../ui/calendar-live.js?v=8d83e03a36c5"></script><script src="../ui/booking-page.js?v=9223b811a854"></script><script src="../studio/configurator.js?v=e02e799aded5"></script><script src="../studio/booking-handoff.js?v=16a249cdcabe"></script><script src="../ui/booking-cart.js?v=123e3a362975"></script></body></html>

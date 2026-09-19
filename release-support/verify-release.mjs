@@ -101,7 +101,7 @@ for(const rec of manifest.pageInventory||inventory){
   for(const el of d.querySelectorAll('[srcset]'))for(const entry of el.getAttribute('srcset').split(','))reference(entry.trim().split(/\s+/)[0],file,'srcset asset');
   if(rec.family==='homepage'){
     const scripts=[...d.querySelectorAll('script[src]')].map(e=>part(e.getAttribute('src')));
-    check(scripts.includes('ui/booking-live.js')&&scripts.includes('ui/calendar-live.js')&&scripts.includes('ui/site.js'),file,'Live booking scripts absent');
+    check(scripts.includes('ui/site.js')&&!d.querySelector('#bookingForm')&&!scripts.includes('ui/booking-live.js')&&!scripts.includes('ui/calendar-live.js'),file,'Homepage must use city discovery without the booking form');
     check(!scripts.some(src=>/demo/.test(src)),file,'Sample runtime included');
   }
   dom.window.close();approved.window.close();

@@ -7,6 +7,7 @@ import {applyGyorLocal} from './gyor-local.mjs';
 import {applyLocalNavigation} from './local-navigation.mjs';
 import {applyGyorConversion} from '../gyor-conversion/page.mjs';
 import {applyRegionalConversion} from '../gyor-conversion/regional.mjs';
+import {applyHomepageBooking} from '../homepage-booking/page.mjs';
 const root=path.resolve(import.meta.dirname,'../..'),here=import.meta.dirname;
 const hash=s=>crypto.createHash('sha256').update(s).digest('hex');
 const oldOverlay=fs.existsSync(path.join(here,'overlay.json'))?JSON.parse(fs.readFileSync(path.join(here,'overlay.json'))):null;
@@ -154,9 +155,10 @@ applyGyorLocal({read,edit,matchEdit,tariff});
 applyLocalNavigation({read,edit,root});
 applyGyorConversion({read,edit,tariff});
 applyRegionalConversion({read,edit,tariff});
+const finishHomepageBooking=applyHomepageBooking({read,edit,root});
 // Version every changed shared script wherever it is referenced.
 const scripts=Object.keys(changes).filter(n=>/\.(js|css)$/.test(n));
-for(const name of fs.readdirSync(path.join(root,'release')).filter(n=>n.endsWith('.html')).concat(fs.readdirSync(path.join(root,'release/en')).filter(n=>n.endsWith('.html')).map(n=>'en/'+n))){
+for(const name of fs.readdirSync(path.join(root,'release')).filter(n=>n.endsWith('.html')).concat(fs.readdirSync(path.join(root,'release/en')).filter(n=>n.endsWith('.html')).map(n=>'en/'+n)).filter(n=>n!=='megrendeles.html'&&n!=='en/booking.html')){
  for(const asset of scripts){
   const pattern=new RegExp(asset.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\?v=[a-zA-Z0-9_-]+','g');
   for(const before of new Set(read(name).match(pattern)||[])){
@@ -164,5 +166,6 @@ for(const name of fs.readdirSync(path.join(root,'release')).filter(n=>n.endsWith
   }
  }
 }
+finishHomepageBooking();
 fs.writeFileSync(path.join(here,'replacements.json'),JSON.stringify(changes,null,2)+'\n');
 console.log(JSON.stringify({files:Object.keys(changes).length,scriptFiles:scripts,ownerDecisions:{sofaMite:4000,doubleWetPerSide:6000,drying:'6–12 hours',materialFee:'50% cleaning price capped at 30000'}}));

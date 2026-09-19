@@ -1,0 +1,66 @@
+[
+  {
+    "language": "hu",
+    "width": 390,
+    "city": "gyor",
+    "total": 7900,
+    "legacyCart": true,
+    "passed": true
+  },
+  {
+    "language": "hu",
+    "width": 390,
+    "city": "szombathely",
+    "total": 21500,
+    "legacyCart": true,
+    "passed": true
+  },
+  {
+    "language": "hu",
+    "width": 1440,
+    "city": "gyor",
+    "total": 7900,
+    "legacyCart": true,
+    "passed": true
+  },
+  {
+    "language": "hu",
+    "width": 1440,
+    "city": "szombathely",
+    "total": 21500,
+    "legacyCart": true,
+    "passed": true
+  },
+  {
+    "language": "en",
+    "width": 390,
+    "city": "gyor",
+    "total": 7900,
+    "legacyCart": true,
+    "passed": true
+  },
+  {
+    "language": "en",
+    "width": 390,
+    "city": "szombathely",
+    "total": 21500,
+    "legacyCart": true,
+    "passed": true
+  },
+  {
+    "language": "en",
+    "width": 1440,
+    "city": "gyor",
+    "total": 7900,
+    "legacyCart": true,
+    "passed": true
+  },
+  {
+    "language": "en",
+    "width": 1440,
+    "city": "szombathely",
+    "total": 21500,
+    "legacyCart": true,
+    "passed": true
+  }
+]
