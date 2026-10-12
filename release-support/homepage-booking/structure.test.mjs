@@ -12,7 +12,9 @@ test('dedicated HU/EN forms retain the complete previous booking section; homepa
  for(const [home,form]of [['index.html','megrendeles.html'],['en/index.html','en/booking.html']]){
   const old=execFileSync('git',['show','fd09d549d2ef16e6dc08bb2bef2eaf28de4856b1:release/'+home],{encoding:'utf8'});
   const section=s=>s.match(/<section class="booking-section" id="booking">[\s\S]*?<\/section>/)[0];
-  assert.equal(section(read(form)).replace('<h1>','<h2>').replace('</h1>','</h2>'),section(old));
+  // The retired city-discount notice is the only removed form content.
+  const previous=section(old).replace(/<p id="gyorLocalTariffNotice" role="status">[^<]*<\/p>/,'');
+  assert.equal(section(read(form)).replace('<h1>','<h2>').replace('</h1>','</h2>'),previous);
   const d=new JSDOM(read(home)).window.document;
   assert.equal(d.querySelector('#bookingForm,#priceConfigurator,#bookingCalendar'),null);
   assert.equal(d.querySelector('[data-material-app]').dataset.next,'#teruletek');

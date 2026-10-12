@@ -567,14 +567,8 @@ function removeItem(fullId) {
 // ═══════════════════════════════════════════════════════════════════════════════
 
 
-const GYOR_CITY_TARIFF = {"karpit":{"szofa":{"price":7900},"l_kanape":{"price":17900},"u_kanape":{"price":18900},"fotel":{"price":3900},"ebedlo_szek":{"price":2400},"irodai_szek":{"price":2400}},"matrac":{"egyagyas_a":{"price":4900,"wetPrice":1900,"framePrice":3900},"egyagyas_ab":{"price":5900,"wetPrice":1900,"framePrice":3900},"francia_a":{"price":6900,"wetPrice":1900,"framePrice":3900},"francia_ab":{"price":7900,"wetPrice":1900,"framePrice":3900},"gyerek_a":{"price":2900,"wetPrice":900,"framePrice":3900},"gyerek_ab":{"price":3900,"wetPrice":900,"framePrice":3900},"kisagy_a":{"price":2400,"wetPrice":900,"framePrice":3900},"kisagy_ab":{"price":3400,"wetPrice":900,"framePrice":3900}},"pillowPrice":400};
-function isGyorCity(city=State.city,zone=State.travelZone){return city==='gyor'&&(zone==='belvaros'||zone==='kulso');}
-function activePricing(city=State.city,zone=State.travelZone){
- if(!isGyorCity(city,zone))return PRICING;
- const merge=group=>Object.fromEntries(Object.entries(PRICING[group]).map(([id,p])=>[id,{...p,...GYOR_CITY_TARIFF[group][id]}]));
- return {...PRICING,karpit:merge('karpit'),matrac:merge('matrac'),travelZones:{...PRICING.travelZones,belvaros:{...PRICING.travelZones.belvaros,fee:0},kulso:{...PRICING.travelZones.kulso,fee:0}}};
-}
-function activePillowPrice(){return isGyorCity()?GYOR_CITY_TARIFF.pillowPrice:PILLOW_CLEANING.price;}
+function activePricing(){return PRICING;}
+function activePillowPrice(){return PILLOW_CLEANING.price;}
 function refreshLocalPriceLabels(){
  const pricing=activePricing();
  document.querySelectorAll('[data-item-id]').forEach(card=>{
@@ -588,7 +582,6 @@ function refreshLocalPriceLabels(){
   const pillow=card.querySelector('.pillow-extra .upsell-text small:last-child');if(pillow)pillow.textContent='Összes párna az itt kiválasztott bútorokhoz · '+activePillowPrice().toLocaleString('hu-HU')+' Ft/db';
  });
  document.querySelectorAll('[name="travelZone"]').forEach(r=>{const out=r.closest('label')?.querySelector('.zone-price');if(out)out.textContent=activePricing(State.city,r.value).travelZones[r.value].fee.toLocaleString('hu-HU')+' Ft';});
- const notice=document.getElementById('gyorLocalTariffNotice');if(notice)notice.textContent=isGyorCity()?'Győri városi árak érvényesek · városhatáron belül díjmentes kiszállás.':'A győri városi árakhoz válaszd Győrt és a belvárosi vagy külvárosi körzetet a címnél. Más településekre és a környező falvakra az általános díjak érvényesek.';
 }
 
 function updateSummary() {
@@ -1112,10 +1105,6 @@ async function submitBooking(event) {
         return false;
     }
 
-    if(isGyorCity()&&!/^gy[oő]r(?:$|[\s,\-])/iu.test(city.trim())){
-        alert("A győri városi árak csak Győr városhatárán belüli címre érvényesek. Kérjük, javítsd a települést vagy a kiszállási körzetet.");
-        document.getElementById('cityInput').focus();return false;
-    }
     const fullAddress = `${street}, ${plz} ${city}, Magyarország`;
 
     // Get selected calendar slot data

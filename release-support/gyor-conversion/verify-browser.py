@@ -7,7 +7,7 @@ import json, re
 from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT/'docs/gyor-audit-2026-09-19/conversion-qa'
+OUT = ROOT/'scratch/gyor-pricing-2026-10-12/conversion-qa'
 OUT.mkdir(parents=True, exist_ok=True)
 class Quiet(SimpleHTTPRequestHandler):
     def log_message(self, *args): pass
@@ -45,7 +45,7 @@ try:
     assert page.locator('.gyor-hero-proof img').first.get_attribute('src').endswith('karpittisztitas-elott-2.webp')
     assert page.locator('.gyor-hero-proof img').last.get_attribute('src').endswith('karpittisztitas-utan-2.webp')
     assert page.locator('.gyor-story').nth(2).locator('img').first.get_attribute('src').endswith('reference-chair-before-1.jpg')
-    assert [int(re.sub(r'\D','',text)) for text in page.locator('.gyor-prices .gyor-price strong').all_inner_texts()]==[7900,17900,2400]
+    assert [int(re.sub(r'\D','',text)) for text in page.locator('.gyor-prices .gyor-price strong').all_inner_texts()]==[18000,20000,4000]
     assert page.evaluate("document.getElementById('gyor-referenciak').compareDocumentPosition(document.getElementById('studio-kalkulator')) & Node.DOCUMENT_POSITION_FOLLOWING")
     assert page.evaluate("document.getElementById('studio-kalkulator').compareDocumentPosition(document.getElementById('studio-szobak')) & Node.DOCUMENT_POSITION_FOLLOWING")
     if not page.evaluate('document.documentElement.scrollWidth<=innerWidth+1'):
@@ -66,11 +66,11 @@ try:
     page.wait_for_function("()=>{const r=document.getElementById('studio-kalkulator').getBoundingClientRect();return r.top>=-1&&r.top<innerHeight/2}")
     config=page.locator('[data-studio-configurator]')
     config.locator('[data-group="sofa"] [data-delta="1"]').click()
-    assert int(re.sub(r'\D','',config.locator('.med-config-total').inner_text()))==7900
+    assert int(re.sub(r'\D','',config.locator('.med-config-total').inner_text()))==21500
     config.locator('[data-zone]').select_option('20km')
     assert int(re.sub(r'\D','',config.locator('.med-config-total').inner_text()))==22500
     config.locator('[data-zone]').select_option('kulso')
-    assert int(re.sub(r'\D','',config.locator('.med-config-total').inner_text()))==7900
+    assert int(re.sub(r'\D','',config.locator('.med-config-total').inner_text()))==22000
     assert not errors, errors
     records.append(dict(file=file,width=width,passed=True,checks='images, city prices, surrounding tariff, CTA, layout, reviews'))
     page.close()
@@ -84,9 +84,9 @@ try:
     config.locator('[data-booking-handoff]').click()
     page.wait_for_load_state('networkidle')
     page.locator('[data-studio-import]').click()
-    assert page.evaluate('State.totalPrice')==7900
+    assert page.evaluate('State.totalPrice')==21500
     assert page.evaluate('State.city')=='gyor'
-    records.append(dict(flow=file+' → booking import',total=7900,passed=True))
+    records.append(dict(flow=file+' → booking import',total=21500,passed=True))
     page.close()
   context.close()
   for name, data in [('unavailable',None),('wrong-business',dict(reputation,googleMapsUri='https://maps.google.com/?cid=123')),('malformed',dict(reputation,total=-1)),('changed-rating',dict(reputation,rating=4.8,total=213))]:

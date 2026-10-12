@@ -10,8 +10,11 @@ const root=path.resolve(import.meta.dirname,'../..');
 const read=file=>fs.readFileSync(path.join(root,'release',file),'utf8');
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 const baseline=JSON.parse(fs.readFileSync(path.join(import.meta.dirname,'rollout-baseline.json')));
-test('all pre-existing financial and booking engines remain byte-for-byte unchanged',()=>{
- for(const [file,expected]of Object.entries(baseline.runtimes))assert.equal(sha(fs.readFileSync(path.join(root,'release',file))),expected,file);
+test('booking engines outside the October 12 tariff change remain byte-for-byte unchanged',()=>{
+ // These three pricing engines are covered by content-clarity.test.mjs:
+ // all-item tariff parity, city switching, payload prices and DOM basket import.
+ const repriced=new Set(['studio/configurator.js','ui/booking-live.js','ui/booking-live-en.js']);
+ for(const [file,expected]of Object.entries(baseline.runtimes))if(!repriced.has(file))assert.equal(sha(fs.readFileSync(path.join(root,'release',file))),expected,file);
 });
 test('all 64 regional pages preserve their entire existing calculator, price grid and phone routes',()=>{
  let checked=0;

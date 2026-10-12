@@ -7,7 +7,7 @@ import json, re
 from playwright.sync_api import sync_playwright
 
 ROOT=Path(__file__).resolve().parents[2]
-OUT=ROOT/'docs/gyor-audit-2026-09-19/local-tariff-nav-qa'
+OUT=ROOT/'scratch/gyor-pricing-2026-10-12/local-tariff-nav-qa'
 OUT.mkdir(parents=True,exist_ok=True)
 class Quiet(SimpleHTTPRequestHandler):
     def log_message(self,*args):pass
@@ -50,17 +50,17 @@ try:
   page.goto(origin+'/karpittisztitas-gyor.html',wait_until='networkidle')
   config=page.locator('[data-studio-configurator]')
   config.locator('[data-group="sofa"] [data-delta="1"]').click()
-  assert int(re.sub(r'\D','',config.locator('.med-config-total').inner_text()))==7900
+  assert int(re.sub(r'\D','',config.locator('.med-config-total').inner_text()))==21500
   config.locator('[data-zone]').select_option('20km')
   assert int(re.sub(r'\D','',config.locator('.med-config-total').inner_text()))==22500
   config.locator('[data-zone]').select_option('kulso')
   config.locator('[data-booking-handoff]').click();page.wait_for_load_state('networkidle')
   page.locator('[data-studio-import]').click()
-  assert page.evaluate('State.totalPrice')==7900
+  assert page.evaluate('State.totalPrice')==22000
   assert page.evaluate('State.city')=='gyor'
   assert page.evaluate('State.travelZone')=='kulso'
   page.screenshot(path=str(OUT/'gyor-imported-390.png'))
-  records.append({'flow':'Győr sofa city → surroundings → city → booking import','total':7900,'passed':True})
+  records.append({'flow':'Győr sofa city → surroundings → city → booking import','total':22000,'passed':True})
   browser.close()
 finally:server.shutdown()
 (OUT/'report.json').write_text(json.dumps(records,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

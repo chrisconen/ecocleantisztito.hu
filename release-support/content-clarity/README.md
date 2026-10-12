@@ -1,20 +1,13 @@
 # Pricing and booking clarity — 2026-09-19
 
-## Later owner-authorized Győr city tariff and local navigation
+## Shared Győr tariff — 2026-10-12
 
-`tariff.json.gyorCity` now overrides only addresses with city `gyor` and zone
-`belvaros` or `kulso`. Those addresses have free travel. The original tariff is
-retained for surrounding villages and every other city. Sofa/daybed 7,900 Ft;
-L-sofa 17,900; U-sofa 18,900; armchair 3,900; chairs 2,400. Adult mattress wet
-treatment is 1,900 Ft per side locally, child/cot 900; base prices are recorded
-in the JSON. Dry + wet single mattress totals are 6,800/9,700 Ft and double
-8,800/11,700 Ft (one/two sides). Local frames 3,900 and cushions 400 Ft.
-Existing discounts, cleaning durations and unbenchmarked upholstery extras remain.
-
-`gyor-local.mjs` derives visible cards, totals, payload item details and import
-validation from the same scoped data. City/zone switching retains the basket
-and restores the applicable tariff. Normal bookings reject a non-Győr address
-name with a Győr city zone; this is a consistency check, not server enforcement.
+Győr uses `tariff.json.pricing`, exactly like the other cities. The former
+city-only discount and free travel have been removed from both booking languages,
+Studio calculators, price cards, homepage copy and structured answers.
+Travel: centre 3,500 Ft; outer districts 4,000 Ft; 10 km 4,500 Ft; 20 km 5,500 Ft.
+Mattress treatments, frames and cushions also use the shared tariff.
+Historical evidence below describes earlier releases, not current prices.
 
 `local-navigation.mjs` replaces cross-city menus with links to existing local
 services across 33 city groups, including the Komárom city hub and language

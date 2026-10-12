@@ -23,10 +23,10 @@ function compare(s){
  return r;
 }
 test('explicit owner price examples, one/two sides and cleaning-time additions',()=>{
- assert.equal(compare(selection([item('karpit_szofa',1,['atkairtas'])])).total,11900);
- assert.equal(compare(selection([item('karpit_l_kanape',1,['atkairtas'])])).total,21900);
- assert.equal(compare(selection([item('matrac_francia_a')],['matrac_nedves_tisztitas'])).total,8800);
- assert.equal(compare(selection([item('matrac_francia_ab')],['matrac_nedves_tisztitas'])).total,11700);
+ assert.equal(compare(selection([item('karpit_szofa',1,['atkairtas'])])).total,25500);
+ assert.equal(compare(selection([item('karpit_l_kanape',1,['atkairtas'])])).total,27500);
+ assert.equal(compare(selection([item('matrac_francia_a')],['matrac_nedves_tisztitas'])).total,23500);
+ assert.equal(compare(selection([item('matrac_francia_ab')],['matrac_nedves_tisztitas'])).total,35000);
 });
 test('Studio and booking agree across every item, extras, quantities, zones and discount boundaries',()=>{
  let cases=0;
@@ -38,21 +38,28 @@ test('Studio and booking agree across every item, extras, quantities, zones and 
  for(const zone of Object.keys(api.zones))compare(selection([item('karpit_l_kanape',2,['atkairtas']),item('matrac_francia_ab'),item('matrac_gyerek_a')],Object.keys(api.extras),zone));
  assert.equal(cases,1000);
 });
-test('Győr reductions stop at city limits and changing location restores the standard tariff',()=>{
- for(const [city,zone,expected]of [['gyor','belvaros',7900],['gyor','kulso',7900],['gyor','20km',22500],['gyor','40km',23500],['mosonmagyarovar','belvaros',21500],['papa','kulso',22000],['szombathely','belvaros',21500],['tatabanya','kulso',22000],['gyor','belvaros',7900]]){
+test('Győr and other cities use identical cleaning and travel tariffs',()=>{
+ for(const [city,zone,expected]of [['gyor','belvaros',21500],['gyor','kulso',22000],['gyor','20km',22500],['gyor','40km',23500],['mosonmagyarovar','belvaros',21500],['papa','kulso',22000],['szombathely','belvaros',21500],['tatabanya','kulso',22000],['gyor','belvaros',21500]]){
   const s={...selection([item('karpit_szofa')],[],zone),city,sourcePage:'karpittisztitas-'+city+'.html'};
   assert.equal(compare(s).total,expected,city+'/'+zone);
  }
 });
-test('local wet mattress totals undercut researched benchmarks including both sides',()=>{
- for(const [id,expected,benchmark]of [['egyagyas_a',6800,7000],['egyagyas_ab',9700,10000],['francia_a',8800,10000],['francia_ab',11700,12000],['gyerek_ab',5700,6000],['kisagy_ab',5200,6000]]){
-  const r=compare(selection([item('matrac_'+id)],['matrac_nedves_tisztitas']));assert.equal(r.total,expected);assert.ok(r.total<benchmark);
+test('wet mattress totals include the standard per-side treatment and city travel fee',()=>{
+ for(const [id,expected]of [['egyagyas_a',18500],['egyagyas_ab',29500],['francia_a',23500],['francia_ab',35000],['gyerek_ab',18500],['kisagy_ab',17500]]){
+  assert.equal(compare(selection([item('matrac_'+id)],['matrac_nedves_tisztitas'])).total,expected);
  }
 });
-test('a local price preview cannot import into an outdated main-booking tariff',()=>{
- const s=selection([item('karpit_szofa')]);
- assert.throws(()=>api.assertTariff(h.json('PRICING'),h.json('UPSELLS'),h.json('DISCOUNTS'),s),/díjak/);
+test('a preview rejects the retired Győr discount before import',()=>{
+ const s=selection([item('karpit_szofa')]),p=h.json('PRICING');p.karpit.szofa.price=7900;
+ assert.throws(()=>api.assertTariff(p,h.json('UPSELLS'),h.json('DISCOUNTS'),s),/díjak/);
 });
+test('every Győr item and extra matches another city in every travel zone',()=>{
+ for(const p of api.catalog)for(const zone of Object.keys(api.zones)){
+  const s=selection([item(p.id,2)],p.sides?['matrac_nedves_tisztitas','matrac_agykeret']:[],zone);
+  assert.deepEqual(api.calculate(s),api.calculate({...s,city:'papa',sourcePage:'karpittisztitas-papa.html'}));
+ }
+});
+
 test('changed extra tariffs fail before a cart can be imported',()=>{
  const s=selection([item('karpit_szofa',1,['atkairtas']),item('matrac_francia_ab')],['matrac_nedves_tisztitas']);
  const p=h.json('PRICING');p.karpit.szofa.atkaPrice=6000;
@@ -98,8 +105,8 @@ test('actual form shows correct item, mattress-extra and travel prices after cit
  const {dom,w}=await importFixture(selection([item('karpit_szofa'),item('matrac_francia_ab')],['matrac_nedves_tisztitas']));
  try{
   const normalize=s=>s.replace(/\s/g,'');
-  assert.equal(normalize(w.document.querySelector('[data-item-id="karpit_szofa"] .item-price').textContent),'7900Ft');
-  assert.equal(normalize(w.document.querySelector('[name="travelZone"][value="belvaros"]').closest('label').querySelector('.zone-price').textContent),'0Ft');
+  assert.equal(normalize(w.document.querySelector('[data-item-id="karpit_szofa"] .item-price').textContent),'18000Ft');
+  assert.equal(normalize(w.document.querySelector('[name="travelZone"][value="belvaros"]').closest('label').querySelector('.zone-price').textContent),'3500Ft');
   const before=w.eval('JSON.stringify(State.selectedItems)');
   w.eval("handleCityChange({value:'papa'})");
   assert.equal(w.eval('JSON.stringify(State.selectedItems)'),before);
@@ -109,8 +116,8 @@ test('actual form shows correct item, mattress-extra and travel prices after cit
   w.eval("handleCityChange({value:'gyor'});handleZoneChange({value:'20km'})");
   assert.equal(normalize(w.document.querySelector('[data-item-id="karpit_szofa"] .item-price').textContent),'18000Ft');
   w.eval("handleZoneChange({value:'kulso'})");
-  assert.equal(normalize(w.document.querySelector('[data-item-id="karpit_szofa"] .item-price').textContent),'7900Ft');
-  assert.match(w.document.querySelector('[data-item-id="matrac_francia_ab"] .mattress-extra .upsell-price').textContent.replace(/\s/g,''),/1900/);
+  assert.equal(normalize(w.document.querySelector('[data-item-id="karpit_szofa"] .item-price').textContent),'18000Ft');
+  assert.match(w.document.querySelector('[data-item-id="matrac_francia_ab"] .mattress-extra .upsell-price').textContent.replace(/\s/g,''),/6000/);
  }finally{dom.window.close();}
 });
 test('Győr published copy and structured data contain the confirmed drying range and current booking channels',()=>{

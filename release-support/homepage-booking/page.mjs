@@ -30,7 +30,7 @@ export function applyHomepageBooking({read,edit,root}){
   }
   const coverage=read(name).match(/<p class="section-description">(?:Minden városban azonos kiszállási díjak|The same call-out fees in every town):[\s\S]*?<\/p>/)?.[0];
   if(!coverage)throw Error('Missing coverage note '+name);
-  edit(name,coverage,'<p class="section-description">'+(en?'Choose your city for local prices and booking or quote-request options. Travel is free within Győr city limits; other locations retain their local call-out fees.':'Válaszd ki a városodat a helyi árakhoz és a foglalási vagy ajánlatkérési lehetőségekhez. Győr városhatárán belül díjmentes a kiszállás; más településeken a helyi kiszállási díjak érvényesek.')+'</p>');
+  edit(name,coverage,'<p class="section-description">'+(en?'Choose your city for local prices and booking or quote-request options. Travel fees depend on the selected zone in every city, including Győr.':'Válaszd ki a városodat a helyi árakhoz és a foglalási vagy ajánlatkérési lehetőségekhez. A kiszállási díj minden városban, Győrben is a választott körzettől függ.')+'</p>');
   edit(name,'</head>','<script src="'+(en?'../':'')+'ui/booking-route.js?v='+hash(compatibility)+'"></script></head>');
  }
  for(const name of names){

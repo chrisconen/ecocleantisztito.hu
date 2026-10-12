@@ -567,14 +567,8 @@ function removeItem(fullId) {
 // ═══════════════════════════════════════════════════════════════════════════════
 
 
-const GYOR_CITY_TARIFF = {"karpit":{"szofa":{"price":7900},"l_kanape":{"price":17900},"u_kanape":{"price":18900},"fotel":{"price":3900},"ebedlo_szek":{"price":2400},"irodai_szek":{"price":2400}},"matrac":{"egyagyas_a":{"price":4900,"wetPrice":1900,"framePrice":3900},"egyagyas_ab":{"price":5900,"wetPrice":1900,"framePrice":3900},"francia_a":{"price":6900,"wetPrice":1900,"framePrice":3900},"francia_ab":{"price":7900,"wetPrice":1900,"framePrice":3900},"gyerek_a":{"price":2900,"wetPrice":900,"framePrice":3900},"gyerek_ab":{"price":3900,"wetPrice":900,"framePrice":3900},"kisagy_a":{"price":2400,"wetPrice":900,"framePrice":3900},"kisagy_ab":{"price":3400,"wetPrice":900,"framePrice":3900}},"pillowPrice":400};
-function isGyorCity(city=State.city,zone=State.travelZone){return city==='gyor'&&(zone==='belvaros'||zone==='kulso');}
-function activePricing(city=State.city,zone=State.travelZone){
- if(!isGyorCity(city,zone))return PRICING;
- const merge=group=>Object.fromEntries(Object.entries(PRICING[group]).map(([id,p])=>[id,{...p,...GYOR_CITY_TARIFF[group][id]}]));
- return {...PRICING,karpit:merge('karpit'),matrac:merge('matrac'),travelZones:{...PRICING.travelZones,belvaros:{...PRICING.travelZones.belvaros,fee:0},kulso:{...PRICING.travelZones.kulso,fee:0}}};
-}
-function activePillowPrice(){return isGyorCity()?GYOR_CITY_TARIFF.pillowPrice:PILLOW_CLEANING.price;}
+function activePricing(){return PRICING;}
+function activePillowPrice(){return PILLOW_CLEANING.price;}
 function refreshLocalPriceLabels(){
  const pricing=activePricing();
  document.querySelectorAll('[data-item-id]').forEach(card=>{
@@ -588,7 +582,6 @@ function refreshLocalPriceLabels(){
   const pillow=card.querySelector('.pillow-extra .upsell-text small:last-child');if(pillow)pillow.textContent='Total cushions for these items · '+activePillowPrice().toLocaleString('en-GB')+' Ft/item';
  });
  document.querySelectorAll('[name="travelZone"]').forEach(r=>{const out=r.closest('label')?.querySelector('.zone-price');if(out)out.textContent=activePricing(State.city,r.value).travelZones[r.value].fee.toLocaleString('en-GB')+' Ft';});
- const notice=document.getElementById('gyorLocalTariffNotice');if(notice)notice.textContent=isGyorCity()?'Győr city prices active · free travel within city limits.':'For Győr city prices, select Győr and a city zone in the address section. Other towns and surrounding villages use the standard tariff.';
 }
 
 function updateSummary() {
@@ -1113,10 +1106,6 @@ async function submitBooking(event) {
         return false;
     }
 
-    if(isGyorCity()&&!/^gy[oő]r(?:$|[\s,\-])/iu.test(city.trim())){
-        alert("Győr city prices apply only to addresses within Győr. Please correct the town or travel zone.");
-        document.getElementById('cityInput').focus();return false;
-    }
     const fullAddress = `${street}, ${plz} ${city}, Magyarország`;
 
     // Get selected calendar slot data
