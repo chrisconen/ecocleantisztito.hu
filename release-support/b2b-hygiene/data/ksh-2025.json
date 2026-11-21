@@ -1,0 +1,873 @@
+{
+ "year": 2025,
+ "preliminary": false,
+ "sources": [
+  {
+   "label": "KSH STADAT 27.2.2.1 - A turisztikai szálláshelyeken eltöltött vendégéjszakák száma megye és régió szerint, havonta (sections: kereskedelmi / magán- és egyéb / összesen)",
+   "url": "https://www.ksh.hu/stadat_files/tur/hu/tur0079.html",
+   "table": "tur0079 (updated 2026-10-28; 2025 values not flagged preliminary) -> areas.*.monthly, national.monthly"
+  },
+  {
+   "label": "KSH Statinfo GB2012 - Turisztikai szálláshelyek vendégforgalma; filters: Szállástípus = Kereskedelmi szálláshelyek összesen, Időszak = 2025. év, Terület = vármegyék + települések, mutató = Vendégéjszakák száma",
+   "url": "http://statinfo.ksh.hu/Statinfo/QueryServlet?ha=GB2012",
+   "table": "GB2012 (updated 2026-10-28) -> areas.*.nights, areas.*.top_towns"
+  },
+  {
+   "label": "KSH Statinfo GB2013 - Turisztikai szálláshelyek kapacitása havonta; filters: Kereskedelmi szálláshelyek összesen, 2025. július, vármegyék",
+   "url": "http://statinfo.ksh.hu/Statinfo/QueryServlet?ha=GB2013",
+   "table": "GB2013 (updated 2026-10-28) -> areas.*.establishments, rooms, beds"
+  },
+  {
+   "label": "KSH STADAT 27.1.1.17 - A turisztikai szálláshelyek kapacitása szállástípusonként, július 31.",
+   "url": "https://www.ksh.hu/stadat_files/tur/hu/tur0083.html",
+   "table": "tur0083 (updated 2026-05-05) -> national beds, rooms, establishments"
+  },
+  {
+   "label": "KSH STADAT 27.1.1.18 - A turisztikai szálláshelyek vendégforgalma és az eltöltött vendégéjszakák száma szállástípusonként",
+   "url": "https://www.ksh.hu/stadat_files/tur/hu/tur0084.html",
+   "table": "tur0084 (updated 2026-05-05) -> national nights check (15 625 + 16 189 thousand)"
+  },
+  {
+   "label": "KSH STADAT 27.1.2.2 - A turisztikai szálláshelyek vendégforgalma megye és régió szerint",
+   "url": "https://www.ksh.hu/stadat_files/tur/hu/tur0089.html",
+   "table": "tur0089 -> *.nights_all_tourist_accommodation"
+  },
+  {
+   "label": "KSH STADAT 27.1.2.1 - A turisztikai szálláshelyek férőhelyei megye és régió szerint, július 31.",
+   "url": "https://www.ksh.hu/stadat_files/tur/hu/tur0088.html",
+   "table": "tur0088 -> *.beds_all_tourist_accommodation"
+  },
+  {
+   "label": "KSH módszertan - Turisztikai szálláshelyek forgalma",
+   "url": "https://www.ksh.hu/gyorstajekoztatok/modszertan/kszmodsz23_2.html",
+   "table": "definitions"
+  }
+ ],
+ "national": {
+  "nights": 31814194,
+  "beds": 324457,
+  "establishments": 3063,
+  "rooms": 101343,
+  "monthly": [
+   1645484,
+   1685636,
+   1928997,
+   2345422,
+   2677428,
+   2999392,
+   4123551,
+   4548861,
+   2686178,
+   2670615,
+   2197236,
+   2305394
+  ],
+  "nights_all_tourist_accommodation": 47174060,
+  "beds_all_tourist_accommodation": 601515,
+  "establishments_all_tourist_accommodation": 38616
+ },
+ "monthly_level": "county",
+ "areas": {
+  "budapest": {
+   "name": "Budapest",
+   "nights": 11629533,
+   "beds": 68602,
+   "establishments": 372,
+   "rooms": 28252,
+   "monthly": [
+    690031,
+    693568,
+    851260,
+    974602,
+    1016223,
+    951971,
+    1010647,
+    1170284,
+    1031511,
+    1085707,
+    990564,
+    1163165
+   ],
+   "monthly_region": null,
+   "top_towns": [
+    [
+     "Budapest 05. ker.",
+     2472763
+    ],
+    [
+     "Budapest 06. ker.",
+     1773436
+    ],
+    [
+     "Budapest 07. ker.",
+     1738394
+    ]
+   ],
+   "top_towns_hidden_nights": 4956,
+   "top_towns_may_be_incomplete": false,
+   "nights_all_tourist_accommodation": 18251115,
+   "beds_all_tourist_accommodation": 118760
+  },
+  "baranya": {
+   "name": "Baranya",
+   "nights": 659870,
+   "beds": 8139,
+   "establishments": 137,
+   "rooms": 2787,
+   "monthly": [
+    28406,
+    28895,
+    41133,
+    49987,
+    60283,
+    66270,
+    85138,
+    92338,
+    59551,
+    63556,
+    43860,
+    40453
+   ],
+   "monthly_region": null,
+   "top_towns": [
+    [
+     "Pécs",
+     209470
+    ],
+    [
+     "Harkány",
+     176642
+    ],
+    [
+     "Komló",
+     42036
+    ]
+   ],
+   "top_towns_hidden_nights": 138142,
+   "top_towns_may_be_incomplete": true,
+   "nights_all_tourist_accommodation": 1065138,
+   "beds_all_tourist_accommodation": 17908
+  },
+  "bacs-kiskun": {
+   "name": "Bács-Kiskun",
+   "nights": 587914,
+   "beds": 8549,
+   "establishments": 125,
+   "rooms": 2700,
+   "monthly": [
+    29246,
+    29446,
+    33476,
+    42617,
+    50870,
+    58382,
+    88744,
+    91268,
+    49628,
+    45440,
+    36320,
+    32477
+   ],
+   "monthly_region": null,
+   "top_towns": [
+    [
+     "Kecskemét",
+     230554
+    ],
+    [
+     "Kiskunmajsa",
+     64505
+    ],
+    [
+     "Tiszakécske",
+     59531
+    ]
+   ],
+   "top_towns_hidden_nights": 61854,
+   "top_towns_may_be_incomplete": true,
+   "nights_all_tourist_accommodation": 845036,
+   "beds_all_tourist_accommodation": 15742
+  },
+  "bekes": {
+   "name": "Békés",
+   "nights": 687824,
+   "beds": 8961,
+   "establishments": 95,
+   "rooms": 2345,
+   "monthly": [
+    36512,
+    35671,
+    36515,
+    46332,
+    54911,
+    66875,
+    101203,
+    114400,
+    54763,
+    60077,
+    42560,
+    38005
+   ],
+   "monthly_region": null,
+   "top_towns": [
+    [
+     "Gyula",
+     431412
+    ],
+    [
+     "Szarvas",
+     86027
+    ],
+    [
+     "Békéscsaba",
+     41639
+    ]
+   ],
+   "top_towns_hidden_nights": 61551,
+   "top_towns_may_be_incomplete": true,
+   "nights_all_tourist_accommodation": 1157167,
+   "beds_all_tourist_accommodation": 20577
+  },
+  "borsod-abauj-zemplen": {
+   "name": "Borsod-Abaúj-Zemplén",
+   "nights": 1034503,
+   "beds": 14233,
+   "establishments": 191,
+   "rooms": 4082,
+   "monthly": [
+    52032,
+    53537,
+    53707,
+    77521,
+    84310,
+    98296,
+    149957,
+    176091,
+    81535,
+    87053,
+    63318,
+    57146
+   ],
+   "monthly_region": null,
+   "top_towns": [
+    [
+     "Miskolc",
+     343598
+    ],
+    [
+     "Mezőkövesd",
+     156136
+    ],
+    [
+     "Bogács",
+     92667
+    ]
+   ],
+   "top_towns_hidden_nights": 115357,
+   "top_towns_may_be_incomplete": true,
+   "nights_all_tourist_accommodation": 1596731,
+   "beds_all_tourist_accommodation": 31066
+  },
+  "csongrad-csanad": {
+   "name": "Csongrád-Csanád",
+   "nights": 773082,
+   "beds": 7443,
+   "establishments": 104,
+   "rooms": 2448,
+   "monthly": [
+    46274,
+    42984,
+    39691,
+    55874,
+    64164,
+    70901,
+    108815,
+    113832,
+    62811,
+    63380,
+    48709,
+    55647
+   ],
+   "monthly_region": null,
+   "top_towns": [
+    [
+     "Szeged",
+     461106
+    ],
+    [
+     "Mórahalom",
+     96774
+    ],
+    [
+     "Balástya",
+     72843
+    ]
+   ],
+   "top_towns_hidden_nights": 14270,
+   "top_towns_may_be_incomplete": false,
+   "nights_all_tourist_accommodation": 1119824,
+   "beds_all_tourist_accommodation": 14127
+  },
+  "fejer": {
+   "name": "Fejér",
+   "nights": 602058,
+   "beds": 12396,
+   "establishments": 100,
+   "rooms": 2828,
+   "monthly": [
+    32910,
+    32916,
+    37965,
+    45015,
+    53171,
+    62794,
+    88531,
+    84275,
+    43311,
+    48522,
+    37679,
+    34969
+   ],
+   "monthly_region": null,
+   "top_towns": [
+    [
+     "Székesfehérvár",
+     255403
+    ],
+    [
+     "Velence",
+     107169
+    ],
+    [
+     "Gárdony",
+     80921
+    ]
+   ],
+   "top_towns_hidden_nights": 97406,
+   "top_towns_may_be_incomplete": true,
+   "nights_all_tourist_accommodation": 763664,
+   "beds_all_tourist_accommodation": 16650
+  },
+  "gyor-moson-sopron": {
+   "name": "Győr-Moson-Sopron",
+   "nights": 1309833,
+   "beds": 13490,
+   "establishments": 192,
+   "rooms": 4783,
+   "monthly": [
+    64425,
+    65699,
+    74598,
+    101617,
+    115373,
+    125002,
+    163719,
+    181556,
+    117603,
+    119854,
+    89515,
+    90872
+   ],
+   "monthly_region": null,
+   "top_towns": [
+    [
+     "Győr",
+     394903
+    ],
+    [
+     "Sopron",
+     337422
+    ],
+    [
+     "Mosonmagyaróvár",
+     173844
+    ]
+   ],
+   "top_towns_hidden_nights": 152173,
+   "top_towns_may_be_incomplete": false,
+   "nights_all_tourist_accommodation": 1709938,
+   "beds_all_tourist_accommodation": 19894
+  },
+  "hajdu-bihar": {
+   "name": "Hajdú-Bihar",
+   "nights": 1527124,
+   "beds": 16425,
+   "establishments": 131,
+   "rooms": 6160,
+   "monthly": [
+    91725,
+    92632,
+    93653,
+    99472,
+    120970,
+    139416,
+    206777,
+    237381,
+    121468,
+    116342,
+    109211,
+    98077
+   ],
+   "monthly_region": null,
+   "top_towns": [
+    [
+     "Hajdúszoboszló",
+     821526
+    ],
+    [
+     "Debrecen",
+     584119
+    ],
+    [
+     "Hajdúböszörmény",
+     21857
+    ]
+   ],
+   "top_towns_hidden_nights": 64364,
+   "top_towns_may_be_incomplete": true,
+   "nights_all_tourist_accommodation": 2077134,
+   "beds_all_tourist_accommodation": 28805
+  },
+  "heves": {
+   "name": "Heves",
+   "nights": 1372606,
+   "beds": 12030,
+   "establishments": 160,
+   "rooms": 3907,
+   "monthly": [
+    81383,
+    80447,
+    85167,
+    99871,
+    117959,
+    123963,
+    161518,
+    190715,
+    109176,
+    128296,
+    95872,
+    98239
+   ],
+   "monthly_region": null,
+   "top_towns": [
+    [
+     "Eger",
+     388446
+    ],
+    [
+     "Gyöngyös",
+     251652
+    ],
+    [
+     "Egerszalók",
+     196660
+    ]
+   ],
+   "top_towns_hidden_nights": 47468,
+   "top_towns_may_be_incomplete": false,
+   "nights_all_tourist_accommodation": 1993981,
+   "beds_all_tourist_accommodation": 26190
+  },
+  "jasz-nagykun-szolnok": {
+   "name": "Jász-Nagykun-Szolnok",
+   "nights": 499050,
+   "beds": 8114,
+   "establishments": 94,
+   "rooms": 1705,
+   "monthly": [
+    16882,
+    20212,
+    26771,
+    36556,
+    44555,
+    56451,
+    76673,
+    87879,
+    46851,
+    38408,
+    27157,
+    20655
+   ],
+   "monthly_region": null,
+   "top_towns": [
+    [
+     "Cserkeszőlő",
+     135474
+    ],
+    [
+     "Berekfürdő",
+     100161
+    ],
+    [
+     "Tiszafüred",
+     91436
+    ]
+   ],
+   "top_towns_hidden_nights": 102663,
+   "top_towns_may_be_incomplete": true,
+   "nights_all_tourist_accommodation": 747470,
+   "beds_all_tourist_accommodation": 14980
+  },
+  "komarom-esztergom": {
+   "name": "Komárom-Esztergom",
+   "nights": 519730,
+   "beds": 7191,
+   "establishments": 95,
+   "rooms": 2202,
+   "monthly": [
+    25563,
+    26432,
+    29499,
+    40010,
+    47724,
+    54459,
+    71411,
+    77113,
+    39031,
+    45137,
+    30941,
+    32410
+   ],
+   "monthly_region": null,
+   "top_towns": [
+    [
+     "Esztergom",
+     238468
+    ],
+    [
+     "Tata",
+     90109
+    ],
+    [
+     "Komárom",
+     61124
+    ]
+   ],
+   "top_towns_hidden_nights": 94451,
+   "top_towns_may_be_incomplete": true,
+   "nights_all_tourist_accommodation": 676558,
+   "beds_all_tourist_accommodation": 10160
+  },
+  "nograd": {
+   "name": "Nógrád",
+   "nights": 124618,
+   "beds": 4544,
+   "establishments": 48,
+   "rooms": 826,
+   "monthly": [
+    5516,
+    5727,
+    7191,
+    9464,
+    11249,
+    13423,
+    20434,
+    17847,
+    8553,
+    11223,
+    6775,
+    7216
+   ],
+   "monthly_region": null,
+   "top_towns": [
+    [
+     "Salgótarján",
+     14389
+    ],
+    [
+     "Mátraverebély",
+     10528
+    ],
+    [
+     "Pásztó",
+     3646
+    ]
+   ],
+   "top_towns_hidden_nights": 92731,
+   "top_towns_may_be_incomplete": true,
+   "nights_all_tourist_accommodation": 236371,
+   "beds_all_tourist_accommodation": 7686
+  },
+  "pest": {
+   "name": "Pest",
+   "nights": 1496987,
+   "beds": 18206,
+   "establishments": 216,
+   "rooms": 5237,
+   "monthly": [
+    80462,
+    80919,
+    88720,
+    114202,
+    133640,
+    143660,
+    180600,
+    198529,
+    129983,
+    131655,
+    104027,
+    110590
+   ],
+   "monthly_region": null,
+   "top_towns": [
+    [
+     "Visegrád",
+     303453
+    ],
+    [
+     "Vecsés",
+     248724
+    ],
+    [
+     "Cegléd",
+     70619
+    ]
+   ],
+   "top_towns_hidden_nights": 465017,
+   "top_towns_may_be_incomplete": true,
+   "nights_all_tourist_accommodation": 2013145,
+   "beds_all_tourist_accommodation": 28344
+  },
+  "somogy": {
+   "name": "Somogy",
+   "nights": 1727887,
+   "beds": 33189,
+   "establishments": 288,
+   "rooms": 8048,
+   "monthly": [
+    35632,
+    33030,
+    41436,
+    68190,
+    102943,
+    233977,
+    458310,
+    483556,
+    110477,
+    67587,
+    45215,
+    47534
+   ],
+   "monthly_region": null,
+   "top_towns": [
+    [
+     "Siófok",
+     776344
+    ],
+    [
+     "Zamárdi",
+     152351
+    ],
+    [
+     "Balatonszemes",
+     86114
+    ]
+   ],
+   "top_towns_hidden_nights": 62194,
+   "top_towns_may_be_incomplete": false,
+   "nights_all_tourist_accommodation": 3216852,
+   "beds_all_tourist_accommodation": 81986
+  },
+  "szabolcs-szatmar-bereg": {
+   "name": "Szabolcs-Szatmár-Bereg",
+   "nights": 430794,
+   "beds": 7730,
+   "establishments": 112,
+   "rooms": 2339,
+   "monthly": [
+    20175,
+    23843,
+    26344,
+    33652,
+    36094,
+    39907,
+    65601,
+    71337,
+    34527,
+    35463,
+    24205,
+    19646
+   ],
+   "monthly_region": null,
+   "top_towns": [
+    [
+     "Nyíregyháza",
+     294088
+    ],
+    [
+     "Nyírbátor",
+     31797
+    ],
+    [
+     "Kisvárda",
+     21887
+    ]
+   ],
+   "top_towns_hidden_nights": 59094,
+   "top_towns_may_be_incomplete": true,
+   "nights_all_tourist_accommodation": 597089,
+   "beds_all_tourist_accommodation": 12426
+  },
+  "tolna": {
+   "name": "Tolna",
+   "nights": 138304,
+   "beds": 2801,
+   "establishments": 47,
+   "rooms": 865,
+   "monthly": [
+    7021,
+    7352,
+    8492,
+    9816,
+    11710,
+    13908,
+    18965,
+    19325,
+    10733,
+    12716,
+    9991,
+    8275
+   ],
+   "monthly_region": null,
+   "top_towns": [
+    [
+     "Dombóvár",
+     30233
+    ],
+    [
+     "Paks",
+     14911
+    ],
+    [
+     "Decs",
+     13492
+    ]
+   ],
+   "top_towns_hidden_nights": 62960,
+   "top_towns_may_be_incomplete": true,
+   "nights_all_tourist_accommodation": 232435,
+   "beds_all_tourist_accommodation": 5777
+  },
+  "vas": {
+   "name": "Vas",
+   "nights": 1565465,
+   "beds": 12495,
+   "establishments": 134,
+   "rooms": 4023,
+   "monthly": [
+    96717,
+    109359,
+    109438,
+    123415,
+    128296,
+    129759,
+    179816,
+    202826,
+    121027,
+    144315,
+    118719,
+    101778
+   ],
+   "monthly_region": null,
+   "top_towns": [
+    [
+     "Bük",
+     685449
+    ],
+    [
+     "Sárvár",
+     520413
+    ],
+    [
+     "Szentgotthárd",
+     88792
+    ]
+   ],
+   "top_towns_hidden_nights": 65777,
+   "top_towns_may_be_incomplete": false,
+   "nights_all_tourist_accommodation": 1958522,
+   "beds_all_tourist_accommodation": 20671
+  },
+  "veszprem": {
+   "name": "Veszprém",
+   "nights": 2428884,
+   "beds": 37047,
+   "establishments": 231,
+   "rooms": 8673,
+   "monthly": [
+    64312,
+    61522,
+    68934,
+    120711,
+    199119,
+    294976,
+    544654,
+    566599,
+    218608,
+    127722,
+    83116,
+    78611
+   ],
+   "monthly_region": null,
+   "top_towns": [
+    [
+     "Balatonfüred",
+     726094
+    ],
+    [
+     "Zánka",
+     336097
+    ],
+    [
+     "Tihany",
+     186840
+    ]
+   ],
+   "top_towns_hidden_nights": 233908,
+   "top_towns_may_be_incomplete": true,
+   "nights_all_tourist_accommodation": 3521266,
+   "beds_all_tourist_accommodation": 66971
+  },
+  "zala": {
+   "name": "Zala",
+   "nights": 2698128,
+   "beds": 22872,
+   "establishments": 191,
+   "rooms": 7133,
+   "monthly": [
+    140260,
+    161445,
+    175007,
+    196498,
+    223864,
+    255002,
+    342038,
+    371710,
+    235031,
+    238162,
+    189482,
+    169629
+   ],
+   "monthly_region": null,
+   "top_towns": [
+    [
+     "Hévíz",
+     1024633
+    ],
+    [
+     "Zalakaros",
+     682696
+    ],
+    [
+     "Keszthely",
+     222570
+    ]
+   ],
+   "top_towns_hidden_nights": 189821,
+   "top_towns_may_be_incomplete": false,
+   "nights_all_tourist_accommodation": 3394624,
+   "beds_all_tourist_accommodation": 42795
+  }
+ },
+ "notes": "All main figures (nights, beds, establishments, rooms, monthly, top_towns) are for KERESKEDELMI szálláshelyek (commercial accommodation: szálloda, panzió, kemping, üdülőháztelep, közösségi szálláshely; KSH withholds holiday boats) in calendar year 2025. They EXCLUDE magán- és egyéb szálláshelyek (private and other accommodation, e.g. Airbnb-type magánszálláshely). The *_all_tourist_accommodation fields give the \"turisztikai szálláshelyek\" total (commercial + private/other) for context. Since 2021 KSH (data source: MTÜ/NTAK) publishes under the \"turisztikai szálláshelyek\" methodology. The old \"kereskedelmi szálláshelyek\" STADAT tables were closed in 2021, so the commercial figures come from the commercial breakdown of the new tables and are not comparable with pre-2021 series. Status: the 2025 annual STADAT tables were updated 2026-05-05 and the monthly table 2026-10-28. No 2025 value is marked preliminary (only 2026 months are), so preliminary=false. KSH may still revise. nights = Statinfo GB2012 annual 2025 value. It equals exactly the sum of the 12 STADAT tur0079 monthly values for every area and nationally (31 814 194 = tur0084 15 625k domestic + 16 189k foreign). beds/establishments/rooms = Statinfo GB2013, July 2025 (capacity of units operating in that month; \"működő\" = had guests in the period). The national July 2025 figures (3 063 units, 101 343 rooms, 324 457 beds) are identical to STADAT 27.1.1.17 \"július 31.\" 2025, so these are the official July-31 capacity figures. County values sum exactly to the national total. Budapest is a NUTS2 region on its own; Pest is a county. monthly arrays run January..December. top_towns: settlement-level 2025 commercial guest nights from Statinfo GB2012, top 3 among settlements whose values are published. For Budapest these are districts (kerületek); a further 224 477 Budapest nights cannot be assigned to a district. KSH suppresses settlement values for confidentiality when there are few providers. top_towns_hidden_nights = area total minus all published settlement values. Where top_towns_may_be_incomplete is true, the hidden total exceeds the #3 value, so a confidential settlement could in principle outrank a listed one."
+}

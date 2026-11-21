@@ -11,6 +11,8 @@ on:
       - 'release-support/verify-package.py'
       - 'release-support/verify-content-clarity-overlay.py'
       - 'release-support/content-clarity/**'
+      - 'release-support/b2b-hygiene/**'
+      - 'release-support/verify-b2b-overlay.py'
       - 'release-support/gyor-conversion/**'
       - 'release-support/verify-booking-extras-overlay.py'
       - 'release-support/booking-extras/**'

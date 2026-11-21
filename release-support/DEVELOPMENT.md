@@ -2,7 +2,7 @@
 
 The public Pages artifact is `release/` only. Root HTML/CSS remain the original build inputs; the new styles and transforms are maintained in `demo/` and `release-support/`. Do not replace root inputs with generated release files. Local rollback archives are excluded from Git.
 
-The latest pricing and booking-copy changes are maintained in [content-clarity/README.md](content-clarity/README.md), above the English layer. Follow that build path for this release; do not overwrite it with an older layer builder. Run full verification before package verification, sequentially.
+The top layer is the B2B mattress-cleaning layer (21 pages + sitewide links): rebuild it with `python release-support/b2b-hygiene/build.py` after any change below it; `verify-b2b-overlay.py` restores its parent and runs the parent proof. The latest pricing and booking-copy changes are maintained in [content-clarity/README.md](content-clarity/README.md), above the English layer. Follow that build path for this release; do not overwrite it with an older layer builder. Run full verification before package verification, sequentially.
 
 The live release now has a reviewed informal-Hungarian copy layer. Before any full or widget rebuild, follow [copy-tone/README.md](copy-tone/README.md); the older build sequence below cannot overwrite that layer. All new customer-facing copy must use tegezés.
 

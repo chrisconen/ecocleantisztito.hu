@@ -38,7 +38,11 @@ if report.get('manifestSha256') != digest(manifest_bytes):
     errors.append('Verification does not cover this exact release manifest')
 if manifest.get('unresolved'):
     errors.append('Build has unresolved dependencies')
-if manifest.get('contentClarityOverlay'):
+if manifest.get('b2bOverlay'):
+    spec=importlib.util.spec_from_file_location('b2b_overlay',ROOT/'release-support/verify-b2b-overlay.py')
+    overlay_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(overlay_module)
+    errors.extend(overlay_module.verify(manifest))
+elif manifest.get('contentClarityOverlay'):
     spec=importlib.util.spec_from_file_location('content_clarity_overlay',ROOT/'release-support/verify-content-clarity-overlay.py')
     overlay_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(overlay_module)
     errors.extend(overlay_module.verify(manifest))
