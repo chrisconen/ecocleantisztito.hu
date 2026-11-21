@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Magyarország-térkép
   document.querySelectorAll('[data-map]').forEach(root => {
     const data = JSON.parse(root.querySelector('script[type="application/json"]').textContent);
-    const links = [...root.querySelectorAll('svg a')];
+    const links = [...root.querySelectorAll('svg path[data-key]')];
     const card = root.querySelector('[data-map-card]');
     const f = k => card.querySelector(`[data-f="${k}"]`);
     const show = key => {
@@ -133,6 +133,8 @@ document.addEventListener('DOMContentLoaded', () => {
     links.forEach(a => {
       a.addEventListener('mouseenter', () => show(a.dataset.key));
       a.addEventListener('focus', () => show(a.dataset.key));
+      a.addEventListener('click', () => { location.href = a.dataset.href; });
+      a.addEventListener('keydown', e => { if (e.key === 'Enter') location.href = a.dataset.href; });
     });
   });
 

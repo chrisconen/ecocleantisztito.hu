@@ -295,7 +295,8 @@ def hungary_map(current):
         s = x['slug']
         cls = ' '.join(filter(None, ['is-core' if s in CORE else '', 'is-current' if current and s == current['slug'] else '']))
         lx, ly = MAP['labels'][s]
-        links += f'<a href="{page_of(s)}.html" data-key="{s}"{attr('class', cls)} aria-label="Szállodai matractisztítás {e(x["loc"])}"><path d="{MAP["paths"][s]}" fill-rule="evenodd"/></a>'
+        # Nem <a>: a Cloudflare e-mail-dekódolója az SVG-linkeken hibát dob. A valódi linkek a lista alatt vannak.
+        links += f'<path d="{MAP["paths"][s]}" fill-rule="evenodd" data-key="{s}" data-href="{page_of(s)}.html" role="link" tabindex="0"{attr('class', cls)} aria-label="Szállodai matractisztítás {e(x["loc"])}"/>'
         texts += f'<text x="{lx}" y="{ly}" text-anchor="middle" data-key="{s}"{attr('class', 'is-current' if current and s == current['slug'] else '')} aria-hidden="true">{e(x["short"])}</text>'
     lakes = ''.join(f'<path class="hx-lake" d="{p}"/>' for p in MAP['lakes'])
     data = {}

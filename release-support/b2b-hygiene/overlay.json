@@ -4,7 +4,7 @@
  "reportSha256": "999ff037e3bb4538373164826b1ef5c9f71f70b550bdc2233075d7a822c472ab",
  "contentSha256": "6a7c639cf085e875cbedd5081fd0392bb1cd7dcfb034a3173313e6095e922dae",
  "dataSha256": "57e16b700f767d70504cc56b32a8d24e242fe3a9483a4507240779482ce65b3d",
- "buildSha256": "ae5d6ec759873b3e5841b3ea46cc4a226c1e0665bc7740a6b67fca317d4a114d",
+ "buildSha256": "8b49aef35d4340b75a553b3aec1dfcd0f660e2e2c4aded83c26ccee539644ae2",
  "files": {
   "ablaktisztitas-badacsony.html": {
    "beforeSha256": "276235de500ecb9fcbfdbefa77072db7b04f8e9e092f9939377ac0b25adf5a78",
@@ -4090,118 +4090,118 @@
    "source": "release-support/b2b-hygiene"
   },
   "matractisztitas-cegeknek-bacs-kiskun.html": {
-   "sha256": "1adf7b5eb6ad7376b6a5072bb5a186a6fc6fd444f7f957e6b3f27484561ca743",
-   "bytes": 84076,
+   "sha256": "91d5028e2f5953f9873b094259352abc6e723cf03001295899d64f782c920d58",
+   "bytes": 84536,
    "source": "release-support/b2b-hygiene"
   },
   "matractisztitas-cegeknek-baranya.html": {
-   "sha256": "874b6fe8a8fde6ec7d93a0e5c85e47afc863bfc5c7a150b2e78271068d009f9e",
-   "bytes": 83619,
+   "sha256": "943434653db50dc0e438798a73e111d6a1d57f51b5694af015d86259c6b5cf87",
+   "bytes": 84079,
    "source": "release-support/b2b-hygiene"
   },
   "matractisztitas-cegeknek-bekes.html": {
-   "sha256": "04ffa9b8ce0f66b2b62992e20a2279b2efe8dd965e9f06aee6118cf8655f1db5",
-   "bytes": 83673,
+   "sha256": "392ccfea436fe4b6a24678ce94a21cc5d53992950f241530cbb2950696fc2f9b",
+   "bytes": 84133,
    "source": "release-support/b2b-hygiene"
   },
   "matractisztitas-cegeknek-borsod-abauj-zemplen.html": {
-   "sha256": "bc3bc041d70554a7905088fcd57ee8c613c14fff6ae23a74066cfd4423a92c41",
-   "bytes": 84398,
+   "sha256": "d2ce028871206fe0ee2c438b712808a577535d09ecbf27f63b69a05e98d89d53",
+   "bytes": 84858,
    "source": "release-support/b2b-hygiene"
   },
   "matractisztitas-cegeknek-budapest.html": {
-   "sha256": "672c16d86b52ae302f4a53464da8a2cbcdcf287ffd9d8151df0818b8ae8e0544",
-   "bytes": 84201,
+   "sha256": "61f6dbe342da186fc803251c33c73924f309f6cd9c69b1e716bbd6182f866d95",
+   "bytes": 84661,
    "source": "release-support/b2b-hygiene"
   },
   "matractisztitas-cegeknek-csongrad-csanad.html": {
-   "sha256": "276b28633cdffddcc25a5b49e8161ed2c93a44603b8f206e210efc8bd6fa3e47",
-   "bytes": 84224,
+   "sha256": "56da21cf7e89ac243d9f01ed1e722a891cf24466a65bdd3168b202236157c663",
+   "bytes": 84684,
    "source": "release-support/b2b-hygiene"
   },
   "matractisztitas-cegeknek-fejer.html": {
-   "sha256": "2ce2b3c81f8eaa7e403c344381679825410c965ccf1261219977a357493692c4",
-   "bytes": 84023,
+   "sha256": "3fa2b74a81f4007c50128f3374bab6187114ecd367a77e0fc3adc1f2042214a9",
+   "bytes": 84483,
    "source": "release-support/b2b-hygiene"
   },
   "matractisztitas-cegeknek-gyor-moson-sopron.html": {
-   "sha256": "5165995559d6944e7cbe894d86c3882f34d83379d7008b51b6e1c5a2d3038183",
-   "bytes": 84565,
+   "sha256": "561907cc0170cb51ecf8f5e0b298cb076687a188673738d7282c15cf7d211561",
+   "bytes": 85025,
    "source": "release-support/b2b-hygiene"
   },
   "matractisztitas-cegeknek-hajdu-bihar.html": {
-   "sha256": "845531c957a2310bfc228919073d592c942d78df271d3ba9bb0b61819b23b34a",
-   "bytes": 84352,
+   "sha256": "1b7892039780568f3c4085daa5766ee4379bb2e3be9e23b0bbfd4651c9487b91",
+   "bytes": 84812,
    "source": "release-support/b2b-hygiene"
   },
   "matractisztitas-cegeknek-heves.html": {
-   "sha256": "955ec5e93105eba8626e55318b9687a4994fc1db19100c5bb7cec0703966a9fd",
-   "bytes": 83675,
+   "sha256": "79ecc1613b6b2e51407ef1899e542221ce6363ba648dc082e78731cc39b6a185",
+   "bytes": 84135,
    "source": "release-support/b2b-hygiene"
   },
   "matractisztitas-cegeknek-jasz-nagykun-szolnok.html": {
-   "sha256": "565c74349be9b0620a2b62ddda99b07cf3a5a995d4e16164ee7a3a2f30c99ebf",
-   "bytes": 84286,
+   "sha256": "a8c9bf8e0fa129eae94a2c8b7e2d179e13cde7ae17945e764f8130bba34b6163",
+   "bytes": 84746,
    "source": "release-support/b2b-hygiene"
   },
   "matractisztitas-cegeknek-komarom-esztergom.html": {
-   "sha256": "4a0083566eed33f8f23e76995775879658d1de73bc4131a71038a4aa50f3bbbc",
-   "bytes": 84294,
+   "sha256": "8798f8433e801ca064202e5b2e8f3e0b8705990799d1b24cff053fcf4aede593",
+   "bytes": 84754,
    "source": "release-support/b2b-hygiene"
   },
   "matractisztitas-cegeknek-nograd.html": {
-   "sha256": "3dfb827a050e182443de655ea1598e1da50099d132b395c89ffb25dc40f384e8",
-   "bytes": 83674,
+   "sha256": "64f6fea98a6b689eb865acf645d220b911b82f6ca2f6f13f6183114281527dc4",
+   "bytes": 84134,
    "source": "release-support/b2b-hygiene"
   },
   "matractisztitas-cegeknek-pest.html": {
-   "sha256": "9151190a4881ccce7f16f2d7fa133f71577baf13e1e03b26f07211d6fb9d696d",
-   "bytes": 84132,
+   "sha256": "18b0f88d6209ee3766dcb27986985eeceae2fd03b4c2c98a22ad7d10b7cfc30d",
+   "bytes": 84592,
    "source": "release-support/b2b-hygiene"
   },
   "matractisztitas-cegeknek-somogy.html": {
-   "sha256": "dd696919ed0be596165c41e7c9e6429c48373da67449de73ad6b80cbad514e9b",
-   "bytes": 83891,
+   "sha256": "1042a3f86b48c7a682d951fce1761bb33cc30954c427bd0372871fdc26e6dcd8",
+   "bytes": 84351,
    "source": "release-support/b2b-hygiene"
   },
   "matractisztitas-cegeknek-szabolcs-szatmar-bereg.html": {
-   "sha256": "094f0d1c6cc0ff1f5a41e5c249923121292678bd5271a10b0a3a04d6474b0e79",
-   "bytes": 84466,
+   "sha256": "d3b725bc9f9991f63991d896aade6ea1729c7ad87f5050051cc00a1ecb997939",
+   "bytes": 84926,
    "source": "release-support/b2b-hygiene"
   },
   "matractisztitas-cegeknek-tolna.html": {
-   "sha256": "7f17bc48dc5463c1e1e59c8b12a210a19307e9fcc786fec534971929c3cbc5e0",
-   "bytes": 83820,
+   "sha256": "edec67be6cadcbcf273cafee13b7df53b66aa7f93590a7ea444de32c489b0195",
+   "bytes": 84280,
    "source": "release-support/b2b-hygiene"
   },
   "matractisztitas-cegeknek-vas.html": {
-   "sha256": "aa6a988ed3d747fdc354ca6cd8350d84d3932fbe83c2b7fb86cc92e66be3596d",
-   "bytes": 83679,
+   "sha256": "125dc938f2b50c49f1343fa7ef3d99172a74b393a48d1e771880b42bbfbf98dc",
+   "bytes": 84139,
    "source": "release-support/b2b-hygiene"
   },
   "matractisztitas-cegeknek-veszprem.html": {
-   "sha256": "03b62e1874369b9e6b1bee79f89917760e2f37b481d3674bf535f955380441f9",
-   "bytes": 84350,
+   "sha256": "631765381693ba3c75f7bd3a1c6ed661d2a781e8176e9937f606985ffad18f45",
+   "bytes": 84810,
    "source": "release-support/b2b-hygiene"
   },
   "matractisztitas-cegeknek-zala.html": {
-   "sha256": "f1e8662a2ea9146703b0a62d5ac0a91f27a96dba169128251448827f49215da1",
-   "bytes": 83743,
+   "sha256": "13a85c8f78c8fd704190f5a1d6fc9f437813a71dee1607834fb35e27d1b7ef54",
+   "bytes": 84203,
    "source": "release-support/b2b-hygiene"
   },
   "matractisztitas-cegeknek.html": {
-   "sha256": "3b0231d41ace601a04deacd4fa838839c4c4280b010665531cfdf7f06a004497",
-   "bytes": 85837,
+   "sha256": "5a981ae1173b932151be9124ae390d7353f527400908824da400724cf7d73e20",
+   "bytes": 86297,
    "source": "release-support/b2b-hygiene"
   },
   "ui/b2b-hygiene.css": {
-   "sha256": "62724c8af177b1be508ab6219cbab70c584d5c024dfe4da743adb9bba9d6d6a8",
-   "bytes": 30838,
+   "sha256": "86d04e8cdf620c08baa98a2323f8c2ee9212152c026f065a8f944ed05f78b55f",
+   "bytes": 30848,
    "source": "release-support/b2b-hygiene"
   },
   "ui/b2b-hygiene.js": {
-   "sha256": "fc8934e776997cd7a13118778643226e7540a862f6459629e2e87c8ee2d22921",
-   "bytes": 12417,
+   "sha256": "432ed762098b158b1fb5bfa8076b305f40736c1279ddbec488a115f7efd2a520",
+   "bytes": 12610,
    "source": "release-support/b2b-hygiene"
   }
  }

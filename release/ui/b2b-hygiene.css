@@ -176,12 +176,11 @@ body.hx{margin:0;background:var(--px-paper);color:var(--px-ink);font-family:var(
 /* Térkép */
 .hx-mapwrap{display:grid;grid-template-columns:1.35fr .65fr;gap:clamp(28px,4vw,60px);align-items:center;}
 .hx-map{width:100%;height:auto;overflow:visible;}
-.hx-map path{fill:#e1e8dc;stroke:#fffef9;stroke-width:1.4;transition:fill .25s;cursor:pointer;}
-.hx-map a.is-core path{fill:#c7d6bf;}
-.hx-map a:hover path,.hx-map a:focus path,.hx-map a.is-on path{fill:var(--px-green);}
-.hx-map a.is-current path{fill:var(--px-deep);}
-.hx-map a:focus{outline:none;}
-.hx-map a:focus-visible path{stroke:var(--px-ink);stroke-width:3;}
+.hx-map path[data-key]{fill:#e1e8dc;stroke:#fffef9;stroke-width:1.4;transition:fill .25s;cursor:pointer;outline:none;}
+.hx-map path.is-core{fill:#c7d6bf;}
+.hx-map path[data-key]:hover,.hx-map path[data-key]:focus,.hx-map path.is-on{fill:var(--px-green);}
+.hx-map path.is-current{fill:var(--px-deep);}
+.hx-map path[data-key]:focus-visible{stroke:var(--px-ink);stroke-width:3;}
 .hx-map .hx-lake{fill:#a9c9d3;stroke:none;pointer-events:none;}
 .hx-map text{font-size:10.5px;font-weight:700;fill:var(--px-deep);pointer-events:none;font-family:var(--hx-body);}
 .hx-map text.is-on,.hx-map text.is-current{fill:#fff;}
