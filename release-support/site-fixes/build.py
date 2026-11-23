@@ -15,6 +15,7 @@ van, előbb visszaállítja a szülőt.
 import hashlib
 import html
 import json
+import posixpath
 import re
 import sys
 from pathlib import Path
@@ -64,13 +65,13 @@ def load_patches():
 RULES = load_patches()
 
 
-def inject(name, before, hits=None):
+def inject(name, before, hits=None, rules=None):
     """Az összes illeszkedő szabály alkalmazása; visszaadja az új bájtokat és a [pozíció, régi, új] listát."""
     if not name.endswith(TEXT):
         return before, []
     s = before.decode('utf-8')
     spans = []
-    for r in RULES:
+    for r in (RULES if rules is None else rules):
         if not r['rx'].match(name):
             continue
         n, at = 0, s.find(r['old'])
@@ -101,6 +102,35 @@ def restore(data, edits):
         out += [s[cur:at], old]; cur = at + len(new); shift += len(new) - len(old)
     out.append(s[cur:])
     return ''.join(out).encode('utf-8')
+
+
+# --------------------------------------------------------------------------------------------
+# Cache-bust: a módosított assetek ?v= hashe (sha256[:12]) a HTML-ben is frissül
+# --------------------------------------------------------------------------------------------
+BUST = 'f8-cachebust.json'
+VREF = re.compile(r'(?:src|href)="([^"?#]+)\?v=([0-9a-f]{12})"')
+
+
+def vrefs(name, html_text):
+    for m in VREF.finditer(html_text):
+        yield posixpath.normpath(posixpath.join(posixpath.dirname(name), m.group(1))), m.group(2)
+
+
+def write_bust(parent):
+    """patches/f8-cachebust.json újragenerálása a szülő assetek + a többi szabály alapján (Cloudflare 1 éves asset-cache miatt kell)."""
+    static = [r for r in RULES if not r['src'].startswith(BUST)]
+    refs = {}
+    for n in parent['files']:
+        if n.endswith('.html'):
+            for path, h in vrefs(n, (REL / n).read_text(encoding='utf-8')):
+                refs.setdefault((path, h), n)
+    rules = []
+    for (path, h) in sorted(refs):
+        if path in parent['files']:
+            new = sha(inject(path, (REL / path).read_bytes(), rules=static)[0])[:12]
+            if new != h:
+                rules.append(dict(glob='**/*.html', old=f'{path}?v={h}', new=f'{path}?v={new}', why='F8: a réteg módosította az assetet; új hash, különben az 1 éves cache a régit adná'))
+    (HERE / 'patches' / BUST).write_text(json.dumps(rules, ensure_ascii=False, indent=1) + '\n', encoding='utf-8', newline='\n')
 
 
 # --------------------------------------------------------------------------------------------
@@ -187,6 +217,9 @@ def build():
     assert parent.get('b2bOverlay') and not parent.get(KEY)
     for name in parent['files']:
         assert sha((REL / name).read_bytes()) == parent['files'][name]['sha256'], 'A szülőcsomag eltér: ' + name
+    global RULES
+    write_bust(parent)
+    RULES = load_patches()
 
     edited, hits, added = {}, {}, {}
     try:
@@ -262,6 +295,11 @@ def check(parent, edited, added):
     assert not bad, 'Tiltott állítás maradt: ' + json.dumps(bad, ensure_ascii=False)[:3000]
     for n, rec in edited.items():
         assert sha(restore((REL / n).read_bytes(), rec['edits'])) == parent['files'][n]['sha256'], ('visszaállítás', n)
+    for n in pages:  # minden ?v= hash a tényleges tartalomé (1 éves asset-cache mellett ez kötelező)
+        if n.endswith('.html'):
+            for path, h in vrefs(n, (REL / n).read_text(encoding='utf-8')):
+                if (REL / path).is_file():
+                    assert sha((REL / path).read_bytes())[:12] == h, ('elavult ?v= hash', n, path)
     for n in added:
         doc = (REL / n).read_text(encoding='utf-8')
         assert '[KITÖLTENDŐ]' not in doc and doc.count('<h1') == 1, n

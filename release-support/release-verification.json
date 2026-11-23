@@ -1,5 +1,5 @@
 {
-  "manifestSha256": "64b3f68bed2de273adaf17ef8445bb19b3aec54290727fc7378267f65fadc1ca",
+  "manifestSha256": "83e2b8ab15a811385b3c79d5d0702768c02d01859838bb33d8e1cd9a1f806d00",
   "counts": {
     "pages": 142,
     "links": 7632,
@@ -13,7 +13,7 @@
     "addedFiles": 102
   },
   "siteFixes": {
-    "rules": 609,
+    "rules": 634,
     "editedFiles": 252,
     "addedFiles": 4
   }

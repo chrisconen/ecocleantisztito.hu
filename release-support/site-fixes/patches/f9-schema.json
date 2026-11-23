@@ -1,0 +1,50 @@
+[
+ {
+  "glob": "**/*.html",
+  "old": "\"reviewCount\": \"209\"",
+  "new": "\"reviewCount\": \"215\"",
+  "why": "F9: élő Google-szám 2026-11-23 (215, 5,0)"
+ },
+ {
+  "glob": "komarom.html",
+  "old": "\"ratingCount\": \"48\"",
+  "new": "\"ratingCount\": \"215\"",
+  "why": "F9: a cég összesített Google-értékelésszáma"
+ },
+ {
+  "glob": "**/*.html",
+  "old": "5.0 (191+ vélemény)",
+  "new": "5.0 (200+ Google-vélemény)",
+  "why": "F9: kerekítve lefelé, így nem avul el minden új véleménnyel"
+ },
+ {
+  "glob": "**/*.html",
+  "old": "5.0 (191+ reviews)",
+  "new": "5.0 (200+ Google reviews)",
+  "why": "F9: rounded down so it stays true"
+ },
+ {
+  "glob": "**/*.html",
+  "old": "\"price\": \"8000\"",
+  "new": "\"price\": \"9000\"",
+  "why": "F9: egyágyas matrac A oldal a díjszabás és a látható ár szerint 9 000 Ft"
+ },
+ {
+  "glob": "**/*.html",
+  "old": "\"minPrice\": \"8000\"",
+  "new": "\"minPrice\": \"9000\"",
+  "why": "F9: lásd fent"
+ },
+ {
+  "glob": "**/*.html",
+  "old": "\"price\": \"12000\"",
+  "new": "\"price\": \"14000\"",
+  "why": "F9: franciaágy matrac A oldal a díjszabás szerint 14 000 Ft"
+ },
+ {
+  "glob": "**/*.html",
+  "old": "\"minPrice\": \"12000\"",
+  "new": "\"minPrice\": \"14000\"",
+  "why": "F9: lásd fent"
+ }
+]
