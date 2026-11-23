@@ -1,0 +1,32 @@
+[
+ {
+  "glob": "*.html",
+  "old": "Ha nem vagy elégedett, újratisztítjuk ingyen, vagy visszaadjuk a pénzed.",
+  "new": "Ha nem vagy elégedett, 30 napon belül ingyen újratisztítjuk.",
+  "why": "F14: nincs pénzvisszafizetés, a garancia 30 napon belüli ingyenes újratisztítás (tulaj, 2026-11-23; ÁSZF 11. pont)"
+ },
+ {
+  "glob": "*.html",
+  "old": "Ha nem vagy elégedett, újratisztítjuk ingyen. Pénzvisszafizetési garancia!",
+  "new": "Ha nem vagy elégedett, 30 napon belül ingyen újratisztítjuk.",
+  "why": "F14: nincs pénzvisszafizetés, a garancia 30 napon belüli ingyenes újratisztítás (tulaj, 2026-11-23; ÁSZF 11. pont)"
+ },
+ {
+  "glob": "en/*.html",
+  "old": "If you are not satisfied, we will re-clean for free. Money-back guarantee!",
+  "new": "If you are not satisfied, we will re-clean it for free within 30 days.",
+  "why": "F14: no money-back promise; free re-clean within 30 days (terms §11)"
+ },
+ {
+  "glob": "en/*.html",
+  "old": "If you are not satisfied, we will re-clean for free or refund your money.",
+  "new": "If you are not satisfied, we will re-clean it for free within 30 days.",
+  "why": "F14: no money-back promise; free re-clean within 30 days (terms §11)"
+ },
+ {
+  "glob": "karpittisztito-gep-berles.html",
+  "old": "<strong>100%-os elégedettségi garanciát</strong> jelent – vagy pénzvisszafizetést.",
+  "new": "<strong>100%-os elégedettségi garanciát</strong> jelent: ha nem vagy elégedett, 30 napon belül ingyen újratisztítjuk.",
+  "why": "F14: nincs pénzvisszafizetés, a garancia 30 napon belüli ingyenes újratisztítás (tulaj, 2026-11-23; ÁSZF 11. pont)"
+ }
+]

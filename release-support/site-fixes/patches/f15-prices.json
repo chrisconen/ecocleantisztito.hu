@@ -1,0 +1,129 @@
+[
+ {
+  "glob": "ui/booking-live.js",
+  "old": "price: 18000, duration: 40, atkaPrice: 4000,",
+  "new": "price: 18000, duration: 40, atkaPrice: 6000,",
+  "why": "F15: a tulaj szerint a magasabb (telefonos AI) díjszabás az aktuális (2026-11-23): szófa és L-kanapé atka- és allergénkezelés 6 000 Ft, franciaágy nedves mosás 8 500 Ft/oldal"
+ },
+ {
+  "glob": "ui/booking-live.js",
+  "old": "price: 20000, duration: 50, atkaPrice: 4000,",
+  "new": "price: 20000, duration: 50, atkaPrice: 6000,",
+  "why": "F15: a tulaj szerint a magasabb (telefonos AI) díjszabás az aktuális (2026-11-23): szófa és L-kanapé atka- és allergénkezelés 6 000 Ft, franciaágy nedves mosás 8 500 Ft/oldal"
+ },
+ {
+  "glob": "ui/booking-live.js",
+  "old": "sides: 1, wetPrice: 6000, framePrice: 9000",
+  "new": "sides: 1, wetPrice: 8500, framePrice: 9000",
+  "why": "F15: a tulaj szerint a magasabb (telefonos AI) díjszabás az aktuális (2026-11-23): szófa és L-kanapé atka- és allergénkezelés 6 000 Ft, franciaágy nedves mosás 8 500 Ft/oldal"
+ },
+ {
+  "glob": "ui/booking-live.js",
+  "old": "sides: 2, wetPrice: 6000, framePrice: 9000",
+  "new": "sides: 2, wetPrice: 8500, framePrice: 9000",
+  "why": "F15: a tulaj szerint a magasabb (telefonos AI) díjszabás az aktuális (2026-11-23): szófa és L-kanapé atka- és allergénkezelés 6 000 Ft, franciaágy nedves mosás 8 500 Ft/oldal"
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "price: 18000, duration: 40, atkaPrice: 4000,",
+  "new": "price: 18000, duration: 40, atkaPrice: 6000,",
+  "why": "F15: a tulaj szerint a magasabb (telefonos AI) díjszabás az aktuális (2026-11-23): szófa és L-kanapé atka- és allergénkezelés 6 000 Ft, franciaágy nedves mosás 8 500 Ft/oldal"
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "price: 20000, duration: 50, atkaPrice: 4000,",
+  "new": "price: 20000, duration: 50, atkaPrice: 6000,",
+  "why": "F15: a tulaj szerint a magasabb (telefonos AI) díjszabás az aktuális (2026-11-23): szófa és L-kanapé atka- és allergénkezelés 6 000 Ft, franciaágy nedves mosás 8 500 Ft/oldal"
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "sides: 1, wetPrice: 6000, framePrice: 9000",
+  "new": "sides: 1, wetPrice: 8500, framePrice: 9000",
+  "why": "F15: a tulaj szerint a magasabb (telefonos AI) díjszabás az aktuális (2026-11-23): szófa és L-kanapé atka- és allergénkezelés 6 000 Ft, franciaágy nedves mosás 8 500 Ft/oldal"
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "sides: 2, wetPrice: 6000, framePrice: 9000",
+  "new": "sides: 2, wetPrice: 8500, framePrice: 9000",
+  "why": "F15: a tulaj szerint a magasabb (telefonos AI) díjszabás az aktuális (2026-11-23): szófa és L-kanapé atka- és allergénkezelés 6 000 Ft, franciaágy nedves mosás 8 500 Ft/oldal"
+ },
+ {
+  "glob": "studio/configurator.js",
+  "old": "\"image\": \"sofa\",\n    \"atkaPrice\": 4000,",
+  "new": "\"image\": \"sofa\",\n    \"atkaPrice\": 6000,",
+  "why": "F15: a tulaj szerint a magasabb (telefonos AI) díjszabás az aktuális (2026-11-23): szófa és L-kanapé atka- és allergénkezelés 6 000 Ft, franciaágy nedves mosás 8 500 Ft/oldal"
+ },
+ {
+  "glob": "studio/configurator.js",
+  "old": "\"image\": \"l-sofa\",\n    \"atkaPrice\": 4000,",
+  "new": "\"image\": \"l-sofa\",\n    \"atkaPrice\": 6000,",
+  "why": "F15: a tulaj szerint a magasabb (telefonos AI) díjszabás az aktuális (2026-11-23): szófa és L-kanapé atka- és allergénkezelés 6 000 Ft, franciaágy nedves mosás 8 500 Ft/oldal"
+ },
+ {
+  "glob": "studio/configurator.js",
+  "old": "\"wetPrice\": 6000,\n    \"framePrice\": 9000",
+  "new": "\"wetPrice\": 8500,\n    \"framePrice\": 9000",
+  "why": "F15: a tulaj szerint a magasabb (telefonos AI) díjszabás az aktuális (2026-11-23): szófa és L-kanapé atka- és allergénkezelés 6 000 Ft, franciaágy nedves mosás 8 500 Ft/oldal",
+  "count": 2
+ },
+ {
+  "glob": "*.html",
+  "old": "választható + ATKAIRTÁS 4000 Ft",
+  "new": "választható + atka- és allergénkezelés 6 000 Ft",
+  "why": "F15: a tulaj szerint a magasabb (telefonos AI) díjszabás az aktuális (2026-11-23): szófa és L-kanapé atka- és allergénkezelés 6 000 Ft, franciaágy nedves mosás 8 500 Ft/oldal"
+ },
+ {
+  "glob": "*.html",
+  "old": "választható + ATKAIRTÁS 6000 Ft",
+  "new": "választható + atka- és allergénkezelés 6 000 Ft",
+  "why": "F15: a tulaj szerint a magasabb (telefonos AI) díjszabás az aktuális (2026-11-23): szófa és L-kanapé atka- és allergénkezelés 6 000 Ft, franciaágy nedves mosás 8 500 Ft/oldal"
+ },
+ {
+  "glob": "en/*.html",
+  "old": "optional + DUST MITE TREATMENT 4000 HUF",
+  "new": "optional + dust mite and allergen treatment 6,000 HUF",
+  "why": "F15: current tariff per owner (2026-11-23): sofa/L-sofa mite and allergen treatment 6,000 HUF, double mattress wet wash 8,500 HUF/side"
+ },
+ {
+  "glob": "en/*.html",
+  "old": "optional + DUST MITE TREATMENT 6000 HUF",
+  "new": "optional + dust mite and allergen treatment 6,000 HUF",
+  "why": "F15: current tariff per owner (2026-11-23): sofa/L-sofa mite and allergen treatment 6,000 HUF, double mattress wet wash 8,500 HUF/side"
+ },
+ {
+  "glob": "*.html",
+  "old": "tisztítjuk +6000 Ft / fekvővelület!",
+  "new": "tisztítjuk +6000 Ft / fekvőfelület (franciaágy-matracnál +8500 Ft)!",
+  "why": "F15: a tulaj szerint a magasabb (telefonos AI) díjszabás az aktuális (2026-11-23): szófa és L-kanapé atka- és allergénkezelés 6 000 Ft, franciaágy nedves mosás 8 500 Ft/oldal"
+ },
+ {
+  "glob": "en/*.html",
+  "old": "at +6000 HUF / sleeping surface!",
+  "new": "at +6000 HUF / sleeping surface (+8500 HUF for a double mattress)!",
+  "why": "F15: current tariff per owner (2026-11-23): sofa/L-sofa mite and allergen treatment 6,000 HUF, double mattress wet wash 8,500 HUF/side"
+ },
+ {
+  "glob": "matractisztitas-gyor.html",
+  "old": "Egyágyas és franciaágy-matracnál +6 000 Ft kezelt oldalanként",
+  "new": "Egyágyas matracnál +6 000 Ft, franciaágy-matracnál +8 500 Ft kezelt oldalanként",
+  "why": "F15: a tulaj szerint a magasabb (telefonos AI) díjszabás az aktuális (2026-11-23): szófa és L-kanapé atka- és allergénkezelés 6 000 Ft, franciaágy nedves mosás 8 500 Ft/oldal"
+ },
+ {
+  "glob": "en/mattress-cleaning-gyor.html",
+  "old": "Single and double mattresses: +6,000 HUF per treated side",
+  "new": "Single mattresses: +6,000 HUF, double mattresses: +8,500 HUF per treated side",
+  "why": "F15: current tariff per owner (2026-11-23): sofa/L-sofa mite and allergen treatment 6,000 HUF, double mattress wet wash 8,500 HUF/side"
+ },
+ {
+  "glob": "komarom.html",
+  "old": "egy kanapé 12.000 Ft-tól",
+  "new": "egy kanapé 18.000 Ft-tól",
+  "why": "F15: elavult ár; a díjszabás szerint a szófa 18 000 Ft-tól"
+ },
+ {
+  "glob": "komarom.html",
+  "old": "egy kanapé tisztítása 12.000 Ft-tól, egy fotel 6.000 Ft-tól",
+  "new": "egy kanapé tisztítása 18.000 Ft-tól, egy fotel 7.500 Ft-tól",
+  "why": "F15: elavult ár; a díjszabás szerint szófa 18 000, fotel 7 500 Ft-tól"
+ }
+]

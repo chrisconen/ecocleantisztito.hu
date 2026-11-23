@@ -162,11 +162,11 @@ UI = {
 def footer_strip(lang, prefix=''):
     if lang == 'hu':
         return (f'<div class="eco-legal" style="max-width:1200px;margin:0 auto;padding:14px 16px 6px;font-size:.8rem;line-height:1.6;text-align:center;opacity:.85">'
-                f'ECO Clean kárpit- és matractisztítás · 9134 Bodonhely, Lepke utca 9. · Adószám: 56302415-1-28 · '
+                f'Chris Conen e.v. – ECO Clean kárpit- és matractisztítás · 9134 Bodonhely, Lepke utca 9. · Nyilvántartási szám: 54933347 · Adószám: 56302415-1-28 · '
                 f'<a href="{prefix}adatvedelem.html" style="color:inherit;text-decoration:underline">Adatkezelési tájékoztató</a> · '
                 f'<a href="{prefix}aszf.html" style="color:inherit;text-decoration:underline">ÁSZF</a></div>')
     return ('<div class="eco-legal" style="max-width:1200px;margin:0 auto;padding:14px 16px 6px;font-size:.8rem;line-height:1.6;text-align:center;opacity:.85">'
-            'ECO Clean kárpit- és matractisztítás · Lepke utca 9, 9134 Bodonhely, Hungary · Tax no. 56302415-1-28 · '
+            'Chris Conen e.v. – ECO Clean kárpit- és matractisztítás · Lepke utca 9, 9134 Bodonhely, Hungary · Reg. no. 54933347 · Tax no. 56302415-1-28 · '
             f'<a href="{prefix}privacy.html" style="color:inherit;text-decoration:underline">Privacy notice</a> · '
             f'<a href="{prefix}terms.html" style="color:inherit;text-decoration:underline">Terms</a></div>')
 
@@ -264,8 +264,10 @@ def build():
 
 
 BANNED = re.compile(r'99[,.]9|elpusztít|kórokozó|baktérium|vírus|atkamentes|allergiamentes|csíramentes|fertőtlenít|sanitis|disinfect|'
-                    r'\bkills?\b|bacteria|virus|pathogen|mite-free|allergen-free|hamarosan elérhető|coming soon', re.I)
-NEGATIONS = ('nem ígérünk „atkamentességet”, fertőtlenítést vagy allergiamentes szobát', 'kártevőirtást vagy az egészségügyi fertőtlenítést')
+                    r'\bkills?\b|bacteria|virus|pathogen|mite-free|allergen-free|hamarosan elérhető|coming soon|'
+                    r'pénzvisszafizet|visszaadjuk a pénz|money-back|refund your money', re.I)  # nincs pénzvisszafizetés (tulaj, 2026-11-23)
+NEGATIONS = ('nem ígérünk „atkamentességet”, fertőtlenítést vagy allergiamentes szobát', 'kártevőirtást vagy az egészségügyi fertőtlenítést',
+             'pénzvisszafizetést nem tartalmaz', 'it does not include a money-back promise')
 
 
 def visible(doc):

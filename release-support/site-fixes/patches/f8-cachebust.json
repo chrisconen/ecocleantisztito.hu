@@ -20,7 +20,7 @@
  {
   "glob": "**/*.html",
   "old": "studio/configurator.js?v=ba92db48993e",
-  "new": "studio/configurator.js?v=d6dad6abda25",
+  "new": "studio/configurator.js?v=083a809ff9b8",
   "why": "F8: a réteg módosította az assetet; új hash, különben az 1 éves cache a régit adná"
  },
  {
@@ -44,13 +44,13 @@
  {
   "glob": "**/*.html",
   "old": "ui/booking-live-en.js?v=96214edee64c",
-  "new": "ui/booking-live-en.js?v=b5916e550bdd",
+  "new": "ui/booking-live-en.js?v=f920d2bf30b9",
   "why": "F8: a réteg módosította az assetet; új hash, különben az 1 éves cache a régit adná"
  },
  {
   "glob": "**/*.html",
   "old": "ui/booking-live.js?v=008af1fdde24",
-  "new": "ui/booking-live.js?v=c9b120093bd7",
+  "new": "ui/booking-live.js?v=b4be473390d1",
   "why": "F8: a réteg módosította az assetet; új hash, különben az 1 éves cache a régit adná"
  },
  {

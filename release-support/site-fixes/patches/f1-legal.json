@@ -2,13 +2,13 @@
  {
   "glob": "*.html",
   "old": "</footer>",
-  "new": "<div class=\"eco-legal\" style=\"max-width:1200px;margin:0 auto;padding:14px 16px 6px;font-size:.8rem;line-height:1.6;text-align:center;opacity:.85\">ECO Clean kárpit- és matractisztítás · 9134 Bodonhely, Lepke utca 9. · Adószám: 56302415-1-28 · <a href=\"adatvedelem.html\" style=\"color:inherit;text-decoration:underline\">Adatkezelési tájékoztató</a> · <a href=\"aszf.html\" style=\"color:inherit;text-decoration:underline\">ÁSZF</a></div></footer>",
+  "new": "<div class=\"eco-legal\" style=\"max-width:1200px;margin:0 auto;padding:14px 16px 6px;font-size:.8rem;line-height:1.6;text-align:center;opacity:.85\">Chris Conen e.v. – ECO Clean kárpit- és matractisztítás · 9134 Bodonhely, Lepke utca 9. · Nyilvántartási szám: 54933347 · Adószám: 56302415-1-28 · <a href=\"adatvedelem.html\" style=\"color:inherit;text-decoration:underline\">Adatkezelési tájékoztató</a> · <a href=\"aszf.html\" style=\"color:inherit;text-decoration:underline\">ÁSZF</a></div></footer>",
   "why": "F1: szolgáltatói adatok és jogi linkek minden magyar oldal láblécében (Ekertv. 4. §)"
  },
  {
   "glob": "en/*.html",
   "old": "</footer>",
-  "new": "<div class=\"eco-legal\" style=\"max-width:1200px;margin:0 auto;padding:14px 16px 6px;font-size:.8rem;line-height:1.6;text-align:center;opacity:.85\">ECO Clean kárpit- és matractisztítás · Lepke utca 9, 9134 Bodonhely, Hungary · Tax no. 56302415-1-28 · <a href=\"privacy.html\" style=\"color:inherit;text-decoration:underline\">Privacy notice</a> · <a href=\"terms.html\" style=\"color:inherit;text-decoration:underline\">Terms</a></div></footer>",
+  "new": "<div class=\"eco-legal\" style=\"max-width:1200px;margin:0 auto;padding:14px 16px 6px;font-size:.8rem;line-height:1.6;text-align:center;opacity:.85\">Chris Conen e.v. – ECO Clean kárpit- és matractisztítás · Lepke utca 9, 9134 Bodonhely, Hungary · Reg. no. 54933347 · Tax no. 56302415-1-28 · <a href=\"privacy.html\" style=\"color:inherit;text-decoration:underline\">Privacy notice</a> · <a href=\"terms.html\" style=\"color:inherit;text-decoration:underline\">Terms</a></div></footer>",
   "why": "F1: provider details and legal links in every English footer"
  },
  {

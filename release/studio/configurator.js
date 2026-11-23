@@ -15,7 +15,7 @@
     "duration": 40,
     "seats": 3,
     "image": "sofa",
-    "atkaPrice": 4000,
+    "atkaPrice": 6000,
     "agyazhatoPrice": 6000
   },
   {
@@ -25,7 +25,7 @@
     "duration": 50,
     "seats": 4,
     "image": "l-sofa",
-    "atkaPrice": 4000,
+    "atkaPrice": 6000,
     "agyazhatoPrice": 6000
   },
   {
@@ -92,7 +92,7 @@
     "duration": 35,
     "sides": 1,
     "image": "mattress",
-    "wetPrice": 6000,
+    "wetPrice": 8500,
     "framePrice": 9000
   },
   {
@@ -102,7 +102,7 @@
     "duration": 55,
     "sides": 2,
     "image": "mattress",
-    "wetPrice": 6000,
+    "wetPrice": 8500,
     "framePrice": 9000
   },
   {
