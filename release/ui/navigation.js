@@ -38,9 +38,9 @@ const menuData = {
     matractisztitas: {
         icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/></svg>',
         title: 'Matractisztítás',
-        subtitle: 'Mélytisztítás, atkairtás, fertőtlenítés',
+        subtitle: 'Mélytisztítás, atka- és allergénkezelés',
         badge: 'both',
-        desc: 'Otthoni matracok és szálláshelyek (hotelek, kollégiumok, gyermektáborok) matracainak professzionális tisztítása. Atkairtás tanúsítvánnyal.',
+        desc: 'Otthoni matracok és szálláshelyek (hotelek, kollégiumok, gyermektáborok) matracainak professzionális tisztítása. Atka- és allergénkezelés tanúsítvánnyal.',
         cities: ['Győr', 'Sopron', 'Szombathely', 'Veszprém', 'Tatabánya', 'Komárom', 'Pápa', 'Mosonmagyaróvár', 'Tata', 'Balatonfüred', 'Siófok', 'Keszthely', 'Hévíz', 'Tihany', 'Balatonalmádi', 'Tapolca', 'Révfülöp', 'Badacsony', 'Balatonföldvár', 'Balatonlelle', 'Balatonboglár', 'Fonyód', 'Balatonszemes', 'Zamárdi', 'Balatonfűzfő', 'Balatonkenese']
     },
     szonyegtisztitas: {

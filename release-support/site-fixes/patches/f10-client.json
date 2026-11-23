@@ -1,0 +1,722 @@
+[
+ {
+  "glob": "en/booking.html",
+  "old": "Győr régió",
+  "new": "Győr region",
+  "why": "F10 (Codex): Translate the English page’s region label."
+ },
+ {
+  "glob": "en/booking.html",
+  "old": "Sopron régió",
+  "new": "Sopron region",
+  "why": "F10 (Codex): Translate the English page’s region label."
+ },
+ {
+  "glob": "en/booking.html",
+  "old": "Szombathely régió",
+  "new": "Szombathely region",
+  "why": "F10 (Codex): Translate the English page’s region label."
+ },
+ {
+  "glob": "en/booking.html",
+  "old": "Veszprém régió",
+  "new": "Veszprém region",
+  "why": "F10 (Codex): Translate the English page’s region label."
+ },
+ {
+  "glob": "en/booking.html",
+  "old": "Komárom-Tata régió",
+  "new": "Komárom-Tata region",
+  "why": "F10 (Codex): Translate the English page’s region label."
+ },
+ {
+  "glob": "en/booking.html",
+  "old": "Balaton - Északi part",
+  "new": "Balaton - North shore",
+  "why": "F10 (Codex): Translate the English page’s region label."
+ },
+ {
+  "glob": "en/booking.html",
+  "old": "Balaton - Déli part",
+  "new": "Balaton - South shore",
+  "why": "F10 (Codex): Translate the English page’s region label."
+ },
+ {
+  "glob": "en/booking.html",
+  "old": "Balaton - Nyugati rész",
+  "new": "Balaton - West shore",
+  "why": "F10 (Codex): Translate the English page’s region label."
+ },
+ {
+  "glob": "en/booking.html",
+  "old": "id=\"totalPrice\">0 Ft",
+  "new": "id=\"totalPrice\">0 HUF",
+  "why": "F10 (Codex): Use consistent English currency text."
+ },
+ {
+  "glob": "studio/booking-handoff.js",
+  "old": "  function start(){",
+  "new": "  function start(){\n    const en=document.documentElement.lang.toLowerCase().startsWith('en');\n    const t=(hu,english)=>en?english:hu;\n    const money=value=>en?value.toLocaleString('en-GB')+' HUF':api.money(value);",
+  "why": "F10 (Codex): Localize the optional cart-import panel while preserving Hungarian output."
+ },
+ {
+  "glob": "studio/booking-handoff.js",
+  "old": "'A kiválasztott összeállításod'",
+  "new": "t('A kiválasztott összeállításod','Your selected items')",
+  "why": "F10 (Codex): Translate the English import-panel heading."
+ },
+ {
+  "glob": "studio/booking-handoff.js",
+  "old": "'Az összeállítást nem tudtuk átvenni'",
+  "new": "t('Az összeállítást nem tudtuk átvenni','Your selection could not be imported')",
+  "why": "F10 (Codex): Translate the English import failure heading."
+ },
+ {
+  "glob": "studio/booking-handoff.js",
+  "old": "'A hivatkozás hiányos vagy ehhez a városhoz nem tartozik ez a megrendelő. Ellenőrizd a kiinduló oldalt, vagy egyeztess telefonon: 06 70 240 8141.'",
+  "new": "t('A hivatkozás hiányos vagy ehhez a városhoz nem tartozik ez a megrendelő. Ellenőrizd a kiinduló oldalt, vagy egyeztess telefonon: 06 70 240 8141.','The link is incomplete or this booking page does not serve the selected town. Check the original page or call: 06 70 240 8141.')",
+  "why": "F10 (Codex): Translate the English import failure message."
+ },
+ {
+  "glob": "studio/booking-handoff.js",
+  "old": "' és környéke · '",
+  "new": "t(' és környéke · ',' and surrounding areas · ')",
+  "why": "F10 (Codex): Translate the English import location description."
+ },
+ {
+  "glob": "studio/booking-handoff.js",
+  "old": "api.money(result.total)",
+  "new": "money(result.total)",
+  "why": "F10 (Codex): Format the imported total according to the page language."
+ },
+ {
+  "glob": "studio/booking-handoff.js",
+  "old": "' · kiszállással együtt'",
+  "new": "t(' · kiszállással együtt',' · including travel')",
+  "why": "F10 (Codex): Translate the English travel-fee description."
+ },
+ {
+  "glob": "studio/booking-handoff.js",
+  "old": "' · kiszállás nélkül'",
+  "new": "t(' · kiszállás nélkül',' · excluding travel')",
+  "why": "F10 (Codex): Translate the English travel-fee description."
+ },
+ {
+  "glob": "studio/booking-handoff.js",
+  "old": "'. Az átvétel után ellenőrizheted a tételeket. Időpontot később választasz.'",
+  "new": "t('. Az átvétel után ellenőrizheted a tételeket. Időpontot később választasz.','. Review the items after importing them. You will choose an appointment later.')",
+  "why": "F10 (Codex): Translate the English import instructions."
+ },
+ {
+  "glob": "studio/booking-handoff.js",
+  "old": "    result.lines.forEach(line=>{const li=document.createElement('li');li.textContent=line.label+': '+api.money(line.amount);list.append(li);});",
+  "new": "    const labels=en?[\n      ...api.catalog.map(item=>{const split=item.id.indexOf('_');return [item.label,PRICING[item.id.slice(0,split)][item.id.slice(split+1)].name];}),\n      ...Object.entries(api.extras).map(([id,extra])=>{const split=id.indexOf('_');return [extra.label,UPSELLS[id.slice(0,split)][id.slice(split+1)].name];}),\n      ...Object.entries(api.zones).map(([id,zone])=>[zone.label,PRICING.travelZones[id].label]),\n      ['Atkairtás','Dust mite treatment'],['Ágyazható felület tisztítása','Sofa bed surface cleaning'],['Kiszállás','Travel'],['Kárpit + matrac kedvezmény','Upholstery + mattress discount'],['Legalább 3 bútor kedvezménye','3+ items discount'],[' db',' items']\n    ].sort((a,b)=>b[0].length-a[0].length):[];\n    result.lines.forEach(line=>{const li=document.createElement('li');li.textContent=labels.reduce((label,[hu,english])=>label.split(hu).join(english),line.label)+': '+money(line.amount);list.append(li);});",
+  "why": "F10 (Codex): Reuse English product names and translate imported cart lines without changing pricing or Hungarian output."
+ },
+ {
+  "glob": "studio/booking-handoff.js",
+  "old": "'Maradok a jelenlegi összeállításnál'",
+  "new": "t('Maradok a jelenlegi összeállításnál','Keep my current selection')",
+  "why": "F10 (Codex): Translate the English import dismissal button."
+ },
+ {
+  "glob": "studio/booking-handoff.js",
+  "old": "'Jelenlegi összeállítás cseréje ezekre a tételekre'",
+  "new": "t('Jelenlegi összeállítás cseréje ezekre a tételekre','Replace my current selection with these items')",
+  "why": "F10 (Codex): Translate the English cart replacement button."
+ },
+ {
+  "glob": "studio/booking-handoff.js",
+  "old": "'Átveszem a tételeket a megrendelőbe'",
+  "new": "t('Átveszem a tételeket a megrendelőbe','Import these items into the booking')",
+  "why": "F10 (Codex): Translate the English cart import button."
+ },
+ {
+  "glob": "studio/booking-handoff.js",
+  "old": "'Az átvétel lecseréli a megrendelőben esetleg már kiválasztott bútorokat, extrákat és időpontot. A kapcsolati adataid megmaradnak.'",
+  "new": "t('Az átvétel lecseréli a megrendelőben esetleg már kiválasztott bútorokat, extrákat és időpontot. A kapcsolati adataid megmaradnak.','Importing replaces any furniture, extras and appointment already selected in the booking. Your contact details are kept.')",
+  "why": "F10 (Codex): Translate the English cart replacement explanation."
+ },
+ {
+  "glob": "studio/booking-handoff.js",
+  "old": "'A tételeket átvettük. Ez nagyobb összeállítás: az egyedi ajánlatkérőben egyeztetünk időpontot.'",
+  "new": "t('A tételeket átvettük. Ez nagyobb összeállítás: az egyedi ajánlatkérőben egyeztetünk időpontot.','Your items have been imported. This is a large order: we will arrange an appointment through the tailored quote request.')",
+  "why": "F10 (Codex): Translate the English large-order import confirmation."
+ },
+ {
+  "glob": "studio/booking-handoff.js",
+  "old": "'A tételeket átvettük. Ellenőrizd az összeállítást, majd válassz időpontot és add meg az adataidat.'",
+  "new": "t('A tételeket átvettük. Ellenőrizd az összeállítást, majd válassz időpontot és add meg az adataidat.','Your items have been imported. Review your selection, then choose an appointment and enter your details.')",
+  "why": "F10 (Codex): Translate the English import confirmation."
+ },
+ {
+  "glob": "studio/booking-handoff.js",
+  "old": "status.textContent=error.message||'Az átvétel nem sikerült. Kérjük, ellenőrizd a megrendelő tételeit.';",
+  "new": "status.textContent=en?'Import failed. Please review the booking items and prices, or call 06 70 240 8141.':error.message||'Az átvétel nem sikerült. Kérjük, ellenőrizd a megrendelő tételeit.';",
+  "why": "F10 (Codex): Keep internal Hungarian import errors out of the English interface."
+ },
+ {
+  "glob": "ui/b2b-hygiene.js",
+  "old": "      const payload = {",
+  "new": "      const page = new URL(location.href);\n      const attribution = new URLSearchParams();\n      for (const key of ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid']) {\n        page.searchParams.getAll(key).forEach(value => attribution.append(key, value));\n      }\n      page.search = attribution.toString();\n      page.hash = '';\n      const payload = {",
+  "why": "F10 (Codex): Allow only the seven attribution parameters across the webhook boundary."
+ },
+ {
+  "glob": "ui/b2b-hygiene.js",
+  "old": "menge: Number(qty.value) || 0, doppel: Number(dbl.value) || 0,",
+  "new": "menge: Math.max(0, Math.floor(Number(qty.value) || 0)), doppel: Math.min(Math.max(0, Math.floor(Number(qty.value) || 0)), Math.max(0, Math.floor(Number(dbl.value) || 0))),",
+  "why": "F10 (Codex): Normalize payload counts exactly like the summary so doubles never exceed mattresses."
+ },
+ {
+  "glob": "ui/b2b-hygiene.js",
+  "old": "oldal: location.href.split('#')[0],",
+  "new": "oldal: page.href,",
+  "why": "F10 (Codex): Send the filtered page URL instead of disclosing unrelated query parameters."
+ },
+ {
+  "glob": "ui/b2b-hygiene.js",
+  "old": "if (!res.ok || !data.ok)",
+  "new": "if (!res.ok || data?.ok !== true)",
+  "why": "F10 (Codex): Require an explicit boolean success response."
+ },
+ {
+  "glob": "ui/booking-cart.js",
+  "old": "    function initBookingCart() {",
+  "new": "    function initBookingCart() {\n        const en = document.documentElement.lang.toLowerCase().startsWith('en');",
+  "why": "F10 (Codex): Detect English language variants in the shared mobile cart."
+ },
+ {
+  "glob": "ui/booking-cart.js",
+  "old": "        const status = document.createElement('div');",
+  "new": "        if (en) {\n            drawer.querySelector('#bookingCartTitle').textContent = 'Cart';\n            drawer.querySelector('#bookingCartQuantity').textContent = 'Your cart is empty';\n            drawer.querySelector('.booking-cart-close').setAttribute('aria-label', 'Close cart');\n            drawer.querySelector('.booking-cart-hint').textContent = 'Close the cart to continue choosing items and booking an appointment.';\n        }\n        const status = document.createElement('div');",
+  "why": "F10 (Codex): Translate static English cart text while preserving Hungarian output."
+ },
+ {
+  "glob": "ui/booking-cart.js",
+  "old": "const money = `${price.toLocaleString('hu-HU')} Ft`;",
+  "new": "const money = `${price.toLocaleString(en ? 'en-GB' : 'hu-HU')} ${en ? 'HUF' : 'Ft'}`;",
+  "why": "F10 (Codex): Format cart prices according to the page language."
+ },
+ {
+  "glob": "ui/booking-cart.js",
+  "old": "tab.setAttribute('aria-label', `Kosár megnyitása: ${count} bútor, ${money}`);",
+  "new": "tab.setAttribute('aria-label', en ? `Open cart: ${count} items, ${money}` : `Kosár megnyitása: ${count} bútor, ${money}`);",
+  "why": "F10 (Codex): Translate the English cart button’s accessible label."
+ },
+ {
+  "glob": "ui/booking-cart.js",
+  "old": "quantity.textContent = count ? `${count} bútor az összeállításodban` : 'Még üres a kosarad';",
+  "new": "quantity.textContent = en ? (count ? `${count} items in your selection` : 'Your cart is empty') : count ? `${count} bútor az összeállításodban` : 'Még üres a kosarad';",
+  "why": "F10 (Codex): Translate dynamic English cart quantities and empty-state text."
+ },
+ {
+  "glob": "ui/booking-cart.js",
+  "old": "status.textContent = `Kosár frissítve: ${count} bútor, ${money}.`;",
+  "new": "status.textContent = en ? `Cart updated: ${count} items, ${money}.` : `Kosár frissítve: ${count} bútor, ${money}.`;",
+  "why": "F10 (Codex): Translate English cart update announcements."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "${item.name} mennyiségének csökkentése",
+  "new": "Decrease quantity of ${item.name}",
+  "why": "F10 (Codex): Translate the quantity control in the English-only booking script."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "${item.name} mennyiségének növelése",
+  "new": "Increase quantity of ${item.name}",
+  "why": "F10 (Codex): Translate the quantity control in the English-only booking script."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "${item.sides} oldal / matrac",
+  "new": "${item.sides} side(s) / mattress",
+  "why": "F10 (Codex): Translate the mattress-side explanation beside the English cart extra."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "'perSide' ? 'oldal' : 'ágy'",
+  "new": "'perSide' ? 'side' : 'bed'",
+  "why": "F10 (Codex): Translate English mattress-extra price units."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "p.price.toLocaleString('en-GB')+' Ft'",
+  "new": "p.price.toLocaleString('en-GB')+' HUF'",
+  "why": "F10 (Codex): Use consistent English currency text."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "value.toLocaleString('en-GB')+' Ft'",
+  "new": "value.toLocaleString('en-GB')+' HUF'",
+  "why": "F10 (Codex): Use consistent English currency text."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "activePillowPrice().toLocaleString('en-GB')+' Ft/item'",
+  "new": "activePillowPrice().toLocaleString('en-GB')+' HUF/item'",
+  "why": "F10 (Codex): Use consistent English currency text."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "travelZones[r.value].fee.toLocaleString('en-GB')+' Ft'",
+  "new": "travelZones[r.value].fee.toLocaleString('en-GB')+' HUF'",
+  "why": "F10 (Codex): Use consistent English currency text."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "placeholder=\"Minta Géza Alapítvány\"",
+  "new": "placeholder=\"Example Company\"",
+  "why": "F10 (Codex): Translate the English quote form’s company example."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "placeholder=\"2890 Tata, Példa utca 1.\"",
+  "new": "placeholder=\"Street, postcode and town\"",
+  "why": "F10 (Codex): Translate the English quote form’s address prompt."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "placeholder=\"Pl. Január második fele lenne ideális...\"",
+  "new": "placeholder=\"For example, the second half of January would be ideal...\"",
+  "why": "F10 (Codex): Translate the English quote form’s notes example."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "'Kérjük adj meg érvényes magyar telefonszámot!'",
+  "new": "'Please enter a valid Hungarian phone number!'",
+  "why": "F10 (Codex): Translate the English quote form’s phone validation message."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "Kérjük válassz legalább egy tételt! Nagymegrendeléshez használd az árajánlatkérést.",
+  "new": "Please select at least one item! For large orders, use the quote request form.",
+  "why": "F10 (Codex): Translate the English booking’s item validation message."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "Kérjük válaszd ki a régiót!",
+  "new": "Please select a region!",
+  "why": "F10 (Codex): Translate the English booking’s region validation message."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "Az időpontok nem tölthetők be. Hívj: 06 70 240 8141",
+  "new": "Appointments cannot be loaded. Call: 06 70 240 8141",
+  "why": "F10 (Codex): Translate the English calendar-unavailable message."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "❌ Kérjük add meg a neved!",
+  "new": "❌ Please enter your name!",
+  "why": "F10 (Codex): Translate the English name validation message."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "❌ Kérjük add meg az e-mail címed!",
+  "new": "❌ Please enter your email address!",
+  "why": "F10 (Codex): Translate the English email validation message."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "❌ Kérjük adj meg érvényes e-mail címet!",
+  "new": "❌ Please enter a valid email address!",
+  "why": "F10 (Codex): Translate the English email format validation message."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "❌ Kérjük erősítsd meg az e-mail címed!",
+  "new": "❌ Please confirm your email address!",
+  "why": "F10 (Codex): Translate the English email confirmation message."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "❌ Az e-mail címek nem egyeznek! Kérjük ellenőrizd.",
+  "new": "❌ The email addresses do not match! Please check them.",
+  "why": "F10 (Codex): Translate the English email mismatch message."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "❌ Kérjük add meg a telefonszámod!",
+  "new": "❌ Please enter your phone number!",
+  "why": "F10 (Codex): Translate the English phone validation message."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "❌ Kérjük adj meg érvényes magyar telefonszámot! (pl. +36 30 123 4567 vagy 06 30 123 4567)",
+  "new": "❌ Please enter a valid Hungarian phone number! (e.g. +36 30 123 4567 or 06 30 123 4567)",
+  "why": "F10 (Codex): Translate the English phone format validation message."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "❌ Kérjük töltsd ki a pontos címet (utca, irányítószám, város)!",
+  "new": "❌ Please enter the full address (street, postcode and town)!",
+  "why": "F10 (Codex): Translate the English address validation message."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "❌ Az irányítószám 4 számjegyből kell álljon!",
+  "new": "❌ The postcode must contain 4 digits!",
+  "why": "F10 (Codex): Translate the English postcode validation message."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "❌ Kérjük válaszd ki a kiszállási zónát!\\\\n\\\\nEz szükséges a pontos ár kiszámításához.",
+  "new": "❌ Please select a travel zone!\\n\\nThis is required to calculate the exact price.",
+  "why": "F10 (Codex): Translate the English travel-zone validation message and render its intended line breaks."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "locale: 'hu-HU',\n            language: 'hu'",
+  "new": "locale: 'en-GB',\n            language: 'en'",
+  "why": "F10 (Codex): Initialize the English booking calendar with English locale settings."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "Vissza az oldalhoz",
+  "new": "Back to the page",
+  "why": "F10 (Codex): Translate the English result dialog’s close button."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "Ezen a napon nem érhető el a kiválasztott régió. Kérjük válassz másik napot.",
+  "new": "The selected region is unavailable on this date. Please choose another day.",
+  "why": "F10 (Codex): Translate the English region-availability error."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "Ez az időpont időközben betelt. Kérjük válassz másik időpontot a frissített naptárból.",
+  "new": "This appointment has just been taken. Please choose another from the refreshed calendar.",
+  "why": "F10 (Codex): Translate the English appointment conflict error."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "A kiválasztott dátum nem érvényes. Kérjük válassz jövőbeli időpontot.",
+  "new": "The selected date is invalid. Please choose a future appointment.",
+  "why": "F10 (Codex): Translate the English invalid-date error."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "A kérés feldolgozása nem sikerült. Kérjük egyeztess velünk a 06 70 240 8141 telefonszámon.",
+  "new": "Your request could not be processed. Please call us on 06 70 240 8141.",
+  "why": "F10 (Codex): Translate the English request-processing error."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "Küldés…",
+  "new": "Sending…",
+  "why": "F10 (Codex): Translate the English submission progress label."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "A kérés nem sikerült.",
+  "new": "The request failed.",
+  "why": "F10 (Codex): Translate the English submission failure heading."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "Foglalási kérelmed elküldve.",
+  "new": "Your booking request has been sent.",
+  "why": "F10 (Codex): Translate the English booking request confirmation."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "Köszönjük! Hamarosan felvesszük veled a kapcsolatot a megadott elérhetőségeiden.",
+  "new": "Thank you! We will contact you shortly using the details you provided.",
+  "why": "F10 (Codex): Translate the English booking confirmation message."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": " (±30 perc)",
+  "new": " (±30 min)",
+  "why": "F10 (Codex): Translate the arrival-window unit in the English confirmation."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "ANDANTE vagy vízre érzékeny szövet esetén kérjük, még a kiszállás előtt egyeztess: 06 70 240 8141.",
+  "new": "For ANDANTE or water-sensitive fabrics, please contact us before the visit: 06 70 240 8141.",
+  "why": "F10 (Codex): Translate the English confirmation’s fabric guidance."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "${payload.totalPrice.toLocaleString('en-GB')} Ft",
+  "new": "${payload.totalPrice.toLocaleString('en-GB')} HUF",
+  "why": "F10 (Codex): Use consistent English currency text."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "Árajánlatkérése elküldve.",
+  "new": "Your quote request has been sent.",
+  "why": "F10 (Codex): Translate the English quote request confirmation."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "Köszönjük! Hamarosan felvesszük veled a kapcsolatot az egyedi árajánlattal és az időpont egyeztetésével.",
+  "new": "Thank you! We will contact you shortly with a tailored quote and to arrange an appointment.",
+  "why": "F10 (Codex): Translate the English quote confirmation message."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "${payload.totals.estimatedPrice.toLocaleString('en-GB')} Ft",
+  "new": "${payload.totals.estimatedPrice.toLocaleString('en-GB')} HUF",
+  "why": "F10 (Codex): Use consistent English currency text."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "A visszaigazolás nem érkezett meg.",
+  "new": "Confirmation was not received.",
+  "why": "F10 (Codex): Translate the English missing-confirmation heading."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "Nem tudtuk ellenőrizni, hogy megérkezett-e a kérés. Újraküldés előtt kérjük egyeztess velünk: 06 70 240 8141.",
+  "new": "We could not verify whether your request arrived. Before sending it again, please call us: 06 70 240 8141.",
+  "why": "F10 (Codex): Translate the English uncertain-delivery message without claiming the request failed."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "Kérés elküldve",
+  "new": "Request sent",
+  "why": "F10 (Codex): Translate the English submitted-button label."
+ },
+ {
+  "glob": "ui/booking-page.js",
+  "old": "  const bookingRoot=",
+  "new": "  const en=document.documentElement.lang.toLowerCase().startsWith('en');\n  const bookingRoot=",
+  "why": "F10 (Codex): Detect English variants in the shared booking-page enhancements."
+ },
+ {
+  "glob": "ui/booking-page.js",
+  "old": "'● Online foglalás'",
+  "new": "(en?'● Online booking':'● Online foglalás')",
+  "why": "F10 (Codex): Preserve English booking status while leaving Hungarian unchanged."
+ },
+ {
+  "glob": "ui/booking-page.js",
+  "old": "'Válassz régiót'",
+  "new": "(en?'Choose a region':'Válassz régiót')",
+  "why": "F10 (Codex): Translate the English region selector’s accessible label."
+ },
+ {
+  "glob": "ui/booking-page.js",
+  "old": "'ANDANTE bútorok – Fontos tájékoztató'",
+  "new": "(en?'ANDANTE furniture – Important information':'ANDANTE bútorok – Fontos tájékoztató')",
+  "why": "F10 (Codex): Translate the English ANDANTE dialog’s accessible label."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "        Object.assign(this.config, options);",
+  "new": "        Object.assign(this.config, options);\n        this.state.currentMonth = this.today();\n        this.state.currentMonth.setDate(1);",
+  "why": "F10 (Codex): Initialize the displayed month from the Budapest calendar date."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "    key(date) {",
+  "new": "    today() {\n        const parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Budapest', year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(new Date());\n        const part = type => Number(parts.find(item => item.type === type).value);\n        return new Date(part('year'), part('month') - 1, part('day'));\n    },\n    text(hu, en) {\n        return document.documentElement.lang.toLowerCase().startsWith('en') ? en : hu;\n    },\n    key(date) {",
+  "why": "F10 (Codex): Centralize Budapest civil-date calculation and language selection while preserving Hungarian text."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "        const startDate = new Date();",
+  "new": "        const startDate = this.today();",
+  "why": "F10 (Codex): Start availability requests from the Budapest calendar date."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "        const endDate = new Date();\n        endDate.setMonth(endDate.getMonth() + this.config.monthsToShow);",
+  "new": "        const endDate = this.today();\n        endDate.setDate(1);\n        endDate.setMonth(endDate.getMonth() + this.config.monthsToShow);",
+  "why": "F10 (Codex): Use Budapest for the availability horizon and prevent month-end overflow."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "'A szabad időpontok jelenleg nem tölthetők be. Próbáld újra, vagy hívj minket: 06 70 240 8141.'",
+  "new": "this.text('A szabad időpontok jelenleg nem tölthetők be. Próbáld újra, vagy hívj minket: 06 70 240 8141.', 'Available appointments cannot be loaded right now. Try again or call us: 06 70 240 8141.')",
+  "why": "F10 (Codex): Translate the English availability-loading error while preserving Hungarian text."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "        const min = new Date();",
+  "new": "        const min = this.today();",
+  "why": "F10 (Codex): Apply minimum booking notice using the Budapest calendar date."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "        const today = new Date();\n        const first =",
+  "new": "        const today = this.today();\n        const first =",
+  "why": "F10 (Codex): Bound month navigation using the Budapest month."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "        return hours ? `${hours} óra${rest ? ` ${rest} perc` : ''}` : `${rest} perc`;",
+  "new": "        if (document.documentElement.lang.toLowerCase().startsWith('en')) return hours ? `${hours} h${rest ? ` ${rest} min` : ''}` : `${rest} min`;\n        return hours ? `${hours} óra${rest ? ` ${rest} perc` : ''}` : `${rest} perc`;",
+  "why": "F10 (Codex): Translate English duration units while preserving Hungarian formatting."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "'Kérjük várd meg a szabad időpontok betöltését.'",
+  "new": "this.text('Kérjük várd meg a szabad időpontok betöltését.', 'Please wait for available appointments to load.')",
+  "why": "F10 (Codex): Translate the English calendar-loading validation message."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "'Kérjük válassz szabad dátumot és időpontot a naptárból.'",
+  "new": "this.text('Kérjük válassz szabad dátumot és időpontot a naptárból.', 'Please select an available date and time from the calendar.')",
+  "why": "F10 (Codex): Translate the English appointment-selection validation message."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "'Kérjük fogadd el az érkezési idő ±30 perces rugalmasságát.'",
+  "new": "this.text('Kérjük fogadd el az érkezési idő ±30 perces rugalmasságát.', 'Please accept the ±30-minute arrival window.')",
+  "why": "F10 (Codex): Translate the English arrival-window validation message."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "'Az időpont már nem érvényes. Kérjük válassz újra a naptárból.'",
+  "new": "this.text('Az időpont már nem érvényes. Kérjük válassz újra a naptárból.', 'This appointment is no longer valid. Please select another from the calendar.')",
+  "why": "F10 (Codex): Translate the English stale-appointment validation message."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "'<p class=\"demo-date-confirmation\" role=\"status\">Kérjük először válaszd ki a helyszínt és a tételeket.</p>'",
+  "new": "this.text('<p class=\"demo-date-confirmation\" role=\"status\">Kérjük először válaszd ki a helyszínt és a tételeket.</p>', '<p class=\"demo-date-confirmation\" role=\"status\">Please select a location and items first.</p>')",
+  "why": "F10 (Codex): Translate the English calendar’s initial instructions."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "'<p class=\"demo-date-confirmation\" role=\"status\">Szabad időpontok betöltése…</p>'",
+  "new": "this.text('<p class=\"demo-date-confirmation\" role=\"status\">Szabad időpontok betöltése…</p>', '<p class=\"demo-date-confirmation\" role=\"status\">Loading available appointments…</p>')",
+  "why": "F10 (Codex): Translate the English calendar’s loading status."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": ">Újrapróbálás</button>",
+  "new": ">${this.text('Újrapróbálás', 'Retry')}</button>",
+  "why": "F10 (Codex): Translate the English calendar’s retry button."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "        const today = new Date();\n        const firstMonth =",
+  "new": "        const today = this.today();\n        const firstMonth =",
+  "why": "F10 (Codex): Keep rendered navigation bounds consistent with Budapest."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "new Intl.DateTimeFormat('hu-HU', { year: 'numeric', month: 'long' })",
+  "new": "new Intl.DateTimeFormat(this.text('hu-HU', 'en-GB'), { year: 'numeric', month: 'long' })",
+  "why": "F10 (Codex): Display English month names on English pages."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "['H', 'K', 'Sze', 'Cs', 'P', 'Szo', 'V'].map",
+  "new": "this.text(['H', 'K', 'Sze', 'Cs', 'P', 'Szo', 'V'], ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']).map",
+  "why": "F10 (Codex): Display English weekday names while preserving Hungarian labels."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "        const labels = { free: 'Szabad', limited: 'Részben szabad', zone_blocked: 'Másik zóna', full: 'Betelt', unavailable: 'Nem elérhető', past: 'Elmúlt', weekend: 'Nem elérhető', not_enough_time: 'Nincs elég idő', unknown: 'Nem elérhető' };",
+  "new": "        const labels = this.text({ free: 'Szabad', limited: 'Részben szabad', zone_blocked: 'Másik zóna', full: 'Betelt', unavailable: 'Nem elérhető', past: 'Elmúlt', weekend: 'Nem elérhető', not_enough_time: 'Nincs elég idő', unknown: 'Nem elérhető' }, { free: 'Available', limited: 'Partly available', zone_blocked: 'Other zone', full: 'Fully booked', unavailable: 'Unavailable', past: 'Past', weekend: 'Unavailable', not_enough_time: 'Not enough time', unknown: 'Unavailable' });",
+  "why": "F10 (Codex): Translate English availability labels without changing Hungarian strings."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "const label = `${key} – ${available ? labels[status.status] : 'Nem választható'}${status?.message ? `: ${status.message}` : ''}`;",
+  "new": "const label = `${key} – ${available ? labels[status.status] : this.text('Nem választható', 'Unavailable')}${status?.message && !document.documentElement.lang.toLowerCase().startsWith('en') ? `: ${status.message}` : ''}`;",
+  "why": "F10 (Codex): Localize date labels and avoid exposing untranslated server messages on English pages."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "        const legend = '<div class=\"calendar-legend\" role=\"list\" aria-label=\"Színkódok\"><span role=\"listitem\"><i class=\"calendar-legend-swatch calendar-legend-swatch--free\"></i>Szabad nap</span><span role=\"listitem\"><i class=\"calendar-legend-swatch calendar-legend-swatch--limited\"></i>Részben foglalt</span><span role=\"listitem\"><i class=\"calendar-legend-swatch calendar-legend-swatch--full\"></i>Foglalt</span></div>';",
+  "new": "        const legend = this.text('<div class=\"calendar-legend\" role=\"list\" aria-label=\"Színkódok\"><span role=\"listitem\"><i class=\"calendar-legend-swatch calendar-legend-swatch--free\"></i>Szabad nap</span><span role=\"listitem\"><i class=\"calendar-legend-swatch calendar-legend-swatch--limited\"></i>Részben foglalt</span><span role=\"listitem\"><i class=\"calendar-legend-swatch calendar-legend-swatch--full\"></i>Foglalt</span></div>', '<div class=\"calendar-legend\" role=\"list\" aria-label=\"Colour key\"><span role=\"listitem\"><i class=\"calendar-legend-swatch calendar-legend-swatch--free\"></i>Available day</span><span role=\"listitem\"><i class=\"calendar-legend-swatch calendar-legend-swatch--limited\"></i>Partly booked</span><span role=\"listitem\"><i class=\"calendar-legend-swatch calendar-legend-swatch--full\"></i>Booked</span></div>');",
+  "why": "F10 (Codex): Translate the English calendar legend while preserving Hungarian markup."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "Szükséges idő:",
+  "new": "${this.text('Szükséges idő:', 'Required time:')}",
+  "why": "F10 (Codex): Translate the English required-duration label."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "Előző hónap",
+  "new": "${this.text('Előző hónap', 'Previous month')}",
+  "why": "F10 (Codex): Translate the English previous-month accessible label."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "Következő hónap",
+  "new": "${this.text('Következő hónap', 'Next month')}",
+  "why": "F10 (Codex): Translate the English next-month accessible label."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "'<p role=\"status\" class=\"demo-date-confirmation\">A vizsgált időszakban nincs megfelelő szabad időpont. Egyeztetés: <a href=\"tel:+36702408141\">06 70 240 8141</a>.</p>'",
+  "new": "this.text('<p role=\"status\" class=\"demo-date-confirmation\">A vizsgált időszakban nincs megfelelő szabad időpont. Egyeztetés: <a href=\"tel:+36702408141\">06 70 240 8141</a>.</p>', '<p role=\"status\" class=\"demo-date-confirmation\">No suitable appointments are available in this period. Call us: <a href=\"tel:+36702408141\">06 70 240 8141</a>.</p>')",
+  "why": "F10 (Codex): Translate the English calendar’s empty-availability message."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "Kiválasztott időpont:",
+  "new": "${this.text('Kiválasztott időpont:', 'Selected appointment:')}",
+  "why": "F10 (Codex): Translate the English selected-appointment label."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "' (±30 perc)'",
+  "new": "this.text(' (±30 perc)', ' (±30 min)')",
+  "why": "F10 (Codex): Translate the English arrival-window unit."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "Időpont módosítása",
+  "new": "${this.text('Időpont módosítása', 'Change appointment')}",
+  "why": "F10 (Codex): Translate the English change-appointment button."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "const label = slot.status === 'booked' ? 'Foglalt' : !fits ? 'Nincs elég idő' : slot.isFirstSlot ? 'Első időpont' : 'Érkezés ±30 perc';",
+  "new": "const label = slot.status === 'booked' ? this.text('Foglalt', 'Booked') : !fits ? this.text('Nincs elég idő', 'Not enough time') : slot.isFirstSlot ? this.text('Első időpont', 'First appointment') : this.text('Érkezés ±30 perc', 'Arrival ±30 min');",
+  "why": "F10 (Codex): Translate English appointment-slot labels while preserving Hungarian text."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "Válassz időpontot:",
+  "new": "${this.text('Válassz időpontot:', 'Choose a time:')}",
+  "why": "F10 (Codex): Translate the English slot-selection prompt."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "aria-label=\"Szabad időpontok\"",
+  "new": "aria-label=\"${this.text('Szabad időpontok', 'Available appointments')}\"",
+  "why": "F10 (Codex): Translate the English appointment group’s accessible label."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "Az érkezési idő ±30 perccel eltérhet. Várható érkezés:",
+  "new": "${this.text('Az érkezési idő ±30 perccel eltérhet. Várható érkezés:', 'Arrival may vary by ±30 minutes. Expected arrival:')}",
+  "why": "F10 (Codex): Translate the English arrival-window explanation."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "Megértettem és elfogadom a ±30 perc rugalmasságot.",
+  "new": "${this.text('Megértettem és elfogadom a ±30 perc rugalmasságot.', 'I understand and accept the ±30-minute arrival window.')}",
+  "why": "F10 (Codex): Translate the English arrival-window acceptance label."
+ },
+ {
+  "glob": "ui/calendar-live.js",
+  "old": "Időpont kiválasztása:",
+  "new": "${this.text('Időpont kiválasztása:', 'Select appointment:')}",
+  "why": "F10 (Codex): Translate the English appointment confirmation button."
+ },
+ {
+  "glob": "ui/reviews.js",
+  "old": "var mapUri = data.googleMapsUri || \"\";",
+  "new": "var mapUri = /^https?:\\/\\//i.test(data.googleMapsUri || \"\") ? data.googleMapsUri : \"\";",
+  "why": "F10 (Codex): Reject executable URL schemes in worker-provided review links."
+ },
+ {
+  "glob": "ui/reviews.js",
+  "old": "(data.total || reviews.length)",
+  "new": "(Number.isSafeInteger(Number(data.total)) && Number(data.total) >= 0 ? Number(data.total) : reviews.length)",
+  "why": "F10 (Codex): Render the worker total only as a safe nonnegative integer with a review-count fallback."
+ }
+]

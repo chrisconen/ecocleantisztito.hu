@@ -1,0 +1,236 @@
+[
+ {
+  "glob": "*.html",
+  "old": "<div class=\"footer-column\">\n                <h4>Privát + céges</h4>",
+  "new": "<div class=\"footer-column\">\n                <h3 class=\"footer-heading\">Privát + céges</h3>",
+  "why": "F11 (Codex): heading-order: the shared first footer heading follows h2, so h3 removes the skipped level while footer-heading preserves its appearance."
+ },
+ {
+  "glob": "*.html",
+  "old": "lang=\"en\" title=\"English version\" aria-label=\"English version\">EN</a>",
+  "new": "lang=\"en\" title=\"English version\" aria-label=\"EN — English version\">EN</a>",
+  "why": "F11 (Codex): label-content-name-mismatch: the shared language link's accessible name now includes its visible EN label."
+ },
+ {
+  "glob": "index.html",
+  "old": "class=\"nav-logo\" aria-label=\"ECO Clean - Főoldal\"",
+  "new": "class=\"nav-logo\" aria-label=\"ECO Clean kárpittisztítás - Főoldal\"",
+  "why": "F11 (Codex): label-content-name-mismatch: the navigation logo's accessible name now includes its visible kárpittisztítás label."
+ },
+ {
+  "glob": "index.html",
+  "old": "data-interior=\"4\" aria-label=\"Irodai szék enteriőr\"",
+  "new": "data-interior=\"4\" aria-label=\"Iroda – Irodai szék enteriőr\"",
+  "why": "F11 (Codex): label-content-name-mismatch: the office interior tab's accessible name now includes its visible Iroda label."
+ },
+ {
+  "glob": "material-recognition/design.css",
+  "old": "--em-muted:#64736b;",
+  "new": "--em-muted:#5e6d65;",
+  "why": "F11 (Codex): color-contrast: the material introduction, caption and review paragraphs reach 4.54:1 on #eeeae0 and 4.77:1 on #eef1e7."
+ },
+ {
+  "glob": "material-recognition/design.css",
+  "old": ".eco-material-eyebrow{font-size:10px;letter-spacing:1.7px;text-transform:uppercase;color:#8d7960;font-weight:600}",
+  "new": ".eco-material-eyebrow{font-size:10px;letter-spacing:1.7px;text-transform:uppercase;color:#7a664d;font-weight:600}",
+  "why": "F11 (Codex): color-contrast: .eco-material-eyebrow reaches 4.56:1 on #eeeae0, 4.79:1 on #eef1e7 and 5.39:1 on #fffdf8."
+ },
+ {
+  "glob": "material-recognition/design.css",
+  "old": ".eco-material-formats{display:block;font-size:9px;color:#7a8573;margin-top:14px}",
+  "new": ".eco-material-formats{display:block;font-size:9px;color:#687361;margin-top:14px}",
+  "why": "F11 (Codex): color-contrast: .eco-material-formats reaches 4.51:1 on #f4f4eb."
+ },
+ {
+  "glob": "material-recognition/design.css",
+  "old": ".eco-material-note>span{color:#8a927f;font-weight:400;margin-left:7px}",
+  "new": ".eco-material-note>span{color:#707865;font-weight:400;margin-left:7px}",
+  "why": "F11 (Codex): color-contrast: .eco-material-note > span reaches 4.53:1 on #fffdf8."
+ },
+ {
+  "glob": "material-recognition/design.css",
+  "old": ".eco-material-archive small{display:block;margin-top:7px;font-size:10px;color:#707763}",
+  "new": ".eco-material-archive small{display:block;margin-top:7px;font-size:10px;color:#686f5b}",
+  "why": "F11 (Codex): color-contrast: .eco-material-archive small reaches 4.52:1 on #f3eee3."
+ },
+ {
+  "glob": "material-recognition/design.css",
+  "old": ".eco-material-example,.eco-material-retry{background:transparent;border:0;padding:6px;color:#6b7e5d;",
+  "new": ".eco-material-example,.eco-material-retry{background:transparent;border:0;padding:6px;color:#687b5a;",
+  "why": "F11 (Codex): color-contrast: .eco-material-example reaches 4.52:1 on #fffdf8."
+ },
+ {
+  "glob": "material-recognition/design.css",
+  "old": ".eco-material-privacy summary{font-size:10px;cursor:pointer;color:#738068}",
+  "new": ".eco-material-privacy summary{font-size:10px;cursor:pointer;color:#6c7961}",
+  "why": "F11 (Codex): color-contrast: .eco-material-privacy summary reaches 4.54:1 on #fffdf8."
+ },
+ {
+  "glob": "matractisztitas-cegeknek*.html",
+  "old": "<div class=\"footer-column\"><h4>Cégeknek</h4>",
+  "new": "<div class=\"footer-column\"><h3 class=\"footer-heading\">Cégeknek</h3>",
+  "why": "F11 (Codex): heading-order: the shared first business-page footer heading follows h2, so h3 removes the skipped level while footer-heading preserves its appearance."
+ },
+ {
+  "glob": "matractisztitas-cegeknek*.html",
+  "old": "class=\"nav-logo\" aria-label=\"ECO Clean – Főoldal\"",
+  "new": "class=\"nav-logo\" aria-label=\"ECO Clean Matractisztítás cégeknek – Főoldal\"",
+  "why": "F11 (Codex): label-content-name-mismatch: the shared business-page logo's accessible name now includes its visible Matractisztítás cégeknek label."
+ },
+ {
+  "glob": "matractisztitas-cegeknek*.html",
+  "old": "class=\"hx-hero-cert\" data-open-cert aria-label=\"A tanúsítvány mintájának nagyítása\"",
+  "new": "class=\"hx-hero-cert\" data-open-cert aria-label=\"Tanúsítvánnyal – A tanúsítvány mintájának nagyítása\"",
+  "why": "F11 (Codex): label-content-name-mismatch: the certificate preview button's accessible name now includes its visible Tanúsítvánnyal label."
+ },
+ {
+  "glob": "megrendeles.html",
+  "old": "<h3>Ár-konfigurátor</h3>",
+  "new": "<h2 class=\"config-title\">Ár-konfigurátor</h2>",
+  "why": "F11 (Codex): heading-order: the configurator heading follows h1, so h2 removes the skipped level while config-title preserves its appearance."
+ },
+ {
+  "glob": "ui/b2b-hygiene.css",
+  "old": ".hx-step>span{font-family:var(--hx-display);font-size:60px;line-height:.9;color:#8b968c;transition:color .4s;}",
+  "new": ".hx-step>span{font-family:var(--hx-display);font-size:60px;line-height:.9;color:#879288;transition:color .4s;}",
+  "why": "F11 (Codex): color-contrast: the large .hx-step > span numbers reach 3.01:1 on #f8f7f2."
+ },
+ {
+  "glob": "ui/design.css",
+  "old": ".toggle-btn {font-size:12px; padding:6px 16px; height:34px; min-width:0; flex:1; gap:7px; z-index:1;}",
+  "new": ".toggle-btn {font-size:12px; padding:6px 16px; height:34px; min-width:0; flex:1; gap:7px; z-index:1; color:#636d64;}",
+  "why": "F11 (Codex): color-contrast: the inactive #btnBusiness label reaches 4.503:1 on #e9ece3."
+ },
+ {
+  "glob": "ui/design.css",
+  "old": ".section-label,.gr-label {font-size:11px; text-transform:uppercase; letter-spacing:2.3px; font-weight:600; margin-bottom:16px; color:#65795b;",
+  "new": ".section-label,.gr-label {font-size:11px; text-transform:uppercase; letter-spacing:2.3px; font-weight:600; margin-bottom:16px; color:#586c4e;",
+  "why": "F11 (Codex): color-contrast: .ba-promo-section .section-label reaches 4.54:1 on #eee3dc and .gr-label reaches 4.76:1 on #e7ecdf."
+ },
+ {
+  "glob": "ui/design.css",
+  "old": ".ba-intro {max-width:970px;}",
+  "new": ".ba-intro {max-width:970px; color:#5f6960;}",
+  "why": "F11 (Codex): color-contrast: .ba-intro reaches 4.53:1 on #eee3dc."
+ },
+ {
+  "glob": "ui/design.css",
+  "old": ".gr-dot {background:#adba9e;}\n.gr-dot.active {background:#506840;}",
+  "new": ".gr-dot {background:#adba9e; box-sizing:content-box; width:8px; height:8px; padding:8px; background-clip:content-box; border-radius:50%;}\n.gr-dot.active {background:#506840; width:22px; background-clip:content-box; border-radius:12px;}",
+  "why": "F11 (Codex): target-size: review pager buttons gain 24×24 px hit areas (38×24 px when active) while retaining their 8×8 px dots and 22×8 px active pill."
+ },
+ {
+  "glob": "ui/design.css",
+  "old": ".booking-header p {font-size:14px; color:var(--muted);}",
+  "new": ".booking-header p {font-size:14px; color:#646e65;}",
+  "why": "F11 (Codex): color-contrast: the booking introduction paragraph reaches 4.54:1 on #f0ede6."
+ },
+ {
+  "glob": "ui/design.css",
+  "old": ".config-header h3 {font-family:var(--font-display); font-size:35px; font-weight:500; color:var(--ink);}",
+  "new": ".config-header h3,.config-header .config-title {font-family:var(--font-display); font-size:35px; font-weight:500; color:var(--ink); flex:1; margin:0;}",
+  "why": "F11 (Codex): heading-order: .config-title retains the former h3 typography, flex sizing and margins after changing to h2."
+ },
+ {
+  "glob": "ui/design.css",
+  "old": ".config-header h3 {font-size:30px;}",
+  "new": ".config-header h3,.config-header .config-title {font-size:30px;}",
+  "why": "F11 (Codex): heading-order: .config-title retains the former h3 mobile font size after changing to h2."
+ },
+ {
+  "glob": "ui/design.css",
+  "old": ".config-status {font-size:10px; color:#6c7c58;",
+  "new": ".config-status {font-size:10px; color:#6b7b57;",
+  "why": "F11 (Codex): color-contrast: #configStatus reaches 4.52:1 on #fffef8."
+ },
+ {
+  "glob": "ui/design.css",
+  "old": ".combo-btn {background:#efe8df; border-color:#e0d5c5;}",
+  "new": ".combo-btn {background:#efe8df; border-color:#e0d5c5; color:#636c57;}",
+  "why": "F11 (Codex): color-contrast: the combined-service .combo-btn label reaches 4.53:1 on #efe8df."
+ },
+ {
+  "glob": "ui/design.css",
+  "old": ".combo-badge,.recommended-badge {font-size:10px; color:#696747;",
+  "new": ".combo-badge,.recommended-badge {font-size:10px; color:#686646;",
+  "why": "F11 (Codex): color-contrast: .combo-badge and .recommended-badge reach 4.53:1 on #e6e3cc."
+ },
+ {
+  "glob": "ui/design.css",
+  "old": ".item-group-title {grid-column:1/-1; font-size:12px; color:#718062;",
+  "new": ".item-group-title {grid-column:1/-1; font-size:12px; color:#6b7a5c;",
+  "why": "F11 (Codex): color-contrast: .item-group-title reaches 4.55:1 on #fffef8."
+ },
+ {
+  "glob": "ui/design.css",
+  "old": ".item-price {font-size:12px; font-weight:500; color:#78846a;}",
+  "new": ".item-price {font-size:12px; font-weight:500; color:#6a765c;}",
+  "why": "F11 (Codex): color-contrast: .item-price reaches 4.55:1 on #f8f9f3 without changing any price."
+ },
+ {
+  "glob": "ui/design.css",
+  "old": ".global-upsell-desc {color:#77846c; font-size:12px;}",
+  "new": ".global-upsell-desc {color:#69765e; font-size:12px;}",
+  "why": "F11 (Codex): color-contrast: .global-upsell-desc reaches 4.55:1 on #f8f9f2."
+ },
+ {
+  "glob": "ui/design.css",
+  "old": ".global-upsell-price,.upsell-group-title {color:#6d815b; font-size:12px;}",
+  "new": ".global-upsell-price,.upsell-group-title {color:#647852; font-size:12px;}",
+  "why": "F11 (Codex): color-contrast: .global-upsell-price reaches 4.56:1 on #f8f9f2 and .upsell-group-title reaches 4.78:1 on #fffef8."
+ },
+ {
+  "glob": "ui/design.css",
+  "old": ".cta-info {color:#77876b; font-size:12px;}",
+  "new": ".cta-info {color:#5b6b4f; font-size:12px;}",
+  "why": "F11 (Codex): color-contrast: .cta-info reaches 4.55:1 on #dfe8d7."
+ },
+ {
+  "glob": "ui/design.css",
+  "old": ".cta-info strong {color:#5b714d;}",
+  "new": ".cta-info strong {color:#576d49;}",
+  "why": "F11 (Codex): color-contrast: .cta-info strong reaches 4.52:1 on #dfe8d7."
+ },
+ {
+  "glob": "ui/design.css",
+  "old": ".footer-brand p {font-size:12px; color:#7b8274;",
+  "new": ".footer-brand p {font-size:12px; color:#6c7365;",
+  "why": "F11 (Codex): color-contrast: .footer-brand p reaches 4.53:1 on #f7f6ef."
+ },
+ {
+  "glob": "ui/design.css",
+  "old": ".footer-column h4 {font-size:11px; color:#485f3c; letter-spacing:1px; text-transform:uppercase; margin-bottom:20px;}",
+  "new": ".footer-column h4,.footer-column .footer-heading {font-size:11px; font-weight:600; color:#485f3c; letter-spacing:1px; text-transform:uppercase; margin-bottom:20px;}",
+  "why": "F11 (Codex): heading-order: .footer-heading retains the former h4 styling, including its inherited 600 font weight."
+ },
+ {
+  "glob": "ui/design.css",
+  "old": ".footer-column a,.footer-column li {font-size:12px; color:#76816a;}",
+  "new": ".footer-column a,.footer-column li {font-size:12px; color:#69745d;}",
+  "why": "F11 (Codex): color-contrast: footer links and the contact location span reach 4.55:1 on #f7f6ef."
+ },
+ {
+  "glob": "ui/design.css",
+  "old": ".footer-bottom {padding:22px 0 0; margin-top:45px; border-top:1px solid #dfe2d6; font-size:10px; color:#919686;}",
+  "new": ".footer-bottom {padding:22px 0 0; margin-top:45px; border-top:1px solid #dfe2d6; font-size:10px; color:#6e7363;}\n.footer-bottom a {text-decoration:underline;}",
+  "why": "F11 (Codex): color-contrast and link-in-text-block: footer-bottom text reaches 4.51:1 on #f7f6ef and its inline links gain underlines."
+ },
+ {
+  "glob": "ui/subpages.css",
+  "old": ".eco-subpage .section-label {color:#667d5d;}",
+  "new": ".eco-subpage .section-label {color:#617858;}",
+  "why": "F11 (Codex): color-contrast: the Győr pricing and why-us section labels reach 4.52:1 on #f8f7f2."
+ },
+ {
+  "glob": "ui/subpages.css",
+  "old": ".eco-subpage .content-block p,.eco-subpage .content-block li {font-size:14px;line-height:1.9;color:var(--muted);}",
+  "new": ".eco-subpage .content-block p,.eco-subpage .content-block li {font-size:14px;line-height:1.9;color:#656f66;}",
+  "why": "F11 (Codex): color-contrast: the Győr content-block paragraph reaches 4.56:1 on #edf1e6."
+ },
+ {
+  "glob": "ui/subpages.css",
+  "old": ".eco-subpage .matrac-why__label {font-size:10px;letter-spacing:1.6px;background:none;color:#637956;border:0;padding:0;}",
+  "new": ".eco-subpage .matrac-why__label {font-size:10px;letter-spacing:1.6px;background:none;color:#5c724f;border:0;padding:0;}",
+  "why": "F11 (Codex): color-contrast: .matrac-why__label reaches 4.55:1 on #eaf0e4."
+ }
+]

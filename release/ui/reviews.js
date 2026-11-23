@@ -39,12 +39,12 @@
     }
 
     function render(root, mount, data, reviews) {
-        var mapUri = data.googleMapsUri || "";
+        var mapUri = /^https?:\/\//i.test(data.googleMapsUri || "") ? data.googleMapsUri : "";
         var summary =
             '<div class="gr-summary">' +
             '<span class="gr-stars">' + stars(data.rating) + "</span>" +
             "<strong>" + fmtRating(data.rating) + "</strong>" +
-            "<span>" + (data.total || reviews.length) + " Google értékelés</span>" +
+            "<span>" + (Number.isSafeInteger(Number(data.total)) && Number(data.total) >= 0 ? Number(data.total) : reviews.length) + " Google értékelés</span>" +
             "</div>";
 
         var slides = reviews.map(function (r) {

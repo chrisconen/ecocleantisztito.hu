@@ -1,0 +1,38 @@
+[
+ {
+  "glob": "ui/booking-live.js",
+  "old": "async function transmitBookingRequest(url, payload, button, kind) {",
+  "new": "// F3: Turnstile bot-szűrés. Küldéskor kér tokent a gomb előtti dobozban; ha nem töltődik be (pl. reklámblokkoló),\n// token nélkül megy tovább, és a szerver dönt. ponytail: egy widget/oldal, a token egyszer használható, ezért mindig újat kér.\nfunction ecoTurnstileToken(button) {\n    return new Promise(resolve => {\n        const done = token => resolve(token ? { turnstileToken: token } : {});\n        if (!window.turnstile || !button) return done('');\n        try {\n            let box = document.getElementById('eco-ts');\n            if (!box) { box = document.createElement('div'); box.id = 'eco-ts'; box.style.margin = '8px 0'; }\n            button.parentNode.insertBefore(box, button);\n            if (window.ecoTsId !== undefined) window.turnstile.remove(window.ecoTsId);\n            window.ecoTsId = window.turnstile.render(box, { sitekey: '0x4AAAAAAGPKFflvSOfZi-F7', size: 'flexible', language: document.documentElement.lang || 'auto',\n                callback: done, 'error-callback': () => done(''), 'timeout-callback': () => done('') });\n            setTimeout(() => done(''), 15000);\n        } catch (e) { done(''); }\n    });\n}\n\nasync function transmitBookingRequest(url, payload, button, kind) {",
+  "why": "F3: Turnstile-token a foglalási és nagyrendelési kéréshez"
+ },
+ {
+  "glob": "ui/booking-live.js",
+  "old": "body: JSON.stringify(payload),",
+  "new": "body: JSON.stringify(Object.assign({}, payload, await ecoTurnstileToken(button))),",
+  "why": "F3: a token a payloadba kerül"
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "async function transmitBookingRequest(url, payload, button, kind) {",
+  "new": "// F3: Turnstile bot-szűrés. Küldéskor kér tokent a gomb előtti dobozban; ha nem töltődik be (pl. reklámblokkoló),\n// token nélkül megy tovább, és a szerver dönt. ponytail: egy widget/oldal, a token egyszer használható, ezért mindig újat kér.\nfunction ecoTurnstileToken(button) {\n    return new Promise(resolve => {\n        const done = token => resolve(token ? { turnstileToken: token } : {});\n        if (!window.turnstile || !button) return done('');\n        try {\n            let box = document.getElementById('eco-ts');\n            if (!box) { box = document.createElement('div'); box.id = 'eco-ts'; box.style.margin = '8px 0'; }\n            button.parentNode.insertBefore(box, button);\n            if (window.ecoTsId !== undefined) window.turnstile.remove(window.ecoTsId);\n            window.ecoTsId = window.turnstile.render(box, { sitekey: '0x4AAAAAAGPKFflvSOfZi-F7', size: 'flexible', language: document.documentElement.lang || 'auto',\n                callback: done, 'error-callback': () => done(''), 'timeout-callback': () => done('') });\n            setTimeout(() => done(''), 15000);\n        } catch (e) { done(''); }\n    });\n}\n\nasync function transmitBookingRequest(url, payload, button, kind) {",
+  "why": "F3: Turnstile-token a foglalási és nagyrendelési kéréshez"
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "body: JSON.stringify(payload),",
+  "new": "body: JSON.stringify(Object.assign({}, payload, await ecoTurnstileToken(button))),",
+  "why": "F3: a token a payloadba kerül"
+ },
+ {
+  "glob": "megrendeles.html",
+  "old": "</head>",
+  "new": "<script src=\"https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit\" async defer></script>\n</head>",
+  "why": "F3: Turnstile-szkript (a CSP már engedi a challenges.cloudflare.com-ot)"
+ },
+ {
+  "glob": "en/booking.html",
+  "old": "</head>",
+  "new": "<script src=\"https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit\" async defer></script>\n</head>",
+  "why": "F3: Turnstile-szkript (a CSP már engedi a challenges.cloudflare.com-ot)"
+ }
+]

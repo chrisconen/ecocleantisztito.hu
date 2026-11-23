@@ -1,0 +1,27 @@
+[
+ {
+  "glob": "ui/site.js",
+  "old": "document.querySelectorAll('.nav-mobile-link').forEach(trigger=>{\n",
+  "new": "document.querySelectorAll('.nav-mobile-link').forEach(trigger=>{\n    if(!trigger.nextElementSibling)return; // sima link (pl. Cégeknek), nem lenyíló menü\n",
+  "why": "F4: a B2B „Cégeknek” link nem lenyíló menü; a hiányzó testvérelem TypeError-ja leállította a site.js többi részét (csúszka, mobilmenü)"
+ },
+ {
+  "glob": "ui/mattress-calculator.js",
+  "old": "${city==='gyor'?`<p class=\"mc-note\">${t('A kedvezményes árak és a díjmentes kiszállás Győr városhatárán belül érvényesek. A környező településeknél az általános díjakkal számolunk.','Reduced prices and free travel apply within Győr city limits. Surrounding villages use the standard tariff.')}</p>`:''}",
+  "new": "",
+  "why": "F5: 0d75566 óta Győrben is az általános díjak és kiszállási díj érvényes; a „díjmentes kiszállás” mondat valótlan"
+ },
+ {
+  "glob": "karpittisztitas-gyor.html",
+  "old": "Díjmentes kiszállás Győr városhatárán belül.",
+  "new": "Kiszállás Győrben 3 500 Ft-tól.",
+  "why": "F5: meta, og és JSON-LD leírás a valós kiszállási díjjal",
+  "count": 3
+ },
+ {
+  "glob": "mediterranean/configurator.js",
+  "old": "A száraz mélytisztítás az árlistában száraz atkamentesítésként szerepel; az eljárás",
+  "new": "A száraz mélytisztítás az árlistában atka- és allergénkezelésként szerepel; az eljárás",
+  "why": "F2: a foglalóban már „Atka- és allergénkezelés” a név; a hivatkozás kövesse"
+ }
+]

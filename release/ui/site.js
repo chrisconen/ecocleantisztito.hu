@@ -77,6 +77,7 @@
   };
   new MutationObserver(syncMenu).observe(navPanel,{attributes:true,attributeFilter:['class']}); syncMenu();
   document.querySelectorAll('.nav-mobile-link').forEach(trigger=>{
+    if(!trigger.nextElementSibling)return; // sima link (pl. Cégeknek), nem lenyíló menü
     trigger.setAttribute('role','button');trigger.tabIndex=0;trigger.setAttribute('aria-expanded','false');
     trigger.addEventListener('keydown',event=>{if(event.key===' '||event.key==='Enter'){event.preventDefault();trigger.click();}});
     const sync=()=>{const isOpen=trigger.parentElement.classList.contains('open');trigger.setAttribute('aria-expanded',String(isOpen));trigger.nextElementSibling.inert=!isOpen;};

@@ -204,11 +204,18 @@ document.addEventListener('DOMContentLoaded', () => {
         q(email ? '[name=email]' : '[name=tel]').focus();
         return;
       }
+      const page = new URL(location.href);
+      const attribution = new URLSearchParams();
+      for (const key of ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid']) {
+        page.searchParams.getAll(key).forEach(value => attribution.append(key, value));
+      }
+      page.search = attribution.toString();
+      page.hash = '';
       const payload = {
         haz: q('[name=haz]').value, art: checked('art')[0] || '', varmegye: county.value, telepules: q('[name=ort]').value,
-        menge: Number(qty.value) || 0, doppel: Number(dbl.value) || 0, extras: checked('extra'), honapok: checked('honap'),
+        menge: Math.max(0, Math.floor(Number(qty.value) || 0)), doppel: Math.min(Math.max(0, Math.floor(Number(qty.value) || 0)), Math.max(0, Math.floor(Number(dbl.value) || 0))), extras: checked('extra'), honapok: checked('honap'),
         person: q('[name=person]').value, email, tel, uzenet: q('[name=uzenet]').value,
-        oldal: location.href.split('#')[0], website: q('[name=website]').value
+        oldal: page.href, website: q('[name=website]').value
       };
       send.disabled = true;
       status.textContent = 'Küldés …';
@@ -217,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
       try {
         const res = await fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload), signal: ctrl.signal });
         const data = await res.json();
-        if (!res.ok || !data.ok) throw new Error('rejected');
+        if (!res.ok || data?.ok !== true) throw new Error('rejected');
         status.textContent = '';
         done.hidden = false;
         send.hidden = true;

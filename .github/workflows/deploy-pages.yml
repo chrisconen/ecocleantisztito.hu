@@ -27,6 +27,11 @@ on:
       - 'release-support/verify-studio-overlay.py'
       - 'release-support/verify-review-overlay.py'
       - 'release-support/material-review/**'
+      - 'release-support/b2b-hygiene/**'
+      - 'release-support/verify-b2b-overlay.py'
+      - 'release-support/site-fixes/**'
+      - 'release-support/verify-site-fixes-overlay.py'
+      - 'release-support/smoke.py'
       - '.github/workflows/deploy-pages.yml'
       - '.gitattributes'
 
@@ -44,6 +49,11 @@ jobs:
       - uses: actions/checkout@v6
       - name: Verify the exact release package
         run: python3 release-support/verify-package.py
+      - name: Behaviour smoke test (0 JS errors, slider, legal links)
+        run: |
+          python3 -m pip install --quiet playwright==1.60.0
+          python3 -m playwright install --with-deps chromium
+          python3 release-support/smoke.py
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:

@@ -1,0 +1,98 @@
+[
+ {
+  "glob": "*.html",
+  "old": "Telefonon a 06 70 240 8141-es számon tudunk egyeztetni, de hamarosan elérhető lesz AI-vezérelt Online Foglalási Rendszerünk is.",
+  "new": "Telefonon a 06 70 240 8141-es számon vagy online, élő naptárunk szabad időpontjai közül választva foglalhatsz.",
+  "why": "F6 (Codex): Az online foglalás már elérhető; a telefonos lehetőség megmarad."
+ },
+ {
+  "glob": "*.html",
+  "old": "Telefonon a 06 70 240 8141-es számon tudunk egyeztetni, de hamarosan elérhető lesz AI-vezérelt\n                        Online Foglalási Rendszerünk is.",
+  "new": "Telefonon a 06 70 240 8141-es számon vagy online, élő naptárunk szabad időpontjai közül választva foglalhatsz.",
+  "why": "F6 (Codex): A sortöréses változatban is javítja az elavult foglalási ígéretet."
+ },
+ {
+  "glob": "*.html",
+  "old": "Precíz érkezés, hamarosan elérhető online foglalási rendszerrel a nap 24 órájában.",
+  "new": "Precíz érkezés, online foglalás élő naptárral a nap 24 órájában.",
+  "why": "F6 (Codex): A foglalási rendszer már működik."
+ },
+ {
+  "glob": "*.html",
+  "old": "Jelenleg telefonon a <strong>06 70 240 8141</strong>-es számon tudunk egyeztetni, de hamarosan\n                        elérhető lesz <strong>AI-vezérelt Online Foglalási Rendszerünk</strong>, ahol másodpercek alatt megtalálod a neked legmegfelelőbb időpontot.",
+  "new": "Telefonon a <strong>06 70 240 8141</strong>-es számon vagy <strong>online, élő naptárunkban</strong> foglalhatsz. Válassz szabad időpontot, küldd el a kérelmed, és e-mailben kapsz visszaigazolást.",
+  "why": "F6 (Codex): Az elérhető foglalást és a visszaigazolás menetét írja le."
+ },
+ {
+  "glob": "*.html",
+  "old": "Jelenleg telefonon a <strong>06 70 240 8141</strong>-es számon tudunk egyeztetni, de hamarosan\n                        elérhető lesz <strong>AI-vezérelt Online Foglalási Rendszerünk</strong>, ahol a mesterséges intelligencia segít másodpercek alatt megtalálni a neked legmegfelelőbb időpontot, várakozás nélkül.",
+  "new": "Telefonon a <strong>06 70 240 8141</strong>-es számon vagy <strong>online, élő naptárunkban</strong> foglalhatsz. Válassz szabad időpontot, küldd el a kérelmed, és e-mailben kapsz visszaigazolást.",
+  "why": "F6 (Codex): Eltávolítja a jövőbeli indulás és az AI ígéretét, megőrzi a telefonos lehetőséget."
+ },
+ {
+  "glob": "*.html",
+  "old": "Jelenleg telefonon a 06 70 240 8141-es számon. Hamarosan indul AI-vezérelt (Mesterséges Intelligencia alapú) online foglalási rendszerünk, amivel másodpercek alatt foglalhatsz ",
+  "new": "Telefonon a 06 70 240 8141-es számon vagy online, élő naptárunk szabad időpontjai közül választva foglalhatsz ",
+  "why": "F6 (Codex): Javítja a közös FAQ-szöveget, megtartva az eltérő városneveket."
+ },
+ {
+  "glob": "*.html",
+  "old": "Jelenleg telefonon a <strong>06 70 240 8141</strong>-es számon tudunk egyeztetni, de hamarosan elérhető lesz <strong>AI-vezérelt Online Foglalási Rendszerünk</strong>!",
+  "new": "Telefonon a <strong>06 70 240 8141</strong>-es számon vagy <strong>online, élő naptárunkban</strong> foglalhatsz!",
+  "why": "F6 (Codex): A telefon mellett már online is lehet foglalni."
+ },
+ {
+  "glob": "komarom.html",
+  "old": "Hamarosan elérhető lesz online foglalási rendszerünk is.",
+  "new": "Online is foglalhatsz: élő naptárunkban látod a szabad időpontokat, kérelmedre e-mailes visszaigazolást kapsz.",
+  "why": "F6 (Codex): A FAQ-adatokban is a működő foglalási folyamat szerepel."
+ },
+ {
+  "glob": "komarom.html",
+  "old": "Hamarosan elérhető lesz online foglalási rendszerünk is, amellyel a nap 24 órájában foglalhatsz.",
+  "new": "Online is foglalhatsz a nap 24 órájában: élő naptárunkban válassz szabad időpontot, küldd el a kérelmed, és e-mailben kapsz visszaigazolást.",
+  "why": "F6 (Codex): A látható szöveg az elérhető online foglalást és annak visszaigazolását írja le."
+ },
+ {
+  "glob": "en/*.html",
+  "old": "Our AI-powered Online Booking System will also be available soon.",
+  "new": "Online booking with a live calendar is also available now.",
+  "why": "F6 (Codex): States current availability while preserving the preceding phone option."
+ },
+ {
+  "glob": "en/*.html",
+  "old": "Punctual arrival, with a 24/7 online booking system coming soon.",
+  "new": "Punctual arrival, with online booking and a live calendar available 24/7.",
+  "why": "F6 (Codex): Online booking is already live."
+ },
+ {
+  "glob": "en/*.html",
+  "old": "For now, we can arrange the details by phone on <strong>06 70 240 8141</strong>, but our <strong>AI-powered Online Booking System</strong> will be available soon!",
+  "new": "You can book by phone on <strong>06 70 240 8141</strong> or <strong>online with our live calendar</strong>!",
+  "why": "F6 (Codex): Keeps phone booking and states that online booking is available."
+ },
+ {
+  "glob": "en/*.html",
+  "old": "For now you can arrange a booking by phone on <strong>06 70 240 8141</strong>, but our <strong>AI-powered Online Booking System</strong> will soon be available, where you can find the most suitable appointment in seconds.",
+  "new": "You can book by phone on <strong>06 70 240 8141</strong> or <strong>online with our live calendar</strong>. Choose an available slot, send your request and receive confirmation by email.",
+  "why": "F6 (Codex): Describes the live calendar, request and email confirmation."
+ },
+ {
+  "glob": "en/*.html",
+  "old": "For now, you can reach us by phone on <strong>06 70 240 8141</strong>, but our <strong>AI-powered Online Booking System</strong> will soon be available, where artificial intelligence helps you find the most suitable appointment in seconds, with no waiting.",
+  "new": "You can book by phone on <strong>06 70 240 8141</strong> or <strong>online with our live calendar</strong>. Choose an available slot, send your request and receive confirmation by email.",
+  "why": "F6 (Codex): Removes the launch and AI claims while retaining phone booking."
+ },
+ {
+  "glob": "en/*.html",
+  "old": "Currently by phone on 06 70 240 8141. Our AI-driven (artificial intelligence-based) online booking system is coming soon, letting you book in seconds in ",
+  "new": "You can book by phone on 06 70 240 8141 or online using our live calendar to choose an available slot in ",
+  "why": "F6 (Codex): Updates the shared FAQ wording while preserving each city name and phone option."
+ },
+ {
+  "glob": "en/*.html",
+  "old": "Currently by phone on 06 70 240 8141. Our AI-driven (Artificial Intelligence-based) online booking system is coming soon, letting you book in seconds in ",
+  "new": "You can book by phone on 06 70 240 8141 or online using our live calendar to choose an available slot in ",
+  "why": "F6 (Codex): Updates the capitalization variant of the stale FAQ wording."
+ }
+]

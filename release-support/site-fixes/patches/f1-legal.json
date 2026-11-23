@@ -1,0 +1,62 @@
+[
+ {
+  "glob": "*.html",
+  "old": "</footer>",
+  "new": "<div class=\"eco-legal\" style=\"max-width:1200px;margin:0 auto;padding:14px 16px 6px;font-size:.8rem;line-height:1.6;text-align:center;opacity:.85\">ECO Clean kárpit- és matractisztítás · 9134 Bodonhely, Lepke utca 9. · Adószám: 56302415-1-28 · <a href=\"adatvedelem.html\" style=\"color:inherit;text-decoration:underline\">Adatkezelési tájékoztató</a> · <a href=\"aszf.html\" style=\"color:inherit;text-decoration:underline\">ÁSZF</a></div></footer>",
+  "why": "F1: szolgáltatói adatok és jogi linkek minden magyar oldal láblécében (Ekertv. 4. §)"
+ },
+ {
+  "glob": "en/*.html",
+  "old": "</footer>",
+  "new": "<div class=\"eco-legal\" style=\"max-width:1200px;margin:0 auto;padding:14px 16px 6px;font-size:.8rem;line-height:1.6;text-align:center;opacity:.85\">ECO Clean kárpit- és matractisztítás · Lepke utca 9, 9134 Bodonhely, Hungary · Tax no. 56302415-1-28 · <a href=\"privacy.html\" style=\"color:inherit;text-decoration:underline\">Privacy notice</a> · <a href=\"terms.html\" style=\"color:inherit;text-decoration:underline\">Terms</a></div></footer>",
+  "why": "F1: provider details and legal links in every English footer"
+ },
+ {
+  "glob": "megrendeles.html",
+  "old": "<p class=\"condition-note\" id=\"conditionNote\" style=\"display:none;\"></p>",
+  "new": "<p class=\"condition-consent\" style=\"font-size:.82rem;line-height:1.5;opacity:.85;margin:10px 0 14px\">Az „Allergiás a családban” jelölés egészségügyi adat. Ha bejelölöd, kifejezetten hozzájárulsz, hogy kizárólag a munka előkészítéséhez (a megfelelő kezelés javaslatához) kezeljük, és a munka elvégzése után töröljük. Nem kötelező; a hozzájárulást bármikor visszavonhatod az info@ecocleantisztito.hu címen. <a href=\"adatvedelem.html\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit;text-decoration:underline\">Adatkezelési tájékoztató</a></p>\n                        <p class=\"condition-note\" id=\"conditionNote\" style=\"display:none;\"></p>",
+  "why": "F1: kifejezett hozzájárulás az Allergiás jelöléshez (GDPR 9. cikk (2) a))"
+ },
+ {
+  "glob": "en/booking.html",
+  "old": "<p class=\"condition-note\" id=\"conditionNote\" style=\"display:none;\"></p>",
+  "new": "<p class=\"condition-consent\" style=\"font-size:.82rem;line-height:1.5;opacity:.85;margin:10px 0 14px\">“Family member with allergies” is health data. If you tick it, you explicitly consent to us using it only to prepare the job (to suggest the right treatment); we delete it once the job is done. It is optional, and you can withdraw consent at any time at info@ecocleantisztito.hu. <a href=\"privacy.html\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit;text-decoration:underline\">Privacy notice</a></p>\n                        <p class=\"condition-note\" id=\"conditionNote\" style=\"display:none;\"></p>",
+  "why": "F1: explicit consent for the allergy flag"
+ },
+ {
+  "glob": "megrendeles.html",
+  "old": "<button type=\"submit\" class=\"btn btn-primary btn-submit\">",
+  "new": "<p class=\"form-legal\" style=\"font-size:.82rem;line-height:1.5;opacity:.85;margin:10px 0 14px\">A foglalás elküldésével elfogadod az <a href=\"aszf.html\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit;text-decoration:underline\">ÁSZF</a>-et, és kéred, hogy a munkát a választott időpontban, akár a 14 napos elállási határidőn belül elvégezzük. Az adataidat az <a href=\"adatvedelem.html\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit;text-decoration:underline\">adatkezelési tájékoztató</a> szerint kezeljük.</p>\n                            <button type=\"submit\" class=\"btn btn-primary btn-submit\">",
+  "why": "F1: ÁSZF + adatkezelés + kifejezett kérés az elállási időn belüli teljesítésre (45/2014. Korm. r. 29. § a))"
+ },
+ {
+  "glob": "en/booking.html",
+  "old": "<button type=\"submit\" class=\"btn btn-primary btn-submit\">",
+  "new": "<p class=\"form-legal\" style=\"font-size:.82rem;line-height:1.5;opacity:.85;margin:10px 0 14px\">By sending your booking you accept our <a href=\"terms.html\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit;text-decoration:underline\">terms</a> and ask us to do the job on the chosen date, even within the 14-day withdrawal period. We handle your data as described in our <a href=\"privacy.html\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit;text-decoration:underline\">privacy notice</a>.</p>\n                            <button type=\"submit\" class=\"btn btn-primary btn-submit\">",
+  "why": "F1: terms + privacy + express request to perform within the withdrawal period"
+ },
+ {
+  "glob": "ui/booking-live.js",
+  "old": "<button type=\"button\" class=\"large-order-submit\" onclick=\"submitLargeOrder()\">",
+  "new": "<p class=\"form-legal\" style=\"font-size:.82rem;line-height:1.5;opacity:.85;margin:10px 0 14px\">Az adataidat csak az árajánlat elkészítéséhez használjuk, az <a href=\"adatvedelem.html\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit;text-decoration:underline\">adatkezelési tájékoztató</a> szerint.</p> <button type=\"button\" class=\"large-order-submit\" onclick=\"submitLargeOrder()\">",
+  "why": "F1: adatkezelési tájékoztató a nagyrendelési űrlapnál"
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "<button type=\"button\" class=\"large-order-submit\" onclick=\"submitLargeOrder()\">",
+  "new": "<p class=\"form-legal\" style=\"font-size:.82rem;line-height:1.5;opacity:.85;margin:10px 0 14px\">We only use your data to prepare the quote, as described in our <a href=\"privacy.html\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit;text-decoration:underline\">privacy notice</a>.</p> <button type=\"button\" class=\"large-order-submit\" onclick=\"submitLargeOrder()\">",
+  "why": "F1: privacy notice on the large-order form"
+ },
+ {
+  "glob": "matractisztitas-cegeknek*.html",
+  "old": "Csak az ajánlatkérésed megválaszolására használjuk, és nem adjuk tovább.</p>",
+  "new": "Csak az ajánlatkérésed megválaszolására használjuk, és nem adjuk tovább. <a href=\"adatvedelem.html\" style=\"color:inherit;text-decoration:underline\">Adatkezelési tájékoztató</a></p>",
+  "why": "F1: link a B2B űrlap adatkezelési mondatához"
+ },
+ {
+  "glob": "sitemap.xml",
+  "old": "</urlset>",
+  "new": "  <url><loc>https://ecocleantisztito.hu/adatvedelem.html</loc></url>\n  <url><loc>https://ecocleantisztito.hu/aszf.html</loc></url>\n  <url><loc>https://ecocleantisztito.hu/en/privacy.html</loc></url>\n  <url><loc>https://ecocleantisztito.hu/en/terms.html</loc></url>\n</urlset>",
+  "why": "F1: jogi oldalak a sitemapben"
+ }
+]

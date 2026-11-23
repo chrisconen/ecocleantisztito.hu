@@ -46,8 +46,8 @@ const UPSELLS = {
     // Kárpit upsells
     karpit: {
         "atkairtas": {
-            name: "Atkairtás",
-            description: "Száraz atkamentesítés - ajánlott allergiásoknak",
+            name: "Atka- és allergénkezelés",
+            description: "Atka- és allergénkezelés - száraz tisztítással",
             priceType: "perItem", // ár tételenként különböző
             icon: "🦠"
         },
@@ -80,7 +80,7 @@ const UPSELLS = {
     // Matrac upsells
     matrac: {
         "nedves_tisztitas": {
-            name: "Nedves folteltávolítás, fertőtlenítő mosás",
+            name: "Nedves folteltávolítás, higiénikus mosás",
             description: "A kiválasztott matracoldalak mosása",
             priceKey: "wetPrice",
             priceType: "perSide", // felületenként
@@ -248,7 +248,7 @@ function updateConditionNote() {
         text += '💡 Háziállat esetén ajánljuk a szagtalanítást! ';
     }
     if (State.conditions.includes('Allergias')) {
-        text += '💡 Allergia esetén ajánljuk az atkairtást minden bútorra! ';
+        text += '💡 Atka- és allergénkezelés minden bútorhoz kérhető! ';
     }
 
     if (text) {
@@ -316,7 +316,7 @@ function createItemHTML(category, id, item) {
                     <input type="checkbox" onchange="toggleItemUpsell('${fullId}', 'atkairtas', ${item.atkaPrice})">
                     <span class="upsell-label">
                         <span class="upsell-icon">🦠</span>
-                        <span class="upsell-text">+Atkairtás</span>
+                        <span class="upsell-text">+Atka- és allergénkezelés</span>
                         <span class="upsell-price">+${item.atkaPrice.toLocaleString('hu-HU')} Ft</span>
                     </span>
                 </label>
@@ -638,7 +638,7 @@ function updateSummary() {
                 subtotal += atkaTotal;
                 totalDuration += 15 * item.count;
                 details.push({
-                    text: `  +Atkairtás (${item.count}x)`,
+                    text: `  +Atka- és allergénkezelés (${item.count}x)`,
                     price: atkaTotal,
                     isUpsell: true
                 });
@@ -848,7 +848,7 @@ function createLargeOrderPanel() {
     panel.className = 'large-order-panel';
     panel.innerHTML = `
         <div class="large-order-header"> <span class="large-order-icon">🏢</span> <h3>Nagymegrendelés - Egyedi árajánlat</h3> </div> <div class="large-order-info"> <p>A megrendelésed meghaladja az egy napos kapacitást!</p> <p>Becsült munkaidő: <strong id="largeOrderDuration">${formatDuration(State.totalDuration)}</strong></p>
-            <p>Becsült ár: <strong id="largeOrderPrice">${State.totalPrice.toLocaleString('hu-HU')} Ft</strong></p> <p class="large-order-note">📧 Kérjük küldd el az adataidat és <strong>24 órán belül</strong> személyre szabott árajánlatot küldünk a pontos időpontokkal és esetleges mennyiségi kedvezménnyel!</p> </div> <div class="large-order-form"> <div class="form-row"> <label for="largeOrderName">Név / Cég *</label> <input type="text" id="largeOrderName" required placeholder="Minta Géza Alapítvány"> </div> <div class="form-row"> <label for="largeOrderEmail">E-mail *</label> <input type="email" id="largeOrderEmail" required placeholder="info@example.com"> </div> <div class="form-row"> <label for="largeOrderPhone">Telefon *</label> <input type="tel" id="largeOrderPhone" required placeholder="+36 30 123 4567"> </div> <div class="form-row"> <label for="largeOrderAddress">Cím / Helyszín</label> <input type="text" id="largeOrderAddress" placeholder="2890 Tata, Példa utca 1."> </div> <div class="form-row"> <label for="largeOrderMessage">Megjegyzés (preferált időszak, stb.)</label> <textarea id="largeOrderMessage" rows="3" placeholder="Pl. Január második fele lenne ideális..."></textarea> </div> <button type="button" class="large-order-submit" onclick="submitLargeOrder()"> 📧 Árajánlat kérése </button> </div>
+            <p>Becsült ár: <strong id="largeOrderPrice">${State.totalPrice.toLocaleString('hu-HU')} Ft</strong></p> <p class="large-order-note">📧 Kérjük küldd el az adataidat és <strong>24 órán belül</strong> személyre szabott árajánlatot küldünk a pontos időpontokkal és esetleges mennyiségi kedvezménnyel!</p> </div> <div class="large-order-form"> <div class="form-row"> <label for="largeOrderName">Név / Cég *</label> <input type="text" id="largeOrderName" required placeholder="Minta Géza Alapítvány"> </div> <div class="form-row"> <label for="largeOrderEmail">E-mail *</label> <input type="email" id="largeOrderEmail" required placeholder="info@example.com"> </div> <div class="form-row"> <label for="largeOrderPhone">Telefon *</label> <input type="tel" id="largeOrderPhone" required placeholder="+36 30 123 4567"> </div> <div class="form-row"> <label for="largeOrderAddress">Cím / Helyszín</label> <input type="text" id="largeOrderAddress" placeholder="2890 Tata, Példa utca 1."> </div> <div class="form-row"> <label for="largeOrderMessage">Megjegyzés (preferált időszak, stb.)</label> <textarea id="largeOrderMessage" rows="3" placeholder="Pl. Január második fele lenne ideális..."></textarea> </div> <p class="form-legal" style="font-size:.82rem;line-height:1.5;opacity:.85;margin:10px 0 14px">Az adataidat csak az árajánlat elkészítéséhez használjuk, az <a href="adatvedelem.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">adatkezelési tájékoztató</a> szerint.</p> <button type="button" class="large-order-submit" onclick="submitLargeOrder()"> 📧 Árajánlat kérése </button> </div>
     `;
 
     // Beszúrjuk a calendar wrapper helyére
@@ -1196,6 +1196,24 @@ function bookingFailure(result) {
     return 'A kérés feldolgozása nem sikerült. Kérjük egyeztess velünk a 06 70 240 8141 telefonszámon.';
 }
 
+// F3: Turnstile bot-szűrés. Küldéskor kér tokent a gomb előtti dobozban; ha nem töltődik be (pl. reklámblokkoló),
+// token nélkül megy tovább, és a szerver dönt. ponytail: egy widget/oldal, a token egyszer használható, ezért mindig újat kér.
+function ecoTurnstileToken(button) {
+    return new Promise(resolve => {
+        const done = token => resolve(token ? { turnstileToken: token } : {});
+        if (!window.turnstile || !button) return done('');
+        try {
+            let box = document.getElementById('eco-ts');
+            if (!box) { box = document.createElement('div'); box.id = 'eco-ts'; box.style.margin = '8px 0'; }
+            button.parentNode.insertBefore(box, button);
+            if (window.ecoTsId !== undefined) window.turnstile.remove(window.ecoTsId);
+            window.ecoTsId = window.turnstile.render(box, { sitekey: '0x4AAAAAAGPKFflvSOfZi-F7', size: 'flexible', language: document.documentElement.lang || 'auto',
+                callback: done, 'error-callback': () => done(''), 'timeout-callback': () => done('') });
+            setTimeout(() => done(''), 15000);
+        } catch (e) { done(''); }
+    });
+}
+
 async function transmitBookingRequest(url, payload, button, kind) {
     if (BookingTransport.pending || BookingTransport[kind + 'Sent']) return false;
     BookingTransport.pending = true;
@@ -1209,7 +1227,7 @@ async function transmitBookingRequest(url, payload, button, kind) {
         const response = await fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload),
+            body: JSON.stringify(Object.assign({}, payload, await ecoTurnstileToken(button))),
             signal: controller.signal
         });
         const result = await response.json();

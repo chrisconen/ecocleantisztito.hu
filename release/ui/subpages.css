@@ -32,7 +32,7 @@
 .trust-badge-card__desc {grid-column:2;grid-row:3;font-size:12px;line-height:1.65;color:var(--muted);margin:0;min-width:0;}
 .eco-subpage .pricing,.eco-subpage .why-us-detailed,.eco-subpage .seo-content,.eco-subpage .other-cities {padding:88px 0;background:var(--paper);}
 .eco-subpage .section-header {text-align:left;max-width:none;margin:0 0 38px;}
-.eco-subpage .section-label {color:#667d5d;}
+.eco-subpage .section-label {color:#617858;}
 .eco-subpage .section-title {max-width:940px;}
 .eco-subpage .pricing-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch;}
 .eco-subpage .pricing-card {position:relative;min-width:0;padding:27px;display:flex;flex-direction:column;align-items:flex-start;text-align:left;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fffdf8;box-shadow:none;transition:transform .25s,box-shadow .25s;}
@@ -54,7 +54,7 @@
 .eco-subpage .content-block {padding:38px;margin:0 0 24px;border:1px solid var(--line);border-radius:7px;background:#fdfcf6;box-shadow:none;opacity:1;transform:none;}
 .eco-subpage .content-block:nth-child(even) {background:#edf1e6;}
 .eco-subpage .content-block h2,.eco-subpage .content-block h3 {font-family:var(--font-display);font-size:36px;font-weight:500;line-height:1.15;margin:0 0 20px;color:var(--ink);}
-.eco-subpage .content-block p,.eco-subpage .content-block li {font-size:14px;line-height:1.9;color:var(--muted);}
+.eco-subpage .content-block p,.eco-subpage .content-block li {font-size:14px;line-height:1.9;color:#656f66;}
 .eco-subpage .content-block p+p {margin-top:15px;}
 .eco-subpage .content-block h4 {font-size:16px;color:var(--ink);}
 .eco-subpage .why-us-detailed .content-blocks:has(> :nth-child(4):last-child) {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;}
@@ -112,7 +112,7 @@
 .eco-subpage .matrac-why {padding:85px 0;background:#eaf0e4;color:var(--ink);}
 .eco-subpage .matrac-why__inner {max-width:1320px;width:calc(100% - 112px);margin:auto;padding:0;}
 .eco-subpage .matrac-why__header h2 {font-family:var(--font-display);font-size:clamp(38px,4vw,59px);line-height:1.1;font-weight:500;letter-spacing:-.025em;color:var(--ink);}
-.eco-subpage .matrac-why__label {font-size:10px;letter-spacing:1.6px;background:none;color:#637956;border:0;padding:0;}
+.eco-subpage .matrac-why__label {font-size:10px;letter-spacing:1.6px;background:none;color:#5c724f;border:0;padding:0;}
 .eco-subpage .matrac-why__card {padding:24px;background:#f9faf4;border:1px solid #d6dfce;border-radius:7px;box-shadow:none;color:var(--ink);}
 .eco-subpage .matrac-why__card h3 {font-family:var(--font-display);font-size:27px;font-weight:500;color:var(--ink);}
 .eco-subpage .matrac-why__card p {color:var(--muted);font-size:13px;line-height:1.85;}

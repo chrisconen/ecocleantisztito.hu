@@ -1,0 +1,2486 @@
+[
+ {
+  "glob": "**/*.html",
+  "old": "Matractisztítás + atkairtás + fertőtlenítés",
+  "new": "Matractisztítás + atka- és allergénkezelés",
+  "why": "F2 (Codex): Non-disinfection service name."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "milliónyi poratka, baktérium, izzadság és folt",
+  "new": "por, bőrhám, izzadság és folt",
+  "why": "F2 (Codex): Removes bacterial framing."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "99,9%-ban eltávolítja a szennyeződéseket, poratkákat és allergéneket a kárpit legmélyebb rétegeiből is.",
+  "new": "csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét a kárpitban.",
+  "why": "F2 (Codex): Allowed reduction claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "A tisztítás után a bútor atkamentes, baktériummentes és teljesen biztonságos a legkisebbek számára is.",
+  "new": "A tisztítás után a kárpit frissebb és tisztább.",
+  "why": "F2 (Codex): Removes absolute health promises."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "\"Atkamentesítés\"",
+  "new": "\"Atka- és allergénkezelés\"",
+  "why": "F2 (Codex): Uses the public service name."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "mélytisztítás + fertőtlenítés",
+  "new": "higiénikus mélytisztítás",
+  "why": "F2 (Codex): Retains service without disinfection."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "eltávolítjuk a szennyeződések 99,9%-át,\n                        beleértve az atkákat, azok petéit és ürülékét is.",
+  "new": "csökkentjük a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Allowed reduction claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "allergiamentes környezetet szeretnének biztosítani",
+  "new": "frissebb, tisztább környezetet szeretnének biztosítani",
+  "why": "F2 (Codex): Removes allergy-free promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Allergének &amp; kórokozók",
+  "new": "Por &amp; atkaallergén",
+  "why": "F2 (Codex): Removes pathogen claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Baktériumok és gombák",
+  "new": "Felgyűlt por és bőrhám",
+  "why": "F2 (Codex): Removes microbial removal claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "A rendszeres professzionális kárpittisztítás biztosítja az atkamentességet és a bútorok ápolt megjelenését.",
+  "new": "A rendszeres professzionális kárpittisztítás csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét, és ápolt megjelenést ad a bútoroknak.",
+  "why": "F2 (Codex): Removes mite-free guarantee."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "az atkaírtás tanúsítványunk segít kiemelkedni a kínálatból, és valódi garanciát nyújt a poratkamentes környezetre.",
+  "new": "az atka- és allergénkezelési tanúsítványunk dokumentálja az elvégzett kezelést.",
+  "why": "F2 (Codex): Keeps certificate without guarantee."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Családbarát nyaralás atkamentes bútorokon",
+  "new": "Családbarát nyaralás tisztább bútorokon",
+  "why": "F2 (Codex): Removes mite-free promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Vegyszermentes kárpittisztításunk garantálja, hogy a kicsik biztonságos, poratkamentes felületen játsszanak és pihenjenek.",
+  "new": "Kárpittisztításunk frissebb, tisztább felületet ad a kicsik játékához és pihenéséhez.",
+  "why": "F2 (Codex): Removes absolute safety guarantee."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "ahol a szanatóriumok és wellness szállodák bútoraiban az atkamentesség alapkövetelmény. Kárpittisztításunk megfelel a legszigorúbb egészségügyi elvárásoknak is.",
+  "new": "ahol a szanatóriumok és wellness szállodák bútorainak tisztasága kiemelten fontos. Kárpittisztításunk csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes unsupported health standards."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "biztosítja az atkamentes, higiénikus vendég<wbr>teret.",
+  "new": "frissebb, tisztább kárpitot ad a vendég<wbr>térben.",
+  "why": "F2 (Codex): Removes mite-free guarantee."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Az allergiamentes szállás egyre keresettebb — mi segítünk ezt professzionálisan biztosítani.",
+  "new": "A tiszta, ápolt szállás egyre keresettebb — mi segítünk a bútorok tisztán tartásában.",
+  "why": "F2 (Codex): Removes allergy-free promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Gyerekbarát nyaralás atkamentes kanapén",
+  "new": "Gyerekbarát nyaralás tisztább kanapén",
+  "why": "F2 (Codex): Removes mite-free promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Családi vakáció allergiamentesen",
+  "new": "Családi vakáció tisztább környezetben",
+  "why": "F2 (Codex): Removes allergy-free promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Vegyszermentes kárpittisztításunk biztosítja, hogy a gyerekek atkamentes, biztonságos bútorokon játszhassanak és pihenhessenek a vakáció alatt.",
+  "new": "Kárpittisztításunk frissebb, tisztább bútorokat ad a gyerekek játékához és pihenéséhez a vakáció alatt.",
+  "why": "F2 (Codex): Removes absolute safety promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "frissek, illatosak és atkamentesek",
+  "new": "frissebbek és tisztábbak",
+  "why": "F2 (Codex): Removes mite-free promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "bútor atkamentesítése",
+  "new": "bútorainak atka- és allergénkezelése",
+  "why": "F2 (Codex): Uses non-eradication wording."
+ },
+ {
+  "glob": "karpittisztitas-elotte-utana.html",
+  "old": "Atkamentesítés, fertőtlenítés",
+  "new": "Atka- és allergénkezelés, mélytisztítás",
+  "why": "F2 (Codex): Retains services without disinfection."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Matractisztítás után – higiénikus, friss matrac atkamentesítéssel",
+  "new": "Matractisztítás után – higiénikus, friss matrac atka- és allergénkezeléssel",
+  "why": "F2 (Codex): Uses the public service name."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Tóparti nyaralók atkamentesítése szezon előtt",
+  "new": "Tóparti nyaralók atka- és allergénkezelése szezon előtt",
+  "why": "F2 (Codex): Removes eradication wording."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Szezon előtti kárpittisztítással biztosíthatod, hogy családod allergiamentesen élvezze a Balaton<wbr>t.",
+  "new": "Szezon előtti kárpittisztítással frissebb, tisztább bútorokkal várhatod családodat a Balaton<wbr>nál.",
+  "why": "F2 (Codex): Removes allergy prevention promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "friss, atkamentes bútorokon",
+  "new": "friss, tisztább bútorokon",
+  "why": "F2 (Codex): Removes mite-free promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "bútor mélytisztítás és atkamentesítés",
+  "new": "bútormélytisztítás és atka- és allergénkezelés",
+  "why": "F2 (Codex): Uses non-eradication wording."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Kárpittisztításunk 99,9%-ban eltávolítja az atkákat és ürülékeiket.",
+  "new": "Kárpittisztításunk csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Allowed reduction claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "vegyszermentes mélytisztításunk biztonságos, mégis\n                            hatékony megoldás a poratkák és baktériumok ellen.",
+  "new": "mélytisztításunk csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes bacterial and safety promises."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Szezonális nagytakarítás atkamentesítéssel",
+  "new": "Szezonális nagytakarítás atka- és allergénkezeléssel",
+  "why": "F2 (Codex): Uses the public service name."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "tisztítása atkaírtással és fertőtlenítéssel.",
+  "new": "tisztítása atka- és allergénkezeléssel.",
+  "why": "F2 (Codex): Removes disinfection service claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "A kárpitozott bútorok atkamentessége itt nem opció, hanem alapkövetelmény — professzionális kárpittisztításunk teljesíti ezt a szintet.",
+  "new": "A kárpitozott bútorok tisztasága itt kiemelten fontos — professzionális kárpittisztításunk frissebb, tisztább kárpitot ad.",
+  "why": "F2 (Codex): Removes mite-free guarantee."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "megőrzi a bútorok szépségét és biztosítja az atkamentességet.",
+  "new": "megőrzi a bútorok ápolt megjelenését és csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Allowed reduction claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Gyári műszakosok: pihenjen atkamentes kanapén",
+  "new": "Gyári műszakosok: pihenj tisztább kanapén",
+  "why": "F2 (Codex): Removes mite-free promise; informal address."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "professzionális bútor atkamentesítés",
+  "new": "professzionális atka- és allergénkezelés",
+  "why": "F2 (Codex): Uses the public service name."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "szolgáltatásunk biztosítja, hogy atkamentes, biztonságos felületen tegyék ezt.",
+  "new": "szolgáltatásunk frissebb, tisztább felületet ad ehhez.",
+  "why": "F2 (Codex): Removes absolute safety guarantee."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "megőrzi a bútorok esztétikáját és garantálja az atkamentességet.",
+  "new": "megőrzi a bútorok ápolt megjelenését és csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Allowed reduction claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "kárpittisztításunk 99,9%-ban eltávolítja őket.",
+  "new": "kárpittisztításunk csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes percentage effect."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Vegyszermentes kárpittisztításunkkal a szálláshely kanapéi, foteljei és matracai atkamentessé válnak — így a kicsik is gondtalanul pihenhetnek a Balaton<wbr>nál.",
+  "new": "Kárpittisztításunkkal a szálláshely kanapéi, foteljei és matracai frissebbek, tisztábbak lesznek a Balaton<wbr>nál töltött pihenéshez.",
+  "why": "F2 (Codex): Removes mite-free promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "A rendszeres professzionális kárpittisztítás nemcsak az atkákat, hanem az ételmaradványokat és baktériumokat is eltávolítja — ez a vendég<wbr>látás alapja.",
+  "new": "A rendszeres professzionális kárpittisztítás csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét — a tiszta kárpit fontos a vendég<wbr>látásban.",
+  "why": "F2 (Codex): Removes bacterial removal claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Családi kanapék és fotelek atkamentesítése",
+  "new": "Családi kanapék és fotelek atka- és allergénkezelése",
+  "why": "F2 (Codex): Uses the public service name."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "szálláshelyek és otthonok atkamentesítése",
+  "new": "szálláshelyek és otthonok atka- és allergénkezelése",
+  "why": "F2 (Codex): Removes eradication wording."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "alapvető higiéniai követelmény — és az atkamentesség garantálása.",
+  "new": "fontos a frissebb, tisztább kárpitért.",
+  "why": "F2 (Codex): Removes mite-free guarantee."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "az atkamentes bútor versenyelőnyt jelent.",
+  "new": "a tiszta, ápolt bútor versenyelőnyt jelent.",
+  "why": "F2 (Codex): Removes mite-free promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "a szövetdiagnosztika és az atkamentesítés is",
+  "new": "a szövetdiagnosztika és az atka- és allergénkezelés is",
+  "why": "F2 (Codex): Uses the public service name."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "🎯 <strong>Allergia, asztma, kisgyermek</strong> – klinikailag tesztelt atkamentesítés",
+  "new": "🎯 <strong>Frissebb, tisztább kárpit</strong> – atka- és allergénkezelés",
+  "why": "F2 (Codex): Removes unsupported clinical claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "klinikailag tesztelt\n                            99,9%-os\n                            atkaeltávolítás.",
+  "new": "a felgyűlt por, bőrhám és atkaallergén mennyiségének csökkentése.",
+  "why": "F2 (Codex): Removes clinical and percentage claims."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Matrac mélytisztítás, atkaírtás és fertőtlenítés tanúsítvánnyal",
+  "new": "Matrac-mélytisztítás, atka- és allergénkezelés tanúsítvánnyal",
+  "why": "F2 (Codex): Retains certificate without disinfection."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "allergénmentesítés matrac, poratka irtás Balaton, matrac fertőtlenítés",
+  "new": "matrac allergénterhelésének csökkentése, atka- és allergénkezelés Balaton, higiénikus matractisztítás",
+  "why": "F2 (Codex): Removes eradication and disinfection keywords."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "matrac mélytisztítás és fertőtlenítés",
+  "new": "matrac higiénikus mélytisztítása",
+  "why": "F2 (Codex): Non-disinfection offer description."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "99.9%</span>\n                    <span class=\"label\">atka eltávolítva",
+  "new": "HEPA</span>\n                    <span class=\"label\">szűrt porszívózás",
+  "why": "F2 (Codex): Replaces percentage tile with process label."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Speciális ipari gépeinkkel és <strong>UV-C fertőtlenítéssel</strong> eltávolítjuk az atkák 99,9%-át, beleértve a petéiket és ürülékeiket is.",
+  "new": "HEPA-szűrős porszívózással csökkentjük a felgyűlt por, bőrhám és atkaallergén mennyiségét, majd <strong>UV-C felületkezelést</strong> végzünk.",
+  "why": "F2 (Codex): Describes treatment without kill claims."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "UV-C fertőtlenítés (baktériumok, vírusok elpusztítása)",
+  "new": "UV-C felületkezelés",
+  "why": "F2 (Codex): Removes disinfection and kill claims."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "UV fertőtlenítés",
+  "new": "UV-C felületkezelés",
+  "why": "F2 (Codex): Non-disinfection process name."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Allergének és kórokozók a szőnyegekben",
+  "new": "Por és atkaallergén a szőnyegekben",
+  "why": "F2 (Codex): Removes pathogen framing."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "eltávolítjuk a szennyeződések 99,9%-át.",
+  "new": "csökkentjük a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Allowed reduction claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "ez a higiénikus megoldás biztosítja a vendégek és dolgozók egészségét.",
+  "new": "ez a megoldás frissebb, tisztább szőnyegeket ad a vendégeknek és a dolgozóknak.",
+  "why": "F2 (Codex): Removes health guarantee."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "éttermi felületek <strong>fertőtlenítése</strong>",
+  "new": "éttermi felületek <strong>higiénikus tisztítása</strong>",
+  "why": "F2 (Codex): Retains service without disinfection."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Fürdőszobák fertőtlenítése",
+  "new": "Fürdőszobák higiénikus tisztítása",
+  "why": "F2 (Codex): Retains service without disinfection."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Technológiánk a szövet legmélyebb rétegeiből is\n                        kiszívja\n                        az éveken át felgyülemlett port, atkákat és baktériumokat.",
+  "new": "Technológiánk csökkenti a szövetben felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes bacterial removal claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Speciális gépeinkkel eltávolítjuk a szennyeződések 99,9%-át\n                        a kanapé szivacsaiból.",
+  "new": "Speciális gépeinkkel csökkentjük a kanapéban felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes percentage effect."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "matracok mélytisztítása, atkaírtás, fertőtlenítés.",
+  "new": "matracok mélytisztítása, atka- és allergénkezelés.",
+  "why": "F2 (Codex): Non-disinfection service description."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Az ECO Clean mélytisztítása eltávolítja a kórokozók 99,9%-át.",
+  "new": "Az ECO Clean mélytisztítása csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes pathogen and percentage claims."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "az elvégzett atkamentesítésről és fertőtlenítésről",
+  "new": "az elvégzett atka- és allergénkezelésről",
+  "why": "F2 (Codex): Keeps certificate with correct treatment name."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Professzionális mélytisztítás, ami eltávolítja az allergének és atkák 99,9%-át.",
+  "new": "Professzionális mélytisztítás, ami csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Allowed reduction claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Aludj újra egészségesen!",
+  "new": "Pihenj frissebb, tisztább matracon!",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Vegyszermentes fertőtlenítés",
+  "new": "Atka- és allergénkezelés",
+  "why": "F2 (Codex): Uses the public service name."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Allergénmentesítés, fertőtlenítés, 100% vegyszermentes.",
+  "new": "Atka- és allergénkezelés a frissebb, tisztább matracért.",
+  "why": "F2 (Codex): Removes absolute treatment claims."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "A tiszta matrac jobb alvást, a jobb alvás jobb teljesítményt jelent a gyárban.",
+  "new": "A tiszta matrac frissebb, tisztább környezetet ad a műszak utáni pihenéshez.",
+  "why": "F2 (Codex): Removes sleep and performance outcomes."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "100%-ban vegyszermentes bio-enzimes + UV-C\n                        technológiánk kíméletlen a kórokozókkal, de teljesen biztonságos a babáknak és kisgyerekeknek.",
+  "new": "Atka- és allergénkezelésünk HEPA-szűrős porszívózásból és UV-C felületkezelésből áll, és csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes pathogen and absolute safety claims."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "nedves - vegyszeres, fertőtlenítő\n",
+  "new": "nedves - tisztítószeres\n",
+  "why": "F2 (Codex): Removes disinfection wording."
+ },
+ {
+  "glob": "matractisztitas-mosonmagyarovar.html",
+  "old": "<p>A városban megszokott a sterilitás és a tisztaság. Mi ezt az érzést visszük haza neked. De míg egy rendelőben fertőtlenítőszereket használnak, mi a <strong>természet erejével (bio-enzimek,\n                            víz, vibráció)</strong> érjük el ugyanazt a hatást: 99.9%-os atkamentességet. Biztonságos,\n                        mint egy osztrák bio-hotelben.</p>",
+  "new": "<p>A tiszta, ápolt környezet érzését visszük haza neked. HEPA-szűrős porszívózással csökkentjük a felgyűlt por, bőrhám és atkaallergén mennyiségét, majd <strong>UV-C felületkezelést</strong> végzünk. Az eredmény frissebb, tisztább matrac.</p>",
+  "why": "F2 (Codex): Removes clinical equivalence and percentage promises."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "nálunk az \"atkamentes\" tényleg 99.9%-os tisztaságot jelent.",
+  "new": "nálunk a kezelés csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes mite-free and percentage claims."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Ez a technológia kíméletlen a kórokozókkal, de gyengéd a természethez és az egészségedhez.",
+  "new": "A kezelés célja a frissebb, tisztább matrac és alvókörnyezet.",
+  "why": "F2 (Codex): Removes pathogen and health promises."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Atkamentesítés, fertőtlenítés és folttisztítás egyetlen hatékony folyamatban.",
+  "new": "Atka- és allergénkezelés, valamint folttisztítás egyetlen folyamatban.",
+  "why": "F2 (Codex): Retains services without eradication."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Nem csak \"porszívózunk\": atkamentesítünk, foltot tisztítunk és fertőtlenítünk egy lépésben.",
+  "new": "Atka- és allergénkezelést és folttisztítást végzünk a frissebb, tisztább matracért.",
+  "why": "F2 (Codex): Removes eradication and disinfection claims."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "allergiamentes matrachigiéniát biztos­t.",
+  "new": "frissebb, tisztább matracot kínálunk.",
+  "why": "F2 (Codex): Removes allergy-free promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Orvosi dokumentáció igény esetén",
+  "new": "Kezelési tanúsítvány igény esetén",
+  "why": "F2 (Codex): Keeps real certificate without medical status."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Steril higiéniai eljárás",
+  "new": "Higiénikus mélytisztítás",
+  "why": "F2 (Codex): Removes sterility claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Ekcéma, bőrviszketés, kiütések. A piszkos matrac baktériumokat és gombákat is tartalmazhat, amelyek bőrproblémákat okoznak.",
+  "new": "A matracban por, bőrhám és atkaallergén gyűlhet fel. A rendszeres tisztítás csökkenti ezek mennyiségét.",
+  "why": "F2 (Codex): Replaces microbial health framing."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Emellett a matracban por, baktériumok és egyéb szennyeződések is",
+  "new": "Emellett a matracban por, bőrhám és egyéb szennyeződések is",
+  "why": "F2 (Codex): Removes implied bacterial removal."
+ },
+ {
+  "glob": "studio/configurator.js",
+  "old": "Folteltávolítás és fertőtlenítő nedves matractisztítás",
+  "new": "Folteltávolítás és higiénikus nedves matractisztítás",
+  "why": "F2 (Codex): Non-disinfection service label."
+ },
+ {
+  "glob": "studio/configurator.js",
+  "old": "Folteltávolítást és fertőtlenítő nedves tisztítást is kérsz?",
+  "new": "Folteltávolítást és higiénikus nedves tisztítást is kérsz?",
+  "why": "F2 (Codex): Non-disinfection service wording."
+ },
+ {
+  "glob": "ui/booking-live.js",
+  "old": "Száraz atkamentesítés - ajánlott allergiásoknak",
+  "new": "Atka- és allergénkezelés - száraz tisztítással",
+  "why": "F2 (Codex): Uses the public service name."
+ },
+ {
+  "glob": "ui/booking-live.js",
+  "old": "Nedves folteltávolítás, fertőtlenítő mosás",
+  "new": "Nedves folteltávolítás, higiénikus mosás",
+  "why": "F2 (Codex): Retains service without disinfection."
+ },
+ {
+  "glob": "ui/navigation.js",
+  "old": "Mélytisztítás, atkairtás, fertőtlenítés",
+  "new": "Mélytisztítás, atka- és allergénkezelés",
+  "why": "F2 (Codex): Uses non-disinfection service names."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "Wet stain removal and sanitising wash",
+  "new": "Wet stain removal and hygienic wash",
+  "why": "F2 (Codex): Retains service without sanitising."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Mattress cleaning + dust mite treatment + sanitising",
+  "new": "Mattress cleaning + dust-mite and allergen treatment",
+  "why": "F2 (Codex): Uses the public service name."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "millions of dust mites, bacteria, sweat and stains",
+  "new": "dust, skin flakes, sweat and stains",
+  "why": "F2 (Codex): Removes bacterial framing."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "removes 99,9% of dirt, dust mites and allergens, even from the deepest layers of upholstery.",
+  "new": "reduces built-up dust, skin flakes and dust-mite allergen in upholstery.",
+  "why": "F2 (Codex): Allowed reduction claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "After cleaning, the furniture is free from dust mites and bacteria, and completely safe even for the youngest children.",
+  "new": "After cleaning, the upholstery is fresher and cleaner.",
+  "why": "F2 (Codex): Removes absolute health promises."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Deep cleaning and sanitising for",
+  "new": "Hygienic deep cleaning for",
+  "why": "F2 (Codex): Non-sanitising offer description."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "99.9%</span> <span class=\"label\">of dust mites removed",
+  "new": "HEPA</span> <span class=\"label\">filtered vacuuming",
+  "why": "F2 (Codex): Replaces percentage tile with process label."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Our specialist industrial machines and <strong>UV-C sanitising</strong> remove 99,9% of dust mites, including their eggs and droppings.",
+  "new": "HEPA-filtered vacuuming reduces built-up dust, skin flakes and dust-mite allergen, followed by a <strong>UV-C surface pass</strong>.",
+  "why": "F2 (Codex): Describes treatment without kill claims."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "UV-C sanitising (kills bacteria and viruses)",
+  "new": "UV-C surface pass",
+  "why": "F2 (Codex): Removes sanitising and kill claims."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "UV sanitising",
+  "new": "UV-C surface pass",
+  "why": "F2 (Codex): Non-sanitising process name."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "mattress sanitising",
+  "new": "hygienic mattress cleaning",
+  "why": "F2 (Codex): Removes sanitising keyword."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Eczema, itchy skin and rashes. A dirty mattress can also harbour bacteria and fungi that cause skin problems.",
+  "new": "Dust, skin flakes and dust-mite allergen can build up in mattresses. Regular cleaning reduces these deposits.",
+  "why": "F2 (Codex): Replaces microbial health framing."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Dust, bacteria and other contaminants can also build up in the mattress.",
+  "new": "Dust, skin flakes and other contaminants can also build up in the mattress.",
+  "why": "F2 (Codex): Removes implied bacterial removal."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "it provides allergen-free mattress hygiene for sanatoriums and spa hotels.",
+  "new": "we offer fresher, cleaner mattresses for sanatoriums and spa hotels.",
+  "why": "F2 (Codex): Removes allergen-free promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Medical documentation on request",
+  "new": "Treatment certificate on request",
+  "why": "F2 (Codex): Keeps real certificate without medical status."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Sterile hygiene procedure",
+  "new": "Hygienic deep cleaning",
+  "why": "F2 (Codex): Removes sterility claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Sleep healthily again!",
+  "new": "Rest on a fresher, cleaner mattress!",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Sleep healthy again!",
+  "new": "Rest on a fresher, cleaner mattress!",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Allergen removal, sanitising, 100% chemical-free.",
+  "new": "Dust-mite and allergen treatment for a fresher, cleaner mattress.",
+  "why": "F2 (Codex): Removes absolute treatment claims."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "dust mite treatment and sanitising",
+  "new": "dust-mite and allergen treatment",
+  "why": "F2 (Codex): Uses the public service name."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "dust mite treatment, sanitising",
+  "new": "dust-mite and allergen treatment",
+  "why": "F2 (Codex): Uses the public service name."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "ECO Clean's deep cleaning removes 99,9% of pathogens.",
+  "new": "ECO Clean's deep cleaning reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes pathogen and percentage claims."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "the dust mite removal and sanitising carried out",
+  "new": "the dust-mite and allergen treatment carried out",
+  "why": "F2 (Codex): Keeps certificate with correct treatment name."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Professional deep cleaning that removes 99.9% of allergens and mites.",
+  "new": "Professional deep cleaning that reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Allowed reduction claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Professional deep cleaning that removes 99,9% of allergens and mites.",
+  "new": "Professional deep cleaning that reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Allowed reduction claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Chemical-free sanitising",
+  "new": "Dust-mite and allergen treatment",
+  "why": "F2 (Codex): Uses the public service name."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "with chemicals and sanitising agents",
+  "new": "with cleaning products",
+  "why": "F2 (Codex): Removes sanitising claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Our 100% chemical-free bio-enzyme + UV-C technology is tough on pathogens yet completely safe for babies and young children.",
+  "new": "Our dust-mite and allergen treatment combines HEPA-filtered vacuuming with a UV-C surface pass to reduce built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes pathogen and absolute safety claims."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "You are used to sterility and cleanliness in the city. We bring that feeling home to you. But while clinics use disinfectants, we achieve the same effect with the <strong>power of nature (bio-enzymes, water, vibration)</strong>: 99.9% dust mite removal. As safe as in an Austrian eco-hotel.",
+  "new": "We bring a fresh, clean feel to your home. HEPA-filtered vacuuming reduces built-up dust, skin flakes and dust-mite allergen, followed by a <strong>UV-C surface pass</strong>. The result is a fresher, cleaner mattress.",
+  "why": "F2 (Codex): Removes clinical equivalence and percentage promises."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "with us, \"mite-free\" really means 99.9% cleanliness.",
+  "new": "our treatment reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes mite-free and percentage claims."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "This technology is ruthless with pathogens but gentle on nature and your health.",
+  "new": "The treatment aims to provide a fresher, cleaner mattress and sleeping environment.",
+  "why": "F2 (Codex): Removes pathogen and health promises."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "we do dust mite removal, stain cleaning and sanitising in one step.",
+  "new": "we provide dust-mite and allergen treatment and stain cleaning.",
+  "why": "F2 (Codex): Retains services without sanitising."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "deep cleaning + sanitising",
+  "new": "hygienic deep cleaning",
+  "why": "F2 (Codex): Retains service without sanitising."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "we remove 99.9% of dirt, including dust mites, their eggs and droppings.",
+  "new": "we reduce built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Allowed reduction claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Allergens &amp; pathogens",
+  "new": "Dust &amp; dust-mite allergen",
+  "why": "F2 (Codex): Removes pathogen framing."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Bacteria and fungi",
+  "new": "Built-up dust and skin flakes",
+  "why": "F2 (Codex): Removes microbial removal claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Our technology extracts years of accumulated dust, mites and bacteria from even the deepest layers of fabric.",
+  "new": "Our technology reduces built-up dust, skin flakes and dust-mite allergen in the fabric.",
+  "why": "F2 (Codex): Removes bacterial removal claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Our technology extracts dust, mites and bacteria accumulated over the years, even from the deepest layers of the fabric.",
+  "new": "Our technology reduces built-up dust, skin flakes and dust-mite allergen in the fabric.",
+  "why": "F2 (Codex): Removes bacterial removal claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Our technology extracts years of accumulated dust, dust mites and bacteria from the deepest layers of fabric.",
+  "new": "Our technology reduces built-up dust, skin flakes and dust-mite allergen in the fabric.",
+  "why": "F2 (Codex): Removes bacterial removal claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Our technology extracts dust, mites and bacteria accumulated over years, even from the deepest layers of the fabric.",
+  "new": "Our technology reduces built-up dust, skin flakes and dust-mite allergen in the fabric.",
+  "why": "F2 (Codex): Removes bacterial removal claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Our specialist machines remove 99,9% of dirt from your sofa's foam padding.",
+  "new": "Our specialist machines reduce built-up dust, skin flakes and dust-mite allergen in your sofa.",
+  "why": "F2 (Codex): Removes percentage effect."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Our specialist machines remove 99,9% of dirt from your sofa’s foam padding.",
+  "new": "Our specialist machines reduce built-up dust, skin flakes and dust-mite allergen in your sofa.",
+  "why": "F2 (Codex): Removes percentage effect."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Our specialist machines remove 99,9% of dirt from the foam inside your sofa.",
+  "new": "Our specialist machines reduce built-up dust, skin flakes and dust-mite allergen in your sofa.",
+  "why": "F2 (Codex): Removes percentage effect."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "With our specialist machines, we remove 99.9% of contaminants from your sofa cushions.",
+  "new": "With our specialist machines, we reduce built-up dust, skin flakes and dust-mite allergen in your sofa cushions.",
+  "why": "F2 (Codex): Removes percentage effect."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Our upholstery cleaning removes 99,9% of mites and their droppings.",
+  "new": "Our upholstery cleaning reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Allowed reduction claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "our upholstery cleaning removes 99,9% of them.",
+  "new": "our upholstery cleaning reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Allowed reduction claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "our chemical-free deep cleaning provides a safe yet effective solution against dust mites and bacteria.",
+  "new": "our deep cleaning reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes bacterial and safety promises."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Regular professional upholstery cleaning removes not only dust mites, but also food residues and bacteria — this is the foundation of hospitality<wbr>.",
+  "new": "Regular professional upholstery cleaning reduces built-up dust, skin flakes and dust-mite allergen — clean upholstery matters in hospitality<wbr>.",
+  "why": "F2 (Codex): Removes bacterial removal claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "an allergen-free environment",
+  "new": "a fresher, cleaner environment",
+  "why": "F2 (Codex): Removes allergen-free promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Child-friendly holidays on a dust-mite-free sofa",
+  "new": "Child-friendly holidays on a freshly cleaned sofa",
+  "why": "F2 (Codex): Removes mite-free promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Family-friendly holidays with dust-mite-free furniture",
+  "new": "Family-friendly holidays with freshly cleaned furniture",
+  "why": "F2 (Codex): Removes mite-free promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "With regular upholstery cleaning, you can create a safe, allergen-free resting place for them.",
+  "new": "With regular upholstery cleaning, you can create a fresher, cleaner resting place for them.",
+  "why": "F2 (Codex): Removes absolute health promises."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Allergen-free furniture is essential for recovery after a shift — regular upholstery cleaning ensures your home offers genuine refreshment.",
+  "new": "Fresh, clean furniture offers a pleasant place to rest after a shift — regular upholstery cleaning helps keep it that way.",
+  "why": "F2 (Codex): Removes allergen-free recovery claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "With our upholstery cleaning and dust mite treatment certificate, you can ensure allergen-free rest for your guest<wbr>s.",
+  "new": "Our upholstery cleaning provides fresher, cleaner furniture for your guest<wbr>s, with a treatment certificate on request.",
+  "why": "F2 (Codex): Keeps certificate without health guarantee."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Our chemical-free upholstery cleaning ensures children can play and rest on mite-free, safe furniture during the holiday.",
+  "new": "Our upholstery cleaning provides fresher, cleaner furniture for children to play and rest on during the holiday.",
+  "why": "F2 (Codex): Removes absolute safety promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "our service ensures they do so on a safe, mite-free surface.",
+  "new": "our service provides a fresher, cleaner surface for them.",
+  "why": "F2 (Codex): Removes absolute safety promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Dust mite removal, sanitising",
+  "new": "Dust-mite and allergen treatment",
+  "why": "F2 (Codex): Uses the public service name."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Hygienic, allergen-free mattress",
+  "new": "Hygienic, freshly cleaned mattress",
+  "why": "F2 (Codex): Removes allergen-free promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "furniture cleaning for allergen-free results",
+  "new": "furniture cleaning for fresher, cleaner upholstery",
+  "why": "F2 (Codex): Removes allergen-free result claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "deep cleaning for allergen-free furniture",
+  "new": "deep cleaning for fresher, cleaner furniture",
+  "why": "F2 (Codex): Removes allergen-free promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "fresh, mite-free furniture",
+  "new": "fresh, clean furniture",
+  "why": "F2 (Codex): Removes mite-free promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "our dust mite treatment certificate helps you stand out from the competition and provides a genuine guarantee of a dust mite-free environment.",
+  "new": "our dust-mite and allergen treatment certificate documents the treatment carried out.",
+  "why": "F2 (Codex): Keeps certificate without guarantee."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "guarantee a clean, allergen-free environment for every guest to relax in.",
+  "new": "provide a fresher, cleaner environment for every guest to relax in.",
+  "why": "F2 (Codex): Removes allergen-free guarantee."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "mite-free furniture means a competitive edge.",
+  "new": "freshly cleaned furniture means a competitive edge.",
+  "why": "F2 (Codex): Removes mite-free promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Our dust mite treatment certificate provides an internationally recognised guarantee of allergen-free accommodation.",
+  "new": "Our dust-mite and allergen treatment certificate documents the treatment carried out at your accommodation.",
+  "why": "F2 (Codex): Keeps certificate without unsupported status."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "where mite-free furniture in sanatoriums and wellness hotels is a basic requirement. Our upholstery cleaning meets even the strictest health standards.",
+  "new": "where clean furniture in sanatoriums and wellness hotels matters. Our upholstery cleaning reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes unsupported health standards."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "ensures a mite-free, hygienic guest<wbr> area.",
+  "new": "provides fresher, cleaner upholstery in the guest<wbr> area.",
+  "why": "F2 (Codex): Removes mite-free guarantee."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Our upholstery cleaning and dust mite treatment certificate guarantees allergen-free guest<wbr> areas.",
+  "new": "Our upholstery cleaning provides fresher, cleaner furniture in guest<wbr> areas, with a treatment certificate on request.",
+  "why": "F2 (Codex): Keeps certificate without health guarantee."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "preserves the beauty of the furniture and keeps it mite-free.",
+  "new": "preserves the furniture's appearance and reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Allowed reduction claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "A magas páratartalom kedvez a poratkák szaporodásának, a penészgombák megtelepedésének és a baktériumok terjedésének. Az ECO Clean ipari extrakciós technológiája nemcsak a felszíni szennyeződéseket távolítja el, hanem a szövetek mélyén megbújó allergéneket, atkákat és penészspórákat is.",
+  "new": "A magas páratartalom kedvez a poratkák szaporodásának. Az ECO Clean ipari extrakciós technológiája csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes microbial removal framing."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "In an allergen-free, hygienic bed, your body recovers from the day's training faster. Don't let night-time nasal congestion or sneezing ruin your performance!",
+  "new": "A freshly cleaned mattress provides a fresher, cleaner sleeping environment after the day's training.",
+  "why": "F2 (Codex): Removes recovery and symptom promises."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "de a baktériumokat a matrac mélyébe mossák.",
+  "new": "de a matrac mélyén felgyűlt port nem feltétlenül távolítják el.",
+  "why": "F2 (Codex): Removes bacterial framing."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "foltmentesít, miközben 100%-ban biztonságos a babák bőrének.",
+  "new": "foltkezelést végez a frissebb, tisztább matracért.",
+  "why": "F2 (Codex): Removes absolute infant-safety claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "while washing bacteria deep into the mattress.",
+  "new": "without necessarily removing dust built up deep in the mattress.",
+  "why": "F2 (Codex): Removes bacterial framing."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "to remove odours and stains while remaining 100% safe for babies’ skin.",
+  "new": "to treat odours and stains for a fresher, cleaner mattress.",
+  "why": "F2 (Codex): Removes absolute infant-safety claim."
+ },
+ {
+  "glob": "matractisztitas-paks.html",
+  "old": "Végre atkamentes a hálószoba! A gyerekek is nyugodtabban alszanak.",
+  "new": "",
+  "why": "F2 (Codex): Removes health testimonial without inventing a quote."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "<td>Poratka eltávolítás</td>\n                        <td class=\"check-yes\">99.9%</td>\n                        <td class=\"check-no\">~30%</td>\n                        <td class=\"check-no\">~10%</td>",
+  "new": "<td>Atkaallergén csökkentése</td>\n                        <td class=\"check-yes\">✓ Kezeléssel</td>\n                        <td class=\"check-no\">Módszerfüggő</td>\n                        <td class=\"check-no\">Módszerfüggő</td>",
+  "why": "F2 (Codex): Removes unsupported percentage comparison."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "<td>Dust mite removal</td>\n                        <td class=\"check-yes\">99.9%</td>\n                        <td class=\"check-no\">~30%</td>\n                        <td class=\"check-no\">~10%</td>",
+  "new": "<td>Dust-mite allergen reduction</td>\n                        <td class=\"check-yes\">✓ Treatment</td>\n                        <td class=\"check-no\">Method-dependent</td>\n                        <td class=\"check-no\">Method-dependent</td>",
+  "why": "F2 (Codex): Removes unsupported percentage comparison."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Egészséges alvás",
+  "new": "Tisztább alvókörnyezet",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Egészségmegőrzés és allergének csökkentése",
+  "new": "Por és atkaallergén csökkentése",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Az éves atkairtás jelentősen csökkenti\n                                az allergénterhelést, így hozzájárul a jobb közérzethez és az egészségesebb alváshoz.",
+  "new": "Az atka- és allergénkezelés csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét a frissebb, tisztább alvókörnyezetért.",
+  "why": "F2 (Codex): Removes wellbeing and sleep outcomes."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Healthy sleep",
+  "new": "Cleaner sleeping environment",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Protecting health and reducing allergens",
+  "new": "Reducing dust and dust-mite allergen",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Annual dust mite treatment significantly reduces the allergen load, helping you feel better and sleep more healthily.",
+  "new": "Dust-mite and allergen treatment reduces built-up dust, skin flakes and dust-mite allergen for a fresher, cleaner sleeping environment.",
+  "why": "F2 (Codex): Removes wellbeing and sleep outcomes."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Befektetés a pihentető alvásba és az egészségbe.",
+  "new": "Gondoskodás a frissebb, tisztább alvókörnyezetről.",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "An investment in restful sleep and good health.",
+  "new": "Care for a fresher, cleaner sleeping environment.",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Készen állsz az egészséges alvásra?",
+  "new": "Készen állsz a frissebb, tisztább matracra?",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Ready for healthy sleep?",
+  "new": "Ready for a fresher, cleaner mattress?",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "A clean mattress means better sleep, and better sleep means better performance at the plant.",
+  "new": "A clean mattress provides a fresher, cleaner place to rest after your shift.",
+  "why": "F2 (Codex): Removes sleep and performance outcomes."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Allergiás tünetek enyhítése otthon",
+  "new": "Atkaallergén csökkentése otthon",
+  "why": "F2 (Codex): Removes symptom-relief claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Allergiás tünetek csökkentése otthon",
+  "new": "Atkaallergén csökkentése otthon",
+  "why": "F2 (Codex): Removes symptom-relief claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Allergiás tünetek okainak felszámolása",
+  "new": "Felgyűlt atkaallergén csökkentése",
+  "why": "F2 (Codex): Removes treatment outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Relieving allergy symptoms at home",
+  "new": "Reducing dust-mite allergen at home",
+  "why": "F2 (Codex): Removes symptom-relief claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Reducing allergy symptoms at home",
+  "new": "Reducing dust-mite allergen at home",
+  "why": "F2 (Codex): Removes symptom-relief claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Reducing allergy symptoms naturally",
+  "new": "Reducing built-up dust-mite allergen",
+  "why": "F2 (Codex): Removes symptom-relief claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Eliminating the causes of allergy symptoms",
+  "new": "Reducing built-up dust-mite allergen",
+  "why": "F2 (Codex): Removes treatment outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Professzionális kárpittisztításunkkal és atkaírtásunkkal védjük családod egészségét",
+  "new": "Professzionális kárpittisztításunkkal és atka- és allergénkezelésünkkel csökkentjük a felgyűlt por, bőrhám és atkaallergén mennyiségét",
+  "why": "F2 (Codex): Replaces health protection with reduction."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Our professional upholstery cleaning and dust mite treatment protect your family's health.",
+  "new": "Our professional upholstery cleaning and dust-mite and allergen treatment reduce built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Replaces health protection with reduction."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "With our professional upholstery cleaning and dust mite treatment, we protect your family's health — using 100% chemical-free technology.",
+  "new": "Our professional upholstery cleaning and dust-mite and allergen treatment reduce built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Replaces health protection with reduction."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "az egészséges otthon alapja",
+  "new": "a tisztább otthon alapja",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "the foundation of a healthy home",
+  "new": "part of a fresher, cleaner home",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "egészségesebb környezetben élhet",
+  "new": "frissebb, tisztább környezetben élhet",
+  "why": "F2 (Codex): Uses allowed environmental wording."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "a healthier environment to live in",
+  "new": "a fresher, cleaner environment to live in",
+  "why": "F2 (Codex): Uses allowed environmental wording."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "megelőzheti a tünetek súlyosbodását és egész évben egészségesebb otthont biztosíthat.",
+  "new": "csökkentheted a felgyűlt por, bőrhám és atkaallergén mennyiségét otthonod kárpitjaiban.",
+  "why": "F2 (Codex): Removes symptom prevention; informal address."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "can prevent symptoms from worsening and keep your home healthier all year round.",
+  "new": "can reduce built-up dust, skin flakes and dust-mite allergen in your upholstery.",
+  "why": "F2 (Codex): Removes symptom prevention."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "közegészségügyi szükséglet",
+  "new": "a tisztán tartás része",
+  "why": "F2 (Codex): Removes public-health necessity claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "public health necessity",
+  "new": "part of keeping furniture clean",
+  "why": "F2 (Codex): Removes public-health necessity claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "alapot ad az egészséges nyaraláshoz.",
+  "new": "frissebb, tisztább kárpitot ad a nyaraláshoz.",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "lays the foundation for a healthy holiday.",
+  "new": "provides fresher, cleaner upholstery for your holiday.",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Az allergiás tünetek megelőzése érdekében vegyszermentes kárpittisztításunk biztosítja, hogy a kárpit valóban tiszta legyen — a mélyrétegekig.",
+  "new": "Kárpittisztításunk csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét a kárpitban.",
+  "why": "F2 (Codex): Removes allergy prevention."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "To help prevent allergy symptoms, our chemical-free upholstery cleaning ensures the upholstery is truly clean — right down to its deepest layers.",
+  "new": "Our upholstery cleaning reduces built-up dust, skin flakes and dust-mite allergen in the fabric.",
+  "why": "F2 (Codex): Removes allergy prevention."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "a single thorough upholstery cleaning can dramatically improve how you feel.",
+  "new": "thorough upholstery cleaning reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes wellbeing outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "A rendszeres vegyszermentes kárpittisztítás csökkenti a tüsszögést, orrdugulást és asztmás tüneteket — különösen a gyermekeknél.",
+  "new": "A rendszeres kárpittisztítás csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes symptom-relief claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Regular chemical-free upholstery cleaning reduces sneezing, nasal congestion and asthma symptoms — especially in children.",
+  "new": "Regular upholstery cleaning reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes symptom-relief claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "rendszeres kárpittisztítással egészségesebb munkakörnyezetet biztosíthatsz.",
+  "new": "rendszeres kárpittisztítással frissebb, tisztább kárpitot biztosíthatsz.",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "regular upholstery cleaning gives you a healthier working environment.",
+  "new": "regular upholstery cleaning gives you fresher, cleaner upholstery.",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Évszakváltáskor végzett kárpittisztítással megelőzheted a tünetek súlyosbodását.",
+  "new": "Évszakváltáskor végzett kárpittisztítással csökkentheted a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes symptom prevention."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Upholstery cleaning at the change of seasons prevents your symptoms from getting worse.",
+  "new": "Upholstery cleaning at the change of seasons reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes symptom prevention."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Évente kétszeri kárpittisztítás — tavasszal és ősszel — ideális megelőzés az allergiás tünetek ellen.",
+  "new": "A tavasszal és ősszel végzett kárpittisztítás csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes allergy prevention."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Upholstery cleaning twice a year — in spring and autumn — is ideal for preventing allergy symptoms.",
+  "new": "Upholstery cleaning in spring and autumn reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes allergy prevention."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Rendszeres vegyszermentes kárpittisztítással megelőzheted a krónikus allergiás tünetek kialakulását otthonodban.",
+  "new": "Rendszeres kárpittisztítással csökkentheted a felgyűlt por, bőrhám és atkaallergén mennyiségét otthonod kárpitjaiban.",
+  "why": "F2 (Codex): Removes allergy prevention."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "With regular chemical-free upholstery cleaning, you can prevent chronic allergy symptoms developing in your home.",
+  "new": "With regular upholstery cleaning, you can reduce built-up dust, skin flakes and dust-mite allergen in your furniture.",
+  "why": "F2 (Codex): Removes allergy prevention."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Vegyszermentes kárpittisztításunk célzottan kezeli ezt a problémát.",
+  "new": "Kárpittisztításunk csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes implied symptom treatment."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Our chemical-free upholstery cleaning specifically tackles this problem.",
+  "new": "Our upholstery cleaning reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes implied symptom treatment."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "védi a gyermekek egészségét, és segít megelőzni a fertőzések terjedését.",
+  "new": "csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes infection prevention claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "protect children's health and help prevent the spread of infections.",
+  "new": "reduce built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes infection prevention claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Vegyszermentes kárpittisztításunk egész éves védelmet biztosít a családok számára.",
+  "new": "Kárpittisztításunk frissebb, tisztább kárpitot ad a családoknak.",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Our chemical-free upholstery cleaning provides year-round protection for families.",
+  "new": "Our upholstery cleaning provides fresher, cleaner upholstery for families.",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "vegyszermentes kárpittisztításunk segít a tünetek megelőzésében.",
+  "new": "kárpittisztításunk csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes symptom prevention."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "our chemical-free upholstery cleaning helps prevent symptoms.",
+  "new": "our upholstery cleaning reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes symptom prevention."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "az egészségesebb beltéri levegőért.",
+  "new": "a frissebb, tisztább kárpitért.",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "for healthier indoor air.",
+  "new": "for fresher, cleaner upholstery.",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "egészséges környezetben éljen.",
+  "new": "frissebb, tisztább környezetben éljen.",
+  "why": "F2 (Codex): Uses allowed environmental wording."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "live in a healthy environment.",
+  "new": "live with fresher, cleaner upholstery.",
+  "why": "F2 (Codex): Uses allowed environmental wording."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "egészséges környezetben kezdje a nyarat.",
+  "new": "frissebb, tisztább kárpitokkal kezdje a nyarat.",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "starts the summer in a healthy environment.",
+  "new": "starts the summer with fresher, cleaner upholstery.",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "egészséges környezetben töltse a nyarat.",
+  "new": "frissebb, tisztább kárpitok között töltse a nyarat.",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "spends the summer in a healthy environment.",
+  "new": "spends the summer with fresher, cleaner upholstery.",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Fűtési szezon előtti kárpittisztítás: a legjobb befektetés a családod egészségébe.",
+  "new": "Fűtési szezon előtti kárpittisztítás: gondoskodás a frissebb, tisztább kárpitról.",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Upholstery cleaning before the heating season is the best investment in your family's health.",
+  "new": "Upholstery cleaning before the heating season provides fresher, cleaner upholstery.",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Rendszeres vegyszermentes kárpittisztítással megvédheted családod egészségét.",
+  "new": "Rendszeres kárpittisztítással csökkentheted a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "With regular chemical-free upholstery cleaning, you can protect your family's health.",
+  "new": "With regular upholstery cleaning, you can reduce built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "biztonságosan védheted családod egészségét — különösen a kisgyermekek és allergiások számára.",
+  "new": "csökkentheted a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "you can safely protect your family's health — especially for young children and allergy sufferers.",
+  "new": "you can reduce built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "egy egészségesebb alvásért.",
+  "new": "egy frissebb, tisztább matracért.",
+  "why": "F2 (Codex): Removes sleep outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "for healthier sleep.",
+  "new": "for a fresher, cleaner mattress.",
+  "why": "F2 (Codex): Removes sleep outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Egy tiszta matrac az első védvonal az egészségedért.",
+  "new": "Egy tiszta matrac frissebb, tisztább alvókörnyezetet ad.",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "A clean mattress is the first line of defence for your health.",
+  "new": "A clean mattress provides a fresher, cleaner sleeping environment.",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "allergénmentesítés, gyors száradás",
+  "new": "allergénterhelés csökkentése, gyors száradás",
+  "why": "F2 (Codex): Removes allergen-free claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "\"Allergénmentesítés\"",
+  "new": "\"Allergénterhelés csökkentése\"",
+  "why": "F2 (Codex): Uses reduction wording."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "allergénmentesítés tanúsítvánnyal",
+  "new": "atka- és allergénkezelés tanúsítvánnyal",
+  "why": "F2 (Codex): Keeps certificate without allergen-free promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "biztosítja az allergénmentes környezetet — és a kiváló online értékeléseket.",
+  "new": "frissebb, tisztább kárpitot ad a vendégeknek.",
+  "why": "F2 (Codex): Removes unsupported guarantees."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "allergénmentes bútor mélytisztítás",
+  "new": "bútormélytisztítás az atkaallergén csökkentésére",
+  "why": "F2 (Codex): Removes allergen-free alt-text claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "allergénmentes bútor tisztítás",
+  "new": "bútortisztítás az atkaallergén csökkentésére",
+  "why": "F2 (Codex): Removes allergen-free alt-text claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Higiénikus, allergénmentes matrac",
+  "new": "Higiénikus, frissebb matrac",
+  "why": "F2 (Codex): Removes allergen-free promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Vendégeid allergénmentes környezetben pihenhetnek",
+  "new": "Vendégeid frissebb, tisztább környezetben pihenhetnek",
+  "why": "F2 (Codex): Removes allergen-free promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "biztosíthatod az allergénmentes környezetet.",
+  "new": "frissebb, tisztább kárpitot biztosíthatsz.",
+  "why": "F2 (Codex): Removes allergen-free guarantee."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "A kárpittisztítás és atkaírtás tanúsítványunkkal biztosíthatod vendég<wbr>eid számára az allergénmentes pihenést.",
+  "new": "Kárpittisztításunk frissebb, tisztább kárpitot ad vendég<wbr>eidnek, a kezelést kérésre tanúsítvány dokumentálja.",
+  "why": "F2 (Codex): Keeps certificate without health guarantee."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Kárpittisztítás és atkaírtás tanúsítványunk garantálja az allergénmentes vendég<wbr>teret.",
+  "new": "Kárpittisztításunk frissebb, tisztább kárpitot ad a vendég<wbr>térben, a kezelést kérésre tanúsítvány dokumentálja.",
+  "why": "F2 (Codex): Keeps certificate without health guarantee."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Az atkaírtás tanúsítványunk nemzetközileg is elfogadott garanciát nyújt a szálláshelyek allergénmentességéről.",
+  "new": "Az atka- és allergénkezelési tanúsítványunk dokumentálja a szálláshelyen elvégzett kezelést.",
+  "why": "F2 (Codex): Keeps certificate without unsupported status."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Vendégváltás közötti kárpittisztítás és atkaírtás garantálja, hogy minden vendég tiszta, allergénmentes környezetben pihenjen.",
+  "new": "Vendégváltás közötti kárpittisztítással és atka- és allergénkezeléssel frissebb, tisztább kárpit várja a vendégeket.",
+  "why": "F2 (Codex): Removes allergen-free guarantee."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Rendszeres kárpittisztítással teremthetsz számukra biztonságos, allergénmentes pihenőhelyet.",
+  "new": "Rendszeres kárpittisztítással frissebb, tisztább pihenőhelyet teremthetsz számukra.",
+  "why": "F2 (Codex): Removes absolute health promises."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "A műszak utáni regenerálódáshoz elengedhetetlen az allergénmentes bútor — rendszeres kárpittisztítással biztosíthatod, hogy otthonod valódi felfrissülést nyújtson.",
+  "new": "A tiszta bútor kellemes helyet ad a műszak utáni pihenéshez — rendszeres kárpittisztítással frissebb, tisztább kárpitot biztosíthatsz.",
+  "why": "F2 (Codex): Removes allergen-free recovery claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "egyetlen alapos kárpittisztítás drámai javulást hozhat a közérzetedben.",
+  "new": "egy alapos kárpittisztítás csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes wellbeing outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "kárpittisztításunk a szövet mélyéből távolítja el ezeket a mikroszkopikus szennyeződéseket, érezhető tünetjavulást hozva.",
+  "new": "kárpittisztításunk csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes symptom-relief claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "our upholstery cleaning removes these microscopic contaminants from deep within the fabric, noticeably improving symptoms.",
+  "new": "our upholstery cleaning reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes symptom-relief claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Az\n                        atkaírtás után látható javulás állt be a tüneteiben. ",
+  "new": "",
+  "why": "F2 (Codex): Removes health testimonial without inventing a quote."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "After the dust mite treatment, there was a noticeable improvement in their symptoms. ",
+  "new": "",
+  "why": "F2 (Codex): Removes health testimonial without inventing a quote."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Az allergiás tüneteim csökkentek a tisztítás óta!",
+  "new": "",
+  "why": "F2 (Codex): Removes health testimonial without inventing a quote."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Az allergiás tüneteim csökkentek a matractisztítás óta!",
+  "new": "",
+  "why": "F2 (Codex): Removes health testimonial without inventing a quote."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "My allergy symptoms have eased since the cleaning!",
+  "new": "",
+  "why": "F2 (Codex): Removes health testimonial without inventing a quote."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "My allergy symptoms have eased since having my mattress cleaned!",
+  "new": "",
+  "why": "F2 (Codex): Removes health testimonial without inventing a quote."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "tiszta bútor, egészséges levegő",
+  "new": "tiszta bútor, frissebb kárpit",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "clean furniture, healthy air",
+  "new": "clean furniture, fresher upholstery",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "a Balaton-parti egészségvédelem",
+  "new": "tisztább kárpitok a Balaton partján",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "a Duna-parti egészségvédelem",
+  "new": "tisztább kárpitok a Duna partján",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "protecting your health by Lake Balaton",
+  "new": "cleaner upholstery by Lake Balaton",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "protecting health by the Duna",
+  "new": "cleaner upholstery by the Duna",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Helyi családok egészségvédelme egész évben",
+  "new": "Tisztább kárpitok a helyi családoknak egész évben",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Állandó lakosok otthoni egészségvédelme",
+  "new": "Tisztább kárpitok az állandó lakosok otthonában",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Veszprémi családok egészségvédelme",
+  "new": "Tisztább kárpitok a veszprémi családoknak",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Állandó lakosok és nyugdíjasok egészségvédelme",
+  "new": "Tisztább kárpitok állandó lakosoknak és nyugdíjasoknak",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Gyermekes családok egészségvédelme",
+  "new": "Tisztább kárpitok gyermekes családoknak",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Állandó lakosok egészségmegőrzése",
+  "new": "Tisztább kárpitok állandó lakosoknak",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Gyermekegészség és vegyszermentes megoldás",
+  "new": "Tisztább kárpitok gyermekes családoknak",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Protecting local families' health all year round",
+  "new": "Cleaner upholstery for local families all year round",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Protecting permanent residents' health at home",
+  "new": "Cleaner upholstery in permanent residents' homes",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Protecting the health of families in Veszprém",
+  "new": "Cleaner upholstery for families in Veszprém",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Protecting the health of permanent residents and pensioners",
+  "new": "Cleaner upholstery for permanent residents and pensioners",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Protecting the health of families with children",
+  "new": "Cleaner upholstery for families with children",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "en/upholstery-cleaning-balatonkenese.html",
+  "old": "Protecting the health of permanent residents",
+  "new": "Cleaner upholstery for permanent residents",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Children's health and a chemical-free solution",
+  "new": "Cleaner upholstery for families with children",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Protecting older family members' respiratory health",
+  "new": "Cleaner upholstery for older family members",
+  "why": "F2 (Codex): Removes respiratory-health promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Befektetés az egészségbe",
+  "new": "Gondoskodás a tisztább matracról",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "An investment in health",
+  "new": "Care for a cleaner mattress",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "tisztán és egészségesen otthonodat",
+  "new": "tisztán és frissen otthonodat",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "clean and healthy!",
+  "new": "clean and fresh!",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "az egészségesebb mindennapokban!",
+  "new": "a kárpitok tisztán tartásában!",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "helps you enjoy healthier everyday life!",
+  "new": "helps keep your upholstery fresh and clean!",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "a kárpittisztítás nemcsak az esztétikáról, hanem az egészségről is szól.",
+  "new": "a kárpittisztítás az ápolt megjelenést és a frissebb környezetet szolgálja.",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "megóvjuk bútoraid szépségét és egészségedet egyaránt.",
+  "new": "ápoljuk bútoraidat és csökkentjük a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "upholstery cleaning is about health as well as looks.",
+  "new": "upholstery cleaning helps keep interiors fresh, clean and well presented.",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "we protect both the beauty of your furniture and your health.",
+  "new": "we care for your furniture and reduce built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "a bútorok mélytisztítása nélkülözhetetlen az egészséges beltérhez.",
+  "new": "a bútorok mélytisztítása frissebb, tisztább kárpitot ad.",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "deep cleaning furniture is essential for a healthy indoor environment.",
+  "new": "deep cleaning furniture provides fresher, cleaner upholstery.",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "vegyszermentes kárpittisztításunk segít a gyógyulási környezet megteremtésében.",
+  "new": "kárpittisztításunk frissebb, tisztább kárpitot ad.",
+  "why": "F2 (Codex): Removes implied recovery benefit."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "our chemical-free upholstery cleaning helps create an environment that supports recovery.",
+  "new": "our upholstery cleaning provides fresher, cleaner upholstery.",
+  "why": "F2 (Codex): Removes implied recovery benefit."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "elengedhetetlen a fiatalok egészségének megóvásához.",
+  "new": "csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "is essential to protect young people's health.",
+  "new": "reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Mi segítünk fenntartani az egészséges egyensúlyt.",
+  "new": "Mi frissebb, tisztább matraccal segítünk.",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "We help you maintain a healthy balance.",
+  "new": "We help keep your mattress fresher and cleaner.",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Keeping upholstered furniture free of dust mites is not optional here but a basic requirement — our professional upholstery cleaning meets this standard.",
+  "new": "Clean upholstered furniture matters here — our professional upholstery cleaning reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes mite-free guarantee."
+ },
+ {
+  "glob": "llms.txt",
+  "old": "Atka- és allergénmentesítés",
+  "new": "Atka- és allergénkezelés",
+  "why": "F2 (Codex): Uses the public service name."
+ },
+ {
+  "glob": "llms.txt",
+  "old": "atka- és allergénmentesítéssel",
+  "new": "atka- és allergénkezeléssel",
+  "why": "F2 (Codex): Uses the public service name."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "a kárpittisztítás az egész éves egészségvédelem része. A poratka-allergia tünetei — orrfolyás, szemviszketés, köhögés — hatékonyan csökkenthetők rendszeres bútormélytisztítással.",
+  "new": "a rendszeres kárpittisztítás frissebb, tisztább kárpitot ad, és csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes health and symptom outcomes."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "upholstery cleaning is part of protecting their health all year round. Dust mite allergy symptoms — a runny nose, itchy eyes, coughing — can be effectively reduced with regular deep cleaning of furniture.",
+  "new": "regular upholstery cleaning provides fresher, cleaner upholstery and reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes health and symptom outcomes."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "a rendszeres kárpittisztítás az egészségmegőrzés fontos része. A poratka-allergia tünetei — tüsszögés, szemviszketés, nehézlégzés — jelentősen csökkenhetnek egyetlen mélytisztítás után.",
+  "new": "a rendszeres kárpittisztítás frissebb, tisztább kárpitot ad, és csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes health and symptom outcomes."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "regular upholstery cleaning is an important part of staying healthy. Dust mite allergy symptoms — sneezing, itchy eyes, breathing difficulties — can be significantly reduced after a single deep cleaning.",
+  "new": "regular upholstery cleaning provides fresher, cleaner upholstery and reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes health and symptom outcomes."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "A poratka-allergia tünetei — tüsszögés, könnyezés, nehézlégzés — hatékonyan enyhíthetők professzionális kárpittisztítással.",
+  "new": "A professzionális kárpittisztítás csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes symptom-relief claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Dust mite allergy symptoms — sneezing, watery eyes and difficulty breathing — can be effectively relieved with professional upholstery cleaning.",
+  "new": "Professional upholstery cleaning reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes symptom-relief claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "a szezon előtti kárpittisztítás az egészséges nyaralás alapja. A télen zárt bútorok atkaírtásával megelőzheted az allergiás panaszokat a nyári hónapokban.",
+  "new": "a szezon előtti kárpittisztítás frissebb, tisztább bútorokat ad a nyaraláshoz. A kezelés csökkenti a télen felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes allergy prevention."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "pre-season upholstery cleaning is the foundation of a healthy holiday. With dust mite treatment of furniture closed up over winter, you can prevent allergy symptoms in the summer months.",
+  "new": "pre-season upholstery cleaning provides fresher, cleaner furniture for the holiday. The treatment reduces dust, skin flakes and dust-mite allergen built up over winter.",
+  "why": "F2 (Codex): Removes allergy prevention."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "With upholstery cleaning at the change of seasons, you can stop indoor allergens adding to your symptoms — one clean, double protection.",
+  "new": "Upholstery cleaning at the change of seasons reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes symptom prevention."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "A télen zárt nyaralókban felszaporodó poratkák vendég<wbr>ei allergiás tüneteit okozhatják — egy mélytisztítás ezt megakadályozza.",
+  "new": "A télen zárt nyaralókban felgyűlt por, bőrhám és atkaallergén mennyiségét a mélytisztítás csökkenti.",
+  "why": "F2 (Codex): Removes allergy prevention."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Dust mites multiplying in holiday homes closed over winter can trigger allergic symptoms in guests<wbr> — one deep cleaning prevents this.",
+  "new": "Deep cleaning reduces dust, skin flakes and dust-mite allergen built up in holiday homes closed over winter.",
+  "why": "F2 (Codex): Removes allergy prevention."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Ne kockáztasd családod egészségét!",
+  "new": "Gondoskodj matracaid tisztaságáról!",
+  "why": "F2 (Codex): Removes implied health protection."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "egy tisztább, egészségesebb otthonban!",
+  "new": "frissebb, tisztább matracokon!",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Don't risk your family's health!",
+  "new": "Care for your mattresses!",
+  "why": "F2 (Codex): Removes implied health protection."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "sleep in a cleaner, healthier home from tomorrow!",
+  "new": "enjoy fresher, cleaner mattresses!",
+  "why": "F2 (Codex): Removes health outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "A rendszeres matractisztítás nem luxus, hanem a légúti betegségek és allergiák megelőzésének leghatékonyabb módja. Védd a tüdődet éjszaka is!",
+  "new": "A rendszeres matractisztítás csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét. Pihenj frissebb, tisztább matracon!",
+  "why": "F2 (Codex): Removes disease prevention."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Regular mattress cleaning is not a luxury, but the most effective way to prevent respiratory diseases and allergies. Protect your lungs at night too!",
+  "new": "Regular mattress cleaning reduces built-up dust, skin flakes and dust-mite allergen. Rest on a fresher, cleaner mattress!",
+  "why": "F2 (Codex): Removes disease prevention."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "<strong>prevent childhood asthma and allergies</strong> with regular professional deep cleaning of the bedroom!",
+  "new": "<strong>reduce built-up dust, skin flakes and dust-mite allergen</strong> with regular professional mattress cleaning!",
+  "why": "F2 (Codex): Removes asthma and allergy prevention."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Egy allergénektől mentes, higiénikus ágyban a szervezet gyorsabban piheni ki a napi edzést. Ne hagyd, hogy az éjszakai orrdugulás vagy tüsszögés rontsa teljesítményedet!",
+  "new": "A frissen tisztított matrac frissebb, tisztább alvókörnyezetet ad a napi edzés után.",
+  "why": "F2 (Codex): Removes recovery and symptom promises."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Allergiás vagyok, a tisztítás óta sokkal jobban alszom!",
+  "new": "",
+  "why": "F2 (Codex): Removes sleep testimonial without inventing a quote."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Allergiamegelőzés a soproni nedves klímában",
+  "new": "Atkaallergén csökkentése a soproni nedves klímában",
+  "why": "F2 (Codex): Removes allergy prevention."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Allergy prevention in Sopron's humid climate",
+  "new": "Reducing dust-mite allergen in Sopron's humid climate",
+  "why": "F2 (Codex): Removes allergy prevention."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Idős családtagok légzésvédelme",
+  "new": "Tisztább kárpitok idős családtagoknak",
+  "why": "F2 (Codex): Removes respiratory-health promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Légúti betegségek megelőzése télen",
+  "new": "Felgyűlt por és atkaallergén csökkentése télen",
+  "why": "F2 (Codex): Removes disease prevention."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Ne hagyd, hogy a láthatatlan lakótársak elrontsák a regenerálódást! Mi visszaadjuk ágyadnak azt a frissességet, ami a tökéletes alváshoz elengedhetetlen.",
+  "new": "A kezelés csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét. Frissebb, tisztább matracot adunk a pihenéshez.",
+  "why": "F2 (Codex): Removes recovery and sleep outcomes."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Don't let these invisible housemates ruin your recovery! We restore your bed to the freshness essential for perfect sleep.",
+  "new": "Our treatment reduces built-up dust, skin flakes and dust-mite allergen, leaving a fresher, cleaner mattress.",
+  "why": "F2 (Codex): Removes recovery and sleep outcomes."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "mi alaposan megoldjuk ezt.",
+  "new": "mi csökkentjük a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes implied symptom treatment."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Profi mélytisztításunkkal tehermentesítjük pihenésedet.",
+  "new": "Profi mélytisztításunkkal frissebb, tisztább matracot biztosítunk.",
+  "why": "F2 (Codex): Removes implied sleep outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Our professional deep cleaning takes the load off your rest.",
+  "new": "Our professional deep cleaning provides a fresher, cleaner mattress.",
+  "why": "F2 (Codex): Removes implied sleep outcome."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "100% Bio-Biztonság",
+  "new": "Kíméletes tisztítás",
+  "why": "F2 (Codex): Removes absolute safety guarantee."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "100% Bio-Safety",
+  "new": "Gentle cleaning",
+  "why": "F2 (Codex): Removes absolute safety guarantee."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "A technológiánk biztonságos gyermekekre, háziállatokra és kíméletlen az atkákkal szemben.",
+  "new": "A technológiánk csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes safety and eradication promises."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Our technology is safe for children and pets, and ruthless against dust mites.",
+  "new": "Our technology reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes safety and eradication promises."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Ez a módszer kíméletlen a szennyeződésekkel, de teljesen biztonságos az emberi szervezet számára.",
+  "new": "Ez a módszer csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes absolute health-safety claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "This method is tough on dirt but completely safe for the human body.",
+  "new": "This method reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes absolute health-safety claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Nem használunk agresszív vegyszereket, így a tisztítás után azonnal, biztonságosan aludhatsz a matracon. Nincs bőrirritáció, nincs vegyszergőz.",
+  "new": "A tisztítás frissebb, tisztább matracot és alvókörnyezetet ad.",
+  "why": "F2 (Codex): Removes immediate-use and irritation guarantees."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "We do not use aggressive chemicals, so you can sleep on the mattress immediately and safely after cleaning. No skin irritation, no chemical fumes.",
+  "new": "Cleaning provides a fresher, cleaner mattress and sleeping environment.",
+  "why": "F2 (Codex): Removes immediate-use and irritation guarantees."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Nem használunk agresszív vegyszereket, így a tisztítás után azonnal, biztonsággal használhatod a bútorokat. Nincs bőrirritáció, nincs vegyszergőz",
+  "new": "A tisztítás frissebb, tisztább kárpitot ad",
+  "why": "F2 (Codex): Removes immediate-use and irritation guarantees."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "We do not use aggressive chemicals, so you can use your furniture immediately and safely after cleaning. No skin irritation, no chemical fumes.",
+  "new": "Cleaning provides fresher, cleaner upholstery.",
+  "why": "F2 (Codex): Removes immediate-use and irritation guarantees."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "We do not use harsh chemicals, so you can use your furniture safely immediately after cleaning. No skin irritation, no chemical fumes",
+  "new": "Cleaning provides fresher, cleaner upholstery",
+  "why": "F2 (Codex): Removes immediate-use and irritation guarantees."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Nem használunk agresszív vegyszereket, így a tisztítás után <strong>azonnal, biztonságosan</strong> alhatsz a matracon. Nincs bőrirritáció, nincs vegyszergőz – babáknak és allergiásoknak is tökéletes.",
+  "new": "A tisztítás <strong>frissebb, tisztább matracot</strong> és alvókörnyezetet ad.",
+  "why": "F2 (Codex): Removes absolute health-safety promises."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "We don't use harsh chemicals, so after cleaning you can sleep on the mattress <strong>immediately and safely</strong>. No skin irritation, no chemical fumes – perfect for babies and allergy sufferers too.",
+  "new": "Cleaning provides a <strong>fresher, cleaner mattress</strong> and sleeping environment.",
+  "why": "F2 (Codex): Removes absolute health-safety promises."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "A tisztítás után <strong>azonnal alhatsz rajta</strong> – nincs szag, nincs bőrirritáció! Biztonságos:",
+  "new": "A tisztítás <strong>frissebb, tisztább matracot</strong> ad. Elérhető:",
+  "why": "F2 (Codex): Removes immediate-use and irritation guarantees."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "After cleaning, <strong>you can sleep on it straight away</strong> – no odour, no skin irritation! Safe:",
+  "new": "Cleaning provides a <strong>fresher, cleaner mattress</strong>. Available:",
+  "why": "F2 (Codex): Removes immediate-use and irritation guarantees."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Biztonságos babáknak is.",
+  "new": "Frissebb, tisztább kárpitért.",
+  "why": "F2 (Codex): Removes infant-safety promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Biztonságos az egész család számára.",
+  "new": "Frissebb, tisztább kárpitért.",
+  "why": "F2 (Codex): Removes blanket safety promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Safe for babies too.",
+  "new": "For fresher, cleaner upholstery.",
+  "why": "F2 (Codex): Removes infant-safety promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Safe for the whole family.",
+  "new": "For fresher, cleaner upholstery.",
+  "why": "F2 (Codex): Removes blanket safety promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Safe for babies, expectant mothers and pets too.",
+  "new": "For fresher, cleaner upholstery.",
+  "why": "F2 (Codex): Removes blanket safety promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Safe for babies, pregnant women, allergy sufferers and pets.",
+  "new": "For fresher, cleaner upholstery.",
+  "why": "F2 (Codex): Removes blanket safety promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Safe cleaning for babies, expectant mothers and pets alike.",
+  "new": "Cleaning for fresher, cleaner upholstery.",
+  "why": "F2 (Codex): Removes blanket safety promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Biztonságos babáknak, kismamáknak és házi kedvenceknek is.",
+  "new": "Frissebb, tisztább kárpitért.",
+  "why": "F2 (Codex): Removes blanket safety promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Biztonságos babáknak, kismamáknak és házi\n                        kedvenceknek is.",
+  "new": "Frissebb, tisztább környezetért.",
+  "why": "F2 (Codex): Removes blanket safety promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "a legbiztonságosabb védelmet a poratkák ellen.",
+  "new": "a frissebb, tisztább kárpit előnyét.",
+  "why": "F2 (Codex): Removes unsupported safety superlative."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "offers the safest protection against dust mites for the youngest and oldest family members.",
+  "new": "provides fresher, cleaner upholstery for the youngest and oldest family members.",
+  "why": "F2 (Codex): Removes unsupported safety superlative."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "vegyszermentes kárpittisztításunk a legbiztonságosabb megoldás számukra.",
+  "new": "kárpittisztításunk frissebb, tisztább kárpitot ad számukra.",
+  "why": "F2 (Codex): Removes unsupported safety superlative."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "our chemical-free upholstery cleaning is the safest solution for them.",
+  "new": "our upholstery cleaning provides fresher, cleaner furniture for them.",
+  "why": "F2 (Codex): Removes unsupported safety superlative."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "a legbiztonságosabb módja az atkák elleni küzdelemnek.",
+  "new": "csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes unsupported safety superlative."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "is the safest way to tackle dust mites.",
+  "new": "reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes unsupported safety superlative."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Vegyszermentes atkaírtásunk garantálja, hogy a bútor tiszta és biztonságos legyen a legkisebbek számára is.",
+  "new": "Atka- és allergénkezelésünk frissebb, tisztább kárpitot ad.",
+  "why": "F2 (Codex): Removes guaranteed infant safety."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Our chemical-free dust mite treatment guarantees clean, safe furniture for even the youngest children.",
+  "new": "Our dust-mite and allergen treatment provides fresher, cleaner upholstery.",
+  "why": "F2 (Codex): Removes guaranteed infant safety."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "technológiánk biztonságos és hatékony védelmet nyújt számukra.",
+  "new": "technológiánk frissebb, tisztább kárpitot ad számukra.",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "our technology provides safe and effective protection for them.",
+  "new": "our technology provides fresher, cleaner upholstery for them.",
+  "why": "F2 (Codex): Removes health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "vegyszermentes kárpittisztításunk biztonságosan védi a legkisebbeket is.",
+  "new": "kárpittisztításunk csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes infant health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "our chemical-free upholstery cleaning safely protects even the youngest children.",
+  "new": "our upholstery cleaning reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes infant health protection promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "biztosítja a biztonságos, tiszta lakókörnyezetet.",
+  "new": "frissebb, tisztább kárpitot ad.",
+  "why": "F2 (Codex): Removes blanket safety guarantee."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "to ensure a safe, clean living environment.",
+  "new": "to provide fresher, cleaner upholstery.",
+  "why": "F2 (Codex): Removes blanket safety guarantee."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "a család legkisebb tagjai is biztonságban lesznek a frissen tisztított bútorokon.",
+  "new": "frissebb, tisztább kárpitot adunk a családnak.",
+  "why": "F2 (Codex): Removes infant-safety promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "even the youngest members of the family will be safe on freshly cleaned furniture.",
+  "new": "we provide fresher, cleaner upholstery for the family.",
+  "why": "F2 (Codex): Removes infant-safety promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "garantáltan biztonságos, kémiai anyagoktól mentes mélytisztítást kínálunk számukra.",
+  "new": "mélytisztítással frissebb, tisztább kárpitot kínálunk számukra.",
+  "why": "F2 (Codex): Removes guaranteed safety."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "we offer guaranteed safe, chemical-free deep cleaning for them.",
+  "new": "we offer deep cleaning for fresher, cleaner upholstery.",
+  "why": "F2 (Codex): Removes guaranteed safety."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "is a basic hygiene requirement — and guarantees they are free of dust mites.",
+  "new": "provides fresher, cleaner upholstery and reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes mite-free guarantee."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "With our chemical-free upholstery cleaning, the sofas, armchairs and mattresses at your accommodation become free of dust mites — so the little ones can relax carefree by Lake Balaton<wbr>.",
+  "new": "Our upholstery cleaning leaves the sofas, armchairs and mattresses at your accommodation fresher and cleaner for your stay by Lake Balaton<wbr>.",
+  "why": "F2 (Codex): Removes mite-free promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Our chemical-free upholstery cleaning guarantees that little ones can play and rest on safe surfaces free from dust mites.",
+  "new": "Our upholstery cleaning provides fresher, cleaner surfaces for little ones to play and rest on.",
+  "why": "F2 (Codex): Removes absolute safety guarantee."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "The bedroom is finally free of dust mites! The children sleep more peacefully too.",
+  "new": "",
+  "why": "F2 (Codex): Removes health testimonial without inventing a quote."
+ },
+ {
+  "glob": "llms.txt",
+  "old": "Gyerekeknek és allergiásoknak is biztonságos",
+  "new": "Frissebb, tisztább kárpit és alvókörnyezet",
+  "why": "F2 (Codex): Removes blanket safety promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "<strong>előzd meg a gyermekkori asztmát és allergiát</strong> a hálószoba\n                        rendszeres, professzionális mélytisztításával!",
+  "new": "<strong>csökkentsd a felgyűlt por, bőrhám és atkaallergén mennyiségét</strong> rendszeres, professzionális matractisztítással!",
+  "why": "F2 (Codex): Removes asthma and allergy prevention."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "I have allergies, and I've been sleeping much better since the cleaning!",
+  "new": "",
+  "why": "F2 (Codex): Removes sleep testimonial without inventing a quote."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "A gyermeki immunrendszer védelme",
+  "new": "Tisztább matracok a gyerekszobában",
+  "why": "F2 (Codex): Removes immune-system protection claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Protecting children's immune systems",
+  "new": "Cleaner mattresses in children's rooms",
+  "why": "F2 (Codex): Removes immune-system protection claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Aludj úgy, mint egy bajnok – teljesíts úgy is!",
+  "new": "Pihenj frissebb, tisztább matracon!",
+  "why": "F2 (Codex): Removes sleep and performance outcomes."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Sleep like a champion – perform like one too!",
+  "new": "Rest on a fresher, cleaner mattress!",
+  "why": "F2 (Codex): Removes sleep and performance outcomes."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Tiszta matrac = nyugodt éjszakák",
+  "new": "Tiszta matrac, frissebb alvókörnyezet",
+  "why": "F2 (Codex): Removes sleep outcome."
+ },
+ {
+  "glob": "ui/booking-live.js",
+  "old": "name: \"Atkairtás\"",
+  "new": "name: \"Atka- és allergénkezelés\"",
+  "why": "F2 (Codex): Uses the public service name."
+ },
+ {
+  "glob": "ui/booking-live.js",
+  "old": ">+Atkairtás<",
+  "new": ">+Atka- és allergénkezelés<",
+  "why": "F2 (Codex): Uses the public service name."
+ },
+ {
+  "glob": "ui/booking-live.js",
+  "old": "  +Atkairtás (",
+  "new": "  +Atka- és allergénkezelés (",
+  "why": "F2 (Codex): Uses the public service name."
+ },
+ {
+  "glob": "ui/booking-live.js",
+  "old": "Allergia esetén ajánljuk az atkairtást minden bútorra!",
+  "new": "Atka- és allergénkezelés minden bútorhoz kérhető!",
+  "why": "F2 (Codex): Uses the public service name."
+ },
+ {
+  "glob": "ui/navigation.js",
+  "old": "Atkairtás tanúsítvánnyal.",
+  "new": "Atka- és allergénkezelés tanúsítvánnyal.",
+  "why": "F2 (Codex): Keeps certificate with public service name."
+ },
+ {
+  "glob": "llms.txt",
+  "old": "Matractisztítás + atkaírtás",
+  "new": "Matractisztítás + atka- és allergénkezelés",
+  "why": "F2 (Codex): Uses the public service name."
+ },
+ {
+  "glob": "llms.txt",
+  "old": "bio-eljárás, atkaírtás,",
+  "new": "bio-eljárás, atka- és allergénkezelés,",
+  "why": "F2 (Codex): Uses the public service name."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "80-95%-ban eltávolítható",
+  "new": "célzott kezeléssel tisztítható",
+  "why": "F2 (Codex): Removes percentage effect."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "can be removed by 80-95%",
+  "new": "can be treated with targeted cleaning",
+  "why": "F2 (Codex): Removes percentage effect."
+ },
+ {
+  "glob": "*.html",
+  "old": "<td class=\"check-yes\">✓ 80-95%</td>",
+  "new": "<td class=\"check-yes\">✓ Foltkezelés</td>",
+  "why": "F2 (Codex): Retains table layout without percentage."
+ },
+ {
+  "glob": "en/*.html",
+  "old": "<td class=\"check-yes\">✓ 80-95%</td>",
+  "new": "<td class=\"check-yes\">✓ Stain treatment</td>",
+  "why": "F2 (Codex): Retains table layout without percentage."
+ },
+ {
+  "glob": "ui/booking-live-en.js",
+  "old": "name: \"Dust mite treatment\"",
+  "new": "name: \"Dust-mite and allergen treatment\"",
+  "why": "F2 (Codex): Uses the public service name."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "An allergy-free family holiday",
+  "new": "A family holiday with cleaner upholstery",
+  "why": "F2 (Codex): Removes allergy-free promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "With pre-season upholstery cleaning, you can ensure your family enjoys Lake Balaton<wbr> allergy-free.",
+  "new": "Pre-season upholstery cleaning provides fresher, cleaner furniture for your family holiday by Lake Balaton<wbr>.",
+  "why": "F2 (Codex): Removes allergy-free promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Allergy-free accommodation is increasingly sought after — we help you provide it professionally.",
+  "new": "Clean, well-kept accommodation is increasingly sought after — we help you keep the furniture fresh and clean.",
+  "why": "F2 (Codex): Removes allergy-free promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "our pre-season upholstery cleaning effectively eliminates them.",
+  "new": "our pre-season upholstery cleaning reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes mite eradication claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "our upholstery cleaning effectively eliminates colonies nesting in your furniture.",
+  "new": "our upholstery cleaning reduces built-up dust, skin flakes and dust-mite allergen in your furniture.",
+  "why": "F2 (Codex): Removes mite eradication claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "our upholstery cleaning eliminates them effectively.",
+  "new": "our upholstery cleaning reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes mite eradication claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "regular upholstery cleaning eliminates not only visible dirt, but also the hair–mite–allergen trio.",
+  "new": "regular upholstery cleaning reduces built-up dust, skin flakes and dust-mite allergen.",
+  "why": "F2 (Codex): Removes eradication claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "szezon előtti kárpittisztításunk hatékonyan felszámolja őket.",
+  "new": "szezon előtti kárpittisztításunk csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes mite eradication claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "kárpittisztításunkkal hatékonyan felszámoljuk a bútorokba fészkelődött telepeket.",
+  "new": "kárpittisztításunkkal csökkentjük a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes mite eradication claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "a rendszeres kárpittisztítás nemcsak a látható szennyeződéseket, hanem a szőr-atka-allergén hármast is felszámolja.",
+  "new": "a rendszeres kárpittisztítás csökkenti a felgyűlt por, bőrhám és atkaallergén mennyiségét.",
+  "why": "F2 (Codex): Removes eradication claim."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Biztonságos babáknak, terhes\n                        nőknek, allergiásoknak és háziállatoknak.",
+  "new": "Frissebb, tisztább kárpitért.",
+  "why": "F2 (Codex): Removes blanket safety promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": "Biztonságos tisztítás\n                        babáknak, kismamáknak és házi kedvenceknek is.",
+  "new": "Tisztítás a frissebb, tisztább kárpitért.",
+  "why": "F2 (Codex): Removes blanket safety promise."
+ },
+ {
+  "glob": "**/*.html",
+  "old": ">Allergén mentesítés atkaírtással<",
+  "new": ">Atka- és allergénkezelés<",
+  "why": "F2 (Codex): Uses the public service name."
+ },
+ {
+  "glob": "**/*.html",
+  "old": ">Atkaírtás<",
+  "new": ">Atka- és allergénkezelés<",
+  "why": "F2 (Codex): Uses the public service name."
+ },
+ {
+  "glob": "**/*.html",
+  "old": ">Atkaírtás Tanúsítvány<",
+  "new": ">Atka- és allergénkezelési tanúsítvány<",
+  "why": "F2 (Codex): Keeps certificate with public service name."
+ },
+ {
+  "glob": "**/*.html",
+  "old": ">Atkaírtás tanúsítvány<",
+  "new": ">Atka- és allergénkezelési tanúsítvány<",
+  "why": "F2 (Codex): Keeps certificate with public service name."
+ },
+ {
+  "glob": "studio/configurator.js",
+  "old": ">Atkairtás<",
+  "new": ">Atka- és allergénkezelés<",
+  "why": "F2 (Codex): Uses the public service name."
+ },
+ {
+  "glob": "studio/configurator.js",
+  "old": ">Az alapár atkairtást tartalmaz<",
+  "new": ">Az alapár atka- és allergénkezelést tartalmaz<",
+  "why": "F2 (Codex): Uses the public service name."
+ }
+]

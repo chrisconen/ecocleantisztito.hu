@@ -1,6 +1,7 @@
 /* Existing booking accessibility and summary behavior, extracted from site.js. */
 (() => {
   'use strict';
+  const en=document.documentElement.lang.toLowerCase().startsWith('en');
   const bookingRoot=document.getElementById('priceConfigurator');
   const enhanceFields=()=>{
     bookingRoot.querySelectorAll('input[placeholder],textarea[placeholder]').forEach(input=>{
@@ -11,7 +12,7 @@
     });
     document.querySelectorAll('.config-item[data-item-id]').forEach(item=>item.classList.toggle('is-selected',(State.selectedItems[item.dataset.itemId]?.count||0)>0));
     document.querySelectorAll('.config-btn').forEach(button=>button.setAttribute('aria-pressed',String(button.classList.contains('active'))));
-    document.getElementById('configStatus').textContent='● Online foglalás';
+    document.getElementById('configStatus').textContent=(en?'● Online booking':'● Online foglalás');
   };
   // Hook calculated-state updates once, so changing services cannot leave stale slots.
   const originalSummary=window.updateSummary;
@@ -22,14 +23,14 @@
     document.getElementById('calendarWrapper').style.display=hasItems&&State.city&&!State.isLargeOrder?'block':'none';
     enhanceFields();
   };
-  document.getElementById('citySelect').setAttribute('aria-label','Válassz régiót');
+  document.getElementById('citySelect').setAttribute('aria-label',(en?'Choose a region':'Válassz régiót'));
   document.getElementById('totalPrice').setAttribute('aria-live','polite');
   document.getElementById('totalPrice').setAttribute('aria-atomic','true');
   const autocomplete={nameInput:'name',emailInput:'email',emailConfirmInput:'off',phoneInput:'tel',streetInput:'street-address',cityInput:'address-level2',plzInput:'postal-code'};
   Object.entries(autocomplete).forEach(([id,value])=>document.getElementById(id).autocomplete=value);
   document.getElementById('plzInput').inputMode='numeric';
   const andante=document.getElementById('andanteModal');
-  andante.setAttribute('role','dialog');andante.setAttribute('aria-modal','true');andante.setAttribute('aria-label','ANDANTE bútorok – Fontos tájékoztató');
+  andante.setAttribute('role','dialog');andante.setAttribute('aria-modal','true');andante.setAttribute('aria-label',(en?'ANDANTE furniture – Important information':'ANDANTE bútorok – Fontos tájékoztató'));
   let previousFocus;
   const originalOpen=window.openAndanteModal, originalClose=window.closeAndanteModal,originalConfirm=window.confirmAndante;
   window.openAndanteModal=()=>{previousFocus=document.activeElement;originalOpen();andante.querySelector('button').focus();};

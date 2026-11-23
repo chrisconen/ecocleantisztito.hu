@@ -3,6 +3,7 @@
     'use strict';
 
     function initBookingCart() {
+        const en = document.documentElement.lang.toLowerCase().startsWith('en');
         const summary = document.getElementById('priceSummary');
         if (!summary || document.getElementById('bookingCartTab') || typeof window.updateSummary !== 'function') return;
         const drawer = document.createElement('dialog');
@@ -26,6 +27,12 @@
         drawer.className = 'booking-cart-drawer';
         drawer.setAttribute('aria-labelledby', 'bookingCartTitle');
         drawer.innerHTML = '<header class="booking-cart-header"><div><p class="booking-cart-eyebrow">ECO CLEAN</p><h2 id="bookingCartTitle">Kosár</h2><p id="bookingCartQuantity">Még üres a kosarad</p></div><button type="button" class="booking-cart-close" aria-label="Kosár bezárása"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></header><div class="booking-cart-content"></div><p class="booking-cart-hint">A kosár bezárása után folytathatod az összeállítást és az időpontfoglalást.</p>';
+        if (en) {
+            drawer.querySelector('#bookingCartTitle').textContent = 'Cart';
+            drawer.querySelector('#bookingCartQuantity').textContent = 'Your cart is empty';
+            drawer.querySelector('.booking-cart-close').setAttribute('aria-label', 'Close cart');
+            drawer.querySelector('.booking-cart-hint').textContent = 'Close the cart to continue choosing items and booking an appointment.';
+        }
         const status = document.createElement('div');
         status.className = 'booking-cart-status';
         status.setAttribute('role', 'status');
@@ -111,11 +118,11 @@
             if (count === 0 && drawer.open) finishClose();
             syncTabVisibility();
             const price = State.totalPrice;
-            const money = `${price.toLocaleString('hu-HU')} Ft`;
+            const money = `${price.toLocaleString(en ? 'en-GB' : 'hu-HU')} ${en ? 'HUF' : 'Ft'}`;
             badge.textContent = String(count);
-            tab.setAttribute('aria-label', `Kosár megnyitása: ${count} bútor, ${money}`);
-            quantity.textContent = count ? `${count} bútor az összeállításodban` : 'Még üres a kosarad';
-            if (count !== lastCount || price !== lastPrice) status.textContent = `Kosár frissítve: ${count} bútor, ${money}.`;
+            tab.setAttribute('aria-label', en ? `Open cart: ${count} items, ${money}` : `Kosár megnyitása: ${count} bútor, ${money}`);
+            quantity.textContent = en ? (count ? `${count} items in your selection` : 'Your cart is empty') : count ? `${count} bútor az összeállításodban` : 'Még üres a kosarad';
+            if (count !== lastCount || price !== lastPrice) status.textContent = en ? `Cart updated: ${count} items, ${money}.` : `Kosár frissítve: ${count} bútor, ${money}.`;
             if (count > lastCount) {
                 clearTimeout(pulseTimer);
                 tab.classList.remove('is-updated');
